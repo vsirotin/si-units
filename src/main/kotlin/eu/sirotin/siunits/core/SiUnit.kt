@@ -11,7 +11,7 @@
  *  *
  *   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- *  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
  *  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  *  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  *  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -20,20 +20,26 @@
 
 package eu.sirotin.siunits.core
 
-class Fraction<U: Unit, D: Unit>(val up: U, val down: D): Unit(up.value/down.value){
-    override fun <T : Unit> newInstance(value: Double): T {
-        TODO("Not yet implemented")
+const val COMPARING_ERROR = "Compared elements have different types:"
+const val EPS = 1.0E-12
+
+abstract class SiUnit(var value: Double, val description: SiUnitDescription<*> ) : Comparable<SiUnit>, SiDimension {
+
+    override fun compareTo(other: SiUnit): Int {
+        if(this.javaClass != other.javaClass)
+            throw IllegalArgumentException("$COMPARING_ERROR 'this' is '${this.javaClass} but 'other' is '${other.javaClass}'")
+        return value.compareTo(other.value)
     }
 
-    override val symbol: String = up.symbol + "/" + down.symbol
+    override fun dim(): String {
+        return "${this.description.unitSymbol}"
+    }
+
+    override fun toString(): String {
+        return "${this.value} ${dim()}"
+    }
+
 
 
 }
-
-
-operator fun<U: Unit, D: Unit> U.div(x: D): Fraction<U, D> = Fraction(this, x)
-
-operator fun<T: Unit, M: Unit> Fraction<T, M>.times(x: M): T = this.up.newInstance<T>(this.up.value/this.down.value * x.value)
-
-operator fun<T: Unit, M: Unit> M.times(x: Fraction<T, M>): T =  x * this
 

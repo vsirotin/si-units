@@ -10,7 +10,7 @@ internal class SecondTest {
         val v1 = 3.12.s
 
         assertEquals(3.12, v1.value)
-        assertEquals("s", v1.symbol)
+        assertEquals("s", v1.description.unitSymbol)
         assertEquals("3.12 s", v1.toString())
         assertEquals("eu.sirotin.siunits.physics.Second", v1.javaClass.name)
 

@@ -20,18 +20,16 @@
 
 package eu.sirotin.siunits.physics
 
-import eu.sirotin.siunits.core.Unit
+import eu.sirotin.siunits.core.SiUnit
+import eu.sirotin.siunits.core.SiUnitDescription
 
-class Second(value: Double) : Unit(value){
-    override val symbol: String
-        get() = "s"
-
-
-    override fun <T : Unit> newInstance(value: Double): T {
-        @Suppress("UNCHECKED_CAST")
-        return Second(value) as T
-    }
-}
+val creatorSecond = fun(v: Double) = Second(v)
+private val descriptionSecond = SiUnitDescription("second",
+    "s",
+    "T",
+    "time",
+    creatorSecond)
+class Second(value: Double) : SiUnit(value, descriptionSecond){}
 
 val s = Second(1.0)
 

@@ -14,7 +14,7 @@ internal class PhysicsTest {
         val v1 = 2.12.m/1.06.s
         assertEquals(2.0, v1.value)
         assertEquals("2.0 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.Fraction", v1.javaClass.name)
+        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
 
     }
 
@@ -23,7 +23,7 @@ internal class PhysicsTest {
         val v1 = 2.12.m/s
         assertEquals(2.12, v1.value)
         assertEquals("2.12 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.Fraction", v1.javaClass.name)
+        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
 
     }
 
@@ -31,29 +31,27 @@ internal class PhysicsTest {
     fun testStatements3() {
         val v1 = 2.12.m/1.06.s*2.3.m
         assertEquals(4.6, v1.value)
-        // TODO assertEquals("4.6 m", v1.toString())
-        // TODO assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals("4.6 m/s", v1.toString())
+        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
 
     }
 
 
     @Test
-    @Disabled
     fun testStatements4() {
         val v1 = 10*2.12.m/1.06.s
-        assertEquals(20, v1.value)
-        // TODO assertEquals("4.6 m", v1.toString())
-        // TODO assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals(20.0, v1.value)
+        assertEquals("20.0 m/s", v1.toString())
+        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
 
     }
 
     @Test
     fun testStatements5() {
         val v1 = 10*2.12.m/1.06.s
-        //TODO val v2 = 10.1* v1/2
-        //TODO assertEquals(46, v1.value)
-        // TODO assertEquals("4.6 m", v1.toString())
-        // TODO assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals(20.0, v1.value)
+        assertEquals("20.0 m/s", v1.toString())
+        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
 
     }
 
@@ -89,7 +87,7 @@ internal class PhysicsTest {
         val v1 = 2.42.m
 
         assertEquals(2.42, v1.value)
-        assertEquals("m", v1.symbol)
+        assertEquals("m", v1.description.unitSymbol)
         assertEquals("2.42 m", v1.toString())
         assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
 

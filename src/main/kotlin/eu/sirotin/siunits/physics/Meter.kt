@@ -20,20 +20,41 @@
 
 package eu.sirotin.siunits.physics
 
-import eu.sirotin.siunits.core.Unit
+import eu.sirotin.siunits.core.SiUnitProduct
+import eu.sirotin.siunits.core.SiUnit
+import eu.sirotin.siunits.core.SiUnitDescription
+import eu.sirotin.siunits.core.times
 
-class Meter(value: Double) : Unit(value){
+val creatorMeter = fun(v: Double) = Meter(v)
 
-    override val symbol: String
-        get() = "m"
+private val descriptionMeter = SiUnitDescription<Meter>("metre",
+    "m",
+    "L",
+    "length",
+    creatorMeter
+)
 
-    override fun <T : Unit> newInstance(value: Double): T {
-        @Suppress("UNCHECKED_CAST")
-        return Meter(value) as T
-    }
-
-}
+class Meter(value: Double) : SiUnit(value, description = descriptionMeter){}
 val Number.m : Meter
     get() = Meter(this.toDouble())
+
+val Meter.mm : Double
+    get() = this.value * 1000.0
+
+
+val Number.l: SiUnitProduct
+    get() = Meter(this.toDouble()/10.0) * (Meter(0.1) * Meter(0.1))
+
+operator fun Meter.plus(x: Meter): Meter = Meter(this.value + x.value)
+operator fun Meter.minus(x: Meter): Meter = Meter(this.value - x.value)
+
+
+operator fun Meter.times(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value * x.toDouble())
+operator fun Number.times(x: Meter): Meter = x.times(this)
+operator fun Meter.div(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value / x.toDouble())
+
+
+val SiUnitProduct.mm : Double
+    get() = (this.toSiUnit() as Meter).mm
 
 
