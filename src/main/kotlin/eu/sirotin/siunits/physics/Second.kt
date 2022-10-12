@@ -28,7 +28,7 @@ private val descriptionSecond = SiUnitDescription("second",
     "T",
     "time",
     ){v:Double->Second(v)}
-class Second(value: Double) : SiUnit(value, descriptionSecond){}
+class Second(value: Double) : SiUnit(value, descriptionSecond)
 
 val s = Second(1.0)
 

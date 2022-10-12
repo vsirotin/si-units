@@ -33,7 +33,7 @@ private val descriptionMeter = SiUnitDescription("metre",
 ) { v: Double -> Meter(v) }
 
 
-class Meter(value: Double) : SiUnit(value, description = descriptionMeter){}
+class Meter(value: Double) : SiUnit(value, description = descriptionMeter)
 val Number.m : Meter
     get() = Meter(this.toDouble())
 
