@@ -25,14 +25,13 @@ import eu.sirotin.siunits.core.SiUnit
 import eu.sirotin.siunits.core.SiUnitDescription
 import eu.sirotin.siunits.core.times
 
-val creatorMeter = fun(v: Double) = Meter(v)
 
-private val descriptionMeter = SiUnitDescription<Meter>("metre",
+private val descriptionMeter = SiUnitDescription("metre",
     "m",
     "L",
-    "length",
-    creatorMeter
-)
+    "length"
+) { v: Double -> Meter(v) }
+
 
 class Meter(value: Double) : SiUnit(value, description = descriptionMeter){}
 val Number.m : Meter

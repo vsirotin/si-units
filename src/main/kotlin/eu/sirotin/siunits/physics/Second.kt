@@ -23,12 +23,11 @@ package eu.sirotin.siunits.physics
 import eu.sirotin.siunits.core.SiUnit
 import eu.sirotin.siunits.core.SiUnitDescription
 
-val creatorSecond = fun(v: Double) = Second(v)
 private val descriptionSecond = SiUnitDescription("second",
     "s",
     "T",
     "time",
-    creatorSecond)
+    ){v:Double->Second(v)}
 class Second(value: Double) : SiUnit(value, descriptionSecond){}
 
 val s = Second(1.0)
