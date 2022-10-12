@@ -11,7 +11,7 @@
  *  *
  *   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- *  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
  *  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  *  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  *  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -47,9 +47,10 @@ val Number.l: SiUnitProduct
 operator fun Meter.plus(x: Meter): Meter = Meter(this.value + x.value)
 operator fun Meter.minus(x: Meter): Meter = Meter(this.value - x.value)
 
-
+@Suppress("UNCHECKED_CAST")
 operator fun Meter.times(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value * x.toDouble())
 operator fun Number.times(x: Meter): Meter = x.times(this)
+@Suppress("UNCHECKED_CAST")
 operator fun Meter.div(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value / x.toDouble())
 
 
