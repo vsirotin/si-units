@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertFailsWith
 import eu.sirotin.siunits.core.*
-import org.junit.jupiter.api.Disabled
+
+private const val EXPECTED_CLASS = "eu.sirotin.siunits.core.Expression"
 
 internal class PhysicsTest {
 
@@ -14,7 +15,7 @@ internal class PhysicsTest {
         val v1 = 2.12.m/1.06.s
         assertEquals(2.0, v1.value)
         assertEquals("2.0 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
+        assertEquals(EXPECTED_CLASS, v1.javaClass.name)
 
     }
 
@@ -23,7 +24,7 @@ internal class PhysicsTest {
         val v1 = 2.12.m/s
         assertEquals(2.12, v1.value)
         assertEquals("2.12 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
+        assertEquals(EXPECTED_CLASS, v1.javaClass.name)
 
     }
 
@@ -31,8 +32,8 @@ internal class PhysicsTest {
     fun testStatements3() {
         val v1 = 2.12.m/1.06.s*2.3.m
         assertEquals(4.6, v1.value)
-        assertEquals("4.6 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
+        assertEquals("4.6 m2/s", v1.toString())
+        assertEquals(EXPECTED_CLASS, v1.javaClass.name)
 
     }
 
@@ -42,7 +43,7 @@ internal class PhysicsTest {
         val v1 = 10*2.12.m/1.06.s
         assertEquals(20.0, v1.value)
         assertEquals("20.0 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
+        assertEquals(EXPECTED_CLASS, v1.javaClass.name)
 
     }
 
@@ -51,7 +52,7 @@ internal class PhysicsTest {
         val v1 = 10*2.12.m/1.06.s
         assertEquals(20.0, v1.value)
         assertEquals("20.0 m/s", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.SiUnitProduct", v1.javaClass.name)
+        assertEquals(EXPECTED_CLASS, v1.javaClass.name)
 
     }
 
@@ -70,15 +71,12 @@ internal class PhysicsTest {
     fun testCompareDifferentType() {
         val v1 = 2.4.m
         val v2 = 2.4.s
-
-        //assertFalse(v1 == v2) compilation error
-        //assertFalse(v1 == 2.4) compilation error
+        
 
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { v1 >= v2 }
         )
-        assertEquals("Compared elements have different types: 'this' is 'class eu.sirotin.siunits.physics.Meter but 'other' is 'class eu.sirotin.siunits.physics.Second'",
-            exception.message)
+        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 
     }
 

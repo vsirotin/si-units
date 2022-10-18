@@ -20,26 +20,43 @@
 
 package eu.sirotin.siunits.core
 
-const val COMPARING_ERROR = "Compared elements have different types:"
+const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
 const val EPS = 1.0E-12
 
-abstract class SiUnit(var value: Double, val description: SiUnitDescription<*> ) : Comparable<SiUnit>, SiDimension {
+abstract class TermUnit(val value: Double, val description: DimensionSpecification<*> ) : Comparable<TermUnit>, DimensionsPresentation {
 
-    override fun compareTo(other: SiUnit): Int {
-        if(this.javaClass != other.javaClass)
-            throw IllegalArgumentException("$COMPARING_ERROR 'this' is '${this.javaClass} but 'other' is '${other.javaClass}'")
+    override fun compareTo(other: TermUnit): Int {
+        checkCompatibility(other)
         return value.compareTo(other.value)
     }
 
-    override fun dim(): String {
-        return "${this.description.unitSymbol}"
+    fun checkCompatibility(other: TermUnit) {
+        if (this.description != other.description)
+            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX 'this' is '${this.description} but 'other' is '${other.description}'")
     }
+
 
     override fun toString(): String {
-        return "${this.value} ${dim()}"
+        return "${this.value} ${units()}"
     }
 
-
-
+    override fun units() : String = description.unitSymbol
+    override fun dimensions(): String = description.dimensionSymbol
+    override fun quantities(): String = description.quantitySymbol
+    override fun show(format: String): String = String.format(format, value) + units()
 }
+
+
+operator fun TermUnit.plus(x: TermUnit): TermUnit {
+    this.checkCompatibility(x)
+    return this.description.creator(this.value + x.value)
+}
+
+operator fun TermUnit.times(x: Number): TermUnit = this.description.creator(this.value * x.toDouble())
+operator fun TermUnit.minus(x: TermUnit): TermUnit = this + (-1)*x
+
+
+operator fun Number.times(x: TermUnit): TermUnit = x * this
+
+operator fun TermUnit.div(x: Number): TermUnit = this.description.creator(this.value / x.toDouble())
 

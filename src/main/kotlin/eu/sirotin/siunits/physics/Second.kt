@@ -20,15 +20,15 @@
 
 package eu.sirotin.siunits.physics
 
-import eu.sirotin.siunits.core.SiUnit
-import eu.sirotin.siunits.core.SiUnitDescription
+import eu.sirotin.siunits.core.TermUnit
+import eu.sirotin.siunits.core.DimensionSpecification
 
-private val descriptionSecond = SiUnitDescription("second",
+private val descriptionSecond = DimensionSpecification("second",
     "s",
     "T",
     "time",
     ){v:Double->Second(v)}
-class Second(value: Double) : SiUnit(value, descriptionSecond)
+class Second(value: Double) : TermUnit(value, descriptionSecond)
 
 val s = Second(1.0)
 

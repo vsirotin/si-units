@@ -20,20 +20,20 @@
 
 package eu.sirotin.siunits.physics
 
-import eu.sirotin.siunits.core.SiUnitProduct
-import eu.sirotin.siunits.core.SiUnit
-import eu.sirotin.siunits.core.SiUnitDescription
+import eu.sirotin.siunits.core.Expression
+import eu.sirotin.siunits.core.TermUnit
+import eu.sirotin.siunits.core.DimensionSpecification
 import eu.sirotin.siunits.core.times
 
 
-private val descriptionMeter = SiUnitDescription("metre",
+private val descriptionMeter = DimensionSpecification("metre",
     "m",
     "L",
     "length"
 ) { v: Double -> Meter(v) }
 
 
-class Meter(value: Double) : SiUnit(value, description = descriptionMeter)
+class Meter(value: Double) : TermUnit(value, description = descriptionMeter)
 val Number.m : Meter
     get() = Meter(this.toDouble())
 
@@ -41,20 +41,20 @@ val Meter.mm : Double
     get() = this.value * 1000.0
 
 
-val Number.l: SiUnitProduct
+val Number.l: Expression
     get() = Meter(this.toDouble()/10.0) * (Meter(0.1) * Meter(0.1))
 
-operator fun Meter.plus(x: Meter): Meter = Meter(this.value + x.value)
-operator fun Meter.minus(x: Meter): Meter = Meter(this.value - x.value)
+//operator fun Meter.plus(x: Meter): Meter = Meter(this.value + x.value)
+//operator fun Meter.minus(x: Meter): Meter = Meter(this.value - x.value)
+//
+//@Suppress("UNCHECKED_CAST")
+//operator fun Meter.times(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value * x.toDouble())
+//operator fun Number.times(x: Meter): Meter = x.times(this)
+//@Suppress("UNCHECKED_CAST")
+//operator fun Meter.div(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value / x.toDouble())
 
-@Suppress("UNCHECKED_CAST")
-operator fun Meter.times(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value * x.toDouble())
-operator fun Number.times(x: Meter): Meter = x.times(this)
-@Suppress("UNCHECKED_CAST")
-operator fun Meter.div(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value / x.toDouble())
 
-
-val SiUnitProduct.mm : Double
+val Expression.mm : Double
     get() = (this.toSiUnit() as Meter).mm
 
 
