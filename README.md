@@ -10,7 +10,7 @@ Please wait until the first version is ready.**
 - 2\. It allows various formulas to be written in Kotlin in a way maximally similar to the way formulas are written in physics and economics.
 - 3\. It allows analyzing dimensions of results of applications of complicated formulas.
 - 4\. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
-- 5\. It is pure library (no plug-in, no perser etc.), it has no dependencies
+- 5\. It is pure library (no plug-in, no parser etc.), it has no dependencies
 
 Let's consider some simple examples:
 
