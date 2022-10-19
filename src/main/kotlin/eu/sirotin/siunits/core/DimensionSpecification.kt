@@ -31,8 +31,6 @@ data class DimensionSpecification<T : TermUnit>(val unitName: String,
 }
 
 interface DimensionsPresentation {
-    fun units() : String
-    fun dimensions(): String
-    fun quantities(): String
-    fun show(format: String) : String
+    fun unitSymbols() : String
+    fun dimensionSymbols(): String
 }

@@ -37,17 +37,17 @@ internal class DimensionTest {
     @Test
     fun testUnits() {
         val s = 4.m * 5.m
-        assertEquals("m2", s.units())
+        assertEquals("m2", s.unitSymbols())
         val x = 20.l
-        assertEquals("m3", x.units())
+        assertEquals("m3", x.unitSymbols())
         val h = x/s
-        assertEquals("m", h.units())
+        assertEquals("m", h.unitSymbols())
 
         val y = 1.2.s
-        assertEquals("s", y.units())
+        assertEquals("s", y.unitSymbols())
 
         val z = x/y
-        assertEquals("m3/s", z.units())
+        assertEquals("m3/s", z.unitSymbols())
 
     }
 

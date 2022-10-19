@@ -25,14 +25,14 @@ package eu.sirotin.siunits.core
 import java.lang.IllegalArgumentException
 import kotlin.math.abs
 
-data class Dimensions(val factors: Set<Factor>) {
+data class Dimensions(val factors: Set<Factor>) : DimensionsPresentation {
 
     fun checkCompatibility(other: Dimensions) {
-        if (this.units() != other.units())
-            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${units()}' and ${other.units()}")
+        if (this.unitSymbols() != other.unitSymbols())
+            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${unitSymbols()}' and ${other.unitSymbols()}")
     }
 
-    fun units() : String {
+    override fun unitSymbols() : String {
         var top = ""
         factors.sorted().filter { it.powerValue > 0.0 }.forEach{top += dimOf(it) }
 
@@ -44,6 +44,10 @@ data class Dimensions(val factors: Set<Factor>) {
         val mid = if(down.isEmpty()) "" else "/"
         return "$top$mid$down"
     }
+
+    override fun dimensionSymbols(): String = factors
+        .sorted()
+        .joinToString("") {it.specification.dimensionSymbol + tryFormatToIntNotOne(it.powerValue) }
 
     private fun dimOf(p: Factor, invert: Boolean = false): String {
         val pv = if(invert) -p.powerValue else p.powerValue
@@ -97,5 +101,5 @@ private fun plusCommonFactors(f: Factor, set1: Set<Factor>, set2: Set<Factor>) :
     val f1 = set1.find { it.specification == f.specification }
     val f2 = set2.find { it.specification == f.specification }
     val powerValue = f1!!.powerValue + f2!!.powerValue
-    return if(abs(powerValue.toInt() - powerValue) < EPS) Factor(f.specification, powerValue) else null
+    return if(abs(powerValue) > EPS) Factor(f.specification, powerValue) else null
 }

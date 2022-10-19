@@ -45,15 +45,7 @@ val Meter.mm : Double
 val Number.l: Expression
     get() = Meter(this.toDouble()/10.0) * (Meter(0.1) * Meter(0.1))
 
-//operator fun Meter.plus(x: Meter): Meter = Meter(this.value + x.value)
-//operator fun Meter.minus(x: Meter): Meter = Meter(this.value - x.value)
-//
-//@Suppress("UNCHECKED_CAST")
-//operator fun Meter.times(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value * x.toDouble())
-//operator fun Number.times(x: Meter): Meter = x.times(this)
-//@Suppress("UNCHECKED_CAST")
-//operator fun Meter.div(x: Number): Meter = (this.description as SiUnitDescription<Meter>).creator(this.value / x.toDouble())
-
+val m = Meter(1.0)
 
 val Expression.mm : Double
     get() = (this.toSiUnit() as Meter).mm

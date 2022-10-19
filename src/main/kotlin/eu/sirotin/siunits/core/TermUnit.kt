@@ -38,13 +38,12 @@ abstract class TermUnit(val value: Double, val description: DimensionSpecificati
 
 
     override fun toString(): String {
-        return "${this.value} ${units()}"
+        return "${this.value} ${unitSymbols()}"
     }
 
-    override fun units() : String = description.unitSymbol
-    override fun dimensions(): String = description.dimensionSymbol
-    override fun quantities(): String = description.quantitySymbol
-    override fun show(format: String): String = String.format(format, value) + units()
+    override fun unitSymbols() : String = description.unitSymbol
+    override fun dimensionSymbols(): String = description.dimensionSymbol
+    fun show(format: String): String = String.format(format, value) + unitSymbols()
 }
 
 

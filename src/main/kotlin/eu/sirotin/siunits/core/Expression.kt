@@ -46,17 +46,16 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
     }
 
     private fun checkCompatibility(other: Expression) {
-        if (this.units() != other.units())
-            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${units()}' and ${other.units()}")
+        if (this.unitSymbols() != other.unitSymbols())
+            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${unitSymbols()}' and ${other.unitSymbols()}")
     }
 
-    override fun units() : String = dimensions.units()
-    override fun dimensions(): String = TODO()
-    override fun quantities(): String = TODO()
-    override fun show(format: String): String = "${String.format(format, value)} ${units()}"
+    override fun unitSymbols() : String = dimensions.unitSymbols()
+    override fun dimensionSymbols(): String = dimensions.dimensionSymbols()
+    fun show(format: String): String = "${String.format(format, value)} ${unitSymbols()}"
 
     override fun toString(): String {
-        return "$value ${units()}"
+        return "$value ${unitSymbols()}"
     }
 }
 

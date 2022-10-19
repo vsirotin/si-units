@@ -47,6 +47,7 @@ internal class CoreTest {
 
         val s7 = s2/s3
         check(s7, 0.5, "1/ab3")
+        assertEquals("A-1B-3", s7.dimensionSymbols())
 
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { x1 + x2 }
@@ -74,12 +75,12 @@ internal class CoreTest {
 
     private fun check(obj: TermUnit, value: Double, units: String) {
         assertEquals(value, obj.value, EPS)
-        assertEquals(units, obj.units())
+        assertEquals(units, obj.unitSymbols())
     }
 
     private fun check(obj: Expression, value: Double, units: String) {
         assertEquals(value, obj.value, EPS)
-        assertEquals(units, obj.units())
+        assertEquals(units, obj.unitSymbols())
     }
 
     @Test
@@ -129,7 +130,7 @@ internal class CoreTest {
     }
 
     @Test
-    fun testCompareTheSameType() {
+    fun testCompareTheSameSimpleType() {
         val v1 = 2.a
         val v2 = 2.999999999999999.a
 
@@ -152,13 +153,22 @@ internal class CoreTest {
     }
 
     @Test
-    fun testUnitAObject() {
+    fun testUnitSymbols() {
         val v1 = 2.42.a
+        assertEquals("a", v1.unitSymbols())
 
-        assertEquals(2.42, v1.value)
-        assertEquals("a", v1.description.unitSymbol)
-        assertEquals("2.42 a", v1.toString())
-        assertEquals("eu.sirotin.siunits.core.UnitA", v1.javaClass.name)
+        val v2 = a*a*a/(a*b*b*3.b.pow(2.1))
+        assertEquals("a2/b4.1", v2.unitSymbols())
+
+    }
+
+    @Test
+    fun testDimensionalSymbols() {
+        val v1 = 2.42.a
+        assertEquals("A", v1.dimensionSymbols())
+
+        val v2 = a*a*a/(a*b*b*3.b.pow(2.1))
+        assertEquals("A2B-4.1", v2.dimensionSymbols())
 
     }
 
