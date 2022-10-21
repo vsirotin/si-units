@@ -16,7 +16,7 @@ Let's consider some simple examples:
 
 Different dimensions:
 
-In Eve's case, a glass broke in her aquarium and water flowed on floor. In aquarium before breakage was 32 liters of water. Eva'a room is 4 m. long and 4.3 tall. How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
+In Eva's case, a glass broke in her aquarium and water flowed on floor. In aquarium before breakage was 32 liters of water. Eva'a room is 4 m. long and 4.3 tall. How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
 
 The solution in Kotlin can be written in one line. For didactic reasons like introduce two auxiliary variables s and h.
 

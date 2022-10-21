@@ -172,4 +172,49 @@ internal class CoreTest {
 
     }
 
+    @Test
+    fun testErrors1() {
+        //Simple errors will be found on compilation phase:
+        //val x = 1.m + 2 compiler error
+        //val y = 20.l/(4.m * 5.m) + 14 compiler error
+
+        //Complex errors will be found in runtime:
+        val exception = assertFailsWith<IllegalArgumentException>(
+            block = { 1.a + 2.b }
+        )
+        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+    }
+
+    @Test
+    fun testErrors2() {
+        //Complex errors will be found in runtime:
+        val exception = assertFailsWith<IllegalArgumentException>(
+            block = { a*a*a*b/(4.a + 5.b) + 2.b }
+        )
+        val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'this' is 'A but 'other' is 'B'"
+        assertEquals(expectedMessage, exception.message!!)
+
+    }
+
+    @Test
+    fun testErrors3() {
+        //Complex errors will be found in runtime:
+        val exception = assertFailsWith<IllegalStateException>(
+            block = { (20.a*a*a*3.b/(4.a + 5.a)).aa}
+        )
+        val expectedMessage = ERR_CONVERSION_PREFIX + "A2B" + ERR_CONVERSION_SUFFIX
+        assertEquals(expectedMessage, exception.message!!)
+
+    }
+
+    @Test
+    fun testErrors4() {
+        //Complex errors will be found in runtime:
+        val exception = assertFailsWith<IllegalStateException>(
+            block = { (20.a*a*a/(a * a * a)).aa}
+        )
+        assertEquals(ERR_CONVERSION_DIMENSIONLESS, exception.message!!)
+
+    }
+
 }

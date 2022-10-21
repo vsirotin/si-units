@@ -21,8 +21,14 @@
 package eu.sirotin.siunits.core
 
 import java.lang.IllegalArgumentException
+import kotlin.math.abs
 import kotlin.math.pow
 
+
+const val ERR_CONVERSION_PREFIX = "Can't convert a multi-dimensional expression with dimensions "
+const val ERR_CONVERSION_SUFFIX = " in simply unit"
+
+const val ERR_CONVERSION_DIMENSIONLESS = "Can't convert dimensionless expression in some unit"
 
 class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expression>, DimensionsPresentation {
 
@@ -33,8 +39,12 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
 
     }
 
-    fun <T: TermUnit> toSiUnit(): T {
-        if(dimensions.factors.size != 1) throw IllegalStateException("TODO")
+    fun <T: TermUnit> toTermUnit(): T {
+        if(dimensions.factors.isEmpty())
+            throw IllegalStateException(ERR_CONVERSION_DIMENSIONLESS)
+
+        if((dimensions.factors.size != 1) || (abs(dimensions.factors.first().powerValue - 1.0) > EPS))
+                throw IllegalStateException("$ERR_CONVERSION_PREFIX${this.dimensionSymbols()}$ERR_CONVERSION_SUFFIX")
         val p = dimensions.factors.first()
         @Suppress("UNCHECKED_CAST")
         return p.specification.creator(value) as T

@@ -29,7 +29,7 @@ data class Dimensions(val factors: Set<Factor>) : DimensionsPresentation {
 
     fun checkCompatibility(other: Dimensions) {
         if (this.unitSymbols() != other.unitSymbols())
-            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${unitSymbols()}' and ${other.unitSymbols()}")
+            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX '${unitSymbols()}' and '${other.unitSymbols()}'")
     }
 
     override fun unitSymbols() : String {

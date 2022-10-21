@@ -48,6 +48,6 @@ val Number.l: Expression
 val m = Meter(1.0)
 
 val Expression.mm : Double
-    get() = (this.toSiUnit() as Meter).mm
+    get() = (this.toTermUnit() as Meter).mm
 
 
