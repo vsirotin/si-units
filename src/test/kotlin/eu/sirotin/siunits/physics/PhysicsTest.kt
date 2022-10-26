@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertFailsWith
 import eu.sirotin.siunits.core.*
+import eu.sirotin.siunits.siunits.m
+import eu.sirotin.siunits.siunits.s
 
 private const val EXPECTED_CLASS = "eu.sirotin.siunits.core.Expression"
 
@@ -87,7 +89,7 @@ internal class PhysicsTest {
         assertEquals(2.42, v1.value)
         assertEquals("m", v1.description.unitSymbol)
         assertEquals("2.42 m", v1.toString())
-        assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals("eu.sirotin.siunits.siunits.Metre", v1.javaClass.name)
 
     }
 

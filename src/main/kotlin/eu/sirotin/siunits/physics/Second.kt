@@ -19,20 +19,20 @@
  *  * THE SOFTWARE.
  *
  */
-
-package eu.sirotin.siunits.physics
-
-import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
-
-private val descriptionSecond = DimensionSpecification("second",
-    "s",
-    "T",
-    "time",
-    ){v:Double->Second(v)}
-class Second(value: Double) : TermUnit(value, descriptionSecond)
-
-val s = Second(1.0)
-
-val Number.s : Second
-    get() = Second(this.toDouble())
+//
+//package eu.sirotin.siunits.physics
+//
+//import eu.sirotin.siunits.core.TermUnit
+//import eu.sirotin.siunits.core.DimensionSpecification
+//
+//private val descriptionSecond = DimensionSpecification(
+//    "s",
+//    "T",
+//    "time",
+//    ){v:Double->Second(v)}
+//class Second(value: Double) : TermUnit(value, descriptionSecond)
+//
+//val s = Second(1.0)
+//
+//val Number.s : Second
+//    get() = Second(this.toDouble())

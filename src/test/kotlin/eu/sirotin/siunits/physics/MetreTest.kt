@@ -1,12 +1,13 @@
 package eu.sirotin.siunits.physics
 
 import eu.sirotin.siunits.core.*
+import eu.sirotin.siunits.siunits.m
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
 
-internal class MeterTest {
+internal class MetreTest {
 
     @Test
     fun testMeterObject() {
@@ -15,7 +16,7 @@ internal class MeterTest {
         assertEquals(2.42, v1.value)
         assertEquals("m", v1.description.unitSymbol)
         assertEquals("2.42 m", v1.toString())
-        assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals("eu.sirotin.siunits.siunits.Metre", v1.javaClass.name)
 
     }
 
@@ -26,7 +27,7 @@ internal class MeterTest {
         assertEquals(0.5, v1.value)
         assertEquals("m", v1.description.unitSymbol)
         assertEquals("0.5 m", v1.toString())
-        assertEquals("eu.sirotin.siunits.physics.Meter", v1.javaClass.name)
+        assertEquals("eu.sirotin.siunits.siunits.Metre", v1.javaClass.name)
 
     }
 

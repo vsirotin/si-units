@@ -20,16 +20,20 @@
  *
  */
 
-package eu.sirotin.siunits.core
+package eu.sirotin.generator
 
-data class DimensionSpecification<T : TermUnit>(val unitSymbol: String,
-                                                val dimensionSymbol: String,
-                                                val quantitySymbol: String,
-                                                val presentationPriority: Int = 0,
-                                                val creator: (v : Double) -> T) {
-}
+val siUnitDescriptions = listOf(
+    SiUnitDescription("second", "s", "T", "time", 0),
+    SiUnitDescription("metre", "m", "L", "length", 80),
+    SiUnitDescription("kilogram", "kg", "M", "mass", 90),
+    SiUnitDescription("ampere", "A", "I", "electric current", 70),
+    SiUnitDescription("kelvin", "K", "Θ", "thermodynamic temperature", 60),
+    SiUnitDescription("mole", "mol", "N", "amount of substance", 50),
+    SiUnitDescription("candela", "cd", "J", "luminous intensity", 40)
+)
 
-interface DimensionsPresentation {
-    fun unitSymbols() : String
-    fun dimensionSymbols(): String
-}
+data class SiUnitDescription(val name: String,
+                             val unitSymbol: String,
+                             val dimensionSymbol: String,
+                             val quantityName: String,
+                             val presentationPriority: Int)

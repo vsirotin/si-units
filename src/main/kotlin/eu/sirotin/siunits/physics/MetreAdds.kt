@@ -22,32 +22,12 @@
 package eu.sirotin.siunits.physics
 
 import eu.sirotin.siunits.core.Expression
-import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
 import eu.sirotin.siunits.core.times
-
-
-private val descriptionMeter = DimensionSpecification("metre",
-    "m",
-    "L",
-    "length"
-) { v: Double -> Meter(v) }
-
-
-class Meter(value: Double) : TermUnit(value, description = descriptionMeter)
-val Number.m : Meter
-    get() = Meter(this.toDouble())
-
-val Meter.mm : Double
-    get() = this.value * 1000.0
+import eu.sirotin.siunits.siunits.Metre
 
 
 val Number.l: Expression
-    get() = Meter(this.toDouble()/10.0) * (Meter(0.1) * Meter(0.1))
+    get() = Metre(this.toDouble()/10.0) * (Metre(0.1) * Metre(0.1))
 
-val m = Meter(1.0)
-
-val Expression.mm : Double
-    get() = (this.toTermUnit() as Meter).mm
 
 

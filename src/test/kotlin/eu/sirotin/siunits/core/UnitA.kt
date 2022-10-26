@@ -1,7 +1,7 @@
 package eu.sirotin.siunits.core
 
 
-private val descriptionUnitA = DimensionSpecification("unit-a",
+private val descriptionUnitA = DimensionSpecification(
     "a",
     "A",
     "unit-a-a",

@@ -1,0 +1,149 @@
+/*
+ * Copyright (c) 2022.  Viktor Sirotin
+ *
+ *  *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  * of this software and associated documentation files (the "Software"), to deal
+ *  * in the Software without restriction, including without limitation the rights
+ *  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  * copies of the Software, and to permit persons to whom the Software is
+ *  *  furnished to do so, subject to the following conditions:
+ *  *  This Copyright header should still in file if you use it file without changes or
+ *  * with changes or if you copy essential part of this file in some new file.
+ *  *  *
+ *  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ *  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  * THE SOFTWARE.
+ *
+ */
+
+package eu.sirotin.generator
+
+import java.io.File
+import java.nio.file.Files
+
+fun main(args: Array<String>){
+    generateSiUnitsClasses()
+}
+
+fun generateSiUnitsClasses() {
+    generateSiUnitsProductionClasses()
+}
+
+fun generateSiUnitsProductionClasses() {
+    //Generate package directory if not exists
+    val dir = File("src/main/kotlin/eu/sirotin/siunits/siunits")
+    if(!dir.exists()) Files.createDirectories(dir.toPath())
+
+    //Generate classes
+    siUnitDescriptions.forEach { generateSiUnitClass(it, dir) }
+
+}
+
+fun generateSiUnitClass(siUnitDescription: SiUnitDescription, dir: File) {
+    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+    val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+    val sud: SiUnitDescription = if(className != "Kilogram") siUnitDescription
+        else SiUnitDescription("gram", "g",
+            siUnitDescription.dimensionSymbol, siUnitDescription.quantityName, siUnitDescription.presentationPriority)
+    val fileName = "$className.kt"
+    val file = dir.resolve(fileName)
+    file.delete()
+    val classText = generateClassText(className,
+        sud.unitSymbol,
+        sud.dimensionSymbol,
+        sud.quantityName,
+        sud.presentationPriority) +
+        generateBody(className, sud.name, sud.unitSymbol, prefixes)
+    
+    file.writeText(classText)
+}
+
+fun generatePrefixesForKilogram(): List<SiPrefix> {
+    val res = siPrefixes
+        .map { SiPrefix(it.name, it.symbol, it.degree - 3) }
+        .filter { it.name != "kilo" }
+    return res
+}
+
+
+fun generateClassText(className: String,
+                      unitSymbol: String,
+                      dimensionSymbol: String,
+                      quantityName: String,
+                      presentationPriority: Int): String {
+    return generateHeadPart(className, unitSymbol, dimensionSymbol, quantityName, presentationPriority)
+}
+
+fun generateHeadPart(
+    className: String,
+    unitSymbol: String,
+    dimensionSymbol: String,
+    quantityName: String,
+    presentationPriority: Int
+): String {
+    return """
+        package eu.sirotin.siunits.siunits
+
+        import eu.sirotin.siunits.core.TermUnit
+        import eu.sirotin.siunits.core.DimensionSpecification
+        import kotlin.math.pow
+        private val description$className = DimensionSpecification(
+            "$unitSymbol",
+            "$dimensionSymbol",
+            "$quantityName",
+            $presentationPriority
+        ) { v: Double -> $className(v) }
+
+
+        class $className(value: Double) : TermUnit(value, description = description$className)
+        val Number.$unitSymbol : $className
+            get() = $className(this.toDouble())
+            
+        val $unitSymbol = $className(1.0)   
+        ${System.lineSeparator()}      
+    """.trimIndent()
+}
+
+
+fun generateBody(className: String, name: String, unitSymbol: String, prefixes: List<SiPrefix>): String {
+    val res = prefixes
+        .map { generateTextForPrefix(it, className, name, unitSymbol) }
+        .joinToString(System.lineSeparator())
+    return res
+}
+
+
+fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
+
+    val res = """
+        val Number.${correctSpecialCases(siPrefix.symbol, unitSymbol)} : $className
+            ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(10.0.pow(${siPrefix.degree}))
+        
+        val Number.${siPrefix.name}$name : $className
+            get() = $className(10.0.pow(${siPrefix.degree}))
+            
+        val $className.${correctSpecialCases(siPrefix.symbol, unitSymbol)}  : Double
+            ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
+            
+         val $className.${siPrefix.name}$name  : Double
+            get() = this.value / 10.0.pow(${siPrefix.degree}) 
+        
+        ${System.lineSeparator()}       
+    """.trimIndent()
+    return res
+}
+
+fun generateJVMName(symbol: String, unitSymbol: String): String{
+    if(symbol.first().isLowerCase())return ""
+
+    return "@JvmName(\"get${symbol}${unitSymbol}_prop\")${System.lineSeparator()}          "
+}
+
+fun correctSpecialCases(symbol: String, unitSymbol: String): String {
+    val s = "$symbol$unitSymbol"
+    return  if(s != "as") s else "ast"  // To avoid conflict with keyword 'as'
+}
