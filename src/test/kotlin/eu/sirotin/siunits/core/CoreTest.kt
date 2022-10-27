@@ -1,10 +1,8 @@
 package eu.sirotin.siunits.core
 
 import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertFailsWith
-
 
 private const val EXPECTED_CLASS = "eu.sirotin.siunits.core.Expression"
 

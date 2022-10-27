@@ -25,7 +25,7 @@ package eu.sirotin.generator
 import java.io.File
 import java.nio.file.Files
 
-fun main(args: Array<String>){
+fun main() {
     generateSiUnitsClasses()
 }
 
@@ -63,12 +63,10 @@ fun generateSiUnitClass(siUnitDescription: SiUnitDescription, dir: File) {
 }
 
 fun generatePrefixesForKilogram(): List<SiPrefix> {
-    val res = siPrefixes
+    return siPrefixes
         .map { SiPrefix(it.name, it.symbol, it.degree - 3) }
         .filter { it.name != "kilo" }
-    return res
 }
-
 
 fun generateClassText(className: String,
                       unitSymbol: String,
@@ -86,64 +84,59 @@ fun generateHeadPart(
     presentationPriority: Int
 ): String {
     return """
-        package eu.sirotin.siunits.siunits
+package eu.sirotin.siunits.siunits
 
-        import eu.sirotin.siunits.core.TermUnit
-        import eu.sirotin.siunits.core.DimensionSpecification
-        import kotlin.math.pow
-        private val description$className = DimensionSpecification(
-            "$unitSymbol",
-            "$dimensionSymbol",
-            "$quantityName",
-            $presentationPriority
-        ) { v: Double -> $className(v) }
+import eu.sirotin.siunits.core.TermUnit
+import eu.sirotin.siunits.core.DimensionSpecification
+import kotlin.math.pow
+private val description$className = DimensionSpecification(
+    "$unitSymbol",
+    "$dimensionSymbol",
+    "$quantityName",
+    $presentationPriority
+) { v: Double -> $className(v) }
 
-
-        class $className(value: Double) : TermUnit(value, description = description$className)
-        val Number.$unitSymbol : $className
-            get() = $className(this.toDouble())
-            
-        val $unitSymbol = $className(1.0)   
-        ${System.lineSeparator()}      
-    """.trimIndent()
+class $className(value: Double) : TermUnit(value, description = description$className)
+    val Number.$unitSymbol : $className
+        get() = $className(this.toDouble())
+    
+    val $unitSymbol = $className(1.0)       
+    """
 }
 
 
 fun generateBody(className: String, name: String, unitSymbol: String, prefixes: List<SiPrefix>): String {
-    val res = prefixes
-        .map { generateTextForPrefix(it, className, name, unitSymbol) }
-        .joinToString(System.lineSeparator())
-    return res
+    return prefixes.joinToString(System.lineSeparator()) { generateTextForPrefix(it, className, name, unitSymbol) }
 }
 
 
 fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
 
-    val res = """
-        val Number.${correctSpecialCases(siPrefix.symbol, unitSymbol)} : $className
-            ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(10.0.pow(${siPrefix.degree}))
-        
-        val Number.${siPrefix.name}$name : $className
-            get() = $className(10.0.pow(${siPrefix.degree}))
-            
-        val $className.${correctSpecialCases(siPrefix.symbol, unitSymbol)}  : Double
-            ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
-            
-         val $className.${siPrefix.name}$name  : Double
-            get() = this.value / 10.0.pow(${siPrefix.degree}) 
-        
-        ${System.lineSeparator()}       
-    """.trimIndent()
-    return res
+    return """
+    val Number.${correctSpecialCases(siPrefix.symbol, unitSymbol)} : $className
+        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(10.0.pow(${siPrefix.degree}))
+    
+    val Number.${siPrefix.name}$name : $className
+        get() = $className(10.0.pow(${siPrefix.degree}))
+    
+    val $className.${correctSpecialCases(siPrefix.symbol, unitSymbol)}  : Double
+        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
+    
+    val $className.${siPrefix.name}$name  : Double
+        get() = this.value / 10.0.pow(${siPrefix.degree})
+    
+    @JvmField()         
+    val ${correctSpecialCases(siPrefix.symbol, unitSymbol)} = $className(10.0.pow(${siPrefix.degree}))
+    val ${siPrefix.name}$name = ${correctSpecialCases(siPrefix.symbol, unitSymbol)}          """
 }
 
 fun generateJVMName(symbol: String, unitSymbol: String): String{
     if(symbol.first().isLowerCase())return ""
 
-    return "@JvmName(\"get${symbol}${unitSymbol}_prop\")${System.lineSeparator()}          "
+    return "@JvmName(\"get${symbol}${unitSymbol}_prop\")${System.lineSeparator()}        "
 }
 
 fun correctSpecialCases(symbol: String, unitSymbol: String): String {
     val s = "$symbol$unitSymbol"
-    return  if(s != "as") s else "ast"  // To avoid conflict with keyword 'as'
+    return  if(s != "as") s else "`as`"  // To avoid conflict with keyword 'as'
 }

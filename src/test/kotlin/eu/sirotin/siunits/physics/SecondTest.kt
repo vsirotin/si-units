@@ -3,7 +3,6 @@ package eu.sirotin.siunits.physics
 import eu.sirotin.siunits.siunits.s
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
-
 internal class SecondTest {
 
     @Test

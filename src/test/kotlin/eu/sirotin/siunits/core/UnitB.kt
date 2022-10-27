@@ -1,4 +1,3 @@
-
 package eu.sirotin.siunits.core
 
 private val descriptionUnitB = DimensionSpecification(

@@ -1,15 +1,38 @@
+/*
+ * Copyright (c) 2022.  Viktor Sirotin
+ *
+ *  *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  * of this software and associated documentation files (the "Software"), to deal
+ *  * in the Software without restriction, including without limitation the rights
+ *  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  * copies of the Software, and to permit persons to whom the Software is
+ *  *  furnished to do so, subject to the following conditions:
+ *  *  This Copyright header should still in file if you use it file without changes or
+ *  * with changes or if you copy essential part of this file in some new file.
+ *  *  *
+ *  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ *  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  * THE SOFTWARE.
+ *
+ */
+
 package eu.sirotin.siunits.tutorial
 
 import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.physics.l
 import eu.sirotin.siunits.siunits.m
+import eu.sirotin.siunits.siunits.mm
 import eu.sirotin.siunits.siunits.s
+import eu.sirotin.siunits.siunits.μm
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Disabled
 import kotlin.test.assertFailsWith
-
 
 internal class TutorialTest {
 
@@ -26,12 +49,12 @@ internal class TutorialTest {
         val s = 4.m * 5.m
         val x = 20.l
         val h = x/s
-        //TODO val z = h.mm
-        //assertEquals(1.0, z, EPS)
+        val z = h/mm
+        assertEquals(1.0, z.value, EPS)
 
         //the same as statement
 
-        //TODO assertEquals(1.0, (20.l/(4.m * 5.m)).mm, EPS)
+        assertEquals(1.0, ((20.l/(4.m * 5.m))/mm).value, EPS)
 
     }
 
@@ -108,25 +131,13 @@ internal class TutorialTest {
     }
 
     @Test
-    @Disabled
     fun testErrors3() {
         //Complex errors will be found in runtime:
-        //val exception = assertFailsWith<IllegalStateException>(
-            //TODO block = { (20.l*3.s/(4.m + 5.m)).mm}
-        //)
-        val expectedMessage = ERR_CONVERSION_PREFIX + "L2T" + ERR_CONVERSION_SUFFIX
-        //TODO assertEquals(expectedMessage, exception.message!!)
-
-    }
-
-    @Test
-    @Disabled
-    fun testErrors4() {
-        //Complex errors will be found in runtime:
-        //val exception = assertFailsWith<IllegalStateException>(
-            //TODO block = { (20.l/(m*m*m)).mm}
-        //)
-        //TODO assertEquals(ERR_CONVERSION_DIMENSIONLESS, exception.message!!)
+        val exception = assertFailsWith<IllegalArgumentException>(
+            block = { (20.l*3.s/(4.m + 5.m)) + mm}
+        )
+        val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'm2s' and 'm'"
+        assertEquals(expectedMessage, exception.message!!)
 
     }
 
@@ -139,6 +150,5 @@ internal class TutorialTest {
             block = { v1 >= v2 }
         )
         assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
-
     }
 }
