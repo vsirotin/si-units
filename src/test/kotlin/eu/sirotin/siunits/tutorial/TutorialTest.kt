@@ -27,11 +27,9 @@ import eu.sirotin.siunits.physics.l
 import eu.sirotin.siunits.siunits.m
 import eu.sirotin.siunits.siunits.mm
 import eu.sirotin.siunits.siunits.s
-import eu.sirotin.siunits.siunits.μm
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Disabled
 import kotlin.test.assertFailsWith
 
 internal class TutorialTest {
@@ -60,6 +58,7 @@ internal class TutorialTest {
 
     @Test
     fun testUnitSymbols() {
+
         val s = 4.m * 5.m
         assertEquals("m2", s.unitSymbols())
         val x = 20.l

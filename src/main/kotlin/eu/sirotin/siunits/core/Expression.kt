@@ -74,7 +74,12 @@ fun Expression.pow(degree: Number): Expression {
     return Expression(this.value.pow(degree.toDouble()), this.dimensions.pow(degree))
 }
 
+infix fun Expression.`^`(degree: Number) = this.pow(degree)
+
+
 fun TermUnit.pow(degree: Number): Expression = Expression.createFromSiUnit(this).pow(degree)
+
+infix fun TermUnit.`^`(degree: Number) = this.pow(degree)
 operator fun Number.div(u: TermUnit): Expression =
     Expression(this.toDouble()/u.value, Dimensions(setOf(Factor(u.description, -1.0))))
 

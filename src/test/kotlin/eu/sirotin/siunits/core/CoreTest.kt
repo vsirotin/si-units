@@ -215,4 +215,29 @@ internal class CoreTest {
 
     }
 
+    @Test
+    fun testPowerAliasInTerm() {
+        val x = 20.a `^` 3
+        assertEquals("A3", x.dimensionSymbols())
+        assertEquals(8000.0, x.value)
+    }
+
+    @Test
+    fun testPowerAliasInExpression() {
+        //Different operation/operator priority by infix function `^` and extension function pow
+        val x = 2.a*20.a/b `^` 3
+        assertEquals("A6B-3", x.dimensionSymbols())
+        assertEquals(64000.0, x.value)
+
+        val y = 2.a*20.a/b.pow(3)
+        assertEquals("A2B-3", y.dimensionSymbols())
+        assertEquals(40.0, y.value)
+
+        //To access the same result as by previous lines:
+        val z = 2.a*20.a/(b `^` 3)
+        assertEquals("A2B-3", z.dimensionSymbols())
+        assertEquals(40.0, z.value)
+
+    }
+
 }
