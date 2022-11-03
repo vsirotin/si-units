@@ -50,6 +50,8 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
         return p.specification.creator(value) as T
     }
 
+
+
     override fun compareTo(other: Expression): Int {
         checkCompatibility(other)
         return value.compareTo(other.value)
@@ -66,6 +68,24 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
 
     override fun toString(): String {
         return "$value ${unitSymbols()}"
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Expression
+
+        if (value != other.value) return false
+        if (dimensions != other.dimensions) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = value.hashCode()
+        result = 31 * result + dimensions.hashCode()
+        return result
     }
 }
 

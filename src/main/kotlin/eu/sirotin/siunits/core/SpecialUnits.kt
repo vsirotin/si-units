@@ -19,15 +19,45 @@
  *  * THE SOFTWARE.
  */
 
-package eu.sirotin.siunits.physics
+package eu.sirotin.siunits.core
 
-import eu.sirotin.siunits.core.Expression
-import eu.sirotin.siunits.core.times
-import eu.sirotin.siunits.siunits.Metre
+import eu.sirotin.siunits.base.K
+import eu.sirotin.siunits.base.Kilogram
+import eu.sirotin.siunits.base.Metre
+import eu.sirotin.siunits.base.kg
+import eu.sirotin.siunits.base.m
+import eu.sirotin.siunits.derived.Celsius
 
+val Number.g: Kilogram
+    get()  = Kilogram(0.001)
+
+val g = Kilogram(0.001)
 
 val Number.l: Expression
     get() = Metre(this.toDouble()/10.0) * (Metre(0.1) * Metre(0.1))
+
+val rad = 1.0 //radian, plane angle
+val sr = 1.0 //steradian, solid angle
+val m2 = m * m
+val m3 = m2 * m
+
+//Celsius
+val Number.`°C`: Expression
+    get()  = Celsius
+
+val Number.`℃`: Expression
+    get()  = Celsius
+
+val `°C` = Celsius
+val `℃` = Celsius
+
+//Percentage
+val Number.`%`: Double
+    get()  = this.toDouble()*0.01
+
+val `%` = 0.01
+
+
 
 
 

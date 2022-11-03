@@ -23,10 +23,10 @@
 package eu.sirotin.siunits.tutorial
 
 import eu.sirotin.siunits.core.*
-import eu.sirotin.siunits.physics.l
-import eu.sirotin.siunits.siunits.m
-import eu.sirotin.siunits.siunits.mm
-import eu.sirotin.siunits.siunits.s
+import eu.sirotin.siunits.core.l
+import eu.sirotin.siunits.base.m
+import eu.sirotin.siunits.base.mm
+import eu.sirotin.siunits.base.s
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -47,12 +47,12 @@ internal class TutorialTest {
         val s = 4.m * 5.m
         val x = 20.l
         val h = x/s
-        val z = h/mm
+        val z = h/ mm
         assertEquals(1.0, z.value, EPS)
 
         //the same as statement
 
-        assertEquals(1.0, ((20.l/(4.m * 5.m))/mm).value, EPS)
+        assertEquals(1.0, ((20.l/(4.m * 5.m))/ mm).value, EPS)
 
     }
 
@@ -122,7 +122,7 @@ internal class TutorialTest {
     fun testErrors2() {
         //Complex errors will be found in runtime:
         val exception = assertFailsWith<IllegalArgumentException>(
-            block = { 20.l*s/(4.m + 5.m) + 2.s }
+            block = { 20.l* s /(4.m + 5.m) + 2.s }
         )
         val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'm2s' and 's'"
         assertEquals(expectedMessage, exception.message!!)
@@ -133,7 +133,7 @@ internal class TutorialTest {
     fun testErrors3() {
         //Complex errors will be found in runtime:
         val exception = assertFailsWith<IllegalArgumentException>(
-            block = { (20.l*3.s/(4.m + 5.m)) + mm}
+            block = { (20.l*3.s/(4.m + 5.m)) + mm }
         )
         val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'm2s' and 'm'"
         assertEquals(expectedMessage, exception.message!!)

@@ -37,3 +37,32 @@ data class SiUnitDescription(val name: String,
                              val dimensionSymbol: String,
                              val quantityName: String,
                              val presentationPriority: Int)
+
+
+val siDerivedUnitDescriptions = listOf(
+    SiDerivedUnitDescription("hertz", "Hz",	"frequency", "1/s"),
+    SiDerivedUnitDescription("newton", "N", "force, weight", "kg*m/(s `^` 2)"),
+    SiDerivedUnitDescription("pascal", "Pa", "pressure, stress", "kg/(m * (s `^` 2))"),
+    SiDerivedUnitDescription("joule", "J", "energy, work, heat", "kg*(m2)/(s `^` 2)"),
+    SiDerivedUnitDescription("watt", "W", "power, radiant flux", "kg*(m2)/(s `^` 3)"),
+    SiDerivedUnitDescription("coulomb", "C", "electric charge", "s*A"),
+    SiDerivedUnitDescription("volt", "V", "electric potential, voltage, emf", "kg*m2*(s `^` -3) * (A `^` -1)"),
+    SiDerivedUnitDescription("farad", "F", "capacitance", "(kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)"),
+    SiDerivedUnitDescription("ohm", "Ω", "resistance, impedance, reactance", "kg*m2 * (s `^` -3) * (A `^` -2)"),
+    SiDerivedUnitDescription("siemens", "S", "electrical conductance", "(kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)"),
+    SiDerivedUnitDescription("weber", "Wb", "magnetic flux", "kg*(m2) * (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("tesla", "T", "magnetic flux density", "kg* (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("henry", "H", "inductance", "kg* (m2)*(s `^` -2)*(A `^` -2)"),
+    SiDerivedUnitDescription("degreeCelsius", "Celsius", "°C or ℃: temperature relative to 273.15 K", "(K `^` 1)"),
+    SiDerivedUnitDescription("lumen", "lm", "luminous flux", "((cd `^` 1)*sr)"),
+    SiDerivedUnitDescription("lux", "lx", "illuminance", "cd*sr*(m `^` -2)"),
+    SiDerivedUnitDescription("becquerel", "Bq", "activity referred to a radionuclide (decays per unit time)", "(s `^` -1)"),
+    SiDerivedUnitDescription("gray", "Gy", "absorbed dose (of ionising radiation)", "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("sievert", "Sv", "equivalent dose (of ionising radiation)", "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("katal", "kat", "catalytic activity", "(mol * (s `^` -1))")
+)
+
+data class SiDerivedUnitDescription(val name: String,
+                             val unitSymbol: String,
+                             val quantityName: String,
+                             val formula: String)
