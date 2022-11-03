@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of activity referred to a radionuclide (decays per unit time)
     val Bq = (s `^` -1)
 
     val Number.Bq : Expression

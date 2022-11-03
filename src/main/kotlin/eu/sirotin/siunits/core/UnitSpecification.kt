@@ -22,14 +22,16 @@
 
 package eu.sirotin.siunits.core
 
-data class DimensionSpecification<T : TermUnit>(val unitSymbol: String,
-                                                val dimensionSymbol: String,
-                                                val quantitySymbol: String,
-                                                val presentationPriority: Int = 0,
-                                                val creator: (v : Double) -> T) {
+/**
+ *
+ */
+data class UnitSpecification<T : TermUnit>(val unitSymbol: String,
+                                           val categorySymbol: String,
+                                           val presentationPriority: Int = 0,
+                                           val creator: (v : Double) -> T) {
 }
 
-interface DimensionsPresentation {
+interface UnitPresentation {
     fun unitSymbols() : String
-    fun dimensionSymbols(): String
+    fun categorySymbols(): String
 }

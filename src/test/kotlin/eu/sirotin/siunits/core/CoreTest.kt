@@ -45,7 +45,7 @@ internal class CoreTest {
 
         val s7 = s2/s3
         check(s7, 0.5, "1/ab3")
-        assertEquals("A-1B-3", s7.dimensionSymbols())
+        assertEquals("A-1B-3", s7.categorySymbols())
 
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { x1 + x2 }
@@ -163,10 +163,10 @@ internal class CoreTest {
     @Test
     fun testDimensionalSymbols() {
         val v1 = 2.42.a
-        assertEquals("A", v1.dimensionSymbols())
+        assertEquals("A", v1.categorySymbols())
 
         val v2 = a*a*a/(a*b*b*3.b.pow(2.1))
-        assertEquals("A2B-4.1", v2.dimensionSymbols())
+        assertEquals("A2B-4.1", v2.categorySymbols())
 
     }
 
@@ -218,7 +218,7 @@ internal class CoreTest {
     @Test
     fun testPowerAliasInTerm() {
         val x = 20.a `^` 3
-        assertEquals("A3", x.dimensionSymbols())
+        assertEquals("A3", x.categorySymbols())
         assertEquals(8000.0, x.value)
     }
 
@@ -226,16 +226,16 @@ internal class CoreTest {
     fun testPowerAliasInExpression() {
         //Different operation/operator priority by infix function `^` and extension function pow
         val x = 2.a*20.a/b `^` 3
-        assertEquals("A6B-3", x.dimensionSymbols())
+        assertEquals("A6B-3", x.categorySymbols())
         assertEquals(64000.0, x.value)
 
         val y = 2.a*20.a/b.pow(3)
-        assertEquals("A2B-3", y.dimensionSymbols())
+        assertEquals("A2B-3", y.categorySymbols())
         assertEquals(40.0, y.value)
 
         //To access the same result as by previous lines:
         val z = 2.a*20.a/(b `^` 3)
-        assertEquals("A2B-3", z.dimensionSymbols())
+        assertEquals("A2B-3", z.categorySymbols())
         assertEquals(40.0, z.value)
 
     }

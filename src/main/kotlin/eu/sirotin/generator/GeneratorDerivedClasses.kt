@@ -43,7 +43,6 @@ fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir:
     file.delete()
     val classText = generateDerivedUnitClassHead(
         siUnitDescription.unitSymbol,
-        siUnitDescription.quantityName,
         siUnitDescription.formula) +
             generateDerivedClassPrefixes(siUnitDescription.name,
                 siUnitDescription.unitSymbol,
@@ -54,10 +53,11 @@ fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir:
 }
 
 
-fun generateDerivedUnitClassHead(unitSymbol: String,
-                                 quantityName: String,
-                                 formula: String): String {
-    val res = """
+fun generateDerivedUnitClassHead(
+    unitSymbol: String,
+    formula: String
+): String {
+    return """
 package eu.sirotin.siunits.derived
 
 import eu.sirotin.siunits.core.Expression
@@ -65,14 +65,12 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of $quantityName
     val $unitSymbol = $formula
 
     val Number.$unitSymbol : Expression
         get() = this.toDouble() * ($formula)
 
     """
-    return res
 }
 
 private fun generateDerivedClassPrefixes(name: String, unitSymbol: String, formula: String, prefixes: List<SiPrefix>): String {

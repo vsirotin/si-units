@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of electrical conductance
     val S = (kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)
 
     val Number.S : Expression

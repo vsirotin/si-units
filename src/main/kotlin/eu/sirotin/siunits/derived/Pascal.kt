@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of pressure, stress
     val Pa = kg/(m * (s `^` 2))
 
     val Number.Pa : Expression

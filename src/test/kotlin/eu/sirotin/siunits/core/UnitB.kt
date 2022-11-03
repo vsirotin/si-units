@@ -1,9 +1,8 @@
 package eu.sirotin.siunits.core
 
-private val descriptionUnitB = DimensionSpecification(
+private val descriptionUnitB = UnitSpecification(
     "b",
     "B",
-    "unit-b-b",
     ){v:Double->UnitB(v)}
 class UnitB(value: Double) : TermUnit(value, descriptionUnitB)
 

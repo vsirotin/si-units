@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of illuminance
     val lx = cd*sr*(m `^` -2)
 
     val Number.lx : Expression

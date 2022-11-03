@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of inductance
     val H = kg* (m2)*(s `^` -2)*(A `^` -2)
 
     val Number.H : Expression

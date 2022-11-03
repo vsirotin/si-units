@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of magnetic flux density
     val T = kg* (s `^` -2) * (A `^` -1)
 
     val Number.T : Expression

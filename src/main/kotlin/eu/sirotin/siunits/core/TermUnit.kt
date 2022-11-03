@@ -24,16 +24,17 @@ package eu.sirotin.siunits.core
 const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
 const val EPS = 1.0E-12
 
-abstract class TermUnit(val value: Double, val description: DimensionSpecification<*> ) : Comparable<TermUnit>, DimensionsPresentation {
+abstract class TermUnit(val value: Double = 1.0, val description: UnitSpecification<*> ) : Comparable<TermUnit>, UnitPresentation {
 
     override fun compareTo(other: TermUnit): Int {
         checkCompatibility(other)
         return value.compareTo(other.value)
     }
 
+
     fun checkCompatibility(other: TermUnit) {
         if (this.description != other.description)
-            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX 'this' is '${this.dimensionSymbols()} but 'other' is '${other.dimensionSymbols()}'")
+            throw IllegalArgumentException("$COMPATIBILITY_ERR_PREFIX 'this' is '${this.categorySymbols()} but 'other' is '${other.categorySymbols()}'")
     }
 
 
@@ -42,7 +43,7 @@ abstract class TermUnit(val value: Double, val description: DimensionSpecificati
     }
 
     override fun unitSymbols() : String = description.unitSymbol
-    override fun dimensionSymbols(): String = description.dimensionSymbol
+    override fun categorySymbols(): String = description.categorySymbol
     fun show(format: String): String = "${String.format(format, value)} ${unitSymbols()}"
 }
 

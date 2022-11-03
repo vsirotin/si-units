@@ -21,10 +21,8 @@
 
 package eu.sirotin.siunits.core
 
-import eu.sirotin.siunits.base.K
 import eu.sirotin.siunits.base.Kilogram
 import eu.sirotin.siunits.base.Metre
-import eu.sirotin.siunits.base.kg
 import eu.sirotin.siunits.base.m
 import eu.sirotin.siunits.derived.Celsius
 

@@ -1,9 +1,8 @@
 package eu.sirotin.siunits.core
 
-private val descriptionUnitA = DimensionSpecification(
+private val descriptionUnitA = UnitSpecification(
     "a",
     "A",
-    "unit-a-a",
     1,
 ) { v: Double -> UnitA(v) }
 

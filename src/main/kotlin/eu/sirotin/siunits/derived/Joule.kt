@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of energy, work, heat
     val J = kg*(m2)/(s `^` 2)
 
     val Number.J : Expression

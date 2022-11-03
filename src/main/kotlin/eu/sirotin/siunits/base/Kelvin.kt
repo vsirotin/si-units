@@ -2,12 +2,11 @@
 package eu.sirotin.siunits.base
 
 import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
+import eu.sirotin.siunits.core.UnitSpecification
 import kotlin.math.pow
-private val descriptionKelvin = DimensionSpecification(
+private val descriptionKelvin = UnitSpecification(
     "K",
     "Θ",
-    "thermodynamic temperature",
     60
 ) { v: Double -> Kelvin(v) }
 

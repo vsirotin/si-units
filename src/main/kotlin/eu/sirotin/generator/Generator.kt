@@ -24,9 +24,10 @@ package eu.sirotin.generator
 
 fun main() {
     generateSiUnitsClasses()
+    generateCurrencies()
 }
 
 fun generateSiUnitsClasses() {
- //   generateSiUnitsBaseClasses()
+    generateSiUnitsBaseClasses()
     generateSiUnitsDerivedClasses()
 }

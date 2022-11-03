@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of electric potential, voltage, emf
     val V = kg*m2*(s `^` -3) * (A `^` -1)
 
     val Number.V : Expression

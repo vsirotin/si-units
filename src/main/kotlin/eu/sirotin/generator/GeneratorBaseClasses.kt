@@ -32,22 +32,18 @@ fun generateSiUnitsBaseClasses() {
 
     //Generate classes
     siUnitDescriptions.forEach { generateSiUnitBaseClass(it, dir) }
-
 }
 
 private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File) {
     val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
     val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
-//    val siUnitDescription: SiUnitDescription = if(className != "Kilogram") siUnitDescription
-//        else SiUnitDescription("gram", "g",
-//            siUnitDescription.dimensionSymbol, siUnitDescription.quantityName, siUnitDescription.presentationPriority)
+
     val fileName = "$className.kt"
     val file = dir.resolve(fileName)
     file.delete()
     val classText = generateHeadPart(className,
         siUnitDescription.unitSymbol,
         siUnitDescription.dimensionSymbol,
-        siUnitDescription.quantityName,
         siUnitDescription.presentationPriority) +
         generatePrefixes(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
     
@@ -64,19 +60,17 @@ private fun generateHeadPart(
     className: String,
     unitSymbol: String,
     dimensionSymbol: String,
-    quantityName: String,
     presentationPriority: Int
 ): String {
     return """
 package eu.sirotin.siunits.base
 
 import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
+import eu.sirotin.siunits.core.UnitSpecification
 import kotlin.math.pow
-private val description$className = DimensionSpecification(
+private val description$className = UnitSpecification(
     "$unitSymbol",
     "$dimensionSymbol",
-    "$quantityName",
     $presentationPriority
 ) { v: Double -> $className(v) }
 

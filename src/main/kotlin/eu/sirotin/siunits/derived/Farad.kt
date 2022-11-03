@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of capacitance
     val F = (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)
 
     val Number.F : Expression

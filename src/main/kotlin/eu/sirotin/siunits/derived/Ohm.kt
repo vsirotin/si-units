@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of resistance, impedance, reactance
     val Ω = kg*m2 * (s `^` -3) * (A `^` -2)
 
     val Number.Ω : Expression

@@ -2,12 +2,11 @@
 package eu.sirotin.siunits.base
 
 import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
+import eu.sirotin.siunits.core.UnitSpecification
 import kotlin.math.pow
-private val descriptionMole = DimensionSpecification(
+private val descriptionMole = UnitSpecification(
     "mol",
     "N",
-    "amount of substance",
     50
 ) { v: Double -> Mole(v) }
 

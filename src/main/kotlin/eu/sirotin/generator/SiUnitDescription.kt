@@ -23,46 +23,44 @@
 package eu.sirotin.generator
 
 val siUnitDescriptions = listOf(
-    SiUnitDescription("second", "s", "T", "time", 0),
-    SiUnitDescription("metre", "m", "L", "length", 80),
-    SiUnitDescription("kilogram", "kg", "M", "mass", 90),
-    SiUnitDescription("ampere", "A", "I", "electric current", 70),
-    SiUnitDescription("kelvin", "K", "Θ", "thermodynamic temperature", 60),
-    SiUnitDescription("mole", "mol", "N", "amount of substance", 50),
-    SiUnitDescription("candela", "cd", "J", "luminous intensity", 40)
+    SiUnitDescription("second", "s", "T",  0),
+    SiUnitDescription("metre", "m", "L",  80),
+    SiUnitDescription("kilogram", "kg", "M",  90),
+    SiUnitDescription("ampere", "A", "I",  70),
+    SiUnitDescription("kelvin", "K", "Θ",  60),
+    SiUnitDescription("mole", "mol", "N",  50),
+    SiUnitDescription("candela", "cd", "J",  40)
 )
 
 data class SiUnitDescription(val name: String,
                              val unitSymbol: String,
                              val dimensionSymbol: String,
-                             val quantityName: String,
                              val presentationPriority: Int)
 
 
 val siDerivedUnitDescriptions = listOf(
-    SiDerivedUnitDescription("hertz", "Hz",	"frequency", "1/s"),
-    SiDerivedUnitDescription("newton", "N", "force, weight", "kg*m/(s `^` 2)"),
-    SiDerivedUnitDescription("pascal", "Pa", "pressure, stress", "kg/(m * (s `^` 2))"),
-    SiDerivedUnitDescription("joule", "J", "energy, work, heat", "kg*(m2)/(s `^` 2)"),
-    SiDerivedUnitDescription("watt", "W", "power, radiant flux", "kg*(m2)/(s `^` 3)"),
-    SiDerivedUnitDescription("coulomb", "C", "electric charge", "s*A"),
-    SiDerivedUnitDescription("volt", "V", "electric potential, voltage, emf", "kg*m2*(s `^` -3) * (A `^` -1)"),
-    SiDerivedUnitDescription("farad", "F", "capacitance", "(kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)"),
-    SiDerivedUnitDescription("ohm", "Ω", "resistance, impedance, reactance", "kg*m2 * (s `^` -3) * (A `^` -2)"),
-    SiDerivedUnitDescription("siemens", "S", "electrical conductance", "(kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)"),
-    SiDerivedUnitDescription("weber", "Wb", "magnetic flux", "kg*(m2) * (s `^` -2) * (A `^` -1)"),
-    SiDerivedUnitDescription("tesla", "T", "magnetic flux density", "kg* (s `^` -2) * (A `^` -1)"),
-    SiDerivedUnitDescription("henry", "H", "inductance", "kg* (m2)*(s `^` -2)*(A `^` -2)"),
-    SiDerivedUnitDescription("degreeCelsius", "Celsius", "°C or ℃: temperature relative to 273.15 K", "(K `^` 1)"),
-    SiDerivedUnitDescription("lumen", "lm", "luminous flux", "((cd `^` 1)*sr)"),
-    SiDerivedUnitDescription("lux", "lx", "illuminance", "cd*sr*(m `^` -2)"),
-    SiDerivedUnitDescription("becquerel", "Bq", "activity referred to a radionuclide (decays per unit time)", "(s `^` -1)"),
-    SiDerivedUnitDescription("gray", "Gy", "absorbed dose (of ionising radiation)", "(m2)*(s `^` -2)"),
-    SiDerivedUnitDescription("sievert", "Sv", "equivalent dose (of ionising radiation)", "(m2)*(s `^` -2)"),
-    SiDerivedUnitDescription("katal", "kat", "catalytic activity", "(mol * (s `^` -1))")
+    SiDerivedUnitDescription("hertz", "Hz",	 "1/s"),
+    SiDerivedUnitDescription("newton", "N",  "kg*m/(s `^` 2)"),
+    SiDerivedUnitDescription("pascal", "Pa",  "kg/(m * (s `^` 2))"),
+    SiDerivedUnitDescription("joule", "J",  "kg*(m2)/(s `^` 2)"),
+    SiDerivedUnitDescription("watt", "W",  "kg*(m2)/(s `^` 3)"),
+    SiDerivedUnitDescription("coulomb", "C",  "s*A"),
+    SiDerivedUnitDescription("volt", "V",  "kg*m2*(s `^` -3) * (A `^` -1)"),
+    SiDerivedUnitDescription("farad", "F",  "(kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)"),
+    SiDerivedUnitDescription("ohm", "Ω",  "kg*m2 * (s `^` -3) * (A `^` -2)"),
+    SiDerivedUnitDescription("siemens", "S", "(kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)"),
+    SiDerivedUnitDescription("weber", "Wb",  "kg*(m2) * (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("tesla", "T",  "kg* (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("henry", "H",  "kg* (m2)*(s `^` -2)*(A `^` -2)"),
+    SiDerivedUnitDescription("degreeCelsius", "Celsius",  "(K `^` 1)"),
+    SiDerivedUnitDescription("lumen", "lm", "((cd `^` 1)*sr)"),
+    SiDerivedUnitDescription("lux", "lx",  "cd*sr*(m `^` -2)"),
+    SiDerivedUnitDescription("becquerel", "Bq",  "(s `^` -1)"),
+    SiDerivedUnitDescription("gray", "Gy", "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("sievert", "Sv",  "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("katal", "kat",  "(mol * (s `^` -1))")
 )
 
 data class SiDerivedUnitDescription(val name: String,
                              val unitSymbol: String,
-                             val quantityName: String,
                              val formula: String)

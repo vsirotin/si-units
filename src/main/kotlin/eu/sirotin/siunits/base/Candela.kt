@@ -2,12 +2,11 @@
 package eu.sirotin.siunits.base
 
 import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
+import eu.sirotin.siunits.core.UnitSpecification
 import kotlin.math.pow
-private val descriptionCandela = DimensionSpecification(
+private val descriptionCandela = UnitSpecification(
     "cd",
     "J",
-    "luminous intensity",
     40
 ) { v: Double -> Candela(v) }
 

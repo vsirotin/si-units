@@ -77,17 +77,17 @@ internal class TutorialTest {
     @Test
     fun testDimensionalSymbols() {
         val s = 4.m * 5.m
-        assertEquals("L2", s.dimensionSymbols())
+        assertEquals("L2", s.categorySymbols())
         val x = 20.l
-        assertEquals("L3", x.dimensionSymbols())
+        assertEquals("L3", x.categorySymbols())
         val h = x/s
-        assertEquals("L", h.dimensionSymbols())
+        assertEquals("L", h.categorySymbols())
 
         val y = 1.2.s
-        assertEquals("T", y.dimensionSymbols())
+        assertEquals("T", y.categorySymbols())
 
         val z = x/y
-        assertEquals("L3T-1", z.dimensionSymbols())
+        assertEquals("L3T-1", z.categorySymbols())
 
     }
 

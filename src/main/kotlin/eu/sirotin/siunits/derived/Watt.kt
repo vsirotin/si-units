@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of power, radiant flux
     val W = kg*(m2)/(s `^` 3)
 
     val Number.W : Expression

@@ -6,7 +6,6 @@ import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import kotlin.math.pow
 
-    //Unit of °C or ℃: temperature relative to 273.15 K
     val Celsius = (K `^` 1)
 
     val Number.Celsius : Expression

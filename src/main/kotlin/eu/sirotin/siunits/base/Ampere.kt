@@ -2,12 +2,11 @@
 package eu.sirotin.siunits.base
 
 import eu.sirotin.siunits.core.TermUnit
-import eu.sirotin.siunits.core.DimensionSpecification
+import eu.sirotin.siunits.core.UnitSpecification
 import kotlin.math.pow
-private val descriptionAmpere = DimensionSpecification(
+private val descriptionAmpere = UnitSpecification(
     "A",
     "I",
-    "electric current",
     70
 ) { v: Double -> Ampere(v) }
 

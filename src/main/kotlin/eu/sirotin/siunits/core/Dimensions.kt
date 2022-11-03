@@ -25,7 +25,7 @@ package eu.sirotin.siunits.core
 import java.lang.IllegalArgumentException
 import kotlin.math.abs
 
-data class Dimensions(val factors: Set<Factor>) : DimensionsPresentation {
+data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     fun checkCompatibility(other: Dimensions) {
         if (this.unitSymbols() != other.unitSymbols())
@@ -45,9 +45,9 @@ data class Dimensions(val factors: Set<Factor>) : DimensionsPresentation {
         return "$top$mid$down"
     }
 
-    override fun dimensionSymbols(): String = factors
+    override fun categorySymbols(): String = factors
         .sorted()
-        .joinToString("") {it.specification.dimensionSymbol + tryFormatToIntNotOne(it.powerValue) }
+        .joinToString("") {it.specification.categorySymbol + tryFormatToIntNotOne(it.powerValue) }
 
     private fun dimOf(p: Factor, invert: Boolean = false): String {
         val pv = if(invert) -p.powerValue else p.powerValue
@@ -65,7 +65,7 @@ data class Dimensions(val factors: Set<Factor>) : DimensionsPresentation {
 
 }
 
-data class Factor(val specification: DimensionSpecification<*>, val powerValue: Double = 1.0) : Comparable<Factor> {
+data class Factor(val specification: UnitSpecification<*>, val powerValue: Double = 1.0) : Comparable<Factor> {
     override fun compareTo(other: Factor): Int  =
         -this.specification.presentationPriority.compareTo(other.specification.presentationPriority)
 
@@ -77,13 +77,13 @@ operator fun Dimensions.plus(other: Dimensions): Dimensions  {
 }
 
 operator fun Dimensions.times(other: Dimensions): Dimensions  {
-    val thisDimensionSymbols = this.factors.map { it.specification.dimensionSymbol }.toSet()
-    val otherDimensionSymbols = other.factors.map { it.specification.dimensionSymbol }.toSet()
+    val thisDimensionSymbols = this.factors.map { it.specification.categorySymbol }.toSet()
+    val otherDimensionSymbols = other.factors.map { it.specification.categorySymbol }.toSet()
     val commonDimensionSymbols = thisDimensionSymbols.intersect(otherDimensionSymbols)
-    val commonFactors = this.factors.filter { commonDimensionSymbols.contains(it.specification.dimensionSymbol)}.toSet()
+    val commonFactors = this.factors.filter { commonDimensionSymbols.contains(it.specification.categorySymbol)}.toSet()
     val newCommonFactors = commonFactors.mapNotNull { plusCommonFactors(it, this.factors, other.factors) }.toSet()
-    val restThisFactors = this.factors.filter { !commonDimensionSymbols.contains(it.specification.dimensionSymbol)}.toSet()
-    val restOtherFactors = other.factors.filter { !commonDimensionSymbols.contains(it.specification.dimensionSymbol)}.toSet()
+    val restThisFactors = this.factors.filter { !commonDimensionSymbols.contains(it.specification.categorySymbol)}.toSet()
+    val restOtherFactors = other.factors.filter { !commonDimensionSymbols.contains(it.specification.categorySymbol)}.toSet()
 
     val newFactors: Set<Factor> = newCommonFactors + restThisFactors + restOtherFactors
     return Dimensions(newFactors)
