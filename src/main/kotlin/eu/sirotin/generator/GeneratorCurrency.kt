@@ -22,77 +22,53 @@
 
 package eu.sirotin.generator
 
-import java.io.File
-import java.nio.file.Files
-
 val currencyDescriptions = listOf(
-    CurrencyDescription("UnitedStatesDollar", "USD", "`US$`"),
-    CurrencyDescription("Euro", "EUR", "`€`"),
-    CurrencyDescription("JapaneseYen", "JPY",  "`¥`"),
-    CurrencyDescription("PoundSterling", "GBP", "`£`"),
-    CurrencyDescription("Renminbi", "CNY", "`人民币`"),
-    CurrencyDescription("AustralianDollar", "AUD", "`A$`"),
-    CurrencyDescription("CanadianDollar", "CAD", "`C$`"),
-    CurrencyDescription("SwissFranc", "CHF", "SCHF"), //To avoid name conflict for CHF
-    CurrencyDescription("HongKongDollar", "HKD", "`HK$`"),
-    CurrencyDescription("SingaporeDollar", "SGD", "`S$`"),
-    CurrencyDescription("SwedishKrona", "SEK", "skr"), //To avoid name conflict for symbol 'kr'
-    CurrencyDescription("SouthKoreanWon", "KRW", "`₩`"),
-    CurrencyDescription("NorwegianKrone", "NOK", "nkr"), //To avoid name conflict for symbol 'kr'
-    CurrencyDescription("NewZealandDollar", "NZD", "`NZ$`"),
-    CurrencyDescription("IndianRupee", "INR", "`₹`"),
-    CurrencyDescription("MexicanPeso", "MXN", "`$`"),
-    CurrencyDescription("NewTaiwanDollar", "TWD", "`NT$`"),
-    CurrencyDescription("SouthAfricanRand", "ZAR", "R"),
-    CurrencyDescription("BrazilianReal", "BRL", "`R$`"),
-    CurrencyDescription("DanishKrone", "DKK", "dkr"), //To avoid name conflict for symbol 'kr'
-    CurrencyDescription("PolishZłoty", "PLN", "`zł`"),
-    CurrencyDescription("ThaiBaht", "THB", "`฿`"),
-    CurrencyDescription("IsraeliNewShekel", "ILS", "`₪`"),
-    CurrencyDescription("IndonesianRupiah", "IDR", "Rp"),
-    CurrencyDescription("CzechKoruna", "CZK", "`Kč`"),
-    CurrencyDescription("UAEDirham", "AED", "Dh"),
-    CurrencyDescription("TurkishLira", "TRY", "`₺`"),
-    CurrencyDescription("HungarianForint", "HUF", "Ft"),
-    CurrencyDescription("ChileanPeso", "CLP", "`CLP$`"),
-    CurrencyDescription("SaudiRiyal", "SAR", "`﷼ `"),
-    CurrencyDescription("PhilippinePeso", "PHP", "`₱`"),
-    CurrencyDescription("MalaysianRinggit", "MYR", "RM"),
-    CurrencyDescription("ColombianPeso", "COP", "`COL$`"),
-    CurrencyDescription("RussianRuble", "RUB", "`₽`"),
-    CurrencyDescription("RomanianLeu", "RON", "L")
-
+    SpecialUnitDescription("UnitedStatesDollar", "USD", "`US$`"),
+    SpecialUnitDescription("Euro", "EUR", "`€`"),
+    SpecialUnitDescription("JapaneseYen", "JPY",  "`¥`"),
+    SpecialUnitDescription("PoundSterling", "GBP", "`£`"),
+    SpecialUnitDescription("Renminbi", "CNY", "`人民币`"),
+    SpecialUnitDescription("AustralianDollar", "AUD", "`A$`"),
+    SpecialUnitDescription("CanadianDollar", "CAD", "`C$`"),
+    SpecialUnitDescription("SwissFranc", "CHF", "SCHF"), //To avoid name conflict for CHF
+    SpecialUnitDescription("HongKongDollar", "HKD", "`HK$`"),
+    SpecialUnitDescription("SingaporeDollar", "SGD", "`S$`"),
+    SpecialUnitDescription("SwedishKrona", "SEK", "skr"), //To avoid name conflict for symbol 'kr'
+    SpecialUnitDescription("SouthKoreanWon", "KRW", "`₩`"),
+    SpecialUnitDescription("NorwegianKrone", "NOK", "nkr"), //To avoid name conflict for symbol 'kr'
+    SpecialUnitDescription("NewZealandDollar", "NZD", "`NZ$`"),
+    SpecialUnitDescription("IndianRupee", "INR", "`₹`"),
+    SpecialUnitDescription("MexicanPeso", "MXN", "`$`"),
+    SpecialUnitDescription("NewTaiwanDollar", "TWD", "`NT$`"),
+    SpecialUnitDescription("SouthAfricanRand", "ZAR", "R"),
+    SpecialUnitDescription("BrazilianReal", "BRL", "`R$`"),
+    SpecialUnitDescription("DanishKrone", "DKK", "dkr"), //To avoid name conflict for symbol 'kr'
+    SpecialUnitDescription("PolishZłoty", "PLN", "`zł`"),
+    SpecialUnitDescription("ThaiBaht", "THB", "`฿`"),
+    SpecialUnitDescription("IsraeliNewShekel", "ILS", "`₪`"),
+    SpecialUnitDescription("IndonesianRupiah", "IDR", "Rp"),
+    SpecialUnitDescription("CzechKoruna", "CZK", "`Kč`"),
+    SpecialUnitDescription("UAEDirham", "AED", "Dh"),
+    SpecialUnitDescription("TurkishLira", "TRY", "`₺`"),
+    SpecialUnitDescription("HungarianForint", "HUF", "Ft"),
+    SpecialUnitDescription("ChileanPeso", "CLP", "`CLP$`"),
+    SpecialUnitDescription("SaudiRiyal", "SAR", "`﷼ `"),
+    SpecialUnitDescription("PhilippinePeso", "PHP", "`₱`"),
+    SpecialUnitDescription("MalaysianRinggit", "MYR", "RM"),
+    SpecialUnitDescription("ColombianPeso", "COP", "`COL$`"),
+    SpecialUnitDescription("RussianRuble", "RUB", "`₽`"),
+    SpecialUnitDescription("RomanianLeu", "RON", "L")
 )
 
-data class CurrencyDescription(val name: String,
-                             val code: String,
-                             val symbol: String)
-
 fun generateCurrencies() {
-    //Generate package directory if not exists
-    val dir = File("src/main/kotlin/eu/sirotin/currency")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate classes
-    currencyDescriptions.forEach { generateCurrency(it, dir) }
+    generateSpecialUnits("src/main/kotlin/eu/sirotin/currency", currencyDescriptions, ::generateCurrencyClass)
 }
 
-private fun generateCurrency(currencyDescription: CurrencyDescription, dir: File) {
-    val className = currencyDescription.name
-
-    val fileName = "$className.kt"
-    val file = dir.resolve(fileName)
-    file.delete()
-    val classText = generateCurrencyClass(currencyDescription)
-
-    file.writeText(classText)
-}
-
-fun generateCurrencyClass(currencyDescription: CurrencyDescription): String {
+fun generateCurrencyClass(currencyDescription: SpecialUnitDescription): String {
     val name = currencyDescription.name
     val code = currencyDescription.code
     val symbol = currencyDescription.symbol
-    val res = """
+    return """
 package eu.sirotin.currency
 
 import eu.sirotin.siunits.core.TermUnit
@@ -106,7 +82,7 @@ private val description$name = UnitSpecification(
 class $name(value : Double = 1.0) : TermUnit(value, description = description$name)
     val Number.$code : $name
         get() = $name(this.toDouble())
-    
+
     val $code = $name()
 
     val Number.$symbol : $name
@@ -114,5 +90,5 @@ class $name(value : Double = 1.0) : TermUnit(value, description = description$na
 
     val $symbol = $name()
     """
-    return res
 }
+

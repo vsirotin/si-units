@@ -7,6 +7,8 @@ import kotlin.test.assertFailsWith
 import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
 import eu.sirotin.siunits.derived.*
+import eu.sirotin.specialunits.m2
+import eu.sirotin.specialunits.m3
 
 private const val EXPECTED_CLASS = "eu.sirotin.siunits.core.Expression"
 
@@ -50,7 +52,7 @@ internal class PhysicsTest {
         assertEquals(Wb,	V * s)
         //tesla
         assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
-        assertEquals(T,	Wb/m2)
+        assertEquals(T,	Wb/ m2)
         //henry
         assertEquals(H,	kg * m2 * (s `^` -2) * (A `^` -2))
         assertEquals(H,	Wb/A)
@@ -58,7 +60,7 @@ internal class PhysicsTest {
         assertEquals(lm,	(cd `^` 1) * sr)
         //lux
         assertEquals(lx,	cd * sr * (m `^` -2))
-        assertEquals(lx,	lm/m2)
+        assertEquals(lx,	lm/ m2)
         //becquerel
         assertEquals(Bq,	(s `^` -1))
         //gray

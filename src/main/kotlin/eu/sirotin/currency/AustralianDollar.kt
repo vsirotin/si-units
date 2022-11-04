@@ -12,7 +12,7 @@ private val descriptionAustralianDollar = UnitSpecification(
 class AustralianDollar(value : Double = 1.0) : TermUnit(value, description = descriptionAustralianDollar)
     val Number.AUD : AustralianDollar
         get() = AustralianDollar(this.toDouble())
-    
+
     val AUD = AustralianDollar()
 
     val Number.`A$` : AustralianDollar

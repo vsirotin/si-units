@@ -12,7 +12,7 @@ private val descriptionCzechKoruna = UnitSpecification(
 class CzechKoruna(value : Double = 1.0) : TermUnit(value, description = descriptionCzechKoruna)
     val Number.CZK : CzechKoruna
         get() = CzechKoruna(this.toDouble())
-    
+
     val CZK = CzechKoruna()
 
     val Number.`Kč` : CzechKoruna

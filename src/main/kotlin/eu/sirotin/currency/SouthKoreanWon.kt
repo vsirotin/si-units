@@ -12,7 +12,7 @@ private val descriptionSouthKoreanWon = UnitSpecification(
 class SouthKoreanWon(value : Double = 1.0) : TermUnit(value, description = descriptionSouthKoreanWon)
     val Number.KRW : SouthKoreanWon
         get() = SouthKoreanWon(this.toDouble())
-    
+
     val KRW = SouthKoreanWon()
 
     val Number.`₩` : SouthKoreanWon

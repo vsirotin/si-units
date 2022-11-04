@@ -12,7 +12,7 @@ private val descriptionHongKongDollar = UnitSpecification(
 class HongKongDollar(value : Double = 1.0) : TermUnit(value, description = descriptionHongKongDollar)
     val Number.HKD : HongKongDollar
         get() = HongKongDollar(this.toDouble())
-    
+
     val HKD = HongKongDollar()
 
     val Number.`HK$` : HongKongDollar

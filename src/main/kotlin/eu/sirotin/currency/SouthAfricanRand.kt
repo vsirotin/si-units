@@ -12,7 +12,7 @@ private val descriptionSouthAfricanRand = UnitSpecification(
 class SouthAfricanRand(value : Double = 1.0) : TermUnit(value, description = descriptionSouthAfricanRand)
     val Number.ZAR : SouthAfricanRand
         get() = SouthAfricanRand(this.toDouble())
-    
+
     val ZAR = SouthAfricanRand()
 
     val Number.R : SouthAfricanRand

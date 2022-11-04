@@ -12,7 +12,7 @@ private val descriptionIsraeliNewShekel = UnitSpecification(
 class IsraeliNewShekel(value : Double = 1.0) : TermUnit(value, description = descriptionIsraeliNewShekel)
     val Number.ILS : IsraeliNewShekel
         get() = IsraeliNewShekel(this.toDouble())
-    
+
     val ILS = IsraeliNewShekel()
 
     val Number.`₪` : IsraeliNewShekel

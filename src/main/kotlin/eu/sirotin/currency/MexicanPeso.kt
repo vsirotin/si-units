@@ -12,7 +12,7 @@ private val descriptionMexicanPeso = UnitSpecification(
 class MexicanPeso(value : Double = 1.0) : TermUnit(value, description = descriptionMexicanPeso)
     val Number.MXN : MexicanPeso
         get() = MexicanPeso(this.toDouble())
-    
+
     val MXN = MexicanPeso()
 
     val Number.`$` : MexicanPeso

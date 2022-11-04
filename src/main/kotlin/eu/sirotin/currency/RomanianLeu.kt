@@ -12,7 +12,7 @@ private val descriptionRomanianLeu = UnitSpecification(
 class RomanianLeu(value : Double = 1.0) : TermUnit(value, description = descriptionRomanianLeu)
     val Number.RON : RomanianLeu
         get() = RomanianLeu(this.toDouble())
-    
+
     val RON = RomanianLeu()
 
     val Number.L : RomanianLeu

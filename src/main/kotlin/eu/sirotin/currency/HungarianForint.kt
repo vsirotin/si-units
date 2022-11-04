@@ -12,7 +12,7 @@ private val descriptionHungarianForint = UnitSpecification(
 class HungarianForint(value : Double = 1.0) : TermUnit(value, description = descriptionHungarianForint)
     val Number.HUF : HungarianForint
         get() = HungarianForint(this.toDouble())
-    
+
     val HUF = HungarianForint()
 
     val Number.Ft : HungarianForint

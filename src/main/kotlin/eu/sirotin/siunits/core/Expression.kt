@@ -94,8 +94,9 @@ fun Expression.pow(degree: Number): Expression {
     return Expression(this.value.pow(degree.toDouble()), this.dimensions.pow(degree))
 }
 
-infix fun Expression.`^`(degree: Number) = this.pow(degree)
+infix fun Number.`^`(degree: Number) = this.toDouble().pow(degree.toDouble())
 
+infix fun Expression.`^`(degree: Number) = this.pow(degree)
 
 fun TermUnit.pow(degree: Number): Expression = Expression.createFromSiUnit(this).pow(degree)
 

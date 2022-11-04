@@ -4,6 +4,7 @@ package eu.sirotin.siunits.derived
 import eu.sirotin.siunits.core.Expression
 import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
+import eu.sirotin.specialunits.*
 import kotlin.math.pow
 
     val F = (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)

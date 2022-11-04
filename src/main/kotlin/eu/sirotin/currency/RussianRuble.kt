@@ -12,7 +12,7 @@ private val descriptionRussianRuble = UnitSpecification(
 class RussianRuble(value : Double = 1.0) : TermUnit(value, description = descriptionRussianRuble)
     val Number.RUB : RussianRuble
         get() = RussianRuble(this.toDouble())
-    
+
     val RUB = RussianRuble()
 
     val Number.`₽` : RussianRuble

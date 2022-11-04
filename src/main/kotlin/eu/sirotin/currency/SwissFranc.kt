@@ -12,7 +12,7 @@ private val descriptionSwissFranc = UnitSpecification(
 class SwissFranc(value : Double = 1.0) : TermUnit(value, description = descriptionSwissFranc)
     val Number.CHF : SwissFranc
         get() = SwissFranc(this.toDouble())
-    
+
     val CHF = SwissFranc()
 
     val Number.SCHF : SwissFranc

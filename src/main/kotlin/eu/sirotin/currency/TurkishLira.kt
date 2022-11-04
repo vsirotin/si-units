@@ -12,7 +12,7 @@ private val descriptionTurkishLira = UnitSpecification(
 class TurkishLira(value : Double = 1.0) : TermUnit(value, description = descriptionTurkishLira)
     val Number.TRY : TurkishLira
         get() = TurkishLira(this.toDouble())
-    
+
     val TRY = TurkishLira()
 
     val Number.`₺` : TurkishLira

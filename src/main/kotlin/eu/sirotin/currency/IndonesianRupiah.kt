@@ -12,7 +12,7 @@ private val descriptionIndonesianRupiah = UnitSpecification(
 class IndonesianRupiah(value : Double = 1.0) : TermUnit(value, description = descriptionIndonesianRupiah)
     val Number.IDR : IndonesianRupiah
         get() = IndonesianRupiah(this.toDouble())
-    
+
     val IDR = IndonesianRupiah()
 
     val Number.Rp : IndonesianRupiah

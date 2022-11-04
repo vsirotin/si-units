@@ -12,7 +12,7 @@ private val descriptionSingaporeDollar = UnitSpecification(
 class SingaporeDollar(value : Double = 1.0) : TermUnit(value, description = descriptionSingaporeDollar)
     val Number.SGD : SingaporeDollar
         get() = SingaporeDollar(this.toDouble())
-    
+
     val SGD = SingaporeDollar()
 
     val Number.`S$` : SingaporeDollar

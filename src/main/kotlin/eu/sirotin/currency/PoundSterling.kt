@@ -12,7 +12,7 @@ private val descriptionPoundSterling = UnitSpecification(
 class PoundSterling(value : Double = 1.0) : TermUnit(value, description = descriptionPoundSterling)
     val Number.GBP : PoundSterling
         get() = PoundSterling(this.toDouble())
-    
+
     val GBP = PoundSterling()
 
     val Number.`£` : PoundSterling

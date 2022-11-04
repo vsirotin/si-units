@@ -12,7 +12,7 @@ private val descriptionIndianRupee = UnitSpecification(
 class IndianRupee(value : Double = 1.0) : TermUnit(value, description = descriptionIndianRupee)
     val Number.INR : IndianRupee
         get() = IndianRupee(this.toDouble())
-    
+
     val INR = IndianRupee()
 
     val Number.`₹` : IndianRupee

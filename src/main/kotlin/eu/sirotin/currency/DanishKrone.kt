@@ -12,7 +12,7 @@ private val descriptionDanishKrone = UnitSpecification(
 class DanishKrone(value : Double = 1.0) : TermUnit(value, description = descriptionDanishKrone)
     val Number.DKK : DanishKrone
         get() = DanishKrone(this.toDouble())
-    
+
     val DKK = DanishKrone()
 
     val Number.dkr : DanishKrone

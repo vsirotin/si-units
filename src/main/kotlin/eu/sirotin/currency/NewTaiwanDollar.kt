@@ -12,7 +12,7 @@ private val descriptionNewTaiwanDollar = UnitSpecification(
 class NewTaiwanDollar(value : Double = 1.0) : TermUnit(value, description = descriptionNewTaiwanDollar)
     val Number.TWD : NewTaiwanDollar
         get() = NewTaiwanDollar(this.toDouble())
-    
+
     val TWD = NewTaiwanDollar()
 
     val Number.`NT$` : NewTaiwanDollar

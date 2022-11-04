@@ -12,7 +12,7 @@ private val descriptionUnitedStatesDollar = UnitSpecification(
 class UnitedStatesDollar(value : Double = 1.0) : TermUnit(value, description = descriptionUnitedStatesDollar)
     val Number.USD : UnitedStatesDollar
         get() = UnitedStatesDollar(this.toDouble())
-    
+
     val USD = UnitedStatesDollar()
 
     val Number.`US$` : UnitedStatesDollar

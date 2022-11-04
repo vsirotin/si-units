@@ -12,7 +12,7 @@ private val descriptionThaiBaht = UnitSpecification(
 class ThaiBaht(value : Double = 1.0) : TermUnit(value, description = descriptionThaiBaht)
     val Number.THB : ThaiBaht
         get() = ThaiBaht(this.toDouble())
-    
+
     val THB = ThaiBaht()
 
     val Number.`฿` : ThaiBaht

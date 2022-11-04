@@ -12,7 +12,7 @@ private val descriptionRenminbi = UnitSpecification(
 class Renminbi(value : Double = 1.0) : TermUnit(value, description = descriptionRenminbi)
     val Number.CNY : Renminbi
         get() = Renminbi(this.toDouble())
-    
+
     val CNY = Renminbi()
 
     val Number.`人民币` : Renminbi

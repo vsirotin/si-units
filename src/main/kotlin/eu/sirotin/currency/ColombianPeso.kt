@@ -12,7 +12,7 @@ private val descriptionColombianPeso = UnitSpecification(
 class ColombianPeso(value : Double = 1.0) : TermUnit(value, description = descriptionColombianPeso)
     val Number.COP : ColombianPeso
         get() = ColombianPeso(this.toDouble())
-    
+
     val COP = ColombianPeso()
 
     val Number.`COL$` : ColombianPeso

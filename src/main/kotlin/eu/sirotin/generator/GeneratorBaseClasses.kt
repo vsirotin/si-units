@@ -25,6 +25,20 @@ package eu.sirotin.generator
 import java.io.File
 import java.nio.file.Files
 
+val siUnitDescriptions = listOf(
+    SiUnitDescription("second", "s", "T",  0),
+    SiUnitDescription("metre", "m", "L",  80),
+    SiUnitDescription("kilogram", "kg", "M",  90),
+    SiUnitDescription("ampere", "A", "I",  70),
+    SiUnitDescription("kelvin", "K", "Θ",  60),
+    SiUnitDescription("mole", "mol", "N",  50),
+    SiUnitDescription("candela", "cd", "J",  40)
+)
+
+data class SiUnitDescription(val name: String,
+                             val unitSymbol: String,
+                             val dimensionSymbol: String,
+                             val presentationPriority: Int)
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
     val dir = File("src/main/kotlin/eu/sirotin/siunits/base")

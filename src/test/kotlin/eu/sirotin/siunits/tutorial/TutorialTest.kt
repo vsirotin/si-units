@@ -23,7 +23,7 @@
 package eu.sirotin.siunits.tutorial
 
 import eu.sirotin.siunits.core.*
-import eu.sirotin.siunits.core.l
+import eu.sirotin.specialunits.l
 import eu.sirotin.siunits.base.m
 import eu.sirotin.siunits.base.mm
 import eu.sirotin.siunits.base.s

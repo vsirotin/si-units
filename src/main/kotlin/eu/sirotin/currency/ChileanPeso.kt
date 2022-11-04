@@ -12,7 +12,7 @@ private val descriptionChileanPeso = UnitSpecification(
 class ChileanPeso(value : Double = 1.0) : TermUnit(value, description = descriptionChileanPeso)
     val Number.CLP : ChileanPeso
         get() = ChileanPeso(this.toDouble())
-    
+
     val CLP = ChileanPeso()
 
     val Number.`CLP$` : ChileanPeso

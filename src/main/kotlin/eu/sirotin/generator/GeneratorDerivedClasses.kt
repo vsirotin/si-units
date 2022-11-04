@@ -25,6 +25,35 @@ package eu.sirotin.generator
 import java.io.File
 import java.nio.file.Files
 
+
+val siDerivedUnitDescriptions = listOf(
+    SiDerivedUnitDescription("radian", "rad",	 "m/m"),
+    SiDerivedUnitDescription("steradian", "sr",	 "m2/m2"),
+    SiDerivedUnitDescription("hertz", "Hz",	 "1/s"),
+    SiDerivedUnitDescription("newton", "N",  "kg*m/(s `^` 2)"),
+    SiDerivedUnitDescription("pascal", "Pa",  "kg/(m * (s `^` 2))"),
+    SiDerivedUnitDescription("joule", "J",  "kg*(m2)/(s `^` 2)"),
+    SiDerivedUnitDescription("watt", "W",  "kg*(m2)/(s `^` 3)"),
+    SiDerivedUnitDescription("coulomb", "C",  "s*A"),
+    SiDerivedUnitDescription("volt", "V",  "kg*m2*(s `^` -3) * (A `^` -1)"),
+    SiDerivedUnitDescription("farad", "F",  "(kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)"),
+    SiDerivedUnitDescription("ohm", "Ω",  "kg*m2 * (s `^` -3) * (A `^` -2)"),
+    SiDerivedUnitDescription("siemens", "S", "(kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)"),
+    SiDerivedUnitDescription("weber", "Wb",  "kg*(m2) * (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("tesla", "T",  "kg* (s `^` -2) * (A `^` -1)"),
+    SiDerivedUnitDescription("henry", "H",  "kg* (m2)*(s `^` -2)*(A `^` -2)"),
+    SiDerivedUnitDescription("degreeCelsius", "Celsius",  "(K `^` 1)"),
+    SiDerivedUnitDescription("lumen", "lm", "((cd `^` 1)*sr)"),
+    SiDerivedUnitDescription("lux", "lx",  "cd*sr*(m `^` -2)"),
+    SiDerivedUnitDescription("becquerel", "Bq",  "(s `^` -1)"),
+    SiDerivedUnitDescription("gray", "Gy", "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("sievert", "Sv",  "(m2)*(s `^` -2)"),
+    SiDerivedUnitDescription("katal", "kat",  "(mol * (s `^` -1))")
+)
+
+data class SiDerivedUnitDescription(val name: String,
+                                    val unitSymbol: String,
+                                    val formula: String)
 fun generateSiUnitsDerivedClasses() {
     //Generate package directory if not exists
     val dir = File("src/main/kotlin/eu/sirotin/siunits/derived")
@@ -63,6 +92,7 @@ package eu.sirotin.siunits.derived
 import eu.sirotin.siunits.core.Expression
 import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.base.*
+import eu.sirotin.specialunits.*
 import kotlin.math.pow
 
     val $unitSymbol = $formula

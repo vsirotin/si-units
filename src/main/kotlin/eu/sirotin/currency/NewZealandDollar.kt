@@ -12,7 +12,7 @@ private val descriptionNewZealandDollar = UnitSpecification(
 class NewZealandDollar(value : Double = 1.0) : TermUnit(value, description = descriptionNewZealandDollar)
     val Number.NZD : NewZealandDollar
         get() = NewZealandDollar(this.toDouble())
-    
+
     val NZD = NewZealandDollar()
 
     val Number.`NZ$` : NewZealandDollar

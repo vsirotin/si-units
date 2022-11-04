@@ -12,7 +12,7 @@ private val descriptionUAEDirham = UnitSpecification(
 class UAEDirham(value : Double = 1.0) : TermUnit(value, description = descriptionUAEDirham)
     val Number.AED : UAEDirham
         get() = UAEDirham(this.toDouble())
-    
+
     val AED = UAEDirham()
 
     val Number.Dh : UAEDirham

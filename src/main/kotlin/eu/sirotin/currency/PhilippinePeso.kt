@@ -12,7 +12,7 @@ private val descriptionPhilippinePeso = UnitSpecification(
 class PhilippinePeso(value : Double = 1.0) : TermUnit(value, description = descriptionPhilippinePeso)
     val Number.PHP : PhilippinePeso
         get() = PhilippinePeso(this.toDouble())
-    
+
     val PHP = PhilippinePeso()
 
     val Number.`₱` : PhilippinePeso

@@ -12,7 +12,7 @@ private val descriptionEuro = UnitSpecification(
 class Euro(value : Double = 1.0) : TermUnit(value, description = descriptionEuro)
     val Number.EUR : Euro
         get() = Euro(this.toDouble())
-    
+
     val EUR = Euro()
 
     val Number.`€` : Euro

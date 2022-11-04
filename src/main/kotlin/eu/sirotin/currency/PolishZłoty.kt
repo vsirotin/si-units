@@ -12,7 +12,7 @@ private val descriptionPolishZłoty = UnitSpecification(
 class PolishZłoty(value : Double = 1.0) : TermUnit(value, description = descriptionPolishZłoty)
     val Number.PLN : PolishZłoty
         get() = PolishZłoty(this.toDouble())
-    
+
     val PLN = PolishZłoty()
 
     val Number.`zł` : PolishZłoty
