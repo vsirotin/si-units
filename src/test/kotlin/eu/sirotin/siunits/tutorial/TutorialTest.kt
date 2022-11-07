@@ -25,10 +25,11 @@ package eu.sirotin.siunits.tutorial
 import eu.sirotin.siunits.core.*
 import eu.sirotin.specialunits.*
 import eu.sirotin.siunits.base.*
-import eu.sirotin.siunits.derived.μV
+import eu.sirotin.siunits.derived.*
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import kotlin.math.abs
 import kotlin.test.assertFailsWith
 
 internal class TutorialTest {
@@ -45,17 +46,15 @@ internal class TutorialTest {
 
         val s = 4.m * 5.m
         val x = 20.l
-        val h = x/s
-        val z = h/ mm
+        val h = x / s
+        val z = h / mm
         assertEquals(1.0, z.value, EPS)
 
         //the same as statement
 
-        assertEquals(1.0, ((20.l/(4.m * 5.m))/ mm).value, EPS)
+        assertEquals(1.0, ((20.l / (4.m * 5.m)) / mm).value, EPS)
 
     }
-
-
 
 
     @Test
@@ -66,13 +65,13 @@ internal class TutorialTest {
         assertEquals("m2", s.unitSymbols())
         val x = 20.l
         assertEquals("m3", x.unitSymbols())
-        val h = x/s
+        val h = x / s
         assertEquals("m", h.unitSymbols())
 
         val y = 1.2.s
         assertEquals("s", y.unitSymbols())
 
-        val z = x/y
+        val z = x / y
         assertEquals("m3/s", z.unitSymbols())
 
     }
@@ -87,13 +86,13 @@ internal class TutorialTest {
         val x = 20.l
         assertEquals("L3", x.categorySymbols())
 
-        val h = x/s
+        val h = x / s
         assertEquals("L", h.categorySymbols())
 
         val y = 1.2.s
         assertEquals("T", y.categorySymbols())
 
-        val z = x/y
+        val z = x / y
         assertEquals("L3T-1", z.categorySymbols())
 
     }
@@ -110,14 +109,14 @@ internal class TutorialTest {
         val x = 20.l
         val format = "%.2f"
         assertEquals("0,02 m3", x.show(format))
-        val h = x/s
+        val h = x / s
         assertEquals("0,001 m", h.show("%.3f"))
         val y = 3.1415927.m
         assertEquals("3,142 m", y.show("%.3f"))
 
     }
 
-//---------------Type safety
+    //---------------Type safety
 //Physical units of the same dimension can be added, added,
 //divided and compared.
 //If you try to do this with units of different types,
@@ -139,7 +138,7 @@ internal class TutorialTest {
     fun testErrors2() {
         //Complex errors will be found in runtime:
         val exception = assertFailsWith<IllegalArgumentException>(
-            block = { 20.l* s /(4.m + 5.m) + 2.s }
+            block = { 20.l * s / (4.m + 5.m) + 2.s }
         )
         val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'm2s' and 's'"
         assertEquals(expectedMessage, exception.message!!)
@@ -150,7 +149,7 @@ internal class TutorialTest {
     fun testErrors3() {
         //Complex errors will be found in runtime:
         val exception = assertFailsWith<IllegalArgumentException>(
-            block = { (20.l*3.s/(4.m + 5.m)) + mm }
+            block = { (20.l * 3.s / (4.m + 5.m)) + mm }
         )
         val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'm2s' and 'm'"
         assertEquals(expectedMessage, exception.message!!)
@@ -166,9 +165,9 @@ internal class TutorialTest {
     fun testCompareTheSameTypes() {
         assertTrue(5.m > 4.1.m)
 
-        assertTrue(20.2*m3 > 4.2*m3)
+        assertTrue(20.2 * m3 > 4.2 * m3)
 
-        assertTrue(2.2*kg*m/s < 4.2*kg*m/s)
+        assertTrue(2.2 * kg * m / s < 4.2 * kg * m / s)
     }
 
     @Test
@@ -184,12 +183,49 @@ internal class TutorialTest {
 
     @Test
     fun testCompareDifferentType2() {
-        val v1 = 2.4.m*kg/s
-        val v2 = 2.4.s*m3/ μV
+        val v1 = 2.4.m * kg / s
+        val v2 = 2.4.s * m3 / μV
 
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { v1 >= v2 }
         )
         assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
     }
+
+    @Test
+    fun testBaseUnits() {
+        assertTrue(Second(1.0) == 1.s)
+        assertTrue(1*s == 1.0.s)
+
+        assertEquals(Metre(1.0), 1.m)
+        assertEquals(2*m, 2.m)
+
+        assertEquals(Kilogram(1.0), 1.kg)
+        assertEquals(3*kg, 3.kg)
+
+        assertEquals(Ampere(1.0), 1.A)
+        assertEquals(4*A, 4.A)
+
+        assertEquals(Kelvin(1.0), 1.K)
+        assertEquals(5*K, 5.K)
+
+        assertEquals(Mole(1.0), 1.mol)
+        assertEquals(6*mol, 6.mol)
+
+        assertEquals(Candela(1.0), 1.cd)
+        assertEquals(7*cd, 7.cd)
+    }
+
+    @Test
+    fun testDerivedUnits() {
+        assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
+        assertEquals(T,	Wb/ m2)
+    }
+
+    @Test
+    fun testPrefixes() {
+        val d = km - (10 `^` 9) * μm
+        assertTrue(abs(d.value) < (10 `^` -9))
+    }
+
 }

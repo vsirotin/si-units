@@ -45,7 +45,24 @@ abstract class TermUnit(val value: Double = 1.0, val description: UnitSpecificat
     override fun unitSymbols() : String = description.unitSymbol
     override fun categorySymbols(): String = description.categorySymbol
     fun show(format: String): String = "${String.format(format, value)} ${unitSymbols()}"
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is TermUnit) return false
+
+        if (value != other.value) return false
+        if (description != other.description) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = value.hashCode()
+        result = 31 * result + description.hashCode()
+        return result
+    }
 }
+
 
 
 operator fun TermUnit.plus(x: TermUnit): TermUnit {
