@@ -240,7 +240,7 @@ in the table below.
 | yocto  | y      | -24    |
 
 In example below we check that one kilometer is equal 
-to milliard of millimeter.  
+to milliard of micrometer.  
 
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < (10 `^` -9))
