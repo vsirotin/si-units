@@ -23,10 +23,9 @@
 package eu.sirotin.siunits.tutorial
 
 import eu.sirotin.siunits.core.*
-import eu.sirotin.specialunits.l
-import eu.sirotin.siunits.base.m
-import eu.sirotin.siunits.base.mm
-import eu.sirotin.siunits.base.s
+import eu.sirotin.specialunits.*
+import eu.sirotin.siunits.base.*
+import eu.sirotin.siunits.derived.μV
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -35,7 +34,7 @@ import kotlin.test.assertFailsWith
 internal class TutorialTest {
 
     @Test
-    fun testHappyPath1() {
+    fun testHappyGettingStarted() {
         //Eva broke a glass in her aquarium and water flowed to the bottom.
         // In aquarium before the break was 20 liters of water.
         // Eva's room is 4 m. long and 5 tall.
@@ -56,8 +55,12 @@ internal class TutorialTest {
 
     }
 
+
+
+
     @Test
-    fun testUnitSymbols() {
+    fun testDimensionAnalysis() {
+        //With the help of the built-in function unitSymbols you can get the dimension of any object in terms of SI standard.
 
         val s = 4.m * 5.m
         assertEquals("m2", s.unitSymbols())
@@ -75,11 +78,15 @@ internal class TutorialTest {
     }
 
     @Test
-    fun testDimensionalSymbols() {
+    fun testCategorySymbols() {
+        //Using the built-in function categorySymbols() you can analyze dimensions
+        // of physical units in "academic" manner.
         val s = 4.m * 5.m
         assertEquals("L2", s.categorySymbols())
+
         val x = 20.l
         assertEquals("L3", x.categorySymbols())
+
         val h = x/s
         assertEquals("L", h.categorySymbols())
 
@@ -91,8 +98,13 @@ internal class TutorialTest {
 
     }
 
+
     @Test
     fun testShow() {
+        //Pretty print
+        //Values of physical objects can be presented using the built-in function show
+        // similar to the way they are presented in technical articles.
+
         val s = 4.m * 5.m
         assertEquals("20 m2", s.show("%.0f"))
         val x = 20.l
@@ -105,6 +117,11 @@ internal class TutorialTest {
 
     }
 
+//---------------Type safety
+//Physical units of the same dimension can be added, added,
+//divided and compared.
+//If you try to do this with units of different types,
+//you will get either compilation errors (for simple units) or run-time errors for complicated units.
     @Test
     fun testErrors1() {
         //Simple errors will be found on compilation phase:
@@ -140,10 +157,35 @@ internal class TutorialTest {
 
     }
 
+    //Comparison of objects---------
+    //
+    //Physical objects can be compared only if they have the same dimensions,
+    // otherwise you will get a run-time error.
+
     @Test
-    fun testCompareDifferentType() {
+    fun testCompareTheSameTypes() {
+        assertTrue(5.m > 4.1.m)
+
+        assertTrue(20.2*m3 > 4.2*m3)
+
+        assertTrue(2.2*kg*m/s < 4.2*kg*m/s)
+    }
+
+    @Test
+    fun testCompareDifferentType1() {
         val v1 = 2.4.m
         val v2 = 2.4.s
+
+        val exception = assertFailsWith<IllegalArgumentException>(
+            block = { v1 >= v2 }
+        )
+        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+    }
+
+    @Test
+    fun testCompareDifferentType2() {
+        val v1 = 2.4.m*kg/s
+        val v2 = 2.4.s*m3/ μV
 
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { v1 >= v2 }
