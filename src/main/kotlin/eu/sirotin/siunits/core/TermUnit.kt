@@ -78,4 +78,10 @@ operator fun Number.times(x: TermUnit): TermUnit = x * this
 
 operator fun TermUnit.div(x: Number): TermUnit = this.description.creator(this.value / x.toDouble())
 
+//Not clear why compilation error occurs
+//@Suppress("DANGEROUS_CHARACTERS")
+//operator fun TermUnit.`%`(x: Number): TermUnit = this.description.creator(this.value / 100.0)
+
+
+
 

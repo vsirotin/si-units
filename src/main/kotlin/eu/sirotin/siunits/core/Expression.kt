@@ -135,5 +135,9 @@ operator fun Expression.div(u: TermUnit): Expression = this / Expression.createF
 operator fun TermUnit.div(p: Expression): Expression = 1 / (p / Expression.createFromSiUnit(this))
 operator fun TermUnit.div(u: TermUnit): Expression = this / Expression.createFromSiUnit(u)
 
+//Not clear why compilation error occurs
+//@Suppress("DANGEROUS_CHARACTERS")
+//operator fun Expression.`%`(x: Number): Expression = this / 100.0
+
 
 

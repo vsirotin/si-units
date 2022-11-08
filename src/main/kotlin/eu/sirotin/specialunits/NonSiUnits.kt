@@ -34,19 +34,19 @@ val m2 = m * m
 val m3 = m2 * m
 
 val Number.min: Second
-    get()  = 60.s
+    get()  = Second(this.toDouble()*60)
 
-val min = 60.s
+val min = Second(60.0)
 
 val Number.h: Second
-    get()  = 60.min
+    get()  = Second(this.toDouble()*3600)
 
-val h = 60.min
+val h = Second(3600.0)
 
 val Number.d: Second
-    get()  = 24.h
+    get()  = Second(this.toDouble()*24*3600)
 
-val d = 24.h
+val d = Second(24*3600.0)
 
 //astronomical unit
 

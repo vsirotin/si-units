@@ -223,6 +223,41 @@ internal class TutorialTest {
     }
 
     @Test
+    fun testDerivedUnitsStory() {
+    //Miller family makes a trip to the nature.
+    // They brought a solar panel and immediately turned on at the excursion site.
+    // Solar produced 12 volts and 7 amps 2 hours.
+    // Produced electricity was stored in a storage tank. Storage efficiency is 85%.
+    //After that, Mrs. Miller decided to prepare the tea in boiler.
+    // To prepare hot water for tea with boilers with 500 watt strength,
+    // the water should be boiled for 8 min.
+    //The question, is stored in memory electricity enough for that?
+
+        val producedElectricity = 12.V * 7.A * 2.h
+        val savedElectricity = producedElectricity * 85.`%`
+        val neededElectricity = 0.5.kW * 8.min
+        val dif = savedElectricity - neededElectricity
+        assertTrue(dif < 0.W*h) //Comparison in SI-Units
+        assertTrue(dif.value < 0) //Comparison dimensionless
+    }
+
+    @Test
+    fun testOwnDeriveUnits() {
+        //You can also define your own Derived Units.
+        //Consider a not properly scientifically proven example.
+        //Let's imagine that the melting speed of snow in mountains is proportional
+        // to the duration and temperature. This will be our new Derived Unit.
+        //If current snow thickness is 10 cm, what proportion is melted in 5 hours at 20 degrees Celsius?
+        //The code below also shows the nice side of Kotlin - a possibility to use Unicode symbols,
+        // e.g. Greek letters.
+        val ζ = 100.μm/(h*`°C`)
+        val τ = 10.cm
+        val ξ = 5.h*(20.`°C`)
+        val σ = ζ*ξ
+        assertEquals((σ/τ).value, 0.2, EPS)
+    }
+
+    @Test
     fun testPrefixes() {
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < (10 `^` -9))

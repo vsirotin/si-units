@@ -200,13 +200,71 @@ Both types can be used in a formula by multiplication or division.
 | katal           | kat         | (mol * (s `^` -1))                                 | 
 
 Also, do not wound yourself when you see the **^** symbol. 
-Kotlin has no operator for power, but a function. SI-Unit was extended with this infix function. Unfortunately, with it can not set proper priority for this function. Although this looks like a "real" operator, for keeping proper operation prioritization, 
-you have to put it in parenthesis. 
+Kotlin has no operator for power, but a function. 
+SI-Unit was extended with this infix function. 
+Unfortunately, with it can not set proper priority for this function. 
+Although this looks like a "real" operator, 
+for keeping proper operation prioritization, 
+you have to put it in parenthesis.
 
-Most derived units can be derived from Based Units or from other Derived Units in different ways.  Look at the example of Tesla:
+Regarding this and similar extensions, see the statement: 
+"Kotlin supports escaping identifiers by enclosing 
+any sequence of characters into backtick (\`) characters, 
+allowing to use any name as an identifier." 
+(See paragraph 1.2.4 "Identifiers" in Kotlin specification 
+https://kotlinlang.org/spec/syntax-and-grammar.html#grammar-rule-Identifier). 
+The chartcter backtick (`) (UTF-8 code U+0060) is not equal 
+to the apostrophe characters on the keyboard (UTF-8 code U+0027). 
+To use it, you better copy it directly from this example.
+
+
+#### Real-life example:
+
+Miller family makes a trip to the nature. 
+They brought a solar panel and immediately turned on at the 
+excursion site. Solar produced 12 volts and 7 amps 2 hours. 
+Produced electricity was stored in a storage tank. 
+Storage efficiency is 85%.
+After that, Mrs. Miller decided to prepare the tea in boiler. 
+To prepare hot water for tea with boilers with 500 watt strength, 
+the water should be boiled for 8 min.
+The question, is stored in memory electricity enough for that?
+
+        val producedElectricity = 12.V * 7.A * 2.h
+        val savedElectricity = producedElectricity * 85.`%`
+        val neededElectricity = 0.5.kW * 8.min
+        val dif = savedElectricity - neededElectricity
+        assertTrue(dif < 0.W*h) //Comparison in SI-Units
+        assertTrue(dif.value < 0) //Comparison dimensionless
+
+Note that for convenience we use here the symbol `%`. 
+This is also extension of Kotlin in our library.
+
+Most derived units can be derived from Based Units 
+or from other Derived Units in different ways.  
+Look at the example of Tesla:
 
     assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
     assertEquals(T,	Wb/ m2)
+
+### Own Derive Units
+
+You can also define your own Derived Units.
+Consider a not properly scientifically proven example.
+Let's imagine that the melting speed of snow in mountains 
+is proportional to the duration and temperature. 
+This will be our new Derived Unit.
+If current snow thickness is 10 cm, 
+what proportion will be melted in 5 hours at 20 degreesCelsius?  
+The code below also shows the nice side of Kotlin - 
+a possibility to use Unicode symbols, e.g. Greek letters.
+
+        val ζ = 100.μm/(h*`°C`)
+        val τ = 10.cm
+        val ξ = 5.h*(20.`°C`)
+        val σ = ζ*ξ
+        assertEquals((σ/τ).value, 0.2, EPS)
+
 
 ### 3.3 SI-Prefixes 
 
