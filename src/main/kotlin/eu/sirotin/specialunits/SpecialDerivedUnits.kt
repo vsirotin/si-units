@@ -23,15 +23,15 @@
 package eu.sirotin.specialunits
 
 import eu.sirotin.siunits.core.Expression
-import eu.sirotin.siunits.derived.Celsius
+import eu.sirotin.siunits.base.Kelvin
 
 
 //Celsius
-val Number.`°C`: Expression
-    get()  = Celsius
+val Number.`°C`: Kelvin
+    get()  = Kelvin(this.toDouble() + 273.15)
 
-val Number.`℃`: Expression
-    get()  = Celsius
+val Number.`℃`: Kelvin
+    get()  = this.`°C`
 
-val `°C` = Celsius
-val `℃` = Celsius
+val `°C` = 1.`°C`
+val `℃` = `°C`

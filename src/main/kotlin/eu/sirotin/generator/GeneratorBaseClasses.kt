@@ -106,10 +106,10 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
 
     return """
     val Number.${correctSpecialCases(siPrefix.symbol, unitSymbol)} : $className
-        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(10.0.pow(${siPrefix.degree}))
+        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
     
     val Number.${siPrefix.name}$name : $className
-        get() = $className(10.0.pow(${siPrefix.degree}))
+        get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
     
     val $className.${correctSpecialCases(siPrefix.symbol, unitSymbol)}  : Double
         ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})

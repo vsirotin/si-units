@@ -27,6 +27,7 @@ package eu.sirotin.specialunits
 import eu.sirotin.siunits.base.*
 import eu.sirotin.siunits.core.*
 import eu.sirotin.siunits.derived.*
+import java.lang.IllegalArgumentException
 import java.lang.Math.PI
 import kotlin.math.pow
 
@@ -51,9 +52,11 @@ val d = Second(24*3600.0)
 //astronomical unit
 
 val Number.au: Metre
-    get()  = 149597870700.m
+    get()  = Metre(this.toDouble()*149597870700)
 
-val au = 149597870700.m
+val au = 1.0.au
+
+val π = PI
 
 //degree
 val `°` = (PI/180)*rad
@@ -64,8 +67,11 @@ val `′` = `°` / 60.0
 //arcsecond
 val `″` = `′` / 60.0
 
+val Number.ha: Expression
+    get() = this.toDouble() * (10 `^` 4) * m2
+
 //hectare
-val ha = (10 `^` 4) * m2
+val ha = 1.0.ha
 
 //Litre
 val Number.l: Expression
@@ -107,6 +113,13 @@ val Number.`%`: Double
 
 @Suppress("DANGEROUS_CHARACTERS")
 val `%` = 0.01
+
+val Expression.`as %` : Double
+    get()  = this.value*100.0
+
+val TermUnit.`as %` : Double
+    get()  = this.value*100.0
+
 
 
 

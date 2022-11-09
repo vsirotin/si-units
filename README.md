@@ -252,19 +252,23 @@ Look at the example of Tesla:
 You can also define your own Derived Units.
 Consider a not properly scientifically proven example.
 Let's imagine that the melting speed of snow in mountains 
-is proportional to the duration and temperature. 
+is proportional to the duration and temperature above 0 °C. 
 This will be our new Derived Unit.
 If current snow thickness is 10 cm, 
-what proportion will be melted in 5 hours at 20 degreesCelsius?  
+what proportion will be melted in 5 hours at 20 °C?  
 The code below also shows the nice side of Kotlin - 
 a possibility to use Unicode symbols, e.g. Greek letters.
 
-        val ζ = 100.μm/(h*`°C`)
+        val ζ = 10.μm/(h*K) //melting speed
         val τ = 10.cm
-        val ξ = 5.h*(20.`°C`)
-        val σ = ζ*ξ
-        assertEquals((σ/τ).value, 0.2, EPS)
+        val t = 20.`°C`
+        val ξ = 5.h*(t - 0.`°C`)
+        val σ = ζ*ξ //melting height
+        val α = σ/τ //melting ration
+        assertEquals(1.0, α.`as %`, EPS) //α.`as %` - Ratio presented in percents
 
+Please note, how you can present calculation result in percents: 
+**α.`as %`** - ratio presented in percents
 
 ### 3.3 SI-Prefixes 
 
@@ -302,3 +306,37 @@ to milliard of micrometer.
 
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < (10 `^` -9))
+
+### 3.4 Non-SI units accepted for use with SI
+
+Many non-SI units continue to be used in the scientific, 
+technical, and commercial literature.
+SI-Units Library implements these units.
+They are listed in the table below.
+
+
+| Quantity               | 	Name                                  | 	Symbol | 	Value in SI units                      |
+|------------------------|----------------------------------------|---------|-----------------------------------------|
+| time	                  | minute	                                | min	    | 1 min = 60 s                            |
+| time                   | hour                                   | 	h	     | 1 h = 60 min = 3600 s                   |
+| time                   | day                                    | 	d      | 	1 d = 24 h = 86400 s                   |
+| length	                | astronomical unit                      | 	au	    | 1 au = 149597870700 m                   |
+| plane and phase angle	 | degree	                                | °       | 	1° = π*rad/180                         |
+| plane and phase angle	 | arcminute                              | 	′      | 	1′ = 1°/60 = π*rad/10800               |
+| plane and phase angle	 | arcsecond	″	1″ = 1′ /60 = π*rad/648000 |
+| area                   | 	hectare	                              | ha	     | 1 ha = 1 hm2 = 10^4 m2                  |
+| volume                 | 	litre                                 | 	l, L	  | 1 l = 1 L = 1 dm3 = 10^3 cm3 = 10^−3 m3 |
+| mass	                  | tonne (metric ton)	                    | t	      | 1 t = 1 Mg = 10^3 kg                    |
+| mass	                  | dalton	                                | Da	     | 1 Da = 1.660539040(20)×10^−27 kg        |
+| energy	                | electronvolt                           | 	eV     | 	1 eV = 1.602176634×10^−19 J            |
+
+
+**Example:**
+
+A city park has area 2.3 hectares. 
+During a rain 1 mm of water had fallen from the sky.  
+If there was no rain, the park should be watered 
+with water from car cisterns. A car cistern can carry 4 tons of water.
+How many cisterns are needed to achieve 
+the same effect as in case of rain?
+Reminder: density of watter is 1 kg/l

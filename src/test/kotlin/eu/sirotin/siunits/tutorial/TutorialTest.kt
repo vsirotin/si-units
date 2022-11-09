@@ -246,15 +246,18 @@ internal class TutorialTest {
         //You can also define your own Derived Units.
         //Consider a not properly scientifically proven example.
         //Let's imagine that the melting speed of snow in mountains is proportional
-        // to the duration and temperature. This will be our new Derived Unit.
+        // to the duration and temperature above 0 grad °C. This will be our new Derived Unit.
         //If current snow thickness is 10 cm, what proportion is melted in 5 hours at 20 degrees Celsius?
         //The code below also shows the nice side of Kotlin - a possibility to use Unicode symbols,
         // e.g. Greek letters.
-        val ζ = 100.μm/(h*`°C`)
+
+        val ζ = 10.μm/(h*K) //melting speed
         val τ = 10.cm
-        val ξ = 5.h*(20.`°C`)
-        val σ = ζ*ξ
-        assertEquals((σ/τ).value, 0.2, EPS)
+        val t = 20.`°C`
+        val ξ = 5.h*(t - 0.`°C`)
+        val σ = ζ*ξ //melting height
+        val α = σ/τ //melting ration
+        assertEquals(1.0, α.`as %`, EPS) //α.`as %` - Ratio presented in percents
     }
 
     @Test
@@ -262,5 +265,25 @@ internal class TutorialTest {
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < (10 `^` -9))
     }
+
+    @Test
+    fun testNonSiUnits() {
+        //A city park has area 2.3 hectares. During a rain 1 mm of water had fallen from the sky.
+        //If there was no rain, the park should be watered with water from car cisterns.
+        // A car cistern can carry 4 tons of water.
+        //How many cisterns are needed to achieve the same effect as in case of rain?
+        //Reminder: density of watter is 1 kg/l
+
+        val s = 1.ha
+        val x = 100.mm
+        val ω = s*100.mm //water volume
+        val ρ = kg/l //density of watter is 1 kg/l
+        val τ = ω * ρ //common water weight of rain
+        val n = τ/4.t
+        assertEquals(250.0, n.value, EPS)
+
+    }
+
+
 
 }

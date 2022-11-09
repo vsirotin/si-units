@@ -18,10 +18,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     
     val Number.YA : Ampere
         @JvmName("getYA_prop")
-        get() = Ampere(10.0.pow(24))
+        get() = Ampere(this.toDouble()*10.0.pow(24))
     
     val Number.yottaampere : Ampere
-        get() = Ampere(10.0.pow(24))
+        get() = Ampere(this.toDouble()*10.0.pow(24))
     
     val Ampere.YA  : Double
         @JvmName("getYA_prop")
@@ -36,10 +36,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.ZA : Ampere
         @JvmName("getZA_prop")
-        get() = Ampere(10.0.pow(21))
+        get() = Ampere(this.toDouble()*10.0.pow(21))
     
     val Number.zettaampere : Ampere
-        get() = Ampere(10.0.pow(21))
+        get() = Ampere(this.toDouble()*10.0.pow(21))
     
     val Ampere.ZA  : Double
         @JvmName("getZA_prop")
@@ -54,10 +54,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.EA : Ampere
         @JvmName("getEA_prop")
-        get() = Ampere(10.0.pow(18))
+        get() = Ampere(this.toDouble()*10.0.pow(18))
     
     val Number.exaampere : Ampere
-        get() = Ampere(10.0.pow(18))
+        get() = Ampere(this.toDouble()*10.0.pow(18))
     
     val Ampere.EA  : Double
         @JvmName("getEA_prop")
@@ -72,10 +72,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.PA : Ampere
         @JvmName("getPA_prop")
-        get() = Ampere(10.0.pow(15))
+        get() = Ampere(this.toDouble()*10.0.pow(15))
     
     val Number.petaampere : Ampere
-        get() = Ampere(10.0.pow(15))
+        get() = Ampere(this.toDouble()*10.0.pow(15))
     
     val Ampere.PA  : Double
         @JvmName("getPA_prop")
@@ -90,10 +90,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.TA : Ampere
         @JvmName("getTA_prop")
-        get() = Ampere(10.0.pow(12))
+        get() = Ampere(this.toDouble()*10.0.pow(12))
     
     val Number.teraampere : Ampere
-        get() = Ampere(10.0.pow(12))
+        get() = Ampere(this.toDouble()*10.0.pow(12))
     
     val Ampere.TA  : Double
         @JvmName("getTA_prop")
@@ -108,10 +108,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.GA : Ampere
         @JvmName("getGA_prop")
-        get() = Ampere(10.0.pow(9))
+        get() = Ampere(this.toDouble()*10.0.pow(9))
     
     val Number.gigaampere : Ampere
-        get() = Ampere(10.0.pow(9))
+        get() = Ampere(this.toDouble()*10.0.pow(9))
     
     val Ampere.GA  : Double
         @JvmName("getGA_prop")
@@ -126,10 +126,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
 
     val Number.MA : Ampere
         @JvmName("getMA_prop")
-        get() = Ampere(10.0.pow(6))
+        get() = Ampere(this.toDouble()*10.0.pow(6))
     
     val Number.megaampere : Ampere
-        get() = Ampere(10.0.pow(6))
+        get() = Ampere(this.toDouble()*10.0.pow(6))
     
     val Ampere.MA  : Double
         @JvmName("getMA_prop")
@@ -143,10 +143,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val megaampere = MA          
 
     val Number.kA : Ampere
-        get() = Ampere(10.0.pow(3))
+        get() = Ampere(this.toDouble()*10.0.pow(3))
     
     val Number.kiloampere : Ampere
-        get() = Ampere(10.0.pow(3))
+        get() = Ampere(this.toDouble()*10.0.pow(3))
     
     val Ampere.kA  : Double
         get() = this.value / 10.0.pow(3)
@@ -159,10 +159,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val kiloampere = kA          
 
     val Number.hA : Ampere
-        get() = Ampere(10.0.pow(2))
+        get() = Ampere(this.toDouble()*10.0.pow(2))
     
     val Number.hectoampere : Ampere
-        get() = Ampere(10.0.pow(2))
+        get() = Ampere(this.toDouble()*10.0.pow(2))
     
     val Ampere.hA  : Double
         get() = this.value / 10.0.pow(2)
@@ -175,10 +175,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val hectoampere = hA          
 
     val Number.daA : Ampere
-        get() = Ampere(10.0.pow(1))
+        get() = Ampere(this.toDouble()*10.0.pow(1))
     
     val Number.decaampere : Ampere
-        get() = Ampere(10.0.pow(1))
+        get() = Ampere(this.toDouble()*10.0.pow(1))
     
     val Ampere.daA  : Double
         get() = this.value / 10.0.pow(1)
@@ -191,10 +191,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val decaampere = daA          
 
     val Number.dA : Ampere
-        get() = Ampere(10.0.pow(-1))
+        get() = Ampere(this.toDouble()*10.0.pow(-1))
     
     val Number.deciampere : Ampere
-        get() = Ampere(10.0.pow(-1))
+        get() = Ampere(this.toDouble()*10.0.pow(-1))
     
     val Ampere.dA  : Double
         get() = this.value / 10.0.pow(-1)
@@ -207,10 +207,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val deciampere = dA          
 
     val Number.cA : Ampere
-        get() = Ampere(10.0.pow(-2))
+        get() = Ampere(this.toDouble()*10.0.pow(-2))
     
     val Number.centiampere : Ampere
-        get() = Ampere(10.0.pow(-2))
+        get() = Ampere(this.toDouble()*10.0.pow(-2))
     
     val Ampere.cA  : Double
         get() = this.value / 10.0.pow(-2)
@@ -223,10 +223,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val centiampere = cA          
 
     val Number.mA : Ampere
-        get() = Ampere(10.0.pow(-3))
+        get() = Ampere(this.toDouble()*10.0.pow(-3))
     
     val Number.milliampere : Ampere
-        get() = Ampere(10.0.pow(-3))
+        get() = Ampere(this.toDouble()*10.0.pow(-3))
     
     val Ampere.mA  : Double
         get() = this.value / 10.0.pow(-3)
@@ -239,10 +239,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val milliampere = mA          
 
     val Number.μA : Ampere
-        get() = Ampere(10.0.pow(-6))
+        get() = Ampere(this.toDouble()*10.0.pow(-6))
     
     val Number.microampere : Ampere
-        get() = Ampere(10.0.pow(-6))
+        get() = Ampere(this.toDouble()*10.0.pow(-6))
     
     val Ampere.μA  : Double
         get() = this.value / 10.0.pow(-6)
@@ -255,10 +255,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val microampere = μA          
 
     val Number.nA : Ampere
-        get() = Ampere(10.0.pow(-9))
+        get() = Ampere(this.toDouble()*10.0.pow(-9))
     
     val Number.nanoampere : Ampere
-        get() = Ampere(10.0.pow(-9))
+        get() = Ampere(this.toDouble()*10.0.pow(-9))
     
     val Ampere.nA  : Double
         get() = this.value / 10.0.pow(-9)
@@ -271,10 +271,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val nanoampere = nA          
 
     val Number.pA : Ampere
-        get() = Ampere(10.0.pow(-12))
+        get() = Ampere(this.toDouble()*10.0.pow(-12))
     
     val Number.picoampere : Ampere
-        get() = Ampere(10.0.pow(-12))
+        get() = Ampere(this.toDouble()*10.0.pow(-12))
     
     val Ampere.pA  : Double
         get() = this.value / 10.0.pow(-12)
@@ -287,10 +287,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val picoampere = pA          
 
     val Number.fA : Ampere
-        get() = Ampere(10.0.pow(-15))
+        get() = Ampere(this.toDouble()*10.0.pow(-15))
     
     val Number.femtoampere : Ampere
-        get() = Ampere(10.0.pow(-15))
+        get() = Ampere(this.toDouble()*10.0.pow(-15))
     
     val Ampere.fA  : Double
         get() = this.value / 10.0.pow(-15)
@@ -303,10 +303,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val femtoampere = fA          
 
     val Number.aA : Ampere
-        get() = Ampere(10.0.pow(-18))
+        get() = Ampere(this.toDouble()*10.0.pow(-18))
     
     val Number.attoampere : Ampere
-        get() = Ampere(10.0.pow(-18))
+        get() = Ampere(this.toDouble()*10.0.pow(-18))
     
     val Ampere.aA  : Double
         get() = this.value / 10.0.pow(-18)
@@ -319,10 +319,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val attoampere = aA          
 
     val Number.zA : Ampere
-        get() = Ampere(10.0.pow(-21))
+        get() = Ampere(this.toDouble()*10.0.pow(-21))
     
     val Number.zeptoampere : Ampere
-        get() = Ampere(10.0.pow(-21))
+        get() = Ampere(this.toDouble()*10.0.pow(-21))
     
     val Ampere.zA  : Double
         get() = this.value / 10.0.pow(-21)
@@ -335,10 +335,10 @@ class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
     val zeptoampere = zA          
 
     val Number.yA : Ampere
-        get() = Ampere(10.0.pow(-24))
+        get() = Ampere(this.toDouble()*10.0.pow(-24))
     
     val Number.yoctoampere : Ampere
-        get() = Ampere(10.0.pow(-24))
+        get() = Ampere(this.toDouble()*10.0.pow(-24))
     
     val Ampere.yA  : Double
         get() = this.value / 10.0.pow(-24)

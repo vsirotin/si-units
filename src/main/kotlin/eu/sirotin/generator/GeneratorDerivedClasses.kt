@@ -42,7 +42,6 @@ val siDerivedUnitDescriptions = listOf(
     SiDerivedUnitDescription("weber", "Wb",  "kg*(m2) * (s `^` -2) * (A `^` -1)"),
     SiDerivedUnitDescription("tesla", "T",  "kg* (s `^` -2) * (A `^` -1)"),
     SiDerivedUnitDescription("henry", "H",  "kg* (m2)*(s `^` -2)*(A `^` -2)"),
-    SiDerivedUnitDescription("degreeCelsius", "Celsius",  "(K `^` 1)"),
     SiDerivedUnitDescription("lumen", "lm", "((cd `^` 1)*sr)"),
     SiDerivedUnitDescription("lux", "lx",  "cd*sr*(m `^` -2)"),
     SiDerivedUnitDescription("becquerel", "Bq",  "(s `^` -1)"),
@@ -107,9 +106,14 @@ private fun generateDerivedClassPrefixes(name: String, unitSymbol: String, formu
     return prefixes.joinToString(System.lineSeparator()) { generateTextOfDerivedUnitClassForPrefix(it, name, unitSymbol, formula) }
 }
 
-fun generateTextOfDerivedUnitClassForPrefix(prefix: SiPrefix, name: String, unitSymbol: String, formula: String): String {
-      val jvmName = "${prefix.symbol}$unitSymbol"
-    val res = """
+fun generateTextOfDerivedUnitClassForPrefix(
+    prefix: SiPrefix,
+    name: String,
+    unitSymbol: String,
+    formula: String
+): String {
+    val jvmName = "${prefix.symbol}$unitSymbol"
+    return """
     val Number.${prefix.symbol}$unitSymbol : Expression
         @JvmName("get${jvmName}_prop")
         get() = this.toDouble() * 10.0.pow(${prefix.degree}) * ($formula)
@@ -122,6 +126,5 @@ fun generateTextOfDerivedUnitClassForPrefix(prefix: SiPrefix, name: String, unit
     val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
     val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
-    return res
 }
 

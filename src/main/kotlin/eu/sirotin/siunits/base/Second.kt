@@ -18,10 +18,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     
     val Number.Ys : Second
         @JvmName("getYs_prop")
-        get() = Second(10.0.pow(24))
+        get() = Second(this.toDouble()*10.0.pow(24))
     
     val Number.yottasecond : Second
-        get() = Second(10.0.pow(24))
+        get() = Second(this.toDouble()*10.0.pow(24))
     
     val Second.Ys  : Double
         @JvmName("getYs_prop")
@@ -36,10 +36,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Zs : Second
         @JvmName("getZs_prop")
-        get() = Second(10.0.pow(21))
+        get() = Second(this.toDouble()*10.0.pow(21))
     
     val Number.zettasecond : Second
-        get() = Second(10.0.pow(21))
+        get() = Second(this.toDouble()*10.0.pow(21))
     
     val Second.Zs  : Double
         @JvmName("getZs_prop")
@@ -54,10 +54,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Es : Second
         @JvmName("getEs_prop")
-        get() = Second(10.0.pow(18))
+        get() = Second(this.toDouble()*10.0.pow(18))
     
     val Number.exasecond : Second
-        get() = Second(10.0.pow(18))
+        get() = Second(this.toDouble()*10.0.pow(18))
     
     val Second.Es  : Double
         @JvmName("getEs_prop")
@@ -72,10 +72,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Ps : Second
         @JvmName("getPs_prop")
-        get() = Second(10.0.pow(15))
+        get() = Second(this.toDouble()*10.0.pow(15))
     
     val Number.petasecond : Second
-        get() = Second(10.0.pow(15))
+        get() = Second(this.toDouble()*10.0.pow(15))
     
     val Second.Ps  : Double
         @JvmName("getPs_prop")
@@ -90,10 +90,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Ts : Second
         @JvmName("getTs_prop")
-        get() = Second(10.0.pow(12))
+        get() = Second(this.toDouble()*10.0.pow(12))
     
     val Number.terasecond : Second
-        get() = Second(10.0.pow(12))
+        get() = Second(this.toDouble()*10.0.pow(12))
     
     val Second.Ts  : Double
         @JvmName("getTs_prop")
@@ -108,10 +108,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Gs : Second
         @JvmName("getGs_prop")
-        get() = Second(10.0.pow(9))
+        get() = Second(this.toDouble()*10.0.pow(9))
     
     val Number.gigasecond : Second
-        get() = Second(10.0.pow(9))
+        get() = Second(this.toDouble()*10.0.pow(9))
     
     val Second.Gs  : Double
         @JvmName("getGs_prop")
@@ -126,10 +126,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
 
     val Number.Ms : Second
         @JvmName("getMs_prop")
-        get() = Second(10.0.pow(6))
+        get() = Second(this.toDouble()*10.0.pow(6))
     
     val Number.megasecond : Second
-        get() = Second(10.0.pow(6))
+        get() = Second(this.toDouble()*10.0.pow(6))
     
     val Second.Ms  : Double
         @JvmName("getMs_prop")
@@ -143,10 +143,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val megasecond = Ms          
 
     val Number.ks : Second
-        get() = Second(10.0.pow(3))
+        get() = Second(this.toDouble()*10.0.pow(3))
     
     val Number.kilosecond : Second
-        get() = Second(10.0.pow(3))
+        get() = Second(this.toDouble()*10.0.pow(3))
     
     val Second.ks  : Double
         get() = this.value / 10.0.pow(3)
@@ -159,10 +159,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val kilosecond = ks          
 
     val Number.hs : Second
-        get() = Second(10.0.pow(2))
+        get() = Second(this.toDouble()*10.0.pow(2))
     
     val Number.hectosecond : Second
-        get() = Second(10.0.pow(2))
+        get() = Second(this.toDouble()*10.0.pow(2))
     
     val Second.hs  : Double
         get() = this.value / 10.0.pow(2)
@@ -175,10 +175,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val hectosecond = hs          
 
     val Number.das : Second
-        get() = Second(10.0.pow(1))
+        get() = Second(this.toDouble()*10.0.pow(1))
     
     val Number.decasecond : Second
-        get() = Second(10.0.pow(1))
+        get() = Second(this.toDouble()*10.0.pow(1))
     
     val Second.das  : Double
         get() = this.value / 10.0.pow(1)
@@ -191,10 +191,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val decasecond = das          
 
     val Number.ds : Second
-        get() = Second(10.0.pow(-1))
+        get() = Second(this.toDouble()*10.0.pow(-1))
     
     val Number.decisecond : Second
-        get() = Second(10.0.pow(-1))
+        get() = Second(this.toDouble()*10.0.pow(-1))
     
     val Second.ds  : Double
         get() = this.value / 10.0.pow(-1)
@@ -207,10 +207,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val decisecond = ds          
 
     val Number.cs : Second
-        get() = Second(10.0.pow(-2))
+        get() = Second(this.toDouble()*10.0.pow(-2))
     
     val Number.centisecond : Second
-        get() = Second(10.0.pow(-2))
+        get() = Second(this.toDouble()*10.0.pow(-2))
     
     val Second.cs  : Double
         get() = this.value / 10.0.pow(-2)
@@ -223,10 +223,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val centisecond = cs          
 
     val Number.ms : Second
-        get() = Second(10.0.pow(-3))
+        get() = Second(this.toDouble()*10.0.pow(-3))
     
     val Number.millisecond : Second
-        get() = Second(10.0.pow(-3))
+        get() = Second(this.toDouble()*10.0.pow(-3))
     
     val Second.ms  : Double
         get() = this.value / 10.0.pow(-3)
@@ -239,10 +239,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val millisecond = ms          
 
     val Number.μs : Second
-        get() = Second(10.0.pow(-6))
+        get() = Second(this.toDouble()*10.0.pow(-6))
     
     val Number.microsecond : Second
-        get() = Second(10.0.pow(-6))
+        get() = Second(this.toDouble()*10.0.pow(-6))
     
     val Second.μs  : Double
         get() = this.value / 10.0.pow(-6)
@@ -255,10 +255,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val microsecond = μs          
 
     val Number.ns : Second
-        get() = Second(10.0.pow(-9))
+        get() = Second(this.toDouble()*10.0.pow(-9))
     
     val Number.nanosecond : Second
-        get() = Second(10.0.pow(-9))
+        get() = Second(this.toDouble()*10.0.pow(-9))
     
     val Second.ns  : Double
         get() = this.value / 10.0.pow(-9)
@@ -271,10 +271,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val nanosecond = ns          
 
     val Number.ps : Second
-        get() = Second(10.0.pow(-12))
+        get() = Second(this.toDouble()*10.0.pow(-12))
     
     val Number.picosecond : Second
-        get() = Second(10.0.pow(-12))
+        get() = Second(this.toDouble()*10.0.pow(-12))
     
     val Second.ps  : Double
         get() = this.value / 10.0.pow(-12)
@@ -287,10 +287,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val picosecond = ps          
 
     val Number.fs : Second
-        get() = Second(10.0.pow(-15))
+        get() = Second(this.toDouble()*10.0.pow(-15))
     
     val Number.femtosecond : Second
-        get() = Second(10.0.pow(-15))
+        get() = Second(this.toDouble()*10.0.pow(-15))
     
     val Second.fs  : Double
         get() = this.value / 10.0.pow(-15)
@@ -303,10 +303,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val femtosecond = fs          
 
     val Number.`as` : Second
-        get() = Second(10.0.pow(-18))
+        get() = Second(this.toDouble()*10.0.pow(-18))
     
     val Number.attosecond : Second
-        get() = Second(10.0.pow(-18))
+        get() = Second(this.toDouble()*10.0.pow(-18))
     
     val Second.`as`  : Double
         get() = this.value / 10.0.pow(-18)
@@ -319,10 +319,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val attosecond = `as`          
 
     val Number.zs : Second
-        get() = Second(10.0.pow(-21))
+        get() = Second(this.toDouble()*10.0.pow(-21))
     
     val Number.zeptosecond : Second
-        get() = Second(10.0.pow(-21))
+        get() = Second(this.toDouble()*10.0.pow(-21))
     
     val Second.zs  : Double
         get() = this.value / 10.0.pow(-21)
@@ -335,10 +335,10 @@ class Second(value: Double) : TermUnit(value, description = descriptionSecond)
     val zeptosecond = zs          
 
     val Number.ys : Second
-        get() = Second(10.0.pow(-24))
+        get() = Second(this.toDouble()*10.0.pow(-24))
     
     val Number.yoctosecond : Second
-        get() = Second(10.0.pow(-24))
+        get() = Second(this.toDouble()*10.0.pow(-24))
     
     val Second.ys  : Double
         get() = this.value / 10.0.pow(-24)

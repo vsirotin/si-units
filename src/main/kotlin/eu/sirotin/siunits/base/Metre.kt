@@ -18,10 +18,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     
     val Number.Ym : Metre
         @JvmName("getYm_prop")
-        get() = Metre(10.0.pow(24))
+        get() = Metre(this.toDouble()*10.0.pow(24))
     
     val Number.yottametre : Metre
-        get() = Metre(10.0.pow(24))
+        get() = Metre(this.toDouble()*10.0.pow(24))
     
     val Metre.Ym  : Double
         @JvmName("getYm_prop")
@@ -36,10 +36,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Zm : Metre
         @JvmName("getZm_prop")
-        get() = Metre(10.0.pow(21))
+        get() = Metre(this.toDouble()*10.0.pow(21))
     
     val Number.zettametre : Metre
-        get() = Metre(10.0.pow(21))
+        get() = Metre(this.toDouble()*10.0.pow(21))
     
     val Metre.Zm  : Double
         @JvmName("getZm_prop")
@@ -54,10 +54,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Em : Metre
         @JvmName("getEm_prop")
-        get() = Metre(10.0.pow(18))
+        get() = Metre(this.toDouble()*10.0.pow(18))
     
     val Number.exametre : Metre
-        get() = Metre(10.0.pow(18))
+        get() = Metre(this.toDouble()*10.0.pow(18))
     
     val Metre.Em  : Double
         @JvmName("getEm_prop")
@@ -72,10 +72,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Pm : Metre
         @JvmName("getPm_prop")
-        get() = Metre(10.0.pow(15))
+        get() = Metre(this.toDouble()*10.0.pow(15))
     
     val Number.petametre : Metre
-        get() = Metre(10.0.pow(15))
+        get() = Metre(this.toDouble()*10.0.pow(15))
     
     val Metre.Pm  : Double
         @JvmName("getPm_prop")
@@ -90,10 +90,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Tm : Metre
         @JvmName("getTm_prop")
-        get() = Metre(10.0.pow(12))
+        get() = Metre(this.toDouble()*10.0.pow(12))
     
     val Number.terametre : Metre
-        get() = Metre(10.0.pow(12))
+        get() = Metre(this.toDouble()*10.0.pow(12))
     
     val Metre.Tm  : Double
         @JvmName("getTm_prop")
@@ -108,10 +108,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Gm : Metre
         @JvmName("getGm_prop")
-        get() = Metre(10.0.pow(9))
+        get() = Metre(this.toDouble()*10.0.pow(9))
     
     val Number.gigametre : Metre
-        get() = Metre(10.0.pow(9))
+        get() = Metre(this.toDouble()*10.0.pow(9))
     
     val Metre.Gm  : Double
         @JvmName("getGm_prop")
@@ -126,10 +126,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
 
     val Number.Mm : Metre
         @JvmName("getMm_prop")
-        get() = Metre(10.0.pow(6))
+        get() = Metre(this.toDouble()*10.0.pow(6))
     
     val Number.megametre : Metre
-        get() = Metre(10.0.pow(6))
+        get() = Metre(this.toDouble()*10.0.pow(6))
     
     val Metre.Mm  : Double
         @JvmName("getMm_prop")
@@ -143,10 +143,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val megametre = Mm          
 
     val Number.km : Metre
-        get() = Metre(10.0.pow(3))
+        get() = Metre(this.toDouble()*10.0.pow(3))
     
     val Number.kilometre : Metre
-        get() = Metre(10.0.pow(3))
+        get() = Metre(this.toDouble()*10.0.pow(3))
     
     val Metre.km  : Double
         get() = this.value / 10.0.pow(3)
@@ -159,10 +159,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val kilometre = km          
 
     val Number.hm : Metre
-        get() = Metre(10.0.pow(2))
+        get() = Metre(this.toDouble()*10.0.pow(2))
     
     val Number.hectometre : Metre
-        get() = Metre(10.0.pow(2))
+        get() = Metre(this.toDouble()*10.0.pow(2))
     
     val Metre.hm  : Double
         get() = this.value / 10.0.pow(2)
@@ -175,10 +175,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val hectometre = hm          
 
     val Number.dam : Metre
-        get() = Metre(10.0.pow(1))
+        get() = Metre(this.toDouble()*10.0.pow(1))
     
     val Number.decametre : Metre
-        get() = Metre(10.0.pow(1))
+        get() = Metre(this.toDouble()*10.0.pow(1))
     
     val Metre.dam  : Double
         get() = this.value / 10.0.pow(1)
@@ -191,10 +191,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val decametre = dam          
 
     val Number.dm : Metre
-        get() = Metre(10.0.pow(-1))
+        get() = Metre(this.toDouble()*10.0.pow(-1))
     
     val Number.decimetre : Metre
-        get() = Metre(10.0.pow(-1))
+        get() = Metre(this.toDouble()*10.0.pow(-1))
     
     val Metre.dm  : Double
         get() = this.value / 10.0.pow(-1)
@@ -207,10 +207,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val decimetre = dm          
 
     val Number.cm : Metre
-        get() = Metre(10.0.pow(-2))
+        get() = Metre(this.toDouble()*10.0.pow(-2))
     
     val Number.centimetre : Metre
-        get() = Metre(10.0.pow(-2))
+        get() = Metre(this.toDouble()*10.0.pow(-2))
     
     val Metre.cm  : Double
         get() = this.value / 10.0.pow(-2)
@@ -223,10 +223,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val centimetre = cm          
 
     val Number.mm : Metre
-        get() = Metre(10.0.pow(-3))
+        get() = Metre(this.toDouble()*10.0.pow(-3))
     
     val Number.millimetre : Metre
-        get() = Metre(10.0.pow(-3))
+        get() = Metre(this.toDouble()*10.0.pow(-3))
     
     val Metre.mm  : Double
         get() = this.value / 10.0.pow(-3)
@@ -239,10 +239,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val millimetre = mm          
 
     val Number.μm : Metre
-        get() = Metre(10.0.pow(-6))
+        get() = Metre(this.toDouble()*10.0.pow(-6))
     
     val Number.micrometre : Metre
-        get() = Metre(10.0.pow(-6))
+        get() = Metre(this.toDouble()*10.0.pow(-6))
     
     val Metre.μm  : Double
         get() = this.value / 10.0.pow(-6)
@@ -255,10 +255,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val micrometre = μm          
 
     val Number.nm : Metre
-        get() = Metre(10.0.pow(-9))
+        get() = Metre(this.toDouble()*10.0.pow(-9))
     
     val Number.nanometre : Metre
-        get() = Metre(10.0.pow(-9))
+        get() = Metre(this.toDouble()*10.0.pow(-9))
     
     val Metre.nm  : Double
         get() = this.value / 10.0.pow(-9)
@@ -271,10 +271,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val nanometre = nm          
 
     val Number.pm : Metre
-        get() = Metre(10.0.pow(-12))
+        get() = Metre(this.toDouble()*10.0.pow(-12))
     
     val Number.picometre : Metre
-        get() = Metre(10.0.pow(-12))
+        get() = Metre(this.toDouble()*10.0.pow(-12))
     
     val Metre.pm  : Double
         get() = this.value / 10.0.pow(-12)
@@ -287,10 +287,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val picometre = pm          
 
     val Number.fm : Metre
-        get() = Metre(10.0.pow(-15))
+        get() = Metre(this.toDouble()*10.0.pow(-15))
     
     val Number.femtometre : Metre
-        get() = Metre(10.0.pow(-15))
+        get() = Metre(this.toDouble()*10.0.pow(-15))
     
     val Metre.fm  : Double
         get() = this.value / 10.0.pow(-15)
@@ -303,10 +303,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val femtometre = fm          
 
     val Number.am : Metre
-        get() = Metre(10.0.pow(-18))
+        get() = Metre(this.toDouble()*10.0.pow(-18))
     
     val Number.attometre : Metre
-        get() = Metre(10.0.pow(-18))
+        get() = Metre(this.toDouble()*10.0.pow(-18))
     
     val Metre.am  : Double
         get() = this.value / 10.0.pow(-18)
@@ -319,10 +319,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val attometre = am          
 
     val Number.zm : Metre
-        get() = Metre(10.0.pow(-21))
+        get() = Metre(this.toDouble()*10.0.pow(-21))
     
     val Number.zeptometre : Metre
-        get() = Metre(10.0.pow(-21))
+        get() = Metre(this.toDouble()*10.0.pow(-21))
     
     val Metre.zm  : Double
         get() = this.value / 10.0.pow(-21)
@@ -335,10 +335,10 @@ class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
     val zeptometre = zm          
 
     val Number.ym : Metre
-        get() = Metre(10.0.pow(-24))
+        get() = Metre(this.toDouble()*10.0.pow(-24))
     
     val Number.yoctometre : Metre
-        get() = Metre(10.0.pow(-24))
+        get() = Metre(this.toDouble()*10.0.pow(-24))
     
     val Metre.ym  : Double
         get() = this.value / 10.0.pow(-24)

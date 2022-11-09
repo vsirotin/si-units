@@ -18,10 +18,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     
     val Number.Ycd : Candela
         @JvmName("getYcd_prop")
-        get() = Candela(10.0.pow(24))
+        get() = Candela(this.toDouble()*10.0.pow(24))
     
     val Number.yottacandela : Candela
-        get() = Candela(10.0.pow(24))
+        get() = Candela(this.toDouble()*10.0.pow(24))
     
     val Candela.Ycd  : Double
         @JvmName("getYcd_prop")
@@ -36,10 +36,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Zcd : Candela
         @JvmName("getZcd_prop")
-        get() = Candela(10.0.pow(21))
+        get() = Candela(this.toDouble()*10.0.pow(21))
     
     val Number.zettacandela : Candela
-        get() = Candela(10.0.pow(21))
+        get() = Candela(this.toDouble()*10.0.pow(21))
     
     val Candela.Zcd  : Double
         @JvmName("getZcd_prop")
@@ -54,10 +54,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Ecd : Candela
         @JvmName("getEcd_prop")
-        get() = Candela(10.0.pow(18))
+        get() = Candela(this.toDouble()*10.0.pow(18))
     
     val Number.exacandela : Candela
-        get() = Candela(10.0.pow(18))
+        get() = Candela(this.toDouble()*10.0.pow(18))
     
     val Candela.Ecd  : Double
         @JvmName("getEcd_prop")
@@ -72,10 +72,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Pcd : Candela
         @JvmName("getPcd_prop")
-        get() = Candela(10.0.pow(15))
+        get() = Candela(this.toDouble()*10.0.pow(15))
     
     val Number.petacandela : Candela
-        get() = Candela(10.0.pow(15))
+        get() = Candela(this.toDouble()*10.0.pow(15))
     
     val Candela.Pcd  : Double
         @JvmName("getPcd_prop")
@@ -90,10 +90,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Tcd : Candela
         @JvmName("getTcd_prop")
-        get() = Candela(10.0.pow(12))
+        get() = Candela(this.toDouble()*10.0.pow(12))
     
     val Number.teracandela : Candela
-        get() = Candela(10.0.pow(12))
+        get() = Candela(this.toDouble()*10.0.pow(12))
     
     val Candela.Tcd  : Double
         @JvmName("getTcd_prop")
@@ -108,10 +108,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Gcd : Candela
         @JvmName("getGcd_prop")
-        get() = Candela(10.0.pow(9))
+        get() = Candela(this.toDouble()*10.0.pow(9))
     
     val Number.gigacandela : Candela
-        get() = Candela(10.0.pow(9))
+        get() = Candela(this.toDouble()*10.0.pow(9))
     
     val Candela.Gcd  : Double
         @JvmName("getGcd_prop")
@@ -126,10 +126,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
 
     val Number.Mcd : Candela
         @JvmName("getMcd_prop")
-        get() = Candela(10.0.pow(6))
+        get() = Candela(this.toDouble()*10.0.pow(6))
     
     val Number.megacandela : Candela
-        get() = Candela(10.0.pow(6))
+        get() = Candela(this.toDouble()*10.0.pow(6))
     
     val Candela.Mcd  : Double
         @JvmName("getMcd_prop")
@@ -143,10 +143,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val megacandela = Mcd          
 
     val Number.kcd : Candela
-        get() = Candela(10.0.pow(3))
+        get() = Candela(this.toDouble()*10.0.pow(3))
     
     val Number.kilocandela : Candela
-        get() = Candela(10.0.pow(3))
+        get() = Candela(this.toDouble()*10.0.pow(3))
     
     val Candela.kcd  : Double
         get() = this.value / 10.0.pow(3)
@@ -159,10 +159,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val kilocandela = kcd          
 
     val Number.hcd : Candela
-        get() = Candela(10.0.pow(2))
+        get() = Candela(this.toDouble()*10.0.pow(2))
     
     val Number.hectocandela : Candela
-        get() = Candela(10.0.pow(2))
+        get() = Candela(this.toDouble()*10.0.pow(2))
     
     val Candela.hcd  : Double
         get() = this.value / 10.0.pow(2)
@@ -175,10 +175,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val hectocandela = hcd          
 
     val Number.dacd : Candela
-        get() = Candela(10.0.pow(1))
+        get() = Candela(this.toDouble()*10.0.pow(1))
     
     val Number.decacandela : Candela
-        get() = Candela(10.0.pow(1))
+        get() = Candela(this.toDouble()*10.0.pow(1))
     
     val Candela.dacd  : Double
         get() = this.value / 10.0.pow(1)
@@ -191,10 +191,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val decacandela = dacd          
 
     val Number.dcd : Candela
-        get() = Candela(10.0.pow(-1))
+        get() = Candela(this.toDouble()*10.0.pow(-1))
     
     val Number.decicandela : Candela
-        get() = Candela(10.0.pow(-1))
+        get() = Candela(this.toDouble()*10.0.pow(-1))
     
     val Candela.dcd  : Double
         get() = this.value / 10.0.pow(-1)
@@ -207,10 +207,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val decicandela = dcd          
 
     val Number.ccd : Candela
-        get() = Candela(10.0.pow(-2))
+        get() = Candela(this.toDouble()*10.0.pow(-2))
     
     val Number.centicandela : Candela
-        get() = Candela(10.0.pow(-2))
+        get() = Candela(this.toDouble()*10.0.pow(-2))
     
     val Candela.ccd  : Double
         get() = this.value / 10.0.pow(-2)
@@ -223,10 +223,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val centicandela = ccd          
 
     val Number.mcd : Candela
-        get() = Candela(10.0.pow(-3))
+        get() = Candela(this.toDouble()*10.0.pow(-3))
     
     val Number.millicandela : Candela
-        get() = Candela(10.0.pow(-3))
+        get() = Candela(this.toDouble()*10.0.pow(-3))
     
     val Candela.mcd  : Double
         get() = this.value / 10.0.pow(-3)
@@ -239,10 +239,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val millicandela = mcd          
 
     val Number.μcd : Candela
-        get() = Candela(10.0.pow(-6))
+        get() = Candela(this.toDouble()*10.0.pow(-6))
     
     val Number.microcandela : Candela
-        get() = Candela(10.0.pow(-6))
+        get() = Candela(this.toDouble()*10.0.pow(-6))
     
     val Candela.μcd  : Double
         get() = this.value / 10.0.pow(-6)
@@ -255,10 +255,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val microcandela = μcd          
 
     val Number.ncd : Candela
-        get() = Candela(10.0.pow(-9))
+        get() = Candela(this.toDouble()*10.0.pow(-9))
     
     val Number.nanocandela : Candela
-        get() = Candela(10.0.pow(-9))
+        get() = Candela(this.toDouble()*10.0.pow(-9))
     
     val Candela.ncd  : Double
         get() = this.value / 10.0.pow(-9)
@@ -271,10 +271,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val nanocandela = ncd          
 
     val Number.pcd : Candela
-        get() = Candela(10.0.pow(-12))
+        get() = Candela(this.toDouble()*10.0.pow(-12))
     
     val Number.picocandela : Candela
-        get() = Candela(10.0.pow(-12))
+        get() = Candela(this.toDouble()*10.0.pow(-12))
     
     val Candela.pcd  : Double
         get() = this.value / 10.0.pow(-12)
@@ -287,10 +287,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val picocandela = pcd          
 
     val Number.fcd : Candela
-        get() = Candela(10.0.pow(-15))
+        get() = Candela(this.toDouble()*10.0.pow(-15))
     
     val Number.femtocandela : Candela
-        get() = Candela(10.0.pow(-15))
+        get() = Candela(this.toDouble()*10.0.pow(-15))
     
     val Candela.fcd  : Double
         get() = this.value / 10.0.pow(-15)
@@ -303,10 +303,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val femtocandela = fcd          
 
     val Number.acd : Candela
-        get() = Candela(10.0.pow(-18))
+        get() = Candela(this.toDouble()*10.0.pow(-18))
     
     val Number.attocandela : Candela
-        get() = Candela(10.0.pow(-18))
+        get() = Candela(this.toDouble()*10.0.pow(-18))
     
     val Candela.acd  : Double
         get() = this.value / 10.0.pow(-18)
@@ -319,10 +319,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val attocandela = acd          
 
     val Number.zcd : Candela
-        get() = Candela(10.0.pow(-21))
+        get() = Candela(this.toDouble()*10.0.pow(-21))
     
     val Number.zeptocandela : Candela
-        get() = Candela(10.0.pow(-21))
+        get() = Candela(this.toDouble()*10.0.pow(-21))
     
     val Candela.zcd  : Double
         get() = this.value / 10.0.pow(-21)
@@ -335,10 +335,10 @@ class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
     val zeptocandela = zcd          
 
     val Number.ycd : Candela
-        get() = Candela(10.0.pow(-24))
+        get() = Candela(this.toDouble()*10.0.pow(-24))
     
     val Number.yoctocandela : Candela
-        get() = Candela(10.0.pow(-24))
+        get() = Candela(this.toDouble()*10.0.pow(-24))
     
     val Candela.ycd  : Double
         get() = this.value / 10.0.pow(-24)
