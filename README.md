@@ -76,6 +76,12 @@ or run-time errors for complicated units.
         )
         assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 
+Of course, a safety with an exception is not a classic type safety, that shows up during compilation time. 
+However, it is better than letting the metre and the second add up. 
+
+When using SI such error is found during the first unit test.  
+(Reminder: just such errors led in the past to terrible technical catastrophes, 
+see e.g. https://en.wikipedia.org/wiki/Mars_Climate_Orbiter).
 ### 1.4 Comparison of objects
 
 Physical objects can be compared only if they have the same dimensions. 
