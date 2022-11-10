@@ -22,6 +22,7 @@
 
 package eu.sirotin.siunits.tutorial
 
+import eu.sirotin.currency.*
 import eu.sirotin.siunits.core.*
 import eu.sirotin.specialunits.*
 import eu.sirotin.siunits.base.*
@@ -275,7 +276,6 @@ internal class TutorialTest {
         //Reminder: density of watter is 1 kg/l
 
         val s = 1.ha
-        val x = 100.mm
         val ω = s*100.mm //water volume
         val ρ = kg/l //density of watter is 1 kg/l
         val τ = ω * ρ //common water weight of rain
@@ -284,6 +284,17 @@ internal class TutorialTest {
 
     }
 
+    @Test
+    fun testCurrency() {
+        //A householder has decided to cover the floor with tiles in one of his rooms.
+        // He has bought 16,5 sqm of tiles for 52 €/sqm.
+        //How much does he pay for his tiles?
 
+        val prise = 52.`€`/m2
+        val s = 16.5*m2
+        val cost = s*prise
+        assertEquals("858,00 EUR", cost.show("%.2f"))
+        assertEquals("EUR", cost.unitSymbols())
+    }
 
 }

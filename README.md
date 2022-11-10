@@ -96,7 +96,7 @@ Otherwise you will get a run-time error.
         )
         assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 
-oder:
+or:
 
         val v1 = 2.4.m*kg/s
         val v2 = 2.4.s*m3/ μV
@@ -247,7 +247,7 @@ Look at the example of Tesla:
     assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
     assertEquals(T,	Wb/ m2)
 
-### Own Derive Units
+### 3.3 Own Derive Units
 
 You can also define your own Derived Units.
 Consider a not properly scientifically proven example.
@@ -268,9 +268,11 @@ a possibility to use Unicode symbols, e.g. Greek letters.
         assertEquals(1.0, α.`as %`, EPS) //α.`as %` - Ratio presented in percents
 
 Please note, how you can present calculation result in percents: 
-**α.`as %`** - ratio presented in percents
+**α.`as %`** - ratio presented in percents.
 
-### 3.3 SI-Prefixes 
+EPS is some small value for tolerance by comparison of double numbers. 
+
+### 3.4 SI-Prefixes 
 
 SI standard also defines SI prefixes 
 and rules for their use with units ( Base and Derived). 
@@ -307,7 +309,7 @@ to milliard of micrometer.
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < (10 `^` -9))
 
-### 3.4 Non-SI units accepted for use with SI
+### 3.5 Non-SI units accepted for use with SI
 
 Many non-SI units continue to be used in the scientific, 
 technical, and commercial literature.
@@ -340,3 +342,19 @@ with water from car cisterns. A car cistern can carry 4 tons of water.
 How many cisterns are needed to achieve 
 the same effect as in case of rain?
 Reminder: density of watter is 1 kg/l
+
+### 3.6 Currencies
+SI-Unit library lets you use currencies in your calculations.
+
+Some example:
+
+A householder has decided to cover the floor with tiles in one of his rooms.
+
+He has bought 16,5 sqm of tiles for 52 €/sqm.
+How much does he pay for his tiles?
+
+        val prise = 52.`€`/m2
+        val s = 16.5*m2
+        val cost = s*prise
+        assertEquals("858,00 EUR", cost.show("%.2f"))
+        assertEquals("EUR", cost.unitSymbols())
