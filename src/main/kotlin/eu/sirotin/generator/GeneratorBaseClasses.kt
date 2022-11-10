@@ -64,7 +64,7 @@ private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: F
     file.writeText(classText)
 }
 
-private fun generatePrefixesForKilogram(): List<SiPrefix> {
+fun generatePrefixesForKilogram(): List<SiPrefix> {
     return siPrefixes
         .map { SiPrefix(it.name, it.symbol, it.degree - 3) }
         .filter { it.name != "kilo" }
@@ -122,13 +122,13 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
     val ${siPrefix.name}$name = ${correctSpecialCases(siPrefix.symbol, unitSymbol)}          """
 }
 
-fun generateJVMName(symbol: String, unitSymbol: String): String{
+private fun generateJVMName(symbol: String, unitSymbol: String): String{
     if(symbol.first().isLowerCase())return ""
 
     return "@JvmName(\"get${symbol}${unitSymbol}_prop\")${System.lineSeparator()}        "
 }
 
-fun correctSpecialCases(symbol: String, unitSymbol: String): String {
+private fun correctSpecialCases(symbol: String, unitSymbol: String): String {
     val s = "$symbol$unitSymbol"
     return  if(s != "as") s else "`as`"  // To avoid conflict with keyword 'as'
 }
