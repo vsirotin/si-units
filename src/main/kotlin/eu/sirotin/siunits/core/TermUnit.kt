@@ -22,7 +22,7 @@
 package eu.sirotin.siunits.core
 
 const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
-const val EPS = 1.0E-12
+const val ε = 1.0E-12 //Tolerance by comparison
 
 abstract class TermUnit(val value: Double = 1.0, val description: UnitSpecification<*> ) : Comparable<TermUnit>, UnitPresentation {
 

@@ -72,12 +72,12 @@ internal class CoreTest {
     }
 
     private fun check(obj: TermUnit, value: Double, units: String) {
-        assertEquals(value, obj.value, EPS)
+        assertEquals(value, obj.value, ε)
         assertEquals(units, obj.unitSymbols())
     }
 
     private fun check(obj: Expression, value: Double, units: String) {
-        assertEquals(value, obj.value, EPS)
+        assertEquals(value, obj.value, ε)
         assertEquals(units, obj.unitSymbols())
     }
 

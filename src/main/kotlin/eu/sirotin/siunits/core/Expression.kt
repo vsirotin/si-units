@@ -43,7 +43,7 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
         if(dimensions.factors.isEmpty())
             throw IllegalStateException(ERR_CONVERSION_DIMENSIONLESS)
 
-        if((dimensions.factors.size != 1) || (abs(dimensions.factors.first().powerValue - 1.0) > EPS))
+        if((dimensions.factors.size != 1) || (abs(dimensions.factors.first().powerValue - 1.0) > ε))
                 throw IllegalStateException("$ERR_CONVERSION_PREFIX${this.categorySymbols()}$ERR_CONVERSION_SUFFIX")
         val p = dimensions.factors.first()
         @Suppress("UNCHECKED_CAST")

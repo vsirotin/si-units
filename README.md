@@ -271,12 +271,12 @@ a possibility to use Unicode symbols, e.g. Greek letters.
         val ξ = 5.h*(t - 0.`°C`)
         val σ = ζ*ξ //melting height
         val α = σ/τ //melting ration
-        assertEquals(1.0, α.`as %`, EPS) //α.`as %` - Ratio presented in percents
+        assertEquals(1.0, α.`as %`, ε) //α.`as %` - Ratio presented in percents
 
 Please note, how you can present calculation result in percents: 
 **α.`as %`** - ratio presented in percents.
 
-EPS is some small value for tolerance by comparison of double numbers. 
+ε is some small value for tolerance by comparison of double numbers. 
 
 ### 3.4 SI-Prefixes 
 
@@ -313,7 +313,7 @@ In example below we check that one kilometer is equal
 to milliard of micrometer.  
 
         val d = km - (10 `^` 9) * μm
-        assertTrue(abs(d.value) < (10 `^` -9))
+        assertTrue(abs(d.value) < ε)
 
 ### 3.5 Non-SI units accepted for use with SI
 
@@ -348,6 +348,13 @@ with water from car cisterns. A car cistern can carry 4 tons of water.
 How many cisterns are needed to achieve 
 the same effect as in case of rain?
 Reminder: density of watter is 1 kg/l
+
+        val s = 1.ha
+        val ω = s*100.mm //water volume
+        val ρ = kg/l //density of watter is 1 kg/l
+        val τ = ω * ρ //common water weight of rain
+        val n = τ/4.t
+        assertEquals(250.0, n.value, ε)
 
 ### 3.6 Currencies
 SI-Unit library lets you use currencies in your calculations.

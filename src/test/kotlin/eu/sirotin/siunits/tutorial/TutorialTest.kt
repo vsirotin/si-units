@@ -49,11 +49,11 @@ internal class TutorialTest {
         val x = 20.l
         val h = x / s
         val z = h / mm
-        assertEquals(1.0, z.value, EPS)
+        assertEquals(1.0, z.value, ε)
 
         //the same as statement
 
-        assertEquals(1.0, ((20.l / (4.m * 5.m)) / mm).value, EPS)
+        assertEquals(1.0, ((20.l / (4.m * 5.m)) / mm).value, ε)
 
     }
 
@@ -258,13 +258,13 @@ internal class TutorialTest {
         val ξ = 5.h*(t - 0.`°C`)
         val σ = ζ*ξ //melting height
         val α = σ/τ //melting ration
-        assertEquals(1.0, α.`as %`, EPS) //α.`as %` - Ratio presented in percents
+        assertEquals(1.0, α.`as %`, ε) //α.`as %` - Ratio presented in percents
     }
 
     @Test
     fun testPrefixes() {
         val d = km - (10 `^` 9) * μm
-        assertTrue(abs(d.value) < (10 `^` -9))
+        assertTrue(abs(d.value) < ε)
     }
 
     @Test
@@ -280,7 +280,7 @@ internal class TutorialTest {
         val ρ = kg/l //density of watter is 1 kg/l
         val τ = ω * ρ //common water weight of rain
         val n = τ/4.t
-        assertEquals(250.0, n.value, EPS)
+        assertEquals(250.0, n.value, ε)
 
     }
 
