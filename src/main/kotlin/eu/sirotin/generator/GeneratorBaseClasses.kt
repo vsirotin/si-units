@@ -25,20 +25,33 @@ package eu.sirotin.generator
 import java.io.File
 import java.nio.file.Files
 
+/**
+ * Descriptions of base SI-Units.
+ */
 val siUnitDescriptions = listOf(
-    SiUnitDescription("second", "s", "T",  0),
-    SiUnitDescription("metre", "m", "L",  80),
-    SiUnitDescription("kilogram", "kg", "M",  90),
-    SiUnitDescription("ampere", "A", "I",  70),
-    SiUnitDescription("kelvin", "K", "Θ",  60),
-    SiUnitDescription("mole", "mol", "N",  50),
-    SiUnitDescription("candela", "cd", "J",  40)
+    SiUnitDescription("second", "s", "T",  0, "time"),
+    SiUnitDescription("metre", "m", "L",  80, "length"),
+    SiUnitDescription("kilogram", "kg", "M",  90, "mass"),
+    SiUnitDescription("ampere", "A", "I",  70, "electric current"),
+    SiUnitDescription("kelvin", "K", "Θ",  60, "thermodynamic temperature"),
+    SiUnitDescription("mole", "mol", "N",  50, "amount of substance"),
+    SiUnitDescription("candela", "cd", "J",  40, "luminous intensity")
 )
 
+/**
+ * Describes base SI unit as [name] as 'metre', [unitSymbol] e.g. 'm', [dimensionSymbol] as 'L',
+ * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' ans not 'sm' and
+ * [quantityName] e.g. 'length'.
+ */
 data class SiUnitDescription(val name: String,
                              val unitSymbol: String,
                              val dimensionSymbol: String,
-                             val presentationPriority: Int)
+                             val presentationPriority: Int,
+                             val quantityName: String)
+
+/**
+ * Generates base unit classes. Not relevant for library users.
+ */
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
     val dir = File("src/main/kotlin/eu/sirotin/siunits/base")
@@ -58,7 +71,8 @@ private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: F
     val classText = generateHeadPart(className,
         siUnitDescription.unitSymbol,
         siUnitDescription.dimensionSymbol,
-        siUnitDescription.presentationPriority) +
+        siUnitDescription.presentationPriority,
+        siUnitDescription.quantityName) +
         generatePrefixes(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
     
     file.writeText(classText)
@@ -74,8 +88,8 @@ private fun generateHeadPart(
     className: String,
     unitSymbol: String,
     dimensionSymbol: String,
-    presentationPriority: Int
-): String {
+    presentationPriority: Int,
+    quantityName: String): String {
     return """
 package eu.sirotin.siunits.base
 
@@ -88,10 +102,24 @@ private val description$className = UnitSpecification(
     $presentationPriority
 ) { v: Double -> $className(v) }
 
+/**
+ * System International Unit for $quantityName.
+ *
+ * @constructor Creates an unit with given value.
+ */
 class $className(value: Double) : TermUnit(value, description = description$className)
+    /**
+     * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
+     */
     val Number.$unitSymbol : $className
+        /**
+         * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
+         */
         get() = $className(this.toDouble())
     
+    /**
+     * System International Unit for $quantityName.
+     */
     val $unitSymbol = $className(1.0)       
     """
 }
@@ -104,22 +132,54 @@ private fun generatePrefixes(className: String, name: String, unitSymbol: String
 
 private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
 
+    val correctedSymbol = correctSpecialCases(siPrefix.symbol, unitSymbol)
     return """
-    val Number.${correctSpecialCases(siPrefix.symbol, unitSymbol)} : $className
+    /**
+     * $correctedSymbol, (10^${siPrefix.degree} of $name)
+     */    
+    val Number.${correctedSymbol} : $className
+        /**
+         * Returns $correctedSymbol, (10^${siPrefix.degree} of $name)
+         */ 
         ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
     
+    /**
+     * $correctedSymbol, (10^${siPrefix.degree} of $name)
+     */ 
     val Number.${siPrefix.name}$name : $className
+        /**
+         * Returns $correctedSymbol (10^${siPrefix.degree} of $name)
+         */
         get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
     
-    val $className.${correctSpecialCases(siPrefix.symbol, unitSymbol)}  : Double
+    /**
+     * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+     */
+    val $className.${correctedSymbol}  : Double
+        /**
+         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+         */
         ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
     
+    /**
+     * Returns numerical value of $correctedSymbol (${siPrefix.degree} of $name)
+     */
     val $className.${siPrefix.name}$name  : Double
+        /**
+         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+         */
         get() = this.value / 10.0.pow(${siPrefix.degree})
     
-    @JvmField()         
-    val ${correctSpecialCases(siPrefix.symbol, unitSymbol)} = $className(10.0.pow(${siPrefix.degree}))
-    val ${siPrefix.name}$name = ${correctSpecialCases(siPrefix.symbol, unitSymbol)}          """
+    @JvmField()
+    /**
+     * $correctedSymbol (${siPrefix.degree} of $name)
+     */
+    val $correctedSymbol = $className(10.0.pow(${siPrefix.degree}))
+    
+    /**
+     * $correctedSymbol, (10^${siPrefix.degree} of $name)
+     */
+    val ${siPrefix.name}$name = $correctedSymbol          """
 }
 
 private fun generateJVMName(symbol: String, unitSymbol: String): String{

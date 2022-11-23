@@ -22,7 +22,6 @@
 
 package eu.sirotin.specialunits
 
-import eu.sirotin.siunits.core.Expression
 import eu.sirotin.siunits.base.Kelvin
 
 

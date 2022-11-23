@@ -114,9 +114,11 @@ val Number.`%`: Double
 @Suppress("DANGEROUS_CHARACTERS")
 val `%` = 0.01
 
+@Suppress("DANGEROUS_CHARACTERS")
 val Expression.`as %` : Double
     get()  = this.value*100.0
 
+@Suppress("DANGEROUS_CHARACTERS")
 val TermUnit.`as %` : Double
     get()  = this.value*100.0
 

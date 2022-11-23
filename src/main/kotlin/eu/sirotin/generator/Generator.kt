@@ -22,6 +22,9 @@
 
 package eu.sirotin.generator
 
+/**
+ * Generates production and test unit classes. Not relevant for library users.
+ */
 fun main() {
     generateSiUnitsClasses()
     generateCurrencies()

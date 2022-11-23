@@ -1,10 +1,11 @@
+import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.api.tasks.bundling.Jar
 
 plugins {
     kotlin("jvm") version "1.7.10"
     id("java-library")
     id("maven-publish")
+    id("org.jetbrains.dokka") version "1.7.20"
 }
 
 group = "eu.sirotin"
@@ -18,7 +19,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = project.group as String?
-            artifactId = "su-unit"
+            artifactId = "si-unit"
             version = project.version as String?
 
             from(components["java"])
@@ -26,8 +27,15 @@ publishing {
     }
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     testImplementation(kotlin("test"))
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.7.20")
 }
 
 tasks.jar {
@@ -41,10 +49,40 @@ tasks.jar {
 
 }
 
+
 tasks.test {
     useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+val dokkaHtmlDocs = "htmlDocs"
+tasks.dokkaHtml.configure {
+    dokkaSourceSets{
+        configureEach{
+            includes.from("module.md")
+        }
+
+        dependsOn("cleanDokkaHtmlDocs")
+    }
+
+    outputDirectory.set(file(dokkaHtmlDocs))
+
+    suppressInheritedMembers.set(true)
+
+    moduleName.set("${project.name}")
+}
+
+task("cleanDokkaHtmlDocs") {
+    delete(file(dokkaHtmlDocs))
+}
+
+tasks.clean.configure{
+    dependsOn("cleanDokkaHtmlDocs")
+}
+
+tasks.build.configure{
+    dependsOn("dokkaHtml")
 }

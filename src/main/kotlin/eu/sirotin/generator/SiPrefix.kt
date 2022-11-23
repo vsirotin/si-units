@@ -23,6 +23,8 @@
 package eu.sirotin.generator
 
 val siPrefixes: List<SiPrefix> = listOf(
+    SiPrefix("quetta", "Q", 30),
+    SiPrefix("ronna", "R", 27),
     SiPrefix("yotta", "Y", 24),
     SiPrefix("zetta", "Z", 21),
     SiPrefix("exa", "E", 18),
@@ -42,7 +44,9 @@ val siPrefixes: List<SiPrefix> = listOf(
     SiPrefix("femto", "f", -15),
     SiPrefix("atto", "a", -18),
     SiPrefix("zepto", "z", -21),
-    SiPrefix("yocto", "y", -24)
+    SiPrefix("yocto", "y", -24),
+    SiPrefix("ronto", "r", -27),
+    SiPrefix("quecto", "q", -30)
 )
 
 

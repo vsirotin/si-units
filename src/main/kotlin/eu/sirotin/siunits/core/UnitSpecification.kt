@@ -23,7 +23,9 @@
 package eu.sirotin.siunits.core
 
 /**
- *
+ * Specifies unit with properties as [unitSymbol] e.g. 'm', [categorySymbol] as 'L',
+ * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' ans not 'sm'.
+ * and creation function [creator].
  */
 data class UnitSpecification<T : TermUnit>(val unitSymbol: String,
                                            val categorySymbol: String,
@@ -31,7 +33,17 @@ data class UnitSpecification<T : TermUnit>(val unitSymbol: String,
                                            val creator: (v : Double) -> T) {
 }
 
+/**
+ * Defines functions for pretty printing and dimensional analysis of measured units.
+ */
 interface UnitPresentation {
+    /**
+     * Returns unit symbol of measured units, e.g. 'm/s'
+     */
     fun unitSymbols() : String
+
+    /**
+     * Returns category symbol of measured units, e.g. 'L3S-1'
+     */
     fun categorySymbols(): String
 }

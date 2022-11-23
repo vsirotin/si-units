@@ -1,6 +1,7 @@
         
 package eu.sirotin.siunits.base
 
+import eu.sirotin.siunits.EPS
 import eu.sirotin.siunits.core.*
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -15,12 +16,36 @@ internal class KelvinTest {
     }
               
     @Test
+    fun testKelvinQKTest() {
+        val myPow = 10.0.pow(30)
+        assertEquals(myPow * Kelvin(1.0), 1.QK)
+        assertEquals(myPow * Kelvin(1.0), 1.quettakelvin)
+        assertEquals(1.K.QK , K.value/myPow, EPS)
+        assertEquals(1.K.quettakelvin , K.value/myPow, EPS)
+        assertEquals(1.QK , QK)
+        assertEquals(quettakelvin , QK)
+    }    
+    
+          
+    @Test
+    fun testKelvinRKTest() {
+        val myPow = 10.0.pow(27)
+        assertEquals(myPow * Kelvin(1.0), 1.RK)
+        assertEquals(myPow * Kelvin(1.0), 1.ronnakelvin)
+        assertEquals(1.K.RK , K.value/myPow, EPS)
+        assertEquals(1.K.ronnakelvin , K.value/myPow, EPS)
+        assertEquals(1.RK , RK)
+        assertEquals(ronnakelvin , RK)
+    }    
+    
+          
+    @Test
     fun testKelvinYKTest() {
         val myPow = 10.0.pow(24)
         assertEquals(myPow * Kelvin(1.0), 1.YK)
         assertEquals(myPow * Kelvin(1.0), 1.yottakelvin)
-        assertEquals(1.K.YK , K.value/myPow, ε)
-        assertEquals(1.K.yottakelvin , K.value/myPow, ε)
+        assertEquals(1.K.YK , K.value/myPow, EPS)
+        assertEquals(1.K.yottakelvin , K.value/myPow, EPS)
         assertEquals(1.YK , YK)
         assertEquals(yottakelvin , YK)
     }    
@@ -31,8 +56,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(21)
         assertEquals(myPow * Kelvin(1.0), 1.ZK)
         assertEquals(myPow * Kelvin(1.0), 1.zettakelvin)
-        assertEquals(1.K.ZK , K.value/myPow, ε)
-        assertEquals(1.K.zettakelvin , K.value/myPow, ε)
+        assertEquals(1.K.ZK , K.value/myPow, EPS)
+        assertEquals(1.K.zettakelvin , K.value/myPow, EPS)
         assertEquals(1.ZK , ZK)
         assertEquals(zettakelvin , ZK)
     }    
@@ -43,8 +68,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(18)
         assertEquals(myPow * Kelvin(1.0), 1.EK)
         assertEquals(myPow * Kelvin(1.0), 1.exakelvin)
-        assertEquals(1.K.EK , K.value/myPow, ε)
-        assertEquals(1.K.exakelvin , K.value/myPow, ε)
+        assertEquals(1.K.EK , K.value/myPow, EPS)
+        assertEquals(1.K.exakelvin , K.value/myPow, EPS)
         assertEquals(1.EK , EK)
         assertEquals(exakelvin , EK)
     }    
@@ -55,8 +80,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(15)
         assertEquals(myPow * Kelvin(1.0), 1.PK)
         assertEquals(myPow * Kelvin(1.0), 1.petakelvin)
-        assertEquals(1.K.PK , K.value/myPow, ε)
-        assertEquals(1.K.petakelvin , K.value/myPow, ε)
+        assertEquals(1.K.PK , K.value/myPow, EPS)
+        assertEquals(1.K.petakelvin , K.value/myPow, EPS)
         assertEquals(1.PK , PK)
         assertEquals(petakelvin , PK)
     }    
@@ -67,8 +92,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(12)
         assertEquals(myPow * Kelvin(1.0), 1.TK)
         assertEquals(myPow * Kelvin(1.0), 1.terakelvin)
-        assertEquals(1.K.TK , K.value/myPow, ε)
-        assertEquals(1.K.terakelvin , K.value/myPow, ε)
+        assertEquals(1.K.TK , K.value/myPow, EPS)
+        assertEquals(1.K.terakelvin , K.value/myPow, EPS)
         assertEquals(1.TK , TK)
         assertEquals(terakelvin , TK)
     }    
@@ -79,8 +104,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(9)
         assertEquals(myPow * Kelvin(1.0), 1.GK)
         assertEquals(myPow * Kelvin(1.0), 1.gigakelvin)
-        assertEquals(1.K.GK , K.value/myPow, ε)
-        assertEquals(1.K.gigakelvin , K.value/myPow, ε)
+        assertEquals(1.K.GK , K.value/myPow, EPS)
+        assertEquals(1.K.gigakelvin , K.value/myPow, EPS)
         assertEquals(1.GK , GK)
         assertEquals(gigakelvin , GK)
     }    
@@ -91,8 +116,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(6)
         assertEquals(myPow * Kelvin(1.0), 1.MK)
         assertEquals(myPow * Kelvin(1.0), 1.megakelvin)
-        assertEquals(1.K.MK , K.value/myPow, ε)
-        assertEquals(1.K.megakelvin , K.value/myPow, ε)
+        assertEquals(1.K.MK , K.value/myPow, EPS)
+        assertEquals(1.K.megakelvin , K.value/myPow, EPS)
         assertEquals(1.MK , MK)
         assertEquals(megakelvin , MK)
     }    
@@ -103,8 +128,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(3)
         assertEquals(myPow * Kelvin(1.0), 1.kK)
         assertEquals(myPow * Kelvin(1.0), 1.kilokelvin)
-        assertEquals(1.K.kK , K.value/myPow, ε)
-        assertEquals(1.K.kilokelvin , K.value/myPow, ε)
+        assertEquals(1.K.kK , K.value/myPow, EPS)
+        assertEquals(1.K.kilokelvin , K.value/myPow, EPS)
         assertEquals(1.kK , kK)
         assertEquals(kilokelvin , kK)
     }    
@@ -115,8 +140,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(2)
         assertEquals(myPow * Kelvin(1.0), 1.hK)
         assertEquals(myPow * Kelvin(1.0), 1.hectokelvin)
-        assertEquals(1.K.hK , K.value/myPow, ε)
-        assertEquals(1.K.hectokelvin , K.value/myPow, ε)
+        assertEquals(1.K.hK , K.value/myPow, EPS)
+        assertEquals(1.K.hectokelvin , K.value/myPow, EPS)
         assertEquals(1.hK , hK)
         assertEquals(hectokelvin , hK)
     }    
@@ -127,8 +152,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(1)
         assertEquals(myPow * Kelvin(1.0), 1.daK)
         assertEquals(myPow * Kelvin(1.0), 1.decakelvin)
-        assertEquals(1.K.daK , K.value/myPow, ε)
-        assertEquals(1.K.decakelvin , K.value/myPow, ε)
+        assertEquals(1.K.daK , K.value/myPow, EPS)
+        assertEquals(1.K.decakelvin , K.value/myPow, EPS)
         assertEquals(1.daK , daK)
         assertEquals(decakelvin , daK)
     }    
@@ -139,8 +164,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-1)
         assertEquals(myPow * Kelvin(1.0), 1.dK)
         assertEquals(myPow * Kelvin(1.0), 1.decikelvin)
-        assertEquals(1.K.dK , K.value/myPow, ε)
-        assertEquals(1.K.decikelvin , K.value/myPow, ε)
+        assertEquals(1.K.dK , K.value/myPow, EPS)
+        assertEquals(1.K.decikelvin , K.value/myPow, EPS)
         assertEquals(1.dK , dK)
         assertEquals(decikelvin , dK)
     }    
@@ -151,8 +176,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-2)
         assertEquals(myPow * Kelvin(1.0), 1.cK)
         assertEquals(myPow * Kelvin(1.0), 1.centikelvin)
-        assertEquals(1.K.cK , K.value/myPow, ε)
-        assertEquals(1.K.centikelvin , K.value/myPow, ε)
+        assertEquals(1.K.cK , K.value/myPow, EPS)
+        assertEquals(1.K.centikelvin , K.value/myPow, EPS)
         assertEquals(1.cK , cK)
         assertEquals(centikelvin , cK)
     }    
@@ -163,8 +188,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-3)
         assertEquals(myPow * Kelvin(1.0), 1.mK)
         assertEquals(myPow * Kelvin(1.0), 1.millikelvin)
-        assertEquals(1.K.mK , K.value/myPow, ε)
-        assertEquals(1.K.millikelvin , K.value/myPow, ε)
+        assertEquals(1.K.mK , K.value/myPow, EPS)
+        assertEquals(1.K.millikelvin , K.value/myPow, EPS)
         assertEquals(1.mK , mK)
         assertEquals(millikelvin , mK)
     }    
@@ -175,8 +200,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-6)
         assertEquals(myPow * Kelvin(1.0), 1.μK)
         assertEquals(myPow * Kelvin(1.0), 1.microkelvin)
-        assertEquals(1.K.μK , K.value/myPow, ε)
-        assertEquals(1.K.microkelvin , K.value/myPow, ε)
+        assertEquals(1.K.μK , K.value/myPow, EPS)
+        assertEquals(1.K.microkelvin , K.value/myPow, EPS)
         assertEquals(1.μK , μK)
         assertEquals(microkelvin , μK)
     }    
@@ -187,8 +212,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-9)
         assertEquals(myPow * Kelvin(1.0), 1.nK)
         assertEquals(myPow * Kelvin(1.0), 1.nanokelvin)
-        assertEquals(1.K.nK , K.value/myPow, ε)
-        assertEquals(1.K.nanokelvin , K.value/myPow, ε)
+        assertEquals(1.K.nK , K.value/myPow, EPS)
+        assertEquals(1.K.nanokelvin , K.value/myPow, EPS)
         assertEquals(1.nK , nK)
         assertEquals(nanokelvin , nK)
     }    
@@ -199,8 +224,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-12)
         assertEquals(myPow * Kelvin(1.0), 1.pK)
         assertEquals(myPow * Kelvin(1.0), 1.picokelvin)
-        assertEquals(1.K.pK , K.value/myPow, ε)
-        assertEquals(1.K.picokelvin , K.value/myPow, ε)
+        assertEquals(1.K.pK , K.value/myPow, EPS)
+        assertEquals(1.K.picokelvin , K.value/myPow, EPS)
         assertEquals(1.pK , pK)
         assertEquals(picokelvin , pK)
     }    
@@ -211,8 +236,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-15)
         assertEquals(myPow * Kelvin(1.0), 1.fK)
         assertEquals(myPow * Kelvin(1.0), 1.femtokelvin)
-        assertEquals(1.K.fK , K.value/myPow, ε)
-        assertEquals(1.K.femtokelvin , K.value/myPow, ε)
+        assertEquals(1.K.fK , K.value/myPow, EPS)
+        assertEquals(1.K.femtokelvin , K.value/myPow, EPS)
         assertEquals(1.fK , fK)
         assertEquals(femtokelvin , fK)
     }    
@@ -223,8 +248,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-18)
         assertEquals(myPow * Kelvin(1.0), 1.aK)
         assertEquals(myPow * Kelvin(1.0), 1.attokelvin)
-        assertEquals(1.K.aK , K.value/myPow, ε)
-        assertEquals(1.K.attokelvin , K.value/myPow, ε)
+        assertEquals(1.K.aK , K.value/myPow, EPS)
+        assertEquals(1.K.attokelvin , K.value/myPow, EPS)
         assertEquals(1.aK , aK)
         assertEquals(attokelvin , aK)
     }    
@@ -235,8 +260,8 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-21)
         assertEquals(myPow * Kelvin(1.0), 1.zK)
         assertEquals(myPow * Kelvin(1.0), 1.zeptokelvin)
-        assertEquals(1.K.zK , K.value/myPow, ε)
-        assertEquals(1.K.zeptokelvin , K.value/myPow, ε)
+        assertEquals(1.K.zK , K.value/myPow, EPS)
+        assertEquals(1.K.zeptokelvin , K.value/myPow, EPS)
         assertEquals(1.zK , zK)
         assertEquals(zeptokelvin , zK)
     }    
@@ -247,9 +272,33 @@ internal class KelvinTest {
         val myPow = 10.0.pow(-24)
         assertEquals(myPow * Kelvin(1.0), 1.yK)
         assertEquals(myPow * Kelvin(1.0), 1.yoctokelvin)
-        assertEquals(1.K.yK , K.value/myPow, ε)
-        assertEquals(1.K.yoctokelvin , K.value/myPow, ε)
+        assertEquals(1.K.yK , K.value/myPow, EPS)
+        assertEquals(1.K.yoctokelvin , K.value/myPow, EPS)
         assertEquals(1.yK , yK)
         assertEquals(yoctokelvin , yK)
+    }    
+    
+          
+    @Test
+    fun testKelvinR1KTest() {
+        val myPow = 10.0.pow(-27)
+        assertEquals(myPow * Kelvin(1.0), 1.rK)
+        assertEquals(myPow * Kelvin(1.0), 1.rontokelvin)
+        assertEquals(1.K.rK , K.value/myPow, EPS)
+        assertEquals(1.K.rontokelvin , K.value/myPow, EPS)
+        assertEquals(1.rK , rK)
+        assertEquals(rontokelvin , rK)
+    }    
+    
+          
+    @Test
+    fun testKelvinQ1KTest() {
+        val myPow = 10.0.pow(-30)
+        assertEquals(myPow * Kelvin(1.0), 1.qK)
+        assertEquals(myPow * Kelvin(1.0), 1.quectokelvin)
+        assertEquals(1.K.qK , K.value/myPow, EPS)
+        assertEquals(1.K.quectokelvin , K.value/myPow, EPS)
+        assertEquals(1.qK , qK)
+        assertEquals(quectokelvin , qK)
     }    
     }
