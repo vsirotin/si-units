@@ -1,4 +1,3 @@
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -63,16 +62,19 @@ tasks.dokkaHtml.configure {
     dokkaSourceSets{
         configureEach{
             includes.from("module.md")
+            suppressedFiles.from(file("src/main/kotlin/eu/sirotin/generator"))
         }
 
         dependsOn("cleanDokkaHtmlDocs")
+
     }
+
 
     outputDirectory.set(file(dokkaHtmlDocs))
 
     suppressInheritedMembers.set(true)
 
-    moduleName.set("${project.name}")
+    moduleName.set(project.name)
 }
 
 task("cleanDokkaHtmlDocs") {
