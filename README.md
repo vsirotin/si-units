@@ -13,7 +13,7 @@ Let's consider some simple examples.
 
 ### 1.1 Simple physical formulas
 
-In Eva's case, a glass broke in her aquarium and water flowed on floor. In aquarium before breakage was 32 liters of water. Eva'a room is 4 m. long and 4.3 tall. How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
+In Eva's case, a glass broke in her aquarium and water flowed on floor. In aquarium before breakage was 32 liters of water. Eva's room is 4 m. long and 4.3 tall. How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
 
 The solution in Kotlin can be written in one line. For didactic reasons like introduce two auxiliary variables s and h.
 
@@ -92,7 +92,7 @@ Physical objects can be compared only if they have the same dimensions.
 
         assertTrue(2.2*kg*m/s < 4.2*kg*m/s)
 
-Otherwise you will get a run-time error.
+Otherwise, you will get a run-time error.
 
         val v1 = 2.4.m
         val v2 = 2.4.s
@@ -211,7 +211,7 @@ SI-Unit was extended with this infix function.
 Unfortunately, with it can not set proper priority for this function. 
 Although this looks like a "real" operator, 
 for keeping proper operation prioritization, 
-you have to put it in parenthesis.
+you have to put it in parentheses.
 
 Regarding this and similar extensions, see the statement: 
 "Kotlin supports escaping identifiers by enclosing 
@@ -219,7 +219,7 @@ any sequence of characters into backtick (\`) characters,
 allowing to use any name as an identifier." 
 (See paragraph 1.2.4 "Identifiers" in Kotlin specification 
 https://kotlinlang.org/spec/syntax-and-grammar.html#grammar-rule-Identifier). 
-The chartcter backtick (`) (UTF-8 code U+0060) is not equal 
+The character backtick (`) (UTF-8 code U+0060) is not equal 
 to the apostrophe characters on the keyboard (UTF-8 code U+0027). 
 To use it, you better copy it directly from this example.
 
@@ -287,27 +287,31 @@ The table of prefixes and their values can be seen
 in the table below. 
 
 | Prefix | Symbol | Degree |
-|--------|--------|--------|
-| yotta  | Y      | 24     | 
-| zetta  | Z      | 21     | 
-| exa    | E      | 18     | 
-| peta   | P      | 15     | 
-| tera   | T      | 12     | 
-| giga   | G      | 9      | 
-| mega   | M      | 6      | 
-| kilo   | k      | 3      | 
-| hecto  | h      | 2      | 
-| deca   | da     | 1      | 
-| deci   | d      | -1     | 
-| centi  | c      | -2     | 
-| milli  | m      | -3     | 
-| micro  | μ      | -6     | 
-| nano   | n      | -9     | 
-| pico   | p      | -12    | 
-| femto  | f      | -15    | 
-| atto   | a      | -18    | 
-| zepto  | z      | -21    | 
-| yocto  | y      | -24    |
+|--|-----|--------|
+| quetta | Q   | 30     | 
+| ronna | R   | 27     | 
+| yotta | Y   | 24     | 
+| zetta | Z   | 21     | 
+| exa | E   | 18     | 
+| peta | P   | 15     | 
+| tera | T   | 12     | 
+| giga | G   | 9      | 
+| mega | M   | 6      | 
+| kilo | k   | 3      | 
+| hecto | h   | 2      | 
+| deca | da  | 1      | 
+| deci | d   | -1     | 
+| centi | c   | -2     | 
+| milli | m   | -3     | 
+| micro | μ   | -6     | 
+| nano | n   | -9     | 
+| pico | p   | -12    | 
+| femto | f   | -15    | 
+| atto | a   | -18    | 
+| zepto | z   | -21    | 
+| yocto | y   | -24    |
+| ronto | r    | -27    |
+| quecto | q   | -30    |
 
 In example below we check that one kilometer is equal 
 to milliard of micrometer.  
