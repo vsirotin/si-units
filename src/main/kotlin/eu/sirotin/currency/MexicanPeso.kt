@@ -9,14 +9,37 @@ private val descriptionMexicanPeso = UnitSpecification(
     "`$`"
 ) { v: Double -> MexicanPeso(v) }
 
+/**
+* Class for hold of Mexican peso
+* @constructor Creates a class for hold of Mexican peso
+*/
 class MexicanPeso(value : Double = 1.0) : TermUnit(value, description = descriptionMexicanPeso)
+    
+    /**
+    * Creates object for hold of Mexican peso
+    */
     val Number.MXN : MexicanPeso
+        /**
+        * Returns value of object for hold of Mexican peso
+        */
         get() = MexicanPeso(this.toDouble())
 
+    /**
+    * Holder for  of Mexican peso
+    */
     val MXN = MexicanPeso()
 
+    /**
+    * Creates object for hold of Mexican peso
+    */
     val Number.`$` : MexicanPeso
+        /**
+        * Returns value of object for hold of Mexican peso
+        */
         get() = MexicanPeso(this.toDouble())
 
+    /**
+    * Holder for  of Mexican peso
+    */
     val `$` = MexicanPeso()
     

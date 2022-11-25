@@ -22,52 +22,94 @@
 
 package eu.sirotin.generator
 
+import java.io.File
+import java.nio.file.Files
+
+/**
+ * List of most traded currencies
+ */
 val currencyDescriptions = listOf(
-    SpecialUnitDescription("UnitedStatesDollar", "USD", "`US$`"),
-    SpecialUnitDescription("Euro", "EUR", "`€`"),
-    SpecialUnitDescription("JapaneseYen", "JPY",  "`¥`"),
-    SpecialUnitDescription("PoundSterling", "GBP", "`£`"),
-    SpecialUnitDescription("Renminbi", "CNY", "`人民币`"),
-    SpecialUnitDescription("AustralianDollar", "AUD", "`A$`"),
-    SpecialUnitDescription("CanadianDollar", "CAD", "`C$`"),
-    SpecialUnitDescription("SwissFranc", "CHF", "SCHF"), //To avoid name conflict for CHF
-    SpecialUnitDescription("HongKongDollar", "HKD", "`HK$`"),
-    SpecialUnitDescription("SingaporeDollar", "SGD", "`S$`"),
-    SpecialUnitDescription("SwedishKrona", "SEK", "skr"), //To avoid name conflict for symbol 'kr'
-    SpecialUnitDescription("SouthKoreanWon", "KRW", "`₩`"),
-    SpecialUnitDescription("NorwegianKrone", "NOK", "nkr"), //To avoid name conflict for symbol 'kr'
-    SpecialUnitDescription("NewZealandDollar", "NZD", "`NZ$`"),
-    SpecialUnitDescription("IndianRupee", "INR", "`₹`"),
-    SpecialUnitDescription("MexicanPeso", "MXN", "`$`"),
-    SpecialUnitDescription("NewTaiwanDollar", "TWD", "`NT$`"),
-    SpecialUnitDescription("SouthAfricanRand", "ZAR", "R"),
-    SpecialUnitDescription("BrazilianReal", "BRL", "`R$`"),
-    SpecialUnitDescription("DanishKrone", "DKK", "dkr"), //To avoid name conflict for symbol 'kr'
-    SpecialUnitDescription("PolishZłoty", "PLN", "`zł`"),
-    SpecialUnitDescription("ThaiBaht", "THB", "`฿`"),
-    SpecialUnitDescription("IsraeliNewShekel", "ILS", "`₪`"),
-    SpecialUnitDescription("IndonesianRupiah", "IDR", "Rp"),
-    SpecialUnitDescription("CzechKoruna", "CZK", "`Kč`"),
-    SpecialUnitDescription("UAEDirham", "AED", "Dh"),
-    SpecialUnitDescription("TurkishLira", "TRY", "`₺`"),
-    SpecialUnitDescription("HungarianForint", "HUF", "Ft"),
-    SpecialUnitDescription("ChileanPeso", "CLP", "`CLP$`"),
-    SpecialUnitDescription("SaudiRiyal", "SAR", "`﷼ `"),
-    SpecialUnitDescription("PhilippinePeso", "PHP", "`₱`"),
-    SpecialUnitDescription("MalaysianRinggit", "MYR", "RM"),
-    SpecialUnitDescription("ColombianPeso", "COP", "`COL$`"),
-    SpecialUnitDescription("RussianRuble", "RUB", "`₽`"),
-    SpecialUnitDescription("RomanianLeu", "RON", "L")
+    CurrencyDescription("UnitedStatesDollar", "USD", "`US$`", "United States dollar"),
+    CurrencyDescription("Euro", "EUR", "`€`", "Euro"),
+    CurrencyDescription("JapaneseYen", "JPY",  "`¥`", "Japanese yen"),
+    CurrencyDescription("PoundSterling", "GBP", "`£`", "Sterling"),
+    CurrencyDescription("Renminbi", "CNY", "`人民币`", "Renminbi"),
+    CurrencyDescription("AustralianDollar", "AUD", "`A$`", "Australian dollar"),
+    CurrencyDescription("CanadianDollar", "CAD", "`C$`", "Canadian dollar"),
+    CurrencyDescription("SwissFranc", "CHF", "SCHF", "Swiss franc"), //To avoid name conflict for CHF
+    CurrencyDescription("HongKongDollar", "HKD", "`HK$`", "Hong Kong dollar"),
+    CurrencyDescription("SingaporeDollar", "SGD", "`S$`", "Singapore dollar"),
+    CurrencyDescription("SwedishKrona", "SEK", "skr", "Swedish krona"), //To avoid name conflict for symbol 'kr'
+    CurrencyDescription("SouthKoreanWon", "KRW", "`₩`", " South Korean won"),
+    CurrencyDescription("NorwegianKrone", "NOK", "nkr", "Norwegian krone"), //To avoid name conflict for symbol 'kr'
+    CurrencyDescription("NewZealandDollar", "NZD", "`NZ$`", "New Zealand dollar"),
+    CurrencyDescription("IndianRupee", "INR", "`₹`", "Indian rupee"),
+    CurrencyDescription("MexicanPeso", "MXN", "`$`", "Mexican peso"),
+    CurrencyDescription("NewTaiwanDollar", "TWD", "`NT$`", "New Taiwan dollar"),
+    CurrencyDescription("SouthAfricanRand", "ZAR", "R", "South African rand"),
+    CurrencyDescription("BrazilianReal", "BRL", "`R$`", "Brazilian real"),
+    CurrencyDescription("DanishKrone", "DKK", "dkr", "Danish krone"), //To avoid name conflict for symbol 'kr'
+    CurrencyDescription("PolishZłoty", "PLN", "`zł`", "Polish złoty"),
+    CurrencyDescription("ThaiBaht", "THB", "`฿`", "Thai baht"),
+    CurrencyDescription("IsraeliNewShekel", "ILS", "`₪`", "Israeli new shekel"),
+    CurrencyDescription("IndonesianRupiah", "IDR", "Rp", "Indonesian rupiah"),
+    CurrencyDescription("CzechKoruna", "CZK", "`Kč`", " Czech koruna"),
+    CurrencyDescription("UAEDirham", "AED", "Dh", "UAE dirham"),
+    CurrencyDescription("TurkishLira", "TRY", "`₺`", "Turkish lira"),
+    CurrencyDescription("HungarianForint", "HUF", "Ft", "Hungarian forint"),
+    CurrencyDescription("ChileanPeso", "CLP", "`CLP$`", "Chilean peso"),
+    CurrencyDescription("SaudiRiyal", "SAR", "`﷼ `", "Saudi riyal"),
+    CurrencyDescription("PhilippinePeso", "PHP", "`₱`", "Philippine peso"),
+    CurrencyDescription("MalaysianRinggit", "MYR", "RM", "Malaysian ringgit"),
+    CurrencyDescription("ColombianPeso", "COP", "`COL$`", "Colombian peso"),
+    CurrencyDescription("RussianRuble", "RUB", "`₽`", "Russian ruble"),
+    CurrencyDescription("RomanianLeu", "RON", "L", "Romanian leu")
 )
 
-fun generateCurrencies() {
-    generateSpecialUnits("src/main/kotlin/eu/sirotin/currency", currencyDescriptions, ::generateCurrencyClass)
+data class CurrencyDescription(val name: String,
+                               val code: String,
+                               val symbol: String,
+                               val description: String)
+
+fun generateCurrencies(
+    dirPath: String,
+    unitDescriptions: List<CurrencyDescription>,
+    generator: (CurrencyDescription) -> String
+) {
+    //Generate package directory if not exists
+    val dir = File(dirPath)
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
+
+    //Generate classes
+    unitDescriptions.forEach { generateCurrencyClass(it, dir, generator) }
 }
 
-fun generateCurrencyClass(currencyDescription: SpecialUnitDescription): String {
+private fun generateCurrencyClass(description: CurrencyDescription, dir: File, generator: (CurrencyDescription) -> String) {
+    val className = description.name
+
+    val fileName = "$className.kt"
+    val file = dir.resolve(fileName)
+    file.delete()
+    val classText = generator.invoke(description)
+
+    file.writeText(classText)
+}
+
+/**
+ * Generates currency classes.
+ */
+fun generateCurrencies() {
+    generateCurrencies("src/main/kotlin/eu/sirotin/currency",
+        currencyDescriptions,
+        ::generateCurrencyClass
+    )
+}
+
+private fun generateCurrencyClass(currencyDescription: CurrencyDescription): String {
     val name = currencyDescription.name
     val code = currencyDescription.code
     val symbol = currencyDescription.symbol
+    val desc = currencyDescription.description
     return """
 package eu.sirotin.currency
 
@@ -79,15 +121,38 @@ private val description$name = UnitSpecification(
     "$symbol"
 ) { v: Double -> $name(v) }
 
+/**
+* Class for hold of $desc
+* @constructor Creates a class for hold of $desc
+*/
 class $name(value : Double = 1.0) : TermUnit(value, description = description$name)
+    
+    /**
+    * Creates object for hold of $desc
+    */
     val Number.$code : $name
+        /**
+        * Returns value of object for hold of $desc
+        */
         get() = $name(this.toDouble())
 
+    /**
+    * Holder for  of $desc
+    */
     val $code = $name()
 
+    /**
+    * Creates object for hold of $desc
+    */
     val Number.$symbol : $name
+        /**
+        * Returns value of object for hold of $desc
+        */
         get() = $name(this.toDouble())
 
+    /**
+    * Holder for  of $desc
+    */
     val $symbol = $name()
     """
 }

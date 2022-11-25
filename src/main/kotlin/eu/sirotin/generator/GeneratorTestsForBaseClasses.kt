@@ -57,6 +57,7 @@ private fun generateTestClassHeadPart(
     return """        
 package eu.sirotin.siunits.base
 
+import eu.sirotin.siunits.EPS
 import eu.sirotin.siunits.core.*
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

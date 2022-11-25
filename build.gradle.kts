@@ -63,6 +63,7 @@ tasks.dokkaHtml.configure {
         configureEach{
             includes.from("module.md")
             suppressedFiles.from(file("src/main/kotlin/eu/sirotin/generator"))
+            reportUndocumented.set(true)
         }
 
         dependsOn("cleanDokkaHtmlDocs")

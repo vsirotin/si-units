@@ -25,7 +25,16 @@ package eu.sirotin.specialunits
 import eu.sirotin.siunits.base.Kilogram
 import eu.sirotin.siunits.base.kg
 
+/**
+ * Creates a gram object
+ */
 val Number.g: Kilogram
+    /**
+     * Returns a gram object
+     */
     get()  = 0.001.kg
 
+/**
+ * A gram object
+ */
 val g = 0.001.kg

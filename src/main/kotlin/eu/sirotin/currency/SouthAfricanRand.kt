@@ -9,14 +9,37 @@ private val descriptionSouthAfricanRand = UnitSpecification(
     "R"
 ) { v: Double -> SouthAfricanRand(v) }
 
+/**
+* Class for hold of South African rand
+* @constructor Creates a class for hold of South African rand
+*/
 class SouthAfricanRand(value : Double = 1.0) : TermUnit(value, description = descriptionSouthAfricanRand)
+    
+    /**
+    * Creates object for hold of South African rand
+    */
     val Number.ZAR : SouthAfricanRand
+        /**
+        * Returns value of object for hold of South African rand
+        */
         get() = SouthAfricanRand(this.toDouble())
 
+    /**
+    * Holder for  of South African rand
+    */
     val ZAR = SouthAfricanRand()
 
+    /**
+    * Creates object for hold of South African rand
+    */
     val Number.R : SouthAfricanRand
+        /**
+        * Returns value of object for hold of South African rand
+        */
         get() = SouthAfricanRand(this.toDouble())
 
+    /**
+    * Holder for  of South African rand
+    */
     val R = SouthAfricanRand()
     
