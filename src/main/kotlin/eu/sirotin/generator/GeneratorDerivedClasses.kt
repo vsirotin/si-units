@@ -74,7 +74,7 @@ fun generateSiUnitsDerivedClasses() {
 
 }
 
-fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
+private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
     val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
     val fileName = "$className.kt"
@@ -94,8 +94,7 @@ fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir:
     file.writeText(classText)
 }
 
-
-fun generateDerivedUnitClassHead(
+private fun generateDerivedUnitClassHead(
     className: String,
     unitSymbol: String,
     formula: String,
@@ -135,43 +134,43 @@ private fun generateDerivedClassPrefixes(name: String,
     return prefixes.joinToString(System.lineSeparator()) { generateTextOfDerivedUnitClassForPrefix(it, name, unitSymbol, formula, quantity) }
 }
 
-fun generateTextOfDerivedUnitClassForPrefix(
+private fun generateTextOfDerivedUnitClassForPrefix(
     prefix: SiPrefix,
     name: String,
     unitSymbol: String,
     formula: String,
-    quantity: String
+    quantityName: String
 ): String {
     val jvmName = "${prefix.symbol}$unitSymbol"
     return """
 /**
-* ${prefix.symbol}$unitSymbol, (10^${prefix.degree} of $name)
+* ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */    
 val Number.${prefix.symbol}$unitSymbol : Expression
     @JvmName("get${jvmName}_prop")
     /**
-    * Returns ${prefix.symbol}$unitSymbol, (10^${prefix.degree} of $name)
+    * Returns ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
     get() = this.toDouble() * 10.0.pow(${prefix.degree}) * ($formula)
 
 /**
-* ${prefix.name}$name, (10^${prefix.degree} of $name)
+* ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
 val Number.${prefix.name}$name : Expression
     /**
-    * Returns ${prefix.name}$name, (10^${prefix.degree} of $name)
+    * Returns ${prefix.name}$name, 10^${prefix.degree} of of $name, derived SI-Unit for measurement of $quantityName
     */  
     get() = this.toDouble() * 10.0.pow(${prefix.degree}) * ($formula)
 
 
 @JvmField()  
 /**
-* ${prefix.symbol}$unitSymbol, (10^${prefix.degree} of $name)
+* ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */        
 val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 
 /**
-* ${prefix.name}$name, (10^${prefix.degree} of $name)
+* ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
