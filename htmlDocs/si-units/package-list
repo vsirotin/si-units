@@ -246,52 +246,6 @@ $dokka.location:eu.sirotin.currency/UnitedStatesDollarKt/getUS$/#/PointingToDecl
 $dokka.location:eu.sirotin.currency/UnitedStatesDollarKt/getUS$/kotlin.Number#/PointingToDeclaration/si-units/eu.sirotin.currency/-united-states-dollar-kt/get-u-s$.html
 $dokka.location:eu.sirotin.currency/UnitedStatesDollarKt/getUSD/#/PointingToDeclaration/si-units/eu.sirotin.currency/-united-states-dollar-kt/get-u-s-d.html
 $dokka.location:eu.sirotin.currency/UnitedStatesDollarKt/getUSD/kotlin.Number#/PointingToDeclaration/si-units/eu.sirotin.currency/-united-states-dollar-kt/get-u-s-d.html
-$dokka.location:eu.sirotin.generator////PointingToDeclaration/si-units/eu.sirotin.generator/index.html
-$dokka.location:eu.sirotin.generator/GeneratorBaseClassesKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-base-classes-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorBaseClassesKt/generatePrefixesForKilogram/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-base-classes-kt/generate-prefixes-for-kilogram.html
-$dokka.location:eu.sirotin.generator/GeneratorBaseClassesKt/generateSiUnitsBaseClasses/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-base-classes-kt/generate-si-units-base-classes.html
-$dokka.location:eu.sirotin.generator/GeneratorBaseClassesKt/getSiUnitDescriptions/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-base-classes-kt/get-si-unit-descriptions.html
-$dokka.location:eu.sirotin.generator/GeneratorCurrencyKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-currency-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorCurrencyKt/generateCurrencies/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-currency-kt/generate-currencies.html
-$dokka.location:eu.sirotin.generator/GeneratorCurrencyKt/generateCurrencyClass/#eu.sirotin.generator.SpecialUnitDescription/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-currency-kt/generate-currency-class.html
-$dokka.location:eu.sirotin.generator/GeneratorCurrencyKt/getCurrencyDescriptions/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-currency-kt/get-currency-descriptions.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt/generateDerivedUnitClassHead/#kotlin.String#kotlin.String/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/generate-derived-unit-class-head.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt/generateSiUnitDerivedClass/#eu.sirotin.generator.SiDerivedUnitDescription#java.io.File/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/generate-si-unit-derived-class.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt/generateSiUnitsDerivedClasses/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/generate-si-units-derived-classes.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt/generateTextOfDerivedUnitClassForPrefix/#eu.sirotin.generator.SiPrefix#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/generate-text-of-derived-unit-class-for-prefix.html
-$dokka.location:eu.sirotin.generator/GeneratorDerivedClassesKt/getSiDerivedUnitDescriptions/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-derived-classes-kt/get-si-derived-unit-descriptions.html
-$dokka.location:eu.sirotin.generator/GeneratorKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorKt/main/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-kt/main.html
-$dokka.location:eu.sirotin.generator/GeneratorSpecialUnitsKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-special-units-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorSpecialUnitsKt/generateSpecialUnits/#kotlin.String#kotlin.collections.List[eu.sirotin.generator.SpecialUnitDescription]#kotlin.Function1[eu.sirotin.generator.SpecialUnitDescription,kotlin.String]/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-special-units-kt/generate-special-units.html
-$dokka.location:eu.sirotin.generator/GeneratorTestsForBaseClassesKt///PointingToDeclaration/si-units/eu.sirotin.generator/-generator-tests-for-base-classes-kt/index.html
-$dokka.location:eu.sirotin.generator/GeneratorTestsForBaseClassesKt/generateTestsSiUnitsBaseClasses/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-tests-for-base-classes-kt/generate-tests-si-units-base-classes.html
-$dokka.location:eu.sirotin.generator/GeneratorTestsForBaseClassesKt/getExclusions/#/PointingToDeclaration/si-units/eu.sirotin.generator/-generator-tests-for-base-classes-kt/get-exclusions.html
-$dokka.location:eu.sirotin.generator/SiDerivedUnitDescription///PointingToDeclaration/si-units/eu.sirotin.generator/-si-derived-unit-description/index.html
-$dokka.location:eu.sirotin.generator/SiDerivedUnitDescription/SiDerivedUnitDescription/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/si-units/eu.sirotin.generator/-si-derived-unit-description/-si-derived-unit-description.html
-$dokka.location:eu.sirotin.generator/SiDerivedUnitDescription/getFormula/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-derived-unit-description/get-formula.html
-$dokka.location:eu.sirotin.generator/SiDerivedUnitDescription/getName/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-derived-unit-description/get-name.html
-$dokka.location:eu.sirotin.generator/SiDerivedUnitDescription/getUnitSymbol/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-derived-unit-description/get-unit-symbol.html
-$dokka.location:eu.sirotin.generator/SiPrefix///PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix/index.html
-$dokka.location:eu.sirotin.generator/SiPrefix/SiPrefix/#kotlin.String#kotlin.String#kotlin.Int/PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix/-si-prefix.html
-$dokka.location:eu.sirotin.generator/SiPrefix/getDegree/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix/get-degree.html
-$dokka.location:eu.sirotin.generator/SiPrefix/getName/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix/get-name.html
-$dokka.location:eu.sirotin.generator/SiPrefix/getSymbol/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix/get-symbol.html
-$dokka.location:eu.sirotin.generator/SiPrefixKt///PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix-kt/index.html
-$dokka.location:eu.sirotin.generator/SiPrefixKt/getSiPrefixes/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-prefix-kt/get-si-prefixes.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription///PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/index.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/SiUnitDescription/#kotlin.String#kotlin.String#kotlin.String#kotlin.Int#kotlin.String/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/-si-unit-description.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/getDimensionSymbol/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/get-dimension-symbol.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/getName/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/get-name.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/getPresentationPriority/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/get-presentation-priority.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/getQuantityName/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/get-quantity-name.html
-$dokka.location:eu.sirotin.generator/SiUnitDescription/getUnitSymbol/#/PointingToDeclaration/si-units/eu.sirotin.generator/-si-unit-description/get-unit-symbol.html
-$dokka.location:eu.sirotin.generator/SpecialUnitDescription///PointingToDeclaration/si-units/eu.sirotin.generator/-special-unit-description/index.html
-$dokka.location:eu.sirotin.generator/SpecialUnitDescription/SpecialUnitDescription/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/si-units/eu.sirotin.generator/-special-unit-description/-special-unit-description.html
-$dokka.location:eu.sirotin.generator/SpecialUnitDescription/getCode/#/PointingToDeclaration/si-units/eu.sirotin.generator/-special-unit-description/get-code.html
-$dokka.location:eu.sirotin.generator/SpecialUnitDescription/getName/#/PointingToDeclaration/si-units/eu.sirotin.generator/-special-unit-description/get-name.html
-$dokka.location:eu.sirotin.generator/SpecialUnitDescription/getSymbol/#/PointingToDeclaration/si-units/eu.sirotin.generator/-special-unit-description/get-symbol.html
 $dokka.location:eu.sirotin.siunits.base////PointingToDeclaration/si-units/eu.sirotin.siunits.base/index.html
 $dokka.location:eu.sirotin.siunits.base/Ampere///PointingToDeclaration/si-units/eu.sirotin.siunits.base/-ampere/index.html
 $dokka.location:eu.sirotin.siunits.base/Ampere/Ampere/#kotlin.Double/PointingToDeclaration/si-units/eu.sirotin.siunits.base/-ampere/-ampere.html
@@ -2849,7 +2803,6 @@ $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/getMin/kotlin.Number#/Point
 $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/getT/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/get-t.html
 $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/getT/kotlin.Number#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/get-t.html
 $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/get°/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/get°.html
-$dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/getΠ/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/getΠ.html
 $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/get′/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/get′.html
 $dokka.location:eu.sirotin.specialunits/NonSiUnitsKt/get″/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-non-si-units-kt/get″.html
 $dokka.location:eu.sirotin.specialunits/SpecialBaseUnitsKt///PointingToDeclaration/si-units/eu.sirotin.specialunits/-special-base-units-kt/index.html
@@ -2861,7 +2814,6 @@ $dokka.location:eu.sirotin.specialunits/SpecialDerivedUnitsKt/get°C/kotlin.Numb
 $dokka.location:eu.sirotin.specialunits/SpecialDerivedUnitsKt/get℃/#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-special-derived-units-kt/get℃.html
 $dokka.location:eu.sirotin.specialunits/SpecialDerivedUnitsKt/get℃/kotlin.Number#/PointingToDeclaration/si-units/eu.sirotin.specialunits/-special-derived-units-kt/get℃.html
 eu.sirotin.currency
-eu.sirotin.generator
 eu.sirotin.siunits.base
 eu.sirotin.siunits.core
 eu.sirotin.siunits.derived

@@ -27,12 +27,12 @@ package eu.sirotin.generator
  */
 fun main() {
     generateSiUnitsClasses()
-    generateCurrencies()
-    generateTestClasses()
+//    generateCurrencies()
+//    generateTestClasses()
 }
 
 private fun generateSiUnitsClasses() {
-    generateSiUnitsBaseClasses()
+//    generateSiUnitsBaseClasses()
     generateSiUnitsDerivedClasses()
 }
 

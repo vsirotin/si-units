@@ -162,7 +162,7 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
         ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
     
     /**
-     * Returns numerical value of $correctedSymbol (${siPrefix.degree} of $name)
+     * Returns numerical value of $correctedSymbol (10^${siPrefix.degree} of $name)
      */
     val $className.${siPrefix.name}$name  : Double
         /**
@@ -172,7 +172,7 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
     
     @JvmField()
     /**
-     * $correctedSymbol (${siPrefix.degree} of $name)
+     * $correctedSymbol (10^${siPrefix.degree} of $name)
      */
     val $correctedSymbol = $className(10.0.pow(${siPrefix.degree}))
     

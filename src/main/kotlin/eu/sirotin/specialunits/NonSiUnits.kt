@@ -31,95 +31,209 @@ import java.lang.IllegalArgumentException
 import java.lang.Math.PI
 import kotlin.math.pow
 
+/**
+ * Square metre
+ */
 val m2 = m * m
+
+/**
+ * Cubic metre (volume)
+ */
 val m3 = m2 * m
 
+/**
+ * Minute (time)
+ */
 val Number.min: Second
+    /**
+     * Get time in minutes for this value
+     */
     get()  = Second(this.toDouble()*60)
 
+/**
+ * Minute (time)
+ */
 val min = Second(60.0)
 
+/**
+ * Hour (time)
+ */
 val Number.h: Second
+    /**
+     * Get time in hours for this value
+     */
     get()  = Second(this.toDouble()*3600)
 
+/**
+ * Hour (time)
+ */
 val h = Second(3600.0)
 
+/**
+ * Day (time)
+ */
 val Number.d: Second
+    /**
+     * Get time in days for this value
+     */
     get()  = Second(this.toDouble()*24*3600)
 
+/**
+ * Day (time)
+ */
 val d = Second(24*3600.0)
 
-//astronomical unit
-
+/**
+ * Astronomical unit 149597870700 metre
+ */
 val Number.au: Metre
     get()  = Metre(this.toDouble()*149597870700)
 
+/**
+ * Astronomical unit 149597870700 metre
+ */
 val au = 1.0.au
 
-val π = PI
+/**
+ * Mathematical constant (Archimedes' constant π). The numeric value of π is approximately 3.1415926536
+ */
+const val π = PI
 
-//degree
+/**
+ * Euler's number e. The numeric value of e is approximately 2.7182818284
+ */
+const val e = Math.E
+
+/**
+ * degree
+ */
 val `°` = (PI/180)*rad
 
-//arcminute
+/**
+ * arcminute
+ */
 val `′` = `°` / 60.0
 
-//arcsecond
+/**
+ * arcsecond
+ */
 val `″` = `′` / 60.0
 
+/**
+ * hectare
+ */
 val Number.ha: Expression
     get() = this.toDouble() * (10 `^` 4) * m2
 
-//hectare
+/**
+ * hectare
+ */
 val ha = 1.0.ha
 
-//Litre
+/**
+ * Litre
+ */
 val Number.l: Expression
+    /**
+     * get litre
+     */
     get() = Metre(this.toDouble()/10.0) * (Metre(0.1) * Metre(0.1))
 
+/**
+ * Litre
+ */
 val l = 1.0.l
 
+/**
+ * Litre
+ */
 val Number.L: Expression
     @JvmName("getL_prop")
+    /**
+     * get litre
+     */
     get() = this.l
 
 @JvmField()
 val L = l
 
-//tonne
+/**
+ * tonne
+ */
 val Number.t: Kilogram
+    /**
+     * get tonne
+     */
     get() = Kilogram(this.toDouble()*1000.0)
 
+/**
+ * tonne
+ */
 val t = 1000.kg
 
-//dalton
+/**
+ * dalton
+ */
 val Number.Da: Kilogram
+    /**
+     * get dalton
+     */
     get() = Kilogram(this.toDouble() * 1.660539040 * (10.0.pow(-27)))
 
+/**
+ * dalton
+ */
 val Da = 1.Da
 
-//electronvolt
+/**
+ * electronvolt
+ */
 val Number.eV: Expression
+    /**
+     * get electronvolt
+     */
     get() = Expression(1.602176634*(10.0.pow(-19)) , 1.J.dimensions)
 
+/**
+ * electronvolt
+ */
 val eV = 1.eV
 
 
-
-//Percentage
+/**
+ * Percentage
+ */
 @Suppress("DANGEROUS_CHARACTERS")
 val Number.`%`: Double
+    /**
+     * get Percentage
+     */
     get()  = this.toDouble()*0.01
 
 @Suppress("DANGEROUS_CHARACTERS")
+/**
+ * Percentage
+ */
 val `%` = 0.01
 
 @Suppress("DANGEROUS_CHARACTERS")
+/**
+ * Percentage as double
+ */
 val Expression.`as %` : Double
+    /**
+     * get percentage as double
+     */
     get()  = this.value*100.0
 
 @Suppress("DANGEROUS_CHARACTERS")
+/**
+ * get percentage as double
+ */
 val TermUnit.`as %` : Double
+    /**
+     * get percentage as double
+     */
     get()  = this.value*100.0
 
 

@@ -20,17 +20,30 @@
  *
  */
 
+@file:Suppress("NonAsciiCharacters")
+
 package eu.sirotin.specialunits
 
 import eu.sirotin.siunits.base.Kelvin
 
-
-//Celsius
+/**
+ * temperature relative to 273.15 K
+ */
 val Number.`°C`: Kelvin
     get()  = Kelvin(this.toDouble() + 273.15)
 
+/**
+ * temperature relative to 273.15 K
+ */
 val Number.`℃`: Kelvin
     get()  = this.`°C`
 
+/**
+ * temperature relative to 273.15 K
+ */
 val `°C` = 1.`°C`
+
+/**
+ * temperature relative to 273.15 K
+ */
 val `℃` = `°C`
