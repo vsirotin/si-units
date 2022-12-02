@@ -133,7 +133,7 @@ You can use the library as a collection of open source code or
 as a built library (si-unit*.jar).
 If you want to use it as source code, 
 copy into your project all production files from 
-**src/main/kotlin/eu/sirotin** except the package **generator**.
+**src/main/kotlin/eu/sirotin/kotunil** except the package **generator**.
 
 At the moment I am working to place appropriate JAR library 
 in popular repositories. 

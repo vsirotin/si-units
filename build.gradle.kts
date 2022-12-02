@@ -60,11 +60,13 @@ tasks.withType<KotlinCompile> {
 
 val dokkaHtmlDocs = "htmlDocs"
 tasks.dokkaHtml.configure {
-    dokkaSourceSets{
-        configureEach{
+    dokkaSourceSets {
+        configureEach {
             includes.from("module.md")
-            suppressedFiles.from(file("src/main/kotlin/eu/sirotin/generator"))
+            suppressedFiles.from(file("src/main/kotlin/eu/sirotin/kotunil/generator"))
             reportUndocumented.set(true)
+
+            moduleName.set("KotUniL")
         }
 
         dependsOn("cleanDokkaHtmlDocs")
