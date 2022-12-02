@@ -1,3 +1,4 @@
+
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -7,7 +8,7 @@ plugins {
     id("org.jetbrains.dokka") version "1.7.20"
 }
 
-group = "eu.sirotin"
+group = "eu.sirotin.kotunil"
 version = "1.0.1"
 
 repositories {
@@ -18,7 +19,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = project.group as String?
-            artifactId = "si-unit"
+            artifactId = "kotunil"
             version = project.version as String?
 
             from(components["java"])
@@ -78,8 +79,38 @@ tasks.dokkaHtml.configure {
     moduleName.set(project.name)
 }
 
+tasks.javadoc.configure{
+    sourceSets{
+        configureEach{
+            include("src")
+        }
+    }
+
+    source("src")
+
+
+}
+
+//TODO to clear
+//tasks.named("javadocJar"){
+//
+//    println("properties=" + properties.keys)
+//    println("docsDir=" + properties["docsDir"])
+//
+//    inputs.dir("docs")
+//    inputs.sourceFiles.files.plus(File("docs"))
+//    println("this.name=" + name)
+//    println("sourceFiles=" +this.inputs.sourceFiles.files.count())
+//    inputs.sourceFiles.files.add(File("build/tmp/javadocJar/index.html"))
+//    println("inputs.sourceFiles.asPath=" + inputs.sourceFiles.asPath)
+//    println("sourceFiles=" +this.inputs.sourceFiles.files.count())
+//    println("sourceFiles.1=" +this.inputs.sourceFiles.files.first())
+//
+//}
+
+
 task("cleanDokkaHtmlDocs") {
-    delete(file(dokkaHtmlDocs))
+   delete(file(dokkaHtmlDocs))
 }
 
 tasks.clean.configure{
