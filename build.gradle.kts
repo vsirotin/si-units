@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil"
-version = "1.0.1"
+version = "1.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
