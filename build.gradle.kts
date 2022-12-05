@@ -66,7 +66,7 @@ tasks.dokkaHtml.configure {
             suppressedFiles.from(file("src/main/kotlin/eu/sirotin/kotunil/generator"))
             reportUndocumented.set(true)
 
-            moduleName.set("KotUniL")
+            moduleName.set("KotUniL - Kotlin Units Library")
         }
 
         dependsOn("cleanDokkaHtmlDocs")

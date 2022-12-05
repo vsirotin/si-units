@@ -1,4 +1,4 @@
-# Module KotUniL
+# Module KotUniL - Kotlin Units Library
 
 ## Description
 

@@ -1,6 +1,6 @@
-# si-units
+# KotUniL
 
-**KotUniL** a library of functions and objects of Kotlin that meet the following requirements in total:
+**KotUniL (Kotlin Units Library)** a library of functions and objects of Kotlin that meet the following requirements in total:
 1. It covers all units of SI base units (see https://en.wikipedia.org/wiki/International_System_of_Units) like meter, second etc. as well as some other common units like currencies, percentages etc.
 2. It allows various formulas to be written in Kotlin in a way maximally similar to the way formulas are written in physics and economics.
 3. It allows analyzing dimensions of results of applications of complicated formulas.
