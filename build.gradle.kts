@@ -11,6 +11,18 @@ plugins {
 group = "eu.sirotin.kotunil"
 version = "1.0.1-SNAPSHOT"
 
+val projectName = "kotunil"
+val docsDir = "build/docs"
+
+subprojects {
+    apply<JavaPlugin>()
+
+    configure<JavaPluginExtension> {
+        withSourcesJar()
+        withJavadocJar()
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -40,7 +52,7 @@ dependencies {
 
 tasks.jar {
     manifest {
-        attributes(mapOf("Implementation-Title" to project.name,
+        attributes(mapOf("Implementation-Title" to projectName,
             "Implementation-Version" to project.version))
     }
 
@@ -58,67 +70,37 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-val dokkaHtmlDocs = "htmlDocs"
-tasks.dokkaHtml.configure {
+tasks.dokkaJavadoc.configure {
     dokkaSourceSets {
         configureEach {
-            includes.from("module.md")
             suppressedFiles.from(file("src/main/kotlin/eu/sirotin/kotunil/generator"))
             reportUndocumented.set(true)
 
             moduleName.set("KotUniL - Kotlin Units Library")
         }
-
-        dependsOn("cleanDokkaHtmlDocs")
-
     }
-
-
-    outputDirectory.set(file(dokkaHtmlDocs))
-
+    outputDirectory.set(file(docsDir))
     suppressInheritedMembers.set(true)
 
-    moduleName.set(project.name)
 }
 
-tasks.javadoc.configure{
-    sourceSets{
-        configureEach{
-            include("src")
-        }
+//Temporary implementation up to clearing problem with cooperation dokkaHtml and javadocJar
+tasks.register<Jar>("javadocJarWorkaround") {
+    group = "build"
+    manifest {
+        attributes(mapOf("Implementation-Title" to projectName,
+            "Implementation-Version" to project.version))
     }
+    dependsOn(tasks.dokkaJavadoc)
 
-    source("src")
+    archiveClassifier.set("javadoc")
 
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from(docsDir)
 
 }
 
-//TODO to clear
-//tasks.named("javadocJar"){
-//
-//    println("properties=" + properties.keys)
-//    println("docsDir=" + properties["docsDir"])
-//
-//    inputs.dir("docs")
-//    inputs.sourceFiles.files.plus(File("docs"))
-//    println("this.name=" + name)
-//    println("sourceFiles=" +this.inputs.sourceFiles.files.count())
-//    inputs.sourceFiles.files.add(File("build/tmp/javadocJar/index.html"))
-//    println("inputs.sourceFiles.asPath=" + inputs.sourceFiles.asPath)
-//    println("sourceFiles=" +this.inputs.sourceFiles.files.count())
-//    println("sourceFiles.1=" +this.inputs.sourceFiles.files.first())
-//
-//}
 
 
-task("cleanDokkaHtmlDocs") {
-   delete(file(dokkaHtmlDocs))
-}
 
-tasks.clean.configure{
-    dependsOn("cleanDokkaHtmlDocs")
-}
-
-tasks.build.configure{
-    dependsOn("dokkaHtml")
-}
