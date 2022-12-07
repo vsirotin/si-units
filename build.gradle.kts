@@ -58,9 +58,7 @@ tasks.jar {
 
     exclude("eu/sirotin/generator/**")
     from("README.md")
-
 }
-
 
 tasks.test {
     useJUnitPlatform()
@@ -77,6 +75,7 @@ tasks.dokkaJavadoc.configure {
             reportUndocumented.set(true)
 
             moduleName.set("KotUniL - Kotlin Units Library")
+            dependsOn(tasks.javadoc)
         }
     }
     outputDirectory.set(file(docsDir))
@@ -85,7 +84,7 @@ tasks.dokkaJavadoc.configure {
 }
 
 //Temporary implementation up to clearing problem with cooperation dokkaHtml and javadocJar
-tasks.register<Jar>("javadocJarWorkaround") {
+tasks.register<Jar>("javadocJarPostprocessing") {
     group = "build"
     manifest {
         attributes(mapOf("Implementation-Title" to projectName,
@@ -98,7 +97,11 @@ tasks.register<Jar>("javadocJarWorkaround") {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     from(docsDir)
+}
 
+tasks.named("javadocJar").configure {
+    actions.clear()
+    dependsOn("javadocJarPostprocessing")
 }
 
 
