@@ -5,6 +5,7 @@ plugins {
     kotlin("jvm") version "1.7.10"
     id("java-library")
     id("maven-publish")
+    id("signing")
     id("org.jetbrains.dokka") version "1.7.20"
 }
 
@@ -29,12 +30,52 @@ repositories {
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("mavenJava") {
             groupId = project.group as String?
             artifactId = "kotunil"
             version = project.version as String?
 
             from(components["java"])
+            pom {
+                packaging = "jar"
+                name.set("KotUniL (Kotlin Units Library)")
+                url.set("https://github.com/vsirotin/si-units")
+                description.set("KotUniL (Kotlin Units Library)** a library for processing all units of SI base and derived units (see https://en.wikipedia.org/wiki/International_System_of_Units), currencies, etc.")
+
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+
+                scm {
+                    connection.set("scm:https://github.com/vsirotin/si-units.git")
+                    developerConnection.set("scm:git@github.com:vsirotin/si-units.git")
+                    url.set("https://github.com/vsirotin/si-units")
+                }
+
+                developers {
+                    developer {
+                        id.set("vsirotin")
+                        name.set("Dr. Viktor Sirotin")
+                        email.set("vxod@sirotin.eu")
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            val releasesUrl = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            val snapshotsUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+            url = if (version.toString().endsWith("SNAPSHOT")) snapshotsUrl else releasesUrl
+            credentials {
+                //username = project.properties["ossrhUsername"].toString()
+                //password = project.properties["ossrhPassword"].toString()
+                println("username = " + project.properties["ossrhUsername"].toString())
+                println("password = " + project.properties["ossrhPassword"].toString())
+            }
         }
     }
 }
@@ -103,6 +144,7 @@ tasks.named("javadocJar").configure {
     actions.clear()
     dependsOn("javadocJarPostprocessing")
 }
+
 
 
 

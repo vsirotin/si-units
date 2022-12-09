@@ -128,6 +128,15 @@ similar to the way they are presented in technical articles.
         assertEquals("3,142 m", y.show("%.3f"))
 
 ## 2. How to use
+KotUniL distributed as Kotlin-library via MavenCentral.
+
+        repositories {
+            mavenCentral()
+        }
+
+        dependencies {
+            implementation("eu.sirotin.kotunil:kotunil:1.0.1")
+        }
 
 You can use the library as a collection of open source code or 
 as a built library (si-unit*.jar).
