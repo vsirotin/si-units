@@ -7,10 +7,11 @@ plugins {
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.7.20"
+ //   id("io.codearte.nexus-staging") version "0.30.0"
 }
 
 group = "eu.sirotin.kotunil"
-version = "1.0.1-SNAPSHOT"
+version = "1.0.2-SNAPSHOT"
 
 val projectName = "kotunil"
 val docsDir = "build/docs"
@@ -40,7 +41,7 @@ publishing {
                 packaging = "jar"
                 name.set("KotUniL (Kotlin Units Library)")
                 url.set("https://github.com/vsirotin/si-units")
-                description.set("KotUniL (Kotlin Units Library)** a library for processing all units of SI base and derived units (see https://en.wikipedia.org/wiki/International_System_of_Units), currencies, etc.")
+                description.set("KotUniL (Kotlin Units Library) is a library for processing all units of SI base and derived units (see https://en.wikipedia.org/wiki/International_System_of_Units), currencies, etc.")
 
                 licenses {
                     license {
@@ -71,14 +72,19 @@ publishing {
             val snapshotsUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
             url = if (version.toString().endsWith("SNAPSHOT")) snapshotsUrl else releasesUrl
             credentials {
-                //username = project.properties["ossrhUsername"].toString()
-                //password = project.properties["ossrhPassword"].toString()
-                println("username = " + project.properties["ossrhUsername"].toString())
-                println("password = " + project.properties["ossrhPassword"].toString())
+                username = project.properties["ossrhUsername"].toString()
+                password = project.properties["ossrhPassword"].toString()
+                println("username = " + username)
+                println("password = " + password)
             }
         }
     }
 }
+
+signing {
+    sign(publishing.publications["mavenJava"])
+}
+
 
 java {
     withSourcesJar()
@@ -144,6 +150,7 @@ tasks.named("javadocJar").configure {
     actions.clear()
     dependsOn("javadocJarPostprocessing")
 }
+
 
 
 

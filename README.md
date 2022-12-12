@@ -129,6 +129,7 @@ similar to the way they are presented in technical articles.
 
 ## 2. How to use
 KotUniL distributed as Kotlin-library via MavenCentral.
+Dependency for **build.gradle.kts**:
 
         repositories {
             mavenCentral()
@@ -138,14 +139,19 @@ KotUniL distributed as Kotlin-library via MavenCentral.
             implementation("eu.sirotin.kotunil:kotunil:1.0.1")
         }
 
-You can use the library as a collection of open source code or 
-as a built library (si-unit*.jar).
+Dependency for Maven/pom:
+
+        <dependency>
+            <groupId>eu.sirotin.kotunil</groupId>
+            <artifactId>kotunil</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+
 If you want to use it as source code, 
 copy into your project all production files from 
 **src/main/kotlin/eu/sirotin/kotunil** except the package **generator**.
 
-At the moment I am working to place appropriate JAR library 
-in popular repositories. 
 
 ## 3. Deeper into details
 
