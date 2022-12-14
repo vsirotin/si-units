@@ -294,6 +294,7 @@ Please note, how you can present calculation result in percents:
 **α.`as %`** - ratio presented in percents.
 
 ε is some small value for tolerance by comparison of double numbers. 
+This is also one of the variables defined in KotUniL
 
 ### 3.4 SI-Prefixes 
 
