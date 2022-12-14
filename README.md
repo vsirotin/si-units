@@ -167,6 +167,8 @@ a value at unit variable or from a number (Double, Int etc.)
 if you write SI symbol after a dot after a number.
 
     1*s == 1.0.s
+    s == 1.s
+    s = 1.0.s
 
 In special cases you can also create unit using a class constructor.
 
@@ -190,7 +192,7 @@ of the unit by first capital letter.
 SI standard defines beside base unit also 22 derived units. 
 They are listed in the table below.
 Do not be surprised if you encounter in this table 
-and in SI-Unit library unusual for identifiers symbols like Ω. 
+and in KotUniL library unusual for identifiers symbols like Ω. 
 It is possible because according to Kotlin's specification most common unicode symbols can be used in Kotlin identifiers (see paragraph "1.2.4 Identifiers" in Kotlin Specification https://kotlinlang.org/spec/pdf/kotlin-spec.pdf).
 Derived units can be used just like base units.
 Both types can be used in a formula by multiplication or division.
@@ -222,7 +224,7 @@ Both types can be used in a formula by multiplication or division.
 
 Also, do not wound yourself when you see the **^** symbol. 
 Kotlin has no operator for power, but a function. 
-SI-Unit was extended with this infix function. 
+KotUniL was extended with this infix function. 
 Unfortunately, with it can not set proper priority for this function. 
 Although this looks like a "real" operator, 
 for keeping proper operation prioritization, 
@@ -255,7 +257,7 @@ The question, is stored in memory electricity enough for that?
         val savedElectricity = producedElectricity * 85.`%`
         val neededElectricity = 0.5.kW * 8.min
         val dif = savedElectricity - neededElectricity
-        assertTrue(dif < 0.W*h) //Comparison in SI-Units
+        assertTrue(dif < 0.W*h) //Comparison in KotUniL
         assertTrue(dif.value < 0) //Comparison dimensionless
 
 Note that for convenience we use here the symbol `%`. 
@@ -376,7 +378,7 @@ Reminder: density of watter is 1 kg/l
         assertEquals(250.0, n.value, ε)
 
 ### 3.6 Currencies
-SI-Unit library lets you use currencies in your calculations.
+KotUniL library lets you use currencies in your calculations.
 
 Some example:
 
