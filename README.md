@@ -230,16 +230,6 @@ Although this looks like a "real" operator,
 for keeping proper operation prioritization, 
 you have to put it in parentheses.
 
-Regarding this and similar extensions, see the statement: 
-"Kotlin supports escaping identifiers by enclosing 
-any sequence of characters into backtick (\`) characters, 
-allowing to use any name as an identifier." 
-(See paragraph 1.2.4 "Identifiers" in Kotlin specification 
-https://kotlinlang.org/spec/syntax-and-grammar.html#grammar-rule-Identifier). 
-The character backtick (`) (UTF-8 code U+0060) is not equal 
-to the apostrophe characters on the keyboard (UTF-8 code U+0027). 
-To use it, you better copy it directly from this example.
-
 
 #### Real-life example:
 
@@ -262,6 +252,16 @@ The question, is stored in memory electricity enough for that?
 
 Note that for convenience we use here the symbol `%`. 
 This is also extension of Kotlin in our library.
+
+Regarding this and similar extensions, see the statement:
+"Kotlin supports escaping identifiers by enclosing
+any sequence of characters into backtick (\`) characters,
+allowing to use any name as an identifier."
+(See paragraph 1.2.4 "Identifiers" in Kotlin specification
+https://kotlinlang.org/spec/syntax-and-grammar.html#grammar-rule-Identifier).
+The character backtick (`) (UTF-8 code U+0060) is not equal
+to the apostrophe characters on the keyboard (UTF-8 code U+0027).
+To use it, you better copy it directly from this example.
 
 Most derived units can be derived from Based Units 
 or from other Derived Units in different ways.  
