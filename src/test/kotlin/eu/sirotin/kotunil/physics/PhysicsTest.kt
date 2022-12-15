@@ -1,5 +1,6 @@
 package eu.sirotin.kotunil.physics
 
+import eu.sirotin.kotunil.EPS
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -153,6 +154,15 @@ internal class PhysicsTest {
         assertEquals("m", v1.description.unitSymbol)
         assertEquals("2.42 m", v1.toString())
         assertEquals("eu.sirotin.kotunil.base.Metre", v1.javaClass.name)
+
+    }
+
+    @Test
+    fun testMeterToKilometer() {
+        val d = 50.m
+        val x = d.km
+        assertEquals(0.05, x, EPS)
+
 
     }
 
