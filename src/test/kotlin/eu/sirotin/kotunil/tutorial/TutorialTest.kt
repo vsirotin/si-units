@@ -281,18 +281,18 @@ internal class TutorialTest {
 
     @Test
     fun testNonSiUnits() {
-        //A city park has area 2.3 hectares. During a rain 1 mm of water had fallen from the sky.
+        //A city park has area 2.35 hectares. During a rain 1 mm of water had fallen from the sky.
         //If there was no rain, the park should be watered with water from car cisterns.
         // A car cistern can carry 4 tons of water.
         //How many cisterns are needed to achieve the same effect as in case of rain?
         //Reminder: density of watter is 1 kg/l
 
-        val s = 1.ha
-        val ω = s*100.mm //water volume
+        val s = 2.35.ha
+        val ω = s*1.mm //water volume
         val ρ = kg/ l //density of watter is 1 kg/l
         val τ = ω * ρ //common water weight of rain
         val n = τ/4.t
-        assertEquals(250.0, n.value, ε)
+        assertEquals(5.875, n.value, ε)
 
     }
 
