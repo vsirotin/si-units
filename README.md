@@ -394,3 +394,16 @@ How much does he pay for his tiles?
         val cost = s*prise
         assertEquals("858,00 EUR", cost.show("%.2f"))
         assertEquals("EUR", cost.unitSymbols())
+
+### 3.7 Things
+Sometimes you need an abstract unit like "thing". For example:
+
+Every good guy has 30 different things per liter in his pocket.
+Jan is a good guy and his pocket is 0.3 liters big.
+How many things can his mom find in Jan's pocket? 
+
+        val p = 30.`#`/l
+        val n = 0.3.l * p
+
+        assertEquals("9 #", n.show("%.0f"))
+        assertEquals("#", n.unitSymbols())       
