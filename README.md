@@ -137,15 +137,15 @@ Dependency for **build.gradle.kts**:
         }
 
         dependencies {
-            implementation("eu.sirotin.kotunil:kotunil:1.0.1")
+            implementation("eu.sirotin.kotunil:all:1.1.1")
         }
 
 Dependency for Maven/pom:
 
         <dependency>
             <groupId>eu.sirotin.kotunil</groupId>
-            <artifactId>kotunil</artifactId>
-            <version>1.0.1</version>
+            <artifactId>all</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
 

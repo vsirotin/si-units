@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil"
-version = "1.0.2-SNAPSHOT"
+version = "1.1.1"
 
 val projectName = "kotunil"
 val docsDir = "build/docs"
@@ -33,7 +33,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             groupId = project.group as String?
-            artifactId = "kotunil"
+            artifactId = "all"
             version = project.version as String?
 
             from(components["java"])
