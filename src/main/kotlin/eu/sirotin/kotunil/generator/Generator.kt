@@ -38,4 +38,5 @@ private fun generateSiUnitsClasses() {
 
 private fun generateTestClasses() {
     generateTestsSiUnitsBaseClasses()
+    generateTestsSiUnitsDerivedClasses()
 }

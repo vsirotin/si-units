@@ -110,10 +110,12 @@ import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.math.pow
 
+private val unit =  $formula
+
 /**
 * System International Unit for $quantityName.
 */
-val $unitSymbol = $formula
+val $unitSymbol = unit
 
 /**
 * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -122,7 +124,7 @@ val Number.$unitSymbol : Expression
    /**
    * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
    */
-    get() = this.toDouble() * ($formula)
+    get() = this.toDouble() * unit
 
     """
 }
@@ -152,7 +154,7 @@ val Number.${prefix.symbol}$unitSymbol : Expression
     /**
     * Returns ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * ($formula)
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
 
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
@@ -161,7 +163,7 @@ val Number.${prefix.name}$name : Expression
     /**
     * Returns ${prefix.name}$name, 10^${prefix.degree} of of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * ($formula)
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
 
 
 @JvmField()  

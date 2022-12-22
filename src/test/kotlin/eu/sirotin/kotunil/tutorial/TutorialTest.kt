@@ -250,8 +250,8 @@ internal class TutorialTest {
         val savedElectricity = producedElectricity * 85.`%`
         val neededElectricity = 0.5.kW * 8.min
         val dif = savedElectricity - neededElectricity
-        assertTrue(dif < 0.W* h) //Comparison in SI-Units
-        assertTrue(dif.value < 0) //Comparison dimensionless
+        assertTrue(dif > 0.W* h) //Comparison in SI-Units
+        assertTrue(dif.value > 0) //Comparison dimensionless
     }
 
     @Test

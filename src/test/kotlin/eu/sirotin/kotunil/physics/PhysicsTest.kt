@@ -8,6 +8,10 @@ import kotlin.test.assertFailsWith
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.derived.*
+import eu.sirotin.kotunil.specialunits.`#`
+import eu.sirotin.kotunil.specialunits.Thing
+import eu.sirotin.kotunil.specialunits.g
+import eu.sirotin.kotunil.specialunits.l
 import eu.sirotin.kotunil.specialunits.m2
 import eu.sirotin.kotunil.specialunits.m3
 
@@ -162,8 +166,46 @@ internal class PhysicsTest {
         val d = 50.m
         val x = d.km
         assertEquals(0.05, x, EPS)
+    }
 
+    @Test
+    fun testGramToKilogram() {
+        assertEquals(100.g, 0.1.kg)
+        assertEquals(100*g, 0.1.kg)
+    }
 
+    @Test
+    fun testThings() {
+        assertEquals(100.`#`, 100 * `#`)
+        assertEquals(101.1.`#`, Thing(101.1))
+    }
+
+    @Test
+    fun testPrefixes1() {
+        assertEquals(100.cm, 1.m)
+        val d = 1.dm
+        val d3= d.pow(3)
+        assertEquals(d3.value, l.value, EPS)
+    }
+
+    @Test
+    fun testPrefixes2() {
+        assertEquals(10.mm, 1.cm)
+        assertEquals(1000.mm.value, 1.m.value, EPS)
+    }
+
+    @Test
+    fun testPrefixes3() {
+        assertEquals(1.kA, 1000.A)
+        assertEquals(1000.mA.value, 1.A.value, EPS)
+    }
+
+    @Test
+    fun testPrefixes4() {
+        assertEquals(1.kW, 1000.W)
+        assertEquals(10.kW, 10000.W)
+        assertEquals(1.kW, 1000*W)
+        assertEquals(1000.mW.value, 1.W.value, EPS)
     }
 
 }

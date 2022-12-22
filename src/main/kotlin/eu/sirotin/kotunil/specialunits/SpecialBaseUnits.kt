@@ -32,7 +32,7 @@ val Number.g: Kilogram
     /**
      * Returns a gram object
      */
-    get()  = 0.001.kg
+    get()  = Kilogram(this.toDouble()*0.001)
 
 /**
  * A gram object
