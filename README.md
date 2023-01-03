@@ -148,7 +148,6 @@ Dependency for Maven/pom:
             <version>1.1.1</version>
         </dependency>
 
-
 If you want to use it as source code, 
 copy into your project all production files from 
 **src/main/kotlin/eu/sirotin/kotunil** except the package **generator**.
