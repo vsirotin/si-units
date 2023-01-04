@@ -14,6 +14,8 @@ import eu.sirotin.kotunil.specialunits.g
 import eu.sirotin.kotunil.specialunits.l
 import eu.sirotin.kotunil.specialunits.m2
 import eu.sirotin.kotunil.specialunits.m3
+import kotlin.math.*
+
 
 private const val EXPECTED_CLASS = "eu.sirotin.kotunil.core.Expression"
 
@@ -206,6 +208,21 @@ internal class PhysicsTest {
         assertEquals(10.kW, 10000.W)
         assertEquals(1.kW, 1000*W)
         assertEquals(1000.mW.value, 1.W.value, EPS)
+    }
+
+    inline fun <T: Expression> callSafe(x: T, f: (Double)->Double): T{
+        val a = x.value
+        val b = f(a)
+        val c = Expression(b, x.dimensions)
+        return c as T
+    }
+
+    @Test
+    fun testFunctions() {
+        val w = (-10).kW
+        val w1 = callSafe(w, ::abs)
+        assertEquals(w1.value, -w.value, EPS)
+        assertEquals("kgm2/s3", w1.unitSymbols())
     }
 
 }
