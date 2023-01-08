@@ -93,7 +93,7 @@ private fun generateHeadPart(
     return """
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val description$className = UnitSpecification(
@@ -107,7 +107,7 @@ private val description$className = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class $className(value: Double) : TermUnit(value, description = description$className)
+class $className(value: Double) : Expression(value, description = description$className)
     /**
      * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
      */

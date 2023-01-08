@@ -27,7 +27,7 @@ package eu.sirotin.kotunil.core
  * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' ans not 'sm'.
  * and creation function [creator].
  */
-data class UnitSpecification<T : TermUnit>(val unitSymbol: String,
+data class UnitSpecification<T : Expression>(val unitSymbol: String,
                                            val categorySymbol: String,
                                            val presentationPriority: Int = 0,
                                            val creator: (v : Double) -> T) {

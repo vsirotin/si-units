@@ -22,7 +22,7 @@
 @file:Suppress("NonAsciiCharacters")
 package eu.sirotin.kotunil.specialunits
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionThing = UnitSpecification(
@@ -36,7 +36,7 @@ private val descriptionThing = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Thing(value: Double) : TermUnit(value, description = descriptionThing)
+class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**
  * Creates Thing-Object for current number value. Thing represent some object.
  */

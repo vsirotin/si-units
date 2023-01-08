@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionSwedishKrona = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionSwedishKrona = UnitSpecification(
 * Class for hold of Swedish krona
 * @constructor Creates a class for hold of Swedish krona with given [value]
 */
-class SwedishKrona(value : Double = 1.0) : TermUnit(value, description = descriptionSwedishKrona)
+class SwedishKrona(value : Double = 1.0) : Expression(value, description = descriptionSwedishKrona)
     
     /**
     * Creates object for hold of Swedish krona

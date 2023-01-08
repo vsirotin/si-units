@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionKelvin = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionKelvin = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Kelvin(value: Double) : TermUnit(value, description = descriptionKelvin)
+class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
     /**
      * Creates Kelvin-Object for current number value. Kelvin is a System International Unit for thermodynamic temperature.
      */

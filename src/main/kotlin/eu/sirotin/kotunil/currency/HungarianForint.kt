@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionHungarianForint = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionHungarianForint = UnitSpecification(
 * Class for hold of Hungarian forint
 * @constructor Creates a class for hold of Hungarian forint with given [value]
 */
-class HungarianForint(value : Double = 1.0) : TermUnit(value, description = descriptionHungarianForint)
+class HungarianForint(value : Double = 1.0) : Expression(value, description = descriptionHungarianForint)
     
     /**
     * Creates object for hold of Hungarian forint

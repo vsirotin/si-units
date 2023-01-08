@@ -23,54 +23,26 @@
 package eu.sirotin.kotunil.core
 
 import java.lang.IllegalArgumentException
-import kotlin.math.abs
 import kotlin.math.pow
 
 /**
- * Prefix by error messages by converting of multi-dimensional expressions.
+ * Prefix for mostly run-time errors.
  */
-const val ERR_CONVERSION_PREFIX = "Can't convert a multi-dimensional expression with dimensions "
+const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
 
 /**
- * Suffix by error messages by converting expressions.
+ * Tolerance by double comparison
  */
-const val ERR_CONVERSION_SUFFIX = " in simply unit"
-
-/**
- * Prefix by error messages by converting expressions to unit.
- */
-const val ERR_CONVERSION_DIMENSIONLESS = "Can't convert dimensionless expression in some unit"
+const val ε = 1.0E-12
 
 /**
  * Implements expression of unit with given [value] and [dimensions]
  * @constructor Creates expression of unit with given [value] and [dimensions]
  */
-class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expression>, UnitPresentation {
+open class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expression>, UnitPresentation {
 
-    companion object Factory {
-        /**
-         * Creates expression from term [siu].
-         */
-        fun createFromSiUnit(siu: TermUnit): Expression {
-            return Expression(siu.value, Dimensions(setOf(Factor(siu.description))))
-        }
-
-    }
-
-    /**
-     * Converts elementary expression tpo term of given type.
-     * @exception IllegalStateException if conversion is not possible.
-     */
-    fun <T: TermUnit> toTermUnit(): T {
-        if(dimensions.factors.isEmpty())
-            throw IllegalStateException(ERR_CONVERSION_DIMENSIONLESS)
-
-        if((dimensions.factors.size != 1) || (abs(dimensions.factors.first().powerValue - 1.0) > ε))
-                throw IllegalStateException("$ERR_CONVERSION_PREFIX${this.categorySymbols()}$ERR_CONVERSION_SUFFIX")
-        val p = dimensions.factors.first()
-        @Suppress("UNCHECKED_CAST")
-        return p.specification.creator(value) as T
-    }
+    constructor(value: Double = 1.0, description: UnitSpecification<*>)
+            : this(value, Dimensions(setOf(Factor(description))))
 
     /**
      * Compares expressions
@@ -109,9 +81,9 @@ class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expr
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
-        if (javaClass != other?.javaClass) return false
+   //     if (javaClass != other?.javaClass) return false
 
-        other as Expression
+        try {other as Expression} catch(e: Throwable){return false}
 
         if (value != other.value) return false
         if (dimensions != other.dimensions) return false
@@ -144,58 +116,16 @@ infix fun Number.`^`(degree: Number) = this.toDouble().pow(degree.toDouble())
 infix fun Expression.`^`(degree: Number) = this.pow(degree)
 
 /**
- * Allows to power a term to given [degree]
- */
-fun TermUnit.pow(degree: Number): Expression = Expression.createFromSiUnit(this).pow(degree)
-
-/**
- * Allows to power a term to given [degree]
- */
-infix fun TermUnit.`^`(degree: Number) = this.pow(degree)
-
-/**
- * Allows to divide a number on an expression.
- */
-operator fun Number.div(u: TermUnit): Expression =
-    Expression(this.toDouble()/u.value, Dimensions(setOf(Factor(u.description, -1.0))))
-
-/**
- * Allows to add expression and term.
- */
-operator fun Expression.plus(u: TermUnit): Expression = this + Expression.createFromSiUnit(u)
-
-/**
  * Allows to add expressions.
  */
 operator fun Expression.plus(other: Expression): Expression =
     Expression(this.value + other.value, this.dimensions + other.dimensions)
 
 /**
- * Allows to add term and expression.
- */
-operator fun TermUnit.plus(p: Expression): Expression = p + this
-
-/**
  * Allows to multiply expressions.
  */
 operator fun Expression.times(other: Expression): Expression =
     Expression(this.value * other.value, this.dimensions * other.dimensions)
-
-/**
- * Allows to multiply expression and term.
- */
-operator fun Expression.times(u: TermUnit): Expression =
-   this * Expression.createFromSiUnit(u)
-
-/**
- * Allows to multiply terms.
- */
-operator fun TermUnit.times(u: TermUnit): Expression = this * Expression.createFromSiUnit(u)
-
-/**
- * Allows to multiply term and expression.
- */
-operator fun TermUnit.times(p: Expression): Expression = p * this
 
 /**
  * Allows to multiply expression and number.
@@ -214,16 +144,6 @@ operator fun Number.times(p: Expression): Expression = p * this
 operator fun Expression.minus(p: Expression): Expression = this + (-1 * p)
 
 /**
- * Allows to subtract a term from an expressions.
- */
-operator fun Expression.minus(u: TermUnit): Expression = this + (-1 * Expression.createFromSiUnit(u))
-
-/**
- * Allows to subtract an expression from term.
- */
-operator fun TermUnit.minus(p: Expression): Expression = p + this
-
-/**
  * Allows to divide expressions.
  */
 operator fun Expression.div(p: Expression): Expression = this * (p.pow(-1))
@@ -238,24 +158,6 @@ operator fun Number.div(p: Expression): Expression = this.toDouble() * (p.pow(-1
  */
 operator fun Expression.div(x: Number): Expression = 1 / (x.toDouble() / this)
 
-/**
- * Allows to divide expression to term.
- */
-operator fun Expression.div(u: TermUnit): Expression = this / Expression.createFromSiUnit(u)
-
-/**
- * Allows to divide term to expression.
- */
-operator fun TermUnit.div(p: Expression): Expression = 1 / (p / Expression.createFromSiUnit(this))
-
-/**
- * Allows to divide term to term.
- */
-operator fun TermUnit.div(u: TermUnit): Expression = this / Expression.createFromSiUnit(u)
-
-//Not clear why compilation error occurs
-//@Suppress("DANGEROUS_CHARACTERS")
-//operator fun Expression.`%`(x: Number): Expression = this / 100.0
 
 
 

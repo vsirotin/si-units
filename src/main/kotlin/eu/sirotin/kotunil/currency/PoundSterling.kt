@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionPoundSterling = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionPoundSterling = UnitSpecification(
 * Class for hold of Sterling
 * @constructor Creates a class for hold of Sterling with given [value]
 */
-class PoundSterling(value : Double = 1.0) : TermUnit(value, description = descriptionPoundSterling)
+class PoundSterling(value : Double = 1.0) : Expression(value, description = descriptionPoundSterling)
     
     /**
     * Creates object for hold of Sterling

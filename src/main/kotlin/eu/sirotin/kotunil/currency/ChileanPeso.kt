@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionChileanPeso = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionChileanPeso = UnitSpecification(
 * Class for hold of Chilean peso
 * @constructor Creates a class for hold of Chilean peso with given [value]
 */
-class ChileanPeso(value : Double = 1.0) : TermUnit(value, description = descriptionChileanPeso)
+class ChileanPeso(value : Double = 1.0) : Expression(value, description = descriptionChileanPeso)
     
     /**
     * Creates object for hold of Chilean peso

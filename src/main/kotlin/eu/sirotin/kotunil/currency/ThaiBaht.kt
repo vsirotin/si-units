@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionThaiBaht = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionThaiBaht = UnitSpecification(
 * Class for hold of Thai baht
 * @constructor Creates a class for hold of Thai baht with given [value]
 */
-class ThaiBaht(value : Double = 1.0) : TermUnit(value, description = descriptionThaiBaht)
+class ThaiBaht(value : Double = 1.0) : Expression(value, description = descriptionThaiBaht)
     
     /**
     * Creates object for hold of Thai baht

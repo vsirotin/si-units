@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionMole = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionMole = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Mole(value: Double) : TermUnit(value, description = descriptionMole)
+class Mole(value: Double) : Expression(value, description = descriptionMole)
     /**
      * Creates Mole-Object for current number value. Mole is a System International Unit for amount of substance.
      */

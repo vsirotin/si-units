@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionUAEDirham = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionUAEDirham = UnitSpecification(
 * Class for hold of UAE dirham
 * @constructor Creates a class for hold of UAE dirham with given [value]
 */
-class UAEDirham(value : Double = 1.0) : TermUnit(value, description = descriptionUAEDirham)
+class UAEDirham(value : Double = 1.0) : Expression(value, description = descriptionUAEDirham)
     
     /**
     * Creates object for hold of UAE dirham

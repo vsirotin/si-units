@@ -7,11 +7,10 @@ plugins {
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.7.20"
- //   id("io.codearte.nexus-staging") version "0.30.0"
 }
 
 group = "eu.sirotin.kotunil"
-version = "1.1.1"
+version = "2.0.0"
 
 val projectName = "kotunil"
 val docsDir = "build/docs"

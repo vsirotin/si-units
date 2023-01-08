@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionSouthKoreanWon = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionSouthKoreanWon = UnitSpecification(
 * Class for hold of  South Korean won
 * @constructor Creates a class for hold of  South Korean won with given [value]
 */
-class SouthKoreanWon(value : Double = 1.0) : TermUnit(value, description = descriptionSouthKoreanWon)
+class SouthKoreanWon(value : Double = 1.0) : Expression(value, description = descriptionSouthKoreanWon)
     
     /**
     * Creates object for hold of  South Korean won

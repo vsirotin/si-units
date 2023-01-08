@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionUnitedStatesDollar = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionUnitedStatesDollar = UnitSpecification(
 * Class for hold of United States dollar
 * @constructor Creates a class for hold of United States dollar with given [value]
 */
-class UnitedStatesDollar(value : Double = 1.0) : TermUnit(value, description = descriptionUnitedStatesDollar)
+class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description = descriptionUnitedStatesDollar)
     
     /**
     * Creates object for hold of United States dollar

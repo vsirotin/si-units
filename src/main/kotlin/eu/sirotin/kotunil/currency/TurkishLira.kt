@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionTurkishLira = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionTurkishLira = UnitSpecification(
 * Class for hold of Turkish lira
 * @constructor Creates a class for hold of Turkish lira with given [value]
 */
-class TurkishLira(value : Double = 1.0) : TermUnit(value, description = descriptionTurkishLira)
+class TurkishLira(value : Double = 1.0) : Expression(value, description = descriptionTurkishLira)
     
     /**
     * Creates object for hold of Turkish lira

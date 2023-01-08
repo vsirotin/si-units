@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionMalaysianRinggit = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionMalaysianRinggit = UnitSpecification(
 * Class for hold of Malaysian ringgit
 * @constructor Creates a class for hold of Malaysian ringgit with given [value]
 */
-class MalaysianRinggit(value : Double = 1.0) : TermUnit(value, description = descriptionMalaysianRinggit)
+class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = descriptionMalaysianRinggit)
     
     /**
     * Creates object for hold of Malaysian ringgit

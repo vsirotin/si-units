@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionCzechKoruna = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionCzechKoruna = UnitSpecification(
 * Class for hold of  Czech koruna
 * @constructor Creates a class for hold of  Czech koruna with given [value]
 */
-class CzechKoruna(value : Double = 1.0) : TermUnit(value, description = descriptionCzechKoruna)
+class CzechKoruna(value : Double = 1.0) : Expression(value, description = descriptionCzechKoruna)
     
     /**
     * Creates object for hold of  Czech koruna

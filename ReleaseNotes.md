@@ -1,5 +1,11 @@
 # KotUniL Release Notes
 
+## Version 2.0.0
+
+1. Re-Design internal classes. 
+Re-Design of Library to avoid difference between creation elementary types and complex types. 
+For users it should be irrelevant. (Enhancement, #15) 
+
 ## Version 1.1.1
 
 1. BugFix: False calculation of some derived units #5: False calculation of some derived units, e.g. : assertEquals(1.kW, 1000.W)

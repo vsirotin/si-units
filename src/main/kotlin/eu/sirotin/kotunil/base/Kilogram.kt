@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionKilogram = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionKilogram = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Kilogram(value: Double) : TermUnit(value, description = descriptionKilogram)
+class Kilogram(value: Double) : Expression(value, description = descriptionKilogram)
     /**
      * Creates Kilogram-Object for current number value. Kilogram is a System International Unit for mass.
      */

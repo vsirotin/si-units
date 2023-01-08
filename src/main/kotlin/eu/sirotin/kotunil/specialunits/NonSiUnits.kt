@@ -25,7 +25,6 @@
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
-import eu.sirotin.kotunil.core.TermUnit
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
@@ -228,15 +227,15 @@ val Expression.`as %` : Double
      */
     get()  = this.value*100.0
 
-@Suppress("DANGEROUS_CHARACTERS")
-/**
- * get percentage as double
- */
-val TermUnit.`as %` : Double
-    /**
-     * get percentage as double
-     */
-    get()  = this.value*100.0
+//@Suppress("DANGEROUS_CHARACTERS")
+///**
+// * get percentage as double
+// */
+//val Expression.`as %` : Double
+//    /**
+//     * get percentage as double
+//     */
+//    get()  = this.value*100.0
 
 
 

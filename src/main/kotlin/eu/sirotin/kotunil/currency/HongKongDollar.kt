@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionHongKongDollar = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionHongKongDollar = UnitSpecification(
 * Class for hold of Hong Kong dollar
 * @constructor Creates a class for hold of Hong Kong dollar with given [value]
 */
-class HongKongDollar(value : Double = 1.0) : TermUnit(value, description = descriptionHongKongDollar)
+class HongKongDollar(value : Double = 1.0) : Expression(value, description = descriptionHongKongDollar)
     
     /**
     * Creates object for hold of Hong Kong dollar

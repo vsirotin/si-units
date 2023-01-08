@@ -93,10 +93,6 @@ internal class CoreTest {
 
     }
 
-    private fun check(obj: TermUnit, value: Double, units: String) {
-        assertEquals(value, obj.value, ε)
-        assertEquals(units, obj.unitSymbols())
-    }
 
     private fun check(obj: Expression, value: Double, units: String) {
         assertEquals(value, obj.value, ε)
@@ -211,7 +207,7 @@ internal class CoreTest {
         val exception = assertFailsWith<IllegalArgumentException>(
             block = { a * a * a * b /(4.a + 5.b) + 2.b }
         )
-        val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'this' is 'A but 'other' is 'B'"
+        val expectedMessage = "$COMPATIBILITY_ERR_PREFIX 'a' and 'b'"
         assertEquals(expectedMessage, exception.message!!)
 
     }
@@ -219,21 +215,18 @@ internal class CoreTest {
     @Test
     fun testErrors3() {
         //Complex errors will be found in runtime:
-        val exception = assertFailsWith<IllegalStateException>(
+        assertFailsWith<ClassCastException>(
             block = { (20.a* a * a *3.b/(4.a + 5.a)).aa}
         )
-        val expectedMessage = ERR_CONVERSION_PREFIX + "A2B" + ERR_CONVERSION_SUFFIX
-        assertEquals(expectedMessage, exception.message!!)
 
     }
 
     @Test
     fun testErrors4() {
         //Complex errors will be found in runtime:
-        val exception = assertFailsWith<IllegalStateException>(
+        assertFailsWith<ClassCastException>(
             block = { (20.a* a * a /(a * a * a)).aa}
         )
-        assertEquals(ERR_CONVERSION_DIMENSIONLESS, exception.message!!)
 
     }
 

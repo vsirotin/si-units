@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionSecond = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionSecond = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Second(value: Double) : TermUnit(value, description = descriptionSecond)
+class Second(value: Double) : Expression(value, description = descriptionSecond)
     /**
      * Creates Second-Object for current number value. Second is a System International Unit for time.
      */

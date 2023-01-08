@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionRenminbi = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionRenminbi = UnitSpecification(
 * Class for hold of Renminbi
 * @constructor Creates a class for hold of Renminbi with given [value]
 */
-class Renminbi(value : Double = 1.0) : TermUnit(value, description = descriptionRenminbi)
+class Renminbi(value : Double = 1.0) : Expression(value, description = descriptionRenminbi)
     
     /**
     * Creates object for hold of Renminbi

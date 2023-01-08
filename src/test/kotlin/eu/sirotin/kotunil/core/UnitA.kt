@@ -29,7 +29,7 @@ private val descriptionUnitA = UnitSpecification(
 ) { v: Double -> UnitA(v) }
 
 
-class UnitA(value: Double) : TermUnit(value, description = descriptionUnitA)
+class UnitA(value: Double) : Expression(value, description = descriptionUnitA)
 val Number.a : UnitA
     get() = UnitA(this.toDouble())
 
@@ -39,4 +39,4 @@ val UnitA.aa : Double
     get() = this.value * 1000.0
 
 val Expression.aa : Double
-    get() = (this.toTermUnit() as UnitA).aa
+    get() = (this as UnitA).aa

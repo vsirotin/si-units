@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionPhilippinePeso = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionPhilippinePeso = UnitSpecification(
 * Class for hold of Philippine peso
 * @constructor Creates a class for hold of Philippine peso with given [value]
 */
-class PhilippinePeso(value : Double = 1.0) : TermUnit(value, description = descriptionPhilippinePeso)
+class PhilippinePeso(value : Double = 1.0) : Expression(value, description = descriptionPhilippinePeso)
     
     /**
     * Creates object for hold of Philippine peso

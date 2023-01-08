@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionMetre = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionMetre = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Metre(value: Double) : TermUnit(value, description = descriptionMetre)
+class Metre(value: Double) : Expression(value, description = descriptionMetre)
     /**
      * Creates Metre-Object for current number value. Metre is a System International Unit for length.
      */

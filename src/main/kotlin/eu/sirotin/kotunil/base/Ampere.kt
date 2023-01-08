@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionAmpere = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionAmpere = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Ampere(value: Double) : TermUnit(value, description = descriptionAmpere)
+class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * Creates Ampere-Object for current number value. Ampere is a System International Unit for electric current.
      */

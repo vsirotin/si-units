@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionIsraeliNewShekel = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionIsraeliNewShekel = UnitSpecification(
 * Class for hold of Israeli new shekel
 * @constructor Creates a class for hold of Israeli new shekel with given [value]
 */
-class IsraeliNewShekel(value : Double = 1.0) : TermUnit(value, description = descriptionIsraeliNewShekel)
+class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = descriptionIsraeliNewShekel)
     
     /**
     * Creates object for hold of Israeli new shekel

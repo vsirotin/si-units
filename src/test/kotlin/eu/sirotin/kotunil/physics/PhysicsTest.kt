@@ -157,7 +157,7 @@ internal class PhysicsTest {
         val v1 = 2.42.m
 
         assertEquals(2.42, v1.value)
-        assertEquals("m", v1.description.unitSymbol)
+        assertEquals("m", v1.unitSymbols())
         assertEquals("2.42 m", v1.toString())
         assertEquals("eu.sirotin.kotunil.base.Metre", v1.javaClass.name)
 
@@ -208,21 +208,6 @@ internal class PhysicsTest {
         assertEquals(10.kW, 10000.W)
         assertEquals(1.kW, 1000*W)
         assertEquals(1000.mW.value, 1.W.value, EPS)
-    }
-
-    inline fun <T: Expression> callSafe(x: T, f: (Double)->Double): T{
-        val a = x.value
-        val b = f(a)
-        val c = Expression(b, x.dimensions)
-        return c as T
-    }
-
-    @Test
-    fun testFunctions() {
-        val w = (-10).kW
-        val w1 = callSafe(w, ::abs)
-        assertEquals(w1.value, -w.value, EPS)
-        assertEquals("kgm2/s3", w1.unitSymbols())
     }
 
 }

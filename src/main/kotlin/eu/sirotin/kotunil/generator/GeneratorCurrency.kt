@@ -113,7 +113,7 @@ private fun generateCurrencyClass(currencyDescription: CurrencyDescription): Str
     return """
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val description$name = UnitSpecification(
@@ -125,7 +125,7 @@ private val description$name = UnitSpecification(
 * Class for hold of $desc
 * @constructor Creates a class for hold of $desc with given [value]
 */
-class $name(value : Double = 1.0) : TermUnit(value, description = description$name)
+class $name(value : Double = 1.0) : Expression(value, description = description$name)
     
     /**
     * Creates object for hold of $desc

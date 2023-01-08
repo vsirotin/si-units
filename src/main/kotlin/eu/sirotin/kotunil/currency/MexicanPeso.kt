@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionMexicanPeso = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionMexicanPeso = UnitSpecification(
 * Class for hold of Mexican peso
 * @constructor Creates a class for hold of Mexican peso with given [value]
 */
-class MexicanPeso(value : Double = 1.0) : TermUnit(value, description = descriptionMexicanPeso)
+class MexicanPeso(value : Double = 1.0) : Expression(value, description = descriptionMexicanPeso)
     
     /**
     * Creates object for hold of Mexican peso

@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.currency
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionDanishKrone = UnitSpecification(
@@ -13,7 +13,7 @@ private val descriptionDanishKrone = UnitSpecification(
 * Class for hold of Danish krone
 * @constructor Creates a class for hold of Danish krone with given [value]
 */
-class DanishKrone(value : Double = 1.0) : TermUnit(value, description = descriptionDanishKrone)
+class DanishKrone(value : Double = 1.0) : Expression(value, description = descriptionDanishKrone)
     
     /**
     * Creates object for hold of Danish krone

@@ -1,7 +1,7 @@
 
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.TermUnit
+import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.math.pow
 private val descriptionCandela = UnitSpecification(
@@ -15,7 +15,7 @@ private val descriptionCandela = UnitSpecification(
  *
  * @constructor Creates an unit with given [value].
  */
-class Candela(value: Double) : TermUnit(value, description = descriptionCandela)
+class Candela(value: Double) : Expression(value, description = descriptionCandela)
     /**
      * Creates Candela-Object for current number value. Candela is a System International Unit for luminous intensity.
      */
