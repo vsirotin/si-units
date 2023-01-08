@@ -28,6 +28,17 @@ repositories {
     mavenCentral()
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    testImplementation(kotlin("test"))
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.7.20")
+}
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
@@ -85,16 +96,6 @@ signing {
 }
 
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
-dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-    testImplementation(kotlin("test"))
-    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.7.20")
-}
 
 tasks.jar {
     manifest {
