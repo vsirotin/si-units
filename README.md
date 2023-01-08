@@ -129,6 +129,8 @@ similar to the way they are presented in technical articles.
         assertEquals("3,142 m", y.show("%.3f"))
 
 ## 2. How to use
+
+### 2.1 Production mode
 KotUniL distributed as Kotlin-library via MavenCentral.
 Dependency for **build.gradle.kts**:
 
@@ -137,7 +139,7 @@ Dependency for **build.gradle.kts**:
         }
 
         dependencies {
-            implementation("eu.sirotin.kotunil:all:1.1.1")
+            implementation("eu.sirotin.kotunil:all:2.0.1")
         }
 
 Dependency for Maven/pom:
@@ -145,9 +147,27 @@ Dependency for Maven/pom:
         <dependency>
             <groupId>eu.sirotin.kotunil</groupId>
             <artifactId>all</artifactId>
-            <version>1.1.1</version>
+            <version>2.0.1</version>
         </dependency>
 
+### 2.2 Development mode
+
+At the moment KotUniL is developing rapidly. 
+To enable you to try the latest features of KotUniL use the following configuration at KTS:
+
+        ...
+             implementation("eu.sirotin.kotunil:all:+")
+        ...
+
+and by Maven:
+
+        ...
+            <version>LATEST</version>
+        ...
+
+
+
+### 2.3 Using only source code
 If you want to use it as source code, 
 copy into your project all production files from 
 **src/main/kotlin/eu/sirotin/kotunil** except the package **generator**.
