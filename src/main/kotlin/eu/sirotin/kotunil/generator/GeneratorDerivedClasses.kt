@@ -161,12 +161,12 @@ val Number.${prefix.symbol}$unitSymbol : Expression
 */ 
 val Number.${prefix.name}$name : Expression
     /**
-    * Returns ${prefix.name}$name, 10^${prefix.degree} of of $name, derived SI-Unit for measurement of $quantityName
+    * Returns ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
     get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */        

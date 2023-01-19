@@ -39,12 +39,12 @@ val Number.QPa : Expression
 */ 
 val Number.quettapascal : Expression
     /**
-    * Returns quettapascal, 10^30 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns quettapascal, 10^30 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QPa, 10^30 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -71,12 +71,12 @@ val Number.RPa : Expression
 */ 
 val Number.ronnapascal : Expression
     /**
-    * Returns ronnapascal, 10^27 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns ronnapascal, 10^27 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RPa, 10^27 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -103,12 +103,12 @@ val Number.YPa : Expression
 */ 
 val Number.yottapascal : Expression
     /**
-    * Returns yottapascal, 10^24 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns yottapascal, 10^24 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YPa, 10^24 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -135,12 +135,12 @@ val Number.ZPa : Expression
 */ 
 val Number.zettapascal : Expression
     /**
-    * Returns zettapascal, 10^21 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns zettapascal, 10^21 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZPa, 10^21 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -167,12 +167,12 @@ val Number.EPa : Expression
 */ 
 val Number.exapascal : Expression
     /**
-    * Returns exapascal, 10^18 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns exapascal, 10^18 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * EPa, 10^18 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -199,12 +199,12 @@ val Number.PPa : Expression
 */ 
 val Number.petapascal : Expression
     /**
-    * Returns petapascal, 10^15 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns petapascal, 10^15 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PPa, 10^15 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -231,12 +231,12 @@ val Number.TPa : Expression
 */ 
 val Number.terapascal : Expression
     /**
-    * Returns terapascal, 10^12 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns terapascal, 10^12 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TPa, 10^12 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -263,12 +263,12 @@ val Number.GPa : Expression
 */ 
 val Number.gigapascal : Expression
     /**
-    * Returns gigapascal, 10^9 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns gigapascal, 10^9 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GPa, 10^9 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -295,12 +295,12 @@ val Number.MPa : Expression
 */ 
 val Number.megapascal : Expression
     /**
-    * Returns megapascal, 10^6 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns megapascal, 10^6 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MPa, 10^6 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -327,12 +327,12 @@ val Number.kPa : Expression
 */ 
 val Number.kilopascal : Expression
     /**
-    * Returns kilopascal, 10^3 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns kilopascal, 10^3 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kPa, 10^3 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -359,12 +359,12 @@ val Number.hPa : Expression
 */ 
 val Number.hectopascal : Expression
     /**
-    * Returns hectopascal, 10^2 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns hectopascal, 10^2 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hPa, 10^2 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -391,12 +391,12 @@ val Number.daPa : Expression
 */ 
 val Number.decapascal : Expression
     /**
-    * Returns decapascal, 10^1 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns decapascal, 10^1 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daPa, 10^1 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -423,12 +423,12 @@ val Number.dPa : Expression
 */ 
 val Number.decipascal : Expression
     /**
-    * Returns decipascal, 10^-1 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns decipascal, 10^-1 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dPa, 10^-1 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -455,12 +455,12 @@ val Number.cPa : Expression
 */ 
 val Number.centipascal : Expression
     /**
-    * Returns centipascal, 10^-2 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns centipascal, 10^-2 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cPa, 10^-2 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -487,12 +487,12 @@ val Number.mPa : Expression
 */ 
 val Number.millipascal : Expression
     /**
-    * Returns millipascal, 10^-3 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns millipascal, 10^-3 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mPa, 10^-3 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -519,12 +519,12 @@ val Number.μPa : Expression
 */ 
 val Number.micropascal : Expression
     /**
-    * Returns micropascal, 10^-6 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns micropascal, 10^-6 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μPa, 10^-6 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -551,12 +551,12 @@ val Number.nPa : Expression
 */ 
 val Number.nanopascal : Expression
     /**
-    * Returns nanopascal, 10^-9 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns nanopascal, 10^-9 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nPa, 10^-9 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -583,12 +583,12 @@ val Number.pPa : Expression
 */ 
 val Number.picopascal : Expression
     /**
-    * Returns picopascal, 10^-12 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns picopascal, 10^-12 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pPa, 10^-12 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -615,12 +615,12 @@ val Number.fPa : Expression
 */ 
 val Number.femtopascal : Expression
     /**
-    * Returns femtopascal, 10^-15 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns femtopascal, 10^-15 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fPa, 10^-15 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -647,12 +647,12 @@ val Number.aPa : Expression
 */ 
 val Number.attopascal : Expression
     /**
-    * Returns attopascal, 10^-18 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns attopascal, 10^-18 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aPa, 10^-18 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -679,12 +679,12 @@ val Number.zPa : Expression
 */ 
 val Number.zeptopascal : Expression
     /**
-    * Returns zeptopascal, 10^-21 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns zeptopascal, 10^-21 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zPa, 10^-21 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -711,12 +711,12 @@ val Number.yPa : Expression
 */ 
 val Number.yoctopascal : Expression
     /**
-    * Returns yoctopascal, 10^-24 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns yoctopascal, 10^-24 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * yPa, 10^-24 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -743,12 +743,12 @@ val Number.rPa : Expression
 */ 
 val Number.rontopascal : Expression
     /**
-    * Returns rontopascal, 10^-27 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns rontopascal, 10^-27 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rPa, 10^-27 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -775,12 +775,12 @@ val Number.qPa : Expression
 */ 
 val Number.quectopascal : Expression
     /**
-    * Returns quectopascal, 10^-30 of of pascal, derived SI-Unit for measurement of pressure, stress
+    * Returns quectopascal, 10^-30 of pascal, derived SI-Unit for measurement of pressure, stress
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qPa, 10^-30 of pascal, derived SI-Unit for measurement of pressure, stress
 */        

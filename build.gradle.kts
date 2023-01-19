@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil"
-version = "2.0.1"
+version = "3.0.0"
 
 val projectName = "kotunil"
 val docsDir = "build/docs"

@@ -22,6 +22,7 @@
 
 package eu.sirotin.kotunil.core
 
+import eu.sirotin.kotunil.EPS
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import kotlin.test.assertFailsWith
@@ -255,4 +256,79 @@ internal class CoreTest {
 
     }
 
+    @Test
+    fun testUnaryOperators() {
+
+        val x0 = 1.2.a*(b`^`-2.5)
+        val x1 = +x0
+        assertEquals("AB-2.5", x1.categorySymbols())
+        assertEquals(x0.value, x1.value, EPS)
+
+        val x2 = -x0
+        assertEquals("AB-2.5", x2.categorySymbols())
+        assertEquals(x0.value, -x2.value, EPS)
+
+        //Both not working because known error in compiler: https://youtrack.jetbrains.com/issue/KT-24800
+        //val x3a = x0++
+        //val x3b = x0--
+
+    }
+
+    @Test
+    fun testAugmentedAssignments() {
+        val x0 = 1.2.a*(b`^`-2.5)
+        var x4 = x0
+        x4 += 2*x0
+        assertEquals("AB-2.5", x4.categorySymbols())
+        assertEquals(3*x0.value, x4.value,  EPS)
+
+        x4 -= 4*x0
+        assertEquals("AB-2.5", x4.categorySymbols())
+        assertEquals(-x0.value, x4.value,  EPS)
+
+        var x5 = x0
+        x5 *= a
+        assertEquals("A2B-2.5", x5.categorySymbols())
+        assertEquals(x0.value, x5.value, EPS)
+
+        x5 /= a
+        assertEquals("AB-2.5", x5.categorySymbols())
+        assertEquals(x0.value, x5.value, EPS)
+
+        val x6 = 1.23.a * b
+        val x7 = 0.5*a
+        val x8 = 1.23 % 0.5
+        val x9 = x6 % x7
+        assertEquals("B", x9.categorySymbols())
+        assertEquals(x8, x9.value, EPS)
+
+        var x10 = x6
+        x10 %= x7
+        assertEquals("B", x10.categorySymbols())
+        assertEquals(x8, x10.value, EPS)
+    }
+
+    @Test
+    fun testRange() {
+        val x0 = 1.2.a*(b`^`-2.5)
+        val x11 = 11*x0
+        val r11 = x0..x11
+        assertTrue(x0*3.1 in r11)
+        assertFalse(-x0 in r11)
+        assertFalse(11.1*x0 in r11)
+
+    }
+
+    @Test
+    fun testComparison() {
+        assertTrue(2.a > 1.3.a)
+        assertTrue(2.a >= 1.3.a)
+        assertTrue(12.a == 12.a)
+        assertFalse(12.a === 12.a)
+        assertFalse(2.a < 1.3.a)
+        assertFalse(2.a <= 1.3.a)
+        assertFalse(2.a == 1.3.a)
+        assertTrue(2.a != 1.3.a)
+
+    }
 }

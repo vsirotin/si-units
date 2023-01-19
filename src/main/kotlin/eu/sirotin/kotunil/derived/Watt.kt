@@ -39,12 +39,12 @@ val Number.QW : Expression
 */ 
 val Number.quettawatt : Expression
     /**
-    * Returns quettawatt, 10^30 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns quettawatt, 10^30 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QW, 10^30 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -71,12 +71,12 @@ val Number.RW : Expression
 */ 
 val Number.ronnawatt : Expression
     /**
-    * Returns ronnawatt, 10^27 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns ronnawatt, 10^27 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RW, 10^27 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -103,12 +103,12 @@ val Number.YW : Expression
 */ 
 val Number.yottawatt : Expression
     /**
-    * Returns yottawatt, 10^24 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns yottawatt, 10^24 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YW, 10^24 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -135,12 +135,12 @@ val Number.ZW : Expression
 */ 
 val Number.zettawatt : Expression
     /**
-    * Returns zettawatt, 10^21 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns zettawatt, 10^21 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZW, 10^21 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -167,12 +167,12 @@ val Number.EW : Expression
 */ 
 val Number.exawatt : Expression
     /**
-    * Returns exawatt, 10^18 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns exawatt, 10^18 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * EW, 10^18 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -199,12 +199,12 @@ val Number.PW : Expression
 */ 
 val Number.petawatt : Expression
     /**
-    * Returns petawatt, 10^15 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns petawatt, 10^15 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PW, 10^15 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -231,12 +231,12 @@ val Number.TW : Expression
 */ 
 val Number.terawatt : Expression
     /**
-    * Returns terawatt, 10^12 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns terawatt, 10^12 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TW, 10^12 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -263,12 +263,12 @@ val Number.GW : Expression
 */ 
 val Number.gigawatt : Expression
     /**
-    * Returns gigawatt, 10^9 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns gigawatt, 10^9 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GW, 10^9 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -295,12 +295,12 @@ val Number.MW : Expression
 */ 
 val Number.megawatt : Expression
     /**
-    * Returns megawatt, 10^6 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns megawatt, 10^6 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MW, 10^6 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -327,12 +327,12 @@ val Number.kW : Expression
 */ 
 val Number.kilowatt : Expression
     /**
-    * Returns kilowatt, 10^3 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns kilowatt, 10^3 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kW, 10^3 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -359,12 +359,12 @@ val Number.hW : Expression
 */ 
 val Number.hectowatt : Expression
     /**
-    * Returns hectowatt, 10^2 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns hectowatt, 10^2 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hW, 10^2 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -391,12 +391,12 @@ val Number.daW : Expression
 */ 
 val Number.decawatt : Expression
     /**
-    * Returns decawatt, 10^1 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns decawatt, 10^1 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daW, 10^1 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -423,12 +423,12 @@ val Number.dW : Expression
 */ 
 val Number.deciwatt : Expression
     /**
-    * Returns deciwatt, 10^-1 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns deciwatt, 10^-1 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dW, 10^-1 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -455,12 +455,12 @@ val Number.cW : Expression
 */ 
 val Number.centiwatt : Expression
     /**
-    * Returns centiwatt, 10^-2 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns centiwatt, 10^-2 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cW, 10^-2 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -487,12 +487,12 @@ val Number.mW : Expression
 */ 
 val Number.milliwatt : Expression
     /**
-    * Returns milliwatt, 10^-3 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns milliwatt, 10^-3 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mW, 10^-3 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -519,12 +519,12 @@ val Number.μW : Expression
 */ 
 val Number.microwatt : Expression
     /**
-    * Returns microwatt, 10^-6 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns microwatt, 10^-6 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μW, 10^-6 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -551,12 +551,12 @@ val Number.nW : Expression
 */ 
 val Number.nanowatt : Expression
     /**
-    * Returns nanowatt, 10^-9 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns nanowatt, 10^-9 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nW, 10^-9 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -583,12 +583,12 @@ val Number.pW : Expression
 */ 
 val Number.picowatt : Expression
     /**
-    * Returns picowatt, 10^-12 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns picowatt, 10^-12 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pW, 10^-12 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -615,12 +615,12 @@ val Number.fW : Expression
 */ 
 val Number.femtowatt : Expression
     /**
-    * Returns femtowatt, 10^-15 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns femtowatt, 10^-15 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fW, 10^-15 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -647,12 +647,12 @@ val Number.aW : Expression
 */ 
 val Number.attowatt : Expression
     /**
-    * Returns attowatt, 10^-18 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns attowatt, 10^-18 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aW, 10^-18 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -679,12 +679,12 @@ val Number.zW : Expression
 */ 
 val Number.zeptowatt : Expression
     /**
-    * Returns zeptowatt, 10^-21 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns zeptowatt, 10^-21 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zW, 10^-21 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -711,12 +711,12 @@ val Number.yW : Expression
 */ 
 val Number.yoctowatt : Expression
     /**
-    * Returns yoctowatt, 10^-24 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns yoctowatt, 10^-24 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * yW, 10^-24 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -743,12 +743,12 @@ val Number.rW : Expression
 */ 
 val Number.rontowatt : Expression
     /**
-    * Returns rontowatt, 10^-27 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns rontowatt, 10^-27 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rW, 10^-27 of watt, derived SI-Unit for measurement of power, radiant flux
 */        
@@ -775,12 +775,12 @@ val Number.qW : Expression
 */ 
 val Number.quectowatt : Expression
     /**
-    * Returns quectowatt, 10^-30 of of watt, derived SI-Unit for measurement of power, radiant flux
+    * Returns quectowatt, 10^-30 of watt, derived SI-Unit for measurement of power, radiant flux
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qW, 10^-30 of watt, derived SI-Unit for measurement of power, radiant flux
 */        

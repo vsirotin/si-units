@@ -13,7 +13,7 @@ private val descriptionKelvin = UnitSpecification(
 /**
  * System International Unit for thermodynamic temperature.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
     /**

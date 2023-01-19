@@ -34,7 +34,7 @@ private val descriptionThing = UnitSpecification(
 /**
  * Unit for some object (thing).
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**

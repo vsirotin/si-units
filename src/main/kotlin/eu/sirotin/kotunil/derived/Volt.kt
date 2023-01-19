@@ -39,12 +39,12 @@ val Number.QV : Expression
 */ 
 val Number.quettavolt : Expression
     /**
-    * Returns quettavolt, 10^30 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns quettavolt, 10^30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QV, 10^30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -71,12 +71,12 @@ val Number.RV : Expression
 */ 
 val Number.ronnavolt : Expression
     /**
-    * Returns ronnavolt, 10^27 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns ronnavolt, 10^27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RV, 10^27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -103,12 +103,12 @@ val Number.YV : Expression
 */ 
 val Number.yottavolt : Expression
     /**
-    * Returns yottavolt, 10^24 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns yottavolt, 10^24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YV, 10^24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -135,12 +135,12 @@ val Number.ZV : Expression
 */ 
 val Number.zettavolt : Expression
     /**
-    * Returns zettavolt, 10^21 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns zettavolt, 10^21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZV, 10^21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -167,12 +167,12 @@ val Number.EV : Expression
 */ 
 val Number.exavolt : Expression
     /**
-    * Returns exavolt, 10^18 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns exavolt, 10^18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * EV, 10^18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -199,12 +199,12 @@ val Number.PV : Expression
 */ 
 val Number.petavolt : Expression
     /**
-    * Returns petavolt, 10^15 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns petavolt, 10^15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PV, 10^15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -231,12 +231,12 @@ val Number.TV : Expression
 */ 
 val Number.teravolt : Expression
     /**
-    * Returns teravolt, 10^12 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns teravolt, 10^12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TV, 10^12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -263,12 +263,12 @@ val Number.GV : Expression
 */ 
 val Number.gigavolt : Expression
     /**
-    * Returns gigavolt, 10^9 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns gigavolt, 10^9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GV, 10^9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -295,12 +295,12 @@ val Number.MV : Expression
 */ 
 val Number.megavolt : Expression
     /**
-    * Returns megavolt, 10^6 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns megavolt, 10^6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MV, 10^6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -327,12 +327,12 @@ val Number.kV : Expression
 */ 
 val Number.kilovolt : Expression
     /**
-    * Returns kilovolt, 10^3 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns kilovolt, 10^3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kV, 10^3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -359,12 +359,12 @@ val Number.hV : Expression
 */ 
 val Number.hectovolt : Expression
     /**
-    * Returns hectovolt, 10^2 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns hectovolt, 10^2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hV, 10^2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -391,12 +391,12 @@ val Number.daV : Expression
 */ 
 val Number.decavolt : Expression
     /**
-    * Returns decavolt, 10^1 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns decavolt, 10^1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daV, 10^1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -423,12 +423,12 @@ val Number.dV : Expression
 */ 
 val Number.decivolt : Expression
     /**
-    * Returns decivolt, 10^-1 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns decivolt, 10^-1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dV, 10^-1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -455,12 +455,12 @@ val Number.cV : Expression
 */ 
 val Number.centivolt : Expression
     /**
-    * Returns centivolt, 10^-2 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns centivolt, 10^-2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cV, 10^-2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -487,12 +487,12 @@ val Number.mV : Expression
 */ 
 val Number.millivolt : Expression
     /**
-    * Returns millivolt, 10^-3 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns millivolt, 10^-3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mV, 10^-3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -519,12 +519,12 @@ val Number.μV : Expression
 */ 
 val Number.microvolt : Expression
     /**
-    * Returns microvolt, 10^-6 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns microvolt, 10^-6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μV, 10^-6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -551,12 +551,12 @@ val Number.nV : Expression
 */ 
 val Number.nanovolt : Expression
     /**
-    * Returns nanovolt, 10^-9 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns nanovolt, 10^-9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nV, 10^-9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -583,12 +583,12 @@ val Number.pV : Expression
 */ 
 val Number.picovolt : Expression
     /**
-    * Returns picovolt, 10^-12 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns picovolt, 10^-12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pV, 10^-12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -615,12 +615,12 @@ val Number.fV : Expression
 */ 
 val Number.femtovolt : Expression
     /**
-    * Returns femtovolt, 10^-15 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns femtovolt, 10^-15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fV, 10^-15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -647,12 +647,12 @@ val Number.aV : Expression
 */ 
 val Number.attovolt : Expression
     /**
-    * Returns attovolt, 10^-18 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns attovolt, 10^-18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aV, 10^-18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -679,12 +679,12 @@ val Number.zV : Expression
 */ 
 val Number.zeptovolt : Expression
     /**
-    * Returns zeptovolt, 10^-21 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns zeptovolt, 10^-21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zV, 10^-21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -711,12 +711,12 @@ val Number.yV : Expression
 */ 
 val Number.yoctovolt : Expression
     /**
-    * Returns yoctovolt, 10^-24 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns yoctovolt, 10^-24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * yV, 10^-24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -743,12 +743,12 @@ val Number.rV : Expression
 */ 
 val Number.rontovolt : Expression
     /**
-    * Returns rontovolt, 10^-27 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns rontovolt, 10^-27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rV, 10^-27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -775,12 +775,12 @@ val Number.qV : Expression
 */ 
 val Number.quectovolt : Expression
     /**
-    * Returns quectovolt, 10^-30 of of volt, derived SI-Unit for measurement of electric potential, voltage, emf
+    * Returns quectovolt, 10^-30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qV, 10^-30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        

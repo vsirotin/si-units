@@ -39,12 +39,12 @@ val Number.QSv : Expression
 */ 
 val Number.quettasievert : Expression
     /**
-    * Returns quettasievert, 10^30 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns quettasievert, 10^30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QSv, 10^30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -71,12 +71,12 @@ val Number.RSv : Expression
 */ 
 val Number.ronnasievert : Expression
     /**
-    * Returns ronnasievert, 10^27 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns ronnasievert, 10^27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RSv, 10^27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -103,12 +103,12 @@ val Number.YSv : Expression
 */ 
 val Number.yottasievert : Expression
     /**
-    * Returns yottasievert, 10^24 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns yottasievert, 10^24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YSv, 10^24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -135,12 +135,12 @@ val Number.ZSv : Expression
 */ 
 val Number.zettasievert : Expression
     /**
-    * Returns zettasievert, 10^21 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns zettasievert, 10^21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZSv, 10^21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -167,12 +167,12 @@ val Number.ESv : Expression
 */ 
 val Number.exasievert : Expression
     /**
-    * Returns exasievert, 10^18 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns exasievert, 10^18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ESv, 10^18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -199,12 +199,12 @@ val Number.PSv : Expression
 */ 
 val Number.petasievert : Expression
     /**
-    * Returns petasievert, 10^15 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns petasievert, 10^15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PSv, 10^15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -231,12 +231,12 @@ val Number.TSv : Expression
 */ 
 val Number.terasievert : Expression
     /**
-    * Returns terasievert, 10^12 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns terasievert, 10^12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TSv, 10^12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -263,12 +263,12 @@ val Number.GSv : Expression
 */ 
 val Number.gigasievert : Expression
     /**
-    * Returns gigasievert, 10^9 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns gigasievert, 10^9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GSv, 10^9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -295,12 +295,12 @@ val Number.MSv : Expression
 */ 
 val Number.megasievert : Expression
     /**
-    * Returns megasievert, 10^6 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns megasievert, 10^6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MSv, 10^6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -327,12 +327,12 @@ val Number.kSv : Expression
 */ 
 val Number.kilosievert : Expression
     /**
-    * Returns kilosievert, 10^3 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns kilosievert, 10^3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kSv, 10^3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -359,12 +359,12 @@ val Number.hSv : Expression
 */ 
 val Number.hectosievert : Expression
     /**
-    * Returns hectosievert, 10^2 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns hectosievert, 10^2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hSv, 10^2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -391,12 +391,12 @@ val Number.daSv : Expression
 */ 
 val Number.decasievert : Expression
     /**
-    * Returns decasievert, 10^1 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns decasievert, 10^1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daSv, 10^1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -423,12 +423,12 @@ val Number.dSv : Expression
 */ 
 val Number.decisievert : Expression
     /**
-    * Returns decisievert, 10^-1 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns decisievert, 10^-1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dSv, 10^-1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -455,12 +455,12 @@ val Number.cSv : Expression
 */ 
 val Number.centisievert : Expression
     /**
-    * Returns centisievert, 10^-2 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns centisievert, 10^-2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cSv, 10^-2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -487,12 +487,12 @@ val Number.mSv : Expression
 */ 
 val Number.millisievert : Expression
     /**
-    * Returns millisievert, 10^-3 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns millisievert, 10^-3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mSv, 10^-3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -519,12 +519,12 @@ val Number.μSv : Expression
 */ 
 val Number.microsievert : Expression
     /**
-    * Returns microsievert, 10^-6 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns microsievert, 10^-6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μSv, 10^-6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -551,12 +551,12 @@ val Number.nSv : Expression
 */ 
 val Number.nanosievert : Expression
     /**
-    * Returns nanosievert, 10^-9 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns nanosievert, 10^-9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nSv, 10^-9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -583,12 +583,12 @@ val Number.pSv : Expression
 */ 
 val Number.picosievert : Expression
     /**
-    * Returns picosievert, 10^-12 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns picosievert, 10^-12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pSv, 10^-12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -615,12 +615,12 @@ val Number.fSv : Expression
 */ 
 val Number.femtosievert : Expression
     /**
-    * Returns femtosievert, 10^-15 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns femtosievert, 10^-15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fSv, 10^-15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -647,12 +647,12 @@ val Number.aSv : Expression
 */ 
 val Number.attosievert : Expression
     /**
-    * Returns attosievert, 10^-18 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns attosievert, 10^-18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aSv, 10^-18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -679,12 +679,12 @@ val Number.zSv : Expression
 */ 
 val Number.zeptosievert : Expression
     /**
-    * Returns zeptosievert, 10^-21 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns zeptosievert, 10^-21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zSv, 10^-21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -711,12 +711,12 @@ val Number.ySv : Expression
 */ 
 val Number.yoctosievert : Expression
     /**
-    * Returns yoctosievert, 10^-24 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns yoctosievert, 10^-24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ySv, 10^-24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -743,12 +743,12 @@ val Number.rSv : Expression
 */ 
 val Number.rontosievert : Expression
     /**
-    * Returns rontosievert, 10^-27 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns rontosievert, 10^-27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rSv, 10^-27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        
@@ -775,12 +775,12 @@ val Number.qSv : Expression
 */ 
 val Number.quectosievert : Expression
     /**
-    * Returns quectosievert, 10^-30 of of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
+    * Returns quectosievert, 10^-30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qSv, 10^-30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */        

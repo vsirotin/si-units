@@ -39,12 +39,12 @@ val Number.QN : Expression
 */ 
 val Number.quettanewton : Expression
     /**
-    * Returns quettanewton, 10^30 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns quettanewton, 10^30 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QN, 10^30 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -71,12 +71,12 @@ val Number.RN : Expression
 */ 
 val Number.ronnanewton : Expression
     /**
-    * Returns ronnanewton, 10^27 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns ronnanewton, 10^27 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RN, 10^27 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -103,12 +103,12 @@ val Number.YN : Expression
 */ 
 val Number.yottanewton : Expression
     /**
-    * Returns yottanewton, 10^24 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns yottanewton, 10^24 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YN, 10^24 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -135,12 +135,12 @@ val Number.ZN : Expression
 */ 
 val Number.zettanewton : Expression
     /**
-    * Returns zettanewton, 10^21 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns zettanewton, 10^21 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZN, 10^21 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -167,12 +167,12 @@ val Number.EN : Expression
 */ 
 val Number.exanewton : Expression
     /**
-    * Returns exanewton, 10^18 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns exanewton, 10^18 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * EN, 10^18 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -199,12 +199,12 @@ val Number.PN : Expression
 */ 
 val Number.petanewton : Expression
     /**
-    * Returns petanewton, 10^15 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns petanewton, 10^15 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PN, 10^15 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -231,12 +231,12 @@ val Number.TN : Expression
 */ 
 val Number.teranewton : Expression
     /**
-    * Returns teranewton, 10^12 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns teranewton, 10^12 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TN, 10^12 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -263,12 +263,12 @@ val Number.GN : Expression
 */ 
 val Number.giganewton : Expression
     /**
-    * Returns giganewton, 10^9 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns giganewton, 10^9 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GN, 10^9 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -295,12 +295,12 @@ val Number.MN : Expression
 */ 
 val Number.meganewton : Expression
     /**
-    * Returns meganewton, 10^6 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns meganewton, 10^6 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MN, 10^6 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -327,12 +327,12 @@ val Number.kN : Expression
 */ 
 val Number.kilonewton : Expression
     /**
-    * Returns kilonewton, 10^3 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns kilonewton, 10^3 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kN, 10^3 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -359,12 +359,12 @@ val Number.hN : Expression
 */ 
 val Number.hectonewton : Expression
     /**
-    * Returns hectonewton, 10^2 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns hectonewton, 10^2 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hN, 10^2 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -391,12 +391,12 @@ val Number.daN : Expression
 */ 
 val Number.decanewton : Expression
     /**
-    * Returns decanewton, 10^1 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns decanewton, 10^1 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daN, 10^1 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -423,12 +423,12 @@ val Number.dN : Expression
 */ 
 val Number.decinewton : Expression
     /**
-    * Returns decinewton, 10^-1 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns decinewton, 10^-1 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dN, 10^-1 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -455,12 +455,12 @@ val Number.cN : Expression
 */ 
 val Number.centinewton : Expression
     /**
-    * Returns centinewton, 10^-2 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns centinewton, 10^-2 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cN, 10^-2 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -487,12 +487,12 @@ val Number.mN : Expression
 */ 
 val Number.millinewton : Expression
     /**
-    * Returns millinewton, 10^-3 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns millinewton, 10^-3 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mN, 10^-3 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -519,12 +519,12 @@ val Number.μN : Expression
 */ 
 val Number.micronewton : Expression
     /**
-    * Returns micronewton, 10^-6 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns micronewton, 10^-6 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μN, 10^-6 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -551,12 +551,12 @@ val Number.nN : Expression
 */ 
 val Number.nanonewton : Expression
     /**
-    * Returns nanonewton, 10^-9 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns nanonewton, 10^-9 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nN, 10^-9 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -583,12 +583,12 @@ val Number.pN : Expression
 */ 
 val Number.piconewton : Expression
     /**
-    * Returns piconewton, 10^-12 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns piconewton, 10^-12 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pN, 10^-12 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -615,12 +615,12 @@ val Number.fN : Expression
 */ 
 val Number.femtonewton : Expression
     /**
-    * Returns femtonewton, 10^-15 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns femtonewton, 10^-15 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fN, 10^-15 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -647,12 +647,12 @@ val Number.aN : Expression
 */ 
 val Number.attonewton : Expression
     /**
-    * Returns attonewton, 10^-18 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns attonewton, 10^-18 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aN, 10^-18 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -679,12 +679,12 @@ val Number.zN : Expression
 */ 
 val Number.zeptonewton : Expression
     /**
-    * Returns zeptonewton, 10^-21 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns zeptonewton, 10^-21 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zN, 10^-21 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -711,12 +711,12 @@ val Number.yN : Expression
 */ 
 val Number.yoctonewton : Expression
     /**
-    * Returns yoctonewton, 10^-24 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns yoctonewton, 10^-24 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * yN, 10^-24 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -743,12 +743,12 @@ val Number.rN : Expression
 */ 
 val Number.rontonewton : Expression
     /**
-    * Returns rontonewton, 10^-27 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns rontonewton, 10^-27 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rN, 10^-27 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -775,12 +775,12 @@ val Number.qN : Expression
 */ 
 val Number.quectonewton : Expression
     /**
-    * Returns quectonewton, 10^-30 of of newton, derived SI-Unit for measurement of force, weight
+    * Returns quectonewton, 10^-30 of newton, derived SI-Unit for measurement of force, weight
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qN, 10^-30 of newton, derived SI-Unit for measurement of force, weight
 */        

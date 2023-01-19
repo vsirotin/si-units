@@ -39,12 +39,12 @@ val Number.Qkat : Expression
 */ 
 val Number.quettakatal : Expression
     /**
-    * Returns quettakatal, 10^30 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns quettakatal, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Qkat, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -71,12 +71,12 @@ val Number.Rkat : Expression
 */ 
 val Number.ronnakatal : Expression
     /**
-    * Returns ronnakatal, 10^27 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns ronnakatal, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Rkat, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -103,12 +103,12 @@ val Number.Ykat : Expression
 */ 
 val Number.yottakatal : Expression
     /**
-    * Returns yottakatal, 10^24 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns yottakatal, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Ykat, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -135,12 +135,12 @@ val Number.Zkat : Expression
 */ 
 val Number.zettakatal : Expression
     /**
-    * Returns zettakatal, 10^21 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns zettakatal, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Zkat, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -167,12 +167,12 @@ val Number.Ekat : Expression
 */ 
 val Number.exakatal : Expression
     /**
-    * Returns exakatal, 10^18 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns exakatal, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Ekat, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -199,12 +199,12 @@ val Number.Pkat : Expression
 */ 
 val Number.petakatal : Expression
     /**
-    * Returns petakatal, 10^15 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns petakatal, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Pkat, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -231,12 +231,12 @@ val Number.Tkat : Expression
 */ 
 val Number.terakatal : Expression
     /**
-    * Returns terakatal, 10^12 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns terakatal, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Tkat, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -263,12 +263,12 @@ val Number.Gkat : Expression
 */ 
 val Number.gigakatal : Expression
     /**
-    * Returns gigakatal, 10^9 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns gigakatal, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Gkat, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -295,12 +295,12 @@ val Number.Mkat : Expression
 */ 
 val Number.megakatal : Expression
     /**
-    * Returns megakatal, 10^6 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns megakatal, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * Mkat, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -327,12 +327,12 @@ val Number.kkat : Expression
 */ 
 val Number.kilokatal : Expression
     /**
-    * Returns kilokatal, 10^3 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns kilokatal, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kkat, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -359,12 +359,12 @@ val Number.hkat : Expression
 */ 
 val Number.hectokatal : Expression
     /**
-    * Returns hectokatal, 10^2 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns hectokatal, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hkat, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -391,12 +391,12 @@ val Number.dakat : Expression
 */ 
 val Number.decakatal : Expression
     /**
-    * Returns decakatal, 10^1 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns decakatal, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dakat, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -423,12 +423,12 @@ val Number.dkat : Expression
 */ 
 val Number.decikatal : Expression
     /**
-    * Returns decikatal, 10^-1 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns decikatal, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dkat, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -455,12 +455,12 @@ val Number.ckat : Expression
 */ 
 val Number.centikatal : Expression
     /**
-    * Returns centikatal, 10^-2 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns centikatal, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ckat, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -487,12 +487,12 @@ val Number.mkat : Expression
 */ 
 val Number.millikatal : Expression
     /**
-    * Returns millikatal, 10^-3 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns millikatal, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mkat, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -519,12 +519,12 @@ val Number.μkat : Expression
 */ 
 val Number.microkatal : Expression
     /**
-    * Returns microkatal, 10^-6 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns microkatal, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μkat, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -551,12 +551,12 @@ val Number.nkat : Expression
 */ 
 val Number.nanokatal : Expression
     /**
-    * Returns nanokatal, 10^-9 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns nanokatal, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nkat, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -583,12 +583,12 @@ val Number.pkat : Expression
 */ 
 val Number.picokatal : Expression
     /**
-    * Returns picokatal, 10^-12 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns picokatal, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pkat, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -615,12 +615,12 @@ val Number.fkat : Expression
 */ 
 val Number.femtokatal : Expression
     /**
-    * Returns femtokatal, 10^-15 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns femtokatal, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fkat, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -647,12 +647,12 @@ val Number.akat : Expression
 */ 
 val Number.attokatal : Expression
     /**
-    * Returns attokatal, 10^-18 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns attokatal, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * akat, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -679,12 +679,12 @@ val Number.zkat : Expression
 */ 
 val Number.zeptokatal : Expression
     /**
-    * Returns zeptokatal, 10^-21 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns zeptokatal, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zkat, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -711,12 +711,12 @@ val Number.ykat : Expression
 */ 
 val Number.yoctokatal : Expression
     /**
-    * Returns yoctokatal, 10^-24 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns yoctokatal, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ykat, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -743,12 +743,12 @@ val Number.rkat : Expression
 */ 
 val Number.rontokatal : Expression
     /**
-    * Returns rontokatal, 10^-27 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns rontokatal, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rkat, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
 */        
@@ -775,12 +775,12 @@ val Number.qkat : Expression
 */ 
 val Number.quectokatal : Expression
     /**
-    * Returns quectokatal, 10^-30 of of katal, derived SI-Unit for measurement of catalytic activity
+    * Returns quectokatal, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qkat, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
 */        

@@ -13,7 +13,7 @@ private val descriptionMetre = UnitSpecification(
 /**
  * System International Unit for length.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Metre(value: Double) : Expression(value, description = descriptionMetre)
     /**

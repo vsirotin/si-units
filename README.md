@@ -139,7 +139,7 @@ Dependency for **build.gradle.kts**:
         }
 
         dependencies {
-            implementation("eu.sirotin.kotunil:all:2.0.1")
+            implementation("eu.sirotin.kotunil:all:3.0.0")
         }
 
 Dependency for Maven/pom:
@@ -147,7 +147,7 @@ Dependency for Maven/pom:
         <dependency>
             <groupId>eu.sirotin.kotunil</groupId>
             <artifactId>all</artifactId>
-            <version>2.0.1</version>
+            <version>3.0.0</version>
         </dependency>
 
 ### 2.2 Development mode
@@ -425,4 +425,28 @@ How many things can his mom find in Jan's pocket?
         val n = 0.3.l * p
 
         assertEquals("9 #", n.show("%.0f"))
-        assertEquals("#", n.unitSymbols())       
+        assertEquals("#", n.unitSymbols())    
+
+### 3.8 Full implementation of Kotlin's operators for units
+Library completely implements Kotlin's operators like:
+Unare operators:
+
+        a = +b
+        a = -b
+
+Augment assignments:
+
+        a +=b
+        a -=b
+        a *=b
+        a /=b
+        a %=b
+
+**Attention**: Operators
+
+    a++ 
+and
+
+    a-- 
+**are not implemented** due to known bugs Kotlin compiler
+(See https://youtrack.jetbrains.com/issue/KT-24800)

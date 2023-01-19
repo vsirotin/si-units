@@ -30,8 +30,7 @@ package eu.sirotin.kotunil.core
 data class UnitSpecification<T : Expression>(val unitSymbol: String,
                                            val categorySymbol: String,
                                            val presentationPriority: Int = 0,
-                                           val creator: (v : Double) -> T) {
-}
+                                           val creator: (v : Double) -> T)
 
 /**
  * Defines functions for pretty printing and dimensional analysis of measured units.

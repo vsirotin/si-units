@@ -13,7 +13,7 @@ private val descriptionSecond = UnitSpecification(
 /**
  * System International Unit for time.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Second(value: Double) : Expression(value, description = descriptionSecond)
     /**

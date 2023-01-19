@@ -39,7 +39,7 @@ const val ε = 1.0E-12
  * Implements expression of unit with given [value] and [dimensions]
  * @constructor Creates expression of unit with given [value] and [dimensions]
  */
-open class Expression(val value: Double, val dimensions: Dimensions): Comparable<Expression>, UnitPresentation {
+open class Expression(var value: Double, val dimensions: Dimensions): Comparable<Expression>, UnitPresentation {
 
     constructor(value: Double = 1.0, description: UnitSpecification<*>)
             : this(value, Dimensions(setOf(Factor(description))))
@@ -118,45 +118,67 @@ infix fun Expression.`^`(degree: Number) = this.pow(degree)
 /**
  * Allows to add expressions.
  */
-operator fun Expression.plus(other: Expression): Expression =
+operator fun Expression.plus(other: Expression) =
     Expression(this.value + other.value, this.dimensions + other.dimensions)
 
 /**
  * Allows to multiply expressions.
  */
-operator fun Expression.times(other: Expression): Expression =
+operator fun Expression.times(other: Expression) =
     Expression(this.value * other.value, this.dimensions * other.dimensions)
 
 /**
  * Allows to multiply expression and number.
  */
-operator fun Expression.times(multiplicative: Number): Expression =
+operator fun Expression.times(multiplicative: Number) =
     Expression(this.value * multiplicative.toDouble(), this.dimensions)
 
 /**
  * Allows to multiply number and expressions.
  */
-operator fun Number.times(p: Expression): Expression = p * this
+operator fun Number.times(p: Expression) = p * this
 
 /**
  * Allows to subtract expressions.
  */
-operator fun Expression.minus(p: Expression): Expression = this + (-1 * p)
+operator fun Expression.minus(p: Expression) = this + (-1 * p)
 
 /**
  * Allows to divide expressions.
  */
-operator fun Expression.div(p: Expression): Expression = this * (p.pow(-1))
+operator fun Expression.div(p: Expression) = this * (p.pow(-1))
 
 /**
  * Allows to divide number to expression.
  */
-operator fun Number.div(p: Expression): Expression = this.toDouble() * (p.pow(-1))
+operator fun Number.div(p: Expression) = this.toDouble() * (p.pow(-1))
 
 /**
  * Allows to divide expression to number.
  */
 operator fun Expression.div(x: Number): Expression = 1 / (x.toDouble() / this)
+
+/**
+ * Allows to calculate the remainder of truncating division of this value by the other value.
+ */
+operator fun Expression.rem(other: Expression): Expression  {
+    val v1 = this.value
+    val v2 = other.value
+    val res = this / other
+    res.value *=  (v2 / v1) * (v1 % v2)
+    return res
+}
+
+/**
+ * Implementation of `+=`
+ */
+operator fun Expression.unaryPlus()  = Expression(this.value.unaryPlus(), this.dimensions)
+
+/**
+ * Implementation of `-=`
+ */
+operator fun Expression.unaryMinus()  = Expression(this.value.unaryMinus(), this.dimensions)
+
 
 
 

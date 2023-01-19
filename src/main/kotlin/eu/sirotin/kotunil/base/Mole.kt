@@ -13,7 +13,7 @@ private val descriptionMole = UnitSpecification(
 /**
  * System International Unit for amount of substance.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Mole(value: Double) : Expression(value, description = descriptionMole)
     /**

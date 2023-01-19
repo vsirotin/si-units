@@ -13,7 +13,7 @@ private val descriptionCandela = UnitSpecification(
 /**
  * System International Unit for luminous intensity.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class Candela(value: Double) : Expression(value, description = descriptionCandela)
     /**

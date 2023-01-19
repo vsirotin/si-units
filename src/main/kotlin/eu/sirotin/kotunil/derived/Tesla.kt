@@ -39,12 +39,12 @@ val Number.QT : Expression
 */ 
 val Number.quettatesla : Expression
     /**
-    * Returns quettatesla, 10^30 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns quettatesla, 10^30 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * QT, 10^30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -71,12 +71,12 @@ val Number.RT : Expression
 */ 
 val Number.ronnatesla : Expression
     /**
-    * Returns ronnatesla, 10^27 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns ronnatesla, 10^27 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * RT, 10^27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -103,12 +103,12 @@ val Number.YT : Expression
 */ 
 val Number.yottatesla : Expression
     /**
-    * Returns yottatesla, 10^24 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns yottatesla, 10^24 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * YT, 10^24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -135,12 +135,12 @@ val Number.ZT : Expression
 */ 
 val Number.zettatesla : Expression
     /**
-    * Returns zettatesla, 10^21 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns zettatesla, 10^21 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ZT, 10^21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -167,12 +167,12 @@ val Number.ET : Expression
 */ 
 val Number.exatesla : Expression
     /**
-    * Returns exatesla, 10^18 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns exatesla, 10^18 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * ET, 10^18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -199,12 +199,12 @@ val Number.PT : Expression
 */ 
 val Number.petatesla : Expression
     /**
-    * Returns petatesla, 10^15 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns petatesla, 10^15 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * PT, 10^15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -231,12 +231,12 @@ val Number.TT : Expression
 */ 
 val Number.teratesla : Expression
     /**
-    * Returns teratesla, 10^12 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns teratesla, 10^12 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * TT, 10^12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -263,12 +263,12 @@ val Number.GT : Expression
 */ 
 val Number.gigatesla : Expression
     /**
-    * Returns gigatesla, 10^9 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns gigatesla, 10^9 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * GT, 10^9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -295,12 +295,12 @@ val Number.MT : Expression
 */ 
 val Number.megatesla : Expression
     /**
-    * Returns megatesla, 10^6 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns megatesla, 10^6 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * MT, 10^6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -327,12 +327,12 @@ val Number.kT : Expression
 */ 
 val Number.kilotesla : Expression
     /**
-    * Returns kilotesla, 10^3 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns kilotesla, 10^3 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * kT, 10^3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -359,12 +359,12 @@ val Number.hT : Expression
 */ 
 val Number.hectotesla : Expression
     /**
-    * Returns hectotesla, 10^2 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns hectotesla, 10^2 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * hT, 10^2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -391,12 +391,12 @@ val Number.daT : Expression
 */ 
 val Number.decatesla : Expression
     /**
-    * Returns decatesla, 10^1 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns decatesla, 10^1 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * daT, 10^1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -423,12 +423,12 @@ val Number.dT : Expression
 */ 
 val Number.decitesla : Expression
     /**
-    * Returns decitesla, 10^-1 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns decitesla, 10^-1 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * dT, 10^-1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -455,12 +455,12 @@ val Number.cT : Expression
 */ 
 val Number.centitesla : Expression
     /**
-    * Returns centitesla, 10^-2 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns centitesla, 10^-2 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * cT, 10^-2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -487,12 +487,12 @@ val Number.mT : Expression
 */ 
 val Number.millitesla : Expression
     /**
-    * Returns millitesla, 10^-3 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns millitesla, 10^-3 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * mT, 10^-3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -519,12 +519,12 @@ val Number.μT : Expression
 */ 
 val Number.microtesla : Expression
     /**
-    * Returns microtesla, 10^-6 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns microtesla, 10^-6 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * μT, 10^-6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -551,12 +551,12 @@ val Number.nT : Expression
 */ 
 val Number.nanotesla : Expression
     /**
-    * Returns nanotesla, 10^-9 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns nanotesla, 10^-9 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * nT, 10^-9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -583,12 +583,12 @@ val Number.pT : Expression
 */ 
 val Number.picotesla : Expression
     /**
-    * Returns picotesla, 10^-12 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns picotesla, 10^-12 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * pT, 10^-12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -615,12 +615,12 @@ val Number.fT : Expression
 */ 
 val Number.femtotesla : Expression
     /**
-    * Returns femtotesla, 10^-15 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns femtotesla, 10^-15 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * fT, 10^-15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -647,12 +647,12 @@ val Number.aT : Expression
 */ 
 val Number.attotesla : Expression
     /**
-    * Returns attotesla, 10^-18 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns attotesla, 10^-18 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * aT, 10^-18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -679,12 +679,12 @@ val Number.zT : Expression
 */ 
 val Number.zeptotesla : Expression
     /**
-    * Returns zeptotesla, 10^-21 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns zeptotesla, 10^-21 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * zT, 10^-21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -711,12 +711,12 @@ val Number.yT : Expression
 */ 
 val Number.yoctotesla : Expression
     /**
-    * Returns yoctotesla, 10^-24 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns yoctotesla, 10^-24 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * yT, 10^-24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -743,12 +743,12 @@ val Number.rT : Expression
 */ 
 val Number.rontotesla : Expression
     /**
-    * Returns rontotesla, 10^-27 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns rontotesla, 10^-27 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * rT, 10^-27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        
@@ -775,12 +775,12 @@ val Number.qT : Expression
 */ 
 val Number.quectotesla : Expression
     /**
-    * Returns quectotesla, 10^-30 of of tesla, derived SI-Unit for measurement of magnetic flux density
+    * Returns quectotesla, 10^-30 of tesla, derived SI-Unit for measurement of magnetic flux density
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
 
-@JvmField()  
+@JvmField  
 /**
 * qT, 10^-30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */        

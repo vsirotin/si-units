@@ -105,7 +105,7 @@ private val description$className = UnitSpecification(
 /**
  * System International Unit for $quantityName.
  *
- * @constructor Creates an unit with given [value].
+ * @constructor Creates the unit with given [value].
  */
 class $className(value: Double) : Expression(value, description = description$className)
     /**
