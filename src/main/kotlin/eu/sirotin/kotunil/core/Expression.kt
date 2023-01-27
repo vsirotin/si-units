@@ -81,7 +81,6 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
-   //     if (javaClass != other?.javaClass) return false
 
         try {other as Expression} catch(e: Throwable){return false}
 
