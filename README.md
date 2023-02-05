@@ -18,48 +18,54 @@ Eva's room is 4 m. wide and 4.3 long. How high in mm. is water now in Eva's room
 
 The solution in Kotlin can be written in one line. For didactic reasons like introduce two auxiliary variables s and h.
 
-        val s = 4.m * 4.3.m
-        val h = 32.l/s   
-        print("Water height is ${h.mm} mm."
+```kotlin
+val s = 4.m * 4.3.m
+val h = 32.l/s   
+print("Water height is ${h.mm} mm.")
+```
 
 ### 1.2 Dimension analysis
 Please note that the variable **s** is physical dimension **m2** (square meter) and **h** - **m** (simple meter).
 Furthermore, in this example we also used liters (**l**), which have dimension **m3** (cubic meters). 
 
 Using the built-in function **unitSymbols()** you can determine the dimension of any object in terms of SI standard.
-        
-        val s = 4.m * 5.m
-        assertEquals("m2", s.unitSymbols())
-        
-        val x = 20.l
-        assertEquals("m3", x.unitSymbols())
-        
-        val h = x/s
-        assertEquals("m", h.unitSymbols())
-        
-        val y = 1.2.s
-        assertEquals("s", y.unitSymbols())
 
-        val z = x/y
-        assertEquals("m3/s", z.unitSymbols())
+```kotlin
+val s = 4.m * 5.m
+assertEquals("m2", s.unitSymbols())
+
+val x = 20.l
+assertEquals("m3", x.unitSymbols())
+
+val h = x/s
+assertEquals("m", h.unitSymbols())
+
+val y = 1.2.s
+assertEquals("s", y.unitSymbols())
+
+val z = x/y
+assertEquals("m3/s", z.unitSymbols())
+```
 
 Using the built-in function **categorySymbols()** 
 you can analyze dimensions of physical units in "academic" manner.
 
-        val s = 4.m * 5.m
-        assertEquals("L2", s.categorySymbols())
-        
-        val x = 20.l
-        assertEquals("L3", x.categorySymbols())
-        
-        val h = x/s
-        assertEquals("L", h.categorySymbols())
+```kotlin
+val s = 4.m * 5.m
+assertEquals("L2", s.categorySymbols())
 
-        val y = 1.2.s
-        assertEquals("T", y.categorySymbols())
+val x = 20.l
+assertEquals("L3", x.categorySymbols())
 
-        val z = x/y
-        assertEquals("L3T-1", z.categorySymbols())
+val h = x/s
+assertEquals("L", h.categorySymbols())
+
+val y = 1.2.s
+assertEquals("T", y.categorySymbols())
+
+val z = x/y
+assertEquals("L3T-1", z.categorySymbols())
+```
 
 ### 1.3 Type safety
 
@@ -68,14 +74,16 @@ If you try to do this with units of different types,
 you will get either compilation errors (for simple units) 
 or run-time errors for complicated units. 
 
-        //val x = 1.m + 2 compilation error
-        //val y = 20.l/(4.m * 5.m) + 14 compilation error
+```kotlin
+//val x = 1.m + 2 compilation error
+//val y = 20.l/(4.m * 5.m) + 14 compilation error
 
-        //Complex errors will be found in runtime:
-        val exception = assertFailsWith<IllegalArgumentException>(
-            block = { 1.m + 2.s }
-        )
-        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+//Complex errors will be found in runtime:
+val exception = assertFailsWith<IllegalArgumentException>(
+    block = { 1.m + 2.s }
+)
+assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+```
 
 Of course, a safety with an exception is not a classic type safety, that shows up during compilation time. 
 However, it is better than letting the metre and the second add up. 
@@ -87,46 +95,54 @@ see e.g. https://en.wikipedia.org/wiki/Mars_Climate_Orbiter).
 
 Physical objects can be compared only if they have the same dimensions. 
 
-        assertTrue(5.m > 4.1.m)
+```kotlin
+assertTrue(5.m > 4.1.m)
 
-        assertTrue(20.2*m3 > 4.2*m3)
+assertTrue(20.2*m3 > 4.2*m3)
 
-        assertTrue(2.2*kg*m/s < 4.2*kg*m/s)
+assertTrue(2.2*kg*m/s < 4.2*kg*m/s)
+```
 
 Otherwise, you will get a run-time error.
 
-        val v1 = 2.4.m
-        val v2 = 2.4.s
+```kotlin
+val v1 = 2.4.m
+val v2 = 2.4.s
 
-        val exception = assertFailsWith<IllegalArgumentException>(
-            block = { v1 >= v2 }
-        )
-        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+val exception = assertFailsWith<IllegalArgumentException>(
+    block = { v1 >= v2 }
+)
+assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+```
 
 or:
 
-        val v1 = 2.4.m*kg/s
-        val v2 = 2.4.s*m3/ μV
+```kotlin
+val v1 = 2.4.m*kg/s
+val v2 = 2.4.s*m3/ μV
 
-        val exception = assertFailsWith<IllegalArgumentException>(
-            block = { v1 >= v2 }
-        )
-        assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+val exception = assertFailsWith<IllegalArgumentException>(
+    block = { v1 >= v2 }
+)
+assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
+```
 
 ### 1.5 Pretty print
 
 Values of physical objects can be presented using the built-in function **show()** 
 similar to the way they are presented in technical articles.
 
-        val s = 4.m * 5.m
-        assertEquals("20 m2", s.show("%.0f"))
-        val x = 20.l
-        val format = "%.2f"
-        assertEquals("0,02 m3", x.show(format))
-        val h = x/s
-        assertEquals("0,001 m", h.show("%.3f"))
-        val y = 3.1415927.m
-        assertEquals("3,142 m", y.show("%.3f"))
+```kotlin
+val s = 4.m * 5.m
+assertEquals("20 m2", s.show("%.0f"))
+val x = 20.l
+val format = "%.2f"
+assertEquals("0,02 m3", x.show(format))
+val h = x/s
+assertEquals("0,001 m", h.show("%.3f"))
+val y = 3.1415927.m
+assertEquals("3,142 m", y.show("%.3f"))
+```
 
 ## 2. How to use
 
@@ -134,43 +150,45 @@ similar to the way they are presented in technical articles.
 KotUniL distributed as Kotlin-library via MavenCentral.
 Dependency for **build.gradle.kts**:
 
-        repositories {
-            mavenCentral()
-        }
+```kotlin
+repositories {
+    mavenCentral()
+}
 
-        dependencies {
-            implementation("eu.sirotin.kotunil:all:3.0.0")
-        }
+dependencies {
+    implementation("eu.sirotin.kotunil:all:3.0.0")
+}
+```
 
 Dependency for Maven/pom:
 
-        <dependency>
-            <groupId>eu.sirotin.kotunil</groupId>
-            <artifactId>all</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+```xml
+<dependency>
+    <groupId>eu.sirotin.kotunil</groupId>
+    <artifactId>all</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```
 
 ### 2.2 Development mode
 
 At the moment KotUniL is developing rapidly. 
 To enable you to try the latest features of KotUniL use the following configuration at KTS:
 
-        ...
-             implementation("eu.sirotin.kotunil:all:+")
-        ...
+```kotlin
+implementation("eu.sirotin.kotunil:all:+")
+```
 
 and by Maven:
 
-        ...
-            <version>LATEST</version>
-        ...
-
-
+```xml
+<version>LATEST</version>
+```
 
 ### 2.3 Using only source code
 If you want to use it as source code, 
 copy into your project all production files from 
-**src/main/kotlin/eu/sirotin/kotunil** except the package **generator**.
+**[src/main/kotlin/eu/sirotin/kotunil](src/main/kotlin/eu/sirotin/kotunil)** except the package **generator**.
 
 
 ## 3. Deeper into details
@@ -186,13 +204,17 @@ You can define a physical unit by multiplying
 a value at unit variable or from a number (Double, Int etc.) 
 if you write SI symbol after a dot after a number.
 
-    1*s == 1.0.s
-    s == 1.s
-    s = 1.0.s
+```kotlin
+1*s == 1.0.s
+s == 1.s
+s = 1.0.s
+```
 
 In special cases you can also create unit using a class constructor.
 
-    Second(1.0) == 1.s
+```kotlin
+Second(1.0) == 1.s
+```
 
 | SI Base Unit | Unit symbol |
 |--------------|-------------|
@@ -263,12 +285,14 @@ To prepare hot water for tea with boilers with 500 watt strength,
 the water should be boiled for 8 min.
 The question, is stored in memory electricity enough for that?
 
+```kotlin
         val producedElectricity = 12.V * 7.A * 2.h
         val savedElectricity = producedElectricity * 85.`%`
         val neededElectricity = 0.5.kW * 8.min
         val dif = savedElectricity - neededElectricity
         assertTrue(dif < 0.W*h) //Comparison in KotUniL
         assertTrue(dif.value < 0) //Comparison dimensionless
+```
 
 Note that for convenience we use here the symbol `%`. 
 This is also extension of Kotlin in our library.
@@ -287,8 +311,10 @@ Most derived units can be derived from Based Units
 or from other Derived Units in different ways.  
 Look at the example of Tesla:
 
-    assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
-    assertEquals(T,	Wb/ m2)
+```kotlin
+assertEquals(T,	kg * (s `^` -2) * (A `^` -1))
+assertEquals(T,	Wb/ m2)
+```
 
 ### 3.3 Own Derive Units
 
@@ -302,6 +328,7 @@ what proportion will be melted in 5 hours at 20 °C?
 The code below also shows the nice side of Kotlin - 
 a possibility to use Unicode symbols, e.g. Greek letters.
 
+```kotlin
         val ζ = 10.μm/(h*K) //melting speed
         val τ = 10.cm
         val t = 20.`°C`
@@ -309,6 +336,7 @@ a possibility to use Unicode symbols, e.g. Greek letters.
         val σ = ζ*ξ //melting height
         val α = σ/τ //melting ration
         assertEquals(1.0, α.`as %`, ε) //α.`as %` - Ratio presented in percents
+```
 
 Please note, how you can present calculation result in percents: 
 **α.`as %`** - ratio presented in percents.
@@ -325,37 +353,39 @@ The table of prefixes and their values can be seen
 in the table below. 
 
 | Prefix | Symbol | Degree |
-|--|-----|--------|
-| quetta | Q   | 30     | 
-| ronna | R   | 27     | 
-| yotta | Y   | 24     | 
-| zetta | Z   | 21     | 
-| exa | E   | 18     | 
-| peta | P   | 15     | 
-| tera | T   | 12     | 
-| giga | G   | 9      | 
-| mega | M   | 6      | 
-| kilo | k   | 3      | 
-| hecto | h   | 2      | 
-| deca | da  | 1      | 
-| deci | d   | -1     | 
-| centi | c   | -2     | 
-| milli | m   | -3     | 
-| micro | μ   | -6     | 
-| nano | n   | -9     | 
-| pico | p   | -12    | 
-| femto | f   | -15    | 
-| atto | a   | -18    | 
-| zepto | z   | -21    | 
-| yocto | y   | -24    |
-| ronto | r    | -27    |
-| quecto | q   | -30    |
+|--------|--------|--------|
+| quetta | Q      | 30     | 
+| ronna  | R      | 27     | 
+| yotta  | Y      | 24     | 
+| zetta  | Z      | 21     | 
+| exa    | E      | 18     | 
+| peta   | P      | 15     | 
+| tera   | T      | 12     | 
+| giga   | G      | 9      | 
+| mega   | M      | 6      | 
+| kilo   | k      | 3      | 
+| hecto  | h      | 2      | 
+| deca   | da     | 1      | 
+| deci   | d      | -1     | 
+| centi  | c      | -2     | 
+| milli  | m      | -3     | 
+| micro  | μ      | -6     | 
+| nano   | n      | -9     | 
+| pico   | p      | -12    | 
+| femto  | f      | -15    | 
+| atto   | a      | -18    | 
+| zepto  | z      | -21    | 
+| yocto  | y      | -24    |
+| ronto  | r      | -27    |
+| quecto | q      | -30    |
 
 In example below we check that one kilometer is equal 
 to milliard of micrometer.  
 
-        val d = km - (10 `^` 9) * μm
-        assertTrue(abs(d.value) < ε)
+```kotlin
+val d = km - (10 `^` 9) * μm
+assertTrue(abs(d.value) < ε)
+```
 
 ### 3.5 Non-SI units accepted for use with SI
 
@@ -391,12 +421,14 @@ How many cisterns are needed to achieve
 the same effect as in case of rain?
 Reminder: density of watter is 1 kg/l
 
-        val s = 1.ha
-        val ω = s*100.mm //water volume
-        val ρ = kg/l //density of watter is 1 kg/l
-        val τ = ω * ρ //common water weight of rain
-        val n = τ/4.t
-        assertEquals(250.0, n.value, ε)
+```kotlin
+val s = 1.ha
+val ω = s*100.mm //water volume
+val ρ = kg/l //density of watter is 1 kg/l
+val τ = ω * ρ //common water weight of rain
+val n = τ/4.t
+assertEquals(250.0, n.value, ε)
+```
 
 ### 3.6 Currencies
 KotUniL library lets you use currencies in your calculations.
@@ -408,11 +440,13 @@ A householder has decided to cover the floor with tiles in one of his rooms.
 He has bought 16,5 sqm of tiles for 52 €/sqm.
 How much does he pay for his tiles?
 
-        val prise = 52.`€`/m2
-        val s = 16.5*m2
-        val cost = s*prise
-        assertEquals("858,00 EUR", cost.show("%.2f"))
-        assertEquals("EUR", cost.unitSymbols())
+```kotlin
+val prise = 52.`€`/m2
+val s = 16.5*m2
+val cost = s*prise
+assertEquals("858,00 EUR", cost.show("%.2f"))
+assertEquals("EUR", cost.unitSymbols())
+```
 
 ### 3.7 Things
 Sometimes you need an abstract unit like "thing". For example:
@@ -421,32 +455,43 @@ Every good guy has 30 different things per liter in his pocket.
 Jan is a good guy and his pocket is 0.3 liters big.
 How many things can his mom find in Jan's pocket? 
 
-        val p = 30.`#`/l
-        val n = 0.3.l * p
+```kotlin
+val p = 30.`#`/l
+val n = 0.3.l * p
 
-        assertEquals("9 #", n.show("%.0f"))
-        assertEquals("#", n.unitSymbols())    
+assertEquals("9 #", n.show("%.0f"))
+assertEquals("#", n.unitSymbols())    
+```
 
 ### 3.8 Full implementation of Kotlin's operators for units
 Library completely implements Kotlin's operators like:
 Unare operators:
 
-        a = +b
-        a = -b
+```kotlin
+a = +b
+a = -b
+```
 
 Augment assignments:
 
-        a +=b
-        a -=b
-        a *=b
-        a /=b
-        a %=b
+```kotlin
+a +=b
+a -=b
+a *=b
+a /=b
+a %=b
+```
 
 **Attention**: Operators
 
-    a++ 
+```kotlin
+a++ 
+```
+
 and
 
-    a-- 
+```kotlin
+a-- 
+```
 **are not implemented** due to known bugs Kotlin compiler
 (See https://youtrack.jetbrains.com/issue/KT-24800)
