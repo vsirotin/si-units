@@ -188,7 +188,7 @@ and by Maven:
 ### 2.3 Using only source code
 If you want to use it as source code, 
 copy into your project all production files from 
-**[src/main/kotlin/eu/sirotin/kotunil](src/main/kotlin/eu/sirotin/kotunil)** except the package **generator**.
+**[src/main/kotlin/eu/sirotin/kotunil](src/commonMain/kotlin/eu/sirotin/kotunil)** except the package **generator**.
 
 
 ## 3. Deeper into details
