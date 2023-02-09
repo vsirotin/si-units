@@ -14,6 +14,20 @@ internal class AmpereTest {
         assertEquals(Ampere(1.0), A)
         assertEquals(1.A , A)
     }
+    
+       @Test
+    fun testAmpereSerializationTest() {
+        //Serialization
+        val v1 = Ampere(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Ampere(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testAmpereQATest() {

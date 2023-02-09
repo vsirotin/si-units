@@ -70,6 +70,20 @@ internal class ${className}Test {
         assertEquals(${className}(1.0), $unitSymbol)
         assertEquals(1.$unitSymbol , $unitSymbol)
     }
+    
+       @Test
+    fun test${className}SerializationTest() {
+        //Serialization
+        val v1 = ${className}(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = ${className}(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
     """
 }
 

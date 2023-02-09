@@ -14,6 +14,20 @@ internal class MoleTest {
         assertEquals(Mole(1.0), mol)
         assertEquals(1.mol , mol)
     }
+    
+       @Test
+    fun testMoleSerializationTest() {
+        //Serialization
+        val v1 = Mole(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Mole(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testMoleQmolTest() {

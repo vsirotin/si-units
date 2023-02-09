@@ -14,6 +14,20 @@ internal class CandelaTest {
         assertEquals(Candela(1.0), cd)
         assertEquals(1.cd , cd)
     }
+    
+       @Test
+    fun testCandelaSerializationTest() {
+        //Serialization
+        val v1 = Candela(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Candela(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testCandelaQcdTest() {

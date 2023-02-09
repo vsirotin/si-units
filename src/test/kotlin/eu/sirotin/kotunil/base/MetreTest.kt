@@ -14,6 +14,20 @@ internal class MetreTest {
         assertEquals(Metre(1.0), m)
         assertEquals(1.m , m)
     }
+    
+       @Test
+    fun testMetreSerializationTest() {
+        //Serialization
+        val v1 = Metre(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Metre(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testMetreQmTest() {

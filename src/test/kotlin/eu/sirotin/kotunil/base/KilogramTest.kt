@@ -14,6 +14,20 @@ internal class KilogramTest {
         assertEquals(Kilogram(1.0), kg)
         assertEquals(1.kg , kg)
     }
+    
+       @Test
+    fun testKilogramSerializationTest() {
+        //Serialization
+        val v1 = Kilogram(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Kilogram(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testKilogramQkgTest() {

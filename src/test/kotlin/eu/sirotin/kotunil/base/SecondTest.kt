@@ -14,6 +14,20 @@ internal class SecondTest {
         assertEquals(Second(1.0), s)
         assertEquals(1.s , s)
     }
+    
+       @Test
+    fun testSecondSerializationTest() {
+        //Serialization
+        val v1 = Second(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Second(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testSecondQsTest() {

@@ -14,6 +14,20 @@ internal class KelvinTest {
         assertEquals(Kelvin(1.0), K)
         assertEquals(1.K , K)
     }
+    
+       @Test
+    fun testKelvinSerializationTest() {
+        //Serialization
+        val v1 = Kelvin(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = Kelvin(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        assertEquals(v1 , v2)
+    }
+    
               
     @Test
     fun testKelvinQKTest() {
