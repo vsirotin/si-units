@@ -3,8 +3,9 @@ version = "3.0.0"
 
 allprojects {
     repositories {
-        google()
         mavenCentral()
+        google()
+        gradlePluginPortal()
     }
 }
 
