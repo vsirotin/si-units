@@ -24,20 +24,4 @@ jobs:
         with:
           xcode-version: '13.4.1'
 
-      - run: ./gradlew build assembleAndroidTest dokkaHtmlMultiModule
-
-      - name: Run Tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 24
-          script: ./gradlew connectedCheck
-
-      - name: Deploy docs to website
-        if: ${{ github.ref == 'refs/heads/trunk' }}
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: site
-          FOLDER: build/dokka/htmlMultiModule
-          TARGET_FOLDER: docs/latest/
-          CLEAN: true
+      - run: ./gradlew build allTests
