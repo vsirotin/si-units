@@ -7,7 +7,15 @@
 4. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
 5. It is pure library (no plug-in, no parser etc.), it has no dependencies
 
-Let's consider some simple examples.
+## Attention, the developers!
+*Development of this project is going on in Head. 
+May be that right now the state of the source code is not stable and documentation is not updated.
+If you want to use this library easily, 
+please read the paragraph 2 "How to use" of this document. 
+There you will find the information about the last stable version of the library.*
+
+
+Let's consider some simple examples.*
 
 ## 1. Getting started
 
