@@ -306,7 +306,7 @@ internal class TutorialTest {
         val prise = 52.`€`/ m2
         val s = 16.5* m2
         val cost = s*prise
-        assertEquals("858,00 EUR", cost.show("%.2f"))
+        assertEquals("858,00 EUR", cost.show("%.2f").replace(".", ","))
         assertEquals("EUR", cost.unitSymbols())
     }
 
