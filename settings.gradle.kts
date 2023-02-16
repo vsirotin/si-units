@@ -14,3 +14,5 @@ pluginManagement {
 rootProject.name = "si-units"
 
 include(":kotunil")
+include(":kotunil-generators")
+
