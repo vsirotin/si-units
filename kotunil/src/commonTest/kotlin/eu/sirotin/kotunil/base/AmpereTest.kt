@@ -3,9 +3,9 @@ package eu.sirotin.kotunil.base
 
 import eu.sirotin.kotunil.EPS
 import eu.sirotin.kotunil.core.*
-import kotlin.math.pow
-import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.Test
+import kotlin.math.pow
 
 internal class AmpereTest {
 

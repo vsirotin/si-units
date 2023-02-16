@@ -99,7 +99,7 @@ private fun generateCurrencyClass(description: CurrencyDescription, dir: File, g
  * Generates currency classes.
  */
 fun generateCurrencies() {
-    generateCurrencies("src/main/kotlin/eu/sirotin/kotunil/currency",
+    generateCurrencies("${ROOT_PATH_SOURCE}currency",
         currencyDescriptions,
         ::generateCurrencyClass
     )

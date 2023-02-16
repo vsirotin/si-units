@@ -22,6 +22,9 @@
 
 package eu.sirotin.kotunil.generator
 
+const val ROOT_PATH_SOURCE = "kotunil/src/commonMain/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_TEST = "kotunil/src/commonTest/kotlin/eu/sirotin/kotunil/"
+
 /**
  * Generates production and test unit classes. Not relevant for library users.
  */

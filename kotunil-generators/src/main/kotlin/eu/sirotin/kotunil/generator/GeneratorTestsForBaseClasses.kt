@@ -28,7 +28,7 @@ import java.nio.file.Files
 
 fun generateTestsSiUnitsBaseClasses() {
     //Generate package directory if not exists
-    val dir = File("src/test/kotlin/eu/sirotin/kotunil/base")
+    val dir = File("${ROOT_PATH_TEST}base")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

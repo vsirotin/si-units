@@ -16,5 +16,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("eu.sirotin.kotunil.generator.GeneratorKt")
 }

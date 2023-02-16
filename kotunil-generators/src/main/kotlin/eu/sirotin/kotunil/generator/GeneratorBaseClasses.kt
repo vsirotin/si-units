@@ -54,7 +54,7 @@ data class SiUnitDescription(val name: String,
  */
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
-    val dir = File("src/main/kotlin/eu/sirotin/kotunil/base")
+    val dir = File("${ROOT_PATH_SOURCE}base")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

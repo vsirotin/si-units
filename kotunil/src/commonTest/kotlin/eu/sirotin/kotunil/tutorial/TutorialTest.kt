@@ -22,11 +22,41 @@
 
 package eu.sirotin.kotunil.tutorial
 
-import eu.sirotin.kotunil.currency.*
 import eu.sirotin.kotunil.base.A
 import eu.sirotin.kotunil.base.Ampere
+import eu.sirotin.kotunil.base.Candela
+import eu.sirotin.kotunil.base.K
+import eu.sirotin.kotunil.base.Kelvin
+import eu.sirotin.kotunil.base.Kilogram
+import eu.sirotin.kotunil.base.Metre
+import eu.sirotin.kotunil.base.Mole
+import eu.sirotin.kotunil.base.Second
+import eu.sirotin.kotunil.base.cd
+import eu.sirotin.kotunil.base.cm
+import eu.sirotin.kotunil.base.kg
+import eu.sirotin.kotunil.base.km
+import eu.sirotin.kotunil.base.m
+import eu.sirotin.kotunil.base.mm
+import eu.sirotin.kotunil.base.mol
+import eu.sirotin.kotunil.base.s
+import eu.sirotin.kotunil.base.μm
 import eu.sirotin.kotunil.core.COMPATIBILITY_ERR_PREFIX
+import eu.sirotin.kotunil.core.`^`
+import eu.sirotin.kotunil.core.div
+import eu.sirotin.kotunil.core.minus
+import eu.sirotin.kotunil.core.plus
+import eu.sirotin.kotunil.core.times
 import eu.sirotin.kotunil.core.ε
+import eu.sirotin.kotunil.currency.`€`
+import eu.sirotin.kotunil.derived.T
+import eu.sirotin.kotunil.derived.V
+import eu.sirotin.kotunil.derived.W
+import eu.sirotin.kotunil.derived.Wb
+import eu.sirotin.kotunil.derived.kW
+import eu.sirotin.kotunil.derived.μV
+import eu.sirotin.kotunil.specialunits.`#`
+import eu.sirotin.kotunil.specialunits.`%`
+import eu.sirotin.kotunil.specialunits.`as %`
 import eu.sirotin.kotunil.specialunits.h
 import eu.sirotin.kotunil.specialunits.ha
 import eu.sirotin.kotunil.specialunits.l
@@ -35,14 +65,10 @@ import eu.sirotin.kotunil.specialunits.m3
 import eu.sirotin.kotunil.specialunits.min
 import eu.sirotin.kotunil.specialunits.t
 import eu.sirotin.kotunil.specialunits.`°C`
-import eu.sirotin.kotunil.core.*
-import eu.sirotin.kotunil.specialunits.*
-import eu.sirotin.kotunil.base.*
-import eu.sirotin.kotunil.derived.*
-import kotlin.test.Test
-
-import kotlin.test.assertEquals
 import kotlin.math.abs
+import kotlin.test.Ignore
+import kotlin.test.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 import kotlin.test.assertTrue
 
@@ -111,7 +137,7 @@ internal class TutorialTest {
 
     }
 
-
+    @Ignore
     @Test
     fun testShow() {
         //Pretty print
@@ -123,11 +149,11 @@ internal class TutorialTest {
         val x = 20.l
         val format = "%.2f"
         // TODO test not running with github actions
-        //assertEquals("0,02 m3", x.show(format))
+        assertEquals("0,02 m3", x.show(format))
         val h = x / s
-        //assertEquals("0,001 m", h.show("%.3f"))
+        assertEquals("0,001 m", h.show("%.3f"))
         val y = 3.1415927.m
-        //assertEquals("3,142 m", y.show("%.3f"))
+        assertEquals("3,142 m", y.show("%.3f"))
 
     }
 
@@ -209,8 +235,8 @@ internal class TutorialTest {
 
     @Test
     fun testBaseUnits() {
-        assertTrue(Second(1.0) == 1.s)
-        assertTrue(1*s == 1.0.s)
+        assertEquals(Second(1.0), 1.s)
+        assertEquals(1*s, 1.0.s)
 
         assertEquals(Metre(1.0), 1.m)
         assertEquals(2*m, 2.m)

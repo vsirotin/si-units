@@ -235,7 +235,7 @@ dependencies {
 ### 2.4 Using only source code
 If you want to use it as source code, 
 copy into your project all production files from 
-**[src/main/kotlin/eu/sirotin/kotunil](src/commonMain/kotlin/eu/sirotin/kotunil)** except the package **generator**.
+**src/commonMain/kotlin/eu/sirotin/kotunil**.
 
 
 ## 3. Deeper into details
