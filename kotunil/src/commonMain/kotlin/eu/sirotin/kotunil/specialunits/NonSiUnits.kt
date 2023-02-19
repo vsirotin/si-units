@@ -227,15 +227,7 @@ val Expression.`as %` : Double
      */
     get()  = this.value*100.0
 
-//@Suppress("DANGEROUS_CHARACTERS")
-///**
-// * get percentage as double
-// */
-//val Expression.`as %` : Double
-//    /**
-//     * get percentage as double
-//     */
-//    get()  = this.value*100.0
+
 
 
 
