@@ -22,8 +22,10 @@
 
 package eu.sirotin.kotunil.core
 
-import java.lang.IllegalArgumentException
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import kotlin.math.pow
+
 
 /**
  * Prefix for mostly run-time errors.
@@ -71,9 +73,16 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
 
     /**
      * Generate pretty formatted representation of unit
-     * with help of [format] according Kotlin's rules for string-formatting.
+     * with help of [format] and [decimalSeparator] according [java.text.DecimalFormat].
      */
-    fun show(format: String): String = "${String.format(format, value)} ${unitSymbols()}"
+    fun show(format: String = "0", decimalSeparator: Char = ','): String {
+        val df = DecimalFormat(format)
+        val dfs = DecimalFormatSymbols.getInstance()
+        dfs.decimalSeparator = decimalSeparator
+        df.decimalFormatSymbols = dfs
+        return "${df.format(value)} ${unitSymbols()}"
+    }
+
 
     override fun toString(): String {
         return "$value ${unitSymbols()}"

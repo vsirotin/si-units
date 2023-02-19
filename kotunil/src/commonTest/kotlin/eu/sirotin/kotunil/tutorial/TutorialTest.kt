@@ -65,8 +65,8 @@ import eu.sirotin.kotunil.specialunits.m3
 import eu.sirotin.kotunil.specialunits.min
 import eu.sirotin.kotunil.specialunits.t
 import eu.sirotin.kotunil.specialunits.`°C`
+import eu.sirotin.kotunil.specialunits.π
 import kotlin.math.abs
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
@@ -137,7 +137,7 @@ internal class TutorialTest {
 
     }
 
-    @Ignore
+
     @Test
     fun testShow() {
         //Pretty print
@@ -145,17 +145,41 @@ internal class TutorialTest {
         // similar to the way they are presented in technical articles.
 
         val s = 4.m * 5.m
-        assertEquals("20 m2", s.show("%.0f"))
+        assertEquals("20 m2", s.show("0"))
         val x = 20.l
-        val format = "%.2f"
-        // TODO test not running with github actions
+        val format = "0.00"
+
         assertEquals("0,02 m3", x.show(format))
         val h = x / s
-        assertEquals("0,001 m", h.show("%.3f"))
-        val y = 3.1415927.m
-        assertEquals("3,142 m", y.show("%.3f"))
+        assertEquals("0,001 m", h.show("0.000"))
+
 
     }
+
+    @Test
+    fun testShowPi() {
+
+        val y = π.m
+
+        //Presentation as integer
+        assertEquals("3 m", y.show())
+        assertEquals("3 m", y.show("0"))
+
+        //Presentation with comma (default)
+        assertEquals("3,1 m", y.show(".0"))
+
+        assertEquals("3,142 m", y.show(".000"))
+
+        //Customized presentation with point as decimalSeparator
+        val ds = '.'
+        assertEquals("3 m", y.show("0", ds))
+
+        assertEquals("3.1 m", y.show(".0", ds))
+
+        assertEquals("3.142 m", y.show(".000", ds))
+
+    }
+
 
     //---------------Type safety
 //Physical units of the same dimension can be added, added,
@@ -333,7 +357,7 @@ internal class TutorialTest {
         val prise = 52.`€`/ m2
         val s = 16.5* m2
         val cost = s*prise
-        assertEquals("858,00 EUR", cost.show("%.2f").replace(".", ","))
+        assertEquals("858,00 EUR", cost.show(".00"))
         assertEquals("EUR", cost.unitSymbols())
     }
 
@@ -347,7 +371,7 @@ internal class TutorialTest {
         val p = 30.`#`/l
         val n = 0.3.l * p
 
-        assertEquals("9 #", n.show("%.0f"))
+        assertEquals("9 #", n.show("0"))
         assertEquals("#", n.unitSymbols())
     }
 
