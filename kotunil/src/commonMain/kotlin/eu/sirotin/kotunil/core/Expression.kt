@@ -73,7 +73,13 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
 
     /**
      * Generate pretty formatted representation of unit
-     * with help of [format] and [decimalSeparator] according [java.text.DecimalFormat].
+     * with help of [format] and [decimalSeparator].
+     * In Kotlin and Java, formatting depends on set to computer locals.
+     * Nowadays, this is sometimes infectious due to distribution of operations on clouds in different regions.
+     * That is why show() implements local-independent behavior.
+     * A comma symbol is set as a separator (DecimalSeparator) by default.
+     * You can set your own separator using the second parameter [decimalSeparator] of the function.
+     *
      */
     fun show(format: String = "0", decimalSeparator: Char = ','): String {
         val df = DecimalFormat(format)
