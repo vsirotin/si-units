@@ -29,17 +29,6 @@ class Euro(value : Double = 1.0) : Expression(value, description = descriptionEu
     */
     val EUR = Euro()
 
-    /**
-    * Creates object for hold of Euro
-    */
-    val Number.`€` : Euro
-        /**
-        * Returns value of object for hold of Euro
-        */
-        get() = Euro(this.toDouble())
-
-    /**
-    * Holder for  of Euro
-    */
-    val `€` = Euro()
+    
+    
     

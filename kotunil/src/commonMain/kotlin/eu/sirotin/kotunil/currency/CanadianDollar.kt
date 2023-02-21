@@ -29,17 +29,6 @@ class CanadianDollar(value : Double = 1.0) : Expression(value, description = des
     */
     val CAD = CanadianDollar()
 
-    /**
-    * Creates object for hold of Canadian dollar
-    */
-    val Number.`C$` : CanadianDollar
-        /**
-        * Returns value of object for hold of Canadian dollar
-        */
-        get() = CanadianDollar(this.toDouble())
-
-    /**
-    * Holder for  of Canadian dollar
-    */
-    val `C$` = CanadianDollar()
+    
+    
     

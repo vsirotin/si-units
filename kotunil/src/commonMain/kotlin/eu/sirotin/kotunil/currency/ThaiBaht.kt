@@ -29,17 +29,6 @@ class ThaiBaht(value : Double = 1.0) : Expression(value, description = descripti
     */
     val THB = ThaiBaht()
 
-    /**
-    * Creates object for hold of Thai baht
-    */
-    val Number.`฿` : ThaiBaht
-        /**
-        * Returns value of object for hold of Thai baht
-        */
-        get() = ThaiBaht(this.toDouble())
-
-    /**
-    * Holder for  of Thai baht
-    */
-    val `฿` = ThaiBaht()
+    
+    
     

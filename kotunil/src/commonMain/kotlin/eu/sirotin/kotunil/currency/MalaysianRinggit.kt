@@ -29,17 +29,6 @@ class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = d
     */
     val MYR = MalaysianRinggit()
 
-    /**
-    * Creates object for hold of Malaysian ringgit
-    */
-    val Number.RM : MalaysianRinggit
-        /**
-        * Returns value of object for hold of Malaysian ringgit
-        */
-        get() = MalaysianRinggit(this.toDouble())
-
-    /**
-    * Holder for  of Malaysian ringgit
-    */
-    val RM = MalaysianRinggit()
+    
+    
     

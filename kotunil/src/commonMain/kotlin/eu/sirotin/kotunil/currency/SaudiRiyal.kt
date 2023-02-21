@@ -29,17 +29,6 @@ class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descrip
     */
     val SAR = SaudiRiyal()
 
-    /**
-    * Creates object for hold of Saudi riyal
-    */
-    val Number.`﷼ ` : SaudiRiyal
-        /**
-        * Returns value of object for hold of Saudi riyal
-        */
-        get() = SaudiRiyal(this.toDouble())
-
-    /**
-    * Holder for  of Saudi riyal
-    */
-    val `﷼ ` = SaudiRiyal()
+    
+    
     

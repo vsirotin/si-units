@@ -29,17 +29,6 @@ class JapaneseYen(value : Double = 1.0) : Expression(value, description = descri
     */
     val JPY = JapaneseYen()
 
-    /**
-    * Creates object for hold of Japanese yen
-    */
-    val Number.`¥` : JapaneseYen
-        /**
-        * Returns value of object for hold of Japanese yen
-        */
-        get() = JapaneseYen(this.toDouble())
-
-    /**
-    * Holder for  of Japanese yen
-    */
-    val `¥` = JapaneseYen()
+    
+    
     

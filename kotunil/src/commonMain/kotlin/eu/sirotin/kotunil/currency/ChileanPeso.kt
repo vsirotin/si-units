@@ -29,17 +29,6 @@ class ChileanPeso(value : Double = 1.0) : Expression(value, description = descri
     */
     val CLP = ChileanPeso()
 
-    /**
-    * Creates object for hold of Chilean peso
-    */
-    val Number.`CLP$` : ChileanPeso
-        /**
-        * Returns value of object for hold of Chilean peso
-        */
-        get() = ChileanPeso(this.toDouble())
-
-    /**
-    * Holder for  of Chilean peso
-    */
-    val `CLP$` = ChileanPeso()
+    
+    
     

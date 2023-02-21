@@ -29,17 +29,6 @@ class IndianRupee(value : Double = 1.0) : Expression(value, description = descri
     */
     val INR = IndianRupee()
 
-    /**
-    * Creates object for hold of Indian rupee
-    */
-    val Number.`₹` : IndianRupee
-        /**
-        * Returns value of object for hold of Indian rupee
-        */
-        get() = IndianRupee(this.toDouble())
-
-    /**
-    * Holder for  of Indian rupee
-    */
-    val `₹` = IndianRupee()
+    
+    
     

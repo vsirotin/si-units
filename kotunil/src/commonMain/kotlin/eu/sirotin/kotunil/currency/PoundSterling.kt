@@ -29,17 +29,6 @@ class PoundSterling(value : Double = 1.0) : Expression(value, description = desc
     */
     val GBP = PoundSterling()
 
-    /**
-    * Creates object for hold of Sterling
-    */
-    val Number.`£` : PoundSterling
-        /**
-        * Returns value of object for hold of Sterling
-        */
-        get() = PoundSterling(this.toDouble())
-
-    /**
-    * Holder for  of Sterling
-    */
-    val `£` = PoundSterling()
+    
+    
     

@@ -29,17 +29,6 @@ class NewZealandDollar(value : Double = 1.0) : Expression(value, description = d
     */
     val NZD = NewZealandDollar()
 
-    /**
-    * Creates object for hold of New Zealand dollar
-    */
-    val Number.`NZ$` : NewZealandDollar
-        /**
-        * Returns value of object for hold of New Zealand dollar
-        */
-        get() = NewZealandDollar(this.toDouble())
-
-    /**
-    * Holder for  of New Zealand dollar
-    */
-    val `NZ$` = NewZealandDollar()
+    
+    
     

@@ -29,17 +29,6 @@ class PhilippinePeso(value : Double = 1.0) : Expression(value, description = des
     */
     val PHP = PhilippinePeso()
 
-    /**
-    * Creates object for hold of Philippine peso
-    */
-    val Number.`₱` : PhilippinePeso
-        /**
-        * Returns value of object for hold of Philippine peso
-        */
-        get() = PhilippinePeso(this.toDouble())
-
-    /**
-    * Holder for  of Philippine peso
-    */
-    val `₱` = PhilippinePeso()
+    
+    
     

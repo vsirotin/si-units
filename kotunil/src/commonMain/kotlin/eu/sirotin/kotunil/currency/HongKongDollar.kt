@@ -29,17 +29,6 @@ class HongKongDollar(value : Double = 1.0) : Expression(value, description = des
     */
     val HKD = HongKongDollar()
 
-    /**
-    * Creates object for hold of Hong Kong dollar
-    */
-    val Number.`HK$` : HongKongDollar
-        /**
-        * Returns value of object for hold of Hong Kong dollar
-        */
-        get() = HongKongDollar(this.toDouble())
-
-    /**
-    * Holder for  of Hong Kong dollar
-    */
-    val `HK$` = HongKongDollar()
+    
+    
     

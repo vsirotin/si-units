@@ -29,17 +29,6 @@ class SouthKoreanWon(value : Double = 1.0) : Expression(value, description = des
     */
     val KRW = SouthKoreanWon()
 
-    /**
-    * Creates object for hold of  South Korean won
-    */
-    val Number.`₩` : SouthKoreanWon
-        /**
-        * Returns value of object for hold of  South Korean won
-        */
-        get() = SouthKoreanWon(this.toDouble())
-
-    /**
-    * Holder for  of  South Korean won
-    */
-    val `₩` = SouthKoreanWon()
+    
+    
     

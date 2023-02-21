@@ -25,25 +25,28 @@
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.base.Kelvin
+import kotlin.js.JsName
 
 /**
  * temperature relative to 273.15 K
  */
-val Number.`°C`: Kelvin
-    get()  = Kelvin(this.toDouble() + 273.15)
+@JsName("toDegreeKelvin")
+fun Number.`°C`(): Kelvin = Kelvin(this.toDouble() + 273.15)
 
 /**
  * temperature relative to 273.15 K
  */
-val Number.`℃`: Kelvin
-    get()  = this.`°C`
+@JsName("toKelvin")
+fun Number.`℃`(): Kelvin = this.`°C`()
 
 /**
  * temperature relative to 273.15 K
  */
-val `°C` = 1.`°C`
+@JsName("toDegreeCelsius")
+val `°C` = 1.`°C`()
 
 /**
  * temperature relative to 273.15 K
  */
+@JsName("degreeKelvin")
 val `℃` = `°C`

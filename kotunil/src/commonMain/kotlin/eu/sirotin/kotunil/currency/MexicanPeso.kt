@@ -29,17 +29,6 @@ class MexicanPeso(value : Double = 1.0) : Expression(value, description = descri
     */
     val MXN = MexicanPeso()
 
-    /**
-    * Creates object for hold of Mexican peso
-    */
-    val Number.`$` : MexicanPeso
-        /**
-        * Returns value of object for hold of Mexican peso
-        */
-        get() = MexicanPeso(this.toDouble())
-
-    /**
-    * Holder for  of Mexican peso
-    */
-    val `$` = MexicanPeso()
+    
+    
     

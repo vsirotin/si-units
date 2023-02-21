@@ -29,17 +29,6 @@ class CzechKoruna(value : Double = 1.0) : Expression(value, description = descri
     */
     val CZK = CzechKoruna()
 
-    /**
-    * Creates object for hold of  Czech koruna
-    */
-    val Number.`Kč` : CzechKoruna
-        /**
-        * Returns value of object for hold of  Czech koruna
-        */
-        get() = CzechKoruna(this.toDouble())
-
-    /**
-    * Holder for  of  Czech koruna
-    */
-    val `Kč` = CzechKoruna()
+    
+    
     

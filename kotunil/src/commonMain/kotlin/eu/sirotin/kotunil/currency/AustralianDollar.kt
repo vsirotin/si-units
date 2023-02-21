@@ -29,17 +29,6 @@ class AustralianDollar(value : Double = 1.0) : Expression(value, description = d
     */
     val AUD = AustralianDollar()
 
-    /**
-    * Creates object for hold of Australian dollar
-    */
-    val Number.`A$` : AustralianDollar
-        /**
-        * Returns value of object for hold of Australian dollar
-        */
-        get() = AustralianDollar(this.toDouble())
-
-    /**
-    * Holder for  of Australian dollar
-    */
-    val `A$` = AustralianDollar()
+    
+    
     
