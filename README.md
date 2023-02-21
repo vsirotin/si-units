@@ -1,3 +1,5 @@
+[![Maven Central](https://img.shields.io/maven-central/v/eu.sirotin.kotunil/all)](https://mvnrepository.com/artifact/eu.sirotin.kotunil/all)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 # KotUniL
 
 ![alt Genesis rules of International System of Units_(Source: Wikipedia) ](https://github.com/vsirotin/si-units/blob/main/docs/images/si-genesis.png)
