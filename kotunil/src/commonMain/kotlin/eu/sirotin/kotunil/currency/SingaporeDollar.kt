@@ -29,17 +29,6 @@ class SingaporeDollar(value : Double = 1.0) : Expression(value, description = de
     */
     val SGD = SingaporeDollar()
 
-    /**
-    * Creates object for hold of Singapore dollar
-    */
-    val Number.`S$` : SingaporeDollar
-        /**
-        * Returns value of object for hold of Singapore dollar
-        */
-        get() = SingaporeDollar(this.toDouble())
-
-    /**
-    * Holder for  of Singapore dollar
-    */
-    val `S$` = SingaporeDollar()
+    
+    
     

@@ -141,19 +141,8 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     */
     val $code = $name()
 
-    /**
-    * Creates object for hold of $desc
-    */
-    val Number.$symbol : $name
-        /**
-        * Returns value of object for hold of $desc
-        */
-        get() = $name(this.toDouble())
-
-    /**
-    * Holder for  of $desc
-    */
-    val $symbol = $name()
+    
+    
     """
 }
 

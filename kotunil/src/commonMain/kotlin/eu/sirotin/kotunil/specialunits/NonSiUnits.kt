@@ -28,8 +28,12 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
+import kotlin.js.JsName
+import kotlin.jvm.JvmField
+import kotlin.jvm.JvmName
+import kotlin.math.E
+import kotlin.math.PI
 
-import java.lang.Math.PI
 import kotlin.math.pow
 
 /**
@@ -103,21 +107,24 @@ const val π = PI
 /**
  * Euler's number e. The numeric value of e is approximately 2.7182818284
  */
-const val e = Math.E
+const val e = E
 
 /**
  * degree
  */
+@JsName("degree")
 val `°` = (PI/180)*rad
 
 /**
  * arcminute
  */
+@JsName("arcMinute")
 val `′` = `°` / 60.0
 
 /**
  * arcsecond
  */
+@JsName("arcSecond")
 val `″` = `′` / 60.0
 
 /**
@@ -204,29 +211,33 @@ val eV = 1.eV
 /**
  * Percentage
  */
-@Suppress("DANGEROUS_CHARACTERS")
-val Number.`%`: Double
+// TODO iOS invalid name
+//@Suppress("DANGEROUS_CHARACTERS")
+//@JsName("getPercentage")
+//val Number.`%`: Double
     /**
      * get Percentage
      */
-    get()  = this.toDouble()*0.01
+  //  get()  = this.toDouble()*0.01
 
-@Suppress("DANGEROUS_CHARACTERS")
+//@Suppress("DANGEROUS_CHARACTERS")
 /**
  * Percentage
  */
-val `%` = 0.01
+//@JsName("getPercentage")
+//val `%` = 0.01
 
-@Suppress("DANGEROUS_CHARACTERS")
+//@Suppress("DANGEROUS_CHARACTERS")
 /**
  * Percentage as double
  */
+/*
 val Expression.`as %` : Double
     /**
      * get percentage as double
      */
     get()  = this.value*100.0
-
+*/
 
 
 

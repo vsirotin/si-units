@@ -29,17 +29,6 @@ class PolishZłoty(value : Double = 1.0) : Expression(value, description = descr
     */
     val PLN = PolishZłoty()
 
-    /**
-    * Creates object for hold of Polish złoty
-    */
-    val Number.`zł` : PolishZłoty
-        /**
-        * Returns value of object for hold of Polish złoty
-        */
-        get() = PolishZłoty(this.toDouble())
-
-    /**
-    * Holder for  of Polish złoty
-    */
-    val `zł` = PolishZłoty()
+    
+    
     

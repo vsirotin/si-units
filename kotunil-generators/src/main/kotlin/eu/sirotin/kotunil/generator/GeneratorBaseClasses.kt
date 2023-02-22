@@ -95,7 +95,10 @@ package eu.sirotin.kotunil.base
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 import kotlin.math.pow
+import kotlin.jvm.JvmName
+
 private val description$className = UnitSpecification(
     "$unitSymbol",
     "$dimensionSymbol",

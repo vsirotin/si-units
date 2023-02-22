@@ -22,7 +22,7 @@
 
 package eu.sirotin.kotunil.core
 
-import java.lang.IllegalArgumentException
+
 import kotlin.math.abs
 
 /**

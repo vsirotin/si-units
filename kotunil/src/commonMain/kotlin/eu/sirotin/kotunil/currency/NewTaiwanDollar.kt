@@ -29,17 +29,6 @@ class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = de
     */
     val TWD = NewTaiwanDollar()
 
-    /**
-    * Creates object for hold of New Taiwan dollar
-    */
-    val Number.`NT$` : NewTaiwanDollar
-        /**
-        * Returns value of object for hold of New Taiwan dollar
-        */
-        get() = NewTaiwanDollar(this.toDouble())
-
-    /**
-    * Holder for  of New Taiwan dollar
-    */
-    val `NT$` = NewTaiwanDollar()
+    
+    
     

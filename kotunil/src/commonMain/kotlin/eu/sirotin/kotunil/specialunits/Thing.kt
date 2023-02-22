@@ -40,6 +40,7 @@ class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**
  * Creates Thing-Object for current number value. Thing represent some object.
  */
+/*
 val Number.`#` : Thing
     /**
      * Returns Thing-Object for current number value.
@@ -50,3 +51,5 @@ val Number.`#` : Thing
  * Thing-unit for representation of some object.
  */
 val `#` = Thing(1.0)
+
+ */

@@ -22,10 +22,10 @@
 
 package eu.sirotin.kotunil.core
 
-import java.text.DecimalFormat
-import java.text.DecimalFormatSymbols
-import kotlin.math.pow
 
+import eu.sirotin.kotunil.utils.formatValue
+import kotlin.js.JsName
+import kotlin.math.pow
 
 /**
  * Prefix for mostly run-time errors.
@@ -41,7 +41,7 @@ const val ε = 1.0E-12
  * Implements expression of unit with given [value] and [dimensions]
  * @constructor Creates expression of unit with given [value] and [dimensions]
  */
-open class Expression(var value: Double, val dimensions: Dimensions): Comparable<Expression>, UnitPresentation {
+open class Expression(var value: Double, val dimensions: Dimensions) : Comparable<Expression>, UnitPresentation {
 
     constructor(value: Double = 1.0, description: UnitSpecification<*>)
             : this(value, Dimensions(setOf(Factor(description))))
@@ -63,7 +63,7 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
      * Returns representation of unit as sequence of separate union symbols
      * and their powers according SI-Standard recommendations.
      */
-    override fun unitSymbols() : String = dimensions.unitSymbols()
+    override fun unitSymbols(): String = dimensions.unitSymbols()
 
     /**
      * Returns representation of unit as sequence of separate category symbols
@@ -81,14 +81,9 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
      * You can set your own separator using the second parameter [decimalSeparator] of the function.
      *
      */
-    fun show(format: String = "0", decimalSeparator: Char = ','): String {
-        val df = DecimalFormat(format)
-        val dfs = DecimalFormatSymbols.getInstance()
-        dfs.decimalSeparator = decimalSeparator
-        df.decimalFormatSymbols = dfs
-        return "${df.format(value)} ${unitSymbols()}"
-    }
+    fun show(format: String = "0", decimalSeparator: Char = ','): String =
 
+        "${formatValue(format, value, decimalSeparator)} ${unitSymbols()}"
 
     override fun toString(): String {
         return "$value ${unitSymbols()}"
@@ -97,7 +92,11 @@ open class Expression(var value: Double, val dimensions: Dimensions): Comparable
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
 
-        try {other as Expression} catch(e: Throwable){return false}
+        try {
+            other as Expression
+        } catch (e: Throwable) {
+            return false
+        }
 
         if (value != other.value) return false
         if (dimensions != other.dimensions) return false
@@ -122,11 +121,13 @@ fun Expression.pow(degree: Number): Expression {
 /**
  * Allows to power an number to given [degree]
  */
+@JsName("powNumber")
 infix fun Number.`^`(degree: Number) = this.toDouble().pow(degree.toDouble())
 
 /**
  * Allows to power an expression to given [degree]
  */
+@JsName("powExpression")
 infix fun Expression.`^`(degree: Number) = this.pow(degree)
 
 /**
@@ -175,23 +176,23 @@ operator fun Expression.div(x: Number): Expression = 1 / (x.toDouble() / this)
 /**
  * Allows to calculate the remainder of truncating division of this value by the other value.
  */
-operator fun Expression.rem(other: Expression): Expression  {
+operator fun Expression.rem(other: Expression): Expression {
     val v1 = this.value
     val v2 = other.value
     val res = this / other
-    res.value *=  (v2 / v1) * (v1 % v2)
+    res.value *= (v2 / v1) * (v1 % v2)
     return res
 }
 
 /**
  * Implementation of `+=`
  */
-operator fun Expression.unaryPlus()  = Expression(this.value.unaryPlus(), this.dimensions)
+operator fun Expression.unaryPlus() = Expression(this.value.unaryPlus(), this.dimensions)
 
 /**
  * Implementation of `-=`
  */
-operator fun Expression.unaryMinus()  = Expression(this.value.unaryMinus(), this.dimensions)
+operator fun Expression.unaryMinus() = Expression(this.value.unaryMinus(), this.dimensions)
 
 
 

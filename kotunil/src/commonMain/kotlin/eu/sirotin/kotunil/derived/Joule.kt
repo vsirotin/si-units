@@ -5,7 +5,9 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
+import kotlin.jvm.JvmField
 import kotlin.math.pow
+import kotlin.jvm.JvmName
 
 private val unit =  kg*(m2)/(s `^` 2)
 

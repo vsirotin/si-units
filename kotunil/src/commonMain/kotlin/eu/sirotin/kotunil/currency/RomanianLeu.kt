@@ -29,17 +29,6 @@ class RomanianLeu(value : Double = 1.0) : Expression(value, description = descri
     */
     val RON = RomanianLeu()
 
-    /**
-    * Creates object for hold of Romanian leu
-    */
-    val Number.L : RomanianLeu
-        /**
-        * Returns value of object for hold of Romanian leu
-        */
-        get() = RomanianLeu(this.toDouble())
-
-    /**
-    * Holder for  of Romanian leu
-    */
-    val L = RomanianLeu()
+    
+    
     

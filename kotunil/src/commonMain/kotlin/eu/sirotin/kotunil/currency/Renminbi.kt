@@ -29,17 +29,6 @@ class Renminbi(value : Double = 1.0) : Expression(value, description = descripti
     */
     val CNY = Renminbi()
 
-    /**
-    * Creates object for hold of Renminbi
-    */
-    val Number.`人民币` : Renminbi
-        /**
-        * Returns value of object for hold of Renminbi
-        */
-        get() = Renminbi(this.toDouble())
-
-    /**
-    * Holder for  of Renminbi
-    */
-    val `人民币` = Renminbi()
+    
+    
     

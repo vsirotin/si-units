@@ -29,17 +29,6 @@ class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = d
     */
     val ILS = IsraeliNewShekel()
 
-    /**
-    * Creates object for hold of Israeli new shekel
-    */
-    val Number.`₪` : IsraeliNewShekel
-        /**
-        * Returns value of object for hold of Israeli new shekel
-        */
-        get() = IsraeliNewShekel(this.toDouble())
-
-    /**
-    * Holder for  of Israeli new shekel
-    */
-    val `₪` = IsraeliNewShekel()
+    
+    
     

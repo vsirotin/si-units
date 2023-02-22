@@ -29,17 +29,6 @@ class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description =
     */
     val USD = UnitedStatesDollar()
 
-    /**
-    * Creates object for hold of United States dollar
-    */
-    val Number.`US$` : UnitedStatesDollar
-        /**
-        * Returns value of object for hold of United States dollar
-        */
-        get() = UnitedStatesDollar(this.toDouble())
-
-    /**
-    * Holder for  of United States dollar
-    */
-    val `US$` = UnitedStatesDollar()
+    
+    
     

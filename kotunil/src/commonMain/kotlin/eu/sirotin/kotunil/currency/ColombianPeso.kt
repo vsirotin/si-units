@@ -29,17 +29,6 @@ class ColombianPeso(value : Double = 1.0) : Expression(value, description = desc
     */
     val COP = ColombianPeso()
 
-    /**
-    * Creates object for hold of Colombian peso
-    */
-    val Number.`COL$` : ColombianPeso
-        /**
-        * Returns value of object for hold of Colombian peso
-        */
-        get() = ColombianPeso(this.toDouble())
-
-    /**
-    * Holder for  of Colombian peso
-    */
-    val `COL$` = ColombianPeso()
+    
+    
     

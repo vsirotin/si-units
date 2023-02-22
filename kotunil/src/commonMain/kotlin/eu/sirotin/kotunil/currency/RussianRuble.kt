@@ -29,17 +29,6 @@ class RussianRuble(value : Double = 1.0) : Expression(value, description = descr
     */
     val RUB = RussianRuble()
 
-    /**
-    * Creates object for hold of Russian ruble
-    */
-    val Number.`₽` : RussianRuble
-        /**
-        * Returns value of object for hold of Russian ruble
-        */
-        get() = RussianRuble(this.toDouble())
-
-    /**
-    * Holder for  of Russian ruble
-    */
-    val `₽` = RussianRuble()
+    
+    
     
