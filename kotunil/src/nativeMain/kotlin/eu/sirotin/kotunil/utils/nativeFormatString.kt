@@ -4,10 +4,15 @@ import kotlin.math.pow
 import kotlin.math.roundToInt
 
 actual fun formatValue(format: String, value: Double, decimalSeparator: Char): String {
-    val decimalPoints = format.substringAfterLast('.').length
+    val regex = """([.,])""".toRegex()
+    val decimalPoints = if (format.contains('.') || format.contains(',')) {
+        val normalized = regex.replace(format, ".")
+        normalized.substringAfterLast('.').length
+    } else {
+        1
+    }
 
     val factor = 10.0.pow(decimalPoints.toDouble())
     val formatted = ((value * factor).roundToInt() / factor).toString()
-    val regex = """([.,])""".toRegex()
     return regex.replace(formatted, "$decimalSeparator")
 }

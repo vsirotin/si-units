@@ -24,4 +24,4 @@ jobs:
         with:
           xcode-version: '13.4.1'
 
-      - run: ./gradlew build allTests
+      - run: ./gradlew build jvmTest

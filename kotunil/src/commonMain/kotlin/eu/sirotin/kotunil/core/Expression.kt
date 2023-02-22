@@ -86,7 +86,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
         "${formatValue(format, value, decimalSeparator)} ${unitSymbols()}"
 
     override fun toString(): String {
-        return "${formatValue("0.00", value, '.')} ${unitSymbols()}"
+        return "$value ${unitSymbols()}"
     }
 
     override fun equals(other: Any?): Boolean {
