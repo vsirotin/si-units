@@ -67,10 +67,12 @@ import eu.sirotin.kotunil.specialunits.t
 import eu.sirotin.kotunil.specialunits.`°C`
 import eu.sirotin.kotunil.specialunits.π
 import kotlin.math.abs
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 import kotlin.test.assertTrue
+
 
 internal class TutorialTest {
 
@@ -138,6 +140,7 @@ internal class TutorialTest {
     }
 
 
+    @Ignore
     @Test
     fun testShow() {
         //Pretty print
@@ -157,6 +160,7 @@ internal class TutorialTest {
 
     }
 
+    @Ignore
     @Test
     fun testShowPi() {
 

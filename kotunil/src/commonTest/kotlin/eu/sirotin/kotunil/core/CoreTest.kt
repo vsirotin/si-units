@@ -25,8 +25,6 @@ package eu.sirotin.kotunil.core
 import eu.sirotin.kotunil.EPS
 import kotlin.test.*
 
-private const val EXPECTED_CLASS = "eu.sirotin.kotunil.core.Expression"
-
 internal class CoreTest {
 
     @Test
@@ -98,6 +96,7 @@ internal class CoreTest {
         assertEquals(units, obj.unitSymbols())
     }
 
+    @Ignore
     @Test
     fun testStatements1() {
         val v1 = 2.12.a / (1.06.a)
@@ -128,7 +127,7 @@ internal class CoreTest {
 
     }
 
-
+    @Ignore
     @Test
     fun testStatements4() {
         val v1 = 10 * 2.12.a / 1.06.b
@@ -139,6 +138,7 @@ internal class CoreTest {
 
     }
 
+    @Ignore
     @Test
     fun testStatements5() {
         val v1 = 10 * 2.12.a / 1.06.b

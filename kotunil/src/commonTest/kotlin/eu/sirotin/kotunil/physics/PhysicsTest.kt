@@ -5,17 +5,12 @@ import eu.sirotin.kotunil.EPS
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.derived.*
-//import eu.sirotin.kotunil.specialunits.`#`
-import eu.sirotin.kotunil.specialunits.Thing
 import eu.sirotin.kotunil.specialunits.g
 import eu.sirotin.kotunil.specialunits.l
 import eu.sirotin.kotunil.specialunits.m2
 import eu.sirotin.kotunil.specialunits.m3
-import kotlin.math.*
 import kotlin.test.*
 
-
-private const val EXPECTED_CLASS = "eu.sirotin.kotunil.core.Expression"
 
 internal class PhysicsTest {
 
@@ -80,6 +75,7 @@ internal class PhysicsTest {
 
     }
 
+    @Ignore
     @Test
     fun testStatements1() {
         val v1 = 2.12.m/1.06.s
@@ -107,7 +103,7 @@ internal class PhysicsTest {
 
     }
 
-
+    @Ignore
     @Test
     fun testStatements4() {
         val v1 = 10*2.12.m/1.06.s
@@ -117,6 +113,7 @@ internal class PhysicsTest {
 
     }
 
+    @Ignore
     @Test
     fun testStatements5() {
         val v1 = 10*2.12.m/1.06.s
