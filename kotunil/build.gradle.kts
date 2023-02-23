@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform")
+    id("org.jetbrains.dokka")
     id("com.vanniktech.maven.publish")
 }
 
@@ -23,14 +24,14 @@ kotlin {
     iosX64()
     js(IR) {
         val timeoutMs = "1000000"
-        browser{
+        browser {
             testTask {
                 useMocha {
                     timeout = timeoutMs
                 }
             }
         }
-        nodejs{
+        nodejs {
             testTask {
                 useMocha {
                     timeout = timeoutMs
@@ -59,8 +60,8 @@ kotlin {
             dependsOn(commonMain)
         }
         names.forEach { n ->
-            if (n.contains("X64Main") || n.contains("Arm64Main")){
-                this@sourceSets.getByName(n).apply{
+            if (n.contains("X64Main") || n.contains("Arm64Main")) {
+                this@sourceSets.getByName(n).apply {
                     dependsOn(nativeMain)
                 }
             }
