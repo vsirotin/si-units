@@ -75,21 +75,17 @@ internal class PhysicsTest {
 
     }
 
-    @Ignore
     @Test
     fun testStatements1() {
         val v1 = 2.12.m/1.06.s
         assertEquals(2.0, v1.value)
-        assertEquals("2.0 m/s", v1.toString())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
-    }
+     }
 
     @Test
     fun testStatements2() {
         val v1 = 2.12.m/ s
         assertEquals(2.12, v1.value)
-        assertEquals("2.12 m/s", v1.toString())
+        assertEquals("m/s", v1.unitSymbols())
         // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
 
     }
@@ -98,29 +94,17 @@ internal class PhysicsTest {
     fun testStatements3() {
         val v1 = 2.12.m/1.06.s*2.3.m
         assertEquals(4.6, v1.value)
-        assertEquals("4.6 m2/s", v1.toString())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
+        assertEquals("m2/s", v1.unitSymbols())
 
     }
 
-    @Ignore
+
+
     @Test
     fun testStatements4() {
         val v1 = 10*2.12.m/1.06.s
         assertEquals(20.0, v1.value)
-        assertEquals("20.0 m/s", v1.toString())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
-    }
-
-    @Ignore
-    @Test
-    fun testStatements5() {
-        val v1 = 10*2.12.m/1.06.s
-        assertEquals(20.0, v1.value)
-        assertEquals("20.0 m/s", v1.toString())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
+        assertEquals("m/s", v1.unitSymbols())
     }
 
     @Test
@@ -153,9 +137,6 @@ internal class PhysicsTest {
 
         assertEquals(2.42, v1.value)
         assertEquals("m", v1.unitSymbols())
-        assertEquals("2.42 m", v1.toString())
-        // TODO assertEquals("eu.sirotin.kotunil.base.Metre", v1::class.qualifiedName)
-
     }
 
     @Test

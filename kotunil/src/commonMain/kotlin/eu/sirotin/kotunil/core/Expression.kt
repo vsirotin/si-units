@@ -22,8 +22,6 @@
 
 package eu.sirotin.kotunil.core
 
-
-import eu.sirotin.kotunil.utils.formatValue
 import kotlin.js.JsName
 import kotlin.math.pow
 
@@ -72,19 +70,9 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     override fun categorySymbols(): String = dimensions.categorySymbols()
 
     /**
-     * Generate pretty formatted representation of unit
-     * with help of [format] and [decimalSeparator].
-     * In Kotlin and Java, formatting depends on set to computer locals.
-     * Nowadays, this is sometimes infectious due to distribution of operations on clouds in different regions.
-     * That is why show() implements local-independent behavior.
-     * A comma symbol is set as a separator (DecimalSeparator) by default.
-     * You can set your own separator using the second parameter [decimalSeparator] of the function.
-     *
+     * Represent value as string with two digit after point as decimal separator.
+     * Please pay attention: representation of value depends on platform local settings on used computer!
      */
-    fun show(format: String = "0", decimalSeparator: Char = ','): String =
-
-        "${formatValue(format, value, decimalSeparator)} ${unitSymbols()}"
-
     override fun toString(): String {
         return "$value ${unitSymbols()}"
     }
