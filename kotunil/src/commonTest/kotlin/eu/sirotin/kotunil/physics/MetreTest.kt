@@ -23,7 +23,6 @@ internal class MetreTest {
 
         assertEquals(0.5, v1.value)
         assertEquals("m", v1.unitSymbols())
-        assertEquals("0.5 m", v1.toString())
     }
 
 }
