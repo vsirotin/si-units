@@ -24,6 +24,7 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.js.JsName
 
 private val descriptionThing = UnitSpecification(
     "#",
@@ -40,6 +41,8 @@ class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**
  * Creates Thing-Object for current number value. Thing represent some object.
  */
+
+//TODO clear compatibility
 /*
 val Number.`#` : Thing
     /**
@@ -47,9 +50,9 @@ val Number.`#` : Thing
      */
     get() = Thing(this.toDouble())
 
+
 /**
  * Thing-unit for representation of some object.
  */
 val `#` = Thing(1.0)
-
  */
