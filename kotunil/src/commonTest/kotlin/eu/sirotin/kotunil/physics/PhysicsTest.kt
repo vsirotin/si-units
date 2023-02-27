@@ -86,9 +86,7 @@ internal class PhysicsTest {
         val v1 = 2.12.m/ s
         assertEquals(2.12, v1.value)
         assertEquals("m/s", v1.unitSymbols())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
-    }
+   }
 
     @Test
     fun testStatements3() {
@@ -97,10 +95,7 @@ internal class PhysicsTest {
         assertEquals("m2/s", v1.unitSymbols())
 
     }
-
-
-
-    @Test
+  @Test
     fun testStatements4() {
         val v1 = 10*2.12.m/1.06.s
         assertEquals(20.0, v1.value)
