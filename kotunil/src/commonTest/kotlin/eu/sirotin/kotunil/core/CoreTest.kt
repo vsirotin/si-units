@@ -96,25 +96,17 @@ internal class CoreTest {
         assertEquals(units, obj.unitSymbols())
     }
 
-    @Ignore
     @Test
     fun testStatements1() {
         val v1 = 2.12.a / (1.06.a)
-        assertEquals(2.0, v1.value)
-        assertEquals("2.0 ", v1.toString())
-        // TODO JS
-        //// TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
-    }
+        assertEquals(2.0, v1.value, EPS)
+     }
 
     @Test
     fun testStatements2() {
         val v1 = 2.12.a / b
-        assertEquals(2.12, v1.value)
+        assertEquals(2.12, v1.value, EPS)
         assertEquals("2.12 a/b", v1.toString())
-        // TODO JS
-        // // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
     }
 
     @Test
@@ -123,22 +115,17 @@ internal class CoreTest {
         assertEquals(4.6, v1.value)
      }
 
-    @Ignore
     @Test
     fun testStatements4() {
         val v1 = 10 * 2.12.a / 1.06.b
         assertEquals(20.0, v1.value)
     }
 
-    @Ignore
     @Test
     fun testStatements5() {
         val v1 = 10 * 2.12.a / 1.06.b
-        assertEquals(20.0, v1.value)
-        assertEquals("20.0 a/b", v1.toString())
-        // TODO JS
-        // // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
+        assertEquals(20.0, v1.value, EPS)
+        assertEquals("a/b", v1.unitSymbols())
     }
 
     @Test

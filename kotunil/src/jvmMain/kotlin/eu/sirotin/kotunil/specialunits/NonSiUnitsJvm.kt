@@ -24,18 +24,35 @@
 
 package eu.sirotin.kotunil.specialunits
 
-import eu.sirotin.kotunil.base.Kelvin
+import eu.sirotin.kotunil.core.Expression
 
-/**
- * temperature relative to 273.15 K
- */
-val Number.kelvin: Kelvin
+@Suppress("DANGEROUS_CHARACTERS")
+val Number.`%`: Double
     /**
-     * Returns temperature relative to 273.15 K
+     * get Percentage
      */
-    get() = Kelvin(this.toDouble() + 273.15)
+    get()  = this.toDouble()*0.01
 
+@Suppress("DANGEROUS_CHARACTERS")
 /**
- * temperature relative to 273.15 K
+ * Percentage
  */
-val kelvin = 1.kelvin
+val `%` = 0.01
+
+@Suppress("DANGEROUS_CHARACTERS")
+/**
+ * Percentage as double
+ */
+val Expression.`as %` : Double
+    /**
+     * get percentage as double
+     */
+    get()  = this.value*100.0
+
+
+
+
+
+
+
+

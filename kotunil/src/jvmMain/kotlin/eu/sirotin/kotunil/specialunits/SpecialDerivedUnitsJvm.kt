@@ -29,13 +29,19 @@ import eu.sirotin.kotunil.base.Kelvin
 /**
  * temperature relative to 273.15 K
  */
-val Number.kelvin: Kelvin
-    /**
-     * Returns temperature relative to 273.15 K
-     */
-    get() = Kelvin(this.toDouble() + 273.15)
+fun Number.`°C`(): Kelvin = Kelvin(this.toDouble() + 273.15)
 
 /**
  * temperature relative to 273.15 K
  */
-val kelvin = 1.kelvin
+fun Number.`℃`(): Kelvin = this.`°C`()
+
+/**
+ * temperature relative to 273.15 K
+ */
+val `°C` = 1.`°C`()
+
+/**
+ * temperature relative to 273.15 K
+ */
+val `℃` = `°C`

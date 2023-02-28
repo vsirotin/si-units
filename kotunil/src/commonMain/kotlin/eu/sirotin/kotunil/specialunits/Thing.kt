@@ -19,12 +19,10 @@
  *  * THE SOFTWARE.
  *
  */
-@file:Suppress("NonAsciiCharacters")
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
-import kotlin.js.JsName
 
 private val descriptionThing = UnitSpecification(
     "#",
@@ -42,9 +40,7 @@ class Thing(value: Double) : Expression(value, description = descriptionThing)
  * Creates Thing-Object for current number value. Thing represent some object.
  */
 
-//TODO clear compatibility
-/*
-val Number.`#` : Thing
+val Number.thing : Thing
     /**
      * Returns Thing-Object for current number value.
      */
@@ -54,5 +50,5 @@ val Number.`#` : Thing
 /**
  * Thing-unit for representation of some object.
  */
-val `#` = Thing(1.0)
- */
+val thing = Thing(1.0)
+

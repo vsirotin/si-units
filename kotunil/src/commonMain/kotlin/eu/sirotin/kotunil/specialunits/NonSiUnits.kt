@@ -163,7 +163,7 @@ val Number.L: Expression
     get() = this.l
 
 @JvmField()
-val L = l
+    val L = l
 
 /**
  * tonne
@@ -205,39 +205,32 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-val eV = 1.eV
+    val eV = 1.eV
 
 
 /**
  * Percentage
  */
-//TODO iOS invalid name
-//@Suppress("DANGEROUS_CHARACTERS")
-//@JsName("getPercentage")
-//val Number.`%`: Double
+val Number.percentage: Double
     /**
      * get Percentage
      */
-  //  get()  = this.toDouble()*0.01
+  get()  = this.toDouble()*0.01
 
-//@Suppress("DANGEROUS_CHARACTERS")
 /**
  * Percentage
  */
-//@JsName("getPercentage")
-//val `%` = 0.01
+    val percentage = 0.01
 
-//@Suppress("DANGEROUS_CHARACTERS")
 /**
  * Percentage as double
  */
-/*
-val Expression.`as %` : Double
+val Expression.asPercentage : Double
     /**
      * get percentage as double
      */
     get()  = this.value*100.0
-*/
+
 
 
 

@@ -86,8 +86,6 @@ internal class PhysicsTest {
         val v1 = 2.12.m/ s
         assertEquals(2.12, v1.value)
         assertEquals("m/s", v1.unitSymbols())
-        // TODO assertEquals(EXPECTED_CLASS, v1::class.qualifiedName)
-
     }
 
     @Test
@@ -150,13 +148,6 @@ internal class PhysicsTest {
     fun testGramToKilogram() {
         assertEquals(100.g, 0.1.kg)
         assertEquals(100*g, 0.1.kg)
-    }
-
-    @Test
-    fun testThings() {
-        // TODO: fix this
-        //assertEquals(100.`#`, 100 * `#`)
-        //assertEquals(101.1.`#`, Thing(101.1))
     }
 
     @Test

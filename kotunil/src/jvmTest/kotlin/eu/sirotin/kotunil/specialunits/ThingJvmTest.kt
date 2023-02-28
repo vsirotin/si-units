@@ -5,10 +5,8 @@ import eu.sirotin.kotunil.core.div
 import eu.sirotin.kotunil.core.times
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertFailsWith
-import kotlin.test.assertTrue
 
-internal class ThingTest {
+internal class ThingJvmTest {
 
     @Test
     fun testThing() {
