@@ -71,38 +71,48 @@ data class CurrencyDescription(val name: String,
                                val symbol: String,
                                val description: String)
 
-fun generateCurrencies(
+
+/**
+ * Generates currency classes.
+ */
+fun generateCurrencies() {
+    generateFiles("${ROOT_PATH_SOURCE_COMMON}currency",
+        currencyDescriptions,
+        ::generateCurrencyClass
+    )
+
+    generateFiles("${ROOT_PATH_SOURCE_JVM}currency",
+        currencyDescriptions,
+        ::generateCurrencyJvmPart, "Jvm"
+    )
+}
+
+
+private fun generateFiles(
     dirPath: String,
     unitDescriptions: List<CurrencyDescription>,
-    generator: (CurrencyDescription) -> String
+    generator: (CurrencyDescription) -> String,
+    suffix: String = ""
 ) {
     //Generate package directory if not exists
     val dir = File(dirPath)
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes
-    unitDescriptions.forEach { generateCurrencyClass(it, dir, generator) }
+    unitDescriptions.forEach { generateFile(it, dir, generator, suffix) }
 }
 
-private fun generateCurrencyClass(description: CurrencyDescription, dir: File, generator: (CurrencyDescription) -> String) {
+private fun generateFile(description: CurrencyDescription,
+                            dir: File, generator: (CurrencyDescription) -> String,
+                            suffix: String) {
     val className = description.name
 
-    val fileName = "$className.kt"
+    val fileName = "$className$suffix.kt"
     val file = dir.resolve(fileName)
     file.delete()
     val classText = generator.invoke(description)
 
     file.writeText(classText)
-}
-
-/**
- * Generates currency classes.
- */
-fun generateCurrencies() {
-    generateCurrencies("${ROOT_PATH_SOURCE}currency",
-        currencyDescriptions,
-        ::generateCurrencyClass
-    )
 }
 
 private fun generateCurrencyClass(currencyDescription: CurrencyDescription): String {
@@ -139,10 +149,35 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     /**
     * Holder for  of $desc
     */
-    val $code = $name()
-
-    
-    
+    val $code = $name()   
     """
 }
+
+
+private fun generateCurrencyJvmPart(currencyDescription: CurrencyDescription): String {
+    val name = currencyDescription.name
+    val symbol = currencyDescription.symbol
+    val desc = currencyDescription.description
+    return """
+package eu.sirotin.kotunil.currency
+
+/**
+* Creates object for hold of $desc
+*/
+val Number.$symbol : $name
+    /**
+    * Returns value of object for hold of $desc
+    */
+    get() = $name(this.toDouble())
+
+/**
+* One unit of $desc
+*/
+val $symbol = $name() 
+    """
+}
+
+
+
+
 

@@ -27,8 +27,5 @@ class DanishKrone(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Danish krone
     */
-    val DKK = DanishKrone()
-
-    
-    
+    val DKK = DanishKrone()   
     

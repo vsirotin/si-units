@@ -27,8 +27,5 @@ class SouthKoreanWon(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of  South Korean won
     */
-    val KRW = SouthKoreanWon()
-
-    
-    
+    val KRW = SouthKoreanWon()   
     

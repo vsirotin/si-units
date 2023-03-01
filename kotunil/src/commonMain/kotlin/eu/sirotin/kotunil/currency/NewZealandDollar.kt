@@ -27,8 +27,5 @@ class NewZealandDollar(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of New Zealand dollar
     */
-    val NZD = NewZealandDollar()
-
-    
-    
+    val NZD = NewZealandDollar()   
     

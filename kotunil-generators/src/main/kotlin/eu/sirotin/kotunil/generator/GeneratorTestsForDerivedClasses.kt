@@ -28,7 +28,7 @@ import java.nio.file.Files
 
 fun generateTestsSiUnitsDerivedClasses() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_PATH_TEST}derived")
+    val dir = File("${ROOT_PATH_TEST_COMMON}derived")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

@@ -27,8 +27,5 @@ class IndonesianRupiah(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Indonesian rupiah
     */
-    val IDR = IndonesianRupiah()
-
-    
-    
+    val IDR = IndonesianRupiah()   
     

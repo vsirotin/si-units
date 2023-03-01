@@ -27,8 +27,5 @@ class SwissFranc(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Swiss franc
     */
-    val CHF = SwissFranc()
-
-    
-    
+    val CHF = SwissFranc()   
     

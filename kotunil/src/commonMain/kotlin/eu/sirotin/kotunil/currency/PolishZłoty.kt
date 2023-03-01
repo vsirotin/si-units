@@ -27,8 +27,5 @@ class PolishZłoty(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Polish złoty
     */
-    val PLN = PolishZłoty()
-
-    
-    
+    val PLN = PolishZłoty()   
     

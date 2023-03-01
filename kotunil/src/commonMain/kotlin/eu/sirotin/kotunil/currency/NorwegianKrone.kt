@@ -27,8 +27,5 @@ class NorwegianKrone(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Norwegian krone
     */
-    val NOK = NorwegianKrone()
-
-    
-    
+    val NOK = NorwegianKrone()   
     

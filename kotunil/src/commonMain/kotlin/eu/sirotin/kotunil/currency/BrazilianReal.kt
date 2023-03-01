@@ -27,8 +27,5 @@ class BrazilianReal(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Brazilian real
     */
-    val BRL = BrazilianReal()
-
-    
-    
+    val BRL = BrazilianReal()   
     

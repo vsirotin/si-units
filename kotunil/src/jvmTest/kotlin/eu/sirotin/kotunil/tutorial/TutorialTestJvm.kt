@@ -31,7 +31,7 @@ import eu.sirotin.kotunil.core.div
 import eu.sirotin.kotunil.core.minus
 import eu.sirotin.kotunil.core.times
 import eu.sirotin.kotunil.core.ε
-//import eu.sirotin.kotunil.currency.`€`
+import eu.sirotin.kotunil.currency.`€`
 import eu.sirotin.kotunil.derived.V
 import eu.sirotin.kotunil.derived.W
 import eu.sirotin.kotunil.derived.kW
@@ -49,7 +49,6 @@ import kotlin.test.assertTrue
 
 
 internal class TutorialTestJvm {
-
 
     @Test
     fun testDerivedUnitsStory() {
@@ -95,12 +94,11 @@ internal class TutorialTestJvm {
         // He has bought 16,5 sqm of tiles for 52 €/sqm.
         //How much does he pay for his tiles?
 
-        // TODO activate after properly implementation of currencies.
-        //val prise = 52.`€`/ m2
-        //val s = 16.5* m2
-        //val cost = s*prise
-        //assertEquals("858,00 EUR", cost.show("%.2f").replace(".", ","))
-        //assertEquals("EUR", cost.unitSymbols())
+        val prise = 52.`€`/ m2
+        val s = 16.5* m2
+        val cost = s*prise
+        assertEquals(858.0, cost.value)
+        assertEquals("EUR", cost.unitSymbols())
     }
 
     @Test

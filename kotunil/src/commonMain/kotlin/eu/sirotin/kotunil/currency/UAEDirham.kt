@@ -27,8 +27,5 @@ class UAEDirham(value : Double = 1.0) : Expression(value, description = descript
     /**
     * Holder for  of UAE dirham
     */
-    val AED = UAEDirham()
-
-    
-    
+    val AED = UAEDirham()   
     

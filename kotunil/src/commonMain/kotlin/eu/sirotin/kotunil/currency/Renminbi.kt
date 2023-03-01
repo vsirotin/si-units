@@ -27,8 +27,5 @@ class Renminbi(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Renminbi
     */
-    val CNY = Renminbi()
-
-    
-    
+    val CNY = Renminbi()   
     

@@ -27,8 +27,5 @@ class PhilippinePeso(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Philippine peso
     */
-    val PHP = PhilippinePeso()
-
-    
-    
+    val PHP = PhilippinePeso()   
     

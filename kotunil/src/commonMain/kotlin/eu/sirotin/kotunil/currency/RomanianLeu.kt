@@ -27,8 +27,5 @@ class RomanianLeu(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Romanian leu
     */
-    val RON = RomanianLeu()
-
-    
-    
+    val RON = RomanianLeu()   
     

@@ -27,8 +27,5 @@ class TurkishLira(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Turkish lira
     */
-    val TRY = TurkishLira()
-
-    
-    
+    val TRY = TurkishLira()   
     

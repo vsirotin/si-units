@@ -27,8 +27,5 @@ class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of New Taiwan dollar
     */
-    val TWD = NewTaiwanDollar()
-
-    
-    
+    val TWD = NewTaiwanDollar()   
     

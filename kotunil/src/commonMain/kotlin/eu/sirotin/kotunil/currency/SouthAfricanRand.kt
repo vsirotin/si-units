@@ -27,8 +27,5 @@ class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of South African rand
     */
-    val ZAR = SouthAfricanRand()
-
-    
-    
+    val ZAR = SouthAfricanRand()   
     

@@ -27,8 +27,5 @@ class ChileanPeso(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Chilean peso
     */
-    val CLP = ChileanPeso()
-
-    
-    
+    val CLP = ChileanPeso()   
     

@@ -27,8 +27,5 @@ class Euro(value : Double = 1.0) : Expression(value, description = descriptionEu
     /**
     * Holder for  of Euro
     */
-    val EUR = Euro()
-
-    
-    
+    val EUR = Euro()   
     

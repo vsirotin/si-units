@@ -27,8 +27,5 @@ class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Israeli new shekel
     */
-    val ILS = IsraeliNewShekel()
-
-    
-    
+    val ILS = IsraeliNewShekel()   
     

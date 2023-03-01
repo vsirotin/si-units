@@ -27,8 +27,5 @@ class SwedishKrona(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Swedish krona
     */
-    val SEK = SwedishKrona()
-
-    
-    
+    val SEK = SwedishKrona()   
     

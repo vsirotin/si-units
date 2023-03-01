@@ -27,8 +27,5 @@ class MexicanPeso(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Mexican peso
     */
-    val MXN = MexicanPeso()
-
-    
-    
+    val MXN = MexicanPeso()   
     

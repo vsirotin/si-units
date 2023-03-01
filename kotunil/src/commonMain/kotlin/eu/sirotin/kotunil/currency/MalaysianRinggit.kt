@@ -27,8 +27,5 @@ class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Malaysian ringgit
     */
-    val MYR = MalaysianRinggit()
-
-    
-    
+    val MYR = MalaysianRinggit()   
     

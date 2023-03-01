@@ -27,8 +27,5 @@ class IndianRupee(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Indian rupee
     */
-    val INR = IndianRupee()
-
-    
-    
+    val INR = IndianRupee()   
     

@@ -27,8 +27,5 @@ class PoundSterling(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Sterling
     */
-    val GBP = PoundSterling()
-
-    
-    
+    val GBP = PoundSterling()   
     

@@ -27,8 +27,5 @@ class HungarianForint(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of Hungarian forint
     */
-    val HUF = HungarianForint()
-
-    
-    
+    val HUF = HungarianForint()   
     
