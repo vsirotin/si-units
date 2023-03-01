@@ -100,19 +100,22 @@ internal class CoreTest {
     fun testStatements1() {
         val v1 = 2.12.a / (1.06.a)
         assertEquals(2.0, v1.value, EPS)
-     }
+        assertEquals("", v1.unitSymbols())
+
+    }
 
     @Test
     fun testStatements2() {
         val v1 = 2.12.a / b
-        assertEquals(2.12, v1.value, EPS)
-        assertEquals("2.12 a/b", v1.toString())
+        assertEquals(2.12, v1.value)
+        assertEquals("a/b", v1.unitSymbols())
     }
 
     @Test
     fun testStatements3() {
         val v1 = 2.12.a / 1.06.b * 2.3.a
         assertEquals(4.6, v1.value)
+        assertEquals("a2/b", v1.unitSymbols())
      }
 
     @Test

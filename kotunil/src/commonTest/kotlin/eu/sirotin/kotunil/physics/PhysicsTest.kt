@@ -95,9 +95,7 @@ internal class PhysicsTest {
         assertEquals("m2/s", v1.unitSymbols())
 
     }
-
-
-
+    
     @Test
     fun testStatements4() {
         val v1 = 10*2.12.m/1.06.s
