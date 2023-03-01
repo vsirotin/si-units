@@ -27,8 +27,5 @@ class AustralianDollar(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Australian dollar
     */
-    val AUD = AustralianDollar()
-
-    
-    
+    val AUD = AustralianDollar()   
     

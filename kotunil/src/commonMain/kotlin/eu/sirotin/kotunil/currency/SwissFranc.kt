@@ -27,8 +27,19 @@ class SwissFranc(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Swiss franc
     */
-    val CHF = SwissFranc()
+    val CHF = SwissFranc()   
+    
 
-    
-    
-    
+/**
+* Creates object for hold of Swiss franc
+*/
+val Number.SCHF : SwissFranc
+    /**
+    * Returns value of object for hold of Swiss franc
+    */
+    get() = SwissFranc(this.toDouble())
+
+/**
+* One unit of Swiss franc
+*/
+val SCHF = SwissFranc()

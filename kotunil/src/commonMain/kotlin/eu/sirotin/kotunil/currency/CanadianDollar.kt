@@ -27,8 +27,5 @@ class CanadianDollar(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Canadian dollar
     */
-    val CAD = CanadianDollar()
-
-    
-    
+    val CAD = CanadianDollar()   
     

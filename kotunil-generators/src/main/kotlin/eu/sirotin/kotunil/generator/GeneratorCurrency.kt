@@ -25,6 +25,12 @@ package eu.sirotin.kotunil.generator
 import java.io.File
 import java.nio.file.Files
 
+const val TEST_SYMBOL_IMPORTS = """
+import eu.sirotin.kotunil.core.div
+import eu.sirotin.kotunil.core.times
+import eu.sirotin.kotunil.specialunits.m3   
+"""
+
 /**
  * List of most traded currencies
  */
@@ -63,7 +69,7 @@ val currencyDescriptions = listOf(
     CurrencyDescription("MalaysianRinggit", "MYR", "RM", "Malaysian ringgit"),
     CurrencyDescription("ColombianPeso", "COP", "`COL$`", "Colombian peso"),
     CurrencyDescription("RussianRuble", "RUB", "`₽`", "Russian ruble"),
-    CurrencyDescription("RomanianLeu", "RON", "L", "Romanian leu")
+    CurrencyDescription("RomanianLeu", "RON", "RL", "Romanian leu") //to avoid conflict with liter
 )
 
 data class CurrencyDescription(val name: String,
@@ -71,38 +77,65 @@ data class CurrencyDescription(val name: String,
                                val symbol: String,
                                val description: String)
 
-fun generateCurrencies(
+
+/**
+ * Generates currency classes and their Jvm parts.
+ */
+fun generateCurrencies() {
+    generateFiles("${ROOT_PATH_SOURCE_COMMON}currency",
+        currencyDescriptions,
+        ::generateCurrencyClass
+    )
+
+    generateFiles("${ROOT_PATH_SOURCE_JVM}currency",
+        currencyDescriptions,
+        ::generateCurrencyJvmPart, "Jvm"
+    )
+}
+
+/**
+ * Generates common and jvm-specific currency tests.
+ */
+fun generateTestsCurrencies() {
+    generateFiles("${ROOT_PATH_TEST_COMMON}currency",
+        currencyDescriptions,
+        ::generateCurrencyTestClass, "Test"
+    )
+
+    generateFiles("${ROOT_PATH_TEST_JVM}currency",
+        currencyDescriptions,
+        ::generateCurrencyTestJvmPart, "JvmTest"
+    )
+}
+
+
+private fun generateFiles(
     dirPath: String,
     unitDescriptions: List<CurrencyDescription>,
-    generator: (CurrencyDescription) -> String
+    generator: (CurrencyDescription) -> String,
+    suffix: String = ""
 ) {
     //Generate package directory if not exists
     val dir = File(dirPath)
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
-    //Generate classes
-    unitDescriptions.forEach { generateCurrencyClass(it, dir, generator) }
+    //Generate File
+    unitDescriptions.forEach { generateFile(it, dir, generator, suffix) }
 }
 
-private fun generateCurrencyClass(description: CurrencyDescription, dir: File, generator: (CurrencyDescription) -> String) {
+private fun generateFile(description: CurrencyDescription,
+                            dir: File, generator: (CurrencyDescription) -> String,
+                            suffix: String) {
+    val classText = generator.invoke(description)
+    if(classText.isEmpty())return
+
     val className = description.name
 
-    val fileName = "$className.kt"
+    val fileName = "$className$suffix.kt"
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generator.invoke(description)
 
     file.writeText(classText)
-}
-
-/**
- * Generates currency classes.
- */
-fun generateCurrencies() {
-    generateCurrencies("${ROOT_PATH_SOURCE}currency",
-        currencyDescriptions,
-        ::generateCurrencyClass
-    )
 }
 
 private fun generateCurrencyClass(currencyDescription: CurrencyDescription): String {
@@ -110,7 +143,7 @@ private fun generateCurrencyClass(currencyDescription: CurrencyDescription): Str
     val code = currencyDescription.code
     val symbol = currencyDescription.symbol
     val desc = currencyDescription.description
-    return """
+    var res = """
 package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
@@ -139,10 +172,150 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     /**
     * Holder for  of $desc
     */
-    val $code = $name()
-
-    
-    
+    val $code = $name()   
     """
+    if(!currencyDescription.isJvmSpecific()){
+        res += generateSymbolPart(currencyDescription)
+    }
+    return res
 }
+
+
+
+private fun generateCurrencyJvmPart(currencyDescription: CurrencyDescription): String {
+    if(!currencyDescription.isJvmSpecific())return ""
+
+    return "package eu.sirotin.kotunil.currency" +
+            System.lineSeparator() +
+            generateSymbolPart(currencyDescription)
+}
+
+private fun generateSymbolPart(currencyDescription: CurrencyDescription): String {
+    val name = currencyDescription.name
+    val symbol = currencyDescription.symbol
+    val desc = currencyDescription.description
+    return """
+
+/**
+* Creates object for hold of $desc
+*/
+val Number.$symbol : $name
+    /**
+    * Returns value of object for hold of $desc
+    */
+    get() = $name(this.toDouble())
+
+/**
+* One unit of $desc
+*/
+val $symbol = $name()
+"""
+}
+
+
+
+private fun generateCurrencyTestClass(currencyDescription: CurrencyDescription): String {
+    val name = currencyDescription.name
+    val code = currencyDescription.code
+    val symbol = currencyDescription.symbol
+    var res = "package eu.sirotin.kotunil.currency" + System.lineSeparator()
+
+    if(!currencyDescription.isJvmSpecific()) {
+        res += TEST_SYMBOL_IMPORTS
+    }
+
+    res += generateCurrencyTestClassBody(currencyDescription)
+
+    if(!currencyDescription.isJvmSpecific()) {
+        res += generateSymbolTestPart(currencyDescription)
+    }
+    res += "}"
+    return res
+}
+
+private fun generateCurrencyTestClassBody(currencyDescription: CurrencyDescription): String {
+    val name = currencyDescription.name
+    val code = currencyDescription.code
+    val symbol = currencyDescription.symbol
+    return  """   
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+internal class ${name}Test {
+
+    @Test
+    fun testCreation() {
+        assertEquals($code, $name())
+        assertEquals(12.$code, $name(12.0))
+    }
+
+
+    @Test
+    fun testUnitSymbols() {
+        val s = $code.unitSymbols()
+        assertEquals("$code", s)
+    }
+
+    @Test
+    fun testCategorySymbols() {
+        val s = $code.categorySymbols()
+        assertEquals("$symbol", s)
+    }
+
+    @Test
+    fun getDimensions() {
+        val s = $code.dimensions.factors.first().specification.unitSymbol
+        assertEquals("$code", s)
+    }
+"""
+}
+
+private fun generateCurrencyTestJvmPart(currencyDescription: CurrencyDescription): String {
+    if(currencyDescription.isJvmSpecific())return ""
+    val name = currencyDescription.name
+    return """
+package eu.sirotin.kotunil.currency
+
+import eu.sirotin.kotunil.specialunits.m3
+import eu.sirotin.kotunil.core.div
+import eu.sirotin.kotunil.core.times
+import org.junit.Test
+import kotlin.test.assertEquals
+
+internal class ${name}TestJvm {
+
+""" +
+    generateSymbolTestPart(currencyDescription) +
+    "}"
+
+}
+
+private fun generateSymbolTestPart(currencyDescription: CurrencyDescription): String {
+    val name = currencyDescription.name
+    val symbol = currencyDescription.symbol
+    val code = tuneRegexSymbols(currencyDescription.code)
+    return """
+    @Test
+    fun testCreationJvm() {
+        assertEquals($symbol, $name())
+        assertEquals(123.$symbol, 123.$code)
+    }
+
+    @Test
+    fun testCost() {
+        val c = 12*m3/$symbol
+        assertEquals("m3/$code", c.unitSymbols())
+    }
+"""
+}
+
+private fun tuneRegexSymbols(s: String): String {
+    return s.replace("$", "${'$'}")
+}
+
+private fun CurrencyDescription.isJvmSpecific(): Boolean = this.symbol.contains('`')
+
+
+
+
 

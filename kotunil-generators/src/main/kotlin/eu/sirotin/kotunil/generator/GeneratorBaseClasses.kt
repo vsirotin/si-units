@@ -54,7 +54,7 @@ data class SiUnitDescription(val name: String,
  */
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_PATH_SOURCE}base")
+    val dir = File("${ROOT_PATH_SOURCE_COMMON}base")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

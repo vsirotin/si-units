@@ -27,8 +27,5 @@ class HongKongDollar(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Hong Kong dollar
     */
-    val HKD = HongKongDollar()
-
-    
-    
+    val HKD = HongKongDollar()   
     

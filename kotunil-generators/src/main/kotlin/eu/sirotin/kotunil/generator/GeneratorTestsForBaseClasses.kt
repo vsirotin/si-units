@@ -28,7 +28,7 @@ import java.nio.file.Files
 
 fun generateTestsSiUnitsBaseClasses() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_PATH_TEST}base")
+    val dir = File("${ROOT_PATH_TEST_COMMON}base")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

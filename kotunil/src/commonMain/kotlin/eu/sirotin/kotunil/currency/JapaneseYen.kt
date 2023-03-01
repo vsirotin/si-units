@@ -27,8 +27,5 @@ class JapaneseYen(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Japanese yen
     */
-    val JPY = JapaneseYen()
-
-    
-    
+    val JPY = JapaneseYen()   
     

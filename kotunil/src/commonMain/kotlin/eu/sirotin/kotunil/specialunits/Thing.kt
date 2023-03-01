@@ -19,7 +19,6 @@
  *  * THE SOFTWARE.
  *
  */
-@file:Suppress("NonAsciiCharacters")
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
@@ -40,16 +39,16 @@ class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**
  * Creates Thing-Object for current number value. Thing represent some object.
  */
-/*
-val Number.`#` : Thing
+
+val Number.thing : Thing
     /**
      * Returns Thing-Object for current number value.
      */
     get() = Thing(this.toDouble())
 
+
 /**
  * Thing-unit for representation of some object.
  */
-val `#` = Thing(1.0)
+val thing = Thing(1.0)
 
- */

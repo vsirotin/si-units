@@ -27,8 +27,5 @@ class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Saudi riyal
     */
-    val SAR = SaudiRiyal()
-
-    
-    
+    val SAR = SaudiRiyal()   
     

@@ -32,7 +32,6 @@ import eu.sirotin.kotunil.base.Metre
 import eu.sirotin.kotunil.base.Mole
 import eu.sirotin.kotunil.base.Second
 import eu.sirotin.kotunil.base.cd
-import eu.sirotin.kotunil.base.cm
 import eu.sirotin.kotunil.base.kg
 import eu.sirotin.kotunil.base.km
 import eu.sirotin.kotunil.base.m
@@ -47,25 +46,14 @@ import eu.sirotin.kotunil.core.minus
 import eu.sirotin.kotunil.core.plus
 import eu.sirotin.kotunil.core.times
 import eu.sirotin.kotunil.core.ε
-//import eu.sirotin.kotunil.currency.`€`
 import eu.sirotin.kotunil.derived.T
-import eu.sirotin.kotunil.derived.V
-import eu.sirotin.kotunil.derived.W
 import eu.sirotin.kotunil.derived.Wb
-import eu.sirotin.kotunil.derived.kW
 import eu.sirotin.kotunil.derived.μV
-//import eu.sirotin.kotunil.specialunits.`#`
-//import eu.sirotin.kotunil.specialunits.`%`
-//import eu.sirotin.kotunil.specialunits.`as %`
-import eu.sirotin.kotunil.specialunits.h
 import eu.sirotin.kotunil.specialunits.ha
 import eu.sirotin.kotunil.specialunits.l
 import eu.sirotin.kotunil.specialunits.m2
 import eu.sirotin.kotunil.specialunits.m3
-import eu.sirotin.kotunil.specialunits.min
 import eu.sirotin.kotunil.specialunits.t
-import eu.sirotin.kotunil.specialunits.`°C`
-import eu.sirotin.kotunil.specialunits.π
 import kotlin.math.abs
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -245,46 +233,6 @@ internal class TutorialTest {
     }
 
     @Test
-    fun testDerivedUnitsStory() {
-    //Miller family makes a trip to the nature.
-    // They brought a solar panel and immediately turned on at the excursion site.
-    // Solar produced 12 volts and 7 amps 2 hours.
-    // Produced electricity was stored in a storage tank. Storage efficiency is 85%.
-    //After that, Mrs. Miller decided to prepare the tea in boiler.
-    // To prepare hot water for tea with boilers with 500 watt strength,
-    // the water should be boiled for 8 min.
-    //The question, is stored in memory electricity enough for that?
-
-        val producedElectricity = 12.V * 7.A * 2.h
-        // TODO
-        //val savedElectricity = producedElectricity * 85.`%`
-        val neededElectricity = 0.5.kW * 8.min
-        //val dif = savedElectricity - neededElectricity
-        //assertTrue(dif > 0.W* h) //Comparison in SI-Units
-        //assertTrue(dif.value > 0) //Comparison dimensionless
-    }
-
-    @Test
-    fun testOwnDeriveUnits() {
-        //You can also define your own Derived Units.
-        //Consider a not properly scientifically proven example.
-        //Let's imagine that the melting speed of snow in mountains is proportional
-        // to the duration and temperature above 0 grad °C. This will be our new Derived Unit.
-        //If current snow thickness is 10 cm, what proportion is melted in 5 hours at 20 degrees Celsius?
-        //The code below also shows the nice side of Kotlin - a possibility to use Unicode symbols,
-        // e.g. Greek letters.
-
-        val ζ = 10.μm/(h *K) //melting speed
-        val τ = 10.cm
-        val t = 20.`°C`()
-        val ξ = 5.h*(t - 0.`°C`())
-        val σ = ζ*ξ //melting height
-        val α = σ/τ //melting ration
-        // TODO:
-        // assertEquals(1.0, α.`as %`, ε) //α.`as %` - Ratio presented in percents
-    }
-
-    @Test
     fun testPrefixes() {
         val d = km - (10 `^` 9) * μm
         assertTrue(abs(d.value) < ε)
@@ -306,34 +254,4 @@ internal class TutorialTest {
         assertEquals(5.875, n.value, ε)
 
     }
-
-    @Test
-    fun testCurrency() {
-        //A householder has decided to cover the floor with tiles in one of his rooms.
-        // He has bought 16,5 sqm of tiles for 52 €/sqm.
-        //How much does he pay for his tiles?
-
-        // TODO
-        //val prise = 52.`€`/ m2
-        val s = 16.5* m2
-        //val cost = s*prise
-        //assertEquals("858,00 EUR", cost.show("%.2f").replace(".", ","))
-        //assertEquals("EUR", cost.unitSymbols())
-    }
-
-    @Test
-    fun testThing() {
-        //Sometimes you need an abstract unit like "thing". For example:
-        //Every good guy has 30 different things per liter in his pocket.
-        //Jan is a good guy and his pocket is 0.3 liters big.
-        //How many things can his mom find in Jan's pocket?
-
-        // TODO
-        //val p = 30.`#`/l
-        //val n = 0.3.l * p
-
-        //assertEquals("9 #", n.show("%.0f"))
-        //assertEquals("#", n.unitSymbols())
-    }
-
 }

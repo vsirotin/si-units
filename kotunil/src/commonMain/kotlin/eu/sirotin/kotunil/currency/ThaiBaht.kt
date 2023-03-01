@@ -27,8 +27,5 @@ class ThaiBaht(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Thai baht
     */
-    val THB = ThaiBaht()
-
-    
-    
+    val THB = ThaiBaht()   
     

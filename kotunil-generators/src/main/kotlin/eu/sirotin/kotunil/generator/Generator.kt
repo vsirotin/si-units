@@ -22,24 +22,28 @@
 
 package eu.sirotin.kotunil.generator
 
-const val ROOT_PATH_SOURCE = "kotunil/src/commonMain/kotlin/eu/sirotin/kotunil/"
-const val ROOT_PATH_TEST = "kotunil/src/commonTest/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_SOURCE_COMMON = "kotunil/src/commonMain/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_TEST_COMMON = "kotunil/src/commonTest/kotlin/eu/sirotin/kotunil/"
+
+const val ROOT_PATH_SOURCE_JVM = "kotunil/src/jvmMain/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_TEST_JVM = "kotunil/src/jvmTest/kotlin/eu/sirotin/kotunil/"
 
 /**
  * Generates production and test unit classes. Not relevant for library users.
  */
 fun main() {
-    generateSiUnitsClasses()
-    generateCurrencies()
+    generateUnitsClasses()
     generateTestClasses()
 }
 
-private fun generateSiUnitsClasses() {
+private fun generateUnitsClasses() {
     generateSiUnitsBaseClasses()
     generateSiUnitsDerivedClasses()
+    generateCurrencies()
 }
 
 private fun generateTestClasses() {
     generateTestsSiUnitsBaseClasses()
     generateTestsSiUnitsDerivedClasses()
+    generateTestsCurrencies()
 }

@@ -27,8 +27,5 @@ class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description =
     /**
     * Holder for  of United States dollar
     */
-    val USD = UnitedStatesDollar()
-
-    
-    
+    val USD = UnitedStatesDollar()   
     

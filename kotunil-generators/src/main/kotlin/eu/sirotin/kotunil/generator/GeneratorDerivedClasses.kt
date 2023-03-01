@@ -66,7 +66,7 @@ data class SiDerivedUnitDescription(val name: String,
  */
 fun generateSiUnitsDerivedClasses() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_PATH_SOURCE}derived")
+    val dir = File("${ROOT_PATH_SOURCE_COMMON}derived")
     if(!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes

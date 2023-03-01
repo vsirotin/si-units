@@ -27,8 +27,5 @@ class RussianRuble(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Russian ruble
     */
-    val RUB = RussianRuble()
-
-    
-    
+    val RUB = RussianRuble()   
     

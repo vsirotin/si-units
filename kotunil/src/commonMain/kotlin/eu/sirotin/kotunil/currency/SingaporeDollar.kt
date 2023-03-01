@@ -27,8 +27,5 @@ class SingaporeDollar(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of Singapore dollar
     */
-    val SGD = SingaporeDollar()
-
-    
-    
+    val SGD = SingaporeDollar()   
     

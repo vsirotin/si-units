@@ -6,7 +6,7 @@ import eu.sirotin.kotunil.core.UnitSpecification
 
 private val descriptionRomanianLeu = UnitSpecification(
     "RON",
-    "L"
+    "RL"
 ) { v: Double -> RomanianLeu(v) }
 
 /**
@@ -27,8 +27,19 @@ class RomanianLeu(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Romanian leu
     */
-    val RON = RomanianLeu()
+    val RON = RomanianLeu()   
+    
 
-    
-    
-    
+/**
+* Creates object for hold of Romanian leu
+*/
+val Number.RL : RomanianLeu
+    /**
+    * Returns value of object for hold of Romanian leu
+    */
+    get() = RomanianLeu(this.toDouble())
+
+/**
+* One unit of Romanian leu
+*/
+val RL = RomanianLeu()
