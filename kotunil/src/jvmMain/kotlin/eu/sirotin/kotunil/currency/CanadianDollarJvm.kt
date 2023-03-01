@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Canadian dollar
@@ -13,5 +13,4 @@ val Number.`C$` : CanadianDollar
 /**
 * One unit of Canadian dollar
 */
-val `C$` = CanadianDollar() 
-    
+val `C$` = CanadianDollar()

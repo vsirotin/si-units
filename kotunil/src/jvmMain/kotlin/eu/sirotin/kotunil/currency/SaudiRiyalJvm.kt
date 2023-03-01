@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Saudi riyal
@@ -13,5 +13,4 @@ val Number.`﷼ ` : SaudiRiyal
 /**
 * One unit of Saudi riyal
 */
-val `﷼ ` = SaudiRiyal() 
-    
+val `﷼ ` = SaudiRiyal()

@@ -45,4 +45,5 @@ private fun generateUnitsClasses() {
 private fun generateTestClasses() {
     generateTestsSiUnitsBaseClasses()
     generateTestsSiUnitsDerivedClasses()
+    generateTestsCurrencies()
 }

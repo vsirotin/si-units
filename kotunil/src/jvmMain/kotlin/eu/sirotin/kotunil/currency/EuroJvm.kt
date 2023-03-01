@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Euro
@@ -13,5 +13,4 @@ val Number.`€` : Euro
 /**
 * One unit of Euro
 */
-val `€` = Euro() 
-    
+val `€` = Euro()

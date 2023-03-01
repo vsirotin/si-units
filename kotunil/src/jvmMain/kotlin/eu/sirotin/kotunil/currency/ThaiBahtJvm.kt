@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Thai baht
@@ -13,5 +13,4 @@ val Number.`฿` : ThaiBaht
 /**
 * One unit of Thai baht
 */
-val `฿` = ThaiBaht() 
-    
+val `฿` = ThaiBaht()

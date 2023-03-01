@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Mexican peso
@@ -13,5 +13,4 @@ val Number.`$` : MexicanPeso
 /**
 * One unit of Mexican peso
 */
-val `$` = MexicanPeso() 
-    
+val `$` = MexicanPeso()

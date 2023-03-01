@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Turkish lira
@@ -13,5 +13,4 @@ val Number.`₺` : TurkishLira
 /**
 * One unit of Turkish lira
 */
-val `₺` = TurkishLira() 
-    
+val `₺` = TurkishLira()

@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of  Czech koruna
@@ -13,5 +13,4 @@ val Number.`Kč` : CzechKoruna
 /**
 * One unit of  Czech koruna
 */
-val `Kč` = CzechKoruna() 
-    
+val `Kč` = CzechKoruna()

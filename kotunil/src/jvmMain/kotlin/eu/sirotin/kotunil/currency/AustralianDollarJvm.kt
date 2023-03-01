@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Australian dollar
@@ -13,5 +13,4 @@ val Number.`A$` : AustralianDollar
 /**
 * One unit of Australian dollar
 */
-val `A$` = AustralianDollar() 
-    
+val `A$` = AustralianDollar()

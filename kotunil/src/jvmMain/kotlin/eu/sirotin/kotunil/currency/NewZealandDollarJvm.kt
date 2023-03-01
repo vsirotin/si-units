@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of New Zealand dollar
@@ -13,5 +13,4 @@ val Number.`NZ$` : NewZealandDollar
 /**
 * One unit of New Zealand dollar
 */
-val `NZ$` = NewZealandDollar() 
-    
+val `NZ$` = NewZealandDollar()

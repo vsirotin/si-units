@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Polish złoty
@@ -13,5 +13,4 @@ val Number.`zł` : PolishZłoty
 /**
 * One unit of Polish złoty
 */
-val `zł` = PolishZłoty() 
-    
+val `zł` = PolishZłoty()

@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Indian rupee
@@ -13,5 +13,4 @@ val Number.`₹` : IndianRupee
 /**
 * One unit of Indian rupee
 */
-val `₹` = IndianRupee() 
-    
+val `₹` = IndianRupee()

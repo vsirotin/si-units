@@ -29,3 +29,17 @@ class NorwegianKrone(value : Double = 1.0) : Expression(value, description = des
     */
     val NOK = NorwegianKrone()   
     
+
+/**
+* Creates object for hold of Norwegian krone
+*/
+val Number.nkr : NorwegianKrone
+    /**
+    * Returns value of object for hold of Norwegian krone
+    */
+    get() = NorwegianKrone(this.toDouble())
+
+/**
+* One unit of Norwegian krone
+*/
+val nkr = NorwegianKrone()

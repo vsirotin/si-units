@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Sterling
@@ -13,5 +13,4 @@ val Number.`£` : PoundSterling
 /**
 * One unit of Sterling
 */
-val `£` = PoundSterling() 
-    
+val `£` = PoundSterling()

@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Chilean peso
@@ -13,5 +13,4 @@ val Number.`CLP$` : ChileanPeso
 /**
 * One unit of Chilean peso
 */
-val `CLP$` = ChileanPeso() 
-    
+val `CLP$` = ChileanPeso()

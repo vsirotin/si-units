@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Israeli new shekel
@@ -13,5 +13,4 @@ val Number.`₪` : IsraeliNewShekel
 /**
 * One unit of Israeli new shekel
 */
-val `₪` = IsraeliNewShekel() 
-    
+val `₪` = IsraeliNewShekel()

@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Hong Kong dollar
@@ -13,5 +13,4 @@ val Number.`HK$` : HongKongDollar
 /**
 * One unit of Hong Kong dollar
 */
-val `HK$` = HongKongDollar() 
-    
+val `HK$` = HongKongDollar()

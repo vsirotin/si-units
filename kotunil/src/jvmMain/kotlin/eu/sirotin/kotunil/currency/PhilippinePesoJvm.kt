@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Philippine peso
@@ -13,5 +13,4 @@ val Number.`₱` : PhilippinePeso
 /**
 * One unit of Philippine peso
 */
-val `₱` = PhilippinePeso() 
-    
+val `₱` = PhilippinePeso()

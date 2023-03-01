@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Renminbi
@@ -13,5 +13,4 @@ val Number.`人民币` : Renminbi
 /**
 * One unit of Renminbi
 */
-val `人民币` = Renminbi() 
-    
+val `人民币` = Renminbi()

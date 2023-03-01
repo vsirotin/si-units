@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of New Taiwan dollar
@@ -13,5 +13,4 @@ val Number.`NT$` : NewTaiwanDollar
 /**
 * One unit of New Taiwan dollar
 */
-val `NT$` = NewTaiwanDollar() 
-    
+val `NT$` = NewTaiwanDollar()

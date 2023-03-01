@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of United States dollar
@@ -13,5 +13,4 @@ val Number.`US$` : UnitedStatesDollar
 /**
 * One unit of United States dollar
 */
-val `US$` = UnitedStatesDollar() 
-    
+val `US$` = UnitedStatesDollar()

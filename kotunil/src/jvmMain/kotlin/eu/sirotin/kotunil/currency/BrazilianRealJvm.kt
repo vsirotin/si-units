@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Brazilian real
@@ -13,5 +13,4 @@ val Number.`R$` : BrazilianReal
 /**
 * One unit of Brazilian real
 */
-val `R$` = BrazilianReal() 
-    
+val `R$` = BrazilianReal()

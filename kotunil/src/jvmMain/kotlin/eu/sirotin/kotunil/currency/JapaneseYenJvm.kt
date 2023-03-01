@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Japanese yen
@@ -13,5 +13,4 @@ val Number.`¥` : JapaneseYen
 /**
 * One unit of Japanese yen
 */
-val `¥` = JapaneseYen() 
-    
+val `¥` = JapaneseYen()

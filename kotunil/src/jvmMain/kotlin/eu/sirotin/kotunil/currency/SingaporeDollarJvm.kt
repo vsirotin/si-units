@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of Singapore dollar
@@ -13,5 +13,4 @@ val Number.`S$` : SingaporeDollar
 /**
 * One unit of Singapore dollar
 */
-val `S$` = SingaporeDollar() 
-    
+val `S$` = SingaporeDollar()

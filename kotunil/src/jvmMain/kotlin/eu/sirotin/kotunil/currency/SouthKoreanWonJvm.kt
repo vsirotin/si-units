@@ -1,5 +1,5 @@
-
 package eu.sirotin.kotunil.currency
+
 
 /**
 * Creates object for hold of  South Korean won
@@ -13,5 +13,4 @@ val Number.`₩` : SouthKoreanWon
 /**
 * One unit of  South Korean won
 */
-val `₩` = SouthKoreanWon() 
-    
+val `₩` = SouthKoreanWon()
