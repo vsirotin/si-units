@@ -342,6 +342,8 @@ The character backtick (`) (UTF-8 code U+0060) is not equal
 to the apostrophe characters on the keyboard (UTF-8 code U+0027).
 To use it, you better copy it directly from this example.
 
+**Please note: such identifiers currently work only on Jvm platform.**
+
 Most derived units can be derived from Based Units 
 or from other Derived Units in different ways.  
 Look at the example of Tesla:
