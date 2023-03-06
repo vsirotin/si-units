@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022.  Viktor Sirotin
+ * Copyright (c) 2023.  Viktor Sirotin
  *
  *  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  * of this software and associated documentation files (the "Software"), to deal
@@ -24,152 +24,75 @@ package eu.sirotin.kotunil.generator.apps.jvm.kotlin
 
 import eu.sirotin.kotunil.generator.SiPrefix
 import eu.sirotin.kotunil.generator.SiUnitDescription
-import eu.sirotin.kotunil.generator.siPrefixes
-import eu.sirotin.kotunil.generator.siUnitDescriptions
+import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
+import eu.sirotin.kotunil.generator.getClassName
 import java.io.File
-import java.nio.file.Files
-
+import kotlin.math.abs
 
 fun generateSiUnitsBaseClassesTests() {
     //Generate package directory if not exists
     val dir = File("${ROOT_KOTLIN_CONSOLE_PATH}base")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate classes
-    siUnitDescriptions.forEach { generateSiUnitBaseClass(it, dir) }
+    generateSiUnitBaseTestFiles("${ROOT_KOTLIN_CONSOLE_PATH}base",
+        "KotlinConsoleTest.kt",
+        ::generateTestClassHeadPart,
+        ::generateTestPartForPrefix,
+        "   }${System.lineSeparator()}}"
+    )
 }
 
-private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
-    val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
-
-    val fileName = "$className.kt"
-    val file = dir.resolve(fileName)
-    file.delete()
-    val classText = generateHeadPart(className,
-        siUnitDescription.unitSymbol,
-        siUnitDescription.dimensionSymbol,
-        siUnitDescription.presentationPriority,
-        siUnitDescription.quantityName) +
-        generatePrefixes(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
-    
-    file.writeText(classText)
-}
-
-fun generatePrefixesForKilogram(): List<SiPrefix> {
-    return siPrefixes
-        .map { SiPrefix(it.name, it.symbol, it.degree - 3) }
-        .filter { it.name != "kilo" }
-}
-
-private fun generateHeadPart(
-    className: String,
-    unitSymbol: String,
-    dimensionSymbol: String,
-    presentationPriority: Int,
-    quantityName: String): String {
-    return """
+private fun generateTestClassHeadPart(
+    siUnitDescription: SiUnitDescription): String {
+    val className = getClassName(siUnitDescription)
+    val unitSymbol = siUnitDescription.unitSymbol
+    return """        
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.core.Expression
-import eu.sirotin.kotunil.core.UnitSpecification
-import kotlin.jvm.JvmField
+import eu.sirotin.kotunil.app.kotlin.TestStatistics
+import eu.sirotin.kotunil.app.kotlin.check
+import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
-import kotlin.jvm.JvmName
 
-private val description$className = UnitSpecification(
-    "$unitSymbol",
-    "$dimensionSymbol",
-    $presentationPriority
-) { v: Double -> $className(v) }
+object ${className}KotlinConsoleTest {
 
-/**
- * System International Unit for $quantityName.
- *
- * @constructor Creates the unit with given [value].
- */
-class $className(value: Double) : Expression(value, description = description$className)
-    /**
-     * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
-     */
-    val Number.$unitSymbol : $className
-        /**
-         * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
-         */
-        get() = $className(this.toDouble())
-    
-    /**
-     * System International Unit for $quantityName.
-     */
-    val $unitSymbol = $className(1.0)       
-    """
+    fun kotlinConsoleTest() {
+        TestStatistics.numberTestedObjects++
+
+        check(${className}(1.0), $unitSymbol)
+        check(1.$unitSymbol , $unitSymbol)
+
+        //Serialization
+        val v1 = ${className}(1.12)
+        val sd = v1.value.toString()
+        val dv = sd.toDouble()
+
+        //De-Serialization
+        val creator = ${className}(1.0).dimensions.factors.first().specification.creator
+        val v2 = creator(dv)
+        check(v1 , v2)
+"""
 }
 
+val exclusions = listOf("as", "kkg") //Name conflicts
+private fun generateTestPartForPrefix( siPrefix: SiPrefix,
+                                       siUnitDescription: SiUnitDescription): String {
+    val className = getClassName(siUnitDescription)
+    val  name = siUnitDescription.name
+    val unitSymbol = siUnitDescription.unitSymbol
 
-private fun generatePrefixes(className: String, name: String, unitSymbol: String, prefixes: List<SiPrefix>): String {
-    return prefixes.joinToString(System.lineSeparator()) { generateTextForPrefix(it, className, name, unitSymbol) }
+    if("${siPrefix.symbol}$unitSymbol" in  exclusions)return "" //Special case with kilogram
+
+    val symbolForTestName = if(siPrefix.symbol.first().isLowerCase()) siPrefix.symbol.uppercase() + "1" else siPrefix.symbol
+    val powName = generatePowName(siPrefix.degree)
+    return """   
+        val $powName = 10.0.pow(${siPrefix.degree})
+        check($powName * $className(1.0), 1.${siPrefix.symbol}$unitSymbol)
+        check($powName * $className(1.0), 1.${siPrefix.name}$name)
+        check(1.${unitSymbol}.${siPrefix.symbol}$unitSymbol , ${unitSymbol}.value/$powName)
+        check(1.${unitSymbol}.${siPrefix.name}$name , ${unitSymbol}.value/$powName)
+        check(1.${siPrefix.symbol}$unitSymbol , ${siPrefix.symbol}$unitSymbol)
+        check(${siPrefix.name}$name , ${siPrefix.symbol}$unitSymbol) 
+"""
 }
-
-
-private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
-
-    val correctedSymbol = correctSpecialCases(siPrefix.symbol, unitSymbol)
-    return """
-    /**
-     * $correctedSymbol, (10^${siPrefix.degree} of $name)
-     */    
-    val Number.${correctedSymbol} : $className
-        /**
-         * Returns $correctedSymbol, (10^${siPrefix.degree} of $name)
-         */ 
-        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
-    
-    /**
-     * $correctedSymbol, (10^${siPrefix.degree} of $name)
-     */ 
-    val Number.${siPrefix.name}$name : $className
-        /**
-         * Returns $correctedSymbol (10^${siPrefix.degree} of $name)
-         */
-        get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
-    
-    /**
-     * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
-     */
-    val $className.${correctedSymbol}  : Double
-        /**
-         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
-         */
-        ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
-    
-    /**
-     * Returns numerical value of $correctedSymbol (10^${siPrefix.degree} of $name)
-     */
-    val $className.${siPrefix.name}$name  : Double
-        /**
-         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
-         */
-        get() = this.value / 10.0.pow(${siPrefix.degree})
-    
-    @JvmField()
-    /**
-     * $correctedSymbol (10^${siPrefix.degree} of $name)
-     */
-    val $correctedSymbol = $className(10.0.pow(${siPrefix.degree}))
-    
-    /**
-     * $correctedSymbol, (10^${siPrefix.degree} of $name)
-     */
-    val ${siPrefix.name}$name = $correctedSymbol          """
-}
-
-private fun generateJVMName(symbol: String, unitSymbol: String): String{
-    if(symbol.first().isLowerCase())return ""
-
-    return "@JvmName(\"get${symbol}${unitSymbol}_prop\")${System.lineSeparator()}        "
-}
-
-private fun correctSpecialCases(symbol: String, unitSymbol: String): String {
-    val s = "$symbol$unitSymbol"
-    return  if(s != "as") s else "`as`"  // To avoid conflict with keyword 'as'
+fun generatePowName(degree: Int): String {
+    return "pow" + if(degree >= 0) degree else "M${abs(degree)}"
 }

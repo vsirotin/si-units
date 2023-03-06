@@ -22,9 +22,6 @@
 
 package eu.sirotin.kotunil.generator
 
-import java.io.File
-import java.nio.file.Files
-
 const val TEST_SYMBOL_IMPORTS = """
 import eu.sirotin.kotunil.core.div
 import eu.sirotin.kotunil.core.times
@@ -82,14 +79,20 @@ data class CurrencyDescription(val name: String,
  * Generates currency classes and their Jvm parts.
  */
 fun generateCurrencies() {
+    //Generate common part
+    val generatorCommonName = fun(cd:CurrencyDescription): String = "${cd.name}.kt"
     generateFiles("${ROOT_PATH_SOURCE_COMMON}currency",
         currencyDescriptions,
-        ::generateCurrencyClass
+        ::generateCurrencyClass,
+        generatorCommonName
     )
 
+    //Generate JVM part
+    val generatorJvmName = fun(cd:CurrencyDescription): String = "${cd.name}Jvm.kt"
     generateFiles("${ROOT_PATH_SOURCE_JVM}currency",
         currencyDescriptions,
-        ::generateCurrencyJvmPart, "Jvm"
+        ::generateCurrencyJvmPart,
+        generatorJvmName
     )
 }
 
@@ -97,45 +100,21 @@ fun generateCurrencies() {
  * Generates common and jvm-specific currency tests.
  */
 fun generateTestsCurrencies() {
+    //Generate common part
+    val generatorCommonName = fun(cd:CurrencyDescription): String = "${cd.name}Test.kt"
     generateFiles("${ROOT_PATH_TEST_COMMON}currency",
         currencyDescriptions,
-        ::generateCurrencyTestClass, "Test"
+        ::generateCurrencyTestClass,
+        generatorCommonName
     )
 
+    //Generate JVM part
+    val generatorJvmName = fun(cd:CurrencyDescription): String = "${cd.name}JvmTest.kt"
     generateFiles("${ROOT_PATH_TEST_JVM}currency",
         currencyDescriptions,
-        ::generateCurrencyTestJvmPart, "JvmTest"
+        ::generateCurrencyTestJvmPart,
+        generatorJvmName
     )
-}
-
-
-private fun generateFiles(
-    dirPath: String,
-    unitDescriptions: List<CurrencyDescription>,
-    generator: (CurrencyDescription) -> String,
-    suffix: String = ""
-) {
-    //Generate package directory if not exists
-    val dir = File(dirPath)
-    if (!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate File
-    unitDescriptions.forEach { generateFile(it, dir, generator, suffix) }
-}
-
-private fun generateFile(description: CurrencyDescription,
-                            dir: File, generator: (CurrencyDescription) -> String,
-                            suffix: String) {
-    val classText = generator.invoke(description)
-    if(classText.isEmpty())return
-
-    val className = description.name
-
-    val fileName = "$className$suffix.kt"
-    val file = dir.resolve(fileName)
-    file.delete()
-
-    file.writeText(classText)
 }
 
 private fun generateCurrencyClass(currencyDescription: CurrencyDescription): String {
@@ -180,8 +159,6 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     return res
 }
 
-
-
 private fun generateCurrencyJvmPart(currencyDescription: CurrencyDescription): String {
     if(!currencyDescription.isJvmSpecific())return ""
 
@@ -212,12 +189,7 @@ val $symbol = $name()
 """
 }
 
-
-
 private fun generateCurrencyTestClass(currencyDescription: CurrencyDescription): String {
-    val name = currencyDescription.name
-    val code = currencyDescription.code
-    val symbol = currencyDescription.symbol
     var res = "package eu.sirotin.kotunil.currency" + System.lineSeparator()
 
     if(!currencyDescription.isJvmSpecific()) {

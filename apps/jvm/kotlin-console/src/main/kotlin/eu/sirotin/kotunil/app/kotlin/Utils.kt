@@ -1,14 +1,15 @@
 package eu.sirotin.kotunil.app.kotlin
 
+import eu.sirotin.kotunil.core.Expression
 import kotlin.math.abs
 
-fun <T:Comparable<T>> test(a:T, b:T) {
+fun <T1: Expression, T2: Expression> check(a:T1, b:T2) {
     TestStatistics.numberTests++
-    if(a.compareTo(b) == 0)return
+    if(a == b)return
     throw AssertionError("Expected '$a' but is '$b'")
 }
 
-fun  test(a:Double, b:Double, maxDif: Double = 0.0000001) {
+fun  check(a:Double, b:Double, maxDif: Double = 0.0000001) {
     if(abs(a - b) < maxDif)return
     throw AssertionError("Expected '$a' but is '$b'")
 }

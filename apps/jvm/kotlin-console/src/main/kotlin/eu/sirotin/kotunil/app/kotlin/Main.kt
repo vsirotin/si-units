@@ -22,7 +22,7 @@
 
 package eu.sirotin.kotunil.app.kotlin
 
-import eu.sirotin.kotunil.app.kotlin.base.baseKotlinConsoleTests
+import eu.sirotin.kotunil.kotlin.base.baseKotlinConsoleTests
 import kotlin.system.exitProcess
 
 
