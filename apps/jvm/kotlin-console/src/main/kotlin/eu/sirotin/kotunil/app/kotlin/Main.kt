@@ -22,32 +22,29 @@
 
 package eu.sirotin.kotunil.app.kotlin
 
-import eu.sirotin.kotunil.base.m
-import kotlin.math.abs
+import eu.sirotin.kotunil.app.kotlin.base.baseKotlinConsoleTests
 import kotlin.system.exitProcess
 
 
 fun main() {
     println("Welcome in KotUniL console test!")
-    val v1 = 2.42.m
-    println("v1=${v1}")
+    var numberFeatures = 0
+    var numberTest = 0
 
     try {
-        test(2.41,v1.value)
+        testAll()
     } catch (e: Throwable) {
         print(e.stackTraceToString())
         exitProcess(1)
     }
+    println("")
+    println("Test successfully completed!")
+    println("A total of ${TestStatistics.numberTestedObjects} KotUniL's objects tested with ${TestStatistics.numberTests} tests. ")
 }
 
-fun <T:Comparable<T>> test(a:T, b:T) {
-    if(a.compareTo(b) == 0)return
-    throw AssertionError("Expected '$a' but is '$b'")
+fun testAll() {
+    baseKotlinConsoleTests()
 }
 
-fun  test(a:Double, b:Double, maxDif: Double = 0.0000001) {
-    if(abs(a - b) < maxDif)return
-    throw AssertionError("Expected '$a' but is '$b'")
-}
 
 

@@ -22,6 +22,8 @@
 
 package eu.sirotin.kotunil.generator
 
+import eu.sirotin.kotunil.generator.apps.GeneratorApps
+
 const val ROOT_PATH_SOURCE_COMMON = "kotunil/src/commonMain/kotlin/eu/sirotin/kotunil/"
 const val ROOT_PATH_TEST_COMMON = "kotunil/src/commonTest/kotlin/eu/sirotin/kotunil/"
 
@@ -34,7 +36,10 @@ const val ROOT_PATH_TEST_JVM = "kotunil/src/jvmTest/kotlin/eu/sirotin/kotunil/"
 fun main() {
     generateUnitsClasses()
     generateTestClasses()
+    GeneratorApps.generateApplications()
 }
+
+
 
 private fun generateUnitsClasses() {
     generateSiUnitsBaseClasses()
