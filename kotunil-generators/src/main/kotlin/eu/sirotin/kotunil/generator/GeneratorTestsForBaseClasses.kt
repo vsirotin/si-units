@@ -22,6 +22,7 @@
 
 package eu.sirotin.kotunil.generator
 
+import eu.sirotin.kotunil.generator.apps.jvm.kotlin.EXCLUDED_ABBREVIATIONS
 import java.io.File
 import java.nio.file.Files
 
@@ -63,7 +64,7 @@ private fun generateTestForSiUnitBaseClass(siUnitDescription: SiUnitDescription,
            generatorTestClassHeadPart: (SiUnitDescription) -> String,
            generatorUnitTestForPrefix: (SiPrefix, SiUnitDescription)->String,
            fileEnd: String) {
-    val className = getClassName(siUnitDescription)
+    val className = getDerivedClassName(siUnitDescription)
     val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
 
     val fileName = "${className}$fileNameSuffix"
@@ -76,12 +77,12 @@ private fun generateTestForSiUnitBaseClass(siUnitDescription: SiUnitDescription,
     file.writeText(classText)
 }
 
-fun getClassName(siUnitDescription: SiUnitDescription) =
+fun getDerivedClassName(siUnitDescription: SiUnitDescription) =
     siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getClassName(siUnitDescription)
+    val className = getDerivedClassName(siUnitDescription)
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
 package eu.sirotin.kotunil.base
@@ -116,16 +117,14 @@ internal class ${className}Test {
     """
 }
 
-
-val exclusions = listOf("as", "kkg") //Name conflicts
 private fun generatePrefixesTestPart(
     siPrefix: SiPrefix,
     siUnitDescription: SiUnitDescription): String {
-    val className = getClassName(siUnitDescription)
+    val className = getDerivedClassName(siUnitDescription)
     val name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 
-    if("${siPrefix.symbol}$unitSymbol" in  exclusions)return "" //Special case with kilogram
+    if("${siPrefix.symbol}$unitSymbol" in  EXCLUDED_ABBREVIATIONS)return "" //Special case with kilogram
 
     val symbolForTestName = if(siPrefix.symbol.first().isLowerCase()) siPrefix.symbol.uppercase() + "1" else siPrefix.symbol
 

@@ -22,7 +22,8 @@
 
 package eu.sirotin.kotunil.app.kotlin
 
-import eu.sirotin.kotunil.kotlin.base.baseKotlinConsoleTests
+import eu.sirotin.kotunil.base.baseKotlinConsoleTests
+import eu.sirotin.kotunil.derived.derivedKotlinConsoleTests
 import kotlin.system.exitProcess
 
 
@@ -42,6 +43,7 @@ fun main() {
 fun testAll() {
     TutorialTest.testTutorial()
     baseKotlinConsoleTests()
+    derivedKotlinConsoleTests()
 }
 
 

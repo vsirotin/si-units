@@ -25,7 +25,7 @@ package eu.sirotin.kotunil.generator.apps.jvm.kotlin
 import eu.sirotin.kotunil.generator.SiPrefix
 import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
-import eu.sirotin.kotunil.generator.getClassName
+import eu.sirotin.kotunil.generator.getDerivedClassName
 import java.io.File
 import java.nio.file.Files
 import kotlin.math.abs
@@ -47,13 +47,11 @@ fun generateSiUnitsBaseClassesTests() {
     )
 }
 
-fun generateBaseTestKotlinConsoleCaller(testClassNames: List<String>): String {
+fun generateBaseTestKotlinConsoleCaller(testClassNames: List<String>, typeName: String): String {
     return """
-package eu.sirotin.kotunil.kotlin.base
+package eu.sirotin.kotunil.$typeName
 
-import eu.sirotin.kotunil.base.*
-
-fun baseKotlinConsoleTests() {
+fun ${typeName}KotlinConsoleTests() {
 
     """.trimIndent() +
     testClassNames.joinToString(System.lineSeparator()) { "     ${it}KotlinConsoleTest.kotlinConsoleTest()" } +
@@ -63,20 +61,21 @@ fun baseKotlinConsoleTests() {
 fun generateCaller(dirPath: String,
         fileName: String,
         testClassNames: List<String>,
-        generator: (List<String>) -> String
+        generator: (List<String>, String) -> String,
+        typeName: String = "base"
 ) {
     val dir = File(dirPath)
     if (!dir.exists()) Files.createDirectories(dir.toPath())
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generator(testClassNames)
+    val classText = generator(testClassNames, typeName)
 
     file.writeText(classText)
 }
 
 private fun generateTestClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getClassName(siUnitDescription)
+    val className = getDerivedClassName(siUnitDescription)
     testClasses += className
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
@@ -107,14 +106,14 @@ object ${className}KotlinConsoleTest {
 """
 }
 
-val exclusions = listOf("as", "kkg") //Name conflicts
+val EXCLUDED_ABBREVIATIONS = listOf("as", "kkg") //Name conflicts
 private fun generateTestPartForPrefix( siPrefix: SiPrefix,
                                        siUnitDescription: SiUnitDescription): String {
-    val className = getClassName(siUnitDescription)
+    val className = getDerivedClassName(siUnitDescription)
     val  name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 
-    if("${siPrefix.symbol}$unitSymbol" in  exclusions)return "" //Special case with kilogram
+    if("${siPrefix.symbol}$unitSymbol" in  EXCLUDED_ABBREVIATIONS)return "" //Special case with kilogram
 
     val powName = generatePowName(siPrefix.degree)
     return """   

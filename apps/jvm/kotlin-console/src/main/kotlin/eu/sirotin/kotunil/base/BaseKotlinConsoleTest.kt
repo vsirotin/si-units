@@ -1,6 +1,4 @@
-package eu.sirotin.kotunil.kotlin.base
-
-import eu.sirotin.kotunil.base.*
+package eu.sirotin.kotunil.base
 
 fun baseKotlinConsoleTests() {
      SecondKotlinConsoleTest.kotlinConsoleTest()

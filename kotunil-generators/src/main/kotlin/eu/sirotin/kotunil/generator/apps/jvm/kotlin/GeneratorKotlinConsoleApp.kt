@@ -6,5 +6,6 @@ const val ROOT_KOTLIN_CONSOLE_PATH = "${ROOT_PATH_APPS}jvm/kotlin-console/src/ma
 object GeneratorKotlinConsoleApp {
     fun generateApp() {
         generateSiUnitsBaseClassesTests()
+        generateSiUnitsDerivedClassesTests()
     }
 }

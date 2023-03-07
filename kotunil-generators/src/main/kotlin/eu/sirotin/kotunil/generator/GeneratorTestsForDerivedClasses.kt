@@ -27,33 +27,62 @@ import java.nio.file.Files
 
 
 fun generateTestsSiUnitsDerivedClasses() {
-    //Generate package directory if not exists
-    val dir = File("${ROOT_PATH_TEST_COMMON}derived")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate classes
-    siDerivedUnitDescriptions.forEach { generateTestForDerivedClass(it, dir) }
+    generateDerivedTest("${ROOT_PATH_TEST_COMMON}derived",
+        ::generateTestClassHeadPart,
+        ::generateUnitTestForPrefix,
+        "Test.kt"
+    )
 }
 
-private fun generateTestForDerivedClass(description: SiDerivedUnitDescription, dir: File) {
-    val className = description.name.first().uppercaseChar() + description.name.drop(1)
+fun generateDerivedTest(dirPath: String,
+                                generatorHeader: (SiDerivedUnitDescription) -> String,
+                                generatorPrefixes: (SiPrefix, SiDerivedUnitDescription)->String,
+                                fileNameSuffix: String,
+                                fileEnd: String = "}"
+) {
+    //Generate package directory if not exists
+    val dir = File(dirPath)
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
+
+    //Generate classes
+    siDerivedUnitDescriptions.forEach {
+        generateTestForDerivedClass(
+            dir,
+            it,
+            generatorHeader,
+            generatorPrefixes,
+            fileNameSuffix,
+            fileEnd
+        )
+    }
+}
+
+private fun generateTestForDerivedClass(dir: File,
+      description: SiDerivedUnitDescription,
+      generatorHeader: (SiDerivedUnitDescription) -> String,
+      generatorPrefixes: (SiPrefix, SiDerivedUnitDescription)->String,
+      fileNameSuffix: String,
+      fileEnd: String = "}"
+        ) {
+    val className = getDerivedClassName(description)
     val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
 
-    val fileName = "${className}Test.kt"
+    val fileName = "${className}$fileNameSuffix"
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generateTestClassHeadPart(className,
-        description.unitSymbol) +
-        generateTestsForPrefixes(className, description.name, description.unitSymbol, prefixes) +
-        "}"
+    val classText = generatorHeader(description) +
+            prefixes.joinToString(System.lineSeparator()) { generatorPrefixes(it, description) } +
+            fileEnd
     
     file.writeText(classText)
 }
 
-private fun generateTestClassHeadPart(
-    className: String,
-    unitSymbol: String
-): String {
+fun getDerivedClassName(description: SiDerivedUnitDescription) =
+    description.name.first().uppercaseChar() + description.name.drop(1)
+
+private fun generateTestClassHeadPart(description: SiDerivedUnitDescription): String {
+    val className = getDerivedClassName(description)
+    val unitSymbol = description.unitSymbol
     return """        
 package eu.sirotin.kotunil.derived
 
@@ -72,12 +101,10 @@ internal class ${className}Test {
 }
 
 
-private fun generateTestsForPrefixes(className: String, name: String, unitSymbol: String, prefixes: List<SiPrefix>): String {
-    return prefixes.joinToString(System.lineSeparator()) { generateUnitTestForPrefix(it, className, name, unitSymbol) }
-}
-
-private fun generateUnitTestForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
-
+private fun generateUnitTestForPrefix(siPrefix: SiPrefix, description: SiDerivedUnitDescription): String {
+    val className = getDerivedClassName(description)
+    val name = description.name
+    val unitSymbol = description.unitSymbol
     val symbolForTestName = if(siPrefix.symbol.first().isLowerCase()) siPrefix.symbol.uppercase() + "1" else siPrefix.symbol
 
     return """          

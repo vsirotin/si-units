@@ -1,0 +1,25 @@
+package eu.sirotin.kotunil.derived
+
+fun derivedKotlinConsoleTests() {
+     RadianKotlinConsoleTest.kotlinConsoleTest()
+     SteradianKotlinConsoleTest.kotlinConsoleTest()
+     HertzKotlinConsoleTest.kotlinConsoleTest()
+     NewtonKotlinConsoleTest.kotlinConsoleTest()
+     PascalKotlinConsoleTest.kotlinConsoleTest()
+     JouleKotlinConsoleTest.kotlinConsoleTest()
+     WattKotlinConsoleTest.kotlinConsoleTest()
+     CoulombKotlinConsoleTest.kotlinConsoleTest()
+     VoltKotlinConsoleTest.kotlinConsoleTest()
+     FaradKotlinConsoleTest.kotlinConsoleTest()
+     OhmKotlinConsoleTest.kotlinConsoleTest()
+     SiemensKotlinConsoleTest.kotlinConsoleTest()
+     WeberKotlinConsoleTest.kotlinConsoleTest()
+     TeslaKotlinConsoleTest.kotlinConsoleTest()
+     HenryKotlinConsoleTest.kotlinConsoleTest()
+     LumenKotlinConsoleTest.kotlinConsoleTest()
+     LuxKotlinConsoleTest.kotlinConsoleTest()
+     BecquerelKotlinConsoleTest.kotlinConsoleTest()
+     GrayKotlinConsoleTest.kotlinConsoleTest()
+     SievertKotlinConsoleTest.kotlinConsoleTest()
+     KatalKotlinConsoleTest.kotlinConsoleTest()
+}
