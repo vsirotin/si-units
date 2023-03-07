@@ -27,22 +27,57 @@ import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
 import eu.sirotin.kotunil.generator.getClassName
 import java.io.File
+import java.nio.file.Files
 import kotlin.math.abs
 
+private val testClasses = mutableListOf<String>()
 fun generateSiUnitsBaseClassesTests() {
-    //Generate package directory if not exists
-    val dir = File("${ROOT_KOTLIN_CONSOLE_PATH}base")
+    //Generate tester classes
     generateSiUnitBaseTestFiles("${ROOT_KOTLIN_CONSOLE_PATH}base",
         "KotlinConsoleTest.kt",
         ::generateTestClassHeadPart,
         ::generateTestPartForPrefix,
         "   }${System.lineSeparator()}}"
     )
+
+    generateCaller("${ROOT_KOTLIN_CONSOLE_PATH}base",
+        "BaseKotlinConsoleTest.kt",
+        testClasses,
+        ::generateBaseTestKotlinConsoleCaller
+    )
+}
+
+fun generateBaseTestKotlinConsoleCaller(testClassNames: List<String>): String {
+    return """
+package eu.sirotin.kotunil.kotlin.base
+
+import eu.sirotin.kotunil.base.*
+
+fun baseKotlinConsoleTests() {
+
+    """.trimIndent() +
+    testClassNames.joinToString(System.lineSeparator()) { "     ${it}KotlinConsoleTest.kotlinConsoleTest()" } +
+"${System.lineSeparator()}}"
+}
+
+fun generateCaller(dirPath: String,
+        fileName: String,
+        testClassNames: List<String>,
+        generator: (List<String>) -> String
+) {
+    val dir = File(dirPath)
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
+    val file = dir.resolve(fileName)
+    file.delete()
+    val classText = generator(testClassNames)
+
+    file.writeText(classText)
 }
 
 private fun generateTestClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
     val className = getClassName(siUnitDescription)
+    testClasses += className
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
 package eu.sirotin.kotunil.base
@@ -81,9 +116,9 @@ private fun generateTestPartForPrefix( siPrefix: SiPrefix,
 
     if("${siPrefix.symbol}$unitSymbol" in  exclusions)return "" //Special case with kilogram
 
-    val symbolForTestName = if(siPrefix.symbol.first().isLowerCase()) siPrefix.symbol.uppercase() + "1" else siPrefix.symbol
     val powName = generatePowName(siPrefix.degree)
     return """   
+        TestStatistics.numberTestedObjects++
         val $powName = 10.0.pow(${siPrefix.degree})
         check($powName * $className(1.0), 1.${siPrefix.symbol}$unitSymbol)
         check($powName * $className(1.0), 1.${siPrefix.name}$name)

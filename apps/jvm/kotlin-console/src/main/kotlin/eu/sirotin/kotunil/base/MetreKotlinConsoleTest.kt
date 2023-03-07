@@ -24,6 +24,7 @@ object MetreKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
+        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Metre(1.0), 1.Qm)
         check(pow30 * Metre(1.0), 1.quettametre)
@@ -33,6 +34,7 @@ object MetreKotlinConsoleTest {
         check(quettametre , Qm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Metre(1.0), 1.Rm)
         check(pow27 * Metre(1.0), 1.ronnametre)
@@ -42,6 +44,7 @@ object MetreKotlinConsoleTest {
         check(ronnametre , Rm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Metre(1.0), 1.Ym)
         check(pow24 * Metre(1.0), 1.yottametre)
@@ -51,6 +54,7 @@ object MetreKotlinConsoleTest {
         check(yottametre , Ym) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Metre(1.0), 1.Zm)
         check(pow21 * Metre(1.0), 1.zettametre)
@@ -60,6 +64,7 @@ object MetreKotlinConsoleTest {
         check(zettametre , Zm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Metre(1.0), 1.Em)
         check(pow18 * Metre(1.0), 1.exametre)
@@ -69,6 +74,7 @@ object MetreKotlinConsoleTest {
         check(exametre , Em) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Metre(1.0), 1.Pm)
         check(pow15 * Metre(1.0), 1.petametre)
@@ -78,6 +84,7 @@ object MetreKotlinConsoleTest {
         check(petametre , Pm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Metre(1.0), 1.Tm)
         check(pow12 * Metre(1.0), 1.terametre)
@@ -87,6 +94,7 @@ object MetreKotlinConsoleTest {
         check(terametre , Tm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Metre(1.0), 1.Gm)
         check(pow9 * Metre(1.0), 1.gigametre)
@@ -96,6 +104,7 @@ object MetreKotlinConsoleTest {
         check(gigametre , Gm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Metre(1.0), 1.Mm)
         check(pow6 * Metre(1.0), 1.megametre)
@@ -105,6 +114,7 @@ object MetreKotlinConsoleTest {
         check(megametre , Mm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Metre(1.0), 1.km)
         check(pow3 * Metre(1.0), 1.kilometre)
@@ -114,6 +124,7 @@ object MetreKotlinConsoleTest {
         check(kilometre , km) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Metre(1.0), 1.hm)
         check(pow2 * Metre(1.0), 1.hectometre)
@@ -123,6 +134,7 @@ object MetreKotlinConsoleTest {
         check(hectometre , hm) 
 
    
+        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Metre(1.0), 1.dam)
         check(pow1 * Metre(1.0), 1.decametre)
@@ -132,6 +144,7 @@ object MetreKotlinConsoleTest {
         check(decametre , dam) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Metre(1.0), 1.dm)
         check(powM1 * Metre(1.0), 1.decimetre)
@@ -141,6 +154,7 @@ object MetreKotlinConsoleTest {
         check(decimetre , dm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Metre(1.0), 1.cm)
         check(powM2 * Metre(1.0), 1.centimetre)
@@ -150,6 +164,7 @@ object MetreKotlinConsoleTest {
         check(centimetre , cm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Metre(1.0), 1.mm)
         check(powM3 * Metre(1.0), 1.millimetre)
@@ -159,6 +174,7 @@ object MetreKotlinConsoleTest {
         check(millimetre , mm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Metre(1.0), 1.μm)
         check(powM6 * Metre(1.0), 1.micrometre)
@@ -168,6 +184,7 @@ object MetreKotlinConsoleTest {
         check(micrometre , μm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Metre(1.0), 1.nm)
         check(powM9 * Metre(1.0), 1.nanometre)
@@ -177,6 +194,7 @@ object MetreKotlinConsoleTest {
         check(nanometre , nm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Metre(1.0), 1.pm)
         check(powM12 * Metre(1.0), 1.picometre)
@@ -186,6 +204,7 @@ object MetreKotlinConsoleTest {
         check(picometre , pm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Metre(1.0), 1.fm)
         check(powM15 * Metre(1.0), 1.femtometre)
@@ -195,6 +214,7 @@ object MetreKotlinConsoleTest {
         check(femtometre , fm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Metre(1.0), 1.am)
         check(powM18 * Metre(1.0), 1.attometre)
@@ -204,6 +224,7 @@ object MetreKotlinConsoleTest {
         check(attometre , am) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Metre(1.0), 1.zm)
         check(powM21 * Metre(1.0), 1.zeptometre)
@@ -213,6 +234,7 @@ object MetreKotlinConsoleTest {
         check(zeptometre , zm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Metre(1.0), 1.ym)
         check(powM24 * Metre(1.0), 1.yoctometre)
@@ -222,6 +244,7 @@ object MetreKotlinConsoleTest {
         check(yoctometre , ym) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Metre(1.0), 1.rm)
         check(powM27 * Metre(1.0), 1.rontometre)
@@ -231,6 +254,7 @@ object MetreKotlinConsoleTest {
         check(rontometre , rm) 
 
    
+        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Metre(1.0), 1.qm)
         check(powM30 * Metre(1.0), 1.quectometre)

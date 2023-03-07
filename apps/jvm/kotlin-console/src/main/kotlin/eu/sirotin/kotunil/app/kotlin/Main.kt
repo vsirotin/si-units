@@ -28,9 +28,6 @@ import kotlin.system.exitProcess
 
 fun main() {
     println("Welcome in KotUniL console test!")
-    var numberFeatures = 0
-    var numberTest = 0
-
     try {
         testAll()
     } catch (e: Throwable) {
@@ -43,6 +40,7 @@ fun main() {
 }
 
 fun testAll() {
+    TutorialTest.testTutorial()
     baseKotlinConsoleTests()
 }
 
