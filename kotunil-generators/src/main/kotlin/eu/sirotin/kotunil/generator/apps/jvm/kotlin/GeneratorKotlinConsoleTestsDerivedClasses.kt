@@ -39,7 +39,7 @@ fun generateSiUnitsDerivedClassesTests() {
     generateCaller("${ROOT_KOTLIN_CONSOLE_PATH}derived",
         "DerivedKotlinConsoleTest.kt",
         testClasses,
-        ::generateBaseTestKotlinConsoleCaller,
+        ::generateKotlinConsoleTestCaller,
         "derived"
     )
 }

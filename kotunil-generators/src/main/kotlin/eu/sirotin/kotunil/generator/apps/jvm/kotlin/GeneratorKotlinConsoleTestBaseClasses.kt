@@ -43,11 +43,11 @@ fun generateSiUnitsBaseClassesTests() {
     generateCaller("${ROOT_KOTLIN_CONSOLE_PATH}base",
         "BaseKotlinConsoleTest.kt",
         testClasses,
-        ::generateBaseTestKotlinConsoleCaller
+        ::generateKotlinConsoleTestCaller
     )
 }
 
-fun generateBaseTestKotlinConsoleCaller(testClassNames: List<String>, typeName: String): String {
+fun generateKotlinConsoleTestCaller(testClassNames: List<String>, typeName: String): String {
     return """
 package eu.sirotin.kotunil.$typeName
 

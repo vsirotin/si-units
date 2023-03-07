@@ -23,6 +23,7 @@
 package eu.sirotin.kotunil.app.kotlin
 
 import eu.sirotin.kotunil.base.baseKotlinConsoleTests
+import eu.sirotin.kotunil.currency.currencyKotlinConsoleTests
 import eu.sirotin.kotunil.derived.derivedKotlinConsoleTests
 import kotlin.system.exitProcess
 
@@ -44,6 +45,7 @@ fun testAll() {
     TutorialTest.testTutorial()
     baseKotlinConsoleTests()
     derivedKotlinConsoleTests()
+    currencyKotlinConsoleTests()
 }
 
 

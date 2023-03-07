@@ -7,5 +7,6 @@ object GeneratorKotlinConsoleApp {
     fun generateApp() {
         generateSiUnitsBaseClassesTests()
         generateSiUnitsDerivedClassesTests()
+        generateKotlinConsoleTestsCurrencies()
     }
 }
