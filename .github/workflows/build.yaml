@@ -2,6 +2,7 @@ name: build
 
 on:
   pull_request: {}
+  workflow_dispatch:
   push:
     branches:
       - '**'
@@ -20,8 +21,9 @@ jobs:
           java-version: 11
 
       # For watchOS x86 simulator. Remove with Kotlin 1.8.
-      - uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '13.4.1'
+      #- uses: maxim-lobanov/setup-xcode@v1
+      #  with:
+      #    xcode-version: '13.4.1'
 
-      - run: ./gradlew assemble jvmTest
+      #- run: ./gradlew assemble jvmTest
+      - run: ./gradlew build
