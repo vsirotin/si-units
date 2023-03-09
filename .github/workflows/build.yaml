@@ -26,5 +26,4 @@ jobs:
       #    xcode-version: '13.4.1'
 
       #- run: ./gradlew assemble jvmTest
-      - run: cd kotunil
-      - run: ../gradlew build
+      - run: ./gradlew :kotunil:build
