@@ -5,7 +5,7 @@ import static java.lang.System.exit;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main() {
         System.out.println("Welcome in KotUniL console test!");
         try {
             testAll();
@@ -19,7 +19,7 @@ public class Main {
     }
 
     private static void testAll() {
-        TutorialTest.testTutorial();
+        new TutorialTest().testTutorial();
     }
 
 }

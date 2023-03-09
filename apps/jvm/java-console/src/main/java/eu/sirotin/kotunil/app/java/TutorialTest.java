@@ -57,12 +57,18 @@ package eu.sirotin.kotunil.app.java;
 //import kotlin.math.abs;
 
 
+import eu.sirotin.kotunil.base.Metre;
+import eu.sirotin.kotunil.base.MetreKt;
+import eu.sirotin.kotunil.core.Expression;
+import eu.sirotin.kotunil.core.ExpressionKt;
+import eu.sirotin.kotunil.specialunits.NonSiUnitsJvmKt;
+import eu.sirotin.kotunil.specialunits.NonSiUnitsKt;
 
 public class TutorialTest {
 
-    public static void testTutorial() {
-/*        testHappyGettingStarted();
-        testDimensionAnalysis();
+    public void testTutorial() {
+        testHappyGettingStarted();
+/*        testDimensionAnalysis();
         testCategorySymbols();
         testErrors1();
         testErrors2();
@@ -74,27 +80,34 @@ public class TutorialTest {
         testPrefixes();
         testNonSiUnits();*/
     }
-//
-//    private fun testHappyGettingStarted() {
-//        //Eva broke a glass in her aquarium and water flowed to the bottom.
-//        // In aquarium before the break was 20 liters of water.
-//        // Eva's room is 4 m. long and 5 tall.
-//        // How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
-//
-//        //The solution in Kotlin can be written in one line.
-//        // For didactic reasons as introduce two auxiliary variables s and h.
+
+    private void testHappyGettingStarted() {
+        //Eva broke a glass in her aquarium and water flowed to the bottom.
+        // In aquarium before the break was 20 liters of water.
+        // Eva's room is 4 m. long and 5 tall.
+        // How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
+
+        //The solution in Kotlin can be written in one line.
+        // For didactic reasons as introduce two auxiliary variables s and h.
 //
 //        val s = 4.m * 5.m
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
 //        val x = 20.l
+        Expression x = NonSiUnitsKt.getL(20);
 //        val h = x / s
+        Expression h = ExpressionKt.div(s, x);
 //        val z = h / mm
+        Expression z = ExpressionKt.div(h, MetreKt.mm);
 //        check(1.0, z.value, ε)
-//
+        Checker.check(1.0, z.getValue());
 //        //the same as statement
 //
 //        check(1.0, ((20.l / (4.m * 5.m)) / mm).value, ε)
-//
-//    }
+        Checker.check(1.0,
+                ExpressionKt.div(
+                      ExpressionKt.div(ExpressionKt.times(new Metre(4), new Metre(5)),
+                      NonSiUnitsKt.getL(20)), MetreKt.mm).getValue());
+   }
 //
 //
 //    private fun testDimensionAnalysis() {
