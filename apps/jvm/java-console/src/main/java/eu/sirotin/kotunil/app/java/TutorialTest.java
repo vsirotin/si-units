@@ -52,7 +52,8 @@ public class TutorialTest {
 
         //The solution in Kotlin can be written in one line.
         // For didactic reasons as introduce two auxiliary variables s and h.
-//
+        //Below commented related lines from Kotlin's tutorial.
+
 //        val s = 4.m * 5.m
         Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
 //        val x = 20.l
