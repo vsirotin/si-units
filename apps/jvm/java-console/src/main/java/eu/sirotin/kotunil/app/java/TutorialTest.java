@@ -22,63 +22,26 @@
 
 package eu.sirotin.kotunil.app.java;
 
-//import eu.sirotin.kotunil.base.A;
-//import eu.sirotin.kotunil.base.Ampere;
-//import eu.sirotin.kotunil.base.Candela;
-//import eu.sirotin.kotunil.base.K;
-//import eu.sirotin.kotunil.base.Kelvin;
-//import eu.sirotin.kotunil.base.Kilogram;
-//import eu.sirotin.kotunil.base.Metre;
-//import eu.sirotin.kotunil.base.Mole;
-//import eu.sirotin.kotunil.base.Second;
-//import eu.sirotin.kotunil.base.cd;
-//import eu.sirotin.kotunil.base.kg;
-//import eu.sirotin.kotunil.base.km;
-//import eu.sirotin.kotunil.base.m;
-//import eu.sirotin.kotunil.base.mm;
-//import eu.sirotin.kotunil.base.mol;
-//import eu.sirotin.kotunil.base.s;
-//import eu.sirotin.kotunil.base.μm;
-//import eu.sirotin.kotunil.core.COMPATIBILITY_ERR_PREFIX;
-//import eu.sirotin.kotunil.core.`^`;
-//import eu.sirotin.kotunil.core.div;
-//import eu.sirotin.kotunil.core.minus;
-//import eu.sirotin.kotunil.core.plus;
-//import eu.sirotin.kotunil.core.times;
-//import eu.sirotin.kotunil.core.ε;
-//import eu.sirotin.kotunil.derived.T;
-//import eu.sirotin.kotunil.derived.Wb;
-//import eu.sirotin.kotunil.derived.μV;
-//import eu.sirotin.kotunil.specialunits.ha;
-//import eu.sirotin.kotunil.specialunits.l;
-//import eu.sirotin.kotunil.specialunits.m2;
-//import eu.sirotin.kotunil.specialunits.m3;
-//import eu.sirotin.kotunil.specialunits.t;
-//import kotlin.math.abs;
-
-
-import eu.sirotin.kotunil.base.Metre;
-import eu.sirotin.kotunil.base.MetreKt;
+import eu.sirotin.kotunil.base.*;
 import eu.sirotin.kotunil.core.Expression;
 import eu.sirotin.kotunil.core.ExpressionKt;
-import eu.sirotin.kotunil.specialunits.NonSiUnitsJvmKt;
+import eu.sirotin.kotunil.derived.TeslaKt;
+import eu.sirotin.kotunil.derived.WeberKt;
 import eu.sirotin.kotunil.specialunits.NonSiUnitsKt;
 
 public class TutorialTest {
 
     public void testTutorial() {
         testHappyGettingStarted();
-/*        testDimensionAnalysis();
+        testDimensionAnalysis();
         testCategorySymbols();
-        testErrors1();
-        testErrors2();
+        testErrors();
         testCompareTheSameTypes();
-        testCompareDifferentType1();
-        testCompareDifferentType2();
+        testCompareDifferentType();
         testBaseUnits();
         testDerivedUnits();
         testPrefixes();
-        testNonSiUnits();*/
+        testNonSiUnits();
     }
 
     private void testHappyGettingStarted() {
@@ -95,173 +58,143 @@ public class TutorialTest {
 //        val x = 20.l
         Expression x = NonSiUnitsKt.getL(20);
 //        val h = x / s
-        Expression h = ExpressionKt.div(s, x);
+        Expression h = ExpressionKt.div(x,s);
 //        val z = h / mm
         Expression z = ExpressionKt.div(h, MetreKt.mm);
-//        check(1.0, z.value, ε)
+
         Checker.check(1.0, z.getValue());
+
 //        //the same as statement
-//
 //        check(1.0, ((20.l / (4.m * 5.m)) / mm).value, ε)
         Checker.check(1.0,
                 ExpressionKt.div(
-                      ExpressionKt.div(ExpressionKt.times(new Metre(4), new Metre(5)),
-                      NonSiUnitsKt.getL(20)), MetreKt.mm).getValue());
+                        ExpressionKt.div(
+                                NonSiUnitsKt.getL(20),
+                                ExpressionKt.times(new Metre(4), new Metre(5))),
+                        MetreKt.mm)
+                              .getValue());
    }
-//
-//
-//    private fun testDimensionAnalysis() {
-//        //With the help of the built-in function unitSymbols you can get the dimension of any object in terms of SI standard.
-//
-//        val s = 4.m * 5.m
-//        check("m2", s.unitSymbols())
-//        val x = 20.l
-//        check("m3", x.unitSymbols())
-//        val h = x / s
-//        check("m", h.unitSymbols())
-//
-//        val y = 1.2.s
-//        check("s", y.unitSymbols())
-//
-//        val z = x / y
-//        check("m3/s", z.unitSymbols())
-//
-//    }
-//
-//    private fun testCategorySymbols() {
-//        //Using the built-in function categorySymbols() you can analyze dimensions
-//        // of physical units in "academic" manner.
-//        val s = 4.m * 5.m
-//        check("L2", s.categorySymbols())
-//
-//        val x = 20.l
-//        check("L3", x.categorySymbols())
-//
-//        val h = x / s
-//        check("L", h.categorySymbols())
-//
-//        val y = 1.2.s
-//        check("T", y.categorySymbols())
-//
-//        val z = x / y
-//        check("L3T-1", z.categorySymbols())
-//
-//    }
-//
-////---------------Type safety
-////Physical units of the same dimension can be added, added,
-////divided and compared.
-////If you try to do this with units of different types,
-////you will get either compilation errors (for simple units) or run-time errors for complicated units.
-//    private fun testErrors1() {
-//        //Simple errors will be found on compilation phase:
-//        //val x = 1.m + 2 compiler error
-//        //val y = 20.l/(4.m * 5.m) + 14 compiler error
-//
-//        //Complex errors will be found in runtime:
-//        try {
-//            val x = 1.m + 2.s
-//        }catch (e: IllegalArgumentException) {
-//            if (e.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))return
-//        }
-//        throw IllegalStateException("Should be mot called!")
-//    }
-//
-//
-//    private fun testErrors2() {
-//        //Complex errors will be found in runtime:
-//        try {
-//            val x = 20.l * s / (4.m + 5.m) + 2.s
-//        }catch (e: IllegalArgumentException) {
-//            if (e.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))return
-//        }
-//        throw IllegalStateException("Should be mot called!")
-//
-//    }
-//
-//    //Comparison of objects---------
-//    //
-//    //Physical objects can be compared only if they have the same dimensions,
-//    // otherwise you will get a run-time error.
-//
-//    private fun testCompareTheSameTypes() {
-//        check(5.m > 4.1.m)
-//
-//        check(20.2 * m3 > 4.2 * m3)
-//
-//        check(2.2 * kg * m / s < 4.2 * kg * m / s)
-//    }
-//
-//    private fun testCompareDifferentType1() {
-//        val v1 = 2.4.m
-//        val v2 = 2.4.s
-//
-//        try {
-//            val x = v1 >= v2
-//        }catch (e: IllegalArgumentException) {
-//            if (e.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))return
-//        }
-//        throw IllegalStateException("Should be mot called!")
-//    }
-//
-//    private fun testCompareDifferentType2() {
-//        val v1 = 2.4.m * kg / s
-//        val v2 = 2.4.s * m3 / μV
-//
-//        try {
-//            val x = v1 >= v2
-//        }catch (e: IllegalArgumentException) {
-//            if (e.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))return
-//        }
-//        throw IllegalStateException("Should be mot called!")
-//    }
-//
-//    private fun testBaseUnits() {
-//        check(Second(1.0), 1.s)
-//        check(1*s, 1.0.s)
-//
-//        check(Metre(1.0), 1.m)
-//        check(2*m, 2.m)
-//
-//        check(Kilogram(1.0), 1.kg)
-//        check(3*kg, 3.kg)
-//
-//        check(Ampere(1.0), 1.A)
-//        check(4* A, 4.A)
-//
-//        check(Kelvin(1.0), 1.K)
-//        check(5*K, 5.K)
-//
-//        check(Mole(1.0), 1.mol)
-//        check(6*mol, 6.mol)
-//
-//        check(Candela(1.0), 1.cd)
-//        check(7*cd, 7.cd)
-//    }
-//
-//    private fun testDerivedUnits() {
-//        check(T,	kg * (s `^` -2) * (A `^` -1))
-//        check(T,	Wb/ m2)
-//    }
-//
-//    private fun testPrefixes() {
-//        val d = km - (10 `^` 9) * μm
-//        check(abs(d.value) < ε)
-//    }
-//
-//    private fun testNonSiUnits() {
-//        //A city park has area 2.35 hectares. During a rain 1 mm of water had fallen from the sky.
-//        //If there was no rain, the park should be watered with water from car cisterns.
-//        // A car cistern can carry 4 tons of water.
-//        //How many cisterns are needed to achieve the same effect as in case of rain?
-//        //Reminder: density of watter is 1 kg/l
-//
-//        val s = 2.35.ha
-//        val ω = s*1.mm //water volume
-//        val ρ = kg/ l //density of watter is 1 kg/l
-//        val τ = ω * ρ //common water weight of rain
-//        val n = τ/4.t
-//        check(5.875, n.value, ε)
-//
-//    }
+
+
+    private void testDimensionAnalysis() {
+        //With the help of the built-in function unitSymbols you can get the dimension of any object in terms of SI standard.
+
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
+        Checker.check("m2", s.unitSymbols());
+        Expression x = NonSiUnitsKt.getL(20);
+        Checker.check("m3", x.unitSymbols());
+        Expression h = ExpressionKt.div(x, s);
+        Checker.check("m", h.unitSymbols());
+
+        Expression y = ExpressionKt.times(new Second(1.0), 1.2);
+        Checker.check("s", y.unitSymbols());
+
+        Expression z = ExpressionKt.div(x, y);
+        Checker.check("m3/s", z.unitSymbols());
+
+    }
+
+    private void testCategorySymbols() {
+        //Using the built-in function categorySymbols() you can analyze dimensions
+        // of physical units in "academic" manner.
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
+        Checker.check("L2", s.categorySymbols());
+
+        Expression x = NonSiUnitsKt.getL(20);
+        Checker.check("L3", x.categorySymbols());
+
+        Expression h = ExpressionKt.div(x, s);
+        Checker.check("L", h.categorySymbols());
+
+        Expression y = ExpressionKt.times(new Second(1), 1.2);
+        Checker.check("T", y.categorySymbols());
+
+        Expression z = ExpressionKt.div(x, y);
+        Checker.check("L3T-1", z.categorySymbols());
+
+    }
+
+//---------------Type safety
+//Physical units of the same dimension can be added, added,
+//divided and compared.
+//If you try to do this with units of different types,
+//you will get either compilation errors (for simple units) or run-time errors for complicated units.
+    private void testErrors() {
+        //Simple errors will be found on compilation phase:
+        //Expression x = ExpressionKt.plus(new Metre(1), 2); // compiler error
+
+        //Complex errors will be found in runtime:
+        try {
+            ExpressionKt.plus(new Metre(4), new Second(2));
+        }catch (IllegalArgumentException e) {
+            if (e.getMessage().startsWith(ExpressionKt.COMPATIBILITY_ERR_PREFIX))return;
+        }
+        throw new IllegalStateException("Should be mot called!");
+    }
+
+
+    //Comparison of objects---------
+    //
+    //Physical objects can be compared only if they have the same dimensions,
+    // otherwise you will get a run-time error.
+
+    private void testCompareTheSameTypes() {
+        Checker.check(new Metre(5).compareTo(new Metre(4.1)) > 0);
+
+        Checker.check(ExpressionKt.times(NonSiUnitsKt.getM3(),20.2).compareTo(
+                ExpressionKt.times(NonSiUnitsKt.getM3(), 4.2)) > 0);
+
+    }
+
+    private void testCompareDifferentType() {
+        Expression v1 = new Metre(2.4);
+        Expression v2 = new Second(2.4);
+
+        try {
+            v1.compareTo(v2);
+        }catch (IllegalArgumentException e) {
+            if (e.getMessage().startsWith(ExpressionKt.COMPATIBILITY_ERR_PREFIX))return;
+        }
+        throw new IllegalStateException("Should be mot called!");
+    }
+
+
+    private void testBaseUnits() {
+        Checker.check(new Second(1.1), SecondKt.getS(1.1));
+        Checker.check(ExpressionKt.times(new Second(1.0), 1.2), new Second(1.2));
+
+        Checker.check(new Kilogram(1.3), ExpressionKt.times(new Kilogram(1.0), 1.3));
+    }
+
+    private void testDerivedUnits() {
+        Checker.check(TeslaKt.getT(),ExpressionKt.times(new Kilogram(1.0),
+                ExpressionKt.times(
+                        ExpressionKt.pow(new Second(1.0),-2),
+                        ExpressionKt.pow(new Ampere(1.0), -1))
+                                    )
+                    );
+
+        Checker.check(TeslaKt.getT(),	ExpressionKt.div(WeberKt.getWb(), NonSiUnitsKt.getM2()));
+    }
+
+    private void testPrefixes() {
+        Expression d = ExpressionKt.minus(MetreKt.getKm(1), ExpressionKt.times(Math.pow(10, 9), MetreKt.getμm(1)));
+        Checker.check(Math.abs(d.getValue()) < ExpressionKt.ε);
+    }
+
+    private void testNonSiUnits() {
+        //A city park has area 2.35 hectares. During a rain 1 mm of water had fallen from the sky.
+        //If there was no rain, the park should be watered with water from car cisterns.
+        // A car cistern can carry 4 tons of water.
+        //How many cisterns are needed to achieve the same effect as in case of rain?
+        //Reminder: density of watter is 1 kg/l
+
+        Expression s = NonSiUnitsKt.getHa(2.35);
+        Expression ω = ExpressionKt.times(s, MetreKt.getMm(1.0)); //water volume
+        Expression ρ = ExpressionKt.div(new Kilogram(1.0), NonSiUnitsKt.getL()); //density of watter is 1 kg/l
+        Expression τ = ExpressionKt.times(ω , ρ); //common water weight of rain
+        Expression n = ExpressionKt.div(τ, ExpressionKt.times(NonSiUnitsKt.getT(), 4));
+        Checker.check(5.875, n.getValue());
+
+    }
 }
