@@ -13,4 +13,5 @@ val Number.`HK$` : HongKongDollar
 /**
 * One unit of Hong Kong dollar
 */
+@JvmField()
 val `HK$` = HongKongDollar()

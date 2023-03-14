@@ -14,6 +14,7 @@ private val unit =  kg* (s `^` -2) * (A `^` -1)
 /**
 * System International Unit for magnetic flux density.
 */
+@JvmField()
 val T = unit
 
 /**
@@ -55,6 +56,7 @@ val QT = 10.0.pow(30) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * quettatesla, 10^30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val quettatesla = QT
     
 
@@ -87,6 +89,7 @@ val RT = 10.0.pow(27) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * ronnatesla, 10^27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val ronnatesla = RT
     
 
@@ -119,6 +122,7 @@ val YT = 10.0.pow(24) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * yottatesla, 10^24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val yottatesla = YT
     
 
@@ -151,6 +155,7 @@ val ZT = 10.0.pow(21) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * zettatesla, 10^21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val zettatesla = ZT
     
 
@@ -183,6 +188,7 @@ val ET = 10.0.pow(18) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * exatesla, 10^18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val exatesla = ET
     
 
@@ -215,6 +221,7 @@ val PT = 10.0.pow(15) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * petatesla, 10^15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val petatesla = PT
     
 
@@ -247,6 +254,7 @@ val TT = 10.0.pow(12) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * teratesla, 10^12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val teratesla = TT
     
 
@@ -279,6 +287,7 @@ val GT = 10.0.pow(9) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * gigatesla, 10^9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val gigatesla = GT
     
 
@@ -311,6 +320,7 @@ val MT = 10.0.pow(6) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * megatesla, 10^6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val megatesla = MT
     
 
@@ -343,6 +353,7 @@ val kT = 10.0.pow(3) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * kilotesla, 10^3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val kilotesla = kT
     
 
@@ -375,6 +386,7 @@ val hT = 10.0.pow(2) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * hectotesla, 10^2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val hectotesla = hT
     
 
@@ -407,6 +419,7 @@ val daT = 10.0.pow(1) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * decatesla, 10^1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val decatesla = daT
     
 
@@ -439,6 +452,7 @@ val dT = 10.0.pow(-1) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * decitesla, 10^-1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val decitesla = dT
     
 
@@ -471,6 +485,7 @@ val cT = 10.0.pow(-2) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * centitesla, 10^-2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val centitesla = cT
     
 
@@ -503,6 +518,7 @@ val mT = 10.0.pow(-3) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * millitesla, 10^-3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val millitesla = mT
     
 
@@ -535,6 +551,7 @@ val μT = 10.0.pow(-6) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * microtesla, 10^-6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val microtesla = μT
     
 
@@ -567,6 +584,7 @@ val nT = 10.0.pow(-9) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * nanotesla, 10^-9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val nanotesla = nT
     
 
@@ -599,6 +617,7 @@ val pT = 10.0.pow(-12) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * picotesla, 10^-12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val picotesla = pT
     
 
@@ -631,6 +650,7 @@ val fT = 10.0.pow(-15) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * femtotesla, 10^-15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val femtotesla = fT
     
 
@@ -663,6 +683,7 @@ val aT = 10.0.pow(-18) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * attotesla, 10^-18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val attotesla = aT
     
 
@@ -695,6 +716,7 @@ val zT = 10.0.pow(-21) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * zeptotesla, 10^-21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val zeptotesla = zT
     
 
@@ -727,6 +749,7 @@ val yT = 10.0.pow(-24) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * yoctotesla, 10^-24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val yoctotesla = yT
     
 
@@ -759,6 +782,7 @@ val rT = 10.0.pow(-27) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * rontotesla, 10^-27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val rontotesla = rT
     
 
@@ -791,5 +815,6 @@ val qT = 10.0.pow(-30) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * quectotesla, 10^-30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JvmField()
 val quectotesla = qT
     

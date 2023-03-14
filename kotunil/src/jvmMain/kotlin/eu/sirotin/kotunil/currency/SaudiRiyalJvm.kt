@@ -13,4 +13,5 @@ val Number.`﷼ ` : SaudiRiyal
 /**
 * One unit of Saudi riyal
 */
+@JvmField()
 val `﷼ ` = SaudiRiyal()

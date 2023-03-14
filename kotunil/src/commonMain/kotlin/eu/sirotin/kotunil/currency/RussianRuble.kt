@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionRussianRuble = UnitSpecification(
     "RUB",
@@ -27,5 +28,6 @@ class RussianRuble(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Russian ruble
     */
+    @JvmField()
     val RUB = RussianRuble()   
     

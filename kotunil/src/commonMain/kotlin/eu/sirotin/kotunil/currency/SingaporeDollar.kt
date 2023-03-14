@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionSingaporeDollar = UnitSpecification(
     "SGD",
@@ -27,5 +28,6 @@ class SingaporeDollar(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of Singapore dollar
     */
+    @JvmField()
     val SGD = SingaporeDollar()   
     

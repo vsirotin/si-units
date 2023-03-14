@@ -14,6 +14,7 @@ private val unit =  kg*(m2) * (s `^` -2) * (A `^` -1)
 /**
 * System International Unit for magnetic flux.
 */
+@JvmField()
 val Wb = unit
 
 /**
@@ -55,6 +56,7 @@ val QWb = 10.0.pow(30) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * quettaweber, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val quettaweber = QWb
     
 
@@ -87,6 +89,7 @@ val RWb = 10.0.pow(27) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * ronnaweber, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val ronnaweber = RWb
     
 
@@ -119,6 +122,7 @@ val YWb = 10.0.pow(24) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * yottaweber, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val yottaweber = YWb
     
 
@@ -151,6 +155,7 @@ val ZWb = 10.0.pow(21) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * zettaweber, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val zettaweber = ZWb
     
 
@@ -183,6 +188,7 @@ val EWb = 10.0.pow(18) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * exaweber, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val exaweber = EWb
     
 
@@ -215,6 +221,7 @@ val PWb = 10.0.pow(15) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * petaweber, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val petaweber = PWb
     
 
@@ -247,6 +254,7 @@ val TWb = 10.0.pow(12) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * teraweber, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val teraweber = TWb
     
 
@@ -279,6 +287,7 @@ val GWb = 10.0.pow(9) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * gigaweber, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val gigaweber = GWb
     
 
@@ -311,6 +320,7 @@ val MWb = 10.0.pow(6) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * megaweber, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val megaweber = MWb
     
 
@@ -343,6 +353,7 @@ val kWb = 10.0.pow(3) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * kiloweber, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val kiloweber = kWb
     
 
@@ -375,6 +386,7 @@ val hWb = 10.0.pow(2) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * hectoweber, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val hectoweber = hWb
     
 
@@ -407,6 +419,7 @@ val daWb = 10.0.pow(1) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * decaweber, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val decaweber = daWb
     
 
@@ -439,6 +452,7 @@ val dWb = 10.0.pow(-1) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * deciweber, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val deciweber = dWb
     
 
@@ -471,6 +485,7 @@ val cWb = 10.0.pow(-2) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * centiweber, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val centiweber = cWb
     
 
@@ -503,6 +518,7 @@ val mWb = 10.0.pow(-3) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * milliweber, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val milliweber = mWb
     
 
@@ -535,6 +551,7 @@ val μWb = 10.0.pow(-6) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * microweber, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val microweber = μWb
     
 
@@ -567,6 +584,7 @@ val nWb = 10.0.pow(-9) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * nanoweber, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val nanoweber = nWb
     
 
@@ -599,6 +617,7 @@ val pWb = 10.0.pow(-12) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * picoweber, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val picoweber = pWb
     
 
@@ -631,6 +650,7 @@ val fWb = 10.0.pow(-15) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * femtoweber, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val femtoweber = fWb
     
 
@@ -663,6 +683,7 @@ val aWb = 10.0.pow(-18) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * attoweber, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val attoweber = aWb
     
 
@@ -695,6 +716,7 @@ val zWb = 10.0.pow(-21) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * zeptoweber, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val zeptoweber = zWb
     
 
@@ -727,6 +749,7 @@ val yWb = 10.0.pow(-24) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * yoctoweber, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val yoctoweber = yWb
     
 
@@ -759,6 +782,7 @@ val rWb = 10.0.pow(-27) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * rontoweber, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val rontoweber = rWb
     
 
@@ -791,5 +815,6 @@ val qWb = 10.0.pow(-30) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * quectoweber, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
+@JvmField()
 val quectoweber = qWb
     

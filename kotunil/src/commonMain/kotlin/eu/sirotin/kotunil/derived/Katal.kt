@@ -14,6 +14,7 @@ private val unit =  (mol * (s `^` -1))
 /**
 * System International Unit for catalytic activity.
 */
+@JvmField()
 val kat = unit
 
 /**
@@ -55,6 +56,7 @@ val Qkat = 10.0.pow(30) * ((mol * (s `^` -1)))
 /**
 * quettakatal, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val quettakatal = Qkat
     
 
@@ -87,6 +89,7 @@ val Rkat = 10.0.pow(27) * ((mol * (s `^` -1)))
 /**
 * ronnakatal, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val ronnakatal = Rkat
     
 
@@ -119,6 +122,7 @@ val Ykat = 10.0.pow(24) * ((mol * (s `^` -1)))
 /**
 * yottakatal, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val yottakatal = Ykat
     
 
@@ -151,6 +155,7 @@ val Zkat = 10.0.pow(21) * ((mol * (s `^` -1)))
 /**
 * zettakatal, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val zettakatal = Zkat
     
 
@@ -183,6 +188,7 @@ val Ekat = 10.0.pow(18) * ((mol * (s `^` -1)))
 /**
 * exakatal, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val exakatal = Ekat
     
 
@@ -215,6 +221,7 @@ val Pkat = 10.0.pow(15) * ((mol * (s `^` -1)))
 /**
 * petakatal, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val petakatal = Pkat
     
 
@@ -247,6 +254,7 @@ val Tkat = 10.0.pow(12) * ((mol * (s `^` -1)))
 /**
 * terakatal, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val terakatal = Tkat
     
 
@@ -279,6 +287,7 @@ val Gkat = 10.0.pow(9) * ((mol * (s `^` -1)))
 /**
 * gigakatal, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val gigakatal = Gkat
     
 
@@ -311,6 +320,7 @@ val Mkat = 10.0.pow(6) * ((mol * (s `^` -1)))
 /**
 * megakatal, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val megakatal = Mkat
     
 
@@ -343,6 +353,7 @@ val kkat = 10.0.pow(3) * ((mol * (s `^` -1)))
 /**
 * kilokatal, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val kilokatal = kkat
     
 
@@ -375,6 +386,7 @@ val hkat = 10.0.pow(2) * ((mol * (s `^` -1)))
 /**
 * hectokatal, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val hectokatal = hkat
     
 
@@ -407,6 +419,7 @@ val dakat = 10.0.pow(1) * ((mol * (s `^` -1)))
 /**
 * decakatal, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val decakatal = dakat
     
 
@@ -439,6 +452,7 @@ val dkat = 10.0.pow(-1) * ((mol * (s `^` -1)))
 /**
 * decikatal, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val decikatal = dkat
     
 
@@ -471,6 +485,7 @@ val ckat = 10.0.pow(-2) * ((mol * (s `^` -1)))
 /**
 * centikatal, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val centikatal = ckat
     
 
@@ -503,6 +518,7 @@ val mkat = 10.0.pow(-3) * ((mol * (s `^` -1)))
 /**
 * millikatal, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val millikatal = mkat
     
 
@@ -535,6 +551,7 @@ val μkat = 10.0.pow(-6) * ((mol * (s `^` -1)))
 /**
 * microkatal, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val microkatal = μkat
     
 
@@ -567,6 +584,7 @@ val nkat = 10.0.pow(-9) * ((mol * (s `^` -1)))
 /**
 * nanokatal, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val nanokatal = nkat
     
 
@@ -599,6 +617,7 @@ val pkat = 10.0.pow(-12) * ((mol * (s `^` -1)))
 /**
 * picokatal, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val picokatal = pkat
     
 
@@ -631,6 +650,7 @@ val fkat = 10.0.pow(-15) * ((mol * (s `^` -1)))
 /**
 * femtokatal, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val femtokatal = fkat
     
 
@@ -663,6 +683,7 @@ val akat = 10.0.pow(-18) * ((mol * (s `^` -1)))
 /**
 * attokatal, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val attokatal = akat
     
 
@@ -695,6 +716,7 @@ val zkat = 10.0.pow(-21) * ((mol * (s `^` -1)))
 /**
 * zeptokatal, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val zeptokatal = zkat
     
 
@@ -727,6 +749,7 @@ val ykat = 10.0.pow(-24) * ((mol * (s `^` -1)))
 /**
 * yoctokatal, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val yoctokatal = ykat
     
 
@@ -759,6 +782,7 @@ val rkat = 10.0.pow(-27) * ((mol * (s `^` -1)))
 /**
 * rontokatal, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val rontokatal = rkat
     
 
@@ -791,5 +815,6 @@ val qkat = 10.0.pow(-30) * ((mol * (s `^` -1)))
 /**
 * quectokatal, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
+@JvmField()
 val quectokatal = qkat
     

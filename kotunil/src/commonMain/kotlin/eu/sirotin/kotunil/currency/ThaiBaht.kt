@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionThaiBaht = UnitSpecification(
     "THB",
@@ -27,5 +28,6 @@ class ThaiBaht(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Thai baht
     */
+    @JvmField()
     val THB = ThaiBaht()   
     

@@ -14,6 +14,7 @@ private val unit =  (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)
 /**
 * System International Unit for capacitance.
 */
+@JvmField()
 val F = unit
 
 /**
@@ -55,6 +56,7 @@ val QF = 10.0.pow(30) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * quettafarad, 10^30 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val quettafarad = QF
     
 
@@ -87,6 +89,7 @@ val RF = 10.0.pow(27) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * ronnafarad, 10^27 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val ronnafarad = RF
     
 
@@ -119,6 +122,7 @@ val YF = 10.0.pow(24) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * yottafarad, 10^24 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val yottafarad = YF
     
 
@@ -151,6 +155,7 @@ val ZF = 10.0.pow(21) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * zettafarad, 10^21 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val zettafarad = ZF
     
 
@@ -183,6 +188,7 @@ val EF = 10.0.pow(18) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * exafarad, 10^18 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val exafarad = EF
     
 
@@ -215,6 +221,7 @@ val PF = 10.0.pow(15) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * petafarad, 10^15 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val petafarad = PF
     
 
@@ -247,6 +254,7 @@ val TF = 10.0.pow(12) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * terafarad, 10^12 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val terafarad = TF
     
 
@@ -279,6 +287,7 @@ val GF = 10.0.pow(9) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * gigafarad, 10^9 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val gigafarad = GF
     
 
@@ -311,6 +320,7 @@ val MF = 10.0.pow(6) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * megafarad, 10^6 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val megafarad = MF
     
 
@@ -343,6 +353,7 @@ val kF = 10.0.pow(3) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * kilofarad, 10^3 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val kilofarad = kF
     
 
@@ -375,6 +386,7 @@ val hF = 10.0.pow(2) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * hectofarad, 10^2 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val hectofarad = hF
     
 
@@ -407,6 +419,7 @@ val daF = 10.0.pow(1) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * decafarad, 10^1 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val decafarad = daF
     
 
@@ -439,6 +452,7 @@ val dF = 10.0.pow(-1) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * decifarad, 10^-1 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val decifarad = dF
     
 
@@ -471,6 +485,7 @@ val cF = 10.0.pow(-2) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * centifarad, 10^-2 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val centifarad = cF
     
 
@@ -503,6 +518,7 @@ val mF = 10.0.pow(-3) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * millifarad, 10^-3 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val millifarad = mF
     
 
@@ -535,6 +551,7 @@ val μF = 10.0.pow(-6) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * microfarad, 10^-6 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val microfarad = μF
     
 
@@ -567,6 +584,7 @@ val nF = 10.0.pow(-9) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * nanofarad, 10^-9 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val nanofarad = nF
     
 
@@ -599,6 +617,7 @@ val pF = 10.0.pow(-12) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * picofarad, 10^-12 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val picofarad = pF
     
 
@@ -631,6 +650,7 @@ val fF = 10.0.pow(-15) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * femtofarad, 10^-15 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val femtofarad = fF
     
 
@@ -663,6 +683,7 @@ val aF = 10.0.pow(-18) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * attofarad, 10^-18 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val attofarad = aF
     
 
@@ -695,6 +716,7 @@ val zF = 10.0.pow(-21) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * zeptofarad, 10^-21 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val zeptofarad = zF
     
 
@@ -727,6 +749,7 @@ val yF = 10.0.pow(-24) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * yoctofarad, 10^-24 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val yoctofarad = yF
     
 
@@ -759,6 +782,7 @@ val rF = 10.0.pow(-27) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * rontofarad, 10^-27 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val rontofarad = rF
     
 
@@ -791,5 +815,6 @@ val qF = 10.0.pow(-30) * ((kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2))
 /**
 * quectofarad, 10^-30 of farad, derived SI-Unit for measurement of capacitance
 */ 
+@JvmField()
 val quectofarad = qF
     

@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionTurkishLira = UnitSpecification(
     "TRY",
@@ -27,5 +28,6 @@ class TurkishLira(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Turkish lira
     */
+    @JvmField()
     val TRY = TurkishLira()   
     

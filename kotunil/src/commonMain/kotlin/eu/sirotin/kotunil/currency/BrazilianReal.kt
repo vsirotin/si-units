@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionBrazilianReal = UnitSpecification(
     "BRL",
@@ -27,5 +28,6 @@ class BrazilianReal(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Brazilian real
     */
+    @JvmField()
     val BRL = BrazilianReal()   
     

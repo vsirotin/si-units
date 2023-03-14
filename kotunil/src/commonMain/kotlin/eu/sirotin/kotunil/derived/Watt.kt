@@ -14,6 +14,7 @@ private val unit =  kg*(m2)/(s `^` 3)
 /**
 * System International Unit for power, radiant flux.
 */
+@JvmField()
 val W = unit
 
 /**
@@ -55,6 +56,7 @@ val QW = 10.0.pow(30) * (kg*(m2)/(s `^` 3))
 /**
 * quettawatt, 10^30 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val quettawatt = QW
     
 
@@ -87,6 +89,7 @@ val RW = 10.0.pow(27) * (kg*(m2)/(s `^` 3))
 /**
 * ronnawatt, 10^27 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val ronnawatt = RW
     
 
@@ -119,6 +122,7 @@ val YW = 10.0.pow(24) * (kg*(m2)/(s `^` 3))
 /**
 * yottawatt, 10^24 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val yottawatt = YW
     
 
@@ -151,6 +155,7 @@ val ZW = 10.0.pow(21) * (kg*(m2)/(s `^` 3))
 /**
 * zettawatt, 10^21 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val zettawatt = ZW
     
 
@@ -183,6 +188,7 @@ val EW = 10.0.pow(18) * (kg*(m2)/(s `^` 3))
 /**
 * exawatt, 10^18 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val exawatt = EW
     
 
@@ -215,6 +221,7 @@ val PW = 10.0.pow(15) * (kg*(m2)/(s `^` 3))
 /**
 * petawatt, 10^15 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val petawatt = PW
     
 
@@ -247,6 +254,7 @@ val TW = 10.0.pow(12) * (kg*(m2)/(s `^` 3))
 /**
 * terawatt, 10^12 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val terawatt = TW
     
 
@@ -279,6 +287,7 @@ val GW = 10.0.pow(9) * (kg*(m2)/(s `^` 3))
 /**
 * gigawatt, 10^9 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val gigawatt = GW
     
 
@@ -311,6 +320,7 @@ val MW = 10.0.pow(6) * (kg*(m2)/(s `^` 3))
 /**
 * megawatt, 10^6 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val megawatt = MW
     
 
@@ -343,6 +353,7 @@ val kW = 10.0.pow(3) * (kg*(m2)/(s `^` 3))
 /**
 * kilowatt, 10^3 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val kilowatt = kW
     
 
@@ -375,6 +386,7 @@ val hW = 10.0.pow(2) * (kg*(m2)/(s `^` 3))
 /**
 * hectowatt, 10^2 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val hectowatt = hW
     
 
@@ -407,6 +419,7 @@ val daW = 10.0.pow(1) * (kg*(m2)/(s `^` 3))
 /**
 * decawatt, 10^1 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val decawatt = daW
     
 
@@ -439,6 +452,7 @@ val dW = 10.0.pow(-1) * (kg*(m2)/(s `^` 3))
 /**
 * deciwatt, 10^-1 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val deciwatt = dW
     
 
@@ -471,6 +485,7 @@ val cW = 10.0.pow(-2) * (kg*(m2)/(s `^` 3))
 /**
 * centiwatt, 10^-2 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val centiwatt = cW
     
 
@@ -503,6 +518,7 @@ val mW = 10.0.pow(-3) * (kg*(m2)/(s `^` 3))
 /**
 * milliwatt, 10^-3 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val milliwatt = mW
     
 
@@ -535,6 +551,7 @@ val μW = 10.0.pow(-6) * (kg*(m2)/(s `^` 3))
 /**
 * microwatt, 10^-6 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val microwatt = μW
     
 
@@ -567,6 +584,7 @@ val nW = 10.0.pow(-9) * (kg*(m2)/(s `^` 3))
 /**
 * nanowatt, 10^-9 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val nanowatt = nW
     
 
@@ -599,6 +617,7 @@ val pW = 10.0.pow(-12) * (kg*(m2)/(s `^` 3))
 /**
 * picowatt, 10^-12 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val picowatt = pW
     
 
@@ -631,6 +650,7 @@ val fW = 10.0.pow(-15) * (kg*(m2)/(s `^` 3))
 /**
 * femtowatt, 10^-15 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val femtowatt = fW
     
 
@@ -663,6 +683,7 @@ val aW = 10.0.pow(-18) * (kg*(m2)/(s `^` 3))
 /**
 * attowatt, 10^-18 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val attowatt = aW
     
 
@@ -695,6 +716,7 @@ val zW = 10.0.pow(-21) * (kg*(m2)/(s `^` 3))
 /**
 * zeptowatt, 10^-21 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val zeptowatt = zW
     
 
@@ -727,6 +749,7 @@ val yW = 10.0.pow(-24) * (kg*(m2)/(s `^` 3))
 /**
 * yoctowatt, 10^-24 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val yoctowatt = yW
     
 
@@ -759,6 +782,7 @@ val rW = 10.0.pow(-27) * (kg*(m2)/(s `^` 3))
 /**
 * rontowatt, 10^-27 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val rontowatt = rW
     
 
@@ -791,5 +815,6 @@ val qW = 10.0.pow(-30) * (kg*(m2)/(s `^` 3))
 /**
 * quectowatt, 10^-30 of watt, derived SI-Unit for measurement of power, radiant flux
 */ 
+@JvmField()
 val quectowatt = qW
     

@@ -127,6 +127,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val description$name = UnitSpecification(
     "$code",
@@ -151,6 +152,7 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     /**
     * Holder for  of $desc
     */
+    @JvmField()
     val $code = $name()   
     """
     if(!currencyDescription.isJvmSpecific()){
@@ -185,6 +187,7 @@ val Number.$symbol : $name
 /**
 * One unit of $desc
 */
+@JvmField()
 val $symbol = $name()
 """
 }

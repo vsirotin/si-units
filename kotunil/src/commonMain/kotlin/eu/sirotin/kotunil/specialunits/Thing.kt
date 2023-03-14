@@ -23,6 +23,7 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionThing = UnitSpecification(
     "#",
@@ -50,5 +51,6 @@ val Number.thing : Thing
 /**
  * Thing-unit for representation of some object.
  */
+@JvmField()
 val thing = Thing(1.0)
 

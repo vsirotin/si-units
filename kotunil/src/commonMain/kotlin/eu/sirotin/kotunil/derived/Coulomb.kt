@@ -14,6 +14,7 @@ private val unit =  s*A
 /**
 * System International Unit for electric charge.
 */
+@JvmField()
 val C = unit
 
 /**
@@ -55,6 +56,7 @@ val QC = 10.0.pow(30) * (s*A)
 /**
 * quettacoulomb, 10^30 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val quettacoulomb = QC
     
 
@@ -87,6 +89,7 @@ val RC = 10.0.pow(27) * (s*A)
 /**
 * ronnacoulomb, 10^27 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val ronnacoulomb = RC
     
 
@@ -119,6 +122,7 @@ val YC = 10.0.pow(24) * (s*A)
 /**
 * yottacoulomb, 10^24 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val yottacoulomb = YC
     
 
@@ -151,6 +155,7 @@ val ZC = 10.0.pow(21) * (s*A)
 /**
 * zettacoulomb, 10^21 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val zettacoulomb = ZC
     
 
@@ -183,6 +188,7 @@ val EC = 10.0.pow(18) * (s*A)
 /**
 * exacoulomb, 10^18 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val exacoulomb = EC
     
 
@@ -215,6 +221,7 @@ val PC = 10.0.pow(15) * (s*A)
 /**
 * petacoulomb, 10^15 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val petacoulomb = PC
     
 
@@ -247,6 +254,7 @@ val TC = 10.0.pow(12) * (s*A)
 /**
 * teracoulomb, 10^12 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val teracoulomb = TC
     
 
@@ -279,6 +287,7 @@ val GC = 10.0.pow(9) * (s*A)
 /**
 * gigacoulomb, 10^9 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val gigacoulomb = GC
     
 
@@ -311,6 +320,7 @@ val MC = 10.0.pow(6) * (s*A)
 /**
 * megacoulomb, 10^6 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val megacoulomb = MC
     
 
@@ -343,6 +353,7 @@ val kC = 10.0.pow(3) * (s*A)
 /**
 * kilocoulomb, 10^3 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val kilocoulomb = kC
     
 
@@ -375,6 +386,7 @@ val hC = 10.0.pow(2) * (s*A)
 /**
 * hectocoulomb, 10^2 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val hectocoulomb = hC
     
 
@@ -407,6 +419,7 @@ val daC = 10.0.pow(1) * (s*A)
 /**
 * decacoulomb, 10^1 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val decacoulomb = daC
     
 
@@ -439,6 +452,7 @@ val dC = 10.0.pow(-1) * (s*A)
 /**
 * decicoulomb, 10^-1 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val decicoulomb = dC
     
 
@@ -471,6 +485,7 @@ val cC = 10.0.pow(-2) * (s*A)
 /**
 * centicoulomb, 10^-2 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val centicoulomb = cC
     
 
@@ -503,6 +518,7 @@ val mC = 10.0.pow(-3) * (s*A)
 /**
 * millicoulomb, 10^-3 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val millicoulomb = mC
     
 
@@ -535,6 +551,7 @@ val μC = 10.0.pow(-6) * (s*A)
 /**
 * microcoulomb, 10^-6 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val microcoulomb = μC
     
 
@@ -567,6 +584,7 @@ val nC = 10.0.pow(-9) * (s*A)
 /**
 * nanocoulomb, 10^-9 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val nanocoulomb = nC
     
 
@@ -599,6 +617,7 @@ val pC = 10.0.pow(-12) * (s*A)
 /**
 * picocoulomb, 10^-12 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val picocoulomb = pC
     
 
@@ -631,6 +650,7 @@ val fC = 10.0.pow(-15) * (s*A)
 /**
 * femtocoulomb, 10^-15 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val femtocoulomb = fC
     
 
@@ -663,6 +683,7 @@ val aC = 10.0.pow(-18) * (s*A)
 /**
 * attocoulomb, 10^-18 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val attocoulomb = aC
     
 
@@ -695,6 +716,7 @@ val zC = 10.0.pow(-21) * (s*A)
 /**
 * zeptocoulomb, 10^-21 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val zeptocoulomb = zC
     
 
@@ -727,6 +749,7 @@ val yC = 10.0.pow(-24) * (s*A)
 /**
 * yoctocoulomb, 10^-24 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val yoctocoulomb = yC
     
 
@@ -759,6 +782,7 @@ val rC = 10.0.pow(-27) * (s*A)
 /**
 * rontocoulomb, 10^-27 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val rontocoulomb = rC
     
 
@@ -791,5 +815,6 @@ val qC = 10.0.pow(-30) * (s*A)
 /**
 * quectocoulomb, 10^-30 of coulomb, derived SI-Unit for measurement of electric charge
 */ 
+@JvmField()
 val quectocoulomb = qC
     

@@ -136,6 +136,7 @@ val Number.ha: Expression
 /**
  * hectare
  */
+@JvmField()
 val ha = 1.0.ha
 
 /**
@@ -150,6 +151,7 @@ val Number.l: Expression
 /**
  * Litre
  */
+@JvmField()
 val l = 1.0.l
 
 /**
@@ -177,6 +179,7 @@ val Number.t: Kilogram
 /**
  * tonne
  */
+@JvmField()
 val t = 1000.kg
 
 /**
@@ -191,6 +194,7 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
+@JvmField()
 val Da = 1.Da
 
 /**
@@ -205,7 +209,8 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-    val eV = 1.eV
+@JvmField()
+val eV = 1.eV
 
 
 /**
@@ -220,7 +225,8 @@ val Number.percentage: Double
 /**
  * Percentage
  */
-    val percentage = 0.01
+@JvmField()
+val percentage = 0.01
 
 /**
  * Percentage as double

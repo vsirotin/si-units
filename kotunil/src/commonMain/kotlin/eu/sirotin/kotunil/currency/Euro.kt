@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionEuro = UnitSpecification(
     "EUR",
@@ -27,5 +28,6 @@ class Euro(value : Double = 1.0) : Expression(value, description = descriptionEu
     /**
     * Holder for  of Euro
     */
+    @JvmField()
     val EUR = Euro()   
     

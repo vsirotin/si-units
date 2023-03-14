@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionSaudiRiyal = UnitSpecification(
     "SAR",
@@ -27,5 +28,6 @@ class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Saudi riyal
     */
+    @JvmField()
     val SAR = SaudiRiyal()   
     

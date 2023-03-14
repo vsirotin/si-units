@@ -14,6 +14,7 @@ private val unit =  (s `^` -1)
 /**
 * System International Unit for activity referred to a radionuclide (decays per unit time).
 */
+@JvmField()
 val Bq = unit
 
 /**
@@ -55,6 +56,7 @@ val QBq = 10.0.pow(30) * ((s `^` -1))
 /**
 * quettabecquerel, 10^30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val quettabecquerel = QBq
     
 
@@ -87,6 +89,7 @@ val RBq = 10.0.pow(27) * ((s `^` -1))
 /**
 * ronnabecquerel, 10^27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val ronnabecquerel = RBq
     
 
@@ -119,6 +122,7 @@ val YBq = 10.0.pow(24) * ((s `^` -1))
 /**
 * yottabecquerel, 10^24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val yottabecquerel = YBq
     
 
@@ -151,6 +155,7 @@ val ZBq = 10.0.pow(21) * ((s `^` -1))
 /**
 * zettabecquerel, 10^21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val zettabecquerel = ZBq
     
 
@@ -183,6 +188,7 @@ val EBq = 10.0.pow(18) * ((s `^` -1))
 /**
 * exabecquerel, 10^18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val exabecquerel = EBq
     
 
@@ -215,6 +221,7 @@ val PBq = 10.0.pow(15) * ((s `^` -1))
 /**
 * petabecquerel, 10^15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val petabecquerel = PBq
     
 
@@ -247,6 +254,7 @@ val TBq = 10.0.pow(12) * ((s `^` -1))
 /**
 * terabecquerel, 10^12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val terabecquerel = TBq
     
 
@@ -279,6 +287,7 @@ val GBq = 10.0.pow(9) * ((s `^` -1))
 /**
 * gigabecquerel, 10^9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val gigabecquerel = GBq
     
 
@@ -311,6 +320,7 @@ val MBq = 10.0.pow(6) * ((s `^` -1))
 /**
 * megabecquerel, 10^6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val megabecquerel = MBq
     
 
@@ -343,6 +353,7 @@ val kBq = 10.0.pow(3) * ((s `^` -1))
 /**
 * kilobecquerel, 10^3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val kilobecquerel = kBq
     
 
@@ -375,6 +386,7 @@ val hBq = 10.0.pow(2) * ((s `^` -1))
 /**
 * hectobecquerel, 10^2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val hectobecquerel = hBq
     
 
@@ -407,6 +419,7 @@ val daBq = 10.0.pow(1) * ((s `^` -1))
 /**
 * decabecquerel, 10^1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val decabecquerel = daBq
     
 
@@ -439,6 +452,7 @@ val dBq = 10.0.pow(-1) * ((s `^` -1))
 /**
 * decibecquerel, 10^-1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val decibecquerel = dBq
     
 
@@ -471,6 +485,7 @@ val cBq = 10.0.pow(-2) * ((s `^` -1))
 /**
 * centibecquerel, 10^-2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val centibecquerel = cBq
     
 
@@ -503,6 +518,7 @@ val mBq = 10.0.pow(-3) * ((s `^` -1))
 /**
 * millibecquerel, 10^-3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val millibecquerel = mBq
     
 
@@ -535,6 +551,7 @@ val μBq = 10.0.pow(-6) * ((s `^` -1))
 /**
 * microbecquerel, 10^-6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val microbecquerel = μBq
     
 
@@ -567,6 +584,7 @@ val nBq = 10.0.pow(-9) * ((s `^` -1))
 /**
 * nanobecquerel, 10^-9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val nanobecquerel = nBq
     
 
@@ -599,6 +617,7 @@ val pBq = 10.0.pow(-12) * ((s `^` -1))
 /**
 * picobecquerel, 10^-12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val picobecquerel = pBq
     
 
@@ -631,6 +650,7 @@ val fBq = 10.0.pow(-15) * ((s `^` -1))
 /**
 * femtobecquerel, 10^-15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val femtobecquerel = fBq
     
 
@@ -663,6 +683,7 @@ val aBq = 10.0.pow(-18) * ((s `^` -1))
 /**
 * attobecquerel, 10^-18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val attobecquerel = aBq
     
 
@@ -695,6 +716,7 @@ val zBq = 10.0.pow(-21) * ((s `^` -1))
 /**
 * zeptobecquerel, 10^-21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val zeptobecquerel = zBq
     
 
@@ -727,6 +749,7 @@ val yBq = 10.0.pow(-24) * ((s `^` -1))
 /**
 * yoctobecquerel, 10^-24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val yoctobecquerel = yBq
     
 
@@ -759,6 +782,7 @@ val rBq = 10.0.pow(-27) * ((s `^` -1))
 /**
 * rontobecquerel, 10^-27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val rontobecquerel = rBq
     
 
@@ -791,5 +815,6 @@ val qBq = 10.0.pow(-30) * ((s `^` -1))
 /**
 * quectobecquerel, 10^-30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
+@JvmField()
 val quectobecquerel = qBq
     

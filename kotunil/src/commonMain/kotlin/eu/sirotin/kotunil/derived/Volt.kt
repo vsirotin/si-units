@@ -14,6 +14,7 @@ private val unit =  kg*m2*(s `^` -3) * (A `^` -1)
 /**
 * System International Unit for electric potential, voltage, emf.
 */
+@JvmField()
 val V = unit
 
 /**
@@ -55,6 +56,7 @@ val QV = 10.0.pow(30) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * quettavolt, 10^30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val quettavolt = QV
     
 
@@ -87,6 +89,7 @@ val RV = 10.0.pow(27) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * ronnavolt, 10^27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val ronnavolt = RV
     
 
@@ -119,6 +122,7 @@ val YV = 10.0.pow(24) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * yottavolt, 10^24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val yottavolt = YV
     
 
@@ -151,6 +155,7 @@ val ZV = 10.0.pow(21) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * zettavolt, 10^21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val zettavolt = ZV
     
 
@@ -183,6 +188,7 @@ val EV = 10.0.pow(18) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * exavolt, 10^18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val exavolt = EV
     
 
@@ -215,6 +221,7 @@ val PV = 10.0.pow(15) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * petavolt, 10^15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val petavolt = PV
     
 
@@ -247,6 +254,7 @@ val TV = 10.0.pow(12) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * teravolt, 10^12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val teravolt = TV
     
 
@@ -279,6 +287,7 @@ val GV = 10.0.pow(9) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * gigavolt, 10^9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val gigavolt = GV
     
 
@@ -311,6 +320,7 @@ val MV = 10.0.pow(6) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * megavolt, 10^6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val megavolt = MV
     
 
@@ -343,6 +353,7 @@ val kV = 10.0.pow(3) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * kilovolt, 10^3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val kilovolt = kV
     
 
@@ -375,6 +386,7 @@ val hV = 10.0.pow(2) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * hectovolt, 10^2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val hectovolt = hV
     
 
@@ -407,6 +419,7 @@ val daV = 10.0.pow(1) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * decavolt, 10^1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val decavolt = daV
     
 
@@ -439,6 +452,7 @@ val dV = 10.0.pow(-1) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * decivolt, 10^-1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val decivolt = dV
     
 
@@ -471,6 +485,7 @@ val cV = 10.0.pow(-2) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * centivolt, 10^-2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val centivolt = cV
     
 
@@ -503,6 +518,7 @@ val mV = 10.0.pow(-3) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * millivolt, 10^-3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val millivolt = mV
     
 
@@ -535,6 +551,7 @@ val μV = 10.0.pow(-6) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * microvolt, 10^-6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val microvolt = μV
     
 
@@ -567,6 +584,7 @@ val nV = 10.0.pow(-9) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * nanovolt, 10^-9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val nanovolt = nV
     
 
@@ -599,6 +617,7 @@ val pV = 10.0.pow(-12) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * picovolt, 10^-12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val picovolt = pV
     
 
@@ -631,6 +650,7 @@ val fV = 10.0.pow(-15) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * femtovolt, 10^-15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val femtovolt = fV
     
 
@@ -663,6 +683,7 @@ val aV = 10.0.pow(-18) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * attovolt, 10^-18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val attovolt = aV
     
 
@@ -695,6 +716,7 @@ val zV = 10.0.pow(-21) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * zeptovolt, 10^-21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val zeptovolt = zV
     
 
@@ -727,6 +749,7 @@ val yV = 10.0.pow(-24) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * yoctovolt, 10^-24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val yoctovolt = yV
     
 
@@ -759,6 +782,7 @@ val rV = 10.0.pow(-27) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * rontovolt, 10^-27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val rontovolt = rV
     
 
@@ -791,5 +815,6 @@ val qV = 10.0.pow(-30) * (kg*m2*(s `^` -3) * (A `^` -1))
 /**
 * quectovolt, 10^-30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
+@JvmField()
 val quectovolt = qV
     

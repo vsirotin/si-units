@@ -13,4 +13,5 @@ val Number.`COL$` : ColombianPeso
 /**
 * One unit of Colombian peso
 */
+@JvmField()
 val `COL$` = ColombianPeso()

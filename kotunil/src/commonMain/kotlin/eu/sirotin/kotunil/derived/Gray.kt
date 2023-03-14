@@ -14,6 +14,7 @@ private val unit =  (m2)*(s `^` -2)
 /**
 * System International Unit for absorbed dose (of ionising radiation).
 */
+@JvmField()
 val Gy = unit
 
 /**
@@ -55,6 +56,7 @@ val QGy = 10.0.pow(30) * ((m2)*(s `^` -2))
 /**
 * quettagray, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val quettagray = QGy
     
 
@@ -87,6 +89,7 @@ val RGy = 10.0.pow(27) * ((m2)*(s `^` -2))
 /**
 * ronnagray, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val ronnagray = RGy
     
 
@@ -119,6 +122,7 @@ val YGy = 10.0.pow(24) * ((m2)*(s `^` -2))
 /**
 * yottagray, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val yottagray = YGy
     
 
@@ -151,6 +155,7 @@ val ZGy = 10.0.pow(21) * ((m2)*(s `^` -2))
 /**
 * zettagray, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val zettagray = ZGy
     
 
@@ -183,6 +188,7 @@ val EGy = 10.0.pow(18) * ((m2)*(s `^` -2))
 /**
 * exagray, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val exagray = EGy
     
 
@@ -215,6 +221,7 @@ val PGy = 10.0.pow(15) * ((m2)*(s `^` -2))
 /**
 * petagray, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val petagray = PGy
     
 
@@ -247,6 +254,7 @@ val TGy = 10.0.pow(12) * ((m2)*(s `^` -2))
 /**
 * teragray, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val teragray = TGy
     
 
@@ -279,6 +287,7 @@ val GGy = 10.0.pow(9) * ((m2)*(s `^` -2))
 /**
 * gigagray, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val gigagray = GGy
     
 
@@ -311,6 +320,7 @@ val MGy = 10.0.pow(6) * ((m2)*(s `^` -2))
 /**
 * megagray, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val megagray = MGy
     
 
@@ -343,6 +353,7 @@ val kGy = 10.0.pow(3) * ((m2)*(s `^` -2))
 /**
 * kilogray, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val kilogray = kGy
     
 
@@ -375,6 +386,7 @@ val hGy = 10.0.pow(2) * ((m2)*(s `^` -2))
 /**
 * hectogray, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val hectogray = hGy
     
 
@@ -407,6 +419,7 @@ val daGy = 10.0.pow(1) * ((m2)*(s `^` -2))
 /**
 * decagray, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val decagray = daGy
     
 
@@ -439,6 +452,7 @@ val dGy = 10.0.pow(-1) * ((m2)*(s `^` -2))
 /**
 * decigray, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val decigray = dGy
     
 
@@ -471,6 +485,7 @@ val cGy = 10.0.pow(-2) * ((m2)*(s `^` -2))
 /**
 * centigray, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val centigray = cGy
     
 
@@ -503,6 +518,7 @@ val mGy = 10.0.pow(-3) * ((m2)*(s `^` -2))
 /**
 * milligray, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val milligray = mGy
     
 
@@ -535,6 +551,7 @@ val μGy = 10.0.pow(-6) * ((m2)*(s `^` -2))
 /**
 * microgray, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val microgray = μGy
     
 
@@ -567,6 +584,7 @@ val nGy = 10.0.pow(-9) * ((m2)*(s `^` -2))
 /**
 * nanogray, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val nanogray = nGy
     
 
@@ -599,6 +617,7 @@ val pGy = 10.0.pow(-12) * ((m2)*(s `^` -2))
 /**
 * picogray, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val picogray = pGy
     
 
@@ -631,6 +650,7 @@ val fGy = 10.0.pow(-15) * ((m2)*(s `^` -2))
 /**
 * femtogray, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val femtogray = fGy
     
 
@@ -663,6 +683,7 @@ val aGy = 10.0.pow(-18) * ((m2)*(s `^` -2))
 /**
 * attogray, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val attogray = aGy
     
 
@@ -695,6 +716,7 @@ val zGy = 10.0.pow(-21) * ((m2)*(s `^` -2))
 /**
 * zeptogray, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val zeptogray = zGy
     
 
@@ -727,6 +749,7 @@ val yGy = 10.0.pow(-24) * ((m2)*(s `^` -2))
 /**
 * yoctogray, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val yoctogray = yGy
     
 
@@ -759,6 +782,7 @@ val rGy = 10.0.pow(-27) * ((m2)*(s `^` -2))
 /**
 * rontogray, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val rontogray = rGy
     
 
@@ -791,5 +815,6 @@ val qGy = 10.0.pow(-30) * ((m2)*(s `^` -2))
 /**
 * quectogray, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
+@JvmField()
 val quectogray = qGy
     

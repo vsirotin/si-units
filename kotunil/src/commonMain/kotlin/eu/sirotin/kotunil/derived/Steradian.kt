@@ -14,6 +14,7 @@ private val unit =  m2/m2
 /**
 * System International Unit for solid angle.
 */
+@JvmField()
 val sr = unit
 
 /**
@@ -55,6 +56,7 @@ val Qsr = 10.0.pow(30) * (m2/m2)
 /**
 * quettasteradian, 10^30 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val quettasteradian = Qsr
     
 
@@ -87,6 +89,7 @@ val Rsr = 10.0.pow(27) * (m2/m2)
 /**
 * ronnasteradian, 10^27 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val ronnasteradian = Rsr
     
 
@@ -119,6 +122,7 @@ val Ysr = 10.0.pow(24) * (m2/m2)
 /**
 * yottasteradian, 10^24 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val yottasteradian = Ysr
     
 
@@ -151,6 +155,7 @@ val Zsr = 10.0.pow(21) * (m2/m2)
 /**
 * zettasteradian, 10^21 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val zettasteradian = Zsr
     
 
@@ -183,6 +188,7 @@ val Esr = 10.0.pow(18) * (m2/m2)
 /**
 * exasteradian, 10^18 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val exasteradian = Esr
     
 
@@ -215,6 +221,7 @@ val Psr = 10.0.pow(15) * (m2/m2)
 /**
 * petasteradian, 10^15 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val petasteradian = Psr
     
 
@@ -247,6 +254,7 @@ val Tsr = 10.0.pow(12) * (m2/m2)
 /**
 * terasteradian, 10^12 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val terasteradian = Tsr
     
 
@@ -279,6 +287,7 @@ val Gsr = 10.0.pow(9) * (m2/m2)
 /**
 * gigasteradian, 10^9 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val gigasteradian = Gsr
     
 
@@ -311,6 +320,7 @@ val Msr = 10.0.pow(6) * (m2/m2)
 /**
 * megasteradian, 10^6 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val megasteradian = Msr
     
 
@@ -343,6 +353,7 @@ val ksr = 10.0.pow(3) * (m2/m2)
 /**
 * kilosteradian, 10^3 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val kilosteradian = ksr
     
 
@@ -375,6 +386,7 @@ val hsr = 10.0.pow(2) * (m2/m2)
 /**
 * hectosteradian, 10^2 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val hectosteradian = hsr
     
 
@@ -407,6 +419,7 @@ val dasr = 10.0.pow(1) * (m2/m2)
 /**
 * decasteradian, 10^1 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val decasteradian = dasr
     
 
@@ -439,6 +452,7 @@ val dsr = 10.0.pow(-1) * (m2/m2)
 /**
 * decisteradian, 10^-1 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val decisteradian = dsr
     
 
@@ -471,6 +485,7 @@ val csr = 10.0.pow(-2) * (m2/m2)
 /**
 * centisteradian, 10^-2 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val centisteradian = csr
     
 
@@ -503,6 +518,7 @@ val msr = 10.0.pow(-3) * (m2/m2)
 /**
 * millisteradian, 10^-3 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val millisteradian = msr
     
 
@@ -535,6 +551,7 @@ val μsr = 10.0.pow(-6) * (m2/m2)
 /**
 * microsteradian, 10^-6 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val microsteradian = μsr
     
 
@@ -567,6 +584,7 @@ val nsr = 10.0.pow(-9) * (m2/m2)
 /**
 * nanosteradian, 10^-9 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val nanosteradian = nsr
     
 
@@ -599,6 +617,7 @@ val psr = 10.0.pow(-12) * (m2/m2)
 /**
 * picosteradian, 10^-12 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val picosteradian = psr
     
 
@@ -631,6 +650,7 @@ val fsr = 10.0.pow(-15) * (m2/m2)
 /**
 * femtosteradian, 10^-15 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val femtosteradian = fsr
     
 
@@ -663,6 +683,7 @@ val asr = 10.0.pow(-18) * (m2/m2)
 /**
 * attosteradian, 10^-18 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val attosteradian = asr
     
 
@@ -695,6 +716,7 @@ val zsr = 10.0.pow(-21) * (m2/m2)
 /**
 * zeptosteradian, 10^-21 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val zeptosteradian = zsr
     
 
@@ -727,6 +749,7 @@ val ysr = 10.0.pow(-24) * (m2/m2)
 /**
 * yoctosteradian, 10^-24 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val yoctosteradian = ysr
     
 
@@ -759,6 +782,7 @@ val rsr = 10.0.pow(-27) * (m2/m2)
 /**
 * rontosteradian, 10^-27 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val rontosteradian = rsr
     
 
@@ -791,5 +815,6 @@ val qsr = 10.0.pow(-30) * (m2/m2)
 /**
 * quectosteradian, 10^-30 of steradian, derived SI-Unit for measurement of solid angle
 */ 
+@JvmField()
 val quectosteradian = qsr
     
