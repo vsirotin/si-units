@@ -21,6 +21,7 @@ public class Main {
 
     private static void testAll() {
         new TutorialTest().testTutorial();
+        new TutorialTestLong().testTutorialLong();
     }
 
 }

@@ -38,7 +38,7 @@ fun main() {
     }
     println("")
     println("Test successfully completed!")
-    println("A total of ${TestStatistics.numberTestedObjects} KotUniL's objects tested with ${TestStatistics.numberTests} tests. ")
+    println("A total of ${TestStatistics.numberTestedObjects} KotUniL's objects types tested with ${TestStatistics.numberTests} tests. ")
 }
 
 fun testAll() {
