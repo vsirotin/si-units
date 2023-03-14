@@ -39,11 +39,13 @@ import kotlin.math.pow
 /**
  * Square metre
  */
+@JvmField()
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
+@JvmField()
 val m3 = m2 * m
 
 /**
@@ -58,6 +60,7 @@ val Number.min: Second
 /**
  * Minute (time)
  */
+@JvmField()
 val min = Second(60.0)
 
 /**
@@ -72,6 +75,7 @@ val Number.h: Second
 /**
  * Hour (time)
  */
+@JvmField()
 val h = Second(3600.0)
 
 /**
@@ -86,6 +90,7 @@ val Number.d: Second
 /**
  * Day (time)
  */
+@JvmField()
 val d = Second(24*3600.0)
 
 /**
@@ -97,6 +102,7 @@ val Number.au: Metre
 /**
  * Astronomical unit 149597870700 metre
  */
+@JvmField()
 val au = 1.0.au
 
 /**
