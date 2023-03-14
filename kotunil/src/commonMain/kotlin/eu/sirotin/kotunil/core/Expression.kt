@@ -97,6 +97,41 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
         result = 31 * result + dimensions.hashCode()
         return result
     }
+
+    /**
+     * Allows to add expressions.
+     */
+    fun plus(other: Expression) = this + other
+
+    /**
+     * Allows to subtract expressions.
+     */
+    fun minus(other: Expression) = this - other
+
+    /**
+     * Allows to multiply expressions.
+     */
+    fun times(other: Expression) = this * other
+
+    /**
+     * Allows to multiply expression and number.
+     */
+    fun times(other: Number) = this * other
+
+    /**
+     * Allows to divide expressions.
+     */
+    fun div(other: Expression) = this /other
+
+    /**
+     * Allows to divide expression on number.
+     */
+    fun div(other: Number) =  this /other
+
+    /**
+     * Allows to divide number on expression.
+     */
+    fun numberDivOn(other: Number) =  other/this
 }
 
 /**
