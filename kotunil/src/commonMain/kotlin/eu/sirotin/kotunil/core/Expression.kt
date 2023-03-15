@@ -132,6 +132,11 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
      * Allows to divide number on expression.
      */
     fun numberDivOn(other: Number) =  other/this
+
+    /**
+     * Allows to power an expression to given [degree]
+     */
+    fun pw(degree: Number): Expression = this.pow(degree)
 }
 
 /**

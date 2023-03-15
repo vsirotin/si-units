@@ -31,6 +31,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
     /**
      * System International Unit for luminous intensity.
      */
+    @JvmField()
     val cd = Candela(1.0)       
     
     /**

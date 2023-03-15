@@ -31,6 +31,7 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
     /**
      * System International Unit for time.
      */
+    @JvmField()
     val s = Second(1.0)       
     
     /**

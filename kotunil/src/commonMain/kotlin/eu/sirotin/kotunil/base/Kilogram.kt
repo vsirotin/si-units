@@ -31,6 +31,7 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
     /**
      * System International Unit for mass.
      */
+    @JvmField()
     val kg = Kilogram(1.0)       
     
     /**
