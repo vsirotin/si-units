@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object SecondKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Second(1.0), s)
         check(1.s , s)
@@ -24,7 +22,6 @@ object SecondKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Second(1.0), 1.Qs)
         check(pow30 * Second(1.0), 1.quettasecond)
@@ -34,7 +31,6 @@ object SecondKotlinConsoleTest {
         check(quettasecond , Qs) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Second(1.0), 1.Rs)
         check(pow27 * Second(1.0), 1.ronnasecond)
@@ -44,7 +40,6 @@ object SecondKotlinConsoleTest {
         check(ronnasecond , Rs) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Second(1.0), 1.Ys)
         check(pow24 * Second(1.0), 1.yottasecond)
@@ -54,7 +49,6 @@ object SecondKotlinConsoleTest {
         check(yottasecond , Ys) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Second(1.0), 1.Zs)
         check(pow21 * Second(1.0), 1.zettasecond)
@@ -64,7 +58,6 @@ object SecondKotlinConsoleTest {
         check(zettasecond , Zs) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Second(1.0), 1.Es)
         check(pow18 * Second(1.0), 1.exasecond)
@@ -74,7 +67,6 @@ object SecondKotlinConsoleTest {
         check(exasecond , Es) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Second(1.0), 1.Ps)
         check(pow15 * Second(1.0), 1.petasecond)
@@ -84,7 +76,6 @@ object SecondKotlinConsoleTest {
         check(petasecond , Ps) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Second(1.0), 1.Ts)
         check(pow12 * Second(1.0), 1.terasecond)
@@ -94,7 +85,6 @@ object SecondKotlinConsoleTest {
         check(terasecond , Ts) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Second(1.0), 1.Gs)
         check(pow9 * Second(1.0), 1.gigasecond)
@@ -104,7 +94,6 @@ object SecondKotlinConsoleTest {
         check(gigasecond , Gs) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Second(1.0), 1.Ms)
         check(pow6 * Second(1.0), 1.megasecond)
@@ -114,7 +103,6 @@ object SecondKotlinConsoleTest {
         check(megasecond , Ms) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Second(1.0), 1.ks)
         check(pow3 * Second(1.0), 1.kilosecond)
@@ -124,7 +112,6 @@ object SecondKotlinConsoleTest {
         check(kilosecond , ks) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Second(1.0), 1.hs)
         check(pow2 * Second(1.0), 1.hectosecond)
@@ -134,7 +121,6 @@ object SecondKotlinConsoleTest {
         check(hectosecond , hs) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Second(1.0), 1.das)
         check(pow1 * Second(1.0), 1.decasecond)
@@ -144,7 +130,6 @@ object SecondKotlinConsoleTest {
         check(decasecond , das) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Second(1.0), 1.ds)
         check(powM1 * Second(1.0), 1.decisecond)
@@ -154,7 +139,6 @@ object SecondKotlinConsoleTest {
         check(decisecond , ds) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Second(1.0), 1.cs)
         check(powM2 * Second(1.0), 1.centisecond)
@@ -164,7 +148,6 @@ object SecondKotlinConsoleTest {
         check(centisecond , cs) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Second(1.0), 1.ms)
         check(powM3 * Second(1.0), 1.millisecond)
@@ -174,7 +157,6 @@ object SecondKotlinConsoleTest {
         check(millisecond , ms) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Second(1.0), 1.μs)
         check(powM6 * Second(1.0), 1.microsecond)
@@ -184,7 +166,6 @@ object SecondKotlinConsoleTest {
         check(microsecond , μs) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Second(1.0), 1.ns)
         check(powM9 * Second(1.0), 1.nanosecond)
@@ -194,7 +175,6 @@ object SecondKotlinConsoleTest {
         check(nanosecond , ns) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Second(1.0), 1.ps)
         check(powM12 * Second(1.0), 1.picosecond)
@@ -204,7 +184,6 @@ object SecondKotlinConsoleTest {
         check(picosecond , ps) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Second(1.0), 1.fs)
         check(powM15 * Second(1.0), 1.femtosecond)
@@ -215,7 +194,6 @@ object SecondKotlinConsoleTest {
 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Second(1.0), 1.zs)
         check(powM21 * Second(1.0), 1.zeptosecond)
@@ -225,7 +203,6 @@ object SecondKotlinConsoleTest {
         check(zeptosecond , zs) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Second(1.0), 1.ys)
         check(powM24 * Second(1.0), 1.yoctosecond)
@@ -235,7 +212,6 @@ object SecondKotlinConsoleTest {
         check(yoctosecond , ys) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Second(1.0), 1.rs)
         check(powM27 * Second(1.0), 1.rontosecond)
@@ -245,7 +221,6 @@ object SecondKotlinConsoleTest {
         check(rontosecond , rs) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Second(1.0), 1.qs)
         check(powM30 * Second(1.0), 1.quectosecond)

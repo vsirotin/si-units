@@ -1,7 +1,6 @@
 package eu.sirotin.kotunil.currency
    
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.specialunits.m3
 import eu.sirotin.kotunil.core.div
@@ -11,7 +10,6 @@ object SwedishKronaKotlinConsoleTest {
 
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
         check(SEK, SwedishKrona())
         check(12.SEK, SwedishKrona(12.0))
 

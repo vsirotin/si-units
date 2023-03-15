@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object KilogramKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Kilogram(1.0), kg)
         check(1.kg , kg)
@@ -24,7 +22,6 @@ object KilogramKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Kilogram(1.0), 1.Qkg)
         check(pow27 * Kilogram(1.0), 1.quettakilogram)
@@ -34,7 +31,6 @@ object KilogramKotlinConsoleTest {
         check(quettakilogram , Qkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Kilogram(1.0), 1.Rkg)
         check(pow24 * Kilogram(1.0), 1.ronnakilogram)
@@ -44,7 +40,6 @@ object KilogramKotlinConsoleTest {
         check(ronnakilogram , Rkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Kilogram(1.0), 1.Ykg)
         check(pow21 * Kilogram(1.0), 1.yottakilogram)
@@ -54,7 +49,6 @@ object KilogramKotlinConsoleTest {
         check(yottakilogram , Ykg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Kilogram(1.0), 1.Zkg)
         check(pow18 * Kilogram(1.0), 1.zettakilogram)
@@ -64,7 +58,6 @@ object KilogramKotlinConsoleTest {
         check(zettakilogram , Zkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Kilogram(1.0), 1.Ekg)
         check(pow15 * Kilogram(1.0), 1.exakilogram)
@@ -74,7 +67,6 @@ object KilogramKotlinConsoleTest {
         check(exakilogram , Ekg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Kilogram(1.0), 1.Pkg)
         check(pow12 * Kilogram(1.0), 1.petakilogram)
@@ -84,7 +76,6 @@ object KilogramKotlinConsoleTest {
         check(petakilogram , Pkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Kilogram(1.0), 1.Tkg)
         check(pow9 * Kilogram(1.0), 1.terakilogram)
@@ -94,7 +85,6 @@ object KilogramKotlinConsoleTest {
         check(terakilogram , Tkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Kilogram(1.0), 1.Gkg)
         check(pow6 * Kilogram(1.0), 1.gigakilogram)
@@ -104,7 +94,6 @@ object KilogramKotlinConsoleTest {
         check(gigakilogram , Gkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Kilogram(1.0), 1.Mkg)
         check(pow3 * Kilogram(1.0), 1.megakilogram)
@@ -114,7 +103,6 @@ object KilogramKotlinConsoleTest {
         check(megakilogram , Mkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Kilogram(1.0), 1.hkg)
         check(powM1 * Kilogram(1.0), 1.hectokilogram)
@@ -124,7 +112,6 @@ object KilogramKotlinConsoleTest {
         check(hectokilogram , hkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Kilogram(1.0), 1.dakg)
         check(powM2 * Kilogram(1.0), 1.decakilogram)
@@ -134,7 +121,6 @@ object KilogramKotlinConsoleTest {
         check(decakilogram , dakg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM4 = 10.0.pow(-4)
         check(powM4 * Kilogram(1.0), 1.dkg)
         check(powM4 * Kilogram(1.0), 1.decikilogram)
@@ -144,7 +130,6 @@ object KilogramKotlinConsoleTest {
         check(decikilogram , dkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM5 = 10.0.pow(-5)
         check(powM5 * Kilogram(1.0), 1.ckg)
         check(powM5 * Kilogram(1.0), 1.centikilogram)
@@ -154,7 +139,6 @@ object KilogramKotlinConsoleTest {
         check(centikilogram , ckg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Kilogram(1.0), 1.mkg)
         check(powM6 * Kilogram(1.0), 1.millikilogram)
@@ -164,7 +148,6 @@ object KilogramKotlinConsoleTest {
         check(millikilogram , mkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Kilogram(1.0), 1.μkg)
         check(powM9 * Kilogram(1.0), 1.microkilogram)
@@ -174,7 +157,6 @@ object KilogramKotlinConsoleTest {
         check(microkilogram , μkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Kilogram(1.0), 1.nkg)
         check(powM12 * Kilogram(1.0), 1.nanokilogram)
@@ -184,7 +166,6 @@ object KilogramKotlinConsoleTest {
         check(nanokilogram , nkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Kilogram(1.0), 1.pkg)
         check(powM15 * Kilogram(1.0), 1.picokilogram)
@@ -194,7 +175,6 @@ object KilogramKotlinConsoleTest {
         check(picokilogram , pkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Kilogram(1.0), 1.fkg)
         check(powM18 * Kilogram(1.0), 1.femtokilogram)
@@ -204,7 +184,6 @@ object KilogramKotlinConsoleTest {
         check(femtokilogram , fkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Kilogram(1.0), 1.akg)
         check(powM21 * Kilogram(1.0), 1.attokilogram)
@@ -214,7 +193,6 @@ object KilogramKotlinConsoleTest {
         check(attokilogram , akg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Kilogram(1.0), 1.zkg)
         check(powM24 * Kilogram(1.0), 1.zeptokilogram)
@@ -224,7 +202,6 @@ object KilogramKotlinConsoleTest {
         check(zeptokilogram , zkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Kilogram(1.0), 1.ykg)
         check(powM27 * Kilogram(1.0), 1.yoctokilogram)
@@ -234,7 +211,6 @@ object KilogramKotlinConsoleTest {
         check(yoctokilogram , ykg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Kilogram(1.0), 1.rkg)
         check(powM30 * Kilogram(1.0), 1.rontokilogram)
@@ -244,7 +220,6 @@ object KilogramKotlinConsoleTest {
         check(rontokilogram , rkg) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM33 = 10.0.pow(-33)
         check(powM33 * Kilogram(1.0), 1.qkg)
         check(powM33 * Kilogram(1.0), 1.quectokilogram)

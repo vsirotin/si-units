@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object MoleKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Mole(1.0), mol)
         check(1.mol , mol)
@@ -24,7 +22,6 @@ object MoleKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Mole(1.0), 1.Qmol)
         check(pow30 * Mole(1.0), 1.quettamole)
@@ -34,7 +31,6 @@ object MoleKotlinConsoleTest {
         check(quettamole , Qmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Mole(1.0), 1.Rmol)
         check(pow27 * Mole(1.0), 1.ronnamole)
@@ -44,7 +40,6 @@ object MoleKotlinConsoleTest {
         check(ronnamole , Rmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Mole(1.0), 1.Ymol)
         check(pow24 * Mole(1.0), 1.yottamole)
@@ -54,7 +49,6 @@ object MoleKotlinConsoleTest {
         check(yottamole , Ymol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Mole(1.0), 1.Zmol)
         check(pow21 * Mole(1.0), 1.zettamole)
@@ -64,7 +58,6 @@ object MoleKotlinConsoleTest {
         check(zettamole , Zmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Mole(1.0), 1.Emol)
         check(pow18 * Mole(1.0), 1.examole)
@@ -74,7 +67,6 @@ object MoleKotlinConsoleTest {
         check(examole , Emol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Mole(1.0), 1.Pmol)
         check(pow15 * Mole(1.0), 1.petamole)
@@ -84,7 +76,6 @@ object MoleKotlinConsoleTest {
         check(petamole , Pmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Mole(1.0), 1.Tmol)
         check(pow12 * Mole(1.0), 1.teramole)
@@ -94,7 +85,6 @@ object MoleKotlinConsoleTest {
         check(teramole , Tmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Mole(1.0), 1.Gmol)
         check(pow9 * Mole(1.0), 1.gigamole)
@@ -104,7 +94,6 @@ object MoleKotlinConsoleTest {
         check(gigamole , Gmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Mole(1.0), 1.Mmol)
         check(pow6 * Mole(1.0), 1.megamole)
@@ -114,7 +103,6 @@ object MoleKotlinConsoleTest {
         check(megamole , Mmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Mole(1.0), 1.kmol)
         check(pow3 * Mole(1.0), 1.kilomole)
@@ -124,7 +112,6 @@ object MoleKotlinConsoleTest {
         check(kilomole , kmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Mole(1.0), 1.hmol)
         check(pow2 * Mole(1.0), 1.hectomole)
@@ -134,7 +121,6 @@ object MoleKotlinConsoleTest {
         check(hectomole , hmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Mole(1.0), 1.damol)
         check(pow1 * Mole(1.0), 1.decamole)
@@ -144,7 +130,6 @@ object MoleKotlinConsoleTest {
         check(decamole , damol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Mole(1.0), 1.dmol)
         check(powM1 * Mole(1.0), 1.decimole)
@@ -154,7 +139,6 @@ object MoleKotlinConsoleTest {
         check(decimole , dmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Mole(1.0), 1.cmol)
         check(powM2 * Mole(1.0), 1.centimole)
@@ -164,7 +148,6 @@ object MoleKotlinConsoleTest {
         check(centimole , cmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Mole(1.0), 1.mmol)
         check(powM3 * Mole(1.0), 1.millimole)
@@ -174,7 +157,6 @@ object MoleKotlinConsoleTest {
         check(millimole , mmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Mole(1.0), 1.μmol)
         check(powM6 * Mole(1.0), 1.micromole)
@@ -184,7 +166,6 @@ object MoleKotlinConsoleTest {
         check(micromole , μmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Mole(1.0), 1.nmol)
         check(powM9 * Mole(1.0), 1.nanomole)
@@ -194,7 +175,6 @@ object MoleKotlinConsoleTest {
         check(nanomole , nmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Mole(1.0), 1.pmol)
         check(powM12 * Mole(1.0), 1.picomole)
@@ -204,7 +184,6 @@ object MoleKotlinConsoleTest {
         check(picomole , pmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Mole(1.0), 1.fmol)
         check(powM15 * Mole(1.0), 1.femtomole)
@@ -214,7 +193,6 @@ object MoleKotlinConsoleTest {
         check(femtomole , fmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Mole(1.0), 1.amol)
         check(powM18 * Mole(1.0), 1.attomole)
@@ -224,7 +202,6 @@ object MoleKotlinConsoleTest {
         check(attomole , amol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Mole(1.0), 1.zmol)
         check(powM21 * Mole(1.0), 1.zeptomole)
@@ -234,7 +211,6 @@ object MoleKotlinConsoleTest {
         check(zeptomole , zmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Mole(1.0), 1.ymol)
         check(powM24 * Mole(1.0), 1.yoctomole)
@@ -244,7 +220,6 @@ object MoleKotlinConsoleTest {
         check(yoctomole , ymol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Mole(1.0), 1.rmol)
         check(powM27 * Mole(1.0), 1.rontomole)
@@ -254,7 +229,6 @@ object MoleKotlinConsoleTest {
         check(rontomole , rmol) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Mole(1.0), 1.qmol)
         check(powM30 * Mole(1.0), 1.quectomole)
