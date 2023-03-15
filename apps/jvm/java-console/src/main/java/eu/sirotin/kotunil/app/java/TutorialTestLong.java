@@ -25,18 +25,14 @@ package eu.sirotin.kotunil.app.java;
 import eu.sirotin.kotunil.base.*;
 import eu.sirotin.kotunil.core.Expression;
 import eu.sirotin.kotunil.core.ExpressionKt;
-import static eu.sirotin.kotunil.base.AmpereKt.*;
-import static eu.sirotin.kotunil.base.MetreKt.*;
-import static eu.sirotin.kotunil.base.SecondKt.*;
-import static eu.sirotin.kotunil.base.KilogramKt.*;
-import static eu.sirotin.kotunil.specialunits.NonSiUnitsKt.*;
-import static eu.sirotin.kotunil.derived.TeslaKt.*;
-import static eu.sirotin.kotunil.derived.WeberKt.*;
-import static eu.sirotin.kotunil.core.ExpressionKt.*;
+import eu.sirotin.kotunil.derived.TeslaKt;
+import eu.sirotin.kotunil.derived.WeberKt;
+import eu.sirotin.kotunil.specialunits.NonSiUnitsKt;
 
-public class TutorialTest {
 
-    public void testTutorial() {
+public class TutorialTestLong {
+
+    public void testTutorialLong() {
         testHappyGettingStarted();
         testDimensionAnalysis();
         testCategorySymbols();
@@ -61,23 +57,24 @@ public class TutorialTest {
         //Below commented related lines from Kotlin's tutorial.
 
 //        val s = 4.m * 5.m
-        Expression s = m.times(4).times(m.times(5));
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
 //        val x = 20.l
-        Expression x = L.times(20);
+        Expression x = NonSiUnitsKt.getL(20);
 //        val h = x / s
-        Expression h = x.div(s);
+        Expression h = ExpressionKt.div(x,s);
 //        val z = h / mm
-        Expression z = h.div(mm);
+        Expression z = ExpressionKt.div(h, MetreKt.mm);
 
         Checker.check(1.0, z.getValue());
 
 //        //the same as statement
 //        check(1.0, ((20.l / (4.m * 5.m)) / mm).value, ε)
         Checker.check(1.0,
-                        L.times(20)
-                                .div(
-                                        (m.times(4).times(m.times(5)))).div(mm)
-
+                ExpressionKt.div(
+                        ExpressionKt.div(
+                                NonSiUnitsKt.getL(20),
+                                ExpressionKt.times(new Metre(4), new Metre(5))),
+                        MetreKt.mm)
                               .getValue());
    }
 
@@ -85,17 +82,17 @@ public class TutorialTest {
     private void testDimensionAnalysis() {
         //With the help of the built-in function unitSymbols you can get the dimension of any object in terms of SI standard.
 
-        Expression s1 = m.times(4).times(m.times(5));
-        Checker.check("m2", s1.unitSymbols());
-        Expression x = L.times(20);
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
+        Checker.check("m2", s.unitSymbols());
+        Expression x = NonSiUnitsKt.getL(20);
         Checker.check("m3", x.unitSymbols());
-        Expression h = x.div(s1);
+        Expression h = ExpressionKt.div(x, s);
         Checker.check("m", h.unitSymbols());
 
-        Expression y = s.times(1.2);
+        Expression y = ExpressionKt.times(new Second(1.0), 1.2);
         Checker.check("s", y.unitSymbols());
 
-        Expression z = x.div(y);
+        Expression z = ExpressionKt.div(x, y);
         Checker.check("m3/s", z.unitSymbols());
 
     }
@@ -103,19 +100,19 @@ public class TutorialTest {
     private void testCategorySymbols() {
         //Using the built-in function categorySymbols() you can analyze dimensions
         // of physical units in "academic" manner.
-        Expression s1 = m.times(4).times(m.times(5));
-        Checker.check("L2", s1.categorySymbols());
+        Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
+        Checker.check("L2", s.categorySymbols());
 
-        Expression x = L.times(20);
+        Expression x = NonSiUnitsKt.getL(20);
         Checker.check("L3", x.categorySymbols());
 
-        Expression h = x.div(s1);
+        Expression h = ExpressionKt.div(x, s);
         Checker.check("L", h.categorySymbols());
 
-        Expression y = s.times(1.2);
+        Expression y = ExpressionKt.times(new Second(1), 1.2);
         Checker.check("T", y.categorySymbols());
 
-        Expression z = x.div(y);
+        Expression z = ExpressionKt.div(x, y);
         Checker.check("L3T-1", z.categorySymbols());
 
     }
@@ -131,7 +128,7 @@ public class TutorialTest {
 
         //Complex errors will be found in runtime:
         try {
-            m.times(4).plus(s.times(2));
+            ExpressionKt.plus(new Metre(4), new Second(2));
         }catch (IllegalArgumentException e) {
             if (e.getMessage().startsWith(ExpressionKt.COMPATIBILITY_ERR_PREFIX))return;
         }
@@ -145,16 +142,16 @@ public class TutorialTest {
     // otherwise you will get a run-time error.
 
     private void testCompareTheSameTypes() {
-        Checker.check(m.times(5).compareTo(m.times(4.1)) > 0);
+        Checker.check(new Metre(5).compareTo(new Metre(4.1)) > 0);
 
-        Checker.check(m3.times(4.21).compareTo(
-                m3.times( 4.2)) > 0);
+        Checker.check(ExpressionKt.times(NonSiUnitsKt.m3,20.2).compareTo(
+                ExpressionKt.times(NonSiUnitsKt.m3, 4.2)) > 0);
 
     }
 
     private void testCompareDifferentType() {
-        Expression v1 = m.times(2.4);
-        Expression v2 = s.times(2.4);
+        Expression v1 = new Metre(2.4);
+        Expression v2 = new Second(2.4);
 
         try {
             v1.compareTo(v2);
@@ -166,21 +163,26 @@ public class TutorialTest {
 
 
     private void testBaseUnits() {
-        Checker.check(new Second(1.1), s.times(1.1));
-        Checker.check(s.times(1.2), new Second(1.2));
+        Checker.check(new Second(1.1), SecondKt.getS(1.1));
+        Checker.check(ExpressionKt.times(new Second(1.0), 1.2), new Second(1.2));
 
-        Checker.check(new Kilogram(1.3), kg.times(1.3));
+        Checker.check(new Kilogram(1.3), ExpressionKt.times(new Kilogram(1.0), 1.3));
     }
 
     private void testDerivedUnits() {
-        Checker.check(T ,kg.times(s.pw(-2)).times(A.pw(-1)));
+        Checker.check(TeslaKt.T,ExpressionKt.times(new Kilogram(1.0),
+                ExpressionKt.times(
+                        ExpressionKt.pow(new Second(1.0),-2),
+                        ExpressionKt.pow(new Ampere(1.0), -1))
+                                    )
+                    );
 
-        Checker.check(T, Wb.div(m2));
+        Checker.check(TeslaKt.T,	ExpressionKt.div(WeberKt.Wb, NonSiUnitsKt.m2));
     }
 
     private void testPrefixes() {
-        Expression d = km.minus(μm.times(Math.pow(10, 9)));
-        Checker.check(Math.abs(d.getValue()) < ε);
+        Expression d = ExpressionKt.minus(MetreKt.getKm(1), ExpressionKt.times(Math.pow(10, 9), MetreKt.getμm(1)));
+        Checker.check(Math.abs(d.getValue()) < ExpressionKt.ε);
     }
 
     private void testNonSiUnits() {
@@ -189,12 +191,12 @@ public class TutorialTest {
         // A car cistern can carry 4 tons of water.
         //How many cisterns are needed to achieve the same effect as in case of rain?
         //Reminder: density of watter is 1 kg/l
-        Expression s = ha.times(2.35);
-        Expression ω = s.times(mm); //water volume
-        Expression ρ = kg.div(L); //density of watter is 1 kg/l
-        Expression τ = ω.times(ρ); //common water weight of rain
-        Expression n = τ.div(t.times(4));
 
+        Expression s = NonSiUnitsKt.getHa(2.35);
+        Expression ω = ExpressionKt.times(s, MetreKt.getMm(1.0)); //water volume
+        Expression ρ = ExpressionKt.div(new Kilogram(1.0), NonSiUnitsKt.l); //density of watter is 1 kg/l
+        Expression τ = ExpressionKt.times(ω , ρ); //common water weight of rain
+        Expression n = ExpressionKt.div(τ, ExpressionKt.times(NonSiUnitsKt.t, 4));
         Checker.check(5.875, n.getValue());
 
     }

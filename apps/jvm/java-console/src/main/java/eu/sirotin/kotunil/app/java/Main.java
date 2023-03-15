@@ -15,8 +15,10 @@ public class Main {
             exit(1);
         }
         System.out.println("Test successfully completed!");
-        System.out.println("A total of " + TestStatistics.numberTestedObjects
-                + " KotUniL's objects tested with " + TestStatistics.numberTests + " tests. ");
+        System.out.println("A total of "
+                + Checker.getNumberTestedObjects() + " KotUniL's objects  of "
+                + Checker.getNumberTestedObjectTypes() + " KotUniL's types "
+                + " were tested with " + Checker.numberTests + " tests. ");
     }
 
     private static void testAll() {
