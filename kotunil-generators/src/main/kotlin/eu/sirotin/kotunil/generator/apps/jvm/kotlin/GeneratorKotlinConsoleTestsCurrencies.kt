@@ -63,7 +63,6 @@ private fun generateCurrencyTestClassBody(currencyDescription: CurrencyDescripti
     val symbol = currencyDescription.symbol
     return  """   
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.specialunits.m3
 import eu.sirotin.kotunil.core.div
@@ -73,7 +72,6 @@ object ${name}KotlinConsoleTest {
 
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
         check($code, $name())
         check(12.$code, $name(12.0))
 

@@ -81,7 +81,6 @@ private fun generateTestClassHeadPart(
     return """        
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -89,7 +88,6 @@ import kotlin.math.pow
 object ${className}KotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(${className}(1.0), $unitSymbol)
         check(1.$unitSymbol , $unitSymbol)
@@ -117,7 +115,6 @@ private fun generateTestPartForPrefix( siPrefix: SiPrefix,
 
     val powName = generatePowName(siPrefix.degree)
     return """   
-        TestStatistics.numberTestedObjects++
         val $powName = 10.0.pow(${siPrefix.degree})
         check($powName * $className(1.0), 1.${siPrefix.symbol}$unitSymbol)
         check($powName * $className(1.0), 1.${siPrefix.name}$name)
