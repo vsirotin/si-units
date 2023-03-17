@@ -1,5 +1,7 @@
 package eu.sirotin.kotunil.app.java;
 
+import eu.sirotin.kotunil.base.BaseJavaConsoleTest;
+
 import static java.lang.System.exit;
 
 
@@ -18,12 +20,13 @@ public class Main {
         System.out.println("A total of "
                 + Checker.getNumberTestedObjects() + " KotUniL's objects  of "
                 + Checker.getNumberTestedObjectTypes() + " KotUniL's types "
-                + " were tested with " + Checker.numberTests + " tests. ");
+                + "were tested with " + Checker.numberTests + " tests. ");
     }
 
     private static void testAll() {
         new TutorialTest().testTutorial();
         new TutorialTestLong().testTutorialLong();
+        BaseJavaConsoleTest.javaConsoleTests();
     }
 
 }
