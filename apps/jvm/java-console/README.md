@@ -1,4 +1,4 @@
-# KotUniL - Java Console Demo Applications
+# KotUniL - Java Console Demo Application
 
 
 This demo demonstrate the use of **KotUniL** library in a console application developed with Java tests available in library objects and functions.

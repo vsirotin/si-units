@@ -1,4 +1,4 @@
-# KotUniL - Kotlin Console Demo Applications
+# KotUniL - Kotlin Console Demo Application
 
 
 This demo demonstrate the use of **KotUniL** library in a console application developed with Kotlin and tests all available in library objects and functions.
