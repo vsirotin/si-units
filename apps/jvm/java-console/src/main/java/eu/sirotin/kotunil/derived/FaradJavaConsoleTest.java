@@ -8,7 +8,6 @@ public class  FaradJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(F.plus(F), F.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(F.times(pow30), QF);

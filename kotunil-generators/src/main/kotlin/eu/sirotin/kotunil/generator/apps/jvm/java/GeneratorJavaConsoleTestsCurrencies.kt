@@ -23,6 +23,7 @@
 package eu.sirotin.kotunil.generator.apps.jvm.java
 
 import eu.sirotin.kotunil.generator.CurrencyDescription
+import eu.sirotin.kotunil.generator.SiDerivedUnitDescription
 import eu.sirotin.kotunil.generator.currencyDescriptions
 import eu.sirotin.kotunil.generator.generateFiles
 
@@ -42,7 +43,7 @@ fun generateJavaConsoleTestsCurrencies() {
     )
 
     generateCaller(dirPath,
-        "CurrenciesJavaConsoleTest.java",
+        "CurrencyJavaConsoleTest.java",
         testClasses,
         ::generateJavaConsoleTestCaller,
         "currency"
@@ -50,7 +51,7 @@ fun generateJavaConsoleTestsCurrencies() {
 }
 
 private fun generateCurrencyTestClass(currencyDescription: CurrencyDescription): String {
-    var res = "package eu.sirotin.kotunil.currency" + System.lineSeparator()
+    var res = "package eu.sirotin.kotunil.currency;" + System.lineSeparator()
     res += generateCurrencyTestClassBody(currencyDescription)
     res += "}"
     return res
@@ -58,36 +59,31 @@ private fun generateCurrencyTestClass(currencyDescription: CurrencyDescription):
 
 private fun generateCurrencyTestClassBody(currencyDescription: CurrencyDescription): String {
     val name = currencyDescription.name
+    val className = name.first().uppercaseChar() + name.drop(1)
     testClasses += name
     val code = currencyDescription.code
     val symbol = currencyDescription.symbol
     return  """   
 
-import eu.sirotin.kotunil.app.Java.check
-import eu.sirotin.kotunil.specialunits.m3
-import eu.sirotin.kotunil.core.div
-import eu.sirotin.kotunil.core.times
+import eu.sirotin.kotunil.app.java.Checker;
+import eu.sirotin.kotunil.core.Expression;
+import static eu.sirotin.kotunil.currency.${className}Kt.*;
+import static eu.sirotin.kotunil.specialunits.NonSiUnitsKt.*;
 
-object ${name}JavaConsoleTest {
+public class  ${className}JavaConsoleTest {
 
+    public static void javaConsoleTest() {
+        Checker.check($code, new $name());
+        Checker.check($code.times(12), new $name(12.0));
 
-    fun JavaConsoleTest() {
-        check($code, $name())
-        check(12.$code, $name(12.0))
+        String s = $code.unitSymbols();
+        Checker.check("$code", s);
 
-        val s = $code.unitSymbols()
-        check("$code", s)
-
-        val s1 = $code.categorySymbols()
-        check("$symbol", s1)
-
-        val s2 = $code.dimensions.factors.first().specification.unitSymbol
-        check("$code", s2)
-        check($symbol, $name())
-        check(123.$symbol, 123.$code)
-
-        val c = 12*m3/$symbol
-        check("m3/$code", c.unitSymbols())
+        String s1 = $code.categorySymbols();
+        Checker.check("$symbol", s1);
+        
+        Expression c = m3.times(23).div($code);
+        Checker.check("m3/$code", c.unitSymbols());
     }
 """
 }

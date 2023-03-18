@@ -8,7 +8,6 @@ public class  OhmJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Ω.plus(Ω), Ω.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Ω.times(pow30), QΩ);

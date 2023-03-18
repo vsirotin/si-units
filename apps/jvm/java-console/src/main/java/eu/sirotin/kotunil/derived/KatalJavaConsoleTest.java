@@ -8,7 +8,6 @@ public class  KatalJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(kat.plus(kat), kat.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(kat.times(pow30), Qkat);

@@ -1,6 +1,7 @@
 package eu.sirotin.kotunil.app.java;
 
 import eu.sirotin.kotunil.base.BaseJavaConsoleTest;
+import eu.sirotin.kotunil.currency.CurrencyJavaConsoleTest;
 import eu.sirotin.kotunil.derived.DerivedJavaConsoleTest;
 
 import static java.lang.System.exit;
@@ -29,6 +30,7 @@ public class Main {
         new TutorialTestLong().testTutorialLong();
         BaseJavaConsoleTest.javaConsoleTests();
         DerivedJavaConsoleTest.javaConsoleTests();
+        CurrencyJavaConsoleTest.javaConsoleTests();
     }
 
 }

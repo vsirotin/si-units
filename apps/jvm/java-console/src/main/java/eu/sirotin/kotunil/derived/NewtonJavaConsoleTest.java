@@ -8,7 +8,6 @@ public class  NewtonJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(N.plus(N), N.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(N.times(pow30), QN);

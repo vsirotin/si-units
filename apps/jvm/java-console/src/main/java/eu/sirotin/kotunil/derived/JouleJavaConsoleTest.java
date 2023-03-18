@@ -8,7 +8,6 @@ public class  JouleJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(J.plus(J), J.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(J.times(pow30), QJ);

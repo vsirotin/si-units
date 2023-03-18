@@ -8,7 +8,6 @@ public class  GrayJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Gy.plus(Gy), Gy.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Gy.times(pow30), QGy);

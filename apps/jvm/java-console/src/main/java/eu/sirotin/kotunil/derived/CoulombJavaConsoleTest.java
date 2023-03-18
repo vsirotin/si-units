@@ -8,7 +8,6 @@ public class  CoulombJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(C.plus(C), C.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(C.times(pow30), QC);

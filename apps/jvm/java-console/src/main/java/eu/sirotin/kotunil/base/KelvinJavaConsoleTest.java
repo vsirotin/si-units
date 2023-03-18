@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.KelvinKt.*;
 
 public class  KelvinJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Kelvin(1.0), K);
        Checker.check(K.times(1.3) , new Kelvin(1.3));

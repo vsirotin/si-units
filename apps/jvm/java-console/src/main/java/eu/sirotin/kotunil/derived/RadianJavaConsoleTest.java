@@ -8,7 +8,6 @@ public class  RadianJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(rad.plus(rad), rad.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(rad.times(pow30), Qrad);

@@ -8,7 +8,6 @@ public class  PascalJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Pa.plus(Pa), Pa.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Pa.times(pow30), QPa);

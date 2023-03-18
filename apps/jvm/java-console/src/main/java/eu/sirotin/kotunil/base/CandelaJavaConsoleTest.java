@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.CandelaKt.*;
 
 public class  CandelaJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Candela(1.0), cd);
        Checker.check(cd.times(1.3) , new Candela(1.3));

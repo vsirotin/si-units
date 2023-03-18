@@ -8,7 +8,6 @@ public class  LumenJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(lm.plus(lm), lm.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(lm.times(pow30), Qlm);

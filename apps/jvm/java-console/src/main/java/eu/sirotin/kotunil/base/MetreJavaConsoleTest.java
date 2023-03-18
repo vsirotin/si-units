@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.MetreKt.*;
 
 public class  MetreJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Metre(1.0), m);
        Checker.check(m.times(1.3) , new Metre(1.3));

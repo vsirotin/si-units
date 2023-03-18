@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.KilogramKt.*;
 
 public class  KilogramJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Kilogram(1.0), kg);
        Checker.check(kg.times(1.3) , new Kilogram(1.3));

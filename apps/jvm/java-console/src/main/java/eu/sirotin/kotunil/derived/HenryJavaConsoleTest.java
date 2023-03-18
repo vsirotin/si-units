@@ -8,7 +8,6 @@ public class  HenryJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(H.plus(H), H.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(H.times(pow30), QH);

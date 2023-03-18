@@ -8,7 +8,6 @@ public class  LuxJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(lx.plus(lx), lx.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(lx.times(pow30), Qlx);

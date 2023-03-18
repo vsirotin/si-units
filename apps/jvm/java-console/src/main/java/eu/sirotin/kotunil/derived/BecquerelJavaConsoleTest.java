@@ -8,7 +8,6 @@ public class  BecquerelJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Bq.plus(Bq), Bq.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Bq.times(pow30), QBq);

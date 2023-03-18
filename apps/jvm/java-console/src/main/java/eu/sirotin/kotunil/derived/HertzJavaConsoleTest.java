@@ -8,7 +8,6 @@ public class  HertzJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Hz.plus(Hz), Hz.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Hz.times(pow30), QHz);

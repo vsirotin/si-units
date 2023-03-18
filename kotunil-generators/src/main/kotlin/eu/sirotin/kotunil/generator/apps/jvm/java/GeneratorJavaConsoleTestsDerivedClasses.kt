@@ -59,18 +59,14 @@ public class  ${className}JavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check($unitSymbol.plus($unitSymbol), $unitSymbol.times(2));
-
     """
 }
 
-private fun getClassName(siUnitDescription: SiDerivedUnitDescription) =
-    siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateUnitTestForPrefix(siPrefix: SiPrefix, description: SiDerivedUnitDescription): String {
     val name = description.name
     val unitSymbol = description.unitSymbol
     val powName = generatePowName(siPrefix.degree)
-    val className = getClassName(description)
 
     return """          
         double $powName = Math.pow(10.0, ${siPrefix.degree});

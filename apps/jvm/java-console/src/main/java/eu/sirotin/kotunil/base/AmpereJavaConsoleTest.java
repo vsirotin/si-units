@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.AmpereKt.*;
 
 public class  AmpereJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Ampere(1.0), A);
        Checker.check(A.times(1.3) , new Ampere(1.3));

@@ -8,7 +8,6 @@ public class  SiemensJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(S.plus(S), S.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(S.times(pow30), QS);

@@ -8,7 +8,6 @@ public class  VoltJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(V.plus(V), V.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(V.times(pow30), QV);

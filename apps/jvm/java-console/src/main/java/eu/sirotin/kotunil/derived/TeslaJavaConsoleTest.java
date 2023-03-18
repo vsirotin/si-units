@@ -8,7 +8,6 @@ public class  TeslaJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(T.plus(T), T.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(T.times(pow30), QT);

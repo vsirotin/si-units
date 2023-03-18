@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.MoleKt.*;
 
 public class  MoleJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Mole(1.0), mol);
        Checker.check(mol.times(1.3) , new Mole(1.3));

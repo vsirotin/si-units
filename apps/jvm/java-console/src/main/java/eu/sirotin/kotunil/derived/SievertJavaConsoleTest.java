@@ -8,7 +8,6 @@ public class  SievertJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Sv.plus(Sv), Sv.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Sv.times(pow30), QSv);

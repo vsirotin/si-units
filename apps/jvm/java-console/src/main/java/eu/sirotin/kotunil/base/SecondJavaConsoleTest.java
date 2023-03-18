@@ -6,7 +6,7 @@ import static eu.sirotin.kotunil.base.SecondKt.*;
 
 public class  SecondJavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new Second(1.0), s);
        Checker.check(s.times(1.3) , new Second(1.3));

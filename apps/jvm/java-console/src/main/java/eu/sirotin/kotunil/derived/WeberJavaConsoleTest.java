@@ -8,7 +8,6 @@ public class  WeberJavaConsoleTest {
 
     public static void javaConsoleTest() {
         Checker.check(Wb.plus(Wb), Wb.times(2));
-
               
         double pow30 = Math.pow(10.0, 30);
         Checker.check(Wb.times(pow30), QWb);
