@@ -25,10 +25,10 @@ package eu.sirotin.kotunil.generator.apps.jvm.java
 import eu.sirotin.kotunil.generator.SiPrefix
 import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
-import eu.sirotin.kotunil.generator.getDerivedClassName
+import eu.sirotin.kotunil.generator.getClassName
+import sun.management.MonitorInfoCompositeData.getClassName
 import java.io.File
 import java.nio.file.Files
-import kotlin.math.abs
 
 
 private val testClasses = mutableListOf<String>()
@@ -77,7 +77,7 @@ fun generateCaller(dirPath: String,
 
 private fun generateTestClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     testClasses += className
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
@@ -88,7 +88,7 @@ import static eu.sirotin.kotunil.base.${className}Kt.*;
 
 public class  ${className}JavaConsoleTest {
 
-        public static void javaConsoleTest() {
+    public static void javaConsoleTest() {
 
        Checker.check(new ${className}(1.0), $unitSymbol);
        Checker.check($unitSymbol.times(1.3) , new ${className}(1.3));
@@ -98,7 +98,7 @@ public class  ${className}JavaConsoleTest {
 val EXCLUDED_ABBREVIATIONS = listOf("as", "kkg") //Name conflicts
 private fun generateTestPartForPrefix( siPrefix: SiPrefix,
                                        siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 
@@ -113,10 +113,4 @@ private fun generateTestPartForPrefix( siPrefix: SiPrefix,
         Checker.check(${siPrefix.symbol}$unitSymbol, get${capitalizeFirst(siPrefix.name)}$name());
 """
 }
-fun capitalizeFirst(s: String): String {
-    return s.replaceFirstChar { it.uppercase() }
-}
 
-fun generatePowName(degree: Int): String {
-    return "pow" + if(degree >= 0) degree else "M${abs(degree)}"
-}

@@ -24,6 +24,7 @@ package eu.sirotin.kotunil.generator.apps.jvm.java
 
 import eu.sirotin.kotunil.generator.SiDerivedUnitDescription
 import eu.sirotin.kotunil.generator.SiPrefix
+import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateDerivedTest
 import eu.sirotin.kotunil.generator.getDerivedClassName
 
@@ -49,28 +50,32 @@ private fun generateTestClassHeadPart(description: SiDerivedUnitDescription): St
     testClasses += className
     val unitSymbol = description.unitSymbol
     return """        
-package eu.sirotin.kotunil.derived
+package eu.sirotin.kotunil.derived;
 
-import eu.sirotin.kotunil.app.Java.check
-import Java.math.pow
+import eu.sirotin.kotunil.app.java.Checker;
+import static eu.sirotin.kotunil.derived.${className}Kt.*;
 
-object ${className}JavaConsoleTest {
+public class  ${className}JavaConsoleTest {
 
-    fun JavaConsoleTest() {
-        check(1.$unitSymbol , $unitSymbol)
+    public static void javaConsoleTest() {
+        Checker.check($unitSymbol.plus($unitSymbol), $unitSymbol.times(2));
+
     """
 }
+
+private fun getClassName(siUnitDescription: SiDerivedUnitDescription) =
+    siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateUnitTestForPrefix(siPrefix: SiPrefix, description: SiDerivedUnitDescription): String {
     val name = description.name
     val unitSymbol = description.unitSymbol
     val powName = generatePowName(siPrefix.degree)
+    val className = getClassName(description)
+
     return """          
-        val $powName = 10.0.pow(${siPrefix.degree})
-        check(1.${siPrefix.symbol}$unitSymbol.value, ${unitSymbol}.value*$powName)
-        check(1.${siPrefix.name}$name.value, ${unitSymbol}.value*$powName)
-        check(1.${siPrefix.symbol}$unitSymbol , ${siPrefix.symbol}$unitSymbol)
-        check(${siPrefix.name}$name, ${siPrefix.symbol}$unitSymbol)"""
+        double $powName = Math.pow(10.0, ${siPrefix.degree});
+        Checker.check($unitSymbol.times($powName), ${siPrefix.symbol}$unitSymbol);
+        Checker.check($unitSymbol.times($powName), get${capitalizeFirst(siPrefix.name)}$name(1.0));"""
 }
 
 

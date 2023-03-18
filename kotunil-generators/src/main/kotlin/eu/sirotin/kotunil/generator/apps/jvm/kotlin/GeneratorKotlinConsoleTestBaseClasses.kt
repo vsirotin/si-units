@@ -25,7 +25,7 @@ package eu.sirotin.kotunil.generator.apps.jvm.kotlin
 import eu.sirotin.kotunil.generator.SiPrefix
 import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
-import eu.sirotin.kotunil.generator.getDerivedClassName
+import eu.sirotin.kotunil.generator.getClassName
 import java.io.File
 import java.nio.file.Files
 import kotlin.math.abs
@@ -75,7 +75,7 @@ fun generateCaller(dirPath: String,
 
 private fun generateTestClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     testClasses += className
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
@@ -107,7 +107,7 @@ object ${className}KotlinConsoleTest {
 val EXCLUDED_ABBREVIATIONS = listOf("as", "kkg") //Name conflicts
 private fun generateTestPartForPrefix( siPrefix: SiPrefix,
                                        siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val  name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 
