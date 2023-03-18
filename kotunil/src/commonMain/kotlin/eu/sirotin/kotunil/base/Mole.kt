@@ -31,6 +31,7 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
     /**
      * System International Unit for amount of substance.
      */
+    @JvmField()
     val mol = Mole(1.0)       
     
     /**

@@ -31,6 +31,7 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
     /**
      * System International Unit for thermodynamic temperature.
      */
+    @JvmField()
     val K = Kelvin(1.0)       
     
     /**

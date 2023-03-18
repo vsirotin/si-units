@@ -64,7 +64,7 @@ private fun generateTestForSiUnitBaseClass(siUnitDescription: SiUnitDescription,
            generatorTestClassHeadPart: (SiUnitDescription) -> String,
            generatorUnitTestForPrefix: (SiPrefix, SiUnitDescription)->String,
            fileEnd: String) {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
 
     val fileName = "${className}$fileNameSuffix"
@@ -77,12 +77,12 @@ private fun generateTestForSiUnitBaseClass(siUnitDescription: SiUnitDescription,
     file.writeText(classText)
 }
 
-fun getDerivedClassName(siUnitDescription: SiUnitDescription) =
+fun getClassName(siUnitDescription: SiUnitDescription) =
     siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
 package eu.sirotin.kotunil.base
@@ -120,7 +120,7 @@ internal class ${className}Test {
 private fun generatePrefixesTestPart(
     siPrefix: SiPrefix,
     siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 

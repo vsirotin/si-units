@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object CandelaKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Candela(1.0), cd)
         check(1.cd , cd)
@@ -24,7 +22,6 @@ object CandelaKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Candela(1.0), 1.Qcd)
         check(pow30 * Candela(1.0), 1.quettacandela)
@@ -34,7 +31,6 @@ object CandelaKotlinConsoleTest {
         check(quettacandela , Qcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Candela(1.0), 1.Rcd)
         check(pow27 * Candela(1.0), 1.ronnacandela)
@@ -44,7 +40,6 @@ object CandelaKotlinConsoleTest {
         check(ronnacandela , Rcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Candela(1.0), 1.Ycd)
         check(pow24 * Candela(1.0), 1.yottacandela)
@@ -54,7 +49,6 @@ object CandelaKotlinConsoleTest {
         check(yottacandela , Ycd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Candela(1.0), 1.Zcd)
         check(pow21 * Candela(1.0), 1.zettacandela)
@@ -64,7 +58,6 @@ object CandelaKotlinConsoleTest {
         check(zettacandela , Zcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Candela(1.0), 1.Ecd)
         check(pow18 * Candela(1.0), 1.exacandela)
@@ -74,7 +67,6 @@ object CandelaKotlinConsoleTest {
         check(exacandela , Ecd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Candela(1.0), 1.Pcd)
         check(pow15 * Candela(1.0), 1.petacandela)
@@ -84,7 +76,6 @@ object CandelaKotlinConsoleTest {
         check(petacandela , Pcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Candela(1.0), 1.Tcd)
         check(pow12 * Candela(1.0), 1.teracandela)
@@ -94,7 +85,6 @@ object CandelaKotlinConsoleTest {
         check(teracandela , Tcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Candela(1.0), 1.Gcd)
         check(pow9 * Candela(1.0), 1.gigacandela)
@@ -104,7 +94,6 @@ object CandelaKotlinConsoleTest {
         check(gigacandela , Gcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Candela(1.0), 1.Mcd)
         check(pow6 * Candela(1.0), 1.megacandela)
@@ -114,7 +103,6 @@ object CandelaKotlinConsoleTest {
         check(megacandela , Mcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Candela(1.0), 1.kcd)
         check(pow3 * Candela(1.0), 1.kilocandela)
@@ -124,7 +112,6 @@ object CandelaKotlinConsoleTest {
         check(kilocandela , kcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Candela(1.0), 1.hcd)
         check(pow2 * Candela(1.0), 1.hectocandela)
@@ -134,7 +121,6 @@ object CandelaKotlinConsoleTest {
         check(hectocandela , hcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Candela(1.0), 1.dacd)
         check(pow1 * Candela(1.0), 1.decacandela)
@@ -144,7 +130,6 @@ object CandelaKotlinConsoleTest {
         check(decacandela , dacd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Candela(1.0), 1.dcd)
         check(powM1 * Candela(1.0), 1.decicandela)
@@ -154,7 +139,6 @@ object CandelaKotlinConsoleTest {
         check(decicandela , dcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Candela(1.0), 1.ccd)
         check(powM2 * Candela(1.0), 1.centicandela)
@@ -164,7 +148,6 @@ object CandelaKotlinConsoleTest {
         check(centicandela , ccd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Candela(1.0), 1.mcd)
         check(powM3 * Candela(1.0), 1.millicandela)
@@ -174,7 +157,6 @@ object CandelaKotlinConsoleTest {
         check(millicandela , mcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Candela(1.0), 1.μcd)
         check(powM6 * Candela(1.0), 1.microcandela)
@@ -184,7 +166,6 @@ object CandelaKotlinConsoleTest {
         check(microcandela , μcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Candela(1.0), 1.ncd)
         check(powM9 * Candela(1.0), 1.nanocandela)
@@ -194,7 +175,6 @@ object CandelaKotlinConsoleTest {
         check(nanocandela , ncd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Candela(1.0), 1.pcd)
         check(powM12 * Candela(1.0), 1.picocandela)
@@ -204,7 +184,6 @@ object CandelaKotlinConsoleTest {
         check(picocandela , pcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Candela(1.0), 1.fcd)
         check(powM15 * Candela(1.0), 1.femtocandela)
@@ -214,7 +193,6 @@ object CandelaKotlinConsoleTest {
         check(femtocandela , fcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Candela(1.0), 1.acd)
         check(powM18 * Candela(1.0), 1.attocandela)
@@ -224,7 +202,6 @@ object CandelaKotlinConsoleTest {
         check(attocandela , acd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Candela(1.0), 1.zcd)
         check(powM21 * Candela(1.0), 1.zeptocandela)
@@ -234,7 +211,6 @@ object CandelaKotlinConsoleTest {
         check(zeptocandela , zcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Candela(1.0), 1.ycd)
         check(powM24 * Candela(1.0), 1.yoctocandela)
@@ -244,7 +220,6 @@ object CandelaKotlinConsoleTest {
         check(yoctocandela , ycd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Candela(1.0), 1.rcd)
         check(powM27 * Candela(1.0), 1.rontocandela)
@@ -254,7 +229,6 @@ object CandelaKotlinConsoleTest {
         check(rontocandela , rcd) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Candela(1.0), 1.qcd)
         check(powM30 * Candela(1.0), 1.quectocandela)

@@ -31,6 +31,7 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
     /**
      * System International Unit for length.
      */
+    @JvmField()
     val m = Metre(1.0)       
     
     /**

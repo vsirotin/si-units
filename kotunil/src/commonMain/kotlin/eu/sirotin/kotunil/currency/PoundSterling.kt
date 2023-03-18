@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionPoundSterling = UnitSpecification(
     "GBP",
@@ -27,5 +28,6 @@ class PoundSterling(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Sterling
     */
+    @JvmField()
     val GBP = PoundSterling()   
     

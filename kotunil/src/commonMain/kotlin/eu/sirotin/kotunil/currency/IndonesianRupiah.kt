@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionIndonesianRupiah = UnitSpecification(
     "IDR",
@@ -27,6 +28,7 @@ class IndonesianRupiah(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Indonesian rupiah
     */
+    @JvmField()
     val IDR = IndonesianRupiah()   
     
 
@@ -42,4 +44,5 @@ val Number.Rp : IndonesianRupiah
 /**
 * One unit of Indonesian rupiah
 */
+@JvmField()
 val Rp = IndonesianRupiah()

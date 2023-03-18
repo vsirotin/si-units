@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionMalaysianRinggit = UnitSpecification(
     "MYR",
@@ -27,6 +28,7 @@ class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Malaysian ringgit
     */
+    @JvmField()
     val MYR = MalaysianRinggit()   
     
 
@@ -42,4 +44,5 @@ val Number.RM : MalaysianRinggit
 /**
 * One unit of Malaysian ringgit
 */
+@JvmField()
 val RM = MalaysianRinggit()

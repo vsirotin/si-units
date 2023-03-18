@@ -1,7 +1,6 @@
 package eu.sirotin.kotunil.currency
    
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.specialunits.m3
 import eu.sirotin.kotunil.core.div
@@ -11,7 +10,6 @@ object IndonesianRupiahKotlinConsoleTest {
 
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
         check(IDR, IndonesianRupiah())
         check(12.IDR, IndonesianRupiah(12.0))
 

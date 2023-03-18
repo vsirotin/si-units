@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionSouthKoreanWon = UnitSpecification(
     "KRW",
@@ -27,5 +28,6 @@ class SouthKoreanWon(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of  South Korean won
     */
+    @JvmField()
     val KRW = SouthKoreanWon()   
     

@@ -117,6 +117,7 @@ private val unit =  $formula
 /**
 * System International Unit for $quantityName.
 */
+@JvmField()
 val $unitSymbol = unit
 
 /**
@@ -177,6 +178,7 @@ val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
+@JvmField()
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
 }

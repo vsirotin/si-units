@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object KelvinKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Kelvin(1.0), K)
         check(1.K , K)
@@ -24,7 +22,6 @@ object KelvinKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Kelvin(1.0), 1.QK)
         check(pow30 * Kelvin(1.0), 1.quettakelvin)
@@ -34,7 +31,6 @@ object KelvinKotlinConsoleTest {
         check(quettakelvin , QK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Kelvin(1.0), 1.RK)
         check(pow27 * Kelvin(1.0), 1.ronnakelvin)
@@ -44,7 +40,6 @@ object KelvinKotlinConsoleTest {
         check(ronnakelvin , RK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Kelvin(1.0), 1.YK)
         check(pow24 * Kelvin(1.0), 1.yottakelvin)
@@ -54,7 +49,6 @@ object KelvinKotlinConsoleTest {
         check(yottakelvin , YK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Kelvin(1.0), 1.ZK)
         check(pow21 * Kelvin(1.0), 1.zettakelvin)
@@ -64,7 +58,6 @@ object KelvinKotlinConsoleTest {
         check(zettakelvin , ZK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Kelvin(1.0), 1.EK)
         check(pow18 * Kelvin(1.0), 1.exakelvin)
@@ -74,7 +67,6 @@ object KelvinKotlinConsoleTest {
         check(exakelvin , EK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Kelvin(1.0), 1.PK)
         check(pow15 * Kelvin(1.0), 1.petakelvin)
@@ -84,7 +76,6 @@ object KelvinKotlinConsoleTest {
         check(petakelvin , PK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Kelvin(1.0), 1.TK)
         check(pow12 * Kelvin(1.0), 1.terakelvin)
@@ -94,7 +85,6 @@ object KelvinKotlinConsoleTest {
         check(terakelvin , TK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Kelvin(1.0), 1.GK)
         check(pow9 * Kelvin(1.0), 1.gigakelvin)
@@ -104,7 +94,6 @@ object KelvinKotlinConsoleTest {
         check(gigakelvin , GK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Kelvin(1.0), 1.MK)
         check(pow6 * Kelvin(1.0), 1.megakelvin)
@@ -114,7 +103,6 @@ object KelvinKotlinConsoleTest {
         check(megakelvin , MK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Kelvin(1.0), 1.kK)
         check(pow3 * Kelvin(1.0), 1.kilokelvin)
@@ -124,7 +112,6 @@ object KelvinKotlinConsoleTest {
         check(kilokelvin , kK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Kelvin(1.0), 1.hK)
         check(pow2 * Kelvin(1.0), 1.hectokelvin)
@@ -134,7 +121,6 @@ object KelvinKotlinConsoleTest {
         check(hectokelvin , hK) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Kelvin(1.0), 1.daK)
         check(pow1 * Kelvin(1.0), 1.decakelvin)
@@ -144,7 +130,6 @@ object KelvinKotlinConsoleTest {
         check(decakelvin , daK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Kelvin(1.0), 1.dK)
         check(powM1 * Kelvin(1.0), 1.decikelvin)
@@ -154,7 +139,6 @@ object KelvinKotlinConsoleTest {
         check(decikelvin , dK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Kelvin(1.0), 1.cK)
         check(powM2 * Kelvin(1.0), 1.centikelvin)
@@ -164,7 +148,6 @@ object KelvinKotlinConsoleTest {
         check(centikelvin , cK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Kelvin(1.0), 1.mK)
         check(powM3 * Kelvin(1.0), 1.millikelvin)
@@ -174,7 +157,6 @@ object KelvinKotlinConsoleTest {
         check(millikelvin , mK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Kelvin(1.0), 1.μK)
         check(powM6 * Kelvin(1.0), 1.microkelvin)
@@ -184,7 +166,6 @@ object KelvinKotlinConsoleTest {
         check(microkelvin , μK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Kelvin(1.0), 1.nK)
         check(powM9 * Kelvin(1.0), 1.nanokelvin)
@@ -194,7 +175,6 @@ object KelvinKotlinConsoleTest {
         check(nanokelvin , nK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Kelvin(1.0), 1.pK)
         check(powM12 * Kelvin(1.0), 1.picokelvin)
@@ -204,7 +184,6 @@ object KelvinKotlinConsoleTest {
         check(picokelvin , pK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Kelvin(1.0), 1.fK)
         check(powM15 * Kelvin(1.0), 1.femtokelvin)
@@ -214,7 +193,6 @@ object KelvinKotlinConsoleTest {
         check(femtokelvin , fK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Kelvin(1.0), 1.aK)
         check(powM18 * Kelvin(1.0), 1.attokelvin)
@@ -224,7 +202,6 @@ object KelvinKotlinConsoleTest {
         check(attokelvin , aK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Kelvin(1.0), 1.zK)
         check(powM21 * Kelvin(1.0), 1.zeptokelvin)
@@ -234,7 +211,6 @@ object KelvinKotlinConsoleTest {
         check(zeptokelvin , zK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Kelvin(1.0), 1.yK)
         check(powM24 * Kelvin(1.0), 1.yoctokelvin)
@@ -244,7 +220,6 @@ object KelvinKotlinConsoleTest {
         check(yoctokelvin , yK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Kelvin(1.0), 1.rK)
         check(powM27 * Kelvin(1.0), 1.rontokelvin)
@@ -254,7 +229,6 @@ object KelvinKotlinConsoleTest {
         check(rontokelvin , rK) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Kelvin(1.0), 1.qK)
         check(powM30 * Kelvin(1.0), 1.quectokelvin)

@@ -14,6 +14,7 @@ private val unit =  m/m
 /**
 * System International Unit for plane angle.
 */
+@JvmField()
 val rad = unit
 
 /**
@@ -55,6 +56,7 @@ val Qrad = 10.0.pow(30) * (m/m)
 /**
 * quettaradian, 10^30 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val quettaradian = Qrad
     
 
@@ -87,6 +89,7 @@ val Rrad = 10.0.pow(27) * (m/m)
 /**
 * ronnaradian, 10^27 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val ronnaradian = Rrad
     
 
@@ -119,6 +122,7 @@ val Yrad = 10.0.pow(24) * (m/m)
 /**
 * yottaradian, 10^24 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val yottaradian = Yrad
     
 
@@ -151,6 +155,7 @@ val Zrad = 10.0.pow(21) * (m/m)
 /**
 * zettaradian, 10^21 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val zettaradian = Zrad
     
 
@@ -183,6 +188,7 @@ val Erad = 10.0.pow(18) * (m/m)
 /**
 * exaradian, 10^18 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val exaradian = Erad
     
 
@@ -215,6 +221,7 @@ val Prad = 10.0.pow(15) * (m/m)
 /**
 * petaradian, 10^15 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val petaradian = Prad
     
 
@@ -247,6 +254,7 @@ val Trad = 10.0.pow(12) * (m/m)
 /**
 * teraradian, 10^12 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val teraradian = Trad
     
 
@@ -279,6 +287,7 @@ val Grad = 10.0.pow(9) * (m/m)
 /**
 * gigaradian, 10^9 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val gigaradian = Grad
     
 
@@ -311,6 +320,7 @@ val Mrad = 10.0.pow(6) * (m/m)
 /**
 * megaradian, 10^6 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val megaradian = Mrad
     
 
@@ -343,6 +353,7 @@ val krad = 10.0.pow(3) * (m/m)
 /**
 * kiloradian, 10^3 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val kiloradian = krad
     
 
@@ -375,6 +386,7 @@ val hrad = 10.0.pow(2) * (m/m)
 /**
 * hectoradian, 10^2 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val hectoradian = hrad
     
 
@@ -407,6 +419,7 @@ val darad = 10.0.pow(1) * (m/m)
 /**
 * decaradian, 10^1 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val decaradian = darad
     
 
@@ -439,6 +452,7 @@ val drad = 10.0.pow(-1) * (m/m)
 /**
 * deciradian, 10^-1 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val deciradian = drad
     
 
@@ -471,6 +485,7 @@ val crad = 10.0.pow(-2) * (m/m)
 /**
 * centiradian, 10^-2 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val centiradian = crad
     
 
@@ -503,6 +518,7 @@ val mrad = 10.0.pow(-3) * (m/m)
 /**
 * milliradian, 10^-3 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val milliradian = mrad
     
 
@@ -535,6 +551,7 @@ val μrad = 10.0.pow(-6) * (m/m)
 /**
 * microradian, 10^-6 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val microradian = μrad
     
 
@@ -567,6 +584,7 @@ val nrad = 10.0.pow(-9) * (m/m)
 /**
 * nanoradian, 10^-9 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val nanoradian = nrad
     
 
@@ -599,6 +617,7 @@ val prad = 10.0.pow(-12) * (m/m)
 /**
 * picoradian, 10^-12 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val picoradian = prad
     
 
@@ -631,6 +650,7 @@ val frad = 10.0.pow(-15) * (m/m)
 /**
 * femtoradian, 10^-15 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val femtoradian = frad
     
 
@@ -663,6 +683,7 @@ val arad = 10.0.pow(-18) * (m/m)
 /**
 * attoradian, 10^-18 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val attoradian = arad
     
 
@@ -695,6 +716,7 @@ val zrad = 10.0.pow(-21) * (m/m)
 /**
 * zeptoradian, 10^-21 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val zeptoradian = zrad
     
 
@@ -727,6 +749,7 @@ val yrad = 10.0.pow(-24) * (m/m)
 /**
 * yoctoradian, 10^-24 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val yoctoradian = yrad
     
 
@@ -759,6 +782,7 @@ val rrad = 10.0.pow(-27) * (m/m)
 /**
 * rontoradian, 10^-27 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val rontoradian = rrad
     
 
@@ -791,5 +815,6 @@ val qrad = 10.0.pow(-30) * (m/m)
 /**
 * quectoradian, 10^-30 of radian, derived SI-Unit for measurement of plane angle
 */ 
+@JvmField()
 val quectoradian = qrad
     

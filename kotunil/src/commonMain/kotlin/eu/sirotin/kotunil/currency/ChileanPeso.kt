@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionChileanPeso = UnitSpecification(
     "CLP",
@@ -27,5 +28,6 @@ class ChileanPeso(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Chilean peso
     */
+    @JvmField()
     val CLP = ChileanPeso()   
     

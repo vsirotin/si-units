@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionSwissFranc = UnitSpecification(
     "CHF",
@@ -27,6 +28,7 @@ class SwissFranc(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Swiss franc
     */
+    @JvmField()
     val CHF = SwissFranc()   
     
 
@@ -42,4 +44,5 @@ val Number.SCHF : SwissFranc
 /**
 * One unit of Swiss franc
 */
+@JvmField()
 val SCHF = SwissFranc()

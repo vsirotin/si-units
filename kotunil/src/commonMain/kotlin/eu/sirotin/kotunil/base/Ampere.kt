@@ -31,6 +31,7 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * System International Unit for electric current.
      */
+    @JvmField()
     val A = Ampere(1.0)       
     
     /**

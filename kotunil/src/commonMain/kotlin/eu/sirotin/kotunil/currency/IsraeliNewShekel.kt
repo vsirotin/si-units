@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionIsraeliNewShekel = UnitSpecification(
     "ILS",
@@ -27,5 +28,6 @@ class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Israeli new shekel
     */
+    @JvmField()
     val ILS = IsraeliNewShekel()   
     

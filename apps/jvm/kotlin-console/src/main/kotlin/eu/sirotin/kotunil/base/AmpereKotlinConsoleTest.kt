@@ -1,7 +1,6 @@
         
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -9,7 +8,6 @@ import kotlin.math.pow
 object AmpereKotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(Ampere(1.0), A)
         check(1.A , A)
@@ -24,7 +22,6 @@ object AmpereKotlinConsoleTest {
         val v2 = creator(dv)
         check(v1 , v2)
    
-        TestStatistics.numberTestedObjects++
         val pow30 = 10.0.pow(30)
         check(pow30 * Ampere(1.0), 1.QA)
         check(pow30 * Ampere(1.0), 1.quettaampere)
@@ -34,7 +31,6 @@ object AmpereKotlinConsoleTest {
         check(quettaampere , QA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow27 = 10.0.pow(27)
         check(pow27 * Ampere(1.0), 1.RA)
         check(pow27 * Ampere(1.0), 1.ronnaampere)
@@ -44,7 +40,6 @@ object AmpereKotlinConsoleTest {
         check(ronnaampere , RA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow24 = 10.0.pow(24)
         check(pow24 * Ampere(1.0), 1.YA)
         check(pow24 * Ampere(1.0), 1.yottaampere)
@@ -54,7 +49,6 @@ object AmpereKotlinConsoleTest {
         check(yottaampere , YA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow21 = 10.0.pow(21)
         check(pow21 * Ampere(1.0), 1.ZA)
         check(pow21 * Ampere(1.0), 1.zettaampere)
@@ -64,7 +58,6 @@ object AmpereKotlinConsoleTest {
         check(zettaampere , ZA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow18 = 10.0.pow(18)
         check(pow18 * Ampere(1.0), 1.EA)
         check(pow18 * Ampere(1.0), 1.exaampere)
@@ -74,7 +67,6 @@ object AmpereKotlinConsoleTest {
         check(exaampere , EA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow15 = 10.0.pow(15)
         check(pow15 * Ampere(1.0), 1.PA)
         check(pow15 * Ampere(1.0), 1.petaampere)
@@ -84,7 +76,6 @@ object AmpereKotlinConsoleTest {
         check(petaampere , PA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow12 = 10.0.pow(12)
         check(pow12 * Ampere(1.0), 1.TA)
         check(pow12 * Ampere(1.0), 1.teraampere)
@@ -94,7 +85,6 @@ object AmpereKotlinConsoleTest {
         check(teraampere , TA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow9 = 10.0.pow(9)
         check(pow9 * Ampere(1.0), 1.GA)
         check(pow9 * Ampere(1.0), 1.gigaampere)
@@ -104,7 +94,6 @@ object AmpereKotlinConsoleTest {
         check(gigaampere , GA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow6 = 10.0.pow(6)
         check(pow6 * Ampere(1.0), 1.MA)
         check(pow6 * Ampere(1.0), 1.megaampere)
@@ -114,7 +103,6 @@ object AmpereKotlinConsoleTest {
         check(megaampere , MA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow3 = 10.0.pow(3)
         check(pow3 * Ampere(1.0), 1.kA)
         check(pow3 * Ampere(1.0), 1.kiloampere)
@@ -124,7 +112,6 @@ object AmpereKotlinConsoleTest {
         check(kiloampere , kA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow2 = 10.0.pow(2)
         check(pow2 * Ampere(1.0), 1.hA)
         check(pow2 * Ampere(1.0), 1.hectoampere)
@@ -134,7 +121,6 @@ object AmpereKotlinConsoleTest {
         check(hectoampere , hA) 
 
    
-        TestStatistics.numberTestedObjects++
         val pow1 = 10.0.pow(1)
         check(pow1 * Ampere(1.0), 1.daA)
         check(pow1 * Ampere(1.0), 1.decaampere)
@@ -144,7 +130,6 @@ object AmpereKotlinConsoleTest {
         check(decaampere , daA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM1 = 10.0.pow(-1)
         check(powM1 * Ampere(1.0), 1.dA)
         check(powM1 * Ampere(1.0), 1.deciampere)
@@ -154,7 +139,6 @@ object AmpereKotlinConsoleTest {
         check(deciampere , dA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM2 = 10.0.pow(-2)
         check(powM2 * Ampere(1.0), 1.cA)
         check(powM2 * Ampere(1.0), 1.centiampere)
@@ -164,7 +148,6 @@ object AmpereKotlinConsoleTest {
         check(centiampere , cA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM3 = 10.0.pow(-3)
         check(powM3 * Ampere(1.0), 1.mA)
         check(powM3 * Ampere(1.0), 1.milliampere)
@@ -174,7 +157,6 @@ object AmpereKotlinConsoleTest {
         check(milliampere , mA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM6 = 10.0.pow(-6)
         check(powM6 * Ampere(1.0), 1.μA)
         check(powM6 * Ampere(1.0), 1.microampere)
@@ -184,7 +166,6 @@ object AmpereKotlinConsoleTest {
         check(microampere , μA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM9 = 10.0.pow(-9)
         check(powM9 * Ampere(1.0), 1.nA)
         check(powM9 * Ampere(1.0), 1.nanoampere)
@@ -194,7 +175,6 @@ object AmpereKotlinConsoleTest {
         check(nanoampere , nA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM12 = 10.0.pow(-12)
         check(powM12 * Ampere(1.0), 1.pA)
         check(powM12 * Ampere(1.0), 1.picoampere)
@@ -204,7 +184,6 @@ object AmpereKotlinConsoleTest {
         check(picoampere , pA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM15 = 10.0.pow(-15)
         check(powM15 * Ampere(1.0), 1.fA)
         check(powM15 * Ampere(1.0), 1.femtoampere)
@@ -214,7 +193,6 @@ object AmpereKotlinConsoleTest {
         check(femtoampere , fA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM18 = 10.0.pow(-18)
         check(powM18 * Ampere(1.0), 1.aA)
         check(powM18 * Ampere(1.0), 1.attoampere)
@@ -224,7 +202,6 @@ object AmpereKotlinConsoleTest {
         check(attoampere , aA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM21 = 10.0.pow(-21)
         check(powM21 * Ampere(1.0), 1.zA)
         check(powM21 * Ampere(1.0), 1.zeptoampere)
@@ -234,7 +211,6 @@ object AmpereKotlinConsoleTest {
         check(zeptoampere , zA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM24 = 10.0.pow(-24)
         check(powM24 * Ampere(1.0), 1.yA)
         check(powM24 * Ampere(1.0), 1.yoctoampere)
@@ -244,7 +220,6 @@ object AmpereKotlinConsoleTest {
         check(yoctoampere , yA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM27 = 10.0.pow(-27)
         check(powM27 * Ampere(1.0), 1.rA)
         check(powM27 * Ampere(1.0), 1.rontoampere)
@@ -254,7 +229,6 @@ object AmpereKotlinConsoleTest {
         check(rontoampere , rA) 
 
    
-        TestStatistics.numberTestedObjects++
         val powM30 = 10.0.pow(-30)
         check(powM30 * Ampere(1.0), 1.qA)
         check(powM30 * Ampere(1.0), 1.quectoampere)

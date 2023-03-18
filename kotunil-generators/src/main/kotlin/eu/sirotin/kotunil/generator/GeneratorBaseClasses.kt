@@ -123,6 +123,7 @@ class $className(value: Double) : Expression(value, description = description$cl
     /**
      * System International Unit for $quantityName.
      */
+    @JvmField()
     val $unitSymbol = $className(1.0)       
     """
 }

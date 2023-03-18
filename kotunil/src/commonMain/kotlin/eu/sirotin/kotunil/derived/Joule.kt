@@ -14,6 +14,7 @@ private val unit =  kg*(m2)/(s `^` 2)
 /**
 * System International Unit for energy, work, heat.
 */
+@JvmField()
 val J = unit
 
 /**
@@ -55,6 +56,7 @@ val QJ = 10.0.pow(30) * (kg*(m2)/(s `^` 2))
 /**
 * quettajoule, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val quettajoule = QJ
     
 
@@ -87,6 +89,7 @@ val RJ = 10.0.pow(27) * (kg*(m2)/(s `^` 2))
 /**
 * ronnajoule, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val ronnajoule = RJ
     
 
@@ -119,6 +122,7 @@ val YJ = 10.0.pow(24) * (kg*(m2)/(s `^` 2))
 /**
 * yottajoule, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val yottajoule = YJ
     
 
@@ -151,6 +155,7 @@ val ZJ = 10.0.pow(21) * (kg*(m2)/(s `^` 2))
 /**
 * zettajoule, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val zettajoule = ZJ
     
 
@@ -183,6 +188,7 @@ val EJ = 10.0.pow(18) * (kg*(m2)/(s `^` 2))
 /**
 * exajoule, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val exajoule = EJ
     
 
@@ -215,6 +221,7 @@ val PJ = 10.0.pow(15) * (kg*(m2)/(s `^` 2))
 /**
 * petajoule, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val petajoule = PJ
     
 
@@ -247,6 +254,7 @@ val TJ = 10.0.pow(12) * (kg*(m2)/(s `^` 2))
 /**
 * terajoule, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val terajoule = TJ
     
 
@@ -279,6 +287,7 @@ val GJ = 10.0.pow(9) * (kg*(m2)/(s `^` 2))
 /**
 * gigajoule, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val gigajoule = GJ
     
 
@@ -311,6 +320,7 @@ val MJ = 10.0.pow(6) * (kg*(m2)/(s `^` 2))
 /**
 * megajoule, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val megajoule = MJ
     
 
@@ -343,6 +353,7 @@ val kJ = 10.0.pow(3) * (kg*(m2)/(s `^` 2))
 /**
 * kilojoule, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val kilojoule = kJ
     
 
@@ -375,6 +386,7 @@ val hJ = 10.0.pow(2) * (kg*(m2)/(s `^` 2))
 /**
 * hectojoule, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val hectojoule = hJ
     
 
@@ -407,6 +419,7 @@ val daJ = 10.0.pow(1) * (kg*(m2)/(s `^` 2))
 /**
 * decajoule, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val decajoule = daJ
     
 
@@ -439,6 +452,7 @@ val dJ = 10.0.pow(-1) * (kg*(m2)/(s `^` 2))
 /**
 * decijoule, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val decijoule = dJ
     
 
@@ -471,6 +485,7 @@ val cJ = 10.0.pow(-2) * (kg*(m2)/(s `^` 2))
 /**
 * centijoule, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val centijoule = cJ
     
 
@@ -503,6 +518,7 @@ val mJ = 10.0.pow(-3) * (kg*(m2)/(s `^` 2))
 /**
 * millijoule, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val millijoule = mJ
     
 
@@ -535,6 +551,7 @@ val μJ = 10.0.pow(-6) * (kg*(m2)/(s `^` 2))
 /**
 * microjoule, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val microjoule = μJ
     
 
@@ -567,6 +584,7 @@ val nJ = 10.0.pow(-9) * (kg*(m2)/(s `^` 2))
 /**
 * nanojoule, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val nanojoule = nJ
     
 
@@ -599,6 +617,7 @@ val pJ = 10.0.pow(-12) * (kg*(m2)/(s `^` 2))
 /**
 * picojoule, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val picojoule = pJ
     
 
@@ -631,6 +650,7 @@ val fJ = 10.0.pow(-15) * (kg*(m2)/(s `^` 2))
 /**
 * femtojoule, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val femtojoule = fJ
     
 
@@ -663,6 +683,7 @@ val aJ = 10.0.pow(-18) * (kg*(m2)/(s `^` 2))
 /**
 * attojoule, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val attojoule = aJ
     
 
@@ -695,6 +716,7 @@ val zJ = 10.0.pow(-21) * (kg*(m2)/(s `^` 2))
 /**
 * zeptojoule, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val zeptojoule = zJ
     
 
@@ -727,6 +749,7 @@ val yJ = 10.0.pow(-24) * (kg*(m2)/(s `^` 2))
 /**
 * yoctojoule, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val yoctojoule = yJ
     
 
@@ -759,6 +782,7 @@ val rJ = 10.0.pow(-27) * (kg*(m2)/(s `^` 2))
 /**
 * rontojoule, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val rontojoule = rJ
     
 
@@ -791,5 +815,6 @@ val qJ = 10.0.pow(-30) * (kg*(m2)/(s `^` 2))
 /**
 * quectojoule, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
+@JvmField()
 val quectojoule = qJ
     

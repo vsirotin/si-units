@@ -39,11 +39,13 @@ import kotlin.math.pow
 /**
  * Square metre
  */
+@JvmField()
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
+@JvmField()
 val m3 = m2 * m
 
 /**
@@ -58,6 +60,7 @@ val Number.min: Second
 /**
  * Minute (time)
  */
+@JvmField()
 val min = Second(60.0)
 
 /**
@@ -72,6 +75,7 @@ val Number.h: Second
 /**
  * Hour (time)
  */
+@JvmField()
 val h = Second(3600.0)
 
 /**
@@ -86,6 +90,7 @@ val Number.d: Second
 /**
  * Day (time)
  */
+@JvmField()
 val d = Second(24*3600.0)
 
 /**
@@ -97,6 +102,7 @@ val Number.au: Metre
 /**
  * Astronomical unit 149597870700 metre
  */
+@JvmField()
 val au = 1.0.au
 
 /**
@@ -136,6 +142,7 @@ val Number.ha: Expression
 /**
  * hectare
  */
+@JvmField()
 val ha = 1.0.ha
 
 /**
@@ -150,6 +157,7 @@ val Number.l: Expression
 /**
  * Litre
  */
+@JvmField()
 val l = 1.0.l
 
 /**
@@ -177,6 +185,7 @@ val Number.t: Kilogram
 /**
  * tonne
  */
+@JvmField()
 val t = 1000.kg
 
 /**
@@ -191,6 +200,7 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
+@JvmField()
 val Da = 1.Da
 
 /**
@@ -205,7 +215,8 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-    val eV = 1.eV
+@JvmField()
+val eV = 1.eV
 
 
 /**
@@ -220,7 +231,8 @@ val Number.percentage: Double
 /**
  * Percentage
  */
-    val percentage = 0.01
+@JvmField()
+val percentage = 0.01
 
 /**
  * Percentage as double

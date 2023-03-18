@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionRenminbi = UnitSpecification(
     "CNY",
@@ -27,5 +28,6 @@ class Renminbi(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Renminbi
     */
+    @JvmField()
     val CNY = Renminbi()   
     

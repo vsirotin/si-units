@@ -14,6 +14,7 @@ private val unit =  kg/(m * (s `^` 2))
 /**
 * System International Unit for pressure, stress.
 */
+@JvmField()
 val Pa = unit
 
 /**
@@ -55,6 +56,7 @@ val QPa = 10.0.pow(30) * (kg/(m * (s `^` 2)))
 /**
 * quettapascal, 10^30 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val quettapascal = QPa
     
 
@@ -87,6 +89,7 @@ val RPa = 10.0.pow(27) * (kg/(m * (s `^` 2)))
 /**
 * ronnapascal, 10^27 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val ronnapascal = RPa
     
 
@@ -119,6 +122,7 @@ val YPa = 10.0.pow(24) * (kg/(m * (s `^` 2)))
 /**
 * yottapascal, 10^24 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val yottapascal = YPa
     
 
@@ -151,6 +155,7 @@ val ZPa = 10.0.pow(21) * (kg/(m * (s `^` 2)))
 /**
 * zettapascal, 10^21 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val zettapascal = ZPa
     
 
@@ -183,6 +188,7 @@ val EPa = 10.0.pow(18) * (kg/(m * (s `^` 2)))
 /**
 * exapascal, 10^18 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val exapascal = EPa
     
 
@@ -215,6 +221,7 @@ val PPa = 10.0.pow(15) * (kg/(m * (s `^` 2)))
 /**
 * petapascal, 10^15 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val petapascal = PPa
     
 
@@ -247,6 +254,7 @@ val TPa = 10.0.pow(12) * (kg/(m * (s `^` 2)))
 /**
 * terapascal, 10^12 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val terapascal = TPa
     
 
@@ -279,6 +287,7 @@ val GPa = 10.0.pow(9) * (kg/(m * (s `^` 2)))
 /**
 * gigapascal, 10^9 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val gigapascal = GPa
     
 
@@ -311,6 +320,7 @@ val MPa = 10.0.pow(6) * (kg/(m * (s `^` 2)))
 /**
 * megapascal, 10^6 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val megapascal = MPa
     
 
@@ -343,6 +353,7 @@ val kPa = 10.0.pow(3) * (kg/(m * (s `^` 2)))
 /**
 * kilopascal, 10^3 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val kilopascal = kPa
     
 
@@ -375,6 +386,7 @@ val hPa = 10.0.pow(2) * (kg/(m * (s `^` 2)))
 /**
 * hectopascal, 10^2 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val hectopascal = hPa
     
 
@@ -407,6 +419,7 @@ val daPa = 10.0.pow(1) * (kg/(m * (s `^` 2)))
 /**
 * decapascal, 10^1 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val decapascal = daPa
     
 
@@ -439,6 +452,7 @@ val dPa = 10.0.pow(-1) * (kg/(m * (s `^` 2)))
 /**
 * decipascal, 10^-1 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val decipascal = dPa
     
 
@@ -471,6 +485,7 @@ val cPa = 10.0.pow(-2) * (kg/(m * (s `^` 2)))
 /**
 * centipascal, 10^-2 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val centipascal = cPa
     
 
@@ -503,6 +518,7 @@ val mPa = 10.0.pow(-3) * (kg/(m * (s `^` 2)))
 /**
 * millipascal, 10^-3 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val millipascal = mPa
     
 
@@ -535,6 +551,7 @@ val μPa = 10.0.pow(-6) * (kg/(m * (s `^` 2)))
 /**
 * micropascal, 10^-6 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val micropascal = μPa
     
 
@@ -567,6 +584,7 @@ val nPa = 10.0.pow(-9) * (kg/(m * (s `^` 2)))
 /**
 * nanopascal, 10^-9 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val nanopascal = nPa
     
 
@@ -599,6 +617,7 @@ val pPa = 10.0.pow(-12) * (kg/(m * (s `^` 2)))
 /**
 * picopascal, 10^-12 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val picopascal = pPa
     
 
@@ -631,6 +650,7 @@ val fPa = 10.0.pow(-15) * (kg/(m * (s `^` 2)))
 /**
 * femtopascal, 10^-15 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val femtopascal = fPa
     
 
@@ -663,6 +683,7 @@ val aPa = 10.0.pow(-18) * (kg/(m * (s `^` 2)))
 /**
 * attopascal, 10^-18 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val attopascal = aPa
     
 
@@ -695,6 +716,7 @@ val zPa = 10.0.pow(-21) * (kg/(m * (s `^` 2)))
 /**
 * zeptopascal, 10^-21 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val zeptopascal = zPa
     
 
@@ -727,6 +749,7 @@ val yPa = 10.0.pow(-24) * (kg/(m * (s `^` 2)))
 /**
 * yoctopascal, 10^-24 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val yoctopascal = yPa
     
 
@@ -759,6 +782,7 @@ val rPa = 10.0.pow(-27) * (kg/(m * (s `^` 2)))
 /**
 * rontopascal, 10^-27 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val rontopascal = rPa
     
 
@@ -791,5 +815,6 @@ val qPa = 10.0.pow(-30) * (kg/(m * (s `^` 2)))
 /**
 * quectopascal, 10^-30 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
+@JvmField()
 val quectopascal = qPa
     

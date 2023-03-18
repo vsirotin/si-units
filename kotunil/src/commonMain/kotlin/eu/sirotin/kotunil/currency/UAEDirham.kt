@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionUAEDirham = UnitSpecification(
     "AED",
@@ -27,6 +28,7 @@ class UAEDirham(value : Double = 1.0) : Expression(value, description = descript
     /**
     * Holder for  of UAE dirham
     */
+    @JvmField()
     val AED = UAEDirham()   
     
 
@@ -42,4 +44,5 @@ val Number.Dh : UAEDirham
 /**
 * One unit of UAE dirham
 */
+@JvmField()
 val Dh = UAEDirham()

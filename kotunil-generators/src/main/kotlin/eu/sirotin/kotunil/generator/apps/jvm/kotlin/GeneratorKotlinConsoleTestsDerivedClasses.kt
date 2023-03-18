@@ -51,14 +51,12 @@ private fun generateTestClassHeadPart(description: SiDerivedUnitDescription): St
     return """        
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import kotlin.math.pow
 
 object ${className}KotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
         check(1.$unitSymbol , $unitSymbol)
     """
 }
@@ -68,7 +66,6 @@ private fun generateUnitTestForPrefix(siPrefix: SiPrefix, description: SiDerived
     val unitSymbol = description.unitSymbol
     val powName = generatePowName(siPrefix.degree)
     return """          
-        TestStatistics.numberTestedObjects++
         val $powName = 10.0.pow(${siPrefix.degree})
         check(1.${siPrefix.symbol}$unitSymbol.value, ${unitSymbol}.value*$powName)
         check(1.${siPrefix.name}$name.value, ${unitSymbol}.value*$powName)

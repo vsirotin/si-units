@@ -14,6 +14,7 @@ private val unit =  cd*sr*(m `^` -2)
 /**
 * System International Unit for illuminance.
 */
+@JvmField()
 val lx = unit
 
 /**
@@ -55,6 +56,7 @@ val Qlx = 10.0.pow(30) * (cd*sr*(m `^` -2))
 /**
 * quettalux, 10^30 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val quettalux = Qlx
     
 
@@ -87,6 +89,7 @@ val Rlx = 10.0.pow(27) * (cd*sr*(m `^` -2))
 /**
 * ronnalux, 10^27 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val ronnalux = Rlx
     
 
@@ -119,6 +122,7 @@ val Ylx = 10.0.pow(24) * (cd*sr*(m `^` -2))
 /**
 * yottalux, 10^24 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val yottalux = Ylx
     
 
@@ -151,6 +155,7 @@ val Zlx = 10.0.pow(21) * (cd*sr*(m `^` -2))
 /**
 * zettalux, 10^21 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val zettalux = Zlx
     
 
@@ -183,6 +188,7 @@ val Elx = 10.0.pow(18) * (cd*sr*(m `^` -2))
 /**
 * exalux, 10^18 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val exalux = Elx
     
 
@@ -215,6 +221,7 @@ val Plx = 10.0.pow(15) * (cd*sr*(m `^` -2))
 /**
 * petalux, 10^15 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val petalux = Plx
     
 
@@ -247,6 +254,7 @@ val Tlx = 10.0.pow(12) * (cd*sr*(m `^` -2))
 /**
 * teralux, 10^12 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val teralux = Tlx
     
 
@@ -279,6 +287,7 @@ val Glx = 10.0.pow(9) * (cd*sr*(m `^` -2))
 /**
 * gigalux, 10^9 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val gigalux = Glx
     
 
@@ -311,6 +320,7 @@ val Mlx = 10.0.pow(6) * (cd*sr*(m `^` -2))
 /**
 * megalux, 10^6 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val megalux = Mlx
     
 
@@ -343,6 +353,7 @@ val klx = 10.0.pow(3) * (cd*sr*(m `^` -2))
 /**
 * kilolux, 10^3 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val kilolux = klx
     
 
@@ -375,6 +386,7 @@ val hlx = 10.0.pow(2) * (cd*sr*(m `^` -2))
 /**
 * hectolux, 10^2 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val hectolux = hlx
     
 
@@ -407,6 +419,7 @@ val dalx = 10.0.pow(1) * (cd*sr*(m `^` -2))
 /**
 * decalux, 10^1 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val decalux = dalx
     
 
@@ -439,6 +452,7 @@ val dlx = 10.0.pow(-1) * (cd*sr*(m `^` -2))
 /**
 * decilux, 10^-1 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val decilux = dlx
     
 
@@ -471,6 +485,7 @@ val clx = 10.0.pow(-2) * (cd*sr*(m `^` -2))
 /**
 * centilux, 10^-2 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val centilux = clx
     
 
@@ -503,6 +518,7 @@ val mlx = 10.0.pow(-3) * (cd*sr*(m `^` -2))
 /**
 * millilux, 10^-3 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val millilux = mlx
     
 
@@ -535,6 +551,7 @@ val μlx = 10.0.pow(-6) * (cd*sr*(m `^` -2))
 /**
 * microlux, 10^-6 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val microlux = μlx
     
 
@@ -567,6 +584,7 @@ val nlx = 10.0.pow(-9) * (cd*sr*(m `^` -2))
 /**
 * nanolux, 10^-9 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val nanolux = nlx
     
 
@@ -599,6 +617,7 @@ val plx = 10.0.pow(-12) * (cd*sr*(m `^` -2))
 /**
 * picolux, 10^-12 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val picolux = plx
     
 
@@ -631,6 +650,7 @@ val flx = 10.0.pow(-15) * (cd*sr*(m `^` -2))
 /**
 * femtolux, 10^-15 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val femtolux = flx
     
 
@@ -663,6 +683,7 @@ val alx = 10.0.pow(-18) * (cd*sr*(m `^` -2))
 /**
 * attolux, 10^-18 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val attolux = alx
     
 
@@ -695,6 +716,7 @@ val zlx = 10.0.pow(-21) * (cd*sr*(m `^` -2))
 /**
 * zeptolux, 10^-21 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val zeptolux = zlx
     
 
@@ -727,6 +749,7 @@ val ylx = 10.0.pow(-24) * (cd*sr*(m `^` -2))
 /**
 * yoctolux, 10^-24 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val yoctolux = ylx
     
 
@@ -759,6 +782,7 @@ val rlx = 10.0.pow(-27) * (cd*sr*(m `^` -2))
 /**
 * rontolux, 10^-27 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val rontolux = rlx
     
 
@@ -791,5 +815,6 @@ val qlx = 10.0.pow(-30) * (cd*sr*(m `^` -2))
 /**
 * quectolux, 10^-30 of lux, derived SI-Unit for measurement of illuminance
 */ 
+@JvmField()
 val quectolux = qlx
     

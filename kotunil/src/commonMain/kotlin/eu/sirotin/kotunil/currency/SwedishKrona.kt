@@ -3,6 +3,7 @@ package eu.sirotin.kotunil.currency
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.jvm.JvmField
 
 private val descriptionSwedishKrona = UnitSpecification(
     "SEK",
@@ -27,6 +28,7 @@ class SwedishKrona(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Swedish krona
     */
+    @JvmField()
     val SEK = SwedishKrona()   
     
 
@@ -42,4 +44,5 @@ val Number.skr : SwedishKrona
 /**
 * One unit of Swedish krona
 */
+@JvmField()
 val skr = SwedishKrona()

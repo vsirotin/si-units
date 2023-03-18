@@ -25,7 +25,7 @@ package eu.sirotin.kotunil.generator.apps.jvm.kotlin
 import eu.sirotin.kotunil.generator.SiPrefix
 import eu.sirotin.kotunil.generator.SiUnitDescription
 import eu.sirotin.kotunil.generator.generateSiUnitBaseTestFiles
-import eu.sirotin.kotunil.generator.getDerivedClassName
+import eu.sirotin.kotunil.generator.getClassName
 import java.io.File
 import java.nio.file.Files
 import kotlin.math.abs
@@ -75,13 +75,12 @@ fun generateCaller(dirPath: String,
 
 private fun generateTestClassHeadPart(
     siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     testClasses += className
     val unitSymbol = siUnitDescription.unitSymbol
     return """        
 package eu.sirotin.kotunil.base
 
-import eu.sirotin.kotunil.app.kotlin.TestStatistics
 import eu.sirotin.kotunil.app.kotlin.check
 import eu.sirotin.kotunil.core.*
 import kotlin.math.pow
@@ -89,7 +88,6 @@ import kotlin.math.pow
 object ${className}KotlinConsoleTest {
 
     fun kotlinConsoleTest() {
-        TestStatistics.numberTestedObjects++
 
         check(${className}(1.0), $unitSymbol)
         check(1.$unitSymbol , $unitSymbol)
@@ -109,7 +107,7 @@ object ${className}KotlinConsoleTest {
 val EXCLUDED_ABBREVIATIONS = listOf("as", "kkg") //Name conflicts
 private fun generateTestPartForPrefix( siPrefix: SiPrefix,
                                        siUnitDescription: SiUnitDescription): String {
-    val className = getDerivedClassName(siUnitDescription)
+    val className = getClassName(siUnitDescription)
     val  name = siUnitDescription.name
     val unitSymbol = siUnitDescription.unitSymbol
 
@@ -117,7 +115,6 @@ private fun generateTestPartForPrefix( siPrefix: SiPrefix,
 
     val powName = generatePowName(siPrefix.degree)
     return """   
-        TestStatistics.numberTestedObjects++
         val $powName = 10.0.pow(${siPrefix.degree})
         check($powName * $className(1.0), 1.${siPrefix.symbol}$unitSymbol)
         check($powName * $className(1.0), 1.${siPrefix.name}$name)

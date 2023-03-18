@@ -14,6 +14,7 @@ private val unit =  ((cd `^` 1)*sr)
 /**
 * System International Unit for luminous flux.
 */
+@JvmField()
 val lm = unit
 
 /**
@@ -55,6 +56,7 @@ val Qlm = 10.0.pow(30) * (((cd `^` 1)*sr))
 /**
 * quettalumen, 10^30 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val quettalumen = Qlm
     
 
@@ -87,6 +89,7 @@ val Rlm = 10.0.pow(27) * (((cd `^` 1)*sr))
 /**
 * ronnalumen, 10^27 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val ronnalumen = Rlm
     
 
@@ -119,6 +122,7 @@ val Ylm = 10.0.pow(24) * (((cd `^` 1)*sr))
 /**
 * yottalumen, 10^24 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val yottalumen = Ylm
     
 
@@ -151,6 +155,7 @@ val Zlm = 10.0.pow(21) * (((cd `^` 1)*sr))
 /**
 * zettalumen, 10^21 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val zettalumen = Zlm
     
 
@@ -183,6 +188,7 @@ val Elm = 10.0.pow(18) * (((cd `^` 1)*sr))
 /**
 * exalumen, 10^18 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val exalumen = Elm
     
 
@@ -215,6 +221,7 @@ val Plm = 10.0.pow(15) * (((cd `^` 1)*sr))
 /**
 * petalumen, 10^15 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val petalumen = Plm
     
 
@@ -247,6 +254,7 @@ val Tlm = 10.0.pow(12) * (((cd `^` 1)*sr))
 /**
 * teralumen, 10^12 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val teralumen = Tlm
     
 
@@ -279,6 +287,7 @@ val Glm = 10.0.pow(9) * (((cd `^` 1)*sr))
 /**
 * gigalumen, 10^9 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val gigalumen = Glm
     
 
@@ -311,6 +320,7 @@ val Mlm = 10.0.pow(6) * (((cd `^` 1)*sr))
 /**
 * megalumen, 10^6 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val megalumen = Mlm
     
 
@@ -343,6 +353,7 @@ val klm = 10.0.pow(3) * (((cd `^` 1)*sr))
 /**
 * kilolumen, 10^3 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val kilolumen = klm
     
 
@@ -375,6 +386,7 @@ val hlm = 10.0.pow(2) * (((cd `^` 1)*sr))
 /**
 * hectolumen, 10^2 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val hectolumen = hlm
     
 
@@ -407,6 +419,7 @@ val dalm = 10.0.pow(1) * (((cd `^` 1)*sr))
 /**
 * decalumen, 10^1 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val decalumen = dalm
     
 
@@ -439,6 +452,7 @@ val dlm = 10.0.pow(-1) * (((cd `^` 1)*sr))
 /**
 * decilumen, 10^-1 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val decilumen = dlm
     
 
@@ -471,6 +485,7 @@ val clm = 10.0.pow(-2) * (((cd `^` 1)*sr))
 /**
 * centilumen, 10^-2 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val centilumen = clm
     
 
@@ -503,6 +518,7 @@ val mlm = 10.0.pow(-3) * (((cd `^` 1)*sr))
 /**
 * millilumen, 10^-3 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val millilumen = mlm
     
 
@@ -535,6 +551,7 @@ val μlm = 10.0.pow(-6) * (((cd `^` 1)*sr))
 /**
 * microlumen, 10^-6 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val microlumen = μlm
     
 
@@ -567,6 +584,7 @@ val nlm = 10.0.pow(-9) * (((cd `^` 1)*sr))
 /**
 * nanolumen, 10^-9 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val nanolumen = nlm
     
 
@@ -599,6 +617,7 @@ val plm = 10.0.pow(-12) * (((cd `^` 1)*sr))
 /**
 * picolumen, 10^-12 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val picolumen = plm
     
 
@@ -631,6 +650,7 @@ val flm = 10.0.pow(-15) * (((cd `^` 1)*sr))
 /**
 * femtolumen, 10^-15 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val femtolumen = flm
     
 
@@ -663,6 +683,7 @@ val alm = 10.0.pow(-18) * (((cd `^` 1)*sr))
 /**
 * attolumen, 10^-18 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val attolumen = alm
     
 
@@ -695,6 +716,7 @@ val zlm = 10.0.pow(-21) * (((cd `^` 1)*sr))
 /**
 * zeptolumen, 10^-21 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val zeptolumen = zlm
     
 
@@ -727,6 +749,7 @@ val ylm = 10.0.pow(-24) * (((cd `^` 1)*sr))
 /**
 * yoctolumen, 10^-24 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val yoctolumen = ylm
     
 
@@ -759,6 +782,7 @@ val rlm = 10.0.pow(-27) * (((cd `^` 1)*sr))
 /**
 * rontolumen, 10^-27 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val rontolumen = rlm
     
 
@@ -791,5 +815,6 @@ val qlm = 10.0.pow(-30) * (((cd `^` 1)*sr))
 /**
 * quectolumen, 10^-30 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
+@JvmField()
 val quectolumen = qlm
     

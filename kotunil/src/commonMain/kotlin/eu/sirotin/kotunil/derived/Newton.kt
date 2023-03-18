@@ -14,6 +14,7 @@ private val unit =  kg*m/(s `^` 2)
 /**
 * System International Unit for force, weight.
 */
+@JvmField()
 val N = unit
 
 /**
@@ -55,6 +56,7 @@ val QN = 10.0.pow(30) * (kg*m/(s `^` 2))
 /**
 * quettanewton, 10^30 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val quettanewton = QN
     
 
@@ -87,6 +89,7 @@ val RN = 10.0.pow(27) * (kg*m/(s `^` 2))
 /**
 * ronnanewton, 10^27 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val ronnanewton = RN
     
 
@@ -119,6 +122,7 @@ val YN = 10.0.pow(24) * (kg*m/(s `^` 2))
 /**
 * yottanewton, 10^24 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val yottanewton = YN
     
 
@@ -151,6 +155,7 @@ val ZN = 10.0.pow(21) * (kg*m/(s `^` 2))
 /**
 * zettanewton, 10^21 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val zettanewton = ZN
     
 
@@ -183,6 +188,7 @@ val EN = 10.0.pow(18) * (kg*m/(s `^` 2))
 /**
 * exanewton, 10^18 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val exanewton = EN
     
 
@@ -215,6 +221,7 @@ val PN = 10.0.pow(15) * (kg*m/(s `^` 2))
 /**
 * petanewton, 10^15 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val petanewton = PN
     
 
@@ -247,6 +254,7 @@ val TN = 10.0.pow(12) * (kg*m/(s `^` 2))
 /**
 * teranewton, 10^12 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val teranewton = TN
     
 
@@ -279,6 +287,7 @@ val GN = 10.0.pow(9) * (kg*m/(s `^` 2))
 /**
 * giganewton, 10^9 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val giganewton = GN
     
 
@@ -311,6 +320,7 @@ val MN = 10.0.pow(6) * (kg*m/(s `^` 2))
 /**
 * meganewton, 10^6 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val meganewton = MN
     
 
@@ -343,6 +353,7 @@ val kN = 10.0.pow(3) * (kg*m/(s `^` 2))
 /**
 * kilonewton, 10^3 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val kilonewton = kN
     
 
@@ -375,6 +386,7 @@ val hN = 10.0.pow(2) * (kg*m/(s `^` 2))
 /**
 * hectonewton, 10^2 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val hectonewton = hN
     
 
@@ -407,6 +419,7 @@ val daN = 10.0.pow(1) * (kg*m/(s `^` 2))
 /**
 * decanewton, 10^1 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val decanewton = daN
     
 
@@ -439,6 +452,7 @@ val dN = 10.0.pow(-1) * (kg*m/(s `^` 2))
 /**
 * decinewton, 10^-1 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val decinewton = dN
     
 
@@ -471,6 +485,7 @@ val cN = 10.0.pow(-2) * (kg*m/(s `^` 2))
 /**
 * centinewton, 10^-2 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val centinewton = cN
     
 
@@ -503,6 +518,7 @@ val mN = 10.0.pow(-3) * (kg*m/(s `^` 2))
 /**
 * millinewton, 10^-3 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val millinewton = mN
     
 
@@ -535,6 +551,7 @@ val μN = 10.0.pow(-6) * (kg*m/(s `^` 2))
 /**
 * micronewton, 10^-6 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val micronewton = μN
     
 
@@ -567,6 +584,7 @@ val nN = 10.0.pow(-9) * (kg*m/(s `^` 2))
 /**
 * nanonewton, 10^-9 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val nanonewton = nN
     
 
@@ -599,6 +617,7 @@ val pN = 10.0.pow(-12) * (kg*m/(s `^` 2))
 /**
 * piconewton, 10^-12 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val piconewton = pN
     
 
@@ -631,6 +650,7 @@ val fN = 10.0.pow(-15) * (kg*m/(s `^` 2))
 /**
 * femtonewton, 10^-15 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val femtonewton = fN
     
 
@@ -663,6 +683,7 @@ val aN = 10.0.pow(-18) * (kg*m/(s `^` 2))
 /**
 * attonewton, 10^-18 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val attonewton = aN
     
 
@@ -695,6 +716,7 @@ val zN = 10.0.pow(-21) * (kg*m/(s `^` 2))
 /**
 * zeptonewton, 10^-21 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val zeptonewton = zN
     
 
@@ -727,6 +749,7 @@ val yN = 10.0.pow(-24) * (kg*m/(s `^` 2))
 /**
 * yoctonewton, 10^-24 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val yoctonewton = yN
     
 
@@ -759,6 +782,7 @@ val rN = 10.0.pow(-27) * (kg*m/(s `^` 2))
 /**
 * rontonewton, 10^-27 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val rontonewton = rN
     
 
@@ -791,5 +815,6 @@ val qN = 10.0.pow(-30) * (kg*m/(s `^` 2))
 /**
 * quectonewton, 10^-30 of newton, derived SI-Unit for measurement of force, weight
 */ 
+@JvmField()
 val quectonewton = qN
     

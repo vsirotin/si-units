@@ -24,6 +24,7 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.base.Kilogram
 import eu.sirotin.kotunil.base.kg
+import kotlin.jvm.JvmField
 
 /**
  * Creates a gram object
@@ -37,4 +38,5 @@ val Number.g: Kilogram
 /**
  * A gram object
  */
+@JvmField()
 val g = 0.001.kg

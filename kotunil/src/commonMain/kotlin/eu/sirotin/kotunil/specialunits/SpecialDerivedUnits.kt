@@ -25,6 +25,7 @@
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.base.Kelvin
+import kotlin.jvm.JvmField
 
 /**
  * temperature relative to 273.15 K
@@ -38,4 +39,5 @@ val Number.kelvin: Kelvin
 /**
  * temperature relative to 273.15 K
  */
+@JvmField()
 val kelvin = 1.kelvin
