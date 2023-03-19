@@ -12,22 +12,33 @@
 4. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
 5. It is pure library (no plug-in, no parser etc.), it has no dependencies
 
-## Attention, the developers!
-*Development of this project is going on in Head. 
-May be that right now the state of the source code is not stable and documentation is not updated.
-If you want to use this library easily, 
-please read the paragraph 2 "How to use" of this document. 
-There you will find the information about the last stable version of the library.*
 
+### Project structure
 
-Let's consider some simple examples.*
+The goal of the project is not only to provide a unified set of objects and 
+functions that allows to use the SI in programs in different programming languages. 
+The project also contains simple applications in all of the target languages that show how to do this. In addition, these applications test the availability of all necessary functions on that target platform.
+(So far, applications for only two target platforms have been implemented.)
+
+Therefore, all subprojects of this project are divided into three groups:
+1. [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil) - implementation of library functionality
+2. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) applications that test the functionality of the library on a specific platform.
+3. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
+
+If you are a developer and you are interested in the source code of the library, 
+you only need part [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil).
 
 ## 1. Getting started
 
 ### 1.1 Simple physical formulas
 
-In Eva's case, a glass broke in her aquarium and water flowed on floor. In aquarium before breakage was 32 liters of water.
-Eva's room is 4 m. wide and 4.3 long. How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
+Let's consider some simple examples.
+
+*In Eva's case, a glass broke in her aquarium and water flowed on floor. 
+In aquarium before breakage was 32 liters of water.
+Eva's room is 4 m. wide and 4.3 long. 
+How high in mm. is water now in Eva's room with assumption that it stayed there 
+and did not flow away?*
 
 The solution in Kotlin can be written in one line. For didactic reasons like introduce two auxiliary variables s and h.
 
@@ -37,7 +48,13 @@ val h = 32.l/s
 print("Water height is ${h.mm} mm.")
 ```
 
-### 1.2 Dimension analysis
+### 1.2 How to properly write KotUniL's formulas
+KotUniL is a multiplatform library.
+You can read about how to properly write physics and other formulas
+using the objects and functions of the KotUniL library in document
+["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/RulesWritingFormulas.md).
+
+### 1.3 Dimension analysis
 Please note that the variable **s** is physical dimension **m2** (square meter) and **h** - **m** (simple meter).
 Furthermore, in this example we also used liters (**l**), which have dimension **m3** (cubic meters). 
 
@@ -80,7 +97,7 @@ val z = x/y
 assertEquals("L3T-1", z.categorySymbols())
 ```
 
-### 1.3 Type safety
+### 1.4 Type safety
 
 Physical units of the same dimension can be added, subtracted and compared.
 If you try to do this with units of different types, 
