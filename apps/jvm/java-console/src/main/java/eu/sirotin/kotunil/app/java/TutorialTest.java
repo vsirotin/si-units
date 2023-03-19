@@ -62,10 +62,10 @@ public class TutorialTest {
 
 //        val s = 4.m * 5.m
         Expression s = m.times(4).times(m.times(5));
-//        val x = 20.l
-        Expression x = L.times(20);
-//        val h = x / s
-        Expression h = x.div(s);
+//        val v = 20.l
+        Expression v = L.times(20);
+//        val h = v / s
+        Expression h = v.div(s);
 //        val z = h / mm
         Expression z = h.div(mm);
 
