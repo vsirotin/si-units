@@ -46,8 +46,8 @@
   setMetadataFor(Thing, 'Thing', classMeta, Expression, undefined, undefined, undefined, []);
   //endregion
   function dimOf($this, p, invert) {
-    var pv = invert ? -p.v5_1 : p.v5_1;
-    return p.u5_1.w5_1 + tryFormatToIntNotOne($this, pv);
+    var pv = invert ? -p.powerValue : p.powerValue;
+    return p.specification.unitSymbol + tryFormatToIntNotOne($this, pv);
   }
   function dimOf$default($this, p, invert, $mask0, $handler) {
     if (!(($mask0 & 4) === 0))
@@ -63,22 +63,25 @@
   }
   function Dimensions$categorySymbols$lambda(this$0) {
     return function (it) {
-      return it.u5_1.x5_1 + tryFormatToIntNotOne(this$0, it.v5_1);
+      return it.specification.categorySymbol + tryFormatToIntNotOne(this$0, it.powerValue);
     };
   }
   function Dimensions(factors) {
-    this.a6_1 = factors;
+    this.factors = factors;
   }
-  Dimensions.prototype.b6 = function (other) {
-    if (!(this.c6() === other.c6()))
-      throw IllegalArgumentException_init_$Create$(get_COMPATIBILITY_ERR_PREFIX() + " '" + this.c6() + "' and '" + other.c6() + "'");
+  Dimensions.prototype.u5 = function () {
+    return this.factors;
   };
-  Dimensions.prototype.c6 = function () {
+  Dimensions.prototype.checkCompatibility = function (other) {
+    if (!(this.v5() === other.v5()))
+      throw IllegalArgumentException_init_$Create$(get_COMPATIBILITY_ERR_PREFIX() + " '" + this.v5() + "' and '" + other.v5() + "'");
+  };
+  Dimensions.prototype.v5 = function () {
     var top = '';
     // Inline function 'kotlin.collections.forEach' call
     var tmp$ret$2;
     // Inline function 'kotlin.collections.filter' call
-    var tmp0_filter = sorted(this.a6_1);
+    var tmp0_filter = sorted(this.factors);
     var tmp$ret$1;
     // Inline function 'kotlin.collections.filterTo' call
     var tmp0_filterTo = ArrayList_init_$Create$();
@@ -87,7 +90,7 @@
       var element = tmp0_iterator.e();
       var tmp$ret$0;
       // Inline function 'eu.sirotin.kotunil.core.Dimensions.unitSymbols.<anonymous>' call
-      tmp$ret$0 = element.v5_1 > 0.0;
+      tmp$ret$0 = element.powerValue > 0.0;
       if (tmp$ret$0) {
         tmp0_filterTo.a(element);
       }
@@ -106,7 +109,7 @@
     // Inline function 'kotlin.collections.forEach' call
     var tmp$ret$5;
     // Inline function 'kotlin.collections.filter' call
-    var tmp2_filter = sorted(this.a6_1);
+    var tmp2_filter = sorted(this.factors);
     var tmp$ret$4;
     // Inline function 'kotlin.collections.filterTo' call
     var tmp0_filterTo_0 = ArrayList_init_$Create$();
@@ -115,7 +118,7 @@
       var element_1 = tmp0_iterator_1.e();
       var tmp$ret$3;
       // Inline function 'eu.sirotin.kotunil.core.Dimensions.unitSymbols.<anonymous>' call
-      tmp$ret$3 = element_1.v5_1 < 0.0;
+      tmp$ret$3 = element_1.powerValue < 0.0;
       if (tmp$ret$3) {
         tmp0_filterTo_0.a(element_1);
       }
@@ -158,15 +161,35 @@
     var mid = tmp_1;
     return top + mid + down;
   };
-  Dimensions.prototype.d6 = function () {
-    var tmp = sorted(this.a6_1);
+  Dimensions.prototype.unitSymbols = function () {
+    return this.v5();
+  };
+  Dimensions.prototype.w5 = function () {
+    var tmp = sorted(this.factors);
     return joinToString$default(tmp, '', null, null, 0, null, Dimensions$categorySymbols$lambda(this), 30, null);
   };
+  Dimensions.prototype.categorySymbols = function () {
+    return this.w5();
+  };
+  Dimensions.prototype.component1 = function () {
+    return this.factors;
+  };
+  Dimensions.prototype.copy = function (factors) {
+    return this.x5(factors === void 1 ? this.factors : factors);
+  };
+  Dimensions.prototype.x5 = function (factors) {
+    return new Dimensions(factors);
+  };
+  Dimensions.prototype.y5 = function (factors, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      factors = this.factors;
+    return this.x5(factors);
+  };
   Dimensions.prototype.toString = function () {
-    return 'Dimensions(factors=' + this.a6_1 + ')';
+    return 'Dimensions(factors=' + this.factors + ')';
   };
   Dimensions.prototype.hashCode = function () {
-    return hashCode(this.a6_1);
+    return hashCode(this.factors);
   };
   Dimensions.prototype.equals = function (other) {
     if (this === other)
@@ -174,7 +197,7 @@
     if (!(other instanceof Dimensions))
       return false;
     var tmp0_other_with_cast = other instanceof Dimensions ? other : THROW_CCE();
-    if (!equals(this.a6_1, tmp0_other_with_cast.a6_1))
+    if (!equals(this.factors, tmp0_other_with_cast.factors))
       return false;
     return true;
   };
@@ -188,21 +211,47 @@
     return Factor_init_$Init$(specification, powerValue, $mask0, $marker, Object.create(Factor.prototype));
   }
   function Factor(specification, powerValue) {
-    this.u5_1 = specification;
-    this.v5_1 = powerValue;
+    var powerValue_0 = powerValue === void 1 ? 1.0 : powerValue;
+    this.specification = specification;
+    this.powerValue = powerValue_0;
   }
-  Factor.prototype.e6 = function (other) {
-    return -compareTo(this.u5_1.y5_1, other.u5_1.y5_1) | 0;
+  Factor.prototype.z5 = function () {
+    return this.specification;
+  };
+  Factor.prototype.a6 = function () {
+    return this.powerValue;
+  };
+  Factor.prototype.b6 = function (other) {
+    return -compareTo(this.specification.presentationPriority, other.specification.presentationPriority) | 0;
   };
   Factor.prototype.t1 = function (other) {
-    return this.e6(other instanceof Factor ? other : THROW_CCE());
+    return this.b6(other instanceof Factor ? other : THROW_CCE());
+  };
+  Factor.prototype.component1 = function () {
+    return this.specification;
+  };
+  Factor.prototype.component2 = function () {
+    return this.powerValue;
+  };
+  Factor.prototype.copy = function (specification, powerValue) {
+    return this.c6(specification === void 1 ? this.specification : specification, powerValue === void 1 ? this.powerValue : powerValue);
+  };
+  Factor.prototype.c6 = function (specification, powerValue) {
+    return new Factor(specification, powerValue);
+  };
+  Factor.prototype.d6 = function (specification, powerValue, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      specification = this.specification;
+    if (!(($mask0 & 2) === 0))
+      powerValue = this.powerValue;
+    return this.c6(specification, powerValue);
   };
   Factor.prototype.toString = function () {
-    return 'Factor(specification=' + this.u5_1 + ', powerValue=' + this.v5_1 + ')';
+    return 'Factor(specification=' + this.specification + ', powerValue=' + this.powerValue + ')';
   };
   Factor.prototype.hashCode = function () {
-    var result = this.u5_1.hashCode();
-    result = imul(result, 31) + getNumberHashCode(this.v5_1) | 0;
+    var result = this.specification.hashCode();
+    result = imul(result, 31) + getNumberHashCode(this.powerValue) | 0;
     return result;
   };
   Factor.prototype.equals = function (other) {
@@ -211,20 +260,20 @@
     if (!(other instanceof Factor))
       return false;
     var tmp0_other_with_cast = other instanceof Factor ? other : THROW_CCE();
-    if (!this.u5_1.equals(tmp0_other_with_cast.u5_1))
+    if (!this.specification.equals(tmp0_other_with_cast.specification))
       return false;
-    if (!equals(this.v5_1, tmp0_other_with_cast.v5_1))
+    if (!equals(this.powerValue, tmp0_other_with_cast.powerValue))
       return false;
     return true;
   };
   function plus_0(_this__u8e3s4, other) {
-    _this__u8e3s4.b6(other);
-    return new Dimensions(toSet(_this__u8e3s4.a6_1));
+    _this__u8e3s4.checkCompatibility(other);
+    return new Dimensions(toSet(_this__u8e3s4.factors));
   }
   function times(_this__u8e3s4, other) {
     var tmp$ret$2;
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = _this__u8e3s4.a6_1;
+    var tmp0_map = _this__u8e3s4.factors;
     var tmp$ret$1;
     // Inline function 'kotlin.collections.mapTo' call
     var tmp0_mapTo = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp0_map, 10));
@@ -233,7 +282,7 @@
       var item = tmp0_iterator.e();
       var tmp$ret$0;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$0 = item.u5_1.x5_1;
+      tmp$ret$0 = item.specification.categorySymbol;
       tmp0_mapTo.a(tmp$ret$0);
     }
     tmp$ret$1 = tmp0_mapTo;
@@ -241,7 +290,7 @@
     var thisDimensionSymbols = toSet(tmp$ret$2);
     var tmp$ret$5;
     // Inline function 'kotlin.collections.map' call
-    var tmp1_map = other.a6_1;
+    var tmp1_map = other.factors;
     var tmp$ret$4;
     // Inline function 'kotlin.collections.mapTo' call
     var tmp0_mapTo_0 = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp1_map, 10));
@@ -250,7 +299,7 @@
       var item_0 = tmp0_iterator_0.e();
       var tmp$ret$3;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$3 = item_0.u5_1.x5_1;
+      tmp$ret$3 = item_0.specification.categorySymbol;
       tmp0_mapTo_0.a(tmp$ret$3);
     }
     tmp$ret$4 = tmp0_mapTo_0;
@@ -259,7 +308,7 @@
     var commonDimensionSymbols = intersect(thisDimensionSymbols, otherDimensionSymbols);
     var tmp$ret$8;
     // Inline function 'kotlin.collections.filter' call
-    var tmp2_filter = _this__u8e3s4.a6_1;
+    var tmp2_filter = _this__u8e3s4.factors;
     var tmp$ret$7;
     // Inline function 'kotlin.collections.filterTo' call
     var tmp0_filterTo = ArrayList_init_$Create$();
@@ -268,7 +317,7 @@
       var element = tmp0_iterator_1.e();
       var tmp$ret$6;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$6 = commonDimensionSymbols.i(element.u5_1.x5_1);
+      tmp$ret$6 = commonDimensionSymbols.i(element.specification.categorySymbol);
       if (tmp$ret$6) {
         tmp0_filterTo.a(element);
       }
@@ -288,7 +337,7 @@
       // Inline function 'kotlin.collections.mapNotNullTo.<anonymous>' call
       var tmp$ret$9;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$9 = plusCommonFactors(element_0, _this__u8e3s4.a6_1, other.a6_1);
+      tmp$ret$9 = plusCommonFactors(element_0, _this__u8e3s4.factors, other.factors);
       var tmp0_safe_receiver = tmp$ret$9;
       if (tmp0_safe_receiver == null)
         null;
@@ -305,7 +354,7 @@
     var newCommonFactors = toSet(tmp$ret$12);
     var tmp$ret$15;
     // Inline function 'kotlin.collections.filter' call
-    var tmp3_filter = _this__u8e3s4.a6_1;
+    var tmp3_filter = _this__u8e3s4.factors;
     var tmp$ret$14;
     // Inline function 'kotlin.collections.filterTo' call
     var tmp0_filterTo_0 = ArrayList_init_$Create$();
@@ -314,7 +363,7 @@
       var element_1 = tmp0_iterator_3.e();
       var tmp$ret$13;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$13 = !commonDimensionSymbols.i(element_1.u5_1.x5_1);
+      tmp$ret$13 = !commonDimensionSymbols.i(element_1.specification.categorySymbol);
       if (tmp$ret$13) {
         tmp0_filterTo_0.a(element_1);
       }
@@ -324,7 +373,7 @@
     var restThisFactors = toSet(tmp$ret$15);
     var tmp$ret$18;
     // Inline function 'kotlin.collections.filter' call
-    var tmp4_filter = other.a6_1;
+    var tmp4_filter = other.factors;
     var tmp$ret$17;
     // Inline function 'kotlin.collections.filterTo' call
     var tmp0_filterTo_1 = ArrayList_init_$Create$();
@@ -333,7 +382,7 @@
       var element_2 = tmp0_iterator_4.e();
       var tmp$ret$16;
       // Inline function 'eu.sirotin.kotunil.core.times.<anonymous>' call
-      tmp$ret$16 = !commonDimensionSymbols.i(element_2.u5_1.x5_1);
+      tmp$ret$16 = !commonDimensionSymbols.i(element_2.specification.categorySymbol);
       if (tmp$ret$16) {
         tmp0_filterTo_1.a(element_2);
       }
@@ -347,7 +396,7 @@
   function pow(_this__u8e3s4, degree) {
     var tmp$ret$2;
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = _this__u8e3s4.a6_1;
+    var tmp0_map = _this__u8e3s4.factors;
     var tmp$ret$1;
     // Inline function 'kotlin.collections.mapTo' call
     var tmp0_mapTo = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp0_map, 10));
@@ -356,7 +405,7 @@
       var item = tmp0_iterator.e();
       var tmp$ret$0;
       // Inline function 'eu.sirotin.kotunil.core.pow.<anonymous>' call
-      tmp$ret$0 = new Factor(item.u5_1, item.v5_1 * numberToDouble(degree));
+      tmp$ret$0 = new Factor(item.specification, item.powerValue * numberToDouble(degree));
       tmp0_mapTo.a(tmp$ret$0);
     }
     tmp$ret$1 = tmp0_mapTo;
@@ -382,7 +431,7 @@
         var element = tmp0_iterator.e();
         var tmp$ret$0;
         // Inline function 'eu.sirotin.kotunil.core.plusCommonFactors.<anonymous>' call
-        tmp$ret$0 = element.u5_1.equals(f.u5_1);
+        tmp$ret$0 = element.specification.equals(f.specification);
         if (tmp$ret$0) {
           tmp$ret$1 = element;
           break $l$block;
@@ -402,7 +451,7 @@
         var element_0 = tmp0_iterator_0.e();
         var tmp$ret$3;
         // Inline function 'eu.sirotin.kotunil.core.plusCommonFactors.<anonymous>' call
-        tmp$ret$3 = element_0.u5_1.equals(f.u5_1);
+        tmp$ret$3 = element_0.specification.equals(f.specification);
         if (tmp$ret$3) {
           tmp$ret$4 = element_0;
           break $l$block_0;
@@ -412,13 +461,13 @@
     }
     tmp$ret$5 = tmp$ret$4;
     var f2 = tmp$ret$5;
-    var powerValue = ensureNotNull(f1).v5_1 + ensureNotNull(f2).v5_1;
+    var powerValue = ensureNotNull(f1).powerValue + ensureNotNull(f2).powerValue;
     var tmp;
     var tmp$ret$6;
     // Inline function 'kotlin.math.abs' call
     tmp$ret$6 = Math.abs(powerValue);
     if (tmp$ret$6 > get_ε()) {
-      tmp = new Factor(f.u5_1, powerValue);
+      tmp = new Factor(f.specification, powerValue);
     } else {
       tmp = null;
     }
@@ -442,37 +491,43 @@
     return Expression_init_$Init$_0(value, description, $mask0, $marker, Object.create(Expression.prototype));
   }
   function checkCompatibility($this, other) {
-    if (!($this.c6() === other.c6()))
-      throw IllegalArgumentException_init_$Create$("Can't process objects with different dimensions: '" + $this.c6() + "' and " + other.c6());
+    if (!($this.v5() === other.v5()))
+      throw IllegalArgumentException_init_$Create$("Can't process objects with different dimensions: '" + $this.v5() + "' and " + other.v5());
   }
   function Expression(value, dimensions) {
     this.value = value;
     this.dimensions = dimensions;
   }
-  Expression.prototype.f6 = function (_set____db54di) {
+  Expression.prototype.e6 = function (_set____db54di) {
     this.value = _set____db54di;
   };
   Expression.prototype.s = function () {
     return this.value;
   };
-  Expression.prototype.g6 = function () {
+  Expression.prototype.f6 = function () {
     return this.dimensions;
   };
-  Expression.prototype.h6 = function (other) {
+  Expression.prototype.g6 = function (other) {
     checkCompatibility(this, other);
     return compareTo(this.value, other.value);
   };
   Expression.prototype.t1 = function (other) {
-    return this.h6(other instanceof Expression ? other : THROW_CCE());
+    return this.g6(other instanceof Expression ? other : THROW_CCE());
   };
-  Expression.prototype.c6 = function () {
-    return this.dimensions.c6();
+  Expression.prototype.v5 = function () {
+    return this.dimensions.v5();
   };
-  Expression.prototype.d6 = function () {
-    return this.dimensions.d6();
+  Expression.prototype.unitSymbols = function () {
+    return this.v5();
+  };
+  Expression.prototype.w5 = function () {
+    return this.dimensions.w5();
+  };
+  Expression.prototype.categorySymbols = function () {
+    return this.w5();
   };
   Expression.prototype.toString = function () {
-    return '' + this.value + ' ' + this.c6();
+    return '' + this.value + ' ' + this.v5();
   };
   Expression.prototype.equals = function (other) {
     if (this === other)
@@ -564,20 +619,71 @@
   function div_1(_this__u8e3s4, x) {
     return div_0(1, div_0(numberToDouble(x), _this__u8e3s4));
   }
-  function UnitSpecification(unitSymbol, categorySymbol, presentationPriority, creator) {
-    this.w5_1 = unitSymbol;
-    this.x5_1 = categorySymbol;
-    this.y5_1 = presentationPriority;
-    this.z5_1 = creator;
+  function UnitSpecification_init_$Init$(unitSymbol, categorySymbol, presentationPriority, creator, $mask0, $marker, $this) {
+    if (!(($mask0 & 4) === 0))
+      presentationPriority = 0;
+    UnitSpecification.call($this, unitSymbol, categorySymbol, presentationPriority, creator);
+    return $this;
   }
+  function UnitSpecification_init_$Create$(unitSymbol, categorySymbol, presentationPriority, creator, $mask0, $marker) {
+    return UnitSpecification_init_$Init$(unitSymbol, categorySymbol, presentationPriority, creator, $mask0, $marker, Object.create(UnitSpecification.prototype));
+  }
+  function UnitSpecification(unitSymbol, categorySymbol, presentationPriority, creator) {
+    var presentationPriority_0 = presentationPriority === void 1 ? 0 : presentationPriority;
+    this.unitSymbol = unitSymbol;
+    this.categorySymbol = categorySymbol;
+    this.presentationPriority = presentationPriority_0;
+    this.creator = creator;
+  }
+  UnitSpecification.prototype.h6 = function () {
+    return this.unitSymbol;
+  };
+  UnitSpecification.prototype.i6 = function () {
+    return this.categorySymbol;
+  };
+  UnitSpecification.prototype.j6 = function () {
+    return this.presentationPriority;
+  };
+  UnitSpecification.prototype.k6 = function () {
+    return this.creator;
+  };
+  UnitSpecification.prototype.component1 = function () {
+    return this.unitSymbol;
+  };
+  UnitSpecification.prototype.component2 = function () {
+    return this.categorySymbol;
+  };
+  UnitSpecification.prototype.component3 = function () {
+    return this.presentationPriority;
+  };
+  UnitSpecification.prototype.component4 = function () {
+    return this.creator;
+  };
+  UnitSpecification.prototype.copy = function (unitSymbol, categorySymbol, presentationPriority, creator) {
+    return this.l6(unitSymbol === void 1 ? this.unitSymbol : unitSymbol, categorySymbol === void 1 ? this.categorySymbol : categorySymbol, presentationPriority === void 1 ? this.presentationPriority : presentationPriority, creator === void 1 ? this.creator : creator);
+  };
+  UnitSpecification.prototype.l6 = function (unitSymbol, categorySymbol, presentationPriority, creator) {
+    return new UnitSpecification(unitSymbol, categorySymbol, presentationPriority, creator);
+  };
+  UnitSpecification.prototype.m6 = function (unitSymbol, categorySymbol, presentationPriority, creator, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      unitSymbol = this.unitSymbol;
+    if (!(($mask0 & 2) === 0))
+      categorySymbol = this.categorySymbol;
+    if (!(($mask0 & 4) === 0))
+      presentationPriority = this.presentationPriority;
+    if (!(($mask0 & 8) === 0))
+      creator = this.creator;
+    return this.l6(unitSymbol, categorySymbol, presentationPriority, creator);
+  };
   UnitSpecification.prototype.toString = function () {
-    return 'UnitSpecification(unitSymbol=' + this.w5_1 + ', categorySymbol=' + this.x5_1 + ', presentationPriority=' + this.y5_1 + ', creator=' + this.z5_1 + ')';
+    return 'UnitSpecification(unitSymbol=' + this.unitSymbol + ', categorySymbol=' + this.categorySymbol + ', presentationPriority=' + this.presentationPriority + ', creator=' + this.creator + ')';
   };
   UnitSpecification.prototype.hashCode = function () {
-    var result = getStringHashCode(this.w5_1);
-    result = imul(result, 31) + getStringHashCode(this.x5_1) | 0;
-    result = imul(result, 31) + this.y5_1 | 0;
-    result = imul(result, 31) + hashCode(this.z5_1) | 0;
+    var result = getStringHashCode(this.unitSymbol);
+    result = imul(result, 31) + getStringHashCode(this.categorySymbol) | 0;
+    result = imul(result, 31) + this.presentationPriority | 0;
+    result = imul(result, 31) + hashCode(this.creator) | 0;
     return result;
   };
   UnitSpecification.prototype.equals = function (other) {
@@ -586,13 +692,13 @@
     if (!(other instanceof UnitSpecification))
       return false;
     var tmp0_other_with_cast = other instanceof UnitSpecification ? other : THROW_CCE();
-    if (!(this.w5_1 === tmp0_other_with_cast.w5_1))
+    if (!(this.unitSymbol === tmp0_other_with_cast.unitSymbol))
       return false;
-    if (!(this.x5_1 === tmp0_other_with_cast.x5_1))
+    if (!(this.categorySymbol === tmp0_other_with_cast.categorySymbol))
       return false;
-    if (!(this.y5_1 === tmp0_other_with_cast.y5_1))
+    if (!(this.presentationPriority === tmp0_other_with_cast.presentationPriority))
       return false;
-    if (!equals(this.z5_1, tmp0_other_with_cast.z5_1))
+    if (!equals(this.creator, tmp0_other_with_cast.creator))
       return false;
     return true;
   };
@@ -632,8 +738,19 @@
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
     var $eu$sirotin$kotunil$core = $eu$sirotin$kotunil.core || ($eu$sirotin$kotunil.core = {});
+    $eu$sirotin$kotunil$core.Dimensions = Dimensions;
+    $eu$sirotin$kotunil$core.Factor = Factor;
+    var $eu = _.eu || (_.eu = {});
+    var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
+    var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
+    var $eu$sirotin$kotunil$core = $eu$sirotin$kotunil.core || ($eu$sirotin$kotunil.core = {});
     $eu$sirotin$kotunil$core.Expression = Expression;
     $eu$sirotin$kotunil$core.Expression.create = create;
+    var $eu = _.eu || (_.eu = {});
+    var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
+    var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
+    var $eu$sirotin$kotunil$core = $eu$sirotin$kotunil.core || ($eu$sirotin$kotunil.core = {});
+    $eu$sirotin$kotunil$core.UnitSpecification = UnitSpecification;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});

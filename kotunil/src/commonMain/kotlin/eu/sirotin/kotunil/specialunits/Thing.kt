@@ -23,6 +23,8 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
+import kotlin.js.ExperimentalJsExport
+import kotlin.js.JsExport
 import kotlin.jvm.JvmField
 
 private val descriptionThing = UnitSpecification(
@@ -31,6 +33,8 @@ private val descriptionThing = UnitSpecification(
     90
 ) { v: Double -> Thing(v) }
 
+
+@JsExport
 /**
  * Unit for some object (thing).
  *
@@ -51,6 +55,7 @@ val Number.thing : Thing
 /**
  * Thing-unit for representation of some object.
  */
+@JsExport
 @JvmField()
 val thing = Thing(1.0)
 

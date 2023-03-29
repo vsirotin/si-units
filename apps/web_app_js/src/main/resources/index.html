@@ -8,14 +8,12 @@
     <h1>Kotunil/JS Test Pager</h1>
 
     Test Statistics:
-    <p id="result">A Paragraph.</p>
-
-    <button type="button" onclick="myFunction()">Try it</button>
-
+    <p id="result">Def</p>
 
 
     <script type="text/javascript" src="./libs/kotlin-kotlin-stdlib-js-ir.js"></script>
     <script type="text/javascript" src="./libs/si-units-kotunil.js"></script>
+    <script type="text/javascript" src="./../javascript/checker.js"></script>
 
          <script>
             console.log("A1");
@@ -43,12 +41,18 @@
              console.log("s4=" + s4);
 
              var s5 = s1.div(12);
-             console.log("s5=" + s5);
+             console.log("s5.value=" + s5.value);
 
              var s6 = s1.divExp(s3);
              console.log("s6=" + s6);
 
-             document.getElementById("result").innerHTML = s5;
+             check();
+
+             console.log("numberChecks=" + numberChecks);
+
+             console.log("s5.unitSymbols=" + s5.unitSymbols());
+
+                document.getElementById("result").innerHTML = s5;
 
         </script>
 </body>

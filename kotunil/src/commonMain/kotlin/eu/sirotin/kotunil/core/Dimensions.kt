@@ -23,6 +23,7 @@
 package eu.sirotin.kotunil.core
 
 
+import kotlin.js.JsExport
 import kotlin.math.abs
 
 /**
@@ -30,6 +31,7 @@ import kotlin.math.abs
  * A factor describe one separate dimension.
  * @constructor Creates dimensions of an unit with help of [factors].
  */
+@JsExport
 data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     /**
@@ -84,6 +86,7 @@ data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 /**
  * Describes one dimension of unit as logical pair of [specification] and [powerValue].
  */
+@JsExport
 data class Factor(val specification: UnitSpecification<*>, val powerValue: Double = 1.0) : Comparable<Factor> {
 
     /**
