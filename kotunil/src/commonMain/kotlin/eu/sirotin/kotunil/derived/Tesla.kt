@@ -6,6 +6,7 @@ import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -14,6 +15,7 @@ private val unit =  kg* (s `^` -2) * (A `^` -1)
 /**
 * System International Unit for magnetic flux density.
 */
+@JsExport
 @JvmField()
 val T = unit
 
@@ -46,7 +48,7 @@ val Number.quettatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * QT, 10^30 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -56,6 +58,7 @@ val QT = 10.0.pow(30) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * quettatesla, 10^30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val quettatesla = QT
     
@@ -79,7 +82,7 @@ val Number.ronnatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * RT, 10^27 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -89,6 +92,7 @@ val RT = 10.0.pow(27) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * ronnatesla, 10^27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val ronnatesla = RT
     
@@ -112,7 +116,7 @@ val Number.yottatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * YT, 10^24 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -122,6 +126,7 @@ val YT = 10.0.pow(24) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * yottatesla, 10^24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val yottatesla = YT
     
@@ -145,7 +150,7 @@ val Number.zettatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ZT, 10^21 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -155,6 +160,7 @@ val ZT = 10.0.pow(21) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * zettatesla, 10^21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val zettatesla = ZT
     
@@ -178,7 +184,7 @@ val Number.exatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ET, 10^18 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -188,6 +194,7 @@ val ET = 10.0.pow(18) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * exatesla, 10^18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val exatesla = ET
     
@@ -211,7 +218,7 @@ val Number.petatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * PT, 10^15 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -221,6 +228,7 @@ val PT = 10.0.pow(15) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * petatesla, 10^15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val petatesla = PT
     
@@ -244,7 +252,7 @@ val Number.teratesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * TT, 10^12 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -254,6 +262,7 @@ val TT = 10.0.pow(12) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * teratesla, 10^12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val teratesla = TT
     
@@ -277,7 +286,7 @@ val Number.gigatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * GT, 10^9 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -287,6 +296,7 @@ val GT = 10.0.pow(9) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * gigatesla, 10^9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val gigatesla = GT
     
@@ -310,7 +320,7 @@ val Number.megatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * MT, 10^6 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -320,6 +330,7 @@ val MT = 10.0.pow(6) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * megatesla, 10^6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val megatesla = MT
     
@@ -343,7 +354,7 @@ val Number.kilotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * kT, 10^3 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -353,6 +364,7 @@ val kT = 10.0.pow(3) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * kilotesla, 10^3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val kilotesla = kT
     
@@ -376,7 +388,7 @@ val Number.hectotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * hT, 10^2 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -386,6 +398,7 @@ val hT = 10.0.pow(2) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * hectotesla, 10^2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val hectotesla = hT
     
@@ -409,7 +422,7 @@ val Number.decatesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * daT, 10^1 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -419,6 +432,7 @@ val daT = 10.0.pow(1) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * decatesla, 10^1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val decatesla = daT
     
@@ -442,7 +456,7 @@ val Number.decitesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * dT, 10^-1 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -452,6 +466,7 @@ val dT = 10.0.pow(-1) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * decitesla, 10^-1 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val decitesla = dT
     
@@ -475,7 +490,7 @@ val Number.centitesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * cT, 10^-2 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -485,6 +500,7 @@ val cT = 10.0.pow(-2) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * centitesla, 10^-2 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val centitesla = cT
     
@@ -508,7 +524,7 @@ val Number.millitesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * mT, 10^-3 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -518,6 +534,7 @@ val mT = 10.0.pow(-3) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * millitesla, 10^-3 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val millitesla = mT
     
@@ -541,7 +558,7 @@ val Number.microtesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * μT, 10^-6 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -551,6 +568,7 @@ val μT = 10.0.pow(-6) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * microtesla, 10^-6 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val microtesla = μT
     
@@ -574,7 +592,7 @@ val Number.nanotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * nT, 10^-9 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -584,6 +602,7 @@ val nT = 10.0.pow(-9) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * nanotesla, 10^-9 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val nanotesla = nT
     
@@ -607,7 +626,7 @@ val Number.picotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * pT, 10^-12 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -617,6 +636,7 @@ val pT = 10.0.pow(-12) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * picotesla, 10^-12 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val picotesla = pT
     
@@ -640,7 +660,7 @@ val Number.femtotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * fT, 10^-15 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -650,6 +670,7 @@ val fT = 10.0.pow(-15) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * femtotesla, 10^-15 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val femtotesla = fT
     
@@ -673,7 +694,7 @@ val Number.attotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * aT, 10^-18 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -683,6 +704,7 @@ val aT = 10.0.pow(-18) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * attotesla, 10^-18 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val attotesla = aT
     
@@ -706,7 +728,7 @@ val Number.zeptotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * zT, 10^-21 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -716,6 +738,7 @@ val zT = 10.0.pow(-21) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * zeptotesla, 10^-21 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val zeptotesla = zT
     
@@ -739,7 +762,7 @@ val Number.yoctotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * yT, 10^-24 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -749,6 +772,7 @@ val yT = 10.0.pow(-24) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * yoctotesla, 10^-24 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val yoctotesla = yT
     
@@ -772,7 +796,7 @@ val Number.rontotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * rT, 10^-27 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -782,6 +806,7 @@ val rT = 10.0.pow(-27) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * rontotesla, 10^-27 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val rontotesla = rT
     
@@ -805,7 +830,7 @@ val Number.quectotesla : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * qT, 10^-30 of tesla, derived SI-Unit for measurement of magnetic flux density
@@ -815,6 +840,7 @@ val qT = 10.0.pow(-30) * (kg* (s `^` -2) * (A `^` -1))
 /**
 * quectotesla, 10^-30 of tesla, derived SI-Unit for measurement of magnetic flux density
 */ 
+@JsExport
 @JvmField()
 val quectotesla = qT
     

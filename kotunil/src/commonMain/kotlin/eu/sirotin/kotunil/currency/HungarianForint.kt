@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionHungarianForint = UnitSpecification(
     "HUF",
@@ -14,6 +15,7 @@ private val descriptionHungarianForint = UnitSpecification(
 * Class for hold of Hungarian forint
 * @constructor Creates a class for hold of Hungarian forint with given [value]
 */
+@JsExport
 class HungarianForint(value : Double = 1.0) : Expression(value, description = descriptionHungarianForint)
     
     /**
@@ -28,6 +30,7 @@ class HungarianForint(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of Hungarian forint
     */
+    @JsExport
     @JvmField()
     val HUF = HungarianForint()   
     

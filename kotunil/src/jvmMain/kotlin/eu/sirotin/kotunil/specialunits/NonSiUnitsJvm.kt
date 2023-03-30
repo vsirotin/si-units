@@ -25,6 +25,11 @@
 package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.core.Expression
+import eu.sirotin.kotunil.core.times
+import eu.sirotin.kotunil.core.div
+import eu.sirotin.kotunil.derived.rad
+import kotlin.math.PI
+
 
 @Suppress("DANGEROUS_CHARACTERS")
 val Number.`%`: Double
@@ -50,6 +55,22 @@ val Expression.`as %` : Double
     get()  = this.value*100.0
 
 
+/**
+ * degree
+ */
+val `°` = (PI/180)*rad
+
+/**
+ * arcminute
+ */
+
+val `′` = `°` / 60.0
+
+/**
+ * arcsecond
+ */
+
+val `″` = `′` / 60.0
 
 
 

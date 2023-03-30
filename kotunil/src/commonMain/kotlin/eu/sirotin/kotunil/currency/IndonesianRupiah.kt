@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionIndonesianRupiah = UnitSpecification(
     "IDR",
@@ -14,6 +15,7 @@ private val descriptionIndonesianRupiah = UnitSpecification(
 * Class for hold of Indonesian rupiah
 * @constructor Creates a class for hold of Indonesian rupiah with given [value]
 */
+@JsExport
 class IndonesianRupiah(value : Double = 1.0) : Expression(value, description = descriptionIndonesianRupiah)
     
     /**
@@ -28,6 +30,7 @@ class IndonesianRupiah(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Indonesian rupiah
     */
+    @JsExport
     @JvmField()
     val IDR = IndonesianRupiah()   
     

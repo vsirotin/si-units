@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionNewTaiwanDollar = UnitSpecification(
     "TWD",
@@ -14,6 +15,7 @@ private val descriptionNewTaiwanDollar = UnitSpecification(
 * Class for hold of New Taiwan dollar
 * @constructor Creates a class for hold of New Taiwan dollar with given [value]
 */
+@JsExport
 class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = descriptionNewTaiwanDollar)
     
     /**
@@ -28,6 +30,7 @@ class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of New Taiwan dollar
     */
+    @JsExport
     @JvmField()
     val TWD = NewTaiwanDollar()   
     

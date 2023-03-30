@@ -96,6 +96,7 @@ package eu.sirotin.kotunil.base
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -110,6 +111,7 @@ private val description$className = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
+@JsExport
 class $className(value: Double) : Expression(value, description = description$className)
     /**
      * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -123,6 +125,7 @@ class $className(value: Double) : Expression(value, description = description$cl
     /**
      * System International Unit for $quantityName.
      */
+    @JsExport  
     @JvmField()
     val $unitSymbol = $className(1.0)       
     """
@@ -174,6 +177,7 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
          */
         get() = this.value / 10.0.pow(${siPrefix.degree})
     
+    @JsExport
     @JvmField()
     /**
      * $correctedSymbol (10^${siPrefix.degree} of $name)

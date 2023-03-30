@@ -6,6 +6,7 @@ import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -14,6 +15,7 @@ private val unit =  1/s
 /**
 * System International Unit for frequency.
 */
+@JsExport
 @JvmField()
 val Hz = unit
 
@@ -46,7 +48,7 @@ val Number.quettahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * QHz, 10^30 of hertz, derived SI-Unit for measurement of frequency
@@ -56,6 +58,7 @@ val QHz = 10.0.pow(30) * (1/s)
 /**
 * quettahertz, 10^30 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val quettahertz = QHz
     
@@ -79,7 +82,7 @@ val Number.ronnahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * RHz, 10^27 of hertz, derived SI-Unit for measurement of frequency
@@ -89,6 +92,7 @@ val RHz = 10.0.pow(27) * (1/s)
 /**
 * ronnahertz, 10^27 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val ronnahertz = RHz
     
@@ -112,7 +116,7 @@ val Number.yottahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * YHz, 10^24 of hertz, derived SI-Unit for measurement of frequency
@@ -122,6 +126,7 @@ val YHz = 10.0.pow(24) * (1/s)
 /**
 * yottahertz, 10^24 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val yottahertz = YHz
     
@@ -145,7 +150,7 @@ val Number.zettahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ZHz, 10^21 of hertz, derived SI-Unit for measurement of frequency
@@ -155,6 +160,7 @@ val ZHz = 10.0.pow(21) * (1/s)
 /**
 * zettahertz, 10^21 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val zettahertz = ZHz
     
@@ -178,7 +184,7 @@ val Number.exahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * EHz, 10^18 of hertz, derived SI-Unit for measurement of frequency
@@ -188,6 +194,7 @@ val EHz = 10.0.pow(18) * (1/s)
 /**
 * exahertz, 10^18 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val exahertz = EHz
     
@@ -211,7 +218,7 @@ val Number.petahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * PHz, 10^15 of hertz, derived SI-Unit for measurement of frequency
@@ -221,6 +228,7 @@ val PHz = 10.0.pow(15) * (1/s)
 /**
 * petahertz, 10^15 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val petahertz = PHz
     
@@ -244,7 +252,7 @@ val Number.terahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * THz, 10^12 of hertz, derived SI-Unit for measurement of frequency
@@ -254,6 +262,7 @@ val THz = 10.0.pow(12) * (1/s)
 /**
 * terahertz, 10^12 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val terahertz = THz
     
@@ -277,7 +286,7 @@ val Number.gigahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * GHz, 10^9 of hertz, derived SI-Unit for measurement of frequency
@@ -287,6 +296,7 @@ val GHz = 10.0.pow(9) * (1/s)
 /**
 * gigahertz, 10^9 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val gigahertz = GHz
     
@@ -310,7 +320,7 @@ val Number.megahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * MHz, 10^6 of hertz, derived SI-Unit for measurement of frequency
@@ -320,6 +330,7 @@ val MHz = 10.0.pow(6) * (1/s)
 /**
 * megahertz, 10^6 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val megahertz = MHz
     
@@ -343,7 +354,7 @@ val Number.kilohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * kHz, 10^3 of hertz, derived SI-Unit for measurement of frequency
@@ -353,6 +364,7 @@ val kHz = 10.0.pow(3) * (1/s)
 /**
 * kilohertz, 10^3 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val kilohertz = kHz
     
@@ -376,7 +388,7 @@ val Number.hectohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * hHz, 10^2 of hertz, derived SI-Unit for measurement of frequency
@@ -386,6 +398,7 @@ val hHz = 10.0.pow(2) * (1/s)
 /**
 * hectohertz, 10^2 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val hectohertz = hHz
     
@@ -409,7 +422,7 @@ val Number.decahertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * daHz, 10^1 of hertz, derived SI-Unit for measurement of frequency
@@ -419,6 +432,7 @@ val daHz = 10.0.pow(1) * (1/s)
 /**
 * decahertz, 10^1 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val decahertz = daHz
     
@@ -442,7 +456,7 @@ val Number.decihertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * dHz, 10^-1 of hertz, derived SI-Unit for measurement of frequency
@@ -452,6 +466,7 @@ val dHz = 10.0.pow(-1) * (1/s)
 /**
 * decihertz, 10^-1 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val decihertz = dHz
     
@@ -475,7 +490,7 @@ val Number.centihertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * cHz, 10^-2 of hertz, derived SI-Unit for measurement of frequency
@@ -485,6 +500,7 @@ val cHz = 10.0.pow(-2) * (1/s)
 /**
 * centihertz, 10^-2 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val centihertz = cHz
     
@@ -508,7 +524,7 @@ val Number.millihertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * mHz, 10^-3 of hertz, derived SI-Unit for measurement of frequency
@@ -518,6 +534,7 @@ val mHz = 10.0.pow(-3) * (1/s)
 /**
 * millihertz, 10^-3 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val millihertz = mHz
     
@@ -541,7 +558,7 @@ val Number.microhertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * μHz, 10^-6 of hertz, derived SI-Unit for measurement of frequency
@@ -551,6 +568,7 @@ val μHz = 10.0.pow(-6) * (1/s)
 /**
 * microhertz, 10^-6 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val microhertz = μHz
     
@@ -574,7 +592,7 @@ val Number.nanohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * nHz, 10^-9 of hertz, derived SI-Unit for measurement of frequency
@@ -584,6 +602,7 @@ val nHz = 10.0.pow(-9) * (1/s)
 /**
 * nanohertz, 10^-9 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val nanohertz = nHz
     
@@ -607,7 +626,7 @@ val Number.picohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * pHz, 10^-12 of hertz, derived SI-Unit for measurement of frequency
@@ -617,6 +636,7 @@ val pHz = 10.0.pow(-12) * (1/s)
 /**
 * picohertz, 10^-12 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val picohertz = pHz
     
@@ -640,7 +660,7 @@ val Number.femtohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * fHz, 10^-15 of hertz, derived SI-Unit for measurement of frequency
@@ -650,6 +670,7 @@ val fHz = 10.0.pow(-15) * (1/s)
 /**
 * femtohertz, 10^-15 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val femtohertz = fHz
     
@@ -673,7 +694,7 @@ val Number.attohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * aHz, 10^-18 of hertz, derived SI-Unit for measurement of frequency
@@ -683,6 +704,7 @@ val aHz = 10.0.pow(-18) * (1/s)
 /**
 * attohertz, 10^-18 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val attohertz = aHz
     
@@ -706,7 +728,7 @@ val Number.zeptohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * zHz, 10^-21 of hertz, derived SI-Unit for measurement of frequency
@@ -716,6 +738,7 @@ val zHz = 10.0.pow(-21) * (1/s)
 /**
 * zeptohertz, 10^-21 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val zeptohertz = zHz
     
@@ -739,7 +762,7 @@ val Number.yoctohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * yHz, 10^-24 of hertz, derived SI-Unit for measurement of frequency
@@ -749,6 +772,7 @@ val yHz = 10.0.pow(-24) * (1/s)
 /**
 * yoctohertz, 10^-24 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val yoctohertz = yHz
     
@@ -772,7 +796,7 @@ val Number.rontohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * rHz, 10^-27 of hertz, derived SI-Unit for measurement of frequency
@@ -782,6 +806,7 @@ val rHz = 10.0.pow(-27) * (1/s)
 /**
 * rontohertz, 10^-27 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val rontohertz = rHz
     
@@ -805,7 +830,7 @@ val Number.quectohertz : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * qHz, 10^-30 of hertz, derived SI-Unit for measurement of frequency
@@ -815,6 +840,7 @@ val qHz = 10.0.pow(-30) * (1/s)
 /**
 * quectohertz, 10^-30 of hertz, derived SI-Unit for measurement of frequency
 */ 
+@JsExport
 @JvmField()
 val quectohertz = qHz
     

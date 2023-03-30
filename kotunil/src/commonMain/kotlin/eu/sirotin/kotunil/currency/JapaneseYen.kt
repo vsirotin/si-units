@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionJapaneseYen = UnitSpecification(
     "JPY",
@@ -14,6 +15,7 @@ private val descriptionJapaneseYen = UnitSpecification(
 * Class for hold of Japanese yen
 * @constructor Creates a class for hold of Japanese yen with given [value]
 */
+@JsExport
 class JapaneseYen(value : Double = 1.0) : Expression(value, description = descriptionJapaneseYen)
     
     /**
@@ -28,6 +30,7 @@ class JapaneseYen(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Japanese yen
     */
+    @JsExport
     @JvmField()
     val JPY = JapaneseYen()   
     

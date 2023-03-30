@@ -6,6 +6,7 @@ import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -14,6 +15,7 @@ private val unit =  kg* (m2)*(s `^` -2)*(A `^` -2)
 /**
 * System International Unit for inductance.
 */
+@JsExport
 @JvmField()
 val H = unit
 
@@ -46,7 +48,7 @@ val Number.quettahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * QH, 10^30 of henry, derived SI-Unit for measurement of inductance
@@ -56,6 +58,7 @@ val QH = 10.0.pow(30) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * quettahenry, 10^30 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val quettahenry = QH
     
@@ -79,7 +82,7 @@ val Number.ronnahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * RH, 10^27 of henry, derived SI-Unit for measurement of inductance
@@ -89,6 +92,7 @@ val RH = 10.0.pow(27) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * ronnahenry, 10^27 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val ronnahenry = RH
     
@@ -112,7 +116,7 @@ val Number.yottahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * YH, 10^24 of henry, derived SI-Unit for measurement of inductance
@@ -122,6 +126,7 @@ val YH = 10.0.pow(24) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * yottahenry, 10^24 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val yottahenry = YH
     
@@ -145,7 +150,7 @@ val Number.zettahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ZH, 10^21 of henry, derived SI-Unit for measurement of inductance
@@ -155,6 +160,7 @@ val ZH = 10.0.pow(21) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * zettahenry, 10^21 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val zettahenry = ZH
     
@@ -178,7 +184,7 @@ val Number.exahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * EH, 10^18 of henry, derived SI-Unit for measurement of inductance
@@ -188,6 +194,7 @@ val EH = 10.0.pow(18) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * exahenry, 10^18 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val exahenry = EH
     
@@ -211,7 +218,7 @@ val Number.petahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * PH, 10^15 of henry, derived SI-Unit for measurement of inductance
@@ -221,6 +228,7 @@ val PH = 10.0.pow(15) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * petahenry, 10^15 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val petahenry = PH
     
@@ -244,7 +252,7 @@ val Number.terahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * TH, 10^12 of henry, derived SI-Unit for measurement of inductance
@@ -254,6 +262,7 @@ val TH = 10.0.pow(12) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * terahenry, 10^12 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val terahenry = TH
     
@@ -277,7 +286,7 @@ val Number.gigahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * GH, 10^9 of henry, derived SI-Unit for measurement of inductance
@@ -287,6 +296,7 @@ val GH = 10.0.pow(9) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * gigahenry, 10^9 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val gigahenry = GH
     
@@ -310,7 +320,7 @@ val Number.megahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * MH, 10^6 of henry, derived SI-Unit for measurement of inductance
@@ -320,6 +330,7 @@ val MH = 10.0.pow(6) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * megahenry, 10^6 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val megahenry = MH
     
@@ -343,7 +354,7 @@ val Number.kilohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * kH, 10^3 of henry, derived SI-Unit for measurement of inductance
@@ -353,6 +364,7 @@ val kH = 10.0.pow(3) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * kilohenry, 10^3 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val kilohenry = kH
     
@@ -376,7 +388,7 @@ val Number.hectohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * hH, 10^2 of henry, derived SI-Unit for measurement of inductance
@@ -386,6 +398,7 @@ val hH = 10.0.pow(2) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * hectohenry, 10^2 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val hectohenry = hH
     
@@ -409,7 +422,7 @@ val Number.decahenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * daH, 10^1 of henry, derived SI-Unit for measurement of inductance
@@ -419,6 +432,7 @@ val daH = 10.0.pow(1) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * decahenry, 10^1 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val decahenry = daH
     
@@ -442,7 +456,7 @@ val Number.decihenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * dH, 10^-1 of henry, derived SI-Unit for measurement of inductance
@@ -452,6 +466,7 @@ val dH = 10.0.pow(-1) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * decihenry, 10^-1 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val decihenry = dH
     
@@ -475,7 +490,7 @@ val Number.centihenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * cH, 10^-2 of henry, derived SI-Unit for measurement of inductance
@@ -485,6 +500,7 @@ val cH = 10.0.pow(-2) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * centihenry, 10^-2 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val centihenry = cH
     
@@ -508,7 +524,7 @@ val Number.millihenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * mH, 10^-3 of henry, derived SI-Unit for measurement of inductance
@@ -518,6 +534,7 @@ val mH = 10.0.pow(-3) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * millihenry, 10^-3 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val millihenry = mH
     
@@ -541,7 +558,7 @@ val Number.microhenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * μH, 10^-6 of henry, derived SI-Unit for measurement of inductance
@@ -551,6 +568,7 @@ val μH = 10.0.pow(-6) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * microhenry, 10^-6 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val microhenry = μH
     
@@ -574,7 +592,7 @@ val Number.nanohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * nH, 10^-9 of henry, derived SI-Unit for measurement of inductance
@@ -584,6 +602,7 @@ val nH = 10.0.pow(-9) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * nanohenry, 10^-9 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val nanohenry = nH
     
@@ -607,7 +626,7 @@ val Number.picohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * pH, 10^-12 of henry, derived SI-Unit for measurement of inductance
@@ -617,6 +636,7 @@ val pH = 10.0.pow(-12) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * picohenry, 10^-12 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val picohenry = pH
     
@@ -640,7 +660,7 @@ val Number.femtohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * fH, 10^-15 of henry, derived SI-Unit for measurement of inductance
@@ -650,6 +670,7 @@ val fH = 10.0.pow(-15) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * femtohenry, 10^-15 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val femtohenry = fH
     
@@ -673,7 +694,7 @@ val Number.attohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * aH, 10^-18 of henry, derived SI-Unit for measurement of inductance
@@ -683,6 +704,7 @@ val aH = 10.0.pow(-18) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * attohenry, 10^-18 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val attohenry = aH
     
@@ -706,7 +728,7 @@ val Number.zeptohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * zH, 10^-21 of henry, derived SI-Unit for measurement of inductance
@@ -716,6 +738,7 @@ val zH = 10.0.pow(-21) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * zeptohenry, 10^-21 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val zeptohenry = zH
     
@@ -739,7 +762,7 @@ val Number.yoctohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * yH, 10^-24 of henry, derived SI-Unit for measurement of inductance
@@ -749,6 +772,7 @@ val yH = 10.0.pow(-24) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * yoctohenry, 10^-24 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val yoctohenry = yH
     
@@ -772,7 +796,7 @@ val Number.rontohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * rH, 10^-27 of henry, derived SI-Unit for measurement of inductance
@@ -782,6 +806,7 @@ val rH = 10.0.pow(-27) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * rontohenry, 10^-27 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val rontohenry = rH
     
@@ -805,7 +830,7 @@ val Number.quectohenry : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * qH, 10^-30 of henry, derived SI-Unit for measurement of inductance
@@ -815,6 +840,7 @@ val qH = 10.0.pow(-30) * (kg* (m2)*(s `^` -2)*(A `^` -2))
 /**
 * quectohenry, 10^-30 of henry, derived SI-Unit for measurement of inductance
 */ 
+@JsExport
 @JvmField()
 val quectohenry = qH
     

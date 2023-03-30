@@ -6,6 +6,7 @@ import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -14,6 +15,7 @@ private val unit =  (m2)*(s `^` -2)
 /**
 * System International Unit for equivalent dose (of ionising radiation).
 */
+@JsExport
 @JvmField()
 val Sv = unit
 
@@ -46,7 +48,7 @@ val Number.quettasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * QSv, 10^30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -56,6 +58,7 @@ val QSv = 10.0.pow(30) * ((m2)*(s `^` -2))
 /**
 * quettasievert, 10^30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val quettasievert = QSv
     
@@ -79,7 +82,7 @@ val Number.ronnasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * RSv, 10^27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -89,6 +92,7 @@ val RSv = 10.0.pow(27) * ((m2)*(s `^` -2))
 /**
 * ronnasievert, 10^27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val ronnasievert = RSv
     
@@ -112,7 +116,7 @@ val Number.yottasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * YSv, 10^24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -122,6 +126,7 @@ val YSv = 10.0.pow(24) * ((m2)*(s `^` -2))
 /**
 * yottasievert, 10^24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val yottasievert = YSv
     
@@ -145,7 +150,7 @@ val Number.zettasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ZSv, 10^21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -155,6 +160,7 @@ val ZSv = 10.0.pow(21) * ((m2)*(s `^` -2))
 /**
 * zettasievert, 10^21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val zettasievert = ZSv
     
@@ -178,7 +184,7 @@ val Number.exasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ESv, 10^18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -188,6 +194,7 @@ val ESv = 10.0.pow(18) * ((m2)*(s `^` -2))
 /**
 * exasievert, 10^18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val exasievert = ESv
     
@@ -211,7 +218,7 @@ val Number.petasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * PSv, 10^15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -221,6 +228,7 @@ val PSv = 10.0.pow(15) * ((m2)*(s `^` -2))
 /**
 * petasievert, 10^15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val petasievert = PSv
     
@@ -244,7 +252,7 @@ val Number.terasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * TSv, 10^12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -254,6 +262,7 @@ val TSv = 10.0.pow(12) * ((m2)*(s `^` -2))
 /**
 * terasievert, 10^12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val terasievert = TSv
     
@@ -277,7 +286,7 @@ val Number.gigasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * GSv, 10^9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -287,6 +296,7 @@ val GSv = 10.0.pow(9) * ((m2)*(s `^` -2))
 /**
 * gigasievert, 10^9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val gigasievert = GSv
     
@@ -310,7 +320,7 @@ val Number.megasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * MSv, 10^6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -320,6 +330,7 @@ val MSv = 10.0.pow(6) * ((m2)*(s `^` -2))
 /**
 * megasievert, 10^6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val megasievert = MSv
     
@@ -343,7 +354,7 @@ val Number.kilosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * kSv, 10^3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -353,6 +364,7 @@ val kSv = 10.0.pow(3) * ((m2)*(s `^` -2))
 /**
 * kilosievert, 10^3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val kilosievert = kSv
     
@@ -376,7 +388,7 @@ val Number.hectosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * hSv, 10^2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -386,6 +398,7 @@ val hSv = 10.0.pow(2) * ((m2)*(s `^` -2))
 /**
 * hectosievert, 10^2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val hectosievert = hSv
     
@@ -409,7 +422,7 @@ val Number.decasievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * daSv, 10^1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -419,6 +432,7 @@ val daSv = 10.0.pow(1) * ((m2)*(s `^` -2))
 /**
 * decasievert, 10^1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val decasievert = daSv
     
@@ -442,7 +456,7 @@ val Number.decisievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * dSv, 10^-1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -452,6 +466,7 @@ val dSv = 10.0.pow(-1) * ((m2)*(s `^` -2))
 /**
 * decisievert, 10^-1 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val decisievert = dSv
     
@@ -475,7 +490,7 @@ val Number.centisievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * cSv, 10^-2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -485,6 +500,7 @@ val cSv = 10.0.pow(-2) * ((m2)*(s `^` -2))
 /**
 * centisievert, 10^-2 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val centisievert = cSv
     
@@ -508,7 +524,7 @@ val Number.millisievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * mSv, 10^-3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -518,6 +534,7 @@ val mSv = 10.0.pow(-3) * ((m2)*(s `^` -2))
 /**
 * millisievert, 10^-3 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val millisievert = mSv
     
@@ -541,7 +558,7 @@ val Number.microsievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * μSv, 10^-6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -551,6 +568,7 @@ val μSv = 10.0.pow(-6) * ((m2)*(s `^` -2))
 /**
 * microsievert, 10^-6 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val microsievert = μSv
     
@@ -574,7 +592,7 @@ val Number.nanosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * nSv, 10^-9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -584,6 +602,7 @@ val nSv = 10.0.pow(-9) * ((m2)*(s `^` -2))
 /**
 * nanosievert, 10^-9 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val nanosievert = nSv
     
@@ -607,7 +626,7 @@ val Number.picosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * pSv, 10^-12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -617,6 +636,7 @@ val pSv = 10.0.pow(-12) * ((m2)*(s `^` -2))
 /**
 * picosievert, 10^-12 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val picosievert = pSv
     
@@ -640,7 +660,7 @@ val Number.femtosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * fSv, 10^-15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -650,6 +670,7 @@ val fSv = 10.0.pow(-15) * ((m2)*(s `^` -2))
 /**
 * femtosievert, 10^-15 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val femtosievert = fSv
     
@@ -673,7 +694,7 @@ val Number.attosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * aSv, 10^-18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -683,6 +704,7 @@ val aSv = 10.0.pow(-18) * ((m2)*(s `^` -2))
 /**
 * attosievert, 10^-18 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val attosievert = aSv
     
@@ -706,7 +728,7 @@ val Number.zeptosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * zSv, 10^-21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -716,6 +738,7 @@ val zSv = 10.0.pow(-21) * ((m2)*(s `^` -2))
 /**
 * zeptosievert, 10^-21 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val zeptosievert = zSv
     
@@ -739,7 +762,7 @@ val Number.yoctosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ySv, 10^-24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -749,6 +772,7 @@ val ySv = 10.0.pow(-24) * ((m2)*(s `^` -2))
 /**
 * yoctosievert, 10^-24 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val yoctosievert = ySv
     
@@ -772,7 +796,7 @@ val Number.rontosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * rSv, 10^-27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -782,6 +806,7 @@ val rSv = 10.0.pow(-27) * ((m2)*(s `^` -2))
 /**
 * rontosievert, 10^-27 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val rontosievert = rSv
     
@@ -805,7 +830,7 @@ val Number.quectosievert : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * qSv, 10^-30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
@@ -815,6 +840,7 @@ val qSv = 10.0.pow(-30) * ((m2)*(s `^` -2))
 /**
 * quectosievert, 10^-30 of sievert, derived SI-Unit for measurement of equivalent dose (of ionising radiation)
 */ 
+@JsExport
 @JvmField()
 val quectosievert = qSv
     

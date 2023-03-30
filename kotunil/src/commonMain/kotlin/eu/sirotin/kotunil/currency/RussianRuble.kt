@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionRussianRuble = UnitSpecification(
     "RUB",
@@ -14,6 +15,7 @@ private val descriptionRussianRuble = UnitSpecification(
 * Class for hold of Russian ruble
 * @constructor Creates a class for hold of Russian ruble with given [value]
 */
+@JsExport
 class RussianRuble(value : Double = 1.0) : Expression(value, description = descriptionRussianRuble)
     
     /**
@@ -28,6 +30,7 @@ class RussianRuble(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Russian ruble
     */
+    @JsExport
     @JvmField()
     val RUB = RussianRuble()   
     

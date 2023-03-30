@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionMalaysianRinggit = UnitSpecification(
     "MYR",
@@ -14,6 +15,7 @@ private val descriptionMalaysianRinggit = UnitSpecification(
 * Class for hold of Malaysian ringgit
 * @constructor Creates a class for hold of Malaysian ringgit with given [value]
 */
+@JsExport
 class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = descriptionMalaysianRinggit)
     
     /**
@@ -28,6 +30,7 @@ class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Malaysian ringgit
     */
+    @JsExport
     @JvmField()
     val MYR = MalaysianRinggit()   
     

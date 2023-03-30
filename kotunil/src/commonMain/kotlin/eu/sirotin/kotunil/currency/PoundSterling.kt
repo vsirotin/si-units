@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 
 private val descriptionPoundSterling = UnitSpecification(
     "GBP",
@@ -14,6 +15,7 @@ private val descriptionPoundSterling = UnitSpecification(
 * Class for hold of Sterling
 * @constructor Creates a class for hold of Sterling with given [value]
 */
+@JsExport
 class PoundSterling(value : Double = 1.0) : Expression(value, description = descriptionPoundSterling)
     
     /**
@@ -28,6 +30,7 @@ class PoundSterling(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Sterling
     */
+    @JsExport
     @JvmField()
     val GBP = PoundSterling()   
     

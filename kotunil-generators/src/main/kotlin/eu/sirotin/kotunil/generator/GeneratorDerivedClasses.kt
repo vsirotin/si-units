@@ -109,6 +109,7 @@ import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -117,6 +118,7 @@ private val unit =  $formula
 /**
 * System International Unit for $quantityName.
 */
+@JsExport
 @JvmField()
 val $unitSymbol = unit
 
@@ -168,7 +170,7 @@ val Number.${prefix.name}$name : Expression
     */  
     get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
 
-
+@JsExport
 @JvmField  
 /**
 * ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
@@ -178,6 +180,7 @@ val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
+@JsExport
 @JvmField()
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """

@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.base
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -18,6 +19,7 @@ private val descriptionCandela = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
+@JsExport
 class Candela(value: Double) : Expression(value, description = descriptionCandela)
     /**
      * Creates Candela-Object for current number value. Candela is a System International Unit for luminous intensity.
@@ -31,6 +33,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
     /**
      * System International Unit for luminous intensity.
      */
+    @JsExport  
     @JvmField()
     val cd = Candela(1.0)       
     
@@ -72,6 +75,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(30)
     
+    @JsExport
     @JvmField()
     /**
      * Qcd (10^30 of candela)
@@ -121,6 +125,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(27)
     
+    @JsExport
     @JvmField()
     /**
      * Rcd (10^27 of candela)
@@ -170,6 +175,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(24)
     
+    @JsExport
     @JvmField()
     /**
      * Ycd (10^24 of candela)
@@ -219,6 +225,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(21)
     
+    @JsExport
     @JvmField()
     /**
      * Zcd (10^21 of candela)
@@ -268,6 +275,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(18)
     
+    @JsExport
     @JvmField()
     /**
      * Ecd (10^18 of candela)
@@ -317,6 +325,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(15)
     
+    @JsExport
     @JvmField()
     /**
      * Pcd (10^15 of candela)
@@ -366,6 +375,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(12)
     
+    @JsExport
     @JvmField()
     /**
      * Tcd (10^12 of candela)
@@ -415,6 +425,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(9)
     
+    @JsExport
     @JvmField()
     /**
      * Gcd (10^9 of candela)
@@ -464,6 +475,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(6)
     
+    @JsExport
     @JvmField()
     /**
      * Mcd (10^6 of candela)
@@ -511,6 +523,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(3)
     
+    @JsExport
     @JvmField()
     /**
      * kcd (10^3 of candela)
@@ -558,6 +571,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(2)
     
+    @JsExport
     @JvmField()
     /**
      * hcd (10^2 of candela)
@@ -605,6 +619,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(1)
     
+    @JsExport
     @JvmField()
     /**
      * dacd (10^1 of candela)
@@ -652,6 +667,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-1)
     
+    @JsExport
     @JvmField()
     /**
      * dcd (10^-1 of candela)
@@ -699,6 +715,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-2)
     
+    @JsExport
     @JvmField()
     /**
      * ccd (10^-2 of candela)
@@ -746,6 +763,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-3)
     
+    @JsExport
     @JvmField()
     /**
      * mcd (10^-3 of candela)
@@ -793,6 +811,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-6)
     
+    @JsExport
     @JvmField()
     /**
      * μcd (10^-6 of candela)
@@ -840,6 +859,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-9)
     
+    @JsExport
     @JvmField()
     /**
      * ncd (10^-9 of candela)
@@ -887,6 +907,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-12)
     
+    @JsExport
     @JvmField()
     /**
      * pcd (10^-12 of candela)
@@ -934,6 +955,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-15)
     
+    @JsExport
     @JvmField()
     /**
      * fcd (10^-15 of candela)
@@ -981,6 +1003,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-18)
     
+    @JsExport
     @JvmField()
     /**
      * acd (10^-18 of candela)
@@ -1028,6 +1051,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-21)
     
+    @JsExport
     @JvmField()
     /**
      * zcd (10^-21 of candela)
@@ -1075,6 +1099,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-24)
     
+    @JsExport
     @JvmField()
     /**
      * ycd (10^-24 of candela)
@@ -1122,6 +1147,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-27)
     
+    @JsExport
     @JvmField()
     /**
      * rcd (10^-27 of candela)
@@ -1169,6 +1195,7 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-30)
     
+    @JsExport
     @JvmField()
     /**
      * qcd (10^-30 of candela)

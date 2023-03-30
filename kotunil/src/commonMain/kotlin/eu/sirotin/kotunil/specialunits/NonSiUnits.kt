@@ -28,7 +28,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
-import kotlin.js.JsName
+import kotlin.js.JsExport
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmName
 import kotlin.math.E
@@ -39,12 +39,14 @@ import kotlin.math.pow
 /**
  * Square metre
  */
+@JsExport
 @JvmField()
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
+@JsExport
 @JvmField()
 val m3 = m2 * m
 
@@ -60,6 +62,7 @@ val Number.min: Second
 /**
  * Minute (time)
  */
+@JsExport
 @JvmField()
 val min = Second(60.0)
 
@@ -75,6 +78,7 @@ val Number.h: Second
 /**
  * Hour (time)
  */
+@JsExport
 @JvmField()
 val h = Second(3600.0)
 
@@ -90,6 +94,7 @@ val Number.d: Second
 /**
  * Day (time)
  */
+@JsExport
 @JvmField()
 val d = Second(24*3600.0)
 
@@ -102,6 +107,7 @@ val Number.au: Metre
 /**
  * Astronomical unit 149597870700 metre
  */
+@JsExport
 @JvmField()
 val au = 1.0.au
 
@@ -115,23 +121,6 @@ const val π = PI
  */
 const val e = E
 
-/**
- * degree
- */
-@JsName("degree")
-val `°` = (PI/180)*rad
-
-/**
- * arcminute
- */
-@JsName("arcMinute")
-val `′` = `°` / 60.0
-
-/**
- * arcsecond
- */
-@JsName("arcSecond")
-val `″` = `′` / 60.0
 
 /**
  * hectare
@@ -142,6 +131,7 @@ val Number.ha: Expression
 /**
  * hectare
  */
+@JsExport
 @JvmField()
 val ha = 1.0.ha
 
@@ -157,6 +147,7 @@ val Number.l: Expression
 /**
  * Litre
  */
+@JsExport
 @JvmField()
 val l = 1.0.l
 
@@ -170,6 +161,7 @@ val Number.L: Expression
      */
     get() = this.l
 
+@JsExport
 @JvmField()
     val L = l
 
@@ -185,6 +177,7 @@ val Number.t: Kilogram
 /**
  * tonne
  */
+@JsExport
 @JvmField()
 val t = 1000.kg
 
@@ -200,6 +193,7 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
+@JsExport
 @JvmField()
 val Da = 1.Da
 
@@ -215,6 +209,7 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
+@JsExport
 @JvmField()
 val eV = 1.eV
 
@@ -231,6 +226,7 @@ val Number.percentage: Double
 /**
  * Percentage
  */
+@JsExport
 @JvmField()
 val percentage = 0.01
 
