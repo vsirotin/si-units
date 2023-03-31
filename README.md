@@ -221,20 +221,12 @@ sourceSets {
     val commonMain by getting {
         dependencies {
             ...
-            implementation(github.vsirotin:si-units:SNAPSHOT")
+            implementation("com.github.vsirotin.si-units:kotunil:main-SNAPSHOT")
+            ...
         }
     }
     ...
 }        
-```
-
-In case you want to use the JVM artifact directly in a JVM only project, you can address it directly like this:
-```kotlin:
-
-dependencies {
-    ...
-    implementation(github.vsirotin:si-units-jvm:SNAPSHOT")
-}
 ```
 
 ### 2.4 Using only source code

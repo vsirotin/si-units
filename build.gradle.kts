@@ -1,6 +1,5 @@
+import org.jetbrains.dokka.DokkaConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.dokka.gradle.DokkaTaskPartial
-import org.jetbrains.dokka.DokkaConfiguration.Visibility
 
 group = "eu.sirotin.kotunil"
 
@@ -8,7 +7,7 @@ group = "eu.sirotin.kotunil"
 plugins {
     kotlin("multiplatform") version "1.8.10" apply false
     id("com.vanniktech.maven.publish") version "0.25.1"
-    id("org.jetbrains.dokka")
+    id("org.jetbrains.dokka") version "1.7.20"
 }
 
 
@@ -27,8 +26,8 @@ tasks.withType<DokkaTask>().configureEach {
     dokkaSourceSets.configureEach {
         documentedVisibilities.set(
             setOf(
-                Visibility.PUBLIC,
-                Visibility.PROTECTED,
+                DokkaConfiguration.Visibility.PUBLIC,
+                DokkaConfiguration.Visibility.PROTECTED,
             )
         )
 

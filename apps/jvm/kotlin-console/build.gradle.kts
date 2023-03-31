@@ -7,12 +7,11 @@ group = "eu.sirotin.kotunil.app.kotlin"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenLocal()
-//    mavenCentral()
+    maven("https://www.jitpack.io")
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:kotunil-jvm:4.0.0-SNAPSHOT")
+    implementation("com.github.vsirotin.si-units:kotunil:main-SNAPSHOT")
     testImplementation(kotlin("test"))
 }
 
