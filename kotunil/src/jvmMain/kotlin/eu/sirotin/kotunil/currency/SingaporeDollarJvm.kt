@@ -13,5 +13,5 @@ val Number.`S$` : SingaporeDollar
 /**
 * One unit of Singapore dollar
 */
-@JvmField()
+@JvmField
 val `S$` = SingaporeDollar()

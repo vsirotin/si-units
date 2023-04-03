@@ -15,7 +15,7 @@ private val descriptionRussianRuble = UnitSpecification(
 * Class for hold of Russian ruble
 * @constructor Creates a class for hold of Russian ruble with given [value]
 */
-@JsExport
+//@JsExport
 class RussianRuble(value : Double = 1.0) : Expression(value, description = descriptionRussianRuble)
     
     /**
@@ -30,7 +30,7 @@ class RussianRuble(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Russian ruble
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val RUB = RussianRuble()   
     

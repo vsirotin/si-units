@@ -15,8 +15,8 @@ private val unit =  (s `^` -1)
 /**
 * System International Unit for activity referred to a radionuclide (decays per unit time).
 */
-@JsExport
-@JvmField()
+//@JsExport
+@JvmField
 val Bq = unit
 
 /**
@@ -48,8 +48,9 @@ val Number.quettabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("QBq") 
 /**
 * QBq, 10^30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -58,8 +59,10 @@ val QBq = 10.0.pow(30) * ((s `^` -1))
 /**
 * quettabecquerel, 10^30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quettabecquerel")
 val quettabecquerel = QBq
     
 
@@ -82,8 +85,9 @@ val Number.ronnabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("RBq") 
 /**
 * RBq, 10^27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -92,8 +96,10 @@ val RBq = 10.0.pow(27) * ((s `^` -1))
 /**
 * ronnabecquerel, 10^27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("ronnabecquerel")
 val ronnabecquerel = RBq
     
 
@@ -116,8 +122,9 @@ val Number.yottabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("YBq") 
 /**
 * YBq, 10^24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -126,8 +133,10 @@ val YBq = 10.0.pow(24) * ((s `^` -1))
 /**
 * yottabecquerel, 10^24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yottabecquerel")
 val yottabecquerel = YBq
     
 
@@ -150,8 +159,9 @@ val Number.zettabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("ZBq") 
 /**
 * ZBq, 10^21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -160,8 +170,10 @@ val ZBq = 10.0.pow(21) * ((s `^` -1))
 /**
 * zettabecquerel, 10^21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zettabecquerel")
 val zettabecquerel = ZBq
     
 
@@ -184,8 +196,9 @@ val Number.exabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("EBq") 
 /**
 * EBq, 10^18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -194,8 +207,10 @@ val EBq = 10.0.pow(18) * ((s `^` -1))
 /**
 * exabecquerel, 10^18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("exabecquerel")
 val exabecquerel = EBq
     
 
@@ -218,8 +233,9 @@ val Number.petabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("PBq") 
 /**
 * PBq, 10^15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -228,8 +244,10 @@ val PBq = 10.0.pow(15) * ((s `^` -1))
 /**
 * petabecquerel, 10^15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("petabecquerel")
 val petabecquerel = PBq
     
 
@@ -252,8 +270,9 @@ val Number.terabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("TBq") 
 /**
 * TBq, 10^12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -262,8 +281,10 @@ val TBq = 10.0.pow(12) * ((s `^` -1))
 /**
 * terabecquerel, 10^12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("terabecquerel")
 val terabecquerel = TBq
     
 
@@ -286,8 +307,9 @@ val Number.gigabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("GBq") 
 /**
 * GBq, 10^9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -296,8 +318,10 @@ val GBq = 10.0.pow(9) * ((s `^` -1))
 /**
 * gigabecquerel, 10^9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("gigabecquerel")
 val gigabecquerel = GBq
     
 
@@ -320,8 +344,9 @@ val Number.megabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("MBq") 
 /**
 * MBq, 10^6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -330,8 +355,10 @@ val MBq = 10.0.pow(6) * ((s `^` -1))
 /**
 * megabecquerel, 10^6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("megabecquerel")
 val megabecquerel = MBq
     
 
@@ -354,8 +381,9 @@ val Number.kilobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("kBq") 
 /**
 * kBq, 10^3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -364,8 +392,10 @@ val kBq = 10.0.pow(3) * ((s `^` -1))
 /**
 * kilobecquerel, 10^3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("kilobecquerel")
 val kilobecquerel = kBq
     
 
@@ -388,8 +418,9 @@ val Number.hectobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("hBq") 
 /**
 * hBq, 10^2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -398,8 +429,10 @@ val hBq = 10.0.pow(2) * ((s `^` -1))
 /**
 * hectobecquerel, 10^2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("hectobecquerel")
 val hectobecquerel = hBq
     
 
@@ -422,8 +455,9 @@ val Number.decabecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("daBq") 
 /**
 * daBq, 10^1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -432,8 +466,10 @@ val daBq = 10.0.pow(1) * ((s `^` -1))
 /**
 * decabecquerel, 10^1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decabecquerel")
 val decabecquerel = daBq
     
 
@@ -456,8 +492,9 @@ val Number.decibecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("dBq") 
 /**
 * dBq, 10^-1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -466,8 +503,10 @@ val dBq = 10.0.pow(-1) * ((s `^` -1))
 /**
 * decibecquerel, 10^-1 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decibecquerel")
 val decibecquerel = dBq
     
 
@@ -490,8 +529,9 @@ val Number.centibecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("cBq") 
 /**
 * cBq, 10^-2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -500,8 +540,10 @@ val cBq = 10.0.pow(-2) * ((s `^` -1))
 /**
 * centibecquerel, 10^-2 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("centibecquerel")
 val centibecquerel = cBq
     
 
@@ -524,8 +566,9 @@ val Number.millibecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("mBq") 
 /**
 * mBq, 10^-3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -534,8 +577,10 @@ val mBq = 10.0.pow(-3) * ((s `^` -1))
 /**
 * millibecquerel, 10^-3 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("millibecquerel")
 val millibecquerel = mBq
     
 
@@ -558,8 +603,9 @@ val Number.microbecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("μBq") 
 /**
 * μBq, 10^-6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -568,8 +614,10 @@ val μBq = 10.0.pow(-6) * ((s `^` -1))
 /**
 * microbecquerel, 10^-6 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("microbecquerel")
 val microbecquerel = μBq
     
 
@@ -592,8 +640,9 @@ val Number.nanobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("nBq") 
 /**
 * nBq, 10^-9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -602,8 +651,10 @@ val nBq = 10.0.pow(-9) * ((s `^` -1))
 /**
 * nanobecquerel, 10^-9 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("nanobecquerel")
 val nanobecquerel = nBq
     
 
@@ -626,8 +677,9 @@ val Number.picobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("pBq") 
 /**
 * pBq, 10^-12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -636,8 +688,10 @@ val pBq = 10.0.pow(-12) * ((s `^` -1))
 /**
 * picobecquerel, 10^-12 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("picobecquerel")
 val picobecquerel = pBq
     
 
@@ -660,8 +714,9 @@ val Number.femtobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("fBq") 
 /**
 * fBq, 10^-15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -670,8 +725,10 @@ val fBq = 10.0.pow(-15) * ((s `^` -1))
 /**
 * femtobecquerel, 10^-15 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("femtobecquerel")
 val femtobecquerel = fBq
     
 
@@ -694,8 +751,9 @@ val Number.attobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("aBq") 
 /**
 * aBq, 10^-18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -704,8 +762,10 @@ val aBq = 10.0.pow(-18) * ((s `^` -1))
 /**
 * attobecquerel, 10^-18 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("attobecquerel")
 val attobecquerel = aBq
     
 
@@ -728,8 +788,9 @@ val Number.zeptobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("zBq") 
 /**
 * zBq, 10^-21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -738,8 +799,10 @@ val zBq = 10.0.pow(-21) * ((s `^` -1))
 /**
 * zeptobecquerel, 10^-21 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zeptobecquerel")
 val zeptobecquerel = zBq
     
 
@@ -762,8 +825,9 @@ val Number.yoctobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("yBq") 
 /**
 * yBq, 10^-24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -772,8 +836,10 @@ val yBq = 10.0.pow(-24) * ((s `^` -1))
 /**
 * yoctobecquerel, 10^-24 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yoctobecquerel")
 val yoctobecquerel = yBq
     
 
@@ -796,8 +862,9 @@ val Number.rontobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("rBq") 
 /**
 * rBq, 10^-27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -806,8 +873,10 @@ val rBq = 10.0.pow(-27) * ((s `^` -1))
 /**
 * rontobecquerel, 10^-27 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("rontobecquerel")
 val rontobecquerel = rBq
     
 
@@ -830,8 +899,9 @@ val Number.quectobecquerel : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("qBq") 
 /**
 * qBq, 10^-30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */        
@@ -840,7 +910,9 @@ val qBq = 10.0.pow(-30) * ((s `^` -1))
 /**
 * quectobecquerel, 10^-30 of becquerel, derived SI-Unit for measurement of activity referred to a radionuclide (decays per unit time)
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quectobecquerel")
 val quectobecquerel = qBq
     

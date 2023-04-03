@@ -15,8 +15,8 @@ private val unit =  ((cd `^` 1)*sr)
 /**
 * System International Unit for luminous flux.
 */
-@JsExport
-@JvmField()
+//@JsExport
+@JvmField
 val lm = unit
 
 /**
@@ -48,8 +48,9 @@ val Number.quettalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Qlm") 
 /**
 * Qlm, 10^30 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -58,8 +59,10 @@ val Qlm = 10.0.pow(30) * (((cd `^` 1)*sr))
 /**
 * quettalumen, 10^30 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quettalumen")
 val quettalumen = Qlm
     
 
@@ -82,8 +85,9 @@ val Number.ronnalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Rlm") 
 /**
 * Rlm, 10^27 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -92,8 +96,10 @@ val Rlm = 10.0.pow(27) * (((cd `^` 1)*sr))
 /**
 * ronnalumen, 10^27 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("ronnalumen")
 val ronnalumen = Rlm
     
 
@@ -116,8 +122,9 @@ val Number.yottalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Ylm") 
 /**
 * Ylm, 10^24 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -126,8 +133,10 @@ val Ylm = 10.0.pow(24) * (((cd `^` 1)*sr))
 /**
 * yottalumen, 10^24 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yottalumen")
 val yottalumen = Ylm
     
 
@@ -150,8 +159,9 @@ val Number.zettalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Zlm") 
 /**
 * Zlm, 10^21 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -160,8 +170,10 @@ val Zlm = 10.0.pow(21) * (((cd `^` 1)*sr))
 /**
 * zettalumen, 10^21 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zettalumen")
 val zettalumen = Zlm
     
 
@@ -184,8 +196,9 @@ val Number.exalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Elm") 
 /**
 * Elm, 10^18 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -194,8 +207,10 @@ val Elm = 10.0.pow(18) * (((cd `^` 1)*sr))
 /**
 * exalumen, 10^18 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("exalumen")
 val exalumen = Elm
     
 
@@ -218,8 +233,9 @@ val Number.petalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Plm") 
 /**
 * Plm, 10^15 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -228,8 +244,10 @@ val Plm = 10.0.pow(15) * (((cd `^` 1)*sr))
 /**
 * petalumen, 10^15 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("petalumen")
 val petalumen = Plm
     
 
@@ -252,8 +270,9 @@ val Number.teralumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Tlm") 
 /**
 * Tlm, 10^12 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -262,8 +281,10 @@ val Tlm = 10.0.pow(12) * (((cd `^` 1)*sr))
 /**
 * teralumen, 10^12 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("teralumen")
 val teralumen = Tlm
     
 
@@ -286,8 +307,9 @@ val Number.gigalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Glm") 
 /**
 * Glm, 10^9 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -296,8 +318,10 @@ val Glm = 10.0.pow(9) * (((cd `^` 1)*sr))
 /**
 * gigalumen, 10^9 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("gigalumen")
 val gigalumen = Glm
     
 
@@ -320,8 +344,9 @@ val Number.megalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("Mlm") 
 /**
 * Mlm, 10^6 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -330,8 +355,10 @@ val Mlm = 10.0.pow(6) * (((cd `^` 1)*sr))
 /**
 * megalumen, 10^6 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("megalumen")
 val megalumen = Mlm
     
 
@@ -354,8 +381,9 @@ val Number.kilolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("klm") 
 /**
 * klm, 10^3 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -364,8 +392,10 @@ val klm = 10.0.pow(3) * (((cd `^` 1)*sr))
 /**
 * kilolumen, 10^3 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("kilolumen")
 val kilolumen = klm
     
 
@@ -388,8 +418,9 @@ val Number.hectolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("hlm") 
 /**
 * hlm, 10^2 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -398,8 +429,10 @@ val hlm = 10.0.pow(2) * (((cd `^` 1)*sr))
 /**
 * hectolumen, 10^2 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("hectolumen")
 val hectolumen = hlm
     
 
@@ -422,8 +455,9 @@ val Number.decalumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("dalm") 
 /**
 * dalm, 10^1 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -432,8 +466,10 @@ val dalm = 10.0.pow(1) * (((cd `^` 1)*sr))
 /**
 * decalumen, 10^1 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decalumen")
 val decalumen = dalm
     
 
@@ -456,8 +492,9 @@ val Number.decilumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("dlm") 
 /**
 * dlm, 10^-1 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -466,8 +503,10 @@ val dlm = 10.0.pow(-1) * (((cd `^` 1)*sr))
 /**
 * decilumen, 10^-1 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decilumen")
 val decilumen = dlm
     
 
@@ -490,8 +529,9 @@ val Number.centilumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("clm") 
 /**
 * clm, 10^-2 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -500,8 +540,10 @@ val clm = 10.0.pow(-2) * (((cd `^` 1)*sr))
 /**
 * centilumen, 10^-2 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("centilumen")
 val centilumen = clm
     
 
@@ -524,8 +566,9 @@ val Number.millilumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("mlm") 
 /**
 * mlm, 10^-3 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -534,8 +577,10 @@ val mlm = 10.0.pow(-3) * (((cd `^` 1)*sr))
 /**
 * millilumen, 10^-3 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("millilumen")
 val millilumen = mlm
     
 
@@ -558,8 +603,9 @@ val Number.microlumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("μlm") 
 /**
 * μlm, 10^-6 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -568,8 +614,10 @@ val μlm = 10.0.pow(-6) * (((cd `^` 1)*sr))
 /**
 * microlumen, 10^-6 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("microlumen")
 val microlumen = μlm
     
 
@@ -592,8 +640,9 @@ val Number.nanolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("nlm") 
 /**
 * nlm, 10^-9 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -602,8 +651,10 @@ val nlm = 10.0.pow(-9) * (((cd `^` 1)*sr))
 /**
 * nanolumen, 10^-9 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("nanolumen")
 val nanolumen = nlm
     
 
@@ -626,8 +677,9 @@ val Number.picolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("plm") 
 /**
 * plm, 10^-12 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -636,8 +688,10 @@ val plm = 10.0.pow(-12) * (((cd `^` 1)*sr))
 /**
 * picolumen, 10^-12 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("picolumen")
 val picolumen = plm
     
 
@@ -660,8 +714,9 @@ val Number.femtolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("flm") 
 /**
 * flm, 10^-15 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -670,8 +725,10 @@ val flm = 10.0.pow(-15) * (((cd `^` 1)*sr))
 /**
 * femtolumen, 10^-15 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("femtolumen")
 val femtolumen = flm
     
 
@@ -694,8 +751,9 @@ val Number.attolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("alm") 
 /**
 * alm, 10^-18 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -704,8 +762,10 @@ val alm = 10.0.pow(-18) * (((cd `^` 1)*sr))
 /**
 * attolumen, 10^-18 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("attolumen")
 val attolumen = alm
     
 
@@ -728,8 +788,9 @@ val Number.zeptolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("zlm") 
 /**
 * zlm, 10^-21 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -738,8 +799,10 @@ val zlm = 10.0.pow(-21) * (((cd `^` 1)*sr))
 /**
 * zeptolumen, 10^-21 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zeptolumen")
 val zeptolumen = zlm
     
 
@@ -762,8 +825,9 @@ val Number.yoctolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("ylm") 
 /**
 * ylm, 10^-24 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -772,8 +836,10 @@ val ylm = 10.0.pow(-24) * (((cd `^` 1)*sr))
 /**
 * yoctolumen, 10^-24 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yoctolumen")
 val yoctolumen = ylm
     
 
@@ -796,8 +862,9 @@ val Number.rontolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("rlm") 
 /**
 * rlm, 10^-27 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -806,8 +873,10 @@ val rlm = 10.0.pow(-27) * (((cd `^` 1)*sr))
 /**
 * rontolumen, 10^-27 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("rontolumen")
 val rontolumen = rlm
     
 
@@ -830,8 +899,9 @@ val Number.quectolumen : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("qlm") 
 /**
 * qlm, 10^-30 of lumen, derived SI-Unit for measurement of luminous flux
 */        
@@ -840,7 +910,9 @@ val qlm = 10.0.pow(-30) * (((cd `^` 1)*sr))
 /**
 * quectolumen, 10^-30 of lumen, derived SI-Unit for measurement of luminous flux
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quectolumen")
 val quectolumen = qlm
     

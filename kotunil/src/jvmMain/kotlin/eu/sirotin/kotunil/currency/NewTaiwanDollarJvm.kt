@@ -13,5 +13,5 @@ val Number.`NT$` : NewTaiwanDollar
 /**
 * One unit of New Taiwan dollar
 */
-@JvmField()
+@JvmField
 val `NT$` = NewTaiwanDollar()

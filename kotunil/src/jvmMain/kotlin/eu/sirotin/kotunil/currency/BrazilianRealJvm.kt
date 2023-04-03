@@ -13,5 +13,5 @@ val Number.`R$` : BrazilianReal
 /**
 * One unit of Brazilian real
 */
-@JvmField()
+@JvmField
 val `R$` = BrazilianReal()

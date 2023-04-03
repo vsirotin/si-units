@@ -40,6 +40,6 @@ val Number.kelvin: Kelvin
 /**
  * temperature relative to 273.15 K
  */
-@JsExport
+//@JsExport
 @JvmField()
 val kelvin = 1.kelvin

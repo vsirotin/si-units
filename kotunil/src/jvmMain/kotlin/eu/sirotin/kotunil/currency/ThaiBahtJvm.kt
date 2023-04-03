@@ -13,5 +13,5 @@ val Number.`฿` : ThaiBaht
 /**
 * One unit of Thai baht
 */
-@JvmField()
+@JvmField
 val `฿` = ThaiBaht()

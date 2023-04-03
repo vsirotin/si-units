@@ -15,7 +15,7 @@ private val descriptionHungarianForint = UnitSpecification(
 * Class for hold of Hungarian forint
 * @constructor Creates a class for hold of Hungarian forint with given [value]
 */
-@JsExport
+//@JsExport
 class HungarianForint(value : Double = 1.0) : Expression(value, description = descriptionHungarianForint)
     
     /**
@@ -30,8 +30,8 @@ class HungarianForint(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of Hungarian forint
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val HUF = HungarianForint()   
     
 
@@ -47,5 +47,5 @@ val Number.Ft : HungarianForint
 /**
 * One unit of Hungarian forint
 */
-@JvmField()
+@JvmField
 val Ft = HungarianForint()

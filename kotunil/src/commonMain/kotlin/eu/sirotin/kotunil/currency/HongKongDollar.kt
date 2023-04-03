@@ -15,7 +15,7 @@ private val descriptionHongKongDollar = UnitSpecification(
 * Class for hold of Hong Kong dollar
 * @constructor Creates a class for hold of Hong Kong dollar with given [value]
 */
-@JsExport
+//@JsExport
 class HongKongDollar(value : Double = 1.0) : Expression(value, description = descriptionHongKongDollar)
     
     /**
@@ -30,7 +30,7 @@ class HongKongDollar(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Hong Kong dollar
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val HKD = HongKongDollar()   
     

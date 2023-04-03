@@ -34,7 +34,7 @@ private val descriptionThing = UnitSpecification(
 ) { v: Double -> Thing(v) }
 
 
-@JsExport
+//@JsExport
 /**
  * Unit for some object (thing).
  *
@@ -55,7 +55,7 @@ val Number.thing : Thing
 /**
  * Thing-unit for representation of some object.
  */
-@JsExport
+//@JsExport
 @JvmField()
 val thing = Thing(1.0)
 

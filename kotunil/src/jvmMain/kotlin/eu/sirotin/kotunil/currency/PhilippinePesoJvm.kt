@@ -13,5 +13,5 @@ val Number.`₱` : PhilippinePeso
 /**
 * One unit of Philippine peso
 */
-@JvmField()
+@JvmField
 val `₱` = PhilippinePeso()

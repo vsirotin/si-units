@@ -15,7 +15,7 @@ private val descriptionAustralianDollar = UnitSpecification(
 * Class for hold of Australian dollar
 * @constructor Creates a class for hold of Australian dollar with given [value]
 */
-@JsExport
+//@JsExport
 class AustralianDollar(value : Double = 1.0) : Expression(value, description = descriptionAustralianDollar)
     
     /**
@@ -30,7 +30,7 @@ class AustralianDollar(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Australian dollar
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val AUD = AustralianDollar()   
     

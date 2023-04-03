@@ -15,7 +15,7 @@ private val descriptionRomanianLeu = UnitSpecification(
 * Class for hold of Romanian leu
 * @constructor Creates a class for hold of Romanian leu with given [value]
 */
-@JsExport
+//@JsExport
 class RomanianLeu(value : Double = 1.0) : Expression(value, description = descriptionRomanianLeu)
     
     /**
@@ -30,8 +30,8 @@ class RomanianLeu(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Romanian leu
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val RON = RomanianLeu()   
     
 
@@ -47,5 +47,5 @@ val Number.RL : RomanianLeu
 /**
 * One unit of Romanian leu
 */
-@JvmField()
+@JvmField
 val RL = RomanianLeu()

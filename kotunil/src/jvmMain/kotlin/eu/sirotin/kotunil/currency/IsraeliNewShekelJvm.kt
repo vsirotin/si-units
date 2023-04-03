@@ -13,5 +13,5 @@ val Number.`₪` : IsraeliNewShekel
 /**
 * One unit of Israeli new shekel
 */
-@JvmField()
+@JvmField
 val `₪` = IsraeliNewShekel()

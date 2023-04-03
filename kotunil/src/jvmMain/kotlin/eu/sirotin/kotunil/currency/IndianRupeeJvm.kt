@@ -13,5 +13,5 @@ val Number.`₹` : IndianRupee
 /**
 * One unit of Indian rupee
 */
-@JvmField()
+@JvmField
 val `₹` = IndianRupee()

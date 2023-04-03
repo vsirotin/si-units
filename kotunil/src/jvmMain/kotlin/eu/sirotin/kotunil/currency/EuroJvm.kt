@@ -13,5 +13,5 @@ val Number.`€` : Euro
 /**
 * One unit of Euro
 */
-@JvmField()
+@JvmField
 val `€` = Euro()

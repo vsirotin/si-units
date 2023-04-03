@@ -15,7 +15,7 @@ private val descriptionCzechKoruna = UnitSpecification(
 * Class for hold of  Czech koruna
 * @constructor Creates a class for hold of  Czech koruna with given [value]
 */
-@JsExport
+//@JsExport
 class CzechKoruna(value : Double = 1.0) : Expression(value, description = descriptionCzechKoruna)
     
     /**
@@ -30,7 +30,7 @@ class CzechKoruna(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of  Czech koruna
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val CZK = CzechKoruna()   
     

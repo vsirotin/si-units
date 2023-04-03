@@ -13,5 +13,5 @@ val Number.`zł` : PolishZłoty
 /**
 * One unit of Polish złoty
 */
-@JvmField()
+@JvmField
 val `zł` = PolishZłoty()

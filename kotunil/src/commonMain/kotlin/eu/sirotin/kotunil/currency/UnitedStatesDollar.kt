@@ -15,7 +15,7 @@ private val descriptionUnitedStatesDollar = UnitSpecification(
 * Class for hold of United States dollar
 * @constructor Creates a class for hold of United States dollar with given [value]
 */
-@JsExport
+//@JsExport
 class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description = descriptionUnitedStatesDollar)
     
     /**
@@ -30,7 +30,7 @@ class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description =
     /**
     * Holder for  of United States dollar
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val USD = UnitedStatesDollar()   
     

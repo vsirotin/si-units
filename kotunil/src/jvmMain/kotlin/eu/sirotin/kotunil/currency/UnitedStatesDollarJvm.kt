@@ -13,5 +13,5 @@ val Number.`US$` : UnitedStatesDollar
 /**
 * One unit of United States dollar
 */
-@JvmField()
+@JvmField
 val `US$` = UnitedStatesDollar()

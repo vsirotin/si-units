@@ -15,7 +15,7 @@ private val descriptionBrazilianReal = UnitSpecification(
 * Class for hold of Brazilian real
 * @constructor Creates a class for hold of Brazilian real with given [value]
 */
-@JsExport
+//@JsExport
 class BrazilianReal(value : Double = 1.0) : Expression(value, description = descriptionBrazilianReal)
     
     /**
@@ -30,7 +30,7 @@ class BrazilianReal(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Brazilian real
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val BRL = BrazilianReal()   
     

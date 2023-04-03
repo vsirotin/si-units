@@ -13,5 +13,5 @@ val Number.`CLP$` : ChileanPeso
 /**
 * One unit of Chilean peso
 */
-@JvmField()
+@JvmField
 val `CLP$` = ChileanPeso()

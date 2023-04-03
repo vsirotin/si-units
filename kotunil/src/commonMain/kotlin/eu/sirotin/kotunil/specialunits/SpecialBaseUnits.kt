@@ -39,6 +39,6 @@ val Number.g: Kilogram
 /**
  * A gram object
  */
-@JsExport
+//@JsExport
 @JvmField()
 val g = 0.001.kg

@@ -15,7 +15,7 @@ private val descriptionIndianRupee = UnitSpecification(
 * Class for hold of Indian rupee
 * @constructor Creates a class for hold of Indian rupee with given [value]
 */
-@JsExport
+//@JsExport
 class IndianRupee(value : Double = 1.0) : Expression(value, description = descriptionIndianRupee)
     
     /**
@@ -30,7 +30,7 @@ class IndianRupee(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Indian rupee
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val INR = IndianRupee()   
     

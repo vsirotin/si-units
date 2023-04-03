@@ -15,7 +15,7 @@ private val descriptionPolishZłoty = UnitSpecification(
 * Class for hold of Polish złoty
 * @constructor Creates a class for hold of Polish złoty with given [value]
 */
-@JsExport
+//@JsExport
 class PolishZłoty(value : Double = 1.0) : Expression(value, description = descriptionPolishZłoty)
     
     /**
@@ -30,7 +30,7 @@ class PolishZłoty(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Polish złoty
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val PLN = PolishZłoty()   
     

@@ -19,7 +19,7 @@ private val descriptionMetre = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-@JsExport
+//@JsExport
 class Metre(value: Double) : Expression(value, description = descriptionMetre)
     /**
      * Creates Metre-Object for current number value. Metre is a System International Unit for length.
@@ -33,8 +33,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
     /**
      * System International Unit for length.
      */
-    @JsExport  
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("m")
     val m = Metre(1.0)       
     
     /**
@@ -75,8 +76,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(30)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Qm")
     /**
      * Qm (10^30 of metre)
      */
@@ -125,8 +127,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(27)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Rm")
     /**
      * Rm (10^27 of metre)
      */
@@ -175,8 +178,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(24)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Ym")
     /**
      * Ym (10^24 of metre)
      */
@@ -225,8 +229,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(21)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Zm")
     /**
      * Zm (10^21 of metre)
      */
@@ -275,8 +280,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(18)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Em")
     /**
      * Em (10^18 of metre)
      */
@@ -325,8 +331,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(15)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Pm")
     /**
      * Pm (10^15 of metre)
      */
@@ -375,8 +382,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(12)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Tm")
     /**
      * Tm (10^12 of metre)
      */
@@ -425,8 +433,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(9)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Gm")
     /**
      * Gm (10^9 of metre)
      */
@@ -475,8 +484,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(6)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("Mm")
     /**
      * Mm (10^6 of metre)
      */
@@ -523,8 +533,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(3)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("km")
     /**
      * km (10^3 of metre)
      */
@@ -571,8 +582,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(2)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("hm")
     /**
      * hm (10^2 of metre)
      */
@@ -619,8 +631,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(1)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("dam")
     /**
      * dam (10^1 of metre)
      */
@@ -667,8 +680,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-1)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("dm")
     /**
      * dm (10^-1 of metre)
      */
@@ -715,8 +729,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-2)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("cm")
     /**
      * cm (10^-2 of metre)
      */
@@ -763,8 +778,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-3)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("mm")
     /**
      * mm (10^-3 of metre)
      */
@@ -811,8 +827,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-6)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("μm")
     /**
      * μm (10^-6 of metre)
      */
@@ -859,8 +876,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-9)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("nm")
     /**
      * nm (10^-9 of metre)
      */
@@ -907,8 +925,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-12)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("pm")
     /**
      * pm (10^-12 of metre)
      */
@@ -955,8 +974,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-15)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("fm")
     /**
      * fm (10^-15 of metre)
      */
@@ -1003,8 +1023,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-18)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("am")
     /**
      * am (10^-18 of metre)
      */
@@ -1051,8 +1072,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-21)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("zm")
     /**
      * zm (10^-21 of metre)
      */
@@ -1099,8 +1121,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-24)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("ym")
     /**
      * ym (10^-24 of metre)
      */
@@ -1147,8 +1170,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-27)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("rm")
     /**
      * rm (10^-27 of metre)
      */
@@ -1195,8 +1219,9 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
          */
         get() = this.value / 10.0.pow(-30)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("qm")
     /**
      * qm (10^-30 of metre)
      */

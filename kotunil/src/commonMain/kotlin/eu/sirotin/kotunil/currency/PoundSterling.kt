@@ -15,7 +15,7 @@ private val descriptionPoundSterling = UnitSpecification(
 * Class for hold of Sterling
 * @constructor Creates a class for hold of Sterling with given [value]
 */
-@JsExport
+//@JsExport
 class PoundSterling(value : Double = 1.0) : Expression(value, description = descriptionPoundSterling)
     
     /**
@@ -30,7 +30,7 @@ class PoundSterling(value : Double = 1.0) : Expression(value, description = desc
     /**
     * Holder for  of Sterling
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val GBP = PoundSterling()   
     

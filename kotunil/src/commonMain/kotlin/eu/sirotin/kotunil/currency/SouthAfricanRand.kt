@@ -15,7 +15,7 @@ private val descriptionSouthAfricanRand = UnitSpecification(
 * Class for hold of South African rand
 * @constructor Creates a class for hold of South African rand with given [value]
 */
-@JsExport
+//@JsExport
 class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = descriptionSouthAfricanRand)
     
     /**
@@ -30,8 +30,8 @@ class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of South African rand
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val ZAR = SouthAfricanRand()   
     
 
@@ -47,5 +47,5 @@ val Number.R : SouthAfricanRand
 /**
 * One unit of South African rand
 */
-@JvmField()
+@JvmField
 val R = SouthAfricanRand()

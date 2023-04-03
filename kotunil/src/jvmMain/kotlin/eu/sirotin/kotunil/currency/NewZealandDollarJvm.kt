@@ -13,5 +13,5 @@ val Number.`NZ$` : NewZealandDollar
 /**
 * One unit of New Zealand dollar
 */
-@JvmField()
+@JvmField
 val `NZ$` = NewZealandDollar()

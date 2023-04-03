@@ -15,7 +15,7 @@ private val descriptionSaudiRiyal = UnitSpecification(
 * Class for hold of Saudi riyal
 * @constructor Creates a class for hold of Saudi riyal with given [value]
 */
-@JsExport
+//@JsExport
 class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descriptionSaudiRiyal)
     
     /**
@@ -30,7 +30,7 @@ class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Saudi riyal
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val SAR = SaudiRiyal()   
     

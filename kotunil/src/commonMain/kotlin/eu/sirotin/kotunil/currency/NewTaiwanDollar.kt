@@ -15,7 +15,7 @@ private val descriptionNewTaiwanDollar = UnitSpecification(
 * Class for hold of New Taiwan dollar
 * @constructor Creates a class for hold of New Taiwan dollar with given [value]
 */
-@JsExport
+//@JsExport
 class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = descriptionNewTaiwanDollar)
     
     /**
@@ -30,7 +30,7 @@ class NewTaiwanDollar(value : Double = 1.0) : Expression(value, description = de
     /**
     * Holder for  of New Taiwan dollar
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val TWD = NewTaiwanDollar()   
     

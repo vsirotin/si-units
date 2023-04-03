@@ -15,7 +15,7 @@ private val descriptionMexicanPeso = UnitSpecification(
 * Class for hold of Mexican peso
 * @constructor Creates a class for hold of Mexican peso with given [value]
 */
-@JsExport
+//@JsExport
 class MexicanPeso(value : Double = 1.0) : Expression(value, description = descriptionMexicanPeso)
     
     /**
@@ -30,7 +30,7 @@ class MexicanPeso(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Mexican peso
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val MXN = MexicanPeso()   
     

@@ -39,14 +39,14 @@ import kotlin.math.pow
 /**
  * Square metre
  */
-@JsExport
+//@JsExport
 @JvmField()
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
-@JsExport
+//@JsExport
 @JvmField()
 val m3 = m2 * m
 
@@ -62,7 +62,7 @@ val Number.min: Second
 /**
  * Minute (time)
  */
-@JsExport
+//@JsExport
 @JvmField()
 val min = Second(60.0)
 
@@ -78,7 +78,7 @@ val Number.h: Second
 /**
  * Hour (time)
  */
-@JsExport
+//@JsExport
 @JvmField()
 val h = Second(3600.0)
 
@@ -94,7 +94,7 @@ val Number.d: Second
 /**
  * Day (time)
  */
-@JsExport
+//@JsExport
 @JvmField()
 val d = Second(24*3600.0)
 
@@ -107,7 +107,7 @@ val Number.au: Metre
 /**
  * Astronomical unit 149597870700 metre
  */
-@JsExport
+//@JsExport
 @JvmField()
 val au = 1.0.au
 
@@ -131,7 +131,7 @@ val Number.ha: Expression
 /**
  * hectare
  */
-@JsExport
+//@JsExport
 @JvmField()
 val ha = 1.0.ha
 
@@ -147,8 +147,9 @@ val Number.l: Expression
 /**
  * Litre
  */
-@JsExport
-@JvmField()
+//@JsExport
+@JvmField
+//@get:JvmName("l")
 val l = 1.0.l
 
 /**
@@ -161,9 +162,10 @@ val Number.L: Expression
      */
     get() = this.l
 
-@JsExport
-@JvmField()
-    val L = l
+//@JsExport
+@JvmField
+//@get:JvmName("L")
+val L = l
 
 /**
  * tonne
@@ -177,7 +179,7 @@ val Number.t: Kilogram
 /**
  * tonne
  */
-@JsExport
+//@JsExport
 @JvmField()
 val t = 1000.kg
 
@@ -193,7 +195,7 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
-@JsExport
+//@JsExport
 @JvmField()
 val Da = 1.Da
 
@@ -209,7 +211,7 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-@JsExport
+//@JsExport
 @JvmField()
 val eV = 1.eV
 
@@ -226,7 +228,7 @@ val Number.percentage: Double
 /**
  * Percentage
  */
-@JsExport
+//@JsExport
 @JvmField()
 val percentage = 0.01
 

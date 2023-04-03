@@ -139,7 +139,7 @@ private val description$name = UnitSpecification(
 * Class for hold of $desc
 * @constructor Creates a class for hold of $desc with given [value]
 */
-@JsExport
+//@JsExport
 class $name(value : Double = 1.0) : Expression(value, description = description$name)
     
     /**
@@ -154,8 +154,8 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     /**
     * Holder for  of $desc
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val $code = $name()   
     """
     if(!currencyDescription.isJvmSpecific()){
@@ -190,7 +190,7 @@ val Number.$symbol : $name
 /**
 * One unit of $desc
 */
-@JvmField()
+@JvmField
 val $symbol = $name()
 """
 }

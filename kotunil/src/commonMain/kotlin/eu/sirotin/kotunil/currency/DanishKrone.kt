@@ -15,7 +15,7 @@ private val descriptionDanishKrone = UnitSpecification(
 * Class for hold of Danish krone
 * @constructor Creates a class for hold of Danish krone with given [value]
 */
-@JsExport
+//@JsExport
 class DanishKrone(value : Double = 1.0) : Expression(value, description = descriptionDanishKrone)
     
     /**
@@ -30,8 +30,8 @@ class DanishKrone(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Danish krone
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val DKK = DanishKrone()   
     
 
@@ -47,5 +47,5 @@ val Number.dkr : DanishKrone
 /**
 * One unit of Danish krone
 */
-@JvmField()
+@JvmField
 val dkr = DanishKrone()

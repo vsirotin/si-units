@@ -19,7 +19,7 @@ private val descriptionAmpere = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-@JsExport
+//@JsExport
 class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * Creates Ampere-Object for current number value. Ampere is a System International Unit for electric current.
@@ -33,8 +33,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * System International Unit for electric current.
      */
-    @JsExport  
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("A")
     val A = Ampere(1.0)       
     
     /**
@@ -75,8 +76,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(30)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("QA")
     /**
      * QA (10^30 of ampere)
      */
@@ -125,8 +127,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(27)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("RA")
     /**
      * RA (10^27 of ampere)
      */
@@ -175,8 +178,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(24)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("YA")
     /**
      * YA (10^24 of ampere)
      */
@@ -225,8 +229,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(21)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("ZA")
     /**
      * ZA (10^21 of ampere)
      */
@@ -275,8 +280,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(18)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("EA")
     /**
      * EA (10^18 of ampere)
      */
@@ -325,8 +331,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(15)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("PA")
     /**
      * PA (10^15 of ampere)
      */
@@ -375,8 +382,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(12)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("TA")
     /**
      * TA (10^12 of ampere)
      */
@@ -425,8 +433,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(9)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("GA")
     /**
      * GA (10^9 of ampere)
      */
@@ -475,8 +484,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(6)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("MA")
     /**
      * MA (10^6 of ampere)
      */
@@ -523,8 +533,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(3)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("kA")
     /**
      * kA (10^3 of ampere)
      */
@@ -571,8 +582,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(2)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("hA")
     /**
      * hA (10^2 of ampere)
      */
@@ -619,8 +631,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(1)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("daA")
     /**
      * daA (10^1 of ampere)
      */
@@ -667,8 +680,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-1)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("dA")
     /**
      * dA (10^-1 of ampere)
      */
@@ -715,8 +729,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-2)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("cA")
     /**
      * cA (10^-2 of ampere)
      */
@@ -763,8 +778,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-3)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("mA")
     /**
      * mA (10^-3 of ampere)
      */
@@ -811,8 +827,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-6)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("μA")
     /**
      * μA (10^-6 of ampere)
      */
@@ -859,8 +876,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-9)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("nA")
     /**
      * nA (10^-9 of ampere)
      */
@@ -907,8 +925,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-12)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("pA")
     /**
      * pA (10^-12 of ampere)
      */
@@ -955,8 +974,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-15)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("fA")
     /**
      * fA (10^-15 of ampere)
      */
@@ -1003,8 +1023,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-18)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("aA")
     /**
      * aA (10^-18 of ampere)
      */
@@ -1051,8 +1072,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-21)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("zA")
     /**
      * zA (10^-21 of ampere)
      */
@@ -1099,8 +1121,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-24)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("yA")
     /**
      * yA (10^-24 of ampere)
      */
@@ -1147,8 +1170,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-27)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("rA")
     /**
      * rA (10^-27 of ampere)
      */
@@ -1195,8 +1219,9 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-30)
     
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
+    //@get:JvmName("qA")
     /**
      * qA (10^-30 of ampere)
      */

@@ -15,7 +15,7 @@ private val descriptionChileanPeso = UnitSpecification(
 * Class for hold of Chilean peso
 * @constructor Creates a class for hold of Chilean peso with given [value]
 */
-@JsExport
+//@JsExport
 class ChileanPeso(value : Double = 1.0) : Expression(value, description = descriptionChileanPeso)
     
     /**
@@ -30,7 +30,7 @@ class ChileanPeso(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Chilean peso
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val CLP = ChileanPeso()   
     

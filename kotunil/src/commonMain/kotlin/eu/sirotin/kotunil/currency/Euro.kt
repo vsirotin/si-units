@@ -15,7 +15,7 @@ private val descriptionEuro = UnitSpecification(
 * Class for hold of Euro
 * @constructor Creates a class for hold of Euro with given [value]
 */
-@JsExport
+//@JsExport
 class Euro(value : Double = 1.0) : Expression(value, description = descriptionEuro)
     
     /**
@@ -30,7 +30,7 @@ class Euro(value : Double = 1.0) : Expression(value, description = descriptionEu
     /**
     * Holder for  of Euro
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val EUR = Euro()   
     

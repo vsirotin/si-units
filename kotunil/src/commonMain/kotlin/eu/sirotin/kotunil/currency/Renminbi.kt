@@ -15,7 +15,7 @@ private val descriptionRenminbi = UnitSpecification(
 * Class for hold of Renminbi
 * @constructor Creates a class for hold of Renminbi with given [value]
 */
-@JsExport
+//@JsExport
 class Renminbi(value : Double = 1.0) : Expression(value, description = descriptionRenminbi)
     
     /**
@@ -30,7 +30,7 @@ class Renminbi(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Renminbi
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val CNY = Renminbi()   
     

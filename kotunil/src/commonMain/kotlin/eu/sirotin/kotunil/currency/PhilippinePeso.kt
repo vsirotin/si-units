@@ -15,7 +15,7 @@ private val descriptionPhilippinePeso = UnitSpecification(
 * Class for hold of Philippine peso
 * @constructor Creates a class for hold of Philippine peso with given [value]
 */
-@JsExport
+//@JsExport
 class PhilippinePeso(value : Double = 1.0) : Expression(value, description = descriptionPhilippinePeso)
     
     /**
@@ -30,7 +30,7 @@ class PhilippinePeso(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Philippine peso
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val PHP = PhilippinePeso()   
     

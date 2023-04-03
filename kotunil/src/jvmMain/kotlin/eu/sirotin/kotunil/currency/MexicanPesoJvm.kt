@@ -13,5 +13,5 @@ val Number.`$` : MexicanPeso
 /**
 * One unit of Mexican peso
 */
-@JvmField()
+@JvmField
 val `$` = MexicanPeso()

@@ -15,7 +15,7 @@ private val descriptionSwedishKrona = UnitSpecification(
 * Class for hold of Swedish krona
 * @constructor Creates a class for hold of Swedish krona with given [value]
 */
-@JsExport
+//@JsExport
 class SwedishKrona(value : Double = 1.0) : Expression(value, description = descriptionSwedishKrona)
     
     /**
@@ -30,8 +30,8 @@ class SwedishKrona(value : Double = 1.0) : Expression(value, description = descr
     /**
     * Holder for  of Swedish krona
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val SEK = SwedishKrona()   
     
 
@@ -47,5 +47,5 @@ val Number.skr : SwedishKrona
 /**
 * One unit of Swedish krona
 */
-@JvmField()
+@JvmField
 val skr = SwedishKrona()

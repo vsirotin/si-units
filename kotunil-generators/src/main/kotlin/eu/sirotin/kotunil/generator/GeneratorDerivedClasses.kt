@@ -118,8 +118,8 @@ private val unit =  $formula
 /**
 * System International Unit for $quantityName.
 */
-@JsExport
-@JvmField()
+//@JsExport
+@JvmField
 val $unitSymbol = unit
 
 /**
@@ -170,8 +170,9 @@ val Number.${prefix.name}$name : Expression
     */  
     get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("${prefix.symbol}$unitSymbol") 
 /**
 * ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */        
@@ -180,8 +181,10 @@ val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("${prefix.name}$name")
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
 }

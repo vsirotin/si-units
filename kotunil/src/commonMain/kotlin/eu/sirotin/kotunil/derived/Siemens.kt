@@ -15,8 +15,8 @@ private val unit =  (kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)
 /**
 * System International Unit for electrical conductance.
 */
-@JsExport
-@JvmField()
+//@JsExport
+@JvmField
 val S = unit
 
 /**
@@ -48,8 +48,9 @@ val Number.quettasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("QS") 
 /**
 * QS, 10^30 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -58,8 +59,10 @@ val QS = 10.0.pow(30) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * quettasiemens, 10^30 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quettasiemens")
 val quettasiemens = QS
     
 
@@ -82,8 +85,9 @@ val Number.ronnasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("RS") 
 /**
 * RS, 10^27 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -92,8 +96,10 @@ val RS = 10.0.pow(27) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * ronnasiemens, 10^27 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("ronnasiemens")
 val ronnasiemens = RS
     
 
@@ -116,8 +122,9 @@ val Number.yottasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("YS") 
 /**
 * YS, 10^24 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -126,8 +133,10 @@ val YS = 10.0.pow(24) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * yottasiemens, 10^24 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yottasiemens")
 val yottasiemens = YS
     
 
@@ -150,8 +159,9 @@ val Number.zettasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("ZS") 
 /**
 * ZS, 10^21 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -160,8 +170,10 @@ val ZS = 10.0.pow(21) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * zettasiemens, 10^21 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zettasiemens")
 val zettasiemens = ZS
     
 
@@ -184,8 +196,9 @@ val Number.exasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("ES") 
 /**
 * ES, 10^18 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -194,8 +207,10 @@ val ES = 10.0.pow(18) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * exasiemens, 10^18 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("exasiemens")
 val exasiemens = ES
     
 
@@ -218,8 +233,9 @@ val Number.petasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("PS") 
 /**
 * PS, 10^15 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -228,8 +244,10 @@ val PS = 10.0.pow(15) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * petasiemens, 10^15 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("petasiemens")
 val petasiemens = PS
     
 
@@ -252,8 +270,9 @@ val Number.terasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("TS") 
 /**
 * TS, 10^12 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -262,8 +281,10 @@ val TS = 10.0.pow(12) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * terasiemens, 10^12 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("terasiemens")
 val terasiemens = TS
     
 
@@ -286,8 +307,9 @@ val Number.gigasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("GS") 
 /**
 * GS, 10^9 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -296,8 +318,10 @@ val GS = 10.0.pow(9) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * gigasiemens, 10^9 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("gigasiemens")
 val gigasiemens = GS
     
 
@@ -320,8 +344,9 @@ val Number.megasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("MS") 
 /**
 * MS, 10^6 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -330,8 +355,10 @@ val MS = 10.0.pow(6) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * megasiemens, 10^6 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("megasiemens")
 val megasiemens = MS
     
 
@@ -354,8 +381,9 @@ val Number.kilosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("kS") 
 /**
 * kS, 10^3 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -364,8 +392,10 @@ val kS = 10.0.pow(3) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * kilosiemens, 10^3 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("kilosiemens")
 val kilosiemens = kS
     
 
@@ -388,8 +418,9 @@ val Number.hectosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("hS") 
 /**
 * hS, 10^2 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -398,8 +429,10 @@ val hS = 10.0.pow(2) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * hectosiemens, 10^2 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("hectosiemens")
 val hectosiemens = hS
     
 
@@ -422,8 +455,9 @@ val Number.decasiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("daS") 
 /**
 * daS, 10^1 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -432,8 +466,10 @@ val daS = 10.0.pow(1) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * decasiemens, 10^1 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decasiemens")
 val decasiemens = daS
     
 
@@ -456,8 +492,9 @@ val Number.decisiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("dS") 
 /**
 * dS, 10^-1 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -466,8 +503,10 @@ val dS = 10.0.pow(-1) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * decisiemens, 10^-1 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("decisiemens")
 val decisiemens = dS
     
 
@@ -490,8 +529,9 @@ val Number.centisiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("cS") 
 /**
 * cS, 10^-2 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -500,8 +540,10 @@ val cS = 10.0.pow(-2) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * centisiemens, 10^-2 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("centisiemens")
 val centisiemens = cS
     
 
@@ -524,8 +566,9 @@ val Number.millisiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("mS") 
 /**
 * mS, 10^-3 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -534,8 +577,10 @@ val mS = 10.0.pow(-3) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * millisiemens, 10^-3 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("millisiemens")
 val millisiemens = mS
     
 
@@ -558,8 +603,9 @@ val Number.microsiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("μS") 
 /**
 * μS, 10^-6 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -568,8 +614,10 @@ val μS = 10.0.pow(-6) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * microsiemens, 10^-6 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("microsiemens")
 val microsiemens = μS
     
 
@@ -592,8 +640,9 @@ val Number.nanosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("nS") 
 /**
 * nS, 10^-9 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -602,8 +651,10 @@ val nS = 10.0.pow(-9) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * nanosiemens, 10^-9 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("nanosiemens")
 val nanosiemens = nS
     
 
@@ -626,8 +677,9 @@ val Number.picosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("pS") 
 /**
 * pS, 10^-12 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -636,8 +688,10 @@ val pS = 10.0.pow(-12) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * picosiemens, 10^-12 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("picosiemens")
 val picosiemens = pS
     
 
@@ -660,8 +714,9 @@ val Number.femtosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("fS") 
 /**
 * fS, 10^-15 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -670,8 +725,10 @@ val fS = 10.0.pow(-15) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * femtosiemens, 10^-15 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("femtosiemens")
 val femtosiemens = fS
     
 
@@ -694,8 +751,9 @@ val Number.attosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("aS") 
 /**
 * aS, 10^-18 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -704,8 +762,10 @@ val aS = 10.0.pow(-18) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * attosiemens, 10^-18 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("attosiemens")
 val attosiemens = aS
     
 
@@ -728,8 +788,9 @@ val Number.zeptosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("zS") 
 /**
 * zS, 10^-21 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -738,8 +799,10 @@ val zS = 10.0.pow(-21) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * zeptosiemens, 10^-21 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("zeptosiemens")
 val zeptosiemens = zS
     
 
@@ -762,8 +825,9 @@ val Number.yoctosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("yS") 
 /**
 * yS, 10^-24 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -772,8 +836,10 @@ val yS = 10.0.pow(-24) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * yoctosiemens, 10^-24 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("yoctosiemens")
 val yoctosiemens = yS
     
 
@@ -796,8 +862,9 @@ val Number.rontosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("rS") 
 /**
 * rS, 10^-27 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -806,8 +873,10 @@ val rS = 10.0.pow(-27) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * rontosiemens, 10^-27 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("rontosiemens")
 val rontosiemens = rS
     
 
@@ -830,8 +899,9 @@ val Number.quectosiemens : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-@JsExport
-@JvmField  
+//@JsExport
+@JvmField
+//@get:JvmName("qS") 
 /**
 * qS, 10^-30 of siemens, derived SI-Unit for measurement of electrical conductance
 */        
@@ -840,7 +910,9 @@ val qS = 10.0.pow(-30) * ((kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2))
 /**
 * quectosiemens, 10^-30 of siemens, derived SI-Unit for measurement of electrical conductance
 */ 
-@JsExport
-@JvmField()
+
+//@JsExport
+@JvmField
+//@get:JvmName("quectosiemens")
 val quectosiemens = qS
     

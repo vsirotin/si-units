@@ -15,7 +15,7 @@ private val descriptionMalaysianRinggit = UnitSpecification(
 * Class for hold of Malaysian ringgit
 * @constructor Creates a class for hold of Malaysian ringgit with given [value]
 */
-@JsExport
+//@JsExport
 class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = descriptionMalaysianRinggit)
     
     /**
@@ -30,8 +30,8 @@ class MalaysianRinggit(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Malaysian ringgit
     */
-    @JsExport
-    @JvmField()
+    //@JsExport
+    @JvmField
     val MYR = MalaysianRinggit()   
     
 
@@ -47,5 +47,5 @@ val Number.RM : MalaysianRinggit
 /**
 * One unit of Malaysian ringgit
 */
-@JvmField()
+@JvmField
 val RM = MalaysianRinggit()

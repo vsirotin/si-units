@@ -13,5 +13,5 @@ val Number.`£` : PoundSterling
 /**
 * One unit of Sterling
 */
-@JvmField()
+@JvmField
 val `£` = PoundSterling()
