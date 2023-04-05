@@ -5,6 +5,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionSaudiRiyal = UnitSpecification(
     "SAR",
@@ -15,7 +16,7 @@ private val descriptionSaudiRiyal = UnitSpecification(
 * Class for hold of Saudi riyal
 * @constructor Creates a class for hold of Saudi riyal with given [value]
 */
-//@JsExport
+@JsExport
 class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descriptionSaudiRiyal)
     
     /**
@@ -30,7 +31,8 @@ class SaudiRiyal(value : Double = 1.0) : Expression(value, description = descrip
     /**
     * Holder for  of Saudi riyal
     */
-    //@JsExport
+    @JsExport
+    @JsName("SAR")
     @JvmField
     val SAR = SaudiRiyal()   
     

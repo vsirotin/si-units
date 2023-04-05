@@ -129,6 +129,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val description$name = UnitSpecification(
     "$code",
@@ -139,7 +140,7 @@ private val description$name = UnitSpecification(
 * Class for hold of $desc
 * @constructor Creates a class for hold of $desc with given [value]
 */
-//@JsExport
+@JsExport
 class $name(value : Double = 1.0) : Expression(value, description = description$name)
     
     /**
@@ -154,7 +155,8 @@ class $name(value : Double = 1.0) : Expression(value, description = description$
     /**
     * Holder for  of $desc
     */
-    //@JsExport
+    @JsExport
+    @JsName("$code")
     @JvmField
     val $code = $name()   
     """
@@ -190,7 +192,6 @@ val Number.$symbol : $name
 /**
 * One unit of $desc
 */
-@JvmField
 val $symbol = $name()
 """
 }

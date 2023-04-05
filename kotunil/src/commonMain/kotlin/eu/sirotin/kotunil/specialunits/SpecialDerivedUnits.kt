@@ -26,6 +26,7 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.base.Kelvin
 import kotlin.js.JsExport
+import kotlin.js.JsName
 import kotlin.jvm.JvmField
 
 /**
@@ -40,6 +41,7 @@ val Number.kelvin: Kelvin
 /**
  * temperature relative to 273.15 K
  */
-//@JsExport
+@JsExport
+@JsName("kelvin")
 @JvmField()
 val kelvin = 1.kelvin

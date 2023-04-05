@@ -111,7 +111,7 @@ private val description$className = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-//@JsExport
+@JsExport
 class $className(value: Double) : Expression(value, description = description$className)
     /**
      * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -125,9 +125,8 @@ class $className(value: Double) : Expression(value, description = description$cl
     /**
      * System International Unit for $quantityName.
      */
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("$unitSymbol")
     val $unitSymbol = $className(1.0)       
     """
 }
@@ -141,6 +140,7 @@ private fun generatePrefixes(className: String, name: String, unitSymbol: String
 private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
 
     val correctedSymbol = correctSpecialCases(siPrefix.symbol, unitSymbol)
+    val mayBeJsExport = conditionalPush(siPrefix.symbol, "@JsExport")
     return """
     /**
      * $correctedSymbol, (10^${siPrefix.degree} of $name)
@@ -178,14 +178,15 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
          */
         get() = this.value / 10.0.pow(${siPrefix.degree})
     
-    //@JsExport
+    $mayBeJsExport
     @JvmField
-    //@get:JvmName("${siPrefix.symbol}$unitSymbol")
     /**
      * $correctedSymbol (10^${siPrefix.degree} of $name)
      */
     val $correctedSymbol = $className(10.0.pow(${siPrefix.degree}))
     
+    @JsExport
+    @JvmField
     /**
      * $correctedSymbol, (10^${siPrefix.degree} of $name)
      */

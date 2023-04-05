@@ -15,7 +15,7 @@ private val unit =  kg*m/(s `^` 2)
 /**
 * System International Unit for force, weight.
 */
-//@JsExport
+@JsExport
 @JvmField
 val N = unit
 
@@ -48,9 +48,8 @@ val Number.quettanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("QN") 
 /**
 * QN, 10^30 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -60,9 +59,8 @@ val QN = 10.0.pow(30) * (kg*m/(s `^` 2))
 * quettanewton, 10^30 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quettanewton")
 val quettanewton = QN
     
 
@@ -85,9 +83,8 @@ val Number.ronnanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("RN") 
 /**
 * RN, 10^27 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -97,9 +94,8 @@ val RN = 10.0.pow(27) * (kg*m/(s `^` 2))
 * ronnanewton, 10^27 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ronnanewton")
 val ronnanewton = RN
     
 
@@ -122,9 +118,8 @@ val Number.yottanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("YN") 
 /**
 * YN, 10^24 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -134,9 +129,8 @@ val YN = 10.0.pow(24) * (kg*m/(s `^` 2))
 * yottanewton, 10^24 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yottanewton")
 val yottanewton = YN
     
 
@@ -159,9 +153,8 @@ val Number.zettanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ZN") 
 /**
 * ZN, 10^21 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -171,9 +164,8 @@ val ZN = 10.0.pow(21) * (kg*m/(s `^` 2))
 * zettanewton, 10^21 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zettanewton")
 val zettanewton = ZN
     
 
@@ -196,9 +188,8 @@ val Number.exanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("EN") 
 /**
 * EN, 10^18 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -208,9 +199,8 @@ val EN = 10.0.pow(18) * (kg*m/(s `^` 2))
 * exanewton, 10^18 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("exanewton")
 val exanewton = EN
     
 
@@ -233,9 +223,8 @@ val Number.petanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("PN") 
 /**
 * PN, 10^15 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -245,9 +234,8 @@ val PN = 10.0.pow(15) * (kg*m/(s `^` 2))
 * petanewton, 10^15 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("petanewton")
 val petanewton = PN
     
 
@@ -270,9 +258,8 @@ val Number.teranewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("TN") 
 /**
 * TN, 10^12 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -282,9 +269,8 @@ val TN = 10.0.pow(12) * (kg*m/(s `^` 2))
 * teranewton, 10^12 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("teranewton")
 val teranewton = TN
     
 
@@ -307,9 +293,8 @@ val Number.giganewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("GN") 
 /**
 * GN, 10^9 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -319,9 +304,8 @@ val GN = 10.0.pow(9) * (kg*m/(s `^` 2))
 * giganewton, 10^9 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("giganewton")
 val giganewton = GN
     
 
@@ -344,9 +328,8 @@ val Number.meganewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("MN") 
 /**
 * MN, 10^6 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -356,9 +339,8 @@ val MN = 10.0.pow(6) * (kg*m/(s `^` 2))
 * meganewton, 10^6 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("meganewton")
 val meganewton = MN
     
 
@@ -381,9 +363,8 @@ val Number.kilonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kN") 
 /**
 * kN, 10^3 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -393,9 +374,8 @@ val kN = 10.0.pow(3) * (kg*m/(s `^` 2))
 * kilonewton, 10^3 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kilonewton")
 val kilonewton = kN
     
 
@@ -418,9 +398,8 @@ val Number.hectonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hN") 
 /**
 * hN, 10^2 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -430,9 +409,8 @@ val hN = 10.0.pow(2) * (kg*m/(s `^` 2))
 * hectonewton, 10^2 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hectonewton")
 val hectonewton = hN
     
 
@@ -455,9 +433,8 @@ val Number.decanewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("daN") 
 /**
 * daN, 10^1 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -467,9 +444,8 @@ val daN = 10.0.pow(1) * (kg*m/(s `^` 2))
 * decanewton, 10^1 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decanewton")
 val decanewton = daN
     
 
@@ -492,9 +468,8 @@ val Number.decinewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("dN") 
 /**
 * dN, 10^-1 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -504,9 +479,8 @@ val dN = 10.0.pow(-1) * (kg*m/(s `^` 2))
 * decinewton, 10^-1 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decinewton")
 val decinewton = dN
     
 
@@ -529,9 +503,8 @@ val Number.centinewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("cN") 
 /**
 * cN, 10^-2 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -541,9 +514,8 @@ val cN = 10.0.pow(-2) * (kg*m/(s `^` 2))
 * centinewton, 10^-2 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("centinewton")
 val centinewton = cN
     
 
@@ -566,9 +538,8 @@ val Number.millinewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("mN") 
 /**
 * mN, 10^-3 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -578,9 +549,8 @@ val mN = 10.0.pow(-3) * (kg*m/(s `^` 2))
 * millinewton, 10^-3 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("millinewton")
 val millinewton = mN
     
 
@@ -603,9 +573,8 @@ val Number.micronewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("μN") 
 /**
 * μN, 10^-6 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -615,9 +584,8 @@ val μN = 10.0.pow(-6) * (kg*m/(s `^` 2))
 * micronewton, 10^-6 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("micronewton")
 val micronewton = μN
     
 
@@ -640,9 +608,8 @@ val Number.nanonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nN") 
 /**
 * nN, 10^-9 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -652,9 +619,8 @@ val nN = 10.0.pow(-9) * (kg*m/(s `^` 2))
 * nanonewton, 10^-9 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nanonewton")
 val nanonewton = nN
     
 
@@ -677,9 +643,8 @@ val Number.piconewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("pN") 
 /**
 * pN, 10^-12 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -689,9 +654,8 @@ val pN = 10.0.pow(-12) * (kg*m/(s `^` 2))
 * piconewton, 10^-12 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("piconewton")
 val piconewton = pN
     
 
@@ -714,9 +678,8 @@ val Number.femtonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("fN") 
 /**
 * fN, 10^-15 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -726,9 +689,8 @@ val fN = 10.0.pow(-15) * (kg*m/(s `^` 2))
 * femtonewton, 10^-15 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("femtonewton")
 val femtonewton = fN
     
 
@@ -751,9 +713,8 @@ val Number.attonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("aN") 
 /**
 * aN, 10^-18 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -763,9 +724,8 @@ val aN = 10.0.pow(-18) * (kg*m/(s `^` 2))
 * attonewton, 10^-18 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("attonewton")
 val attonewton = aN
     
 
@@ -788,9 +748,8 @@ val Number.zeptonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("zN") 
 /**
 * zN, 10^-21 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -800,9 +759,8 @@ val zN = 10.0.pow(-21) * (kg*m/(s `^` 2))
 * zeptonewton, 10^-21 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zeptonewton")
 val zeptonewton = zN
     
 
@@ -825,9 +783,8 @@ val Number.yoctonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("yN") 
 /**
 * yN, 10^-24 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -837,9 +794,8 @@ val yN = 10.0.pow(-24) * (kg*m/(s `^` 2))
 * yoctonewton, 10^-24 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yoctonewton")
 val yoctonewton = yN
     
 
@@ -862,9 +818,8 @@ val Number.rontonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("rN") 
 /**
 * rN, 10^-27 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -874,9 +829,8 @@ val rN = 10.0.pow(-27) * (kg*m/(s `^` 2))
 * rontonewton, 10^-27 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("rontonewton")
 val rontonewton = rN
     
 
@@ -899,9 +853,8 @@ val Number.quectonewton : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("qN") 
 /**
 * qN, 10^-30 of newton, derived SI-Unit for measurement of force, weight
 */        
@@ -911,8 +864,7 @@ val qN = 10.0.pow(-30) * (kg*m/(s `^` 2))
 * quectonewton, 10^-30 of newton, derived SI-Unit for measurement of force, weight
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quectonewton")
 val quectonewton = qN
     

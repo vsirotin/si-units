@@ -5,6 +5,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionEuro = UnitSpecification(
     "EUR",
@@ -15,7 +16,7 @@ private val descriptionEuro = UnitSpecification(
 * Class for hold of Euro
 * @constructor Creates a class for hold of Euro with given [value]
 */
-//@JsExport
+@JsExport
 class Euro(value : Double = 1.0) : Expression(value, description = descriptionEuro)
     
     /**
@@ -30,7 +31,8 @@ class Euro(value : Double = 1.0) : Expression(value, description = descriptionEu
     /**
     * Holder for  of Euro
     */
-    //@JsExport
+    @JsExport
+    @JsName("EUR")
     @JvmField
     val EUR = Euro()   
     

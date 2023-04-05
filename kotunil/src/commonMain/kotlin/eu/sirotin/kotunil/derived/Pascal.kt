@@ -15,7 +15,7 @@ private val unit =  kg/(m * (s `^` 2))
 /**
 * System International Unit for pressure, stress.
 */
-//@JsExport
+@JsExport
 @JvmField
 val Pa = unit
 
@@ -48,9 +48,8 @@ val Number.quettapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("QPa") 
 /**
 * QPa, 10^30 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -60,9 +59,8 @@ val QPa = 10.0.pow(30) * (kg/(m * (s `^` 2)))
 * quettapascal, 10^30 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quettapascal")
 val quettapascal = QPa
     
 
@@ -85,9 +83,8 @@ val Number.ronnapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("RPa") 
 /**
 * RPa, 10^27 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -97,9 +94,8 @@ val RPa = 10.0.pow(27) * (kg/(m * (s `^` 2)))
 * ronnapascal, 10^27 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ronnapascal")
 val ronnapascal = RPa
     
 
@@ -122,9 +118,8 @@ val Number.yottapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("YPa") 
 /**
 * YPa, 10^24 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -134,9 +129,8 @@ val YPa = 10.0.pow(24) * (kg/(m * (s `^` 2)))
 * yottapascal, 10^24 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yottapascal")
 val yottapascal = YPa
     
 
@@ -159,9 +153,8 @@ val Number.zettapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ZPa") 
 /**
 * ZPa, 10^21 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -171,9 +164,8 @@ val ZPa = 10.0.pow(21) * (kg/(m * (s `^` 2)))
 * zettapascal, 10^21 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zettapascal")
 val zettapascal = ZPa
     
 
@@ -196,9 +188,8 @@ val Number.exapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("EPa") 
 /**
 * EPa, 10^18 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -208,9 +199,8 @@ val EPa = 10.0.pow(18) * (kg/(m * (s `^` 2)))
 * exapascal, 10^18 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("exapascal")
 val exapascal = EPa
     
 
@@ -233,9 +223,8 @@ val Number.petapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("PPa") 
 /**
 * PPa, 10^15 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -245,9 +234,8 @@ val PPa = 10.0.pow(15) * (kg/(m * (s `^` 2)))
 * petapascal, 10^15 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("petapascal")
 val petapascal = PPa
     
 
@@ -270,9 +258,8 @@ val Number.terapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("TPa") 
 /**
 * TPa, 10^12 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -282,9 +269,8 @@ val TPa = 10.0.pow(12) * (kg/(m * (s `^` 2)))
 * terapascal, 10^12 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("terapascal")
 val terapascal = TPa
     
 
@@ -307,9 +293,8 @@ val Number.gigapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("GPa") 
 /**
 * GPa, 10^9 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -319,9 +304,8 @@ val GPa = 10.0.pow(9) * (kg/(m * (s `^` 2)))
 * gigapascal, 10^9 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("gigapascal")
 val gigapascal = GPa
     
 
@@ -344,9 +328,8 @@ val Number.megapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("MPa") 
 /**
 * MPa, 10^6 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -356,9 +339,8 @@ val MPa = 10.0.pow(6) * (kg/(m * (s `^` 2)))
 * megapascal, 10^6 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("megapascal")
 val megapascal = MPa
     
 
@@ -381,9 +363,8 @@ val Number.kilopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kPa") 
 /**
 * kPa, 10^3 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -393,9 +374,8 @@ val kPa = 10.0.pow(3) * (kg/(m * (s `^` 2)))
 * kilopascal, 10^3 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kilopascal")
 val kilopascal = kPa
     
 
@@ -418,9 +398,8 @@ val Number.hectopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hPa") 
 /**
 * hPa, 10^2 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -430,9 +409,8 @@ val hPa = 10.0.pow(2) * (kg/(m * (s `^` 2)))
 * hectopascal, 10^2 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hectopascal")
 val hectopascal = hPa
     
 
@@ -455,9 +433,8 @@ val Number.decapascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("daPa") 
 /**
 * daPa, 10^1 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -467,9 +444,8 @@ val daPa = 10.0.pow(1) * (kg/(m * (s `^` 2)))
 * decapascal, 10^1 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decapascal")
 val decapascal = daPa
     
 
@@ -492,9 +468,8 @@ val Number.decipascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("dPa") 
 /**
 * dPa, 10^-1 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -504,9 +479,8 @@ val dPa = 10.0.pow(-1) * (kg/(m * (s `^` 2)))
 * decipascal, 10^-1 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decipascal")
 val decipascal = dPa
     
 
@@ -529,9 +503,8 @@ val Number.centipascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("cPa") 
 /**
 * cPa, 10^-2 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -541,9 +514,8 @@ val cPa = 10.0.pow(-2) * (kg/(m * (s `^` 2)))
 * centipascal, 10^-2 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("centipascal")
 val centipascal = cPa
     
 
@@ -566,9 +538,8 @@ val Number.millipascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("mPa") 
 /**
 * mPa, 10^-3 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -578,9 +549,8 @@ val mPa = 10.0.pow(-3) * (kg/(m * (s `^` 2)))
 * millipascal, 10^-3 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("millipascal")
 val millipascal = mPa
     
 
@@ -603,9 +573,8 @@ val Number.micropascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("μPa") 
 /**
 * μPa, 10^-6 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -615,9 +584,8 @@ val μPa = 10.0.pow(-6) * (kg/(m * (s `^` 2)))
 * micropascal, 10^-6 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("micropascal")
 val micropascal = μPa
     
 
@@ -640,9 +608,8 @@ val Number.nanopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nPa") 
 /**
 * nPa, 10^-9 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -652,9 +619,8 @@ val nPa = 10.0.pow(-9) * (kg/(m * (s `^` 2)))
 * nanopascal, 10^-9 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nanopascal")
 val nanopascal = nPa
     
 
@@ -677,9 +643,8 @@ val Number.picopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("pPa") 
 /**
 * pPa, 10^-12 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -689,9 +654,8 @@ val pPa = 10.0.pow(-12) * (kg/(m * (s `^` 2)))
 * picopascal, 10^-12 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("picopascal")
 val picopascal = pPa
     
 
@@ -714,9 +678,8 @@ val Number.femtopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("fPa") 
 /**
 * fPa, 10^-15 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -726,9 +689,8 @@ val fPa = 10.0.pow(-15) * (kg/(m * (s `^` 2)))
 * femtopascal, 10^-15 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("femtopascal")
 val femtopascal = fPa
     
 
@@ -751,9 +713,8 @@ val Number.attopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("aPa") 
 /**
 * aPa, 10^-18 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -763,9 +724,8 @@ val aPa = 10.0.pow(-18) * (kg/(m * (s `^` 2)))
 * attopascal, 10^-18 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("attopascal")
 val attopascal = aPa
     
 
@@ -788,9 +748,8 @@ val Number.zeptopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("zPa") 
 /**
 * zPa, 10^-21 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -800,9 +759,8 @@ val zPa = 10.0.pow(-21) * (kg/(m * (s `^` 2)))
 * zeptopascal, 10^-21 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zeptopascal")
 val zeptopascal = zPa
     
 
@@ -825,9 +783,8 @@ val Number.yoctopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("yPa") 
 /**
 * yPa, 10^-24 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -837,9 +794,8 @@ val yPa = 10.0.pow(-24) * (kg/(m * (s `^` 2)))
 * yoctopascal, 10^-24 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yoctopascal")
 val yoctopascal = yPa
     
 
@@ -862,9 +818,8 @@ val Number.rontopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("rPa") 
 /**
 * rPa, 10^-27 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -874,9 +829,8 @@ val rPa = 10.0.pow(-27) * (kg/(m * (s `^` 2)))
 * rontopascal, 10^-27 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("rontopascal")
 val rontopascal = rPa
     
 
@@ -899,9 +853,8 @@ val Number.quectopascal : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("qPa") 
 /**
 * qPa, 10^-30 of pascal, derived SI-Unit for measurement of pressure, stress
 */        
@@ -911,8 +864,7 @@ val qPa = 10.0.pow(-30) * (kg/(m * (s `^` 2)))
 * quectopascal, 10^-30 of pascal, derived SI-Unit for measurement of pressure, stress
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quectopascal")
 val quectopascal = qPa
     

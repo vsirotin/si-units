@@ -29,6 +29,7 @@ import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
 import kotlin.js.JsExport
+import kotlin.js.JsName
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmName
 import kotlin.math.E
@@ -39,14 +40,18 @@ import kotlin.math.pow
 /**
  * Square metre
  */
-//@JsExport
+@JsExport
+@JsName("m2")
+//@get:JvmName("m2")
 @JvmField()
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
-//@JsExport
+@JsExport
+@JsName("m3")
+//@get:JvmName("m3")
 @JvmField()
 val m3 = m2 * m
 
@@ -62,7 +67,9 @@ val Number.min: Second
 /**
  * Minute (time)
  */
-//@JsExport
+@JsExport
+@JsName("min")
+//@get:JvmName("min")
 @JvmField()
 val min = Second(60.0)
 
@@ -78,7 +85,9 @@ val Number.h: Second
 /**
  * Hour (time)
  */
-//@JsExport
+@JsExport
+@JsName("h")
+//@get:JvmName("h")
 @JvmField()
 val h = Second(3600.0)
 
@@ -94,7 +103,9 @@ val Number.d: Second
 /**
  * Day (time)
  */
-//@JsExport
+@JsExport
+@JsName("d")
+//@get:JvmName("d")
 @JvmField()
 val d = Second(24*3600.0)
 
@@ -107,7 +118,9 @@ val Number.au: Metre
 /**
  * Astronomical unit 149597870700 metre
  */
-//@JsExport
+@JsExport
+@JsName("au")
+//@get:JvmName("au")
 @JvmField()
 val au = 1.0.au
 
@@ -131,7 +144,9 @@ val Number.ha: Expression
 /**
  * hectare
  */
-//@JsExport
+@JsExport
+@JsName("ha")
+//@get:JvmName("ha")
 @JvmField()
 val ha = 1.0.ha
 
@@ -149,6 +164,7 @@ val Number.l: Expression
  */
 //@JsExport
 @JvmField
+//@JsName("l")
 //@get:JvmName("l")
 val l = 1.0.l
 
@@ -162,8 +178,9 @@ val Number.L: Expression
      */
     get() = this.l
 
-//@JsExport
+@JsExport
 @JvmField
+@JsName("L")
 //@get:JvmName("L")
 val L = l
 
@@ -179,8 +196,10 @@ val Number.t: Kilogram
 /**
  * tonne
  */
-//@JsExport
+@JsExport
 @JvmField()
+@JsName("t")
+//@get:JvmName("t")
 val t = 1000.kg
 
 /**
@@ -195,7 +214,9 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
-//@JsExport
+@JsExport
+@JsName("Da")
+//@get:JvmName("Da")
 @JvmField()
 val Da = 1.Da
 
@@ -211,7 +232,9 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-//@JsExport
+@JsExport
+@JsName("ev")
+//@get:JvmName("ev")
 @JvmField()
 val eV = 1.eV
 
@@ -228,7 +251,9 @@ val Number.percentage: Double
 /**
  * Percentage
  */
-//@JsExport
+@JsExport
+@JsName("percentage")
+//@get:JvmName("percentage")
 @JvmField()
 val percentage = 0.01
 

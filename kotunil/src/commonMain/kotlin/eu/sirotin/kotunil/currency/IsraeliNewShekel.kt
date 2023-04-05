@@ -5,6 +5,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionIsraeliNewShekel = UnitSpecification(
     "ILS",
@@ -15,7 +16,7 @@ private val descriptionIsraeliNewShekel = UnitSpecification(
 * Class for hold of Israeli new shekel
 * @constructor Creates a class for hold of Israeli new shekel with given [value]
 */
-//@JsExport
+@JsExport
 class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = descriptionIsraeliNewShekel)
     
     /**
@@ -30,7 +31,8 @@ class IsraeliNewShekel(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of Israeli new shekel
     */
-    //@JsExport
+    @JsExport
+    @JsName("ILS")
     @JvmField
     val ILS = IsraeliNewShekel()   
     

@@ -34,7 +34,6 @@
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.b;
   var intersect = kotlin_kotlin.$_$.g;
   var plus = kotlin_kotlin.$_$.h;
-  var ensureNotNull = kotlin_kotlin.$_$.y;
   var setOf = kotlin_kotlin.$_$.i;
   var getStringHashCode = kotlin_kotlin.$_$.q;
   var Long = kotlin_kotlin.$_$.w;
@@ -103,144 +102,240 @@
     return QA;
   }
   var QA;
+  function get_quettaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return quettaampere;
+  }
   var quettaampere;
   function get_RA() {
     init_properties_Ampere_kt_ivxk1y();
     return RA;
   }
   var RA;
+  function get_ronnaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return ronnaampere;
+  }
   var ronnaampere;
   function get_YA() {
     init_properties_Ampere_kt_ivxk1y();
     return YA;
   }
   var YA;
+  function get_yottaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return yottaampere;
+  }
   var yottaampere;
   function get_ZA() {
     init_properties_Ampere_kt_ivxk1y();
     return ZA;
   }
   var ZA;
+  function get_zettaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return zettaampere;
+  }
   var zettaampere;
   function get_EA() {
     init_properties_Ampere_kt_ivxk1y();
     return EA;
   }
   var EA;
+  function get_exaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return exaampere;
+  }
   var exaampere;
   function get_PA() {
     init_properties_Ampere_kt_ivxk1y();
     return PA;
   }
   var PA;
+  function get_petaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return petaampere;
+  }
   var petaampere;
   function get_TA() {
     init_properties_Ampere_kt_ivxk1y();
     return TA;
   }
   var TA;
+  function get_teraampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return teraampere;
+  }
   var teraampere;
   function get_GA() {
     init_properties_Ampere_kt_ivxk1y();
     return GA;
   }
   var GA;
+  function get_gigaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return gigaampere;
+  }
   var gigaampere;
   function get_MA() {
     init_properties_Ampere_kt_ivxk1y();
     return MA;
   }
   var MA;
+  function get_megaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return megaampere;
+  }
   var megaampere;
   function get_kA() {
     init_properties_Ampere_kt_ivxk1y();
     return kA;
   }
   var kA;
+  function get_kiloampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return kiloampere;
+  }
   var kiloampere;
   function get_hA() {
     init_properties_Ampere_kt_ivxk1y();
     return hA;
   }
   var hA;
+  function get_hectoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return hectoampere;
+  }
   var hectoampere;
   function get_daA() {
     init_properties_Ampere_kt_ivxk1y();
     return daA;
   }
   var daA;
+  function get_decaampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return decaampere;
+  }
   var decaampere;
   function get_dA() {
     init_properties_Ampere_kt_ivxk1y();
     return dA;
   }
   var dA;
+  function get_deciampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return deciampere;
+  }
   var deciampere;
   function get_cA() {
     init_properties_Ampere_kt_ivxk1y();
     return cA;
   }
   var cA;
+  function get_centiampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return centiampere;
+  }
   var centiampere;
   function get_mA() {
     init_properties_Ampere_kt_ivxk1y();
     return mA;
   }
   var mA;
+  function get_milliampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return milliampere;
+  }
   var milliampere;
   function get_μA() {
     init_properties_Ampere_kt_ivxk1y();
     return μA;
   }
   var μA;
+  function get_microampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return microampere;
+  }
   var microampere;
   function get_nA() {
     init_properties_Ampere_kt_ivxk1y();
     return nA;
   }
   var nA;
+  function get_nanoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return nanoampere;
+  }
   var nanoampere;
   function get_pA() {
     init_properties_Ampere_kt_ivxk1y();
     return pA;
   }
   var pA;
+  function get_picoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return picoampere;
+  }
   var picoampere;
   function get_fA() {
     init_properties_Ampere_kt_ivxk1y();
     return fA;
   }
   var fA;
+  function get_femtoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return femtoampere;
+  }
   var femtoampere;
   function get_aA() {
     init_properties_Ampere_kt_ivxk1y();
     return aA;
   }
   var aA;
+  function get_attoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return attoampere;
+  }
   var attoampere;
   function get_zA() {
     init_properties_Ampere_kt_ivxk1y();
     return zA;
   }
   var zA;
+  function get_zeptoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return zeptoampere;
+  }
   var zeptoampere;
   function get_yA() {
     init_properties_Ampere_kt_ivxk1y();
     return yA;
   }
   var yA;
+  function get_yoctoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return yoctoampere;
+  }
   var yoctoampere;
   function get_rA() {
     init_properties_Ampere_kt_ivxk1y();
     return rA;
   }
   var rA;
+  function get_rontoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return rontoampere;
+  }
   var rontoampere;
   function get_qA() {
     init_properties_Ampere_kt_ivxk1y();
     return qA;
   }
   var qA;
+  function get_quectoampere() {
+    init_properties_Ampere_kt_ivxk1y();
+    return quectoampere;
+  }
   var quectoampere;
   function Ampere(value) {
     Expression_init_$Init$(value, get_descriptionAmpere(), this);
@@ -393,144 +488,240 @@
     return Qcd;
   }
   var Qcd;
+  function get_quettacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return quettacandela;
+  }
   var quettacandela;
   function get_Rcd() {
     init_properties_Candela_kt_6zdhim();
     return Rcd;
   }
   var Rcd;
+  function get_ronnacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return ronnacandela;
+  }
   var ronnacandela;
   function get_Ycd() {
     init_properties_Candela_kt_6zdhim();
     return Ycd;
   }
   var Ycd;
+  function get_yottacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return yottacandela;
+  }
   var yottacandela;
   function get_Zcd() {
     init_properties_Candela_kt_6zdhim();
     return Zcd;
   }
   var Zcd;
+  function get_zettacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return zettacandela;
+  }
   var zettacandela;
   function get_Ecd() {
     init_properties_Candela_kt_6zdhim();
     return Ecd;
   }
   var Ecd;
+  function get_exacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return exacandela;
+  }
   var exacandela;
   function get_Pcd() {
     init_properties_Candela_kt_6zdhim();
     return Pcd;
   }
   var Pcd;
+  function get_petacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return petacandela;
+  }
   var petacandela;
   function get_Tcd() {
     init_properties_Candela_kt_6zdhim();
     return Tcd;
   }
   var Tcd;
+  function get_teracandela() {
+    init_properties_Candela_kt_6zdhim();
+    return teracandela;
+  }
   var teracandela;
   function get_Gcd() {
     init_properties_Candela_kt_6zdhim();
     return Gcd;
   }
   var Gcd;
+  function get_gigacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return gigacandela;
+  }
   var gigacandela;
   function get_Mcd() {
     init_properties_Candela_kt_6zdhim();
     return Mcd;
   }
   var Mcd;
+  function get_megacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return megacandela;
+  }
   var megacandela;
   function get_kcd() {
     init_properties_Candela_kt_6zdhim();
     return kcd;
   }
   var kcd;
+  function get_kilocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return kilocandela;
+  }
   var kilocandela;
   function get_hcd() {
     init_properties_Candela_kt_6zdhim();
     return hcd;
   }
   var hcd;
+  function get_hectocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return hectocandela;
+  }
   var hectocandela;
   function get_dacd() {
     init_properties_Candela_kt_6zdhim();
     return dacd;
   }
   var dacd;
+  function get_decacandela() {
+    init_properties_Candela_kt_6zdhim();
+    return decacandela;
+  }
   var decacandela;
   function get_dcd() {
     init_properties_Candela_kt_6zdhim();
     return dcd;
   }
   var dcd;
+  function get_decicandela() {
+    init_properties_Candela_kt_6zdhim();
+    return decicandela;
+  }
   var decicandela;
   function get_ccd() {
     init_properties_Candela_kt_6zdhim();
     return ccd;
   }
   var ccd;
+  function get_centicandela() {
+    init_properties_Candela_kt_6zdhim();
+    return centicandela;
+  }
   var centicandela;
   function get_mcd() {
     init_properties_Candela_kt_6zdhim();
     return mcd;
   }
   var mcd;
+  function get_millicandela() {
+    init_properties_Candela_kt_6zdhim();
+    return millicandela;
+  }
   var millicandela;
   function get_μcd() {
     init_properties_Candela_kt_6zdhim();
     return μcd;
   }
   var μcd;
+  function get_microcandela() {
+    init_properties_Candela_kt_6zdhim();
+    return microcandela;
+  }
   var microcandela;
   function get_ncd() {
     init_properties_Candela_kt_6zdhim();
     return ncd;
   }
   var ncd;
+  function get_nanocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return nanocandela;
+  }
   var nanocandela;
   function get_pcd() {
     init_properties_Candela_kt_6zdhim();
     return pcd;
   }
   var pcd;
+  function get_picocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return picocandela;
+  }
   var picocandela;
   function get_fcd() {
     init_properties_Candela_kt_6zdhim();
     return fcd;
   }
   var fcd;
+  function get_femtocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return femtocandela;
+  }
   var femtocandela;
   function get_acd() {
     init_properties_Candela_kt_6zdhim();
     return acd;
   }
   var acd;
+  function get_attocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return attocandela;
+  }
   var attocandela;
   function get_zcd() {
     init_properties_Candela_kt_6zdhim();
     return zcd;
   }
   var zcd;
+  function get_zeptocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return zeptocandela;
+  }
   var zeptocandela;
   function get_ycd() {
     init_properties_Candela_kt_6zdhim();
     return ycd;
   }
   var ycd;
+  function get_yoctocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return yoctocandela;
+  }
   var yoctocandela;
   function get_rcd() {
     init_properties_Candela_kt_6zdhim();
     return rcd;
   }
   var rcd;
+  function get_rontocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return rontocandela;
+  }
   var rontocandela;
   function get_qcd() {
     init_properties_Candela_kt_6zdhim();
     return qcd;
   }
   var qcd;
+  function get_quectocandela() {
+    init_properties_Candela_kt_6zdhim();
+    return quectocandela;
+  }
   var quectocandela;
   function Candela(value) {
     Expression_init_$Init$(value, get_descriptionCandela(), this);
@@ -683,144 +874,240 @@
     return QK;
   }
   var QK;
+  function get_quettakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return quettakelvin;
+  }
   var quettakelvin;
   function get_RK() {
     init_properties_Kelvin_kt_6u40tt();
     return RK;
   }
   var RK;
+  function get_ronnakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return ronnakelvin;
+  }
   var ronnakelvin;
   function get_YK() {
     init_properties_Kelvin_kt_6u40tt();
     return YK;
   }
   var YK;
+  function get_yottakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return yottakelvin;
+  }
   var yottakelvin;
   function get_ZK() {
     init_properties_Kelvin_kt_6u40tt();
     return ZK;
   }
   var ZK;
+  function get_zettakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return zettakelvin;
+  }
   var zettakelvin;
   function get_EK() {
     init_properties_Kelvin_kt_6u40tt();
     return EK;
   }
   var EK;
+  function get_exakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return exakelvin;
+  }
   var exakelvin;
   function get_PK() {
     init_properties_Kelvin_kt_6u40tt();
     return PK;
   }
   var PK;
+  function get_petakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return petakelvin;
+  }
   var petakelvin;
   function get_TK() {
     init_properties_Kelvin_kt_6u40tt();
     return TK;
   }
   var TK;
+  function get_terakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return terakelvin;
+  }
   var terakelvin;
   function get_GK() {
     init_properties_Kelvin_kt_6u40tt();
     return GK;
   }
   var GK;
+  function get_gigakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return gigakelvin;
+  }
   var gigakelvin;
   function get_MK() {
     init_properties_Kelvin_kt_6u40tt();
     return MK;
   }
   var MK;
+  function get_megakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return megakelvin;
+  }
   var megakelvin;
   function get_kK() {
     init_properties_Kelvin_kt_6u40tt();
     return kK;
   }
   var kK;
+  function get_kilokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return kilokelvin;
+  }
   var kilokelvin;
   function get_hK() {
     init_properties_Kelvin_kt_6u40tt();
     return hK;
   }
   var hK;
+  function get_hectokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return hectokelvin;
+  }
   var hectokelvin;
   function get_daK() {
     init_properties_Kelvin_kt_6u40tt();
     return daK;
   }
   var daK;
+  function get_decakelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return decakelvin;
+  }
   var decakelvin;
   function get_dK() {
     init_properties_Kelvin_kt_6u40tt();
     return dK;
   }
   var dK;
+  function get_decikelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return decikelvin;
+  }
   var decikelvin;
   function get_cK() {
     init_properties_Kelvin_kt_6u40tt();
     return cK;
   }
   var cK;
+  function get_centikelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return centikelvin;
+  }
   var centikelvin;
   function get_mK() {
     init_properties_Kelvin_kt_6u40tt();
     return mK;
   }
   var mK;
+  function get_millikelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return millikelvin;
+  }
   var millikelvin;
   function get_μK() {
     init_properties_Kelvin_kt_6u40tt();
     return μK;
   }
   var μK;
+  function get_microkelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return microkelvin;
+  }
   var microkelvin;
   function get_nK() {
     init_properties_Kelvin_kt_6u40tt();
     return nK;
   }
   var nK;
+  function get_nanokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return nanokelvin;
+  }
   var nanokelvin;
   function get_pK() {
     init_properties_Kelvin_kt_6u40tt();
     return pK;
   }
   var pK;
+  function get_picokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return picokelvin;
+  }
   var picokelvin;
   function get_fK() {
     init_properties_Kelvin_kt_6u40tt();
     return fK;
   }
   var fK;
+  function get_femtokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return femtokelvin;
+  }
   var femtokelvin;
   function get_aK() {
     init_properties_Kelvin_kt_6u40tt();
     return aK;
   }
   var aK;
+  function get_attokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return attokelvin;
+  }
   var attokelvin;
   function get_zK() {
     init_properties_Kelvin_kt_6u40tt();
     return zK;
   }
   var zK;
+  function get_zeptokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return zeptokelvin;
+  }
   var zeptokelvin;
   function get_yK() {
     init_properties_Kelvin_kt_6u40tt();
     return yK;
   }
   var yK;
+  function get_yoctokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return yoctokelvin;
+  }
   var yoctokelvin;
   function get_rK() {
     init_properties_Kelvin_kt_6u40tt();
     return rK;
   }
   var rK;
+  function get_rontokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return rontokelvin;
+  }
   var rontokelvin;
   function get_qK() {
     init_properties_Kelvin_kt_6u40tt();
     return qK;
   }
   var qK;
+  function get_quectokelvin() {
+    init_properties_Kelvin_kt_6u40tt();
+    return quectokelvin;
+  }
   var quectokelvin;
   function Kelvin(value) {
     Expression_init_$Init$(value, get_descriptionKelvin(), this);
@@ -973,138 +1260,230 @@
     return Qkg;
   }
   var Qkg;
+  function get_quettakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return quettakilogram;
+  }
   var quettakilogram;
   function get_Rkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Rkg;
   }
   var Rkg;
+  function get_ronnakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return ronnakilogram;
+  }
   var ronnakilogram;
   function get_Ykg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Ykg;
   }
   var Ykg;
+  function get_yottakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return yottakilogram;
+  }
   var yottakilogram;
   function get_Zkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Zkg;
   }
   var Zkg;
+  function get_zettakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return zettakilogram;
+  }
   var zettakilogram;
   function get_Ekg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Ekg;
   }
   var Ekg;
+  function get_exakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return exakilogram;
+  }
   var exakilogram;
   function get_Pkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Pkg;
   }
   var Pkg;
+  function get_petakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return petakilogram;
+  }
   var petakilogram;
   function get_Tkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Tkg;
   }
   var Tkg;
+  function get_terakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return terakilogram;
+  }
   var terakilogram;
   function get_Gkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Gkg;
   }
   var Gkg;
+  function get_gigakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return gigakilogram;
+  }
   var gigakilogram;
   function get_Mkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return Mkg;
   }
   var Mkg;
+  function get_megakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return megakilogram;
+  }
   var megakilogram;
   function get_hkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return hkg;
   }
   var hkg;
+  function get_hectokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return hectokilogram;
+  }
   var hectokilogram;
   function get_dakg() {
     init_properties_Kilogram_kt_6mfdcy();
     return dakg;
   }
   var dakg;
+  function get_decakilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return decakilogram;
+  }
   var decakilogram;
   function get_dkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return dkg;
   }
   var dkg;
+  function get_decikilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return decikilogram;
+  }
   var decikilogram;
   function get_ckg() {
     init_properties_Kilogram_kt_6mfdcy();
     return ckg;
   }
   var ckg;
+  function get_centikilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return centikilogram;
+  }
   var centikilogram;
   function get_mkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return mkg;
   }
   var mkg;
+  function get_millikilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return millikilogram;
+  }
   var millikilogram;
   function get_μkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return μkg;
   }
   var μkg;
+  function get_microkilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return microkilogram;
+  }
   var microkilogram;
   function get_nkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return nkg;
   }
   var nkg;
+  function get_nanokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return nanokilogram;
+  }
   var nanokilogram;
   function get_pkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return pkg;
   }
   var pkg;
+  function get_picokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return picokilogram;
+  }
   var picokilogram;
   function get_fkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return fkg;
   }
   var fkg;
+  function get_femtokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return femtokilogram;
+  }
   var femtokilogram;
   function get_akg() {
     init_properties_Kilogram_kt_6mfdcy();
     return akg;
   }
   var akg;
+  function get_attokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return attokilogram;
+  }
   var attokilogram;
   function get_zkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return zkg;
   }
   var zkg;
+  function get_zeptokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return zeptokilogram;
+  }
   var zeptokilogram;
   function get_ykg() {
     init_properties_Kilogram_kt_6mfdcy();
     return ykg;
   }
   var ykg;
+  function get_yoctokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return yoctokilogram;
+  }
   var yoctokilogram;
   function get_rkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return rkg;
   }
   var rkg;
+  function get_rontokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return rontokilogram;
+  }
   var rontokilogram;
   function get_qkg() {
     init_properties_Kilogram_kt_6mfdcy();
     return qkg;
   }
   var qkg;
+  function get_quectokilogram() {
+    init_properties_Kilogram_kt_6mfdcy();
+    return quectokilogram;
+  }
   var quectokilogram;
   function Kilogram(value) {
     Expression_init_$Init$(value, get_descriptionKilogram(), this);
@@ -1256,144 +1635,240 @@
     return Qm;
   }
   var Qm;
+  function get_quettametre() {
+    init_properties_Metre_kt_vswkjp();
+    return quettametre;
+  }
   var quettametre;
   function get_Rm() {
     init_properties_Metre_kt_vswkjp();
     return Rm;
   }
   var Rm;
+  function get_ronnametre() {
+    init_properties_Metre_kt_vswkjp();
+    return ronnametre;
+  }
   var ronnametre;
   function get_Ym() {
     init_properties_Metre_kt_vswkjp();
     return Ym;
   }
   var Ym;
+  function get_yottametre() {
+    init_properties_Metre_kt_vswkjp();
+    return yottametre;
+  }
   var yottametre;
   function get_Zm() {
     init_properties_Metre_kt_vswkjp();
     return Zm;
   }
   var Zm;
+  function get_zettametre() {
+    init_properties_Metre_kt_vswkjp();
+    return zettametre;
+  }
   var zettametre;
   function get_Em() {
     init_properties_Metre_kt_vswkjp();
     return Em;
   }
   var Em;
+  function get_exametre() {
+    init_properties_Metre_kt_vswkjp();
+    return exametre;
+  }
   var exametre;
   function get_Pm() {
     init_properties_Metre_kt_vswkjp();
     return Pm;
   }
   var Pm;
+  function get_petametre() {
+    init_properties_Metre_kt_vswkjp();
+    return petametre;
+  }
   var petametre;
   function get_Tm() {
     init_properties_Metre_kt_vswkjp();
     return Tm;
   }
   var Tm;
+  function get_terametre() {
+    init_properties_Metre_kt_vswkjp();
+    return terametre;
+  }
   var terametre;
   function get_Gm() {
     init_properties_Metre_kt_vswkjp();
     return Gm;
   }
   var Gm;
+  function get_gigametre() {
+    init_properties_Metre_kt_vswkjp();
+    return gigametre;
+  }
   var gigametre;
   function get_Mm() {
     init_properties_Metre_kt_vswkjp();
     return Mm;
   }
   var Mm;
+  function get_megametre() {
+    init_properties_Metre_kt_vswkjp();
+    return megametre;
+  }
   var megametre;
   function get_km() {
     init_properties_Metre_kt_vswkjp();
     return km;
   }
   var km;
+  function get_kilometre() {
+    init_properties_Metre_kt_vswkjp();
+    return kilometre;
+  }
   var kilometre;
   function get_hm() {
     init_properties_Metre_kt_vswkjp();
     return hm;
   }
   var hm;
+  function get_hectometre() {
+    init_properties_Metre_kt_vswkjp();
+    return hectometre;
+  }
   var hectometre;
   function get_dam() {
     init_properties_Metre_kt_vswkjp();
     return dam;
   }
   var dam;
+  function get_decametre() {
+    init_properties_Metre_kt_vswkjp();
+    return decametre;
+  }
   var decametre;
   function get_dm() {
     init_properties_Metre_kt_vswkjp();
     return dm;
   }
   var dm;
+  function get_decimetre() {
+    init_properties_Metre_kt_vswkjp();
+    return decimetre;
+  }
   var decimetre;
   function get_cm() {
     init_properties_Metre_kt_vswkjp();
     return cm;
   }
   var cm;
+  function get_centimetre() {
+    init_properties_Metre_kt_vswkjp();
+    return centimetre;
+  }
   var centimetre;
   function get_mm() {
     init_properties_Metre_kt_vswkjp();
     return mm;
   }
   var mm;
+  function get_millimetre() {
+    init_properties_Metre_kt_vswkjp();
+    return millimetre;
+  }
   var millimetre;
   function get_μm() {
     init_properties_Metre_kt_vswkjp();
     return μm;
   }
   var μm;
+  function get_micrometre() {
+    init_properties_Metre_kt_vswkjp();
+    return micrometre;
+  }
   var micrometre;
   function get_nm() {
     init_properties_Metre_kt_vswkjp();
     return nm;
   }
   var nm;
+  function get_nanometre() {
+    init_properties_Metre_kt_vswkjp();
+    return nanometre;
+  }
   var nanometre;
   function get_pm() {
     init_properties_Metre_kt_vswkjp();
     return pm;
   }
   var pm;
+  function get_picometre() {
+    init_properties_Metre_kt_vswkjp();
+    return picometre;
+  }
   var picometre;
   function get_fm() {
     init_properties_Metre_kt_vswkjp();
     return fm;
   }
   var fm;
+  function get_femtometre() {
+    init_properties_Metre_kt_vswkjp();
+    return femtometre;
+  }
   var femtometre;
   function get_am() {
     init_properties_Metre_kt_vswkjp();
     return am;
   }
   var am;
+  function get_attometre() {
+    init_properties_Metre_kt_vswkjp();
+    return attometre;
+  }
   var attometre;
   function get_zm() {
     init_properties_Metre_kt_vswkjp();
     return zm;
   }
   var zm;
+  function get_zeptometre() {
+    init_properties_Metre_kt_vswkjp();
+    return zeptometre;
+  }
   var zeptometre;
   function get_ym() {
     init_properties_Metre_kt_vswkjp();
     return ym;
   }
   var ym;
+  function get_yoctometre() {
+    init_properties_Metre_kt_vswkjp();
+    return yoctometre;
+  }
   var yoctometre;
   function get_rm() {
     init_properties_Metre_kt_vswkjp();
     return rm;
   }
   var rm;
+  function get_rontometre() {
+    init_properties_Metre_kt_vswkjp();
+    return rontometre;
+  }
   var rontometre;
   function get_qm() {
     init_properties_Metre_kt_vswkjp();
     return qm;
   }
   var qm;
+  function get_quectometre() {
+    init_properties_Metre_kt_vswkjp();
+    return quectometre;
+  }
   var quectometre;
   function Metre(value) {
     Expression_init_$Init$(value, get_descriptionMetre(), this);
@@ -1546,144 +2021,240 @@
     return Qmol;
   }
   var Qmol;
+  function get_quettamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return quettamole;
+  }
   var quettamole;
   function get_Rmol() {
     init_properties_Mole_kt_qg3ntt();
     return Rmol;
   }
   var Rmol;
+  function get_ronnamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return ronnamole;
+  }
   var ronnamole;
   function get_Ymol() {
     init_properties_Mole_kt_qg3ntt();
     return Ymol;
   }
   var Ymol;
+  function get_yottamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return yottamole;
+  }
   var yottamole;
   function get_Zmol() {
     init_properties_Mole_kt_qg3ntt();
     return Zmol;
   }
   var Zmol;
+  function get_zettamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return zettamole;
+  }
   var zettamole;
   function get_Emol() {
     init_properties_Mole_kt_qg3ntt();
     return Emol;
   }
   var Emol;
+  function get_examole() {
+    init_properties_Mole_kt_qg3ntt();
+    return examole;
+  }
   var examole;
   function get_Pmol() {
     init_properties_Mole_kt_qg3ntt();
     return Pmol;
   }
   var Pmol;
+  function get_petamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return petamole;
+  }
   var petamole;
   function get_Tmol() {
     init_properties_Mole_kt_qg3ntt();
     return Tmol;
   }
   var Tmol;
+  function get_teramole() {
+    init_properties_Mole_kt_qg3ntt();
+    return teramole;
+  }
   var teramole;
   function get_Gmol() {
     init_properties_Mole_kt_qg3ntt();
     return Gmol;
   }
   var Gmol;
+  function get_gigamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return gigamole;
+  }
   var gigamole;
   function get_Mmol() {
     init_properties_Mole_kt_qg3ntt();
     return Mmol;
   }
   var Mmol;
+  function get_megamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return megamole;
+  }
   var megamole;
   function get_kmol() {
     init_properties_Mole_kt_qg3ntt();
     return kmol;
   }
   var kmol;
+  function get_kilomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return kilomole;
+  }
   var kilomole;
   function get_hmol() {
     init_properties_Mole_kt_qg3ntt();
     return hmol;
   }
   var hmol;
+  function get_hectomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return hectomole;
+  }
   var hectomole;
   function get_damol() {
     init_properties_Mole_kt_qg3ntt();
     return damol;
   }
   var damol;
+  function get_decamole() {
+    init_properties_Mole_kt_qg3ntt();
+    return decamole;
+  }
   var decamole;
   function get_dmol() {
     init_properties_Mole_kt_qg3ntt();
     return dmol;
   }
   var dmol;
+  function get_decimole() {
+    init_properties_Mole_kt_qg3ntt();
+    return decimole;
+  }
   var decimole;
   function get_cmol() {
     init_properties_Mole_kt_qg3ntt();
     return cmol;
   }
   var cmol;
+  function get_centimole() {
+    init_properties_Mole_kt_qg3ntt();
+    return centimole;
+  }
   var centimole;
   function get_mmol() {
     init_properties_Mole_kt_qg3ntt();
     return mmol;
   }
   var mmol;
+  function get_millimole() {
+    init_properties_Mole_kt_qg3ntt();
+    return millimole;
+  }
   var millimole;
   function get_μmol() {
     init_properties_Mole_kt_qg3ntt();
     return μmol;
   }
   var μmol;
+  function get_micromole() {
+    init_properties_Mole_kt_qg3ntt();
+    return micromole;
+  }
   var micromole;
   function get_nmol() {
     init_properties_Mole_kt_qg3ntt();
     return nmol;
   }
   var nmol;
+  function get_nanomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return nanomole;
+  }
   var nanomole;
   function get_pmol() {
     init_properties_Mole_kt_qg3ntt();
     return pmol;
   }
   var pmol;
+  function get_picomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return picomole;
+  }
   var picomole;
   function get_fmol() {
     init_properties_Mole_kt_qg3ntt();
     return fmol;
   }
   var fmol;
+  function get_femtomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return femtomole;
+  }
   var femtomole;
   function get_amol() {
     init_properties_Mole_kt_qg3ntt();
     return amol;
   }
   var amol;
+  function get_attomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return attomole;
+  }
   var attomole;
   function get_zmol() {
     init_properties_Mole_kt_qg3ntt();
     return zmol;
   }
   var zmol;
+  function get_zeptomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return zeptomole;
+  }
   var zeptomole;
   function get_ymol() {
     init_properties_Mole_kt_qg3ntt();
     return ymol;
   }
   var ymol;
+  function get_yoctomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return yoctomole;
+  }
   var yoctomole;
   function get_rmol() {
     init_properties_Mole_kt_qg3ntt();
     return rmol;
   }
   var rmol;
+  function get_rontomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return rontomole;
+  }
   var rontomole;
   function get_qmol() {
     init_properties_Mole_kt_qg3ntt();
     return qmol;
   }
   var qmol;
+  function get_quectomole() {
+    init_properties_Mole_kt_qg3ntt();
+    return quectomole;
+  }
   var quectomole;
   function Mole(value) {
     Expression_init_$Init$(value, get_descriptionMole(), this);
@@ -1836,144 +2407,240 @@
     return Qs;
   }
   var Qs;
+  function get_quettasecond() {
+    init_properties_Second_kt_chj7a2();
+    return quettasecond;
+  }
   var quettasecond;
   function get_Rs() {
     init_properties_Second_kt_chj7a2();
     return Rs;
   }
   var Rs;
+  function get_ronnasecond() {
+    init_properties_Second_kt_chj7a2();
+    return ronnasecond;
+  }
   var ronnasecond;
   function get_Ys() {
     init_properties_Second_kt_chj7a2();
     return Ys;
   }
   var Ys;
+  function get_yottasecond() {
+    init_properties_Second_kt_chj7a2();
+    return yottasecond;
+  }
   var yottasecond;
   function get_Zs() {
     init_properties_Second_kt_chj7a2();
     return Zs;
   }
   var Zs;
+  function get_zettasecond() {
+    init_properties_Second_kt_chj7a2();
+    return zettasecond;
+  }
   var zettasecond;
   function get_Es() {
     init_properties_Second_kt_chj7a2();
     return Es;
   }
   var Es;
+  function get_exasecond() {
+    init_properties_Second_kt_chj7a2();
+    return exasecond;
+  }
   var exasecond;
   function get_Ps() {
     init_properties_Second_kt_chj7a2();
     return Ps;
   }
   var Ps;
+  function get_petasecond() {
+    init_properties_Second_kt_chj7a2();
+    return petasecond;
+  }
   var petasecond;
   function get_Ts() {
     init_properties_Second_kt_chj7a2();
     return Ts;
   }
   var Ts;
+  function get_terasecond() {
+    init_properties_Second_kt_chj7a2();
+    return terasecond;
+  }
   var terasecond;
   function get_Gs() {
     init_properties_Second_kt_chj7a2();
     return Gs;
   }
   var Gs;
+  function get_gigasecond() {
+    init_properties_Second_kt_chj7a2();
+    return gigasecond;
+  }
   var gigasecond;
   function get_Ms() {
     init_properties_Second_kt_chj7a2();
     return Ms;
   }
   var Ms;
+  function get_megasecond() {
+    init_properties_Second_kt_chj7a2();
+    return megasecond;
+  }
   var megasecond;
   function get_ks() {
     init_properties_Second_kt_chj7a2();
     return ks;
   }
   var ks;
+  function get_kilosecond() {
+    init_properties_Second_kt_chj7a2();
+    return kilosecond;
+  }
   var kilosecond;
   function get_hs() {
     init_properties_Second_kt_chj7a2();
     return hs;
   }
   var hs;
+  function get_hectosecond() {
+    init_properties_Second_kt_chj7a2();
+    return hectosecond;
+  }
   var hectosecond;
   function get_das() {
     init_properties_Second_kt_chj7a2();
     return das;
   }
   var das;
+  function get_decasecond() {
+    init_properties_Second_kt_chj7a2();
+    return decasecond;
+  }
   var decasecond;
   function get_ds() {
     init_properties_Second_kt_chj7a2();
     return ds;
   }
   var ds;
+  function get_decisecond() {
+    init_properties_Second_kt_chj7a2();
+    return decisecond;
+  }
   var decisecond;
   function get_cs() {
     init_properties_Second_kt_chj7a2();
     return cs;
   }
   var cs;
+  function get_centisecond() {
+    init_properties_Second_kt_chj7a2();
+    return centisecond;
+  }
   var centisecond;
   function get_ms() {
     init_properties_Second_kt_chj7a2();
     return ms;
   }
   var ms;
+  function get_millisecond() {
+    init_properties_Second_kt_chj7a2();
+    return millisecond;
+  }
   var millisecond;
   function get_μs() {
     init_properties_Second_kt_chj7a2();
     return μs;
   }
   var μs;
+  function get_microsecond() {
+    init_properties_Second_kt_chj7a2();
+    return microsecond;
+  }
   var microsecond;
   function get_ns() {
     init_properties_Second_kt_chj7a2();
     return ns;
   }
   var ns;
+  function get_nanosecond() {
+    init_properties_Second_kt_chj7a2();
+    return nanosecond;
+  }
   var nanosecond;
   function get_ps() {
     init_properties_Second_kt_chj7a2();
     return ps;
   }
   var ps;
+  function get_picosecond() {
+    init_properties_Second_kt_chj7a2();
+    return picosecond;
+  }
   var picosecond;
   function get_fs() {
     init_properties_Second_kt_chj7a2();
     return fs;
   }
   var fs;
+  function get_femtosecond() {
+    init_properties_Second_kt_chj7a2();
+    return femtosecond;
+  }
   var femtosecond;
   function get_as() {
     init_properties_Second_kt_chj7a2();
     return as;
   }
   var as;
+  function get_attosecond() {
+    init_properties_Second_kt_chj7a2();
+    return attosecond;
+  }
   var attosecond;
   function get_zs() {
     init_properties_Second_kt_chj7a2();
     return zs;
   }
   var zs;
+  function get_zeptosecond() {
+    init_properties_Second_kt_chj7a2();
+    return zeptosecond;
+  }
   var zeptosecond;
   function get_ys() {
     init_properties_Second_kt_chj7a2();
     return ys;
   }
   var ys;
+  function get_yoctosecond() {
+    init_properties_Second_kt_chj7a2();
+    return yoctosecond;
+  }
   var yoctosecond;
   function get_rs() {
     init_properties_Second_kt_chj7a2();
     return rs;
   }
   var rs;
+  function get_rontosecond() {
+    init_properties_Second_kt_chj7a2();
+    return rontosecond;
+  }
   var rontosecond;
   function get_qs() {
     init_properties_Second_kt_chj7a2();
     return qs;
   }
   var qs;
+  function get_quectosecond() {
+    init_properties_Second_kt_chj7a2();
+    return quectosecond;
+  }
   var quectosecond;
   function Second(value) {
     Expression_init_$Init$(value, get_descriptionSecond(), this);
@@ -2506,7 +3173,14 @@
       tmp$ret$1 = null;
     }
     tmp$ret$2 = tmp$ret$1;
-    var f1 = tmp$ret$2;
+    var tmp0_elvis_lhs = tmp$ret$2;
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      return null;
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    var f1 = tmp;
     var tmp$ret$5;
     // Inline function 'kotlin.collections.find' call
     var tmp$ret$4;
@@ -2526,18 +3200,25 @@
       tmp$ret$4 = null;
     }
     tmp$ret$5 = tmp$ret$4;
-    var f2 = tmp$ret$5;
-    var powerValue = ensureNotNull(f1).powerValue + ensureNotNull(f2).powerValue;
-    var tmp;
+    var tmp1_elvis_lhs = tmp$ret$5;
+    var tmp_0;
+    if (tmp1_elvis_lhs == null) {
+      return null;
+    } else {
+      tmp_0 = tmp1_elvis_lhs;
+    }
+    var f2 = tmp_0;
+    var powerValue = f1.powerValue + f2.powerValue;
+    var tmp_1;
     var tmp$ret$6;
     // Inline function 'kotlin.math.abs' call
     tmp$ret$6 = Math.abs(powerValue);
     if (tmp$ret$6 > get_ε()) {
-      tmp = new Factor(f.specification, powerValue);
+      tmp_1 = new Factor(f.specification, powerValue);
     } else {
-      tmp = null;
+      tmp_1 = null;
     }
-    return tmp;
+    return tmp_1;
   }
   function Expression_init_$Init$(value, description, $this) {
     var value_0 = value === void 1 ? 1.0 : value;
@@ -12077,7 +12758,7 @@
     return Da;
   }
   var Da;
-  function get_eV() {
+  function get_ev() {
     init_properties_NonSiUnits_kt_6cvga6();
     return eV;
   }
@@ -12107,7 +12788,7 @@
     tmp$ret$0 = Math.pow(10.0, -27.0);
     return new Kilogram(tmp * tmp$ret$0);
   }
-  function get_eV_0(_this__u8e3s4) {
+  function get_eV(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
     var tmp$ret$0;
     // Inline function 'kotlin.math.pow' call
@@ -12130,7 +12811,7 @@
       L = get_l();
       t = get_kg_0(1000);
       Da = get_Da_0(1);
-      eV = get_eV_0(1);
+      eV = get_eV(1);
       percentage = 0.01;
     }
   }
@@ -12208,97 +12889,169 @@
       configurable: true,
       get: get_QA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettaampere', {
+      configurable: true,
+      get: get_quettaampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'RA', {
       configurable: true,
       get: get_RA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnaampere', {
+      configurable: true,
+      get: get_ronnaampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'YA', {
       configurable: true,
       get: get_YA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottaampere', {
+      configurable: true,
+      get: get_yottaampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ZA', {
       configurable: true,
       get: get_ZA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettaampere', {
+      configurable: true,
+      get: get_zettaampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'EA', {
       configurable: true,
       get: get_EA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exaampere', {
+      configurable: true,
+      get: get_exaampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'PA', {
       configurable: true,
       get: get_PA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petaampere', {
+      configurable: true,
+      get: get_petaampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'TA', {
       configurable: true,
       get: get_TA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'teraampere', {
+      configurable: true,
+      get: get_teraampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'GA', {
       configurable: true,
       get: get_GA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigaampere', {
+      configurable: true,
+      get: get_gigaampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'MA', {
       configurable: true,
       get: get_MA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megaampere', {
+      configurable: true,
+      get: get_megaampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'kA', {
       configurable: true,
       get: get_kA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kiloampere', {
+      configurable: true,
+      get: get_kiloampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hA', {
       configurable: true,
       get: get_hA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectoampere', {
+      configurable: true,
+      get: get_hectoampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'daA', {
       configurable: true,
       get: get_daA
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decaampere', {
+      configurable: true,
+      get: get_decaampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dA', {
       configurable: true,
       get: get_dA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'deciampere', {
+      configurable: true,
+      get: get_deciampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'cA', {
       configurable: true,
       get: get_cA
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centiampere', {
       configurable: true,
-      get: get_mA
+      get: get_centiampere
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'milliampere', {
+      configurable: true,
+      get: get_milliampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCA', {
       configurable: true,
       get: get_μA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'microampere', {
+      configurable: true,
+      get: get_microampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'nA', {
       configurable: true,
       get: get_nA
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanoampere', {
       configurable: true,
-      get: get_pA
+      get: get_nanoampere
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picoampere', {
+      configurable: true,
+      get: get_picoampere
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fA', {
       configurable: true,
       get: get_fA
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtoampere', {
+      configurable: true,
+      get: get_femtoampere
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'aA', {
       configurable: true,
       get: get_aA
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attoampere', {
       configurable: true,
-      get: get_zA
+      get: get_attoampere
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'yA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptoampere', {
       configurable: true,
-      get: get_yA
+      get: get_zeptoampere
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctoampere', {
       configurable: true,
-      get: get_rA
+      get: get_yoctoampere
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qA', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontoampere', {
       configurable: true,
-      get: get_qA
+      get: get_rontoampere
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectoampere', {
+      configurable: true,
+      get: get_quectoampere
     });
     $eu$sirotin$kotunil$base.Ampere = Ampere;
     var $eu = _.eu || (_.eu = {});
@@ -12313,97 +13066,169 @@
       configurable: true,
       get: get_Qcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettacandela', {
+      configurable: true,
+      get: get_quettacandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Rcd', {
       configurable: true,
       get: get_Rcd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnacandela', {
+      configurable: true,
+      get: get_ronnacandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ycd', {
       configurable: true,
       get: get_Ycd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottacandela', {
+      configurable: true,
+      get: get_yottacandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Zcd', {
       configurable: true,
       get: get_Zcd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettacandela', {
+      configurable: true,
+      get: get_zettacandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ecd', {
       configurable: true,
       get: get_Ecd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exacandela', {
+      configurable: true,
+      get: get_exacandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Pcd', {
       configurable: true,
       get: get_Pcd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petacandela', {
+      configurable: true,
+      get: get_petacandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Tcd', {
       configurable: true,
       get: get_Tcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'teracandela', {
+      configurable: true,
+      get: get_teracandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Gcd', {
       configurable: true,
       get: get_Gcd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigacandela', {
+      configurable: true,
+      get: get_gigacandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Mcd', {
       configurable: true,
       get: get_Mcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megacandela', {
+      configurable: true,
+      get: get_megacandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'kcd', {
       configurable: true,
       get: get_kcd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kilocandela', {
+      configurable: true,
+      get: get_kilocandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hcd', {
       configurable: true,
       get: get_hcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectocandela', {
+      configurable: true,
+      get: get_hectocandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dacd', {
       configurable: true,
       get: get_dacd
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decacandela', {
+      configurable: true,
+      get: get_decacandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dcd', {
       configurable: true,
       get: get_dcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decicandela', {
+      configurable: true,
+      get: get_decicandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ccd', {
       configurable: true,
       get: get_ccd
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mcd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centicandela', {
       configurable: true,
-      get: get_mcd
+      get: get_centicandela
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millicandela', {
+      configurable: true,
+      get: get_millicandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCcd', {
       configurable: true,
       get: get_μcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'microcandela', {
+      configurable: true,
+      get: get_microcandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ncd', {
       configurable: true,
       get: get_ncd
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pcd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanocandela', {
       configurable: true,
-      get: get_pcd
+      get: get_nanocandela
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picocandela', {
+      configurable: true,
+      get: get_picocandela
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fcd', {
       configurable: true,
       get: get_fcd
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtocandela', {
+      configurable: true,
+      get: get_femtocandela
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'acd', {
       configurable: true,
       get: get_acd
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zcd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attocandela', {
       configurable: true,
-      get: get_zcd
+      get: get_attocandela
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ycd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptocandela', {
       configurable: true,
-      get: get_ycd
+      get: get_zeptocandela
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rcd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctocandela', {
       configurable: true,
-      get: get_rcd
+      get: get_yoctocandela
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qcd', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontocandela', {
       configurable: true,
-      get: get_qcd
+      get: get_rontocandela
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectocandela', {
+      configurable: true,
+      get: get_quectocandela
     });
     $eu$sirotin$kotunil$base.Candela = Candela;
     var $eu = _.eu || (_.eu = {});
@@ -12418,97 +13243,169 @@
       configurable: true,
       get: get_QK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettakelvin', {
+      configurable: true,
+      get: get_quettakelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'RK', {
       configurable: true,
       get: get_RK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnakelvin', {
+      configurable: true,
+      get: get_ronnakelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'YK', {
       configurable: true,
       get: get_YK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottakelvin', {
+      configurable: true,
+      get: get_yottakelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ZK', {
       configurable: true,
       get: get_ZK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettakelvin', {
+      configurable: true,
+      get: get_zettakelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'EK', {
       configurable: true,
       get: get_EK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exakelvin', {
+      configurable: true,
+      get: get_exakelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'PK', {
       configurable: true,
       get: get_PK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petakelvin', {
+      configurable: true,
+      get: get_petakelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'TK', {
       configurable: true,
       get: get_TK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'terakelvin', {
+      configurable: true,
+      get: get_terakelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'GK', {
       configurable: true,
       get: get_GK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigakelvin', {
+      configurable: true,
+      get: get_gigakelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'MK', {
       configurable: true,
       get: get_MK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megakelvin', {
+      configurable: true,
+      get: get_megakelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'kK', {
       configurable: true,
       get: get_kK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kilokelvin', {
+      configurable: true,
+      get: get_kilokelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hK', {
       configurable: true,
       get: get_hK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectokelvin', {
+      configurable: true,
+      get: get_hectokelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'daK', {
       configurable: true,
       get: get_daK
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decakelvin', {
+      configurable: true,
+      get: get_decakelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dK', {
       configurable: true,
       get: get_dK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decikelvin', {
+      configurable: true,
+      get: get_decikelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'cK', {
       configurable: true,
       get: get_cK
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centikelvin', {
       configurable: true,
-      get: get_mK
+      get: get_centikelvin
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millikelvin', {
+      configurable: true,
+      get: get_millikelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCK', {
       configurable: true,
       get: get_μK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'microkelvin', {
+      configurable: true,
+      get: get_microkelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'nK', {
       configurable: true,
       get: get_nK
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanokelvin', {
       configurable: true,
-      get: get_pK
+      get: get_nanokelvin
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picokelvin', {
+      configurable: true,
+      get: get_picokelvin
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fK', {
       configurable: true,
       get: get_fK
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtokelvin', {
+      configurable: true,
+      get: get_femtokelvin
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'aK', {
       configurable: true,
       get: get_aK
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attokelvin', {
       configurable: true,
-      get: get_zK
+      get: get_attokelvin
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'yK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptokelvin', {
       configurable: true,
-      get: get_yK
+      get: get_zeptokelvin
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctokelvin', {
       configurable: true,
-      get: get_rK
+      get: get_yoctokelvin
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qK', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontokelvin', {
       configurable: true,
-      get: get_qK
+      get: get_rontokelvin
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectokelvin', {
+      configurable: true,
+      get: get_quectokelvin
     });
     $eu$sirotin$kotunil$base.Kelvin = Kelvin;
     var $eu = _.eu || (_.eu = {});
@@ -12523,93 +13420,161 @@
       configurable: true,
       get: get_Qkg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettakilogram', {
+      configurable: true,
+      get: get_quettakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Rkg', {
       configurable: true,
       get: get_Rkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnakilogram', {
+      configurable: true,
+      get: get_ronnakilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ykg', {
       configurable: true,
       get: get_Ykg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottakilogram', {
+      configurable: true,
+      get: get_yottakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Zkg', {
       configurable: true,
       get: get_Zkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettakilogram', {
+      configurable: true,
+      get: get_zettakilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ekg', {
       configurable: true,
       get: get_Ekg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exakilogram', {
+      configurable: true,
+      get: get_exakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Pkg', {
       configurable: true,
       get: get_Pkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petakilogram', {
+      configurable: true,
+      get: get_petakilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Tkg', {
       configurable: true,
       get: get_Tkg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'terakilogram', {
+      configurable: true,
+      get: get_terakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Gkg', {
       configurable: true,
       get: get_Gkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigakilogram', {
+      configurable: true,
+      get: get_gigakilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Mkg', {
       configurable: true,
       get: get_Mkg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megakilogram', {
+      configurable: true,
+      get: get_megakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hkg', {
       configurable: true,
       get: get_hkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectokilogram', {
+      configurable: true,
+      get: get_hectokilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dakg', {
       configurable: true,
       get: get_dakg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decakilogram', {
+      configurable: true,
+      get: get_decakilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dkg', {
       configurable: true,
       get: get_dkg
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decikilogram', {
+      configurable: true,
+      get: get_decikilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ckg', {
       configurable: true,
       get: get_ckg
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mkg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centikilogram', {
       configurable: true,
-      get: get_mkg
+      get: get_centikilogram
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millikilogram', {
+      configurable: true,
+      get: get_millikilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCkg', {
       configurable: true,
       get: get_μkg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'microkilogram', {
+      configurable: true,
+      get: get_microkilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'nkg', {
       configurable: true,
       get: get_nkg
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pkg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanokilogram', {
       configurable: true,
-      get: get_pkg
+      get: get_nanokilogram
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picokilogram', {
+      configurable: true,
+      get: get_picokilogram
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fkg', {
       configurable: true,
       get: get_fkg
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtokilogram', {
+      configurable: true,
+      get: get_femtokilogram
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'akg', {
       configurable: true,
       get: get_akg
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zkg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attokilogram', {
       configurable: true,
-      get: get_zkg
+      get: get_attokilogram
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ykg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptokilogram', {
       configurable: true,
-      get: get_ykg
+      get: get_zeptokilogram
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rkg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctokilogram', {
       configurable: true,
-      get: get_rkg
+      get: get_yoctokilogram
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qkg', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontokilogram', {
       configurable: true,
-      get: get_qkg
+      get: get_rontokilogram
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectokilogram', {
+      configurable: true,
+      get: get_quectokilogram
     });
     $eu$sirotin$kotunil$base.Kilogram = Kilogram;
     var $eu = _.eu || (_.eu = {});
@@ -12624,97 +13589,169 @@
       configurable: true,
       get: get_Qm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettametre', {
+      configurable: true,
+      get: get_quettametre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Rm', {
       configurable: true,
       get: get_Rm
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnametre', {
+      configurable: true,
+      get: get_ronnametre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ym', {
       configurable: true,
       get: get_Ym
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottametre', {
+      configurable: true,
+      get: get_yottametre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Zm', {
       configurable: true,
       get: get_Zm
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettametre', {
+      configurable: true,
+      get: get_zettametre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Em', {
       configurable: true,
       get: get_Em
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exametre', {
+      configurable: true,
+      get: get_exametre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Pm', {
       configurable: true,
       get: get_Pm
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petametre', {
+      configurable: true,
+      get: get_petametre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Tm', {
       configurable: true,
       get: get_Tm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'terametre', {
+      configurable: true,
+      get: get_terametre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Gm', {
       configurable: true,
       get: get_Gm
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigametre', {
+      configurable: true,
+      get: get_gigametre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Mm', {
       configurable: true,
       get: get_Mm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megametre', {
+      configurable: true,
+      get: get_megametre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'km', {
       configurable: true,
       get: get_km
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kilometre', {
+      configurable: true,
+      get: get_kilometre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hm', {
       configurable: true,
       get: get_hm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectometre', {
+      configurable: true,
+      get: get_hectometre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dam', {
       configurable: true,
       get: get_dam
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decametre', {
+      configurable: true,
+      get: get_decametre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dm', {
       configurable: true,
       get: get_dm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decimetre', {
+      configurable: true,
+      get: get_decimetre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'cm', {
       configurable: true,
       get: get_cm
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mm', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centimetre', {
       configurable: true,
-      get: get_mm
+      get: get_centimetre
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millimetre', {
+      configurable: true,
+      get: get_millimetre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCm', {
       configurable: true,
       get: get_μm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'micrometre', {
+      configurable: true,
+      get: get_micrometre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'nm', {
       configurable: true,
       get: get_nm
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pm', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanometre', {
       configurable: true,
-      get: get_pm
+      get: get_nanometre
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picometre', {
+      configurable: true,
+      get: get_picometre
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fm', {
       configurable: true,
       get: get_fm
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtometre', {
+      configurable: true,
+      get: get_femtometre
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'am', {
       configurable: true,
       get: get_am
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zm', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attometre', {
       configurable: true,
-      get: get_zm
+      get: get_attometre
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ym', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptometre', {
       configurable: true,
-      get: get_ym
+      get: get_zeptometre
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rm', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctometre', {
       configurable: true,
-      get: get_rm
+      get: get_yoctometre
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qm', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontometre', {
       configurable: true,
-      get: get_qm
+      get: get_rontometre
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectometre', {
+      configurable: true,
+      get: get_quectometre
     });
     $eu$sirotin$kotunil$base.Metre = Metre;
     var $eu = _.eu || (_.eu = {});
@@ -12729,97 +13766,169 @@
       configurable: true,
       get: get_Qmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettamole', {
+      configurable: true,
+      get: get_quettamole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Rmol', {
       configurable: true,
       get: get_Rmol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnamole', {
+      configurable: true,
+      get: get_ronnamole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ymol', {
       configurable: true,
       get: get_Ymol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottamole', {
+      configurable: true,
+      get: get_yottamole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Zmol', {
       configurable: true,
       get: get_Zmol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettamole', {
+      configurable: true,
+      get: get_zettamole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Emol', {
       configurable: true,
       get: get_Emol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'examole', {
+      configurable: true,
+      get: get_examole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Pmol', {
       configurable: true,
       get: get_Pmol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petamole', {
+      configurable: true,
+      get: get_petamole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Tmol', {
       configurable: true,
       get: get_Tmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'teramole', {
+      configurable: true,
+      get: get_teramole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Gmol', {
       configurable: true,
       get: get_Gmol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigamole', {
+      configurable: true,
+      get: get_gigamole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Mmol', {
       configurable: true,
       get: get_Mmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megamole', {
+      configurable: true,
+      get: get_megamole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'kmol', {
       configurable: true,
       get: get_kmol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kilomole', {
+      configurable: true,
+      get: get_kilomole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hmol', {
       configurable: true,
       get: get_hmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectomole', {
+      configurable: true,
+      get: get_hectomole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'damol', {
       configurable: true,
       get: get_damol
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decamole', {
+      configurable: true,
+      get: get_decamole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'dmol', {
       configurable: true,
       get: get_dmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decimole', {
+      configurable: true,
+      get: get_decimole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'cmol', {
       configurable: true,
       get: get_cmol
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'mmol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centimole', {
       configurable: true,
-      get: get_mmol
+      get: get_centimole
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millimole', {
+      configurable: true,
+      get: get_millimole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCmol', {
       configurable: true,
       get: get_μmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'micromole', {
+      configurable: true,
+      get: get_micromole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'nmol', {
       configurable: true,
       get: get_nmol
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'pmol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanomole', {
       configurable: true,
-      get: get_pmol
+      get: get_nanomole
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picomole', {
+      configurable: true,
+      get: get_picomole
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fmol', {
       configurable: true,
       get: get_fmol
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtomole', {
+      configurable: true,
+      get: get_femtomole
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'amol', {
       configurable: true,
       get: get_amol
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zmol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attomole', {
       configurable: true,
-      get: get_zmol
+      get: get_attomole
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ymol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptomole', {
       configurable: true,
-      get: get_ymol
+      get: get_zeptomole
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rmol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctomole', {
       configurable: true,
-      get: get_rmol
+      get: get_yoctomole
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qmol', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontomole', {
       configurable: true,
-      get: get_qmol
+      get: get_rontomole
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectomole', {
+      configurable: true,
+      get: get_quectomole
     });
     $eu$sirotin$kotunil$base.Mole = Mole;
     var $eu = _.eu || (_.eu = {});
@@ -12834,97 +13943,169 @@
       configurable: true,
       get: get_Qs
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quettasecond', {
+      configurable: true,
+      get: get_quettasecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Rs', {
       configurable: true,
       get: get_Rs
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'ronnasecond', {
+      configurable: true,
+      get: get_ronnasecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ys', {
       configurable: true,
       get: get_Ys
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yottasecond', {
+      configurable: true,
+      get: get_yottasecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Zs', {
       configurable: true,
       get: get_Zs
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zettasecond', {
+      configurable: true,
+      get: get_zettasecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Es', {
       configurable: true,
       get: get_Es
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'exasecond', {
+      configurable: true,
+      get: get_exasecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ps', {
       configurable: true,
       get: get_Ps
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'petasecond', {
+      configurable: true,
+      get: get_petasecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ts', {
       configurable: true,
       get: get_Ts
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'terasecond', {
+      configurable: true,
+      get: get_terasecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Gs', {
       configurable: true,
       get: get_Gs
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'gigasecond', {
+      configurable: true,
+      get: get_gigasecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'Ms', {
       configurable: true,
       get: get_Ms
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'megasecond', {
+      configurable: true,
+      get: get_megasecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ks', {
       configurable: true,
       get: get_ks
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'kilosecond', {
+      configurable: true,
+      get: get_kilosecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'hs', {
       configurable: true,
       get: get_hs
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'hectosecond', {
+      configurable: true,
+      get: get_hectosecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'das', {
       configurable: true,
       get: get_das
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decasecond', {
+      configurable: true,
+      get: get_decasecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ds', {
       configurable: true,
       get: get_ds
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'decisecond', {
+      configurable: true,
+      get: get_decisecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'cs', {
       configurable: true,
       get: get_cs
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ms', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'centisecond', {
       configurable: true,
-      get: get_ms
+      get: get_centisecond
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'millisecond', {
+      configurable: true,
+      get: get_millisecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, '\u03BCs', {
       configurable: true,
       get: get_μs
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'microsecond', {
+      configurable: true,
+      get: get_microsecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'ns', {
       configurable: true,
       get: get_ns
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ps', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'nanosecond', {
       configurable: true,
-      get: get_ps
+      get: get_nanosecond
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'picosecond', {
+      configurable: true,
+      get: get_picosecond
     });
     Object.defineProperty($eu$sirotin$kotunil$base, 'fs', {
       configurable: true,
       get: get_fs
     });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'femtosecond', {
+      configurable: true,
+      get: get_femtosecond
+    });
     Object.defineProperty($eu$sirotin$kotunil$base, 'as', {
       configurable: true,
       get: get_as
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'zs', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'attosecond', {
       configurable: true,
-      get: get_zs
+      get: get_attosecond
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'ys', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'zeptosecond', {
       configurable: true,
-      get: get_ys
+      get: get_zeptosecond
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'rs', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'yoctosecond', {
       configurable: true,
-      get: get_rs
+      get: get_yoctosecond
     });
-    Object.defineProperty($eu$sirotin$kotunil$base, 'qs', {
+    Object.defineProperty($eu$sirotin$kotunil$base, 'rontosecond', {
       configurable: true,
-      get: get_qs
+      get: get_rontosecond
+    });
+    Object.defineProperty($eu$sirotin$kotunil$base, 'quectosecond', {
+      configurable: true,
+      get: get_quectosecond
     });
     $eu$sirotin$kotunil$base.Second = Second;
     var $eu = _.eu || (_.eu = {});
@@ -13379,10 +14560,6 @@
       configurable: true,
       get: get_centibecquerel
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mBq', {
-      configurable: true,
-      get: get_mBq
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millibecquerel', {
       configurable: true,
       get: get_millibecquerel
@@ -13402,10 +14579,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanobecquerel', {
       configurable: true,
       get: get_nanobecquerel
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pBq', {
-      configurable: true,
-      get: get_pBq
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picobecquerel', {
       configurable: true,
@@ -13427,33 +14600,17 @@
       configurable: true,
       get: get_attobecquerel
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zBq', {
-      configurable: true,
-      get: get_zBq
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptobecquerel', {
       configurable: true,
       get: get_zeptobecquerel
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yBq', {
-      configurable: true,
-      get: get_yBq
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctobecquerel', {
       configurable: true,
       get: get_yoctobecquerel
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rBq', {
-      configurable: true,
-      get: get_rBq
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontobecquerel', {
       configurable: true,
       get: get_rontobecquerel
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qBq', {
-      configurable: true,
-      get: get_qBq
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectobecquerel', {
       configurable: true,
@@ -13579,10 +14736,6 @@
       configurable: true,
       get: get_centicoulomb
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mC', {
-      configurable: true,
-      get: get_mC
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millicoulomb', {
       configurable: true,
       get: get_millicoulomb
@@ -13602,10 +14755,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanocoulomb', {
       configurable: true,
       get: get_nanocoulomb
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pC', {
-      configurable: true,
-      get: get_pC
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picocoulomb', {
       configurable: true,
@@ -13627,33 +14776,17 @@
       configurable: true,
       get: get_attocoulomb
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zC', {
-      configurable: true,
-      get: get_zC
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptocoulomb', {
       configurable: true,
       get: get_zeptocoulomb
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yC', {
-      configurable: true,
-      get: get_yC
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctocoulomb', {
       configurable: true,
       get: get_yoctocoulomb
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rC', {
-      configurable: true,
-      get: get_rC
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontocoulomb', {
       configurable: true,
       get: get_rontocoulomb
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qC', {
-      configurable: true,
-      get: get_qC
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectocoulomb', {
       configurable: true,
@@ -13779,10 +14912,6 @@
       configurable: true,
       get: get_centifarad
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mF', {
-      configurable: true,
-      get: get_mF
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millifarad', {
       configurable: true,
       get: get_millifarad
@@ -13802,10 +14931,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanofarad', {
       configurable: true,
       get: get_nanofarad
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pF', {
-      configurable: true,
-      get: get_pF
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picofarad', {
       configurable: true,
@@ -13827,33 +14952,17 @@
       configurable: true,
       get: get_attofarad
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zF', {
-      configurable: true,
-      get: get_zF
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptofarad', {
       configurable: true,
       get: get_zeptofarad
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yF', {
-      configurable: true,
-      get: get_yF
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctofarad', {
       configurable: true,
       get: get_yoctofarad
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rF', {
-      configurable: true,
-      get: get_rF
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontofarad', {
       configurable: true,
       get: get_rontofarad
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qF', {
-      configurable: true,
-      get: get_qF
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectofarad', {
       configurable: true,
@@ -13979,10 +15088,6 @@
       configurable: true,
       get: get_centigray
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mGy', {
-      configurable: true,
-      get: get_mGy
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'milligray', {
       configurable: true,
       get: get_milligray
@@ -14002,10 +15107,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanogray', {
       configurable: true,
       get: get_nanogray
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pGy', {
-      configurable: true,
-      get: get_pGy
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picogray', {
       configurable: true,
@@ -14027,33 +15128,17 @@
       configurable: true,
       get: get_attogray
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zGy', {
-      configurable: true,
-      get: get_zGy
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptogray', {
       configurable: true,
       get: get_zeptogray
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yGy', {
-      configurable: true,
-      get: get_yGy
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctogray', {
       configurable: true,
       get: get_yoctogray
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rGy', {
-      configurable: true,
-      get: get_rGy
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontogray', {
       configurable: true,
       get: get_rontogray
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qGy', {
-      configurable: true,
-      get: get_qGy
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectogray', {
       configurable: true,
@@ -14179,10 +15264,6 @@
       configurable: true,
       get: get_centihenry
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mH', {
-      configurable: true,
-      get: get_mH
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millihenry', {
       configurable: true,
       get: get_millihenry
@@ -14202,10 +15283,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanohenry', {
       configurable: true,
       get: get_nanohenry
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pH', {
-      configurable: true,
-      get: get_pH
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picohenry', {
       configurable: true,
@@ -14227,33 +15304,17 @@
       configurable: true,
       get: get_attohenry
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zH', {
-      configurable: true,
-      get: get_zH
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptohenry', {
       configurable: true,
       get: get_zeptohenry
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yH', {
-      configurable: true,
-      get: get_yH
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctohenry', {
       configurable: true,
       get: get_yoctohenry
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rH', {
-      configurable: true,
-      get: get_rH
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontohenry', {
       configurable: true,
       get: get_rontohenry
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qH', {
-      configurable: true,
-      get: get_qH
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectohenry', {
       configurable: true,
@@ -14379,10 +15440,6 @@
       configurable: true,
       get: get_centihertz
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mHz', {
-      configurable: true,
-      get: get_mHz
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millihertz', {
       configurable: true,
       get: get_millihertz
@@ -14402,10 +15459,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanohertz', {
       configurable: true,
       get: get_nanohertz
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pHz', {
-      configurable: true,
-      get: get_pHz
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picohertz', {
       configurable: true,
@@ -14427,33 +15480,17 @@
       configurable: true,
       get: get_attohertz
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zHz', {
-      configurable: true,
-      get: get_zHz
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptohertz', {
       configurable: true,
       get: get_zeptohertz
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yHz', {
-      configurable: true,
-      get: get_yHz
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctohertz', {
       configurable: true,
       get: get_yoctohertz
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rHz', {
-      configurable: true,
-      get: get_rHz
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontohertz', {
       configurable: true,
       get: get_rontohertz
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qHz', {
-      configurable: true,
-      get: get_qHz
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectohertz', {
       configurable: true,
@@ -14579,10 +15616,6 @@
       configurable: true,
       get: get_centijoule
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mJ', {
-      configurable: true,
-      get: get_mJ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millijoule', {
       configurable: true,
       get: get_millijoule
@@ -14602,10 +15635,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanojoule', {
       configurable: true,
       get: get_nanojoule
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pJ', {
-      configurable: true,
-      get: get_pJ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picojoule', {
       configurable: true,
@@ -14627,33 +15656,17 @@
       configurable: true,
       get: get_attojoule
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zJ', {
-      configurable: true,
-      get: get_zJ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptojoule', {
       configurable: true,
       get: get_zeptojoule
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yJ', {
-      configurable: true,
-      get: get_yJ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctojoule', {
       configurable: true,
       get: get_yoctojoule
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rJ', {
-      configurable: true,
-      get: get_rJ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontojoule', {
       configurable: true,
       get: get_rontojoule
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qJ', {
-      configurable: true,
-      get: get_qJ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectojoule', {
       configurable: true,
@@ -14779,10 +15792,6 @@
       configurable: true,
       get: get_centikatal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mkat', {
-      configurable: true,
-      get: get_mkat
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millikatal', {
       configurable: true,
       get: get_millikatal
@@ -14802,10 +15811,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanokatal', {
       configurable: true,
       get: get_nanokatal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pkat', {
-      configurable: true,
-      get: get_pkat
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picokatal', {
       configurable: true,
@@ -14827,33 +15832,17 @@
       configurable: true,
       get: get_attokatal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zkat', {
-      configurable: true,
-      get: get_zkat
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptokatal', {
       configurable: true,
       get: get_zeptokatal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'ykat', {
-      configurable: true,
-      get: get_ykat
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctokatal', {
       configurable: true,
       get: get_yoctokatal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rkat', {
-      configurable: true,
-      get: get_rkat
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontokatal', {
       configurable: true,
       get: get_rontokatal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qkat', {
-      configurable: true,
-      get: get_qkat
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectokatal', {
       configurable: true,
@@ -14979,10 +15968,6 @@
       configurable: true,
       get: get_centilumen
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mlm', {
-      configurable: true,
-      get: get_mlm
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millilumen', {
       configurable: true,
       get: get_millilumen
@@ -15002,10 +15987,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanolumen', {
       configurable: true,
       get: get_nanolumen
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'plm', {
-      configurable: true,
-      get: get_plm
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picolumen', {
       configurable: true,
@@ -15027,33 +16008,17 @@
       configurable: true,
       get: get_attolumen
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zlm', {
-      configurable: true,
-      get: get_zlm
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptolumen', {
       configurable: true,
       get: get_zeptolumen
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'ylm', {
-      configurable: true,
-      get: get_ylm
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctolumen', {
       configurable: true,
       get: get_yoctolumen
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rlm', {
-      configurable: true,
-      get: get_rlm
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontolumen', {
       configurable: true,
       get: get_rontolumen
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qlm', {
-      configurable: true,
-      get: get_qlm
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectolumen', {
       configurable: true,
@@ -15179,10 +16144,6 @@
       configurable: true,
       get: get_centilux
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mlx', {
-      configurable: true,
-      get: get_mlx
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millilux', {
       configurable: true,
       get: get_millilux
@@ -15202,10 +16163,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanolux', {
       configurable: true,
       get: get_nanolux
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'plx', {
-      configurable: true,
-      get: get_plx
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picolux', {
       configurable: true,
@@ -15227,33 +16184,17 @@
       configurable: true,
       get: get_attolux
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zlx', {
-      configurable: true,
-      get: get_zlx
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptolux', {
       configurable: true,
       get: get_zeptolux
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'ylx', {
-      configurable: true,
-      get: get_ylx
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctolux', {
       configurable: true,
       get: get_yoctolux
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rlx', {
-      configurable: true,
-      get: get_rlx
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontolux', {
       configurable: true,
       get: get_rontolux
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qlx', {
-      configurable: true,
-      get: get_qlx
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectolux', {
       configurable: true,
@@ -15379,10 +16320,6 @@
       configurable: true,
       get: get_centinewton
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mN', {
-      configurable: true,
-      get: get_mN
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millinewton', {
       configurable: true,
       get: get_millinewton
@@ -15402,10 +16339,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanonewton', {
       configurable: true,
       get: get_nanonewton
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pN', {
-      configurable: true,
-      get: get_pN
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'piconewton', {
       configurable: true,
@@ -15427,33 +16360,17 @@
       configurable: true,
       get: get_attonewton
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zN', {
-      configurable: true,
-      get: get_zN
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptonewton', {
       configurable: true,
       get: get_zeptonewton
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yN', {
-      configurable: true,
-      get: get_yN
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctonewton', {
       configurable: true,
       get: get_yoctonewton
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rN', {
-      configurable: true,
-      get: get_rN
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontonewton', {
       configurable: true,
       get: get_rontonewton
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qN', {
-      configurable: true,
-      get: get_qN
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectonewton', {
       configurable: true,
@@ -15579,10 +16496,6 @@
       configurable: true,
       get: get_centiohm
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'm\u03A9', {
-      configurable: true,
-      get: get_mΩ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'milliohm', {
       configurable: true,
       get: get_milliohm
@@ -15602,10 +16515,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanoohm', {
       configurable: true,
       get: get_nanoohm
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'p\u03A9', {
-      configurable: true,
-      get: get_pΩ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picoohm', {
       configurable: true,
@@ -15627,33 +16536,17 @@
       configurable: true,
       get: get_attoohm
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'z\u03A9', {
-      configurable: true,
-      get: get_zΩ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptoohm', {
       configurable: true,
       get: get_zeptoohm
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'y\u03A9', {
-      configurable: true,
-      get: get_yΩ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctoohm', {
       configurable: true,
       get: get_yoctoohm
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'r\u03A9', {
-      configurable: true,
-      get: get_rΩ
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontoohm', {
       configurable: true,
       get: get_rontoohm
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'q\u03A9', {
-      configurable: true,
-      get: get_qΩ
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectoohm', {
       configurable: true,
@@ -15779,10 +16672,6 @@
       configurable: true,
       get: get_centipascal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mPa', {
-      configurable: true,
-      get: get_mPa
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millipascal', {
       configurable: true,
       get: get_millipascal
@@ -15802,10 +16691,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanopascal', {
       configurable: true,
       get: get_nanopascal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pPa', {
-      configurable: true,
-      get: get_pPa
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picopascal', {
       configurable: true,
@@ -15827,33 +16712,17 @@
       configurable: true,
       get: get_attopascal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zPa', {
-      configurable: true,
-      get: get_zPa
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptopascal', {
       configurable: true,
       get: get_zeptopascal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yPa', {
-      configurable: true,
-      get: get_yPa
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctopascal', {
       configurable: true,
       get: get_yoctopascal
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rPa', {
-      configurable: true,
-      get: get_rPa
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontopascal', {
       configurable: true,
       get: get_rontopascal
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qPa', {
-      configurable: true,
-      get: get_qPa
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectopascal', {
       configurable: true,
@@ -15979,10 +16848,6 @@
       configurable: true,
       get: get_centiradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mrad', {
-      configurable: true,
-      get: get_mrad
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'milliradian', {
       configurable: true,
       get: get_milliradian
@@ -16002,10 +16867,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanoradian', {
       configurable: true,
       get: get_nanoradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'prad', {
-      configurable: true,
-      get: get_prad
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picoradian', {
       configurable: true,
@@ -16027,33 +16888,17 @@
       configurable: true,
       get: get_attoradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zrad', {
-      configurable: true,
-      get: get_zrad
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptoradian', {
       configurable: true,
       get: get_zeptoradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yrad', {
-      configurable: true,
-      get: get_yrad
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctoradian', {
       configurable: true,
       get: get_yoctoradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rrad', {
-      configurable: true,
-      get: get_rrad
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontoradian', {
       configurable: true,
       get: get_rontoradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qrad', {
-      configurable: true,
-      get: get_qrad
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectoradian', {
       configurable: true,
@@ -16179,10 +17024,6 @@
       configurable: true,
       get: get_centisiemens
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mS', {
-      configurable: true,
-      get: get_mS
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millisiemens', {
       configurable: true,
       get: get_millisiemens
@@ -16202,10 +17043,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanosiemens', {
       configurable: true,
       get: get_nanosiemens
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pS', {
-      configurable: true,
-      get: get_pS
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picosiemens', {
       configurable: true,
@@ -16227,33 +17064,17 @@
       configurable: true,
       get: get_attosiemens
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zS', {
-      configurable: true,
-      get: get_zS
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptosiemens', {
       configurable: true,
       get: get_zeptosiemens
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yS', {
-      configurable: true,
-      get: get_yS
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctosiemens', {
       configurable: true,
       get: get_yoctosiemens
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rS', {
-      configurable: true,
-      get: get_rS
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontosiemens', {
       configurable: true,
       get: get_rontosiemens
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qS', {
-      configurable: true,
-      get: get_qS
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectosiemens', {
       configurable: true,
@@ -16379,10 +17200,6 @@
       configurable: true,
       get: get_centisievert
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mSv', {
-      configurable: true,
-      get: get_mSv
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millisievert', {
       configurable: true,
       get: get_millisievert
@@ -16402,10 +17219,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanosievert', {
       configurable: true,
       get: get_nanosievert
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pSv', {
-      configurable: true,
-      get: get_pSv
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picosievert', {
       configurable: true,
@@ -16427,33 +17240,17 @@
       configurable: true,
       get: get_attosievert
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zSv', {
-      configurable: true,
-      get: get_zSv
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptosievert', {
       configurable: true,
       get: get_zeptosievert
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'ySv', {
-      configurable: true,
-      get: get_ySv
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctosievert', {
       configurable: true,
       get: get_yoctosievert
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rSv', {
-      configurable: true,
-      get: get_rSv
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontosievert', {
       configurable: true,
       get: get_rontosievert
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qSv', {
-      configurable: true,
-      get: get_qSv
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectosievert', {
       configurable: true,
@@ -16579,10 +17376,6 @@
       configurable: true,
       get: get_centisteradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'msr', {
-      configurable: true,
-      get: get_msr
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millisteradian', {
       configurable: true,
       get: get_millisteradian
@@ -16602,10 +17395,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanosteradian', {
       configurable: true,
       get: get_nanosteradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'psr', {
-      configurable: true,
-      get: get_psr
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picosteradian', {
       configurable: true,
@@ -16627,33 +17416,17 @@
       configurable: true,
       get: get_attosteradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zsr', {
-      configurable: true,
-      get: get_zsr
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptosteradian', {
       configurable: true,
       get: get_zeptosteradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'ysr', {
-      configurable: true,
-      get: get_ysr
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctosteradian', {
       configurable: true,
       get: get_yoctosteradian
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rsr', {
-      configurable: true,
-      get: get_rsr
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontosteradian', {
       configurable: true,
       get: get_rontosteradian
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qsr', {
-      configurable: true,
-      get: get_qsr
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectosteradian', {
       configurable: true,
@@ -16779,10 +17552,6 @@
       configurable: true,
       get: get_centitesla
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mT', {
-      configurable: true,
-      get: get_mT
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millitesla', {
       configurable: true,
       get: get_millitesla
@@ -16802,10 +17571,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanotesla', {
       configurable: true,
       get: get_nanotesla
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pT', {
-      configurable: true,
-      get: get_pT
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picotesla', {
       configurable: true,
@@ -16827,33 +17592,17 @@
       configurable: true,
       get: get_attotesla
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zT', {
-      configurable: true,
-      get: get_zT
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptotesla', {
       configurable: true,
       get: get_zeptotesla
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yT', {
-      configurable: true,
-      get: get_yT
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctotesla', {
       configurable: true,
       get: get_yoctotesla
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rT', {
-      configurable: true,
-      get: get_rT
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontotesla', {
       configurable: true,
       get: get_rontotesla
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qT', {
-      configurable: true,
-      get: get_qT
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectotesla', {
       configurable: true,
@@ -16979,10 +17728,6 @@
       configurable: true,
       get: get_centivolt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mV', {
-      configurable: true,
-      get: get_mV
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'millivolt', {
       configurable: true,
       get: get_millivolt
@@ -17002,10 +17747,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanovolt', {
       configurable: true,
       get: get_nanovolt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pV', {
-      configurable: true,
-      get: get_pV
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picovolt', {
       configurable: true,
@@ -17027,33 +17768,17 @@
       configurable: true,
       get: get_attovolt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zV', {
-      configurable: true,
-      get: get_zV
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptovolt', {
       configurable: true,
       get: get_zeptovolt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yV', {
-      configurable: true,
-      get: get_yV
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctovolt', {
       configurable: true,
       get: get_yoctovolt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rV', {
-      configurable: true,
-      get: get_rV
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontovolt', {
       configurable: true,
       get: get_rontovolt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qV', {
-      configurable: true,
-      get: get_qV
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectovolt', {
       configurable: true,
@@ -17179,10 +17904,6 @@
       configurable: true,
       get: get_centiwatt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mW', {
-      configurable: true,
-      get: get_mW
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'milliwatt', {
       configurable: true,
       get: get_milliwatt
@@ -17202,10 +17923,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanowatt', {
       configurable: true,
       get: get_nanowatt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pW', {
-      configurable: true,
-      get: get_pW
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picowatt', {
       configurable: true,
@@ -17227,33 +17944,17 @@
       configurable: true,
       get: get_attowatt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zW', {
-      configurable: true,
-      get: get_zW
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptowatt', {
       configurable: true,
       get: get_zeptowatt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yW', {
-      configurable: true,
-      get: get_yW
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctowatt', {
       configurable: true,
       get: get_yoctowatt
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rW', {
-      configurable: true,
-      get: get_rW
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontowatt', {
       configurable: true,
       get: get_rontowatt
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qW', {
-      configurable: true,
-      get: get_qW
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectowatt', {
       configurable: true,
@@ -17379,10 +18080,6 @@
       configurable: true,
       get: get_centiweber
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'mWb', {
-      configurable: true,
-      get: get_mWb
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'milliweber', {
       configurable: true,
       get: get_milliweber
@@ -17402,10 +18099,6 @@
     Object.defineProperty($eu$sirotin$kotunil$derived, 'nanoweber', {
       configurable: true,
       get: get_nanoweber
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'pWb', {
-      configurable: true,
-      get: get_pWb
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'picoweber', {
       configurable: true,
@@ -17427,33 +18120,17 @@
       configurable: true,
       get: get_attoweber
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'zWb', {
-      configurable: true,
-      get: get_zWb
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'zeptoweber', {
       configurable: true,
       get: get_zeptoweber
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'yWb', {
-      configurable: true,
-      get: get_yWb
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'yoctoweber', {
       configurable: true,
       get: get_yoctoweber
     });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'rWb', {
-      configurable: true,
-      get: get_rWb
-    });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'rontoweber', {
       configurable: true,
       get: get_rontoweber
-    });
-    Object.defineProperty($eu$sirotin$kotunil$derived, 'qWb', {
-      configurable: true,
-      get: get_qWb
     });
     Object.defineProperty($eu$sirotin$kotunil$derived, 'quectoweber', {
       configurable: true,
@@ -17491,10 +18168,6 @@
       configurable: true,
       get: get_ha
     });
-    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'l', {
-      configurable: true,
-      get: get_l
-    });
     Object.defineProperty($eu$sirotin$kotunil$specialunits, 'L', {
       configurable: true,
       get: get_L
@@ -17507,9 +18180,9 @@
       configurable: true,
       get: get_Da
     });
-    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'eV', {
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'ev', {
       configurable: true,
-      get: get_eV
+      get: get_ev
     });
     Object.defineProperty($eu$sirotin$kotunil$specialunits, 'percentage', {
       configurable: true,

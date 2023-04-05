@@ -51,3 +51,9 @@ val siPrefixes: List<SiPrefix> = listOf(
 
 
 data class SiPrefix(val name: String, val symbol: String, val degree: Int)
+
+val specialSymbols = listOf("z", "y", "r", "q", "p", "m")
+fun conditionalPush(prefix: String, s: String): String {
+    if(specialSymbols.contains(prefix))return ""
+    return s
+}

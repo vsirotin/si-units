@@ -14,168 +14,144 @@ public class  KelvinJavaConsoleTest {
         
         double pow30 = Math.pow(10.0, 30);
         Checker.check(new Kelvin(1.0).times(pow30), QK);
-        Checker.check(new Kelvin(1.0).times(pow30), getQuettakelvin());
-        Checker.check(QK, getQuettakelvin());
+        Checker.check(QK, quettakelvin);
 
    
         
         double pow27 = Math.pow(10.0, 27);
         Checker.check(new Kelvin(1.0).times(pow27), RK);
-        Checker.check(new Kelvin(1.0).times(pow27), getRonnakelvin());
-        Checker.check(RK, getRonnakelvin());
+        Checker.check(RK, ronnakelvin);
 
    
         
         double pow24 = Math.pow(10.0, 24);
         Checker.check(new Kelvin(1.0).times(pow24), YK);
-        Checker.check(new Kelvin(1.0).times(pow24), getYottakelvin());
-        Checker.check(YK, getYottakelvin());
+        Checker.check(YK, yottakelvin);
 
    
         
         double pow21 = Math.pow(10.0, 21);
         Checker.check(new Kelvin(1.0).times(pow21), ZK);
-        Checker.check(new Kelvin(1.0).times(pow21), getZettakelvin());
-        Checker.check(ZK, getZettakelvin());
+        Checker.check(ZK, zettakelvin);
 
    
         
         double pow18 = Math.pow(10.0, 18);
         Checker.check(new Kelvin(1.0).times(pow18), EK);
-        Checker.check(new Kelvin(1.0).times(pow18), getExakelvin());
-        Checker.check(EK, getExakelvin());
+        Checker.check(EK, exakelvin);
 
    
         
         double pow15 = Math.pow(10.0, 15);
         Checker.check(new Kelvin(1.0).times(pow15), PK);
-        Checker.check(new Kelvin(1.0).times(pow15), getPetakelvin());
-        Checker.check(PK, getPetakelvin());
+        Checker.check(PK, petakelvin);
 
    
         
         double pow12 = Math.pow(10.0, 12);
         Checker.check(new Kelvin(1.0).times(pow12), TK);
-        Checker.check(new Kelvin(1.0).times(pow12), getTerakelvin());
-        Checker.check(TK, getTerakelvin());
+        Checker.check(TK, terakelvin);
 
    
         
         double pow9 = Math.pow(10.0, 9);
         Checker.check(new Kelvin(1.0).times(pow9), GK);
-        Checker.check(new Kelvin(1.0).times(pow9), getGigakelvin());
-        Checker.check(GK, getGigakelvin());
+        Checker.check(GK, gigakelvin);
 
    
         
         double pow6 = Math.pow(10.0, 6);
         Checker.check(new Kelvin(1.0).times(pow6), MK);
-        Checker.check(new Kelvin(1.0).times(pow6), getMegakelvin());
-        Checker.check(MK, getMegakelvin());
+        Checker.check(MK, megakelvin);
 
    
         
         double pow3 = Math.pow(10.0, 3);
         Checker.check(new Kelvin(1.0).times(pow3), kK);
-        Checker.check(new Kelvin(1.0).times(pow3), getKilokelvin());
-        Checker.check(kK, getKilokelvin());
+        Checker.check(kK, kilokelvin);
 
    
         
         double pow2 = Math.pow(10.0, 2);
         Checker.check(new Kelvin(1.0).times(pow2), hK);
-        Checker.check(new Kelvin(1.0).times(pow2), getHectokelvin());
-        Checker.check(hK, getHectokelvin());
+        Checker.check(hK, hectokelvin);
 
    
         
         double pow1 = Math.pow(10.0, 1);
         Checker.check(new Kelvin(1.0).times(pow1), daK);
-        Checker.check(new Kelvin(1.0).times(pow1), getDecakelvin());
-        Checker.check(daK, getDecakelvin());
+        Checker.check(daK, decakelvin);
 
    
         
         double powM1 = Math.pow(10.0, -1);
         Checker.check(new Kelvin(1.0).times(powM1), dK);
-        Checker.check(new Kelvin(1.0).times(powM1), getDecikelvin());
-        Checker.check(dK, getDecikelvin());
+        Checker.check(dK, decikelvin);
 
    
         
         double powM2 = Math.pow(10.0, -2);
         Checker.check(new Kelvin(1.0).times(powM2), cK);
-        Checker.check(new Kelvin(1.0).times(powM2), getCentikelvin());
-        Checker.check(cK, getCentikelvin());
+        Checker.check(cK, centikelvin);
 
    
         
         double powM3 = Math.pow(10.0, -3);
         Checker.check(new Kelvin(1.0).times(powM3), mK);
-        Checker.check(new Kelvin(1.0).times(powM3), getMillikelvin());
-        Checker.check(mK, getMillikelvin());
+        Checker.check(mK, millikelvin);
 
    
         
         double powM6 = Math.pow(10.0, -6);
         Checker.check(new Kelvin(1.0).times(powM6), μK);
-        Checker.check(new Kelvin(1.0).times(powM6), getMicrokelvin());
-        Checker.check(μK, getMicrokelvin());
+        Checker.check(μK, microkelvin);
 
    
         
         double powM9 = Math.pow(10.0, -9);
         Checker.check(new Kelvin(1.0).times(powM9), nK);
-        Checker.check(new Kelvin(1.0).times(powM9), getNanokelvin());
-        Checker.check(nK, getNanokelvin());
+        Checker.check(nK, nanokelvin);
 
    
         
         double powM12 = Math.pow(10.0, -12);
         Checker.check(new Kelvin(1.0).times(powM12), pK);
-        Checker.check(new Kelvin(1.0).times(powM12), getPicokelvin());
-        Checker.check(pK, getPicokelvin());
+        Checker.check(pK, picokelvin);
 
    
         
         double powM15 = Math.pow(10.0, -15);
         Checker.check(new Kelvin(1.0).times(powM15), fK);
-        Checker.check(new Kelvin(1.0).times(powM15), getFemtokelvin());
-        Checker.check(fK, getFemtokelvin());
+        Checker.check(fK, femtokelvin);
 
    
         
         double powM18 = Math.pow(10.0, -18);
         Checker.check(new Kelvin(1.0).times(powM18), aK);
-        Checker.check(new Kelvin(1.0).times(powM18), getAttokelvin());
-        Checker.check(aK, getAttokelvin());
+        Checker.check(aK, attokelvin);
 
    
         
         double powM21 = Math.pow(10.0, -21);
         Checker.check(new Kelvin(1.0).times(powM21), zK);
-        Checker.check(new Kelvin(1.0).times(powM21), getZeptokelvin());
-        Checker.check(zK, getZeptokelvin());
+        Checker.check(zK, zeptokelvin);
 
    
         
         double powM24 = Math.pow(10.0, -24);
         Checker.check(new Kelvin(1.0).times(powM24), yK);
-        Checker.check(new Kelvin(1.0).times(powM24), getYoctokelvin());
-        Checker.check(yK, getYoctokelvin());
+        Checker.check(yK, yoctokelvin);
 
    
         
         double powM27 = Math.pow(10.0, -27);
         Checker.check(new Kelvin(1.0).times(powM27), rK);
-        Checker.check(new Kelvin(1.0).times(powM27), getRontokelvin());
-        Checker.check(rK, getRontokelvin());
+        Checker.check(rK, rontokelvin);
 
    
         
         double powM30 = Math.pow(10.0, -30);
         Checker.check(new Kelvin(1.0).times(powM30), qK);
-        Checker.check(new Kelvin(1.0).times(powM30), getQuectokelvin());
-        Checker.check(qK, getQuectokelvin());
+        Checker.check(qK, quectokelvin);
    }
 }

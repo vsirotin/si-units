@@ -13,5 +13,4 @@ val Number.`A$` : AustralianDollar
 /**
 * One unit of Australian dollar
 */
-@JvmField
 val `A$` = AustralianDollar()

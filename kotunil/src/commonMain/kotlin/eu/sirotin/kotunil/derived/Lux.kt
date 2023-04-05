@@ -15,7 +15,7 @@ private val unit =  cd*sr*(m `^` -2)
 /**
 * System International Unit for illuminance.
 */
-//@JsExport
+@JsExport
 @JvmField
 val lx = unit
 
@@ -48,9 +48,8 @@ val Number.quettalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Qlx") 
 /**
 * Qlx, 10^30 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -60,9 +59,8 @@ val Qlx = 10.0.pow(30) * (cd*sr*(m `^` -2))
 * quettalux, 10^30 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quettalux")
 val quettalux = Qlx
     
 
@@ -85,9 +83,8 @@ val Number.ronnalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Rlx") 
 /**
 * Rlx, 10^27 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -97,9 +94,8 @@ val Rlx = 10.0.pow(27) * (cd*sr*(m `^` -2))
 * ronnalux, 10^27 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ronnalux")
 val ronnalux = Rlx
     
 
@@ -122,9 +118,8 @@ val Number.yottalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Ylx") 
 /**
 * Ylx, 10^24 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -134,9 +129,8 @@ val Ylx = 10.0.pow(24) * (cd*sr*(m `^` -2))
 * yottalux, 10^24 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yottalux")
 val yottalux = Ylx
     
 
@@ -159,9 +153,8 @@ val Number.zettalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Zlx") 
 /**
 * Zlx, 10^21 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -171,9 +164,8 @@ val Zlx = 10.0.pow(21) * (cd*sr*(m `^` -2))
 * zettalux, 10^21 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zettalux")
 val zettalux = Zlx
     
 
@@ -196,9 +188,8 @@ val Number.exalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Elx") 
 /**
 * Elx, 10^18 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -208,9 +199,8 @@ val Elx = 10.0.pow(18) * (cd*sr*(m `^` -2))
 * exalux, 10^18 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("exalux")
 val exalux = Elx
     
 
@@ -233,9 +223,8 @@ val Number.petalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Plx") 
 /**
 * Plx, 10^15 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -245,9 +234,8 @@ val Plx = 10.0.pow(15) * (cd*sr*(m `^` -2))
 * petalux, 10^15 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("petalux")
 val petalux = Plx
     
 
@@ -270,9 +258,8 @@ val Number.teralux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Tlx") 
 /**
 * Tlx, 10^12 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -282,9 +269,8 @@ val Tlx = 10.0.pow(12) * (cd*sr*(m `^` -2))
 * teralux, 10^12 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("teralux")
 val teralux = Tlx
     
 
@@ -307,9 +293,8 @@ val Number.gigalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Glx") 
 /**
 * Glx, 10^9 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -319,9 +304,8 @@ val Glx = 10.0.pow(9) * (cd*sr*(m `^` -2))
 * gigalux, 10^9 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("gigalux")
 val gigalux = Glx
     
 
@@ -344,9 +328,8 @@ val Number.megalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("Mlx") 
 /**
 * Mlx, 10^6 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -356,9 +339,8 @@ val Mlx = 10.0.pow(6) * (cd*sr*(m `^` -2))
 * megalux, 10^6 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("megalux")
 val megalux = Mlx
     
 
@@ -381,9 +363,8 @@ val Number.kilolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("klx") 
 /**
 * klx, 10^3 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -393,9 +374,8 @@ val klx = 10.0.pow(3) * (cd*sr*(m `^` -2))
 * kilolux, 10^3 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kilolux")
 val kilolux = klx
     
 
@@ -418,9 +398,8 @@ val Number.hectolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hlx") 
 /**
 * hlx, 10^2 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -430,9 +409,8 @@ val hlx = 10.0.pow(2) * (cd*sr*(m `^` -2))
 * hectolux, 10^2 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hectolux")
 val hectolux = hlx
     
 
@@ -455,9 +433,8 @@ val Number.decalux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("dalx") 
 /**
 * dalx, 10^1 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -467,9 +444,8 @@ val dalx = 10.0.pow(1) * (cd*sr*(m `^` -2))
 * decalux, 10^1 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decalux")
 val decalux = dalx
     
 
@@ -492,9 +468,8 @@ val Number.decilux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("dlx") 
 /**
 * dlx, 10^-1 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -504,9 +479,8 @@ val dlx = 10.0.pow(-1) * (cd*sr*(m `^` -2))
 * decilux, 10^-1 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decilux")
 val decilux = dlx
     
 
@@ -529,9 +503,8 @@ val Number.centilux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("clx") 
 /**
 * clx, 10^-2 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -541,9 +514,8 @@ val clx = 10.0.pow(-2) * (cd*sr*(m `^` -2))
 * centilux, 10^-2 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("centilux")
 val centilux = clx
     
 
@@ -566,9 +538,8 @@ val Number.millilux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("mlx") 
 /**
 * mlx, 10^-3 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -578,9 +549,8 @@ val mlx = 10.0.pow(-3) * (cd*sr*(m `^` -2))
 * millilux, 10^-3 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("millilux")
 val millilux = mlx
     
 
@@ -603,9 +573,8 @@ val Number.microlux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("μlx") 
 /**
 * μlx, 10^-6 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -615,9 +584,8 @@ val μlx = 10.0.pow(-6) * (cd*sr*(m `^` -2))
 * microlux, 10^-6 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("microlux")
 val microlux = μlx
     
 
@@ -640,9 +608,8 @@ val Number.nanolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nlx") 
 /**
 * nlx, 10^-9 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -652,9 +619,8 @@ val nlx = 10.0.pow(-9) * (cd*sr*(m `^` -2))
 * nanolux, 10^-9 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nanolux")
 val nanolux = nlx
     
 
@@ -677,9 +643,8 @@ val Number.picolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("plx") 
 /**
 * plx, 10^-12 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -689,9 +654,8 @@ val plx = 10.0.pow(-12) * (cd*sr*(m `^` -2))
 * picolux, 10^-12 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("picolux")
 val picolux = plx
     
 
@@ -714,9 +678,8 @@ val Number.femtolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("flx") 
 /**
 * flx, 10^-15 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -726,9 +689,8 @@ val flx = 10.0.pow(-15) * (cd*sr*(m `^` -2))
 * femtolux, 10^-15 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("femtolux")
 val femtolux = flx
     
 
@@ -751,9 +713,8 @@ val Number.attolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("alx") 
 /**
 * alx, 10^-18 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -763,9 +724,8 @@ val alx = 10.0.pow(-18) * (cd*sr*(m `^` -2))
 * attolux, 10^-18 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("attolux")
 val attolux = alx
     
 
@@ -788,9 +748,8 @@ val Number.zeptolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("zlx") 
 /**
 * zlx, 10^-21 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -800,9 +759,8 @@ val zlx = 10.0.pow(-21) * (cd*sr*(m `^` -2))
 * zeptolux, 10^-21 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zeptolux")
 val zeptolux = zlx
     
 
@@ -825,9 +783,8 @@ val Number.yoctolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("ylx") 
 /**
 * ylx, 10^-24 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -837,9 +794,8 @@ val ylx = 10.0.pow(-24) * (cd*sr*(m `^` -2))
 * yoctolux, 10^-24 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yoctolux")
 val yoctolux = ylx
     
 
@@ -862,9 +818,8 @@ val Number.rontolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("rlx") 
 /**
 * rlx, 10^-27 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -874,9 +829,8 @@ val rlx = 10.0.pow(-27) * (cd*sr*(m `^` -2))
 * rontolux, 10^-27 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("rontolux")
 val rontolux = rlx
     
 
@@ -899,9 +853,8 @@ val Number.quectolux : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("qlx") 
 /**
 * qlx, 10^-30 of lux, derived SI-Unit for measurement of illuminance
 */        
@@ -911,8 +864,7 @@ val qlx = 10.0.pow(-30) * (cd*sr*(m `^` -2))
 * quectolux, 10^-30 of lux, derived SI-Unit for measurement of illuminance
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quectolux")
 val quectolux = qlx
     

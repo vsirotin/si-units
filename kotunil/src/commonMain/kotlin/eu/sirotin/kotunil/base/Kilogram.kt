@@ -19,7 +19,7 @@ private val descriptionKilogram = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-//@JsExport
+@JsExport
 class Kilogram(value: Double) : Expression(value, description = descriptionKilogram)
     /**
      * Creates Kilogram-Object for current number value. Kilogram is a System International Unit for mass.
@@ -33,9 +33,8 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
     /**
      * System International Unit for mass.
      */
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("kg")
     val kg = Kilogram(1.0)       
     
     /**
@@ -76,14 +75,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(27)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Qkg")
     /**
      * Qkg (10^27 of kilogram)
      */
     val Qkg = Kilogram(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * Qkg, (10^27 of kilogram)
      */
@@ -127,14 +127,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(24)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Rkg")
     /**
      * Rkg (10^24 of kilogram)
      */
     val Rkg = Kilogram(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * Rkg, (10^24 of kilogram)
      */
@@ -178,14 +179,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(21)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Ykg")
     /**
      * Ykg (10^21 of kilogram)
      */
     val Ykg = Kilogram(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * Ykg, (10^21 of kilogram)
      */
@@ -229,14 +231,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Zkg")
     /**
      * Zkg (10^18 of kilogram)
      */
     val Zkg = Kilogram(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * Zkg, (10^18 of kilogram)
      */
@@ -280,14 +283,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Ekg")
     /**
      * Ekg (10^15 of kilogram)
      */
     val Ekg = Kilogram(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * Ekg, (10^15 of kilogram)
      */
@@ -331,14 +335,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(12)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Pkg")
     /**
      * Pkg (10^12 of kilogram)
      */
     val Pkg = Kilogram(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * Pkg, (10^12 of kilogram)
      */
@@ -382,14 +387,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Tkg")
     /**
      * Tkg (10^9 of kilogram)
      */
     val Tkg = Kilogram(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * Tkg, (10^9 of kilogram)
      */
@@ -433,14 +439,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Gkg")
     /**
      * Gkg (10^6 of kilogram)
      */
     val Gkg = Kilogram(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * Gkg, (10^6 of kilogram)
      */
@@ -484,14 +491,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(3)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Mkg")
     /**
      * Mkg (10^3 of kilogram)
      */
     val Mkg = Kilogram(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * Mkg, (10^3 of kilogram)
      */
@@ -533,14 +541,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("hkg")
     /**
      * hkg (10^-1 of kilogram)
      */
     val hkg = Kilogram(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * hkg, (10^-1 of kilogram)
      */
@@ -582,14 +591,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dakg")
     /**
      * dakg (10^-2 of kilogram)
      */
     val dakg = Kilogram(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * dakg, (10^-2 of kilogram)
      */
@@ -631,14 +641,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-4)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dkg")
     /**
      * dkg (10^-4 of kilogram)
      */
     val dkg = Kilogram(10.0.pow(-4))
     
+    @JsExport
+    @JvmField
     /**
      * dkg, (10^-4 of kilogram)
      */
@@ -680,14 +691,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-5)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("ckg")
     /**
      * ckg (10^-5 of kilogram)
      */
     val ckg = Kilogram(10.0.pow(-5))
     
+    @JsExport
+    @JvmField
     /**
      * ckg, (10^-5 of kilogram)
      */
@@ -729,14 +741,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-6)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("mkg")
     /**
      * mkg (10^-6 of kilogram)
      */
     val mkg = Kilogram(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * mkg, (10^-6 of kilogram)
      */
@@ -778,14 +791,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("μkg")
     /**
      * μkg (10^-9 of kilogram)
      */
     val μkg = Kilogram(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * μkg, (10^-9 of kilogram)
      */
@@ -827,14 +841,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-12)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("nkg")
     /**
      * nkg (10^-12 of kilogram)
      */
     val nkg = Kilogram(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * nkg, (10^-12 of kilogram)
      */
@@ -876,14 +891,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-15)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("pkg")
     /**
      * pkg (10^-15 of kilogram)
      */
     val pkg = Kilogram(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * pkg, (10^-15 of kilogram)
      */
@@ -925,14 +941,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("fkg")
     /**
      * fkg (10^-18 of kilogram)
      */
     val fkg = Kilogram(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * fkg, (10^-18 of kilogram)
      */
@@ -974,14 +991,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-21)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("akg")
     /**
      * akg (10^-21 of kilogram)
      */
     val akg = Kilogram(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * akg, (10^-21 of kilogram)
      */
@@ -1023,14 +1041,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-24)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("zkg")
     /**
      * zkg (10^-24 of kilogram)
      */
     val zkg = Kilogram(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * zkg, (10^-24 of kilogram)
      */
@@ -1072,14 +1091,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-27)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("ykg")
     /**
      * ykg (10^-27 of kilogram)
      */
     val ykg = Kilogram(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * ykg, (10^-27 of kilogram)
      */
@@ -1121,14 +1141,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-30)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("rkg")
     /**
      * rkg (10^-30 of kilogram)
      */
     val rkg = Kilogram(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * rkg, (10^-30 of kilogram)
      */
@@ -1170,14 +1191,15 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
          */
         get() = this.value / 10.0.pow(-33)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("qkg")
     /**
      * qkg (10^-33 of kilogram)
      */
     val qkg = Kilogram(10.0.pow(-33))
     
+    @JsExport
+    @JvmField
     /**
      * qkg, (10^-33 of kilogram)
      */

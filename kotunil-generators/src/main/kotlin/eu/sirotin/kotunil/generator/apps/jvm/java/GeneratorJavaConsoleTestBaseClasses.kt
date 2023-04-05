@@ -109,8 +109,7 @@ private fun generateTestPartForPrefix( siPrefix: SiPrefix,
         
         double $powName = Math.pow(10.0, ${siPrefix.degree});
         Checker.check(new $className(1.0).times($powName), ${siPrefix.symbol}$unitSymbol);
-        Checker.check(new $className(1.0).times($powName), get${capitalizeFirst(siPrefix.name)}$name());
-        Checker.check(${siPrefix.symbol}$unitSymbol, get${capitalizeFirst(siPrefix.name)}$name());
+        Checker.check(${siPrefix.symbol}$unitSymbol, ${siPrefix.name}$name);
 """
 }
 

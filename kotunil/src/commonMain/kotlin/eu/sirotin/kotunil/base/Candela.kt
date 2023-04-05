@@ -19,7 +19,7 @@ private val descriptionCandela = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-//@JsExport
+@JsExport
 class Candela(value: Double) : Expression(value, description = descriptionCandela)
     /**
      * Creates Candela-Object for current number value. Candela is a System International Unit for luminous intensity.
@@ -33,9 +33,8 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
     /**
      * System International Unit for luminous intensity.
      */
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("cd")
     val cd = Candela(1.0)       
     
     /**
@@ -76,14 +75,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(30)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Qcd")
     /**
      * Qcd (10^30 of candela)
      */
     val Qcd = Candela(10.0.pow(30))
     
+    @JsExport
+    @JvmField
     /**
      * Qcd, (10^30 of candela)
      */
@@ -127,14 +127,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(27)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Rcd")
     /**
      * Rcd (10^27 of candela)
      */
     val Rcd = Candela(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * Rcd, (10^27 of candela)
      */
@@ -178,14 +179,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(24)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Ycd")
     /**
      * Ycd (10^24 of candela)
      */
     val Ycd = Candela(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * Ycd, (10^24 of candela)
      */
@@ -229,14 +231,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(21)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Zcd")
     /**
      * Zcd (10^21 of candela)
      */
     val Zcd = Candela(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * Zcd, (10^21 of candela)
      */
@@ -280,14 +283,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Ecd")
     /**
      * Ecd (10^18 of candela)
      */
     val Ecd = Candela(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * Ecd, (10^18 of candela)
      */
@@ -331,14 +335,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Pcd")
     /**
      * Pcd (10^15 of candela)
      */
     val Pcd = Candela(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * Pcd, (10^15 of candela)
      */
@@ -382,14 +387,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(12)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Tcd")
     /**
      * Tcd (10^12 of candela)
      */
     val Tcd = Candela(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * Tcd, (10^12 of candela)
      */
@@ -433,14 +439,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Gcd")
     /**
      * Gcd (10^9 of candela)
      */
     val Gcd = Candela(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * Gcd, (10^9 of candela)
      */
@@ -484,14 +491,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Mcd")
     /**
      * Mcd (10^6 of candela)
      */
     val Mcd = Candela(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * Mcd, (10^6 of candela)
      */
@@ -533,14 +541,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(3)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("kcd")
     /**
      * kcd (10^3 of candela)
      */
     val kcd = Candela(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * kcd, (10^3 of candela)
      */
@@ -582,14 +591,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("hcd")
     /**
      * hcd (10^2 of candela)
      */
     val hcd = Candela(10.0.pow(2))
     
+    @JsExport
+    @JvmField
     /**
      * hcd, (10^2 of candela)
      */
@@ -631,14 +641,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dacd")
     /**
      * dacd (10^1 of candela)
      */
     val dacd = Candela(10.0.pow(1))
     
+    @JsExport
+    @JvmField
     /**
      * dacd, (10^1 of candela)
      */
@@ -680,14 +691,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dcd")
     /**
      * dcd (10^-1 of candela)
      */
     val dcd = Candela(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * dcd, (10^-1 of candela)
      */
@@ -729,14 +741,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("ccd")
     /**
      * ccd (10^-2 of candela)
      */
     val ccd = Candela(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * ccd, (10^-2 of candela)
      */
@@ -778,14 +791,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-3)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("mcd")
     /**
      * mcd (10^-3 of candela)
      */
     val mcd = Candela(10.0.pow(-3))
     
+    @JsExport
+    @JvmField
     /**
      * mcd, (10^-3 of candela)
      */
@@ -827,14 +841,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("μcd")
     /**
      * μcd (10^-6 of candela)
      */
     val μcd = Candela(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * μcd, (10^-6 of candela)
      */
@@ -876,14 +891,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("ncd")
     /**
      * ncd (10^-9 of candela)
      */
     val ncd = Candela(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * ncd, (10^-9 of candela)
      */
@@ -925,14 +941,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-12)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("pcd")
     /**
      * pcd (10^-12 of candela)
      */
     val pcd = Candela(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * pcd, (10^-12 of candela)
      */
@@ -974,14 +991,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("fcd")
     /**
      * fcd (10^-15 of candela)
      */
     val fcd = Candela(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * fcd, (10^-15 of candela)
      */
@@ -1023,14 +1041,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("acd")
     /**
      * acd (10^-18 of candela)
      */
     val acd = Candela(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * acd, (10^-18 of candela)
      */
@@ -1072,14 +1091,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-21)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("zcd")
     /**
      * zcd (10^-21 of candela)
      */
     val zcd = Candela(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * zcd, (10^-21 of candela)
      */
@@ -1121,14 +1141,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-24)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("ycd")
     /**
      * ycd (10^-24 of candela)
      */
     val ycd = Candela(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * ycd, (10^-24 of candela)
      */
@@ -1170,14 +1191,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-27)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("rcd")
     /**
      * rcd (10^-27 of candela)
      */
     val rcd = Candela(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * rcd, (10^-27 of candela)
      */
@@ -1219,14 +1241,15 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
          */
         get() = this.value / 10.0.pow(-30)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("qcd")
     /**
      * qcd (10^-30 of candela)
      */
     val qcd = Candela(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * qcd, (10^-30 of candela)
      */

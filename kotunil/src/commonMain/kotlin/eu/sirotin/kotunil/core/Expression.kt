@@ -104,6 +104,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     /**
      * Allows to add expressions.
      */
+    @JsName("plus")
     fun plus(other: Expression) = this + other
 
     /**

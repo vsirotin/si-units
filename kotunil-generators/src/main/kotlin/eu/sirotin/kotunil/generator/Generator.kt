@@ -39,8 +39,6 @@ fun main() {
     GeneratorApps.generateApplications()
 }
 
-
-
 private fun generateUnitsClasses() {
     generateSiUnitsBaseClasses()
     generateSiUnitsDerivedClasses()

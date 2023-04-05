@@ -19,7 +19,7 @@ private val descriptionMole = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-//@JsExport
+@JsExport
 class Mole(value: Double) : Expression(value, description = descriptionMole)
     /**
      * Creates Mole-Object for current number value. Mole is a System International Unit for amount of substance.
@@ -33,9 +33,8 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
     /**
      * System International Unit for amount of substance.
      */
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("mol")
     val mol = Mole(1.0)       
     
     /**
@@ -76,14 +75,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(30)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Qmol")
     /**
      * Qmol (10^30 of mole)
      */
     val Qmol = Mole(10.0.pow(30))
     
+    @JsExport
+    @JvmField
     /**
      * Qmol, (10^30 of mole)
      */
@@ -127,14 +127,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(27)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Rmol")
     /**
      * Rmol (10^27 of mole)
      */
     val Rmol = Mole(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * Rmol, (10^27 of mole)
      */
@@ -178,14 +179,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(24)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Ymol")
     /**
      * Ymol (10^24 of mole)
      */
     val Ymol = Mole(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * Ymol, (10^24 of mole)
      */
@@ -229,14 +231,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(21)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Zmol")
     /**
      * Zmol (10^21 of mole)
      */
     val Zmol = Mole(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * Zmol, (10^21 of mole)
      */
@@ -280,14 +283,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Emol")
     /**
      * Emol (10^18 of mole)
      */
     val Emol = Mole(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * Emol, (10^18 of mole)
      */
@@ -331,14 +335,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Pmol")
     /**
      * Pmol (10^15 of mole)
      */
     val Pmol = Mole(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * Pmol, (10^15 of mole)
      */
@@ -382,14 +387,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(12)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Tmol")
     /**
      * Tmol (10^12 of mole)
      */
     val Tmol = Mole(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * Tmol, (10^12 of mole)
      */
@@ -433,14 +439,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Gmol")
     /**
      * Gmol (10^9 of mole)
      */
     val Gmol = Mole(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * Gmol, (10^9 of mole)
      */
@@ -484,14 +491,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("Mmol")
     /**
      * Mmol (10^6 of mole)
      */
     val Mmol = Mole(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * Mmol, (10^6 of mole)
      */
@@ -533,14 +541,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(3)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("kmol")
     /**
      * kmol (10^3 of mole)
      */
     val kmol = Mole(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * kmol, (10^3 of mole)
      */
@@ -582,14 +591,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("hmol")
     /**
      * hmol (10^2 of mole)
      */
     val hmol = Mole(10.0.pow(2))
     
+    @JsExport
+    @JvmField
     /**
      * hmol, (10^2 of mole)
      */
@@ -631,14 +641,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("damol")
     /**
      * damol (10^1 of mole)
      */
     val damol = Mole(10.0.pow(1))
     
+    @JsExport
+    @JvmField
     /**
      * damol, (10^1 of mole)
      */
@@ -680,14 +691,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dmol")
     /**
      * dmol (10^-1 of mole)
      */
     val dmol = Mole(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * dmol, (10^-1 of mole)
      */
@@ -729,14 +741,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("cmol")
     /**
      * cmol (10^-2 of mole)
      */
     val cmol = Mole(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * cmol, (10^-2 of mole)
      */
@@ -778,14 +791,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-3)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("mmol")
     /**
      * mmol (10^-3 of mole)
      */
     val mmol = Mole(10.0.pow(-3))
     
+    @JsExport
+    @JvmField
     /**
      * mmol, (10^-3 of mole)
      */
@@ -827,14 +841,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("μmol")
     /**
      * μmol (10^-6 of mole)
      */
     val μmol = Mole(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * μmol, (10^-6 of mole)
      */
@@ -876,14 +891,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("nmol")
     /**
      * nmol (10^-9 of mole)
      */
     val nmol = Mole(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * nmol, (10^-9 of mole)
      */
@@ -925,14 +941,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-12)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("pmol")
     /**
      * pmol (10^-12 of mole)
      */
     val pmol = Mole(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * pmol, (10^-12 of mole)
      */
@@ -974,14 +991,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("fmol")
     /**
      * fmol (10^-15 of mole)
      */
     val fmol = Mole(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * fmol, (10^-15 of mole)
      */
@@ -1023,14 +1041,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("amol")
     /**
      * amol (10^-18 of mole)
      */
     val amol = Mole(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * amol, (10^-18 of mole)
      */
@@ -1072,14 +1091,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-21)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("zmol")
     /**
      * zmol (10^-21 of mole)
      */
     val zmol = Mole(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * zmol, (10^-21 of mole)
      */
@@ -1121,14 +1141,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-24)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("ymol")
     /**
      * ymol (10^-24 of mole)
      */
     val ymol = Mole(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * ymol, (10^-24 of mole)
      */
@@ -1170,14 +1191,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-27)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("rmol")
     /**
      * rmol (10^-27 of mole)
      */
     val rmol = Mole(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * rmol, (10^-27 of mole)
      */
@@ -1219,14 +1241,15 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
          */
         get() = this.value / 10.0.pow(-30)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("qmol")
     /**
      * qmol (10^-30 of mole)
      */
     val qmol = Mole(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * qmol, (10^-30 of mole)
      */

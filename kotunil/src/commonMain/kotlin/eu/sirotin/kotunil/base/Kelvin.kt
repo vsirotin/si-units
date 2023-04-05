@@ -19,7 +19,7 @@ private val descriptionKelvin = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
-//@JsExport
+@JsExport
 class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
     /**
      * Creates Kelvin-Object for current number value. Kelvin is a System International Unit for thermodynamic temperature.
@@ -33,9 +33,8 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
     /**
      * System International Unit for thermodynamic temperature.
      */
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("K")
     val K = Kelvin(1.0)       
     
     /**
@@ -76,14 +75,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(30)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("QK")
     /**
      * QK (10^30 of kelvin)
      */
     val QK = Kelvin(10.0.pow(30))
     
+    @JsExport
+    @JvmField
     /**
      * QK, (10^30 of kelvin)
      */
@@ -127,14 +127,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(27)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("RK")
     /**
      * RK (10^27 of kelvin)
      */
     val RK = Kelvin(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * RK, (10^27 of kelvin)
      */
@@ -178,14 +179,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(24)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("YK")
     /**
      * YK (10^24 of kelvin)
      */
     val YK = Kelvin(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * YK, (10^24 of kelvin)
      */
@@ -229,14 +231,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(21)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("ZK")
     /**
      * ZK (10^21 of kelvin)
      */
     val ZK = Kelvin(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * ZK, (10^21 of kelvin)
      */
@@ -280,14 +283,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("EK")
     /**
      * EK (10^18 of kelvin)
      */
     val EK = Kelvin(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * EK, (10^18 of kelvin)
      */
@@ -331,14 +335,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("PK")
     /**
      * PK (10^15 of kelvin)
      */
     val PK = Kelvin(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * PK, (10^15 of kelvin)
      */
@@ -382,14 +387,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(12)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("TK")
     /**
      * TK (10^12 of kelvin)
      */
     val TK = Kelvin(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * TK, (10^12 of kelvin)
      */
@@ -433,14 +439,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("GK")
     /**
      * GK (10^9 of kelvin)
      */
     val GK = Kelvin(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * GK, (10^9 of kelvin)
      */
@@ -484,14 +491,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("MK")
     /**
      * MK (10^6 of kelvin)
      */
     val MK = Kelvin(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * MK, (10^6 of kelvin)
      */
@@ -533,14 +541,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(3)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("kK")
     /**
      * kK (10^3 of kelvin)
      */
     val kK = Kelvin(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * kK, (10^3 of kelvin)
      */
@@ -582,14 +591,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("hK")
     /**
      * hK (10^2 of kelvin)
      */
     val hK = Kelvin(10.0.pow(2))
     
+    @JsExport
+    @JvmField
     /**
      * hK, (10^2 of kelvin)
      */
@@ -631,14 +641,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("daK")
     /**
      * daK (10^1 of kelvin)
      */
     val daK = Kelvin(10.0.pow(1))
     
+    @JsExport
+    @JvmField
     /**
      * daK, (10^1 of kelvin)
      */
@@ -680,14 +691,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-1)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("dK")
     /**
      * dK (10^-1 of kelvin)
      */
     val dK = Kelvin(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * dK, (10^-1 of kelvin)
      */
@@ -729,14 +741,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-2)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("cK")
     /**
      * cK (10^-2 of kelvin)
      */
     val cK = Kelvin(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * cK, (10^-2 of kelvin)
      */
@@ -778,14 +791,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-3)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("mK")
     /**
      * mK (10^-3 of kelvin)
      */
     val mK = Kelvin(10.0.pow(-3))
     
+    @JsExport
+    @JvmField
     /**
      * mK, (10^-3 of kelvin)
      */
@@ -827,14 +841,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-6)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("μK")
     /**
      * μK (10^-6 of kelvin)
      */
     val μK = Kelvin(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * μK, (10^-6 of kelvin)
      */
@@ -876,14 +891,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-9)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("nK")
     /**
      * nK (10^-9 of kelvin)
      */
     val nK = Kelvin(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * nK, (10^-9 of kelvin)
      */
@@ -925,14 +941,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-12)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("pK")
     /**
      * pK (10^-12 of kelvin)
      */
     val pK = Kelvin(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * pK, (10^-12 of kelvin)
      */
@@ -974,14 +991,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-15)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("fK")
     /**
      * fK (10^-15 of kelvin)
      */
     val fK = Kelvin(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * fK, (10^-15 of kelvin)
      */
@@ -1023,14 +1041,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-18)
     
-    //@JsExport
+    @JsExport
     @JvmField
-    //@get:JvmName("aK")
     /**
      * aK (10^-18 of kelvin)
      */
     val aK = Kelvin(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * aK, (10^-18 of kelvin)
      */
@@ -1072,14 +1091,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-21)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("zK")
     /**
      * zK (10^-21 of kelvin)
      */
     val zK = Kelvin(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * zK, (10^-21 of kelvin)
      */
@@ -1121,14 +1141,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-24)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("yK")
     /**
      * yK (10^-24 of kelvin)
      */
     val yK = Kelvin(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * yK, (10^-24 of kelvin)
      */
@@ -1170,14 +1191,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-27)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("rK")
     /**
      * rK (10^-27 of kelvin)
      */
     val rK = Kelvin(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * rK, (10^-27 of kelvin)
      */
@@ -1219,14 +1241,15 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
          */
         get() = this.value / 10.0.pow(-30)
     
-    //@JsExport
+    
     @JvmField
-    //@get:JvmName("qK")
     /**
      * qK (10^-30 of kelvin)
      */
     val qK = Kelvin(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * qK, (10^-30 of kelvin)
      */

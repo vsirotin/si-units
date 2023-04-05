@@ -37,6 +37,9 @@
              var s3 = myLib.eu.sirotin.kotunil.specialunits.thing;
              console.log("s3=" + s3);
 
+             var s4 = s1.plus(s2);
+              console.log("s4=" + s4);
+
              var B = myLib.eu.sirotin.kotunil.base;
 
              var m1 = B.m;
@@ -45,7 +48,7 @@
              var m3 = new B.Metre(12);
              console.log("m3=" + m3);
 
-             var m2 = m1.plus(s2);
+             var m2 = m3.plus(m1);
              console.log("m2=" + m2);
 
              var s4 = s1.plus(s2);
@@ -54,7 +57,7 @@
              var s5 = s1.div(12);
              console.log("s5.value=" + s5.value);
 
-             var s6 = s1.divExp(s3);
+             var s6 = s3.divExp(s3);
              console.log("s6=" + s6);
 
              check();
@@ -63,9 +66,7 @@
 
              console.log("s5.unitSymbols=" + s5.unitSymbols());
 
-                document.getElementById("result").innerHTML = s5;
-
-
+            document.getElementById("result").innerHTML = s5;
 
         </script>
 </body>

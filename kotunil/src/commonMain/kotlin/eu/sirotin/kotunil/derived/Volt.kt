@@ -15,7 +15,7 @@ private val unit =  kg*m2*(s `^` -3) * (A `^` -1)
 /**
 * System International Unit for electric potential, voltage, emf.
 */
-//@JsExport
+@JsExport
 @JvmField
 val V = unit
 
@@ -48,9 +48,8 @@ val Number.quettavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(30) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("QV") 
 /**
 * QV, 10^30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -60,9 +59,8 @@ val QV = 10.0.pow(30) * (kg*m2*(s `^` -3) * (A `^` -1))
 * quettavolt, 10^30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quettavolt")
 val quettavolt = QV
     
 
@@ -85,9 +83,8 @@ val Number.ronnavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(27) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("RV") 
 /**
 * RV, 10^27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -97,9 +94,8 @@ val RV = 10.0.pow(27) * (kg*m2*(s `^` -3) * (A `^` -1))
 * ronnavolt, 10^27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ronnavolt")
 val ronnavolt = RV
     
 
@@ -122,9 +118,8 @@ val Number.yottavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(24) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("YV") 
 /**
 * YV, 10^24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -134,9 +129,8 @@ val YV = 10.0.pow(24) * (kg*m2*(s `^` -3) * (A `^` -1))
 * yottavolt, 10^24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yottavolt")
 val yottavolt = YV
     
 
@@ -159,9 +153,8 @@ val Number.zettavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(21) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("ZV") 
 /**
 * ZV, 10^21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -171,9 +164,8 @@ val ZV = 10.0.pow(21) * (kg*m2*(s `^` -3) * (A `^` -1))
 * zettavolt, 10^21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zettavolt")
 val zettavolt = ZV
     
 
@@ -196,9 +188,8 @@ val Number.exavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("EV") 
 /**
 * EV, 10^18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -208,9 +199,8 @@ val EV = 10.0.pow(18) * (kg*m2*(s `^` -3) * (A `^` -1))
 * exavolt, 10^18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("exavolt")
 val exavolt = EV
     
 
@@ -233,9 +223,8 @@ val Number.petavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("PV") 
 /**
 * PV, 10^15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -245,9 +234,8 @@ val PV = 10.0.pow(15) * (kg*m2*(s `^` -3) * (A `^` -1))
 * petavolt, 10^15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("petavolt")
 val petavolt = PV
     
 
@@ -270,9 +258,8 @@ val Number.teravolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(12) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("TV") 
 /**
 * TV, 10^12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -282,9 +269,8 @@ val TV = 10.0.pow(12) * (kg*m2*(s `^` -3) * (A `^` -1))
 * teravolt, 10^12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("teravolt")
 val teravolt = TV
     
 
@@ -307,9 +293,8 @@ val Number.gigavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("GV") 
 /**
 * GV, 10^9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -319,9 +304,8 @@ val GV = 10.0.pow(9) * (kg*m2*(s `^` -3) * (A `^` -1))
 * gigavolt, 10^9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("gigavolt")
 val gigavolt = GV
     
 
@@ -344,9 +328,8 @@ val Number.megavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("MV") 
 /**
 * MV, 10^6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -356,9 +339,8 @@ val MV = 10.0.pow(6) * (kg*m2*(s `^` -3) * (A `^` -1))
 * megavolt, 10^6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("megavolt")
 val megavolt = MV
     
 
@@ -381,9 +363,8 @@ val Number.kilovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(3) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kV") 
 /**
 * kV, 10^3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -393,9 +374,8 @@ val kV = 10.0.pow(3) * (kg*m2*(s `^` -3) * (A `^` -1))
 * kilovolt, 10^3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("kilovolt")
 val kilovolt = kV
     
 
@@ -418,9 +398,8 @@ val Number.hectovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hV") 
 /**
 * hV, 10^2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -430,9 +409,8 @@ val hV = 10.0.pow(2) * (kg*m2*(s `^` -3) * (A `^` -1))
 * hectovolt, 10^2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("hectovolt")
 val hectovolt = hV
     
 
@@ -455,9 +433,8 @@ val Number.decavolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("daV") 
 /**
 * daV, 10^1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -467,9 +444,8 @@ val daV = 10.0.pow(1) * (kg*m2*(s `^` -3) * (A `^` -1))
 * decavolt, 10^1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decavolt")
 val decavolt = daV
     
 
@@ -492,9 +468,8 @@ val Number.decivolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-1) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("dV") 
 /**
 * dV, 10^-1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -504,9 +479,8 @@ val dV = 10.0.pow(-1) * (kg*m2*(s `^` -3) * (A `^` -1))
 * decivolt, 10^-1 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("decivolt")
 val decivolt = dV
     
 
@@ -529,9 +503,8 @@ val Number.centivolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-2) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("cV") 
 /**
 * cV, 10^-2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -541,9 +514,8 @@ val cV = 10.0.pow(-2) * (kg*m2*(s `^` -3) * (A `^` -1))
 * centivolt, 10^-2 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("centivolt")
 val centivolt = cV
     
 
@@ -566,9 +538,8 @@ val Number.millivolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-3) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("mV") 
 /**
 * mV, 10^-3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -578,9 +549,8 @@ val mV = 10.0.pow(-3) * (kg*m2*(s `^` -3) * (A `^` -1))
 * millivolt, 10^-3 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("millivolt")
 val millivolt = mV
     
 
@@ -603,9 +573,8 @@ val Number.microvolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-6) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("μV") 
 /**
 * μV, 10^-6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -615,9 +584,8 @@ val μV = 10.0.pow(-6) * (kg*m2*(s `^` -3) * (A `^` -1))
 * microvolt, 10^-6 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("microvolt")
 val microvolt = μV
     
 
@@ -640,9 +608,8 @@ val Number.nanovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-9) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nV") 
 /**
 * nV, 10^-9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -652,9 +619,8 @@ val nV = 10.0.pow(-9) * (kg*m2*(s `^` -3) * (A `^` -1))
 * nanovolt, 10^-9 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("nanovolt")
 val nanovolt = nV
     
 
@@ -677,9 +643,8 @@ val Number.picovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-12) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("pV") 
 /**
 * pV, 10^-12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -689,9 +654,8 @@ val pV = 10.0.pow(-12) * (kg*m2*(s `^` -3) * (A `^` -1))
 * picovolt, 10^-12 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("picovolt")
 val picovolt = pV
     
 
@@ -714,9 +678,8 @@ val Number.femtovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-15) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("fV") 
 /**
 * fV, 10^-15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -726,9 +689,8 @@ val fV = 10.0.pow(-15) * (kg*m2*(s `^` -3) * (A `^` -1))
 * femtovolt, 10^-15 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("femtovolt")
 val femtovolt = fV
     
 
@@ -751,9 +713,8 @@ val Number.attovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-18) * unit
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("aV") 
 /**
 * aV, 10^-18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -763,9 +724,8 @@ val aV = 10.0.pow(-18) * (kg*m2*(s `^` -3) * (A `^` -1))
 * attovolt, 10^-18 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("attovolt")
 val attovolt = aV
     
 
@@ -788,9 +748,8 @@ val Number.zeptovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-21) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("zV") 
 /**
 * zV, 10^-21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -800,9 +759,8 @@ val zV = 10.0.pow(-21) * (kg*m2*(s `^` -3) * (A `^` -1))
 * zeptovolt, 10^-21 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("zeptovolt")
 val zeptovolt = zV
     
 
@@ -825,9 +783,8 @@ val Number.yoctovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-24) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("yV") 
 /**
 * yV, 10^-24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -837,9 +794,8 @@ val yV = 10.0.pow(-24) * (kg*m2*(s `^` -3) * (A `^` -1))
 * yoctovolt, 10^-24 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("yoctovolt")
 val yoctovolt = yV
     
 
@@ -862,9 +818,8 @@ val Number.rontovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-27) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("rV") 
 /**
 * rV, 10^-27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -874,9 +829,8 @@ val rV = 10.0.pow(-27) * (kg*m2*(s `^` -3) * (A `^` -1))
 * rontovolt, 10^-27 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("rontovolt")
 val rontovolt = rV
     
 
@@ -899,9 +853,8 @@ val Number.quectovolt : Expression
     */  
     get() = this.toDouble() * 10.0.pow(-30) * unit
 
-//@JsExport
+
 @JvmField
-//@get:JvmName("qV") 
 /**
 * qV, 10^-30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */        
@@ -911,8 +864,7 @@ val qV = 10.0.pow(-30) * (kg*m2*(s `^` -3) * (A `^` -1))
 * quectovolt, 10^-30 of volt, derived SI-Unit for measurement of electric potential, voltage, emf
 */ 
 
-//@JsExport
+@JsExport
 @JvmField
-//@get:JvmName("quectovolt")
 val quectovolt = qV
     
