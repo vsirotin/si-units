@@ -94,8 +94,13 @@ import kotlin.math.pow
 internal class ${className}Test {
 
     @Test
-    fun test${className}MainTest() {
+    fun test${className}MainTest1() {
         assertEquals(1.$unitSymbol , $unitSymbol)
+    }
+    
+     @Test
+    fun test${className}MainTest2() {
+        assertEquals(12.3.$unitSymbol , $className(12.3).expression)
     }
     """
 }

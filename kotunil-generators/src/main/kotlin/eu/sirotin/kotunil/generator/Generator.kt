@@ -23,29 +23,33 @@
 package eu.sirotin.kotunil.generator
 
 import eu.sirotin.kotunil.generator.apps.GeneratorApps
+import eu.sirotin.kotunil.generator.javascript.generateJavaScriptFiles
 
-const val ROOT_PATH_SOURCE_COMMON = "kotunil/src/commonMain/kotlin/eu/sirotin/kotunil/"
-const val ROOT_PATH_TEST_COMMON = "kotunil/src/commonTest/kotlin/eu/sirotin/kotunil/"
+const val ROOT_SRC = "kotunil/src/"
+const val PREFIX = "/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_SOURCE_COMMON = "${ROOT_SRC}commonMain$PREFIX"
+const val ROOT_PATH_TEST_COMMON = "${ROOT_SRC}commonTest$PREFIX"
 
-const val ROOT_PATH_SOURCE_JVM = "kotunil/src/jvmMain/kotlin/eu/sirotin/kotunil/"
-const val ROOT_PATH_TEST_JVM = "kotunil/src/jvmTest/kotlin/eu/sirotin/kotunil/"
+const val ROOT_PATH_SOURCE_JVM = "${ROOT_SRC}jvmMain$PREFIX"
+const val ROOT_PATH_TEST_JVM = "${ROOT_SRC}jvmTest$PREFIX"
 
 /**
  * Generates production and test unit classes. Not relevant for library users.
  */
 fun main() {
-    generateUnitsClasses()
-    generateTestClasses()
+    generateKotlinLibraryFiles()
+    generateKotlinTestFiles()
+    generateJavaScriptFiles()
     GeneratorApps.generateApplications()
 }
 
-private fun generateUnitsClasses() {
+private fun generateKotlinLibraryFiles() {
     generateSiUnitsBaseClasses()
     generateSiUnitsDerivedClasses()
     generateCurrencies()
 }
 
-private fun generateTestClasses() {
+private fun generateKotlinTestFiles() {
     generateTestsSiUnitsBaseClasses()
     generateTestsSiUnitsDerivedClasses()
     generateTestsCurrencies()

@@ -24,6 +24,8 @@ package eu.sirotin.kotunil.generator
 
 import java.io.File
 import java.nio.file.Files
+import kotlin.reflect.KFunction4
+import kotlin.reflect.KFunction5
 
 /**
  * Descriptions of base SI-Units.
@@ -55,26 +57,47 @@ data class SiUnitDescription(val name: String,
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
     val dir = File("${ROOT_PATH_SOURCE_COMMON}base")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
+    generateClassFiles(dir, ::generateSiUnitBaseClass)
+}
+
+fun generateClassFiles(
+    dir: File,
+    generatorClassFile: (SiUnitDescription, File) -> Unit) {
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes
-    siUnitDescriptions.forEach { generateSiUnitBaseClass(it, dir) }
+    siUnitDescriptions.forEach { generatorClassFile(it, dir) }
 }
 
 private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
-    val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+    val fileExtension = "kt"
+    val generatorHeadPart = ::generateHeadPart
+    val generatorPrefixesPart = ::generatePrefixes
+    generateBaseClassFile(siUnitDescription, fileExtension, dir, generatorHeadPart, generatorPrefixesPart)
+}
 
-    val fileName = "$className.kt"
+fun generateBaseClassFile(
+    siUnitDescription: SiUnitDescription,
+    fileExtension: String,
+    dir: File,
+    generatorHeadPart: (String, String, String, Int, String) -> String,
+    generatorPrefixesPart: (String, String, String, List<SiPrefix>)-> String
+) {
+    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+    val prefixes = if (className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+
+    val fileName = "$className.$fileExtension"
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generateHeadPart(className,
+    val classText = generatorHeadPart(
+        className,
         siUnitDescription.unitSymbol,
         siUnitDescription.dimensionSymbol,
         siUnitDescription.presentationPriority,
-        siUnitDescription.quantityName) +
-        generatePrefixes(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
-    
+        siUnitDescription.quantityName
+    ) +
+            generatorPrefixesPart(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
+
     file.writeText(classText)
 }
 

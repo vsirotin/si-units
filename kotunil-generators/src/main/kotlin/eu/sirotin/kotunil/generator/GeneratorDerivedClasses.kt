@@ -24,6 +24,8 @@ package eu.sirotin.kotunil.generator
 
 import java.io.File
 import java.nio.file.Files
+import kotlin.reflect.KFunction4
+import kotlin.reflect.KFunction5
 
 /**
  * Descriptions of derived SI units.
@@ -67,33 +69,58 @@ data class SiDerivedUnitDescription(val name: String,
 fun generateSiUnitsDerivedClasses() {
     //Generate package directory if not exists
     val dir = File("${ROOT_PATH_SOURCE_COMMON}derived")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate classes
-    siDerivedUnitDescriptions.forEach { generateSiUnitDerivedClass(it, dir) }
+    generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass)
 
 }
 
-private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+fun generateDerivedClassFiles(
+    dir: File,
+    generatorDerivedClass: (SiDerivedUnitDescription, File) -> Unit
+) {
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
 
+    //Generate classes
+    siDerivedUnitDescriptions.forEach { generatorDerivedClass(it, dir) }
+}
+
+private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
+    val className = getClassName(siUnitDescription)
     val fileName = "$className.kt"
+    val generatorHeadPart = ::generateDerivedUnitClassHead
+    val generatorPrefixes = ::generateDerivedClassPrefixes
+
+    generateDerivedClassFile(dir, fileName, generatorHeadPart, className, siUnitDescription, generatorPrefixes)
+}
+
+fun generateDerivedClassFile(
+    dir: File,
+    fileName: String,
+    generatorHeadPart: (String, String, String, String) -> String,
+    className: String,
+    siUnitDescription: SiDerivedUnitDescription,
+    generatorPrefixes: (String, String, String, String, List<SiPrefix>)-> String
+) {
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generateDerivedUnitClassHead(
+    val classText = generatorHeadPart(
         className,
         siUnitDescription.unitSymbol,
         siUnitDescription.formula,
-        siUnitDescription.quantity) +
-            generateDerivedClassPrefixes(siUnitDescription.name,
+        siUnitDescription.quantity
+    ) +
+            generatorPrefixes(
+                siUnitDescription.name,
                 siUnitDescription.unitSymbol,
                 siUnitDescription.formula,
                 siUnitDescription.quantity,
                 siPrefixes
             )
-    
+
     file.writeText(classText)
 }
+
+fun getClassName(siUnitDescription: SiDerivedUnitDescription) =
+    siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateDerivedUnitClassHead(
     className: String,
@@ -114,6 +141,14 @@ import kotlin.math.pow
 import kotlin.jvm.JvmName
 
 private val unit =  $formula
+
+@JsExport
+/**
+* System International Unit for $quantityName.
+*/
+class $className(value: Double){
+    val expression: Expression = unit*value
+}
 
 /**
 * System International Unit for $quantityName.
