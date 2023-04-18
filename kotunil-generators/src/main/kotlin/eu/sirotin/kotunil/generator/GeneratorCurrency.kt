@@ -79,13 +79,10 @@ data class CurrencyDescription(val name: String,
  * Generates currency classes and their Jvm parts.
  */
 fun generateCurrencies() {
-    //Generate common part
-    val generatorCommonName = fun(cd:CurrencyDescription): String = "${cd.name}.kt"
-    generateFiles("${ROOT_PATH_SOURCE_COMMON}currency",
-        currencyDescriptions,
-        ::generateCurrencyClass,
-        generatorCommonName
-    )
+    val targetDirPath = "${ROOT_PATH_SOURCE_COMMON}currency"
+    val fileExtension = "kt"
+    val generatorCurrencyFileContent = ::generateCurrencyClass
+    generateCurrenciesFiles(fileExtension, targetDirPath, generatorCurrencyFileContent)
 
     //Generate JVM part
     val generatorJvmName = fun(cd:CurrencyDescription): String = "${cd.name}Jvm.kt"
@@ -93,6 +90,20 @@ fun generateCurrencies() {
         currencyDescriptions,
         ::generateCurrencyJvmPart,
         generatorJvmName
+    )
+}
+
+fun generateCurrenciesFiles(
+    fileExtension: String,
+    targetDirPath: String,
+    generatorCurrencyFileContent: (CurrencyDescription) -> String
+) {
+    val generatorFileName = fun(cd: CurrencyDescription): String = "${cd.name}.$fileExtension"
+    generateFiles(
+        targetDirPath,
+        currencyDescriptions,
+        generatorCurrencyFileContent,
+        generatorFileName
     )
 }
 
