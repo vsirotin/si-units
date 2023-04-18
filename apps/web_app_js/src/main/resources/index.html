@@ -13,60 +13,19 @@
 
     <script type="text/javascript" src="./libs/kotlin-kotlin-stdlib-js-ir.js"></script>
     <script type="text/javascript" src="./libs/si-units-kotunil.js"></script>
+    <script type="text/javascript" src="./libs/Starter.js"></script>
+    <script type="text/javascript" src="./libs/base/Metre.js"></script>
+    <script type="text/javascript" src="./libs/derived/Volt.js"></script>
+    <script type="text/javascript" src="./libs/currency/Currencies.js"></script>
+    <script type="text/javascript" src="./libs/specialunits/NonSiUnits.js"></script>
     <script type="text/javascript" src="./../javascript/checker.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/SpecialUnitsTest.js"></script>
+    <script type="text/javascript" src="./../javascript/TutorialTest.js"></script>
+
 
          <script>
-            console.log("A1");
-
-            const myLib = this['si-units-kotunil']
-            console.log("myLib=" + myLib);
-            var y = Object.values(myLib);
-             console.log("y=" + y);
-
-             for (let a1 in myLib.eu.sirotin.kotunil.specialunits) {
-                console.log("a1=" + a1);
-             };
-            var s = myLib.eu;
-             console.log("s=" + s);
-            var s1 = new myLib.eu.sirotin.kotunil.specialunits.Thing(24);
-             console.log("s1=" + s1);
-
-             var s2 = new myLib.eu.sirotin.kotunil.specialunits.Thing(229);
-             console.log("s2=" + s2);
-
-             var s3 = myLib.eu.sirotin.kotunil.specialunits.thing;
-             console.log("s3=" + s3);
-
-             var s4 = s1.plus(s2);
-              console.log("s4=" + s4);
-
-             var B = myLib.eu.sirotin.kotunil.base;
-
-             var m1 = B.m;
-             console.log("m1=" + m1);
-
-             var m3 = new B.Metre(12);
-             console.log("m3=" + m3);
-
-             var m2 = m3.plus(m1);
-             console.log("m2=" + m2);
-
-             var s4 = s1.plus(s2);
-             console.log("s4=" + s4);
-
-             var s5 = s1.div(12);
-             console.log("s5.value=" + s5.value);
-
-             var s6 = s3.divExp(s3);
-             console.log("s6=" + s6);
-
-             check();
-
-             console.log("numberChecks=" + numberChecks);
-
-             console.log("s5.unitSymbols=" + s5.unitSymbols());
-
-            document.getElementById("result").innerHTML = s5;
+            console.log("Start main script");
+            testTutorial();
 
         </script>
 </body>

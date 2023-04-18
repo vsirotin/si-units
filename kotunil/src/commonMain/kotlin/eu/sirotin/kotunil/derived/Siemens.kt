@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  (kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)
 
+@JsExport
+/**
+* System International Unit for electrical conductance.
+*/
+class Siemens(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for electrical conductance.
 */

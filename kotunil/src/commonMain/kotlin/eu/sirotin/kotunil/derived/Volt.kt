@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg*m2*(s `^` -3) * (A `^` -1)
 
+@JsExport
+/**
+* System International Unit for electric potential, voltage, emf.
+*/
+class Volt(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for electric potential, voltage, emf.
 */

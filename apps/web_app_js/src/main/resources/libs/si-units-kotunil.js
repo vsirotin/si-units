@@ -24,7 +24,7 @@
   var charSequenceLength = kotlin_kotlin.$_$.l;
   var joinToString$default = kotlin_kotlin.$_$.a;
   var hashCode = kotlin_kotlin.$_$.r;
-  var THROW_CCE = kotlin_kotlin.$_$.x;
+  var THROW_CCE = kotlin_kotlin.$_$.w;
   var equals = kotlin_kotlin.$_$.o;
   var compareTo = kotlin_kotlin.$_$.n;
   var getNumberHashCode = kotlin_kotlin.$_$.p;
@@ -36,7 +36,6 @@
   var plus = kotlin_kotlin.$_$.h;
   var setOf = kotlin_kotlin.$_$.i;
   var getStringHashCode = kotlin_kotlin.$_$.q;
-  var Long = kotlin_kotlin.$_$.w;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Expression, 'Expression', classMeta, undefined, [Comparable], undefined, undefined, []);
@@ -85,6 +84,27 @@
   setMetadataFor(TurkishLira, 'TurkishLira', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(UAEDirham, 'UAEDirham', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(UnitedStatesDollar, 'UnitedStatesDollar', classMeta, Expression, undefined, undefined, undefined, []);
+  setMetadataFor(Becquerel, 'Becquerel', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Coulomb, 'Coulomb', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Farad, 'Farad', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Gray, 'Gray', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Henry, 'Henry', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Hertz, 'Hertz', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Joule, 'Joule', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Katal, 'Katal', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Lumen, 'Lumen', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Lux, 'Lux', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Newton, 'Newton', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Ohm, 'Ohm', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Pascal, 'Pascal', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Radian, 'Radian', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Siemens, 'Siemens', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Sievert, 'Sievert', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Steradian, 'Steradian', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Tesla, 'Tesla', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Volt, 'Volt', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Watt, 'Watt', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Weber, 'Weber', classMeta, undefined, undefined, undefined, undefined, []);
   setMetadataFor(Thing, 'Thing', classMeta, Expression, undefined, undefined, undefined, []);
   //endregion
   function get_descriptionAmpere() {
@@ -3220,6 +3240,10 @@
     }
     return tmp_1;
   }
+  function get_ε() {
+    return ε;
+  }
+  var ε;
   function Expression_init_$Init$(value, description, $this) {
     var value_0 = value === void 1 ? 1.0 : value;
     Expression.call($this, value_0, new Dimensions(setOf(Factor_init_$Create$(description, 0.0, 2, null))));
@@ -3330,10 +3354,6 @@
     return COMPATIBILITY_ERR_PREFIX;
   }
   var COMPATIBILITY_ERR_PREFIX;
-  function get_ε() {
-    return ε;
-  }
-  var ε;
   function pow_0(_this__u8e3s4, degree) {
     var tmp$ret$0;
     // Inline function 'kotlin.math.pow' call
@@ -3341,14 +3361,6 @@
     var tmp1_pow = numberToDouble(degree);
     tmp$ret$0 = Math.pow(tmp0_pow, tmp1_pow);
     return new Expression(tmp$ret$0, pow(_this__u8e3s4.dimensions, degree));
-  }
-  function powNumber(_this__u8e3s4, degree) {
-    var tmp$ret$0;
-    // Inline function 'kotlin.math.pow' call
-    var tmp0_pow = numberToDouble(_this__u8e3s4);
-    var tmp1_pow = numberToDouble(degree);
-    tmp$ret$0 = Math.pow(tmp0_pow, tmp1_pow);
-    return tmp$ret$0;
   }
   function powExpression(_this__u8e3s4, degree) {
     return pow_0(_this__u8e3s4, degree);
@@ -4990,6 +5002,12 @@
     return quectobecquerel;
   }
   var quectobecquerel;
+  function Becquerel(value) {
+    this.expression = times_1(get_unit(), value);
+  }
+  Becquerel.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Becquerel_kt_ep2is8;
   function init_properties_Becquerel_kt_240c04() {
     if (properties_initialized_Becquerel_kt_ep2is8) {
@@ -5369,6 +5387,12 @@
     return quectocoulomb;
   }
   var quectocoulomb;
+  function Coulomb(value) {
+    this.expression = times_1(get_unit_0(), value);
+  }
+  Coulomb.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Coulomb_kt_6jb89b;
   function init_properties_Coulomb_kt_gjiitp() {
     if (properties_initialized_Coulomb_kt_6jb89b) {
@@ -5748,6 +5772,12 @@
     return quectofarad;
   }
   var quectofarad;
+  function Farad(value) {
+    this.expression = times_1(get_unit_1(), value);
+  }
+  Farad.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Farad_kt_xzai22;
   function init_properties_Farad_kt_gs63pi() {
     if (properties_initialized_Farad_kt_xzai22) {
@@ -6127,6 +6157,12 @@
     return quectogray;
   }
   var quectogray;
+  function Gray(value) {
+    this.expression = times_1(get_unit_2(), value);
+  }
+  Gray.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Gray_kt_7mtpmj;
   function init_properties_Gray_kt_st6n6f() {
     if (properties_initialized_Gray_kt_7mtpmj) {
@@ -6506,6 +6542,12 @@
     return quectohenry;
   }
   var quectohenry;
+  function Henry(value) {
+    this.expression = times_1(get_unit_3(), value);
+  }
+  Henry.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Henry_kt_9pyy7s;
   function init_properties_Henry_kt_qx3ckc() {
     if (properties_initialized_Henry_kt_9pyy7s) {
@@ -6885,6 +6927,12 @@
     return quectohertz;
   }
   var quectohertz;
+  function Hertz(value) {
+    this.expression = times_1(get_unit_4(), value);
+  }
+  Hertz.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Hertz_kt_bn9nyt;
   function init_properties_Hertz_kt_sue2bd() {
     if (properties_initialized_Hertz_kt_bn9nyt) {
@@ -7264,6 +7312,12 @@
     return quectojoule;
   }
   var quectojoule;
+  function Joule(value) {
+    this.expression = times_1(get_unit_5(), value);
+  }
+  Joule.prototype.n6 = function () {
+    return this.expression;
+  };
   function get_J_0(_this__u8e3s4) {
     init_properties_Joule_kt_lgmsgb();
     return times_2(numberToDouble(_this__u8e3s4), get_unit_5());
@@ -7647,6 +7701,12 @@
     return quectokatal;
   }
   var quectokatal;
+  function Katal(value) {
+    this.expression = times_1(get_unit_6(), value);
+  }
+  Katal.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Katal_kt_uz5w0p;
   function init_properties_Katal_kt_ds1ho5() {
     if (properties_initialized_Katal_kt_uz5w0p) {
@@ -8026,6 +8086,12 @@
     return quectolumen;
   }
   var quectolumen;
+  function Lumen(value) {
+    this.expression = times_1(get_unit_7(), value);
+  }
+  Lumen.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Lumen_kt_40v56r;
   function init_properties_Lumen_kt_l7zjjb() {
     if (properties_initialized_Lumen_kt_40v56r) {
@@ -8405,6 +8471,12 @@
     return quectolux;
   }
   var quectolux;
+  function Lux(value) {
+    this.expression = times_1(get_unit_8(), value);
+  }
+  Lux.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Lux_kt_pkzbtt;
   function init_properties_Lux_kt_q9knd1() {
     if (properties_initialized_Lux_kt_pkzbtt) {
@@ -8784,6 +8856,12 @@
     return quectonewton;
   }
   var quectonewton;
+  function Newton(value) {
+    this.expression = times_1(get_unit_9(), value);
+  }
+  Newton.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Newton_kt_t6rf9x;
   function init_properties_Newton_kt_6q8jpj() {
     if (properties_initialized_Newton_kt_t6rf9x) {
@@ -9163,6 +9241,12 @@
     return quectoohm;
   }
   var quectoohm;
+  function Ohm(value) {
+    this.expression = times_1(get_unit_10(), value);
+  }
+  Ohm.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Ohm_kt_qsrufw;
   function init_properties_Ohm_kt_rhd5z4() {
     if (properties_initialized_Ohm_kt_qsrufw) {
@@ -9542,6 +9626,12 @@
     return quectopascal;
   }
   var quectopascal;
+  function Pascal(value) {
+    this.expression = times_1(get_unit_11(), value);
+  }
+  Pascal.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Pascal_kt_cvvqxe;
   function init_properties_Pascal_kt_m88c2a() {
     if (properties_initialized_Pascal_kt_cvvqxe) {
@@ -9921,6 +10011,12 @@
     return quectoradian;
   }
   var quectoradian;
+  function Radian(value) {
+    this.expression = times_1(get_unit_12(), value);
+  }
+  Radian.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Radian_kt_jwgo8t;
   function init_properties_Radian_kt_f7neqv() {
     if (properties_initialized_Radian_kt_jwgo8t) {
@@ -10300,6 +10396,12 @@
     return quectosiemens;
   }
   var quectosiemens;
+  function Siemens(value) {
+    this.expression = times_1(get_unit_13(), value);
+  }
+  Siemens.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Siemens_kt_x6qr30;
   function init_properties_Siemens_kt_erjjt4() {
     if (properties_initialized_Siemens_kt_x6qr30) {
@@ -10679,6 +10781,12 @@
     return quectosievert;
   }
   var quectosievert;
+  function Sievert(value) {
+    this.expression = times_1(get_unit_14(), value);
+  }
+  Sievert.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Sievert_kt_rxxkb4;
   function init_properties_Sievert_kt_4v3t84() {
     if (properties_initialized_Sievert_kt_rxxkb4) {
@@ -11058,6 +11166,12 @@
     return quectosteradian;
   }
   var quectosteradian;
+  function Steradian(value) {
+    this.expression = times_1(get_unit_15(), value);
+  }
+  Steradian.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Steradian_kt_w7aqs5;
   function init_properties_Steradian_kt_m0qgen() {
     if (properties_initialized_Steradian_kt_w7aqs5) {
@@ -11437,6 +11551,12 @@
     return quectotesla;
   }
   var quectotesla;
+  function Tesla(value) {
+    this.expression = times_1(get_unit_16(), value);
+  }
+  Tesla.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Tesla_kt_2pedsp;
   function init_properties_Tesla_kt_jwis59() {
     if (properties_initialized_Tesla_kt_2pedsp) {
@@ -11816,6 +11936,12 @@
     return quectovolt;
   }
   var quectovolt;
+  function Volt(value) {
+    this.expression = times_1(get_unit_17(), value);
+  }
+  Volt.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Volt_kt_dg9hgd;
   function init_properties_Volt_kt_ymmf09() {
     if (properties_initialized_Volt_kt_dg9hgd) {
@@ -12195,6 +12321,12 @@
     return quectowatt;
   }
   var quectowatt;
+  function Watt(value) {
+    this.expression = times_1(get_unit_18(), value);
+  }
+  Watt.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Watt_kt_lmfewk;
   function init_properties_Watt_kt_s8bpio() {
     if (properties_initialized_Watt_kt_lmfewk) {
@@ -12574,6 +12706,12 @@
     return quectoweber;
   }
   var quectoweber;
+  function Weber(value) {
+    this.expression = times_1(get_unit_19(), value);
+  }
+  Weber.prototype.n6 = function () {
+    return this.expression;
+  };
   var properties_initialized_Weber_kt_9zugxb;
   function init_properties_Weber_kt_r6yv9v() {
     if (properties_initialized_Weber_kt_9zugxb) {
@@ -12743,10 +12881,6 @@
     return l;
   }
   var l;
-  function get_L() {
-    init_properties_NonSiUnits_kt_6cvga6();
-    return L;
-  }
   var L;
   function get_t() {
     init_properties_NonSiUnits_kt_6cvga6();
@@ -12758,7 +12892,7 @@
     return Da;
   }
   var Da;
-  function get_ev() {
+  function get_eV() {
     init_properties_NonSiUnits_kt_6cvga6();
     return eV;
   }
@@ -12770,15 +12904,15 @@
   var percentage;
   function get_au_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
-    return new Metre(numberToDouble(_this__u8e3s4) * (new Long(-725984660, 34)).g5());
+    return new Metre(numberToDouble(_this__u8e3s4) * 1.495978707E11);
   }
   function get_ha_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
-    return times_2(numberToDouble(_this__u8e3s4) * powNumber(10, 4), get_m2());
+    return times_2(10000 * numberToDouble(_this__u8e3s4), get_m2());
   }
   function get_l_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
-    return times_0(new Metre(numberToDouble(_this__u8e3s4) / 10.0), times_0(new Metre(0.1), new Metre(0.1)));
+    return times_0(times_0(new Metre(numberToDouble(_this__u8e3s4) / 10.0), new Metre(0.1)), new Metre(0.1));
   }
   function get_Da_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
@@ -12788,7 +12922,7 @@
     tmp$ret$0 = Math.pow(10.0, -27.0);
     return new Kilogram(tmp * tmp$ret$0);
   }
-  function get_eV(_this__u8e3s4) {
+  function get_eV_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
     var tmp$ret$0;
     // Inline function 'kotlin.math.pow' call
@@ -12811,7 +12945,7 @@
       L = get_l();
       t = get_kg_0(1000);
       Da = get_Da_0(1);
-      eV = get_eV(1);
+      eV = get_eV_0(1);
       percentage = 0.01;
     }
   }
@@ -12872,8 +13006,8 @@
     }
   }
   //region block: init
-  COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:";
   ε = 1.0E-12;
+  COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:";
   //endregion
   //region block: exports
   function $jsExportAll$(_) {
@@ -14118,6 +14252,10 @@
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
     var $eu$sirotin$kotunil$core = $eu$sirotin$kotunil.core || ($eu$sirotin$kotunil.core = {});
+    Object.defineProperty($eu$sirotin$kotunil$core, '\u03B5', {
+      configurable: true,
+      get: get_ε
+    });
     $eu$sirotin$kotunil$core.Expression = Expression;
     $eu$sirotin$kotunil$core.Expression.create = create;
     var $eu = _.eu || (_.eu = {});
@@ -14616,6 +14754,7 @@
       configurable: true,
       get: get_quectobecquerel
     });
+    $eu$sirotin$kotunil$derived.Becquerel = Becquerel;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -14792,6 +14931,7 @@
       configurable: true,
       get: get_quectocoulomb
     });
+    $eu$sirotin$kotunil$derived.Coulomb = Coulomb;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -14968,6 +15108,7 @@
       configurable: true,
       get: get_quectofarad
     });
+    $eu$sirotin$kotunil$derived.Farad = Farad;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -15144,6 +15285,7 @@
       configurable: true,
       get: get_quectogray
     });
+    $eu$sirotin$kotunil$derived.Gray = Gray;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -15320,6 +15462,7 @@
       configurable: true,
       get: get_quectohenry
     });
+    $eu$sirotin$kotunil$derived.Henry = Henry;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -15496,6 +15639,7 @@
       configurable: true,
       get: get_quectohertz
     });
+    $eu$sirotin$kotunil$derived.Hertz = Hertz;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -15672,6 +15816,7 @@
       configurable: true,
       get: get_quectojoule
     });
+    $eu$sirotin$kotunil$derived.Joule = Joule;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -15848,6 +15993,7 @@
       configurable: true,
       get: get_quectokatal
     });
+    $eu$sirotin$kotunil$derived.Katal = Katal;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16024,6 +16170,7 @@
       configurable: true,
       get: get_quectolumen
     });
+    $eu$sirotin$kotunil$derived.Lumen = Lumen;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16200,6 +16347,7 @@
       configurable: true,
       get: get_quectolux
     });
+    $eu$sirotin$kotunil$derived.Lux = Lux;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16376,6 +16524,7 @@
       configurable: true,
       get: get_quectonewton
     });
+    $eu$sirotin$kotunil$derived.Newton = Newton;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16552,6 +16701,7 @@
       configurable: true,
       get: get_quectoohm
     });
+    $eu$sirotin$kotunil$derived.Ohm = Ohm;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16728,6 +16878,7 @@
       configurable: true,
       get: get_quectopascal
     });
+    $eu$sirotin$kotunil$derived.Pascal = Pascal;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -16904,6 +17055,7 @@
       configurable: true,
       get: get_quectoradian
     });
+    $eu$sirotin$kotunil$derived.Radian = Radian;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17080,6 +17232,7 @@
       configurable: true,
       get: get_quectosiemens
     });
+    $eu$sirotin$kotunil$derived.Siemens = Siemens;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17256,6 +17409,7 @@
       configurable: true,
       get: get_quectosievert
     });
+    $eu$sirotin$kotunil$derived.Sievert = Sievert;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17432,6 +17586,7 @@
       configurable: true,
       get: get_quectosteradian
     });
+    $eu$sirotin$kotunil$derived.Steradian = Steradian;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17608,6 +17763,7 @@
       configurable: true,
       get: get_quectotesla
     });
+    $eu$sirotin$kotunil$derived.Tesla = Tesla;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17784,6 +17940,7 @@
       configurable: true,
       get: get_quectovolt
     });
+    $eu$sirotin$kotunil$derived.Volt = Volt;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -17960,6 +18117,7 @@
       configurable: true,
       get: get_quectowatt
     });
+    $eu$sirotin$kotunil$derived.Watt = Watt;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -18136,6 +18294,7 @@
       configurable: true,
       get: get_quectoweber
     });
+    $eu$sirotin$kotunil$derived.Weber = Weber;
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
@@ -18168,9 +18327,9 @@
       configurable: true,
       get: get_ha
     });
-    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'L', {
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'l', {
       configurable: true,
-      get: get_L
+      get: get_l
     });
     Object.defineProperty($eu$sirotin$kotunil$specialunits, 't', {
       configurable: true,
@@ -18180,9 +18339,9 @@
       configurable: true,
       get: get_Da
     });
-    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'ev', {
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'eV', {
       configurable: true,
-      get: get_ev
+      get: get_eV
     });
     Object.defineProperty($eu$sirotin$kotunil$specialunits, 'percentage', {
       configurable: true,

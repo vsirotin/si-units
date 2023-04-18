@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  (mol * (s `^` -1))
 
+@JsExport
+/**
+* System International Unit for catalytic activity.
+*/
+class Katal(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for catalytic activity.
 */

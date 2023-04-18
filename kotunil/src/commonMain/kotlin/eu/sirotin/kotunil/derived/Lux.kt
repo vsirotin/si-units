@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  cd*sr*(m `^` -2)
 
+@JsExport
+/**
+* System International Unit for illuminance.
+*/
+class Lux(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for illuminance.
 */

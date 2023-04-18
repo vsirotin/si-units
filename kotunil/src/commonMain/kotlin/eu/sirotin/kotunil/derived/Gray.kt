@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  (m2)*(s `^` -2)
 
+@JsExport
+/**
+* System International Unit for absorbed dose (of ionising radiation).
+*/
+class Gray(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for absorbed dose (of ionising radiation).
 */

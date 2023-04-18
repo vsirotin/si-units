@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  m/m
 
+@JsExport
+/**
+* System International Unit for plane angle.
+*/
+class Radian(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for plane angle.
 */

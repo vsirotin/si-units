@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg*(m2)/(s `^` 3)
 
+@JsExport
+/**
+* System International Unit for power, radiant flux.
+*/
+class Watt(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for power, radiant flux.
 */

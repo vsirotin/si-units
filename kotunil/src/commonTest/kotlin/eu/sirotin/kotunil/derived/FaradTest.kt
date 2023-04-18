@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class FaradTest {
 
     @Test
-    fun testFaradMainTest() {
+    fun testFaradMainTest1() {
         assertEquals(1.F , F)
+    }
+    
+     @Test
+    fun testFaradMainTest2() {
+        assertEquals(12.3.F , Farad(12.3).expression)
     }
               
     @Test

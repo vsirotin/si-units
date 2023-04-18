@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg*m2 * (s `^` -3) * (A `^` -2)
 
+@JsExport
+/**
+* System International Unit for resistance, impedance, reactance.
+*/
+class Ohm(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for resistance, impedance, reactance.
 */

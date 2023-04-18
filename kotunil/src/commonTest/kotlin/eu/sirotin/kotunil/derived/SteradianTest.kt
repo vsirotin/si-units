@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class SteradianTest {
 
     @Test
-    fun testSteradianMainTest() {
+    fun testSteradianMainTest1() {
         assertEquals(1.sr , sr)
+    }
+    
+     @Test
+    fun testSteradianMainTest2() {
+        assertEquals(12.3.sr , Steradian(12.3).expression)
     }
               
     @Test

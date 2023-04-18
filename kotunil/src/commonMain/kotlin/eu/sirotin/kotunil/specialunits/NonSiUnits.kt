@@ -29,7 +29,6 @@ import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
 import kotlin.js.JsExport
-import kotlin.js.JsName
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmName
 import kotlin.math.E
@@ -41,18 +40,14 @@ import kotlin.math.pow
  * Square metre
  */
 @JsExport
-@JsName("m2")
-//@get:JvmName("m2")
-@JvmField()
+@JvmField
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
 @JsExport
-@JsName("m3")
-//@get:JvmName("m3")
-@JvmField()
+@JvmField
 val m3 = m2 * m
 
 /**
@@ -68,9 +63,7 @@ val Number.min: Second
  * Minute (time)
  */
 @JsExport
-@JsName("min")
-//@get:JvmName("min")
-@JvmField()
+@JvmField
 val min = Second(60.0)
 
 /**
@@ -86,9 +79,7 @@ val Number.h: Second
  * Hour (time)
  */
 @JsExport
-@JsName("h")
-//@get:JvmName("h")
-@JvmField()
+@JvmField
 val h = Second(3600.0)
 
 /**
@@ -104,24 +95,20 @@ val Number.d: Second
  * Day (time)
  */
 @JsExport
-@JsName("d")
-//@get:JvmName("d")
-@JvmField()
+@JvmField
 val d = Second(24*3600.0)
 
 /**
  * Astronomical unit 149597870700 metre
  */
 val Number.au: Metre
-    get()  = Metre(this.toDouble()*149597870700)
+    get()  = Metre(this.toDouble()*149597870700.0)
 
 /**
  * Astronomical unit 149597870700 metre
  */
 @JsExport
-@JsName("au")
-//@get:JvmName("au")
-@JvmField()
+@JvmField
 val au = 1.0.au
 
 /**
@@ -139,15 +126,13 @@ const val e = E
  * hectare
  */
 val Number.ha: Expression
-    get() = this.toDouble() * (10 `^` 4) * m2
+    get() = 10000*this.toDouble()  * m2
 
 /**
  * hectare
  */
 @JsExport
-@JsName("ha")
-//@get:JvmName("ha")
-@JvmField()
+@JvmField
 val ha = 1.0.ha
 
 /**
@@ -157,15 +142,13 @@ val Number.l: Expression
     /**
      * get litre
      */
-    get() = Metre(this.toDouble()/10.0) * (Metre(0.1) * Metre(0.1))
+    get() = Metre(this.toDouble()/10.0) * Metre(0.1) * Metre(0.1)
 
 /**
  * Litre
  */
-//@JsExport
+@JsExport
 @JvmField
-//@JsName("l")
-//@get:JvmName("l")
 val l = 1.0.l
 
 /**
@@ -178,10 +161,7 @@ val Number.L: Expression
      */
     get() = this.l
 
-@JsExport
 @JvmField
-@JsName("L")
-//@get:JvmName("L")
 val L = l
 
 /**
@@ -197,9 +177,7 @@ val Number.t: Kilogram
  * tonne
  */
 @JsExport
-@JvmField()
-@JsName("t")
-//@get:JvmName("t")
+@JvmField
 val t = 1000.kg
 
 /**
@@ -215,9 +193,7 @@ val Number.Da: Kilogram
  * dalton
  */
 @JsExport
-@JsName("Da")
-//@get:JvmName("Da")
-@JvmField()
+@JvmField
 val Da = 1.Da
 
 /**
@@ -233,9 +209,7 @@ val Number.eV: Expression
  * electronvolt
  */
 @JsExport
-@JsName("ev")
-//@get:JvmName("ev")
-@JvmField()
+@JvmField
 val eV = 1.eV
 
 
@@ -252,9 +226,7 @@ val Number.percentage: Double
  * Percentage
  */
 @JsExport
-@JsName("percentage")
-//@get:JvmName("percentage")
-@JvmField()
+@JvmField
 val percentage = 0.01
 
 /**

@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class GrayTest {
 
     @Test
-    fun testGrayMainTest() {
+    fun testGrayMainTest1() {
         assertEquals(1.Gy , Gy)
+    }
+    
+     @Test
+    fun testGrayMainTest2() {
+        assertEquals(12.3.Gy , Gray(12.3).expression)
     }
               
     @Test

@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg*(m2)/(s `^` 2)
 
+@JsExport
+/**
+* System International Unit for energy, work, heat.
+*/
+class Joule(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for energy, work, heat.
 */

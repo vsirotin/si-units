@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg/(m * (s `^` 2))
 
+@JsExport
+/**
+* System International Unit for pressure, stress.
+*/
+class Pascal(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for pressure, stress.
 */

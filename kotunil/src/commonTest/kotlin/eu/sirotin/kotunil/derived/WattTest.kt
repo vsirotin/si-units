@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class WattTest {
 
     @Test
-    fun testWattMainTest() {
+    fun testWattMainTest1() {
         assertEquals(1.W , W)
+    }
+    
+     @Test
+    fun testWattMainTest2() {
+        assertEquals(12.3.W , Watt(12.3).expression)
     }
               
     @Test

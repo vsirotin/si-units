@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class OhmTest {
 
     @Test
-    fun testOhmMainTest() {
+    fun testOhmMainTest1() {
         assertEquals(1.Ω , Ω)
+    }
+    
+     @Test
+    fun testOhmMainTest2() {
+        assertEquals(12.3.Ω , Ohm(12.3).expression)
     }
               
     @Test

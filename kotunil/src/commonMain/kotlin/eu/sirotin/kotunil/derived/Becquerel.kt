@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  (s `^` -1)
 
+@JsExport
+/**
+* System International Unit for activity referred to a radionuclide (decays per unit time).
+*/
+class Becquerel(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for activity referred to a radionuclide (decays per unit time).
 */

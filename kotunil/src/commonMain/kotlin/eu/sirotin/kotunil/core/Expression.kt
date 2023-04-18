@@ -31,6 +31,7 @@ import kotlin.math.pow
  */
 const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
 
+@JsExport
 /**
  * Tolerance by double comparison
  */

@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg* (m2)*(s `^` -2)*(A `^` -2)
 
+@JsExport
+/**
+* System International Unit for inductance.
+*/
+class Henry(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for inductance.
 */

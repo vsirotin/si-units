@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class HertzTest {
 
     @Test
-    fun testHertzMainTest() {
+    fun testHertzMainTest1() {
         assertEquals(1.Hz , Hz)
+    }
+    
+     @Test
+    fun testHertzMainTest2() {
+        assertEquals(12.3.Hz , Hertz(12.3).expression)
     }
               
     @Test

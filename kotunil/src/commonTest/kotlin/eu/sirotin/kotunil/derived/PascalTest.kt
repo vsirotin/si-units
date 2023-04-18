@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class PascalTest {
 
     @Test
-    fun testPascalMainTest() {
+    fun testPascalMainTest1() {
         assertEquals(1.Pa , Pa)
+    }
+    
+     @Test
+    fun testPascalMainTest2() {
+        assertEquals(12.3.Pa , Pascal(12.3).expression)
     }
               
     @Test

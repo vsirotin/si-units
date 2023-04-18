@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class KatalTest {
 
     @Test
-    fun testKatalMainTest() {
+    fun testKatalMainTest1() {
         assertEquals(1.kat , kat)
+    }
+    
+     @Test
+    fun testKatalMainTest2() {
+        assertEquals(12.3.kat , Katal(12.3).expression)
     }
               
     @Test

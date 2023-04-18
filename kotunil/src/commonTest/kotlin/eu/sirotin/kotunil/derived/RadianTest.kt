@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class RadianTest {
 
     @Test
-    fun testRadianMainTest() {
+    fun testRadianMainTest1() {
         assertEquals(1.rad , rad)
+    }
+    
+     @Test
+    fun testRadianMainTest2() {
+        assertEquals(12.3.rad , Radian(12.3).expression)
     }
               
     @Test

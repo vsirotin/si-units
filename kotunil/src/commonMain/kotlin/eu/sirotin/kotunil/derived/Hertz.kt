@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  1/s
 
+@JsExport
+/**
+* System International Unit for frequency.
+*/
+class Hertz(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for frequency.
 */

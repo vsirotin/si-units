@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)
 
+@JsExport
+/**
+* System International Unit for capacitance.
+*/
+class Farad(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for capacitance.
 */

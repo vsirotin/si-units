@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  s*A
 
+@JsExport
+/**
+* System International Unit for electric charge.
+*/
+class Coulomb(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for electric charge.
 */

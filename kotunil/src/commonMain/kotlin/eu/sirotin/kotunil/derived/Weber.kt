@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg*(m2) * (s `^` -2) * (A `^` -1)
 
+@JsExport
+/**
+* System International Unit for magnetic flux.
+*/
+class Weber(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for magnetic flux.
 */

@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  m2/m2
 
+@JsExport
+/**
+* System International Unit for solid angle.
+*/
+class Steradian(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for solid angle.
 */

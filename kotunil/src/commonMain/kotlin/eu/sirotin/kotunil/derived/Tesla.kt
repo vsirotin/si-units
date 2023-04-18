@@ -12,6 +12,14 @@ import kotlin.jvm.JvmName
 
 private val unit =  kg* (s `^` -2) * (A `^` -1)
 
+@JsExport
+/**
+* System International Unit for magnetic flux density.
+*/
+class Tesla(value: Double){
+    val expression: Expression = unit*value
+}
+
 /**
 * System International Unit for magnetic flux density.
 */
