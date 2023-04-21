@@ -15,7 +15,7 @@ internal class SiemensTest {
     
      @Test
     fun testSiemensMainTest2() {
-        assertEquals(12.3.S , Siemens(12.3).expression)
+        assertEquals(12.3.S , Siemens(12.3))
     }
               
     @Test

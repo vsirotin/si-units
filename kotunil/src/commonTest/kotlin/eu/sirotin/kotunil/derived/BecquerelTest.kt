@@ -15,7 +15,7 @@ internal class BecquerelTest {
     
      @Test
     fun testBecquerelMainTest2() {
-        assertEquals(12.3.Bq , Becquerel(12.3).expression)
+        assertEquals(12.3.Bq , Becquerel(12.3))
     }
               
     @Test

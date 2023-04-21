@@ -15,7 +15,7 @@ internal class RadianTest {
     
      @Test
     fun testRadianMainTest2() {
-        assertEquals(12.3.rad , Radian(12.3).expression)
+        assertEquals(12.3.rad , Radian(12.3))
     }
               
     @Test

@@ -15,7 +15,7 @@ internal class TeslaTest {
     
      @Test
     fun testTeslaMainTest2() {
-        assertEquals(12.3.T , Tesla(12.3).expression)
+        assertEquals(12.3.T , Tesla(12.3))
     }
               
     @Test

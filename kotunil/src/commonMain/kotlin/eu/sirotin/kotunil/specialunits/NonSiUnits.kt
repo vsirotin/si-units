@@ -111,11 +111,13 @@ val Number.au: Metre
 @JvmField
 val au = 1.0.au
 
+@JsExport
 /**
  * Mathematical constant (Archimedes' constant π). The numeric value of π is approximately 3.1415926536
  */
 const val π = PI
 
+@JsExport
 /**
  * Euler's number e. The numeric value of e is approximately 2.7182818284
  */

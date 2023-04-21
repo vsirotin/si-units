@@ -15,7 +15,7 @@ internal class KatalTest {
     
      @Test
     fun testKatalMainTest2() {
-        assertEquals(12.3.kat , Katal(12.3).expression)
+        assertEquals(12.3.kat , Katal(12.3))
     }
               
     @Test

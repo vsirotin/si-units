@@ -15,7 +15,7 @@ internal class JouleTest {
     
      @Test
     fun testJouleMainTest2() {
-        assertEquals(12.3.J , Joule(12.3).expression)
+        assertEquals(12.3.J , Joule(12.3))
     }
               
     @Test

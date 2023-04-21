@@ -15,7 +15,7 @@ internal class GrayTest {
     
      @Test
     fun testGrayMainTest2() {
-        assertEquals(12.3.Gy , Gray(12.3).expression)
+        assertEquals(12.3.Gy , Gray(12.3))
     }
               
     @Test

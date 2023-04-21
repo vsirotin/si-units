@@ -15,7 +15,7 @@ internal class CoulombTest {
     
      @Test
     fun testCoulombMainTest2() {
-        assertEquals(12.3.C , Coulomb(12.3).expression)
+        assertEquals(12.3.C , Coulomb(12.3))
     }
               
     @Test

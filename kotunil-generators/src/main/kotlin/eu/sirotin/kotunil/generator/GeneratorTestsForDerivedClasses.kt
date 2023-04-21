@@ -100,7 +100,7 @@ internal class ${className}Test {
     
      @Test
     fun test${className}MainTest2() {
-        assertEquals(12.3.$unitSymbol , $className(12.3).expression)
+        assertEquals(12.3.$unitSymbol , $className(12.3))
     }
     """
 }

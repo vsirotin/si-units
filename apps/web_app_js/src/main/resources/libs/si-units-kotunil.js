@@ -46,6 +46,7 @@
   setMetadataFor(Metre, 'Metre', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(Mole, 'Mole', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(Second, 'Second', classMeta, Expression, undefined, undefined, undefined, []);
+  setMetadataFor(DerivedUnit, 'DerivedUnit', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(Dimensions, 'Dimensions', classMeta, undefined, undefined, undefined, undefined, []);
   setMetadataFor(Factor, 'Factor', classMeta, undefined, [Comparable], undefined, undefined, []);
   setMetadataFor(UnitSpecification, 'UnitSpecification', classMeta, undefined, undefined, undefined, undefined, []);
@@ -84,27 +85,27 @@
   setMetadataFor(TurkishLira, 'TurkishLira', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(UAEDirham, 'UAEDirham', classMeta, Expression, undefined, undefined, undefined, []);
   setMetadataFor(UnitedStatesDollar, 'UnitedStatesDollar', classMeta, Expression, undefined, undefined, undefined, []);
-  setMetadataFor(Becquerel, 'Becquerel', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Coulomb, 'Coulomb', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Farad, 'Farad', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Gray, 'Gray', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Henry, 'Henry', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Hertz, 'Hertz', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Joule, 'Joule', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Katal, 'Katal', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Lumen, 'Lumen', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Lux, 'Lux', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Newton, 'Newton', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Ohm, 'Ohm', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Pascal, 'Pascal', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Radian, 'Radian', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Siemens, 'Siemens', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Sievert, 'Sievert', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Steradian, 'Steradian', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Tesla, 'Tesla', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Volt, 'Volt', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Watt, 'Watt', classMeta, undefined, undefined, undefined, undefined, []);
-  setMetadataFor(Weber, 'Weber', classMeta, undefined, undefined, undefined, undefined, []);
+  setMetadataFor(Becquerel, 'Becquerel', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Coulomb, 'Coulomb', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Farad, 'Farad', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Gray, 'Gray', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Henry, 'Henry', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Hertz, 'Hertz', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Joule, 'Joule', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Katal, 'Katal', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Lumen, 'Lumen', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Lux, 'Lux', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Newton, 'Newton', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Ohm, 'Ohm', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Pascal, 'Pascal', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Radian, 'Radian', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Siemens, 'Siemens', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Sievert, 'Sievert', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Steradian, 'Steradian', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Tesla, 'Tesla', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Volt, 'Volt', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Watt, 'Watt', classMeta, DerivedUnit, undefined, undefined, undefined, []);
+  setMetadataFor(Weber, 'Weber', classMeta, DerivedUnit, undefined, undefined, undefined, []);
   setMetadataFor(Thing, 'Thing', classMeta, Expression, undefined, undefined, undefined, []);
   //endregion
   function get_descriptionAmpere() {
@@ -2798,6 +2799,9 @@
       quectosecond = get_qs();
     }
   }
+  function DerivedUnit(value, formula) {
+    Expression.call(this, numberToDouble(value) * formula.value, formula.dimensions);
+  }
   function dimOf($this, p, invert) {
     var pv = invert ? -p.powerValue : p.powerValue;
     return p.specification.unitSymbol + tryFormatToIntNotOne($this, pv);
@@ -4752,11 +4756,11 @@
       USD = UnitedStatesDollar_init_$Create$(0.0, 1, null);
     }
   }
-  function get_unit() {
+  function get_formula() {
     init_properties_Becquerel_kt_240c04();
-    return unit;
+    return formula;
   }
-  var unit;
+  var formula;
   function get_Bq() {
     init_properties_Becquerel_kt_240c04();
     return Bq;
@@ -5003,18 +5007,15 @@
   }
   var quectobecquerel;
   function Becquerel(value) {
-    this.expression = times_1(get_unit(), value);
+    DerivedUnit.call(this, value, get_formula());
   }
-  Becquerel.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Becquerel_kt_ep2is8;
   function init_properties_Becquerel_kt_240c04() {
     if (properties_initialized_Becquerel_kt_ep2is8) {
     } else {
       properties_initialized_Becquerel_kt_ep2is8 = true;
-      unit = powExpression(get_s(), -1);
-      Bq = get_unit();
+      formula = powExpression(get_s(), -1);
+      Bq = get_formula();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -5137,11 +5138,11 @@
       quectobecquerel = get_qBq();
     }
   }
-  function get_unit_0() {
+  function get_formula_0() {
     init_properties_Coulomb_kt_gjiitp();
-    return unit_0;
+    return formula_0;
   }
-  var unit_0;
+  var formula_0;
   function get_C() {
     init_properties_Coulomb_kt_gjiitp();
     return C;
@@ -5388,18 +5389,15 @@
   }
   var quectocoulomb;
   function Coulomb(value) {
-    this.expression = times_1(get_unit_0(), value);
+    DerivedUnit.call(this, value, get_formula_0());
   }
-  Coulomb.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Coulomb_kt_6jb89b;
   function init_properties_Coulomb_kt_gjiitp() {
     if (properties_initialized_Coulomb_kt_6jb89b) {
     } else {
       properties_initialized_Coulomb_kt_6jb89b = true;
-      unit_0 = times_0(get_s(), get_A());
-      C = get_unit_0();
+      formula_0 = times_0(get_s(), get_A());
+      C = get_formula_0();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -5522,11 +5520,11 @@
       quectocoulomb = get_qC();
     }
   }
-  function get_unit_1() {
+  function get_formula_1() {
     init_properties_Farad_kt_gs63pi();
-    return unit_1;
+    return formula_1;
   }
-  var unit_1;
+  var formula_1;
   function get_F() {
     init_properties_Farad_kt_gs63pi();
     return F;
@@ -5773,18 +5771,15 @@
   }
   var quectofarad;
   function Farad(value) {
-    this.expression = times_1(get_unit_1(), value);
+    DerivedUnit.call(this, value, get_formula_1());
   }
-  Farad.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Farad_kt_xzai22;
   function init_properties_Farad_kt_gs63pi() {
     if (properties_initialized_Farad_kt_xzai22) {
     } else {
       properties_initialized_Farad_kt_xzai22 = true;
-      unit_1 = times_0(times_0(times_0(powExpression(get_kg(), -1), powExpression(get_m(), -2)), powExpression(get_s(), 4)), powExpression(get_A(), 2));
-      F = get_unit_1();
+      formula_1 = times_0(times_0(times_0(powExpression(get_kg(), -1), powExpression(get_m(), -2)), powExpression(get_s(), 4)), powExpression(get_A(), 2));
+      F = get_formula_1();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -5907,11 +5902,11 @@
       quectofarad = get_qF();
     }
   }
-  function get_unit_2() {
+  function get_formula_2() {
     init_properties_Gray_kt_st6n6f();
-    return unit_2;
+    return formula_2;
   }
-  var unit_2;
+  var formula_2;
   function get_Gy() {
     init_properties_Gray_kt_st6n6f();
     return Gy;
@@ -6158,18 +6153,15 @@
   }
   var quectogray;
   function Gray(value) {
-    this.expression = times_1(get_unit_2(), value);
+    DerivedUnit.call(this, value, get_formula_2());
   }
-  Gray.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Gray_kt_7mtpmj;
   function init_properties_Gray_kt_st6n6f() {
     if (properties_initialized_Gray_kt_7mtpmj) {
     } else {
       properties_initialized_Gray_kt_7mtpmj = true;
-      unit_2 = times_0(get_m2(), powExpression(get_s(), -2));
-      Gy = get_unit_2();
+      formula_2 = times_0(get_m2(), powExpression(get_s(), -2));
+      Gy = get_formula_2();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -6292,11 +6284,11 @@
       quectogray = get_qGy();
     }
   }
-  function get_unit_3() {
+  function get_formula_3() {
     init_properties_Henry_kt_qx3ckc();
-    return unit_3;
+    return formula_3;
   }
-  var unit_3;
+  var formula_3;
   function get_H() {
     init_properties_Henry_kt_qx3ckc();
     return H;
@@ -6543,18 +6535,15 @@
   }
   var quectohenry;
   function Henry(value) {
-    this.expression = times_1(get_unit_3(), value);
+    DerivedUnit.call(this, value, get_formula_3());
   }
-  Henry.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Henry_kt_9pyy7s;
   function init_properties_Henry_kt_qx3ckc() {
     if (properties_initialized_Henry_kt_9pyy7s) {
     } else {
       properties_initialized_Henry_kt_9pyy7s = true;
-      unit_3 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -2)), powExpression(get_A(), -2));
-      H = get_unit_3();
+      formula_3 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -2)), powExpression(get_A(), -2));
+      H = get_formula_3();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -6677,11 +6666,11 @@
       quectohenry = get_qH();
     }
   }
-  function get_unit_4() {
+  function get_formula_4() {
     init_properties_Hertz_kt_sue2bd();
-    return unit_4;
+    return formula_4;
   }
-  var unit_4;
+  var formula_4;
   function get_Hz() {
     init_properties_Hertz_kt_sue2bd();
     return Hz;
@@ -6928,18 +6917,15 @@
   }
   var quectohertz;
   function Hertz(value) {
-    this.expression = times_1(get_unit_4(), value);
+    DerivedUnit.call(this, value, get_formula_4());
   }
-  Hertz.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Hertz_kt_bn9nyt;
   function init_properties_Hertz_kt_sue2bd() {
     if (properties_initialized_Hertz_kt_bn9nyt) {
     } else {
       properties_initialized_Hertz_kt_bn9nyt = true;
-      unit_4 = div_0(1, get_s());
-      Hz = get_unit_4();
+      formula_4 = div_0(1, get_s());
+      Hz = get_formula_4();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -7062,11 +7048,11 @@
       quectohertz = get_qHz();
     }
   }
-  function get_unit_5() {
+  function get_formula_5() {
     init_properties_Joule_kt_lgmsgb();
-    return unit_5;
+    return formula_5;
   }
-  var unit_5;
+  var formula_5;
   function get_J() {
     init_properties_Joule_kt_lgmsgb();
     return J;
@@ -7313,22 +7299,19 @@
   }
   var quectojoule;
   function Joule(value) {
-    this.expression = times_1(get_unit_5(), value);
+    DerivedUnit.call(this, value, get_formula_5());
   }
-  Joule.prototype.n6 = function () {
-    return this.expression;
-  };
   function get_J_0(_this__u8e3s4) {
     init_properties_Joule_kt_lgmsgb();
-    return times_2(numberToDouble(_this__u8e3s4), get_unit_5());
+    return times_2(numberToDouble(_this__u8e3s4), get_formula_5());
   }
   var properties_initialized_Joule_kt_49ie3r;
   function init_properties_Joule_kt_lgmsgb() {
     if (properties_initialized_Joule_kt_49ie3r) {
     } else {
       properties_initialized_Joule_kt_49ie3r = true;
-      unit_5 = div(times_0(get_kg(), get_m2()), powExpression(get_s(), 2));
-      J = get_unit_5();
+      formula_5 = div(times_0(get_kg(), get_m2()), powExpression(get_s(), 2));
+      J = get_formula_5();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -7451,11 +7434,11 @@
       quectojoule = get_qJ();
     }
   }
-  function get_unit_6() {
+  function get_formula_6() {
     init_properties_Katal_kt_ds1ho5();
-    return unit_6;
+    return formula_6;
   }
-  var unit_6;
+  var formula_6;
   function get_kat() {
     init_properties_Katal_kt_ds1ho5();
     return kat;
@@ -7702,18 +7685,15 @@
   }
   var quectokatal;
   function Katal(value) {
-    this.expression = times_1(get_unit_6(), value);
+    DerivedUnit.call(this, value, get_formula_6());
   }
-  Katal.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Katal_kt_uz5w0p;
   function init_properties_Katal_kt_ds1ho5() {
     if (properties_initialized_Katal_kt_uz5w0p) {
     } else {
       properties_initialized_Katal_kt_uz5w0p = true;
-      unit_6 = times_0(get_mol(), powExpression(get_s(), -1));
-      kat = get_unit_6();
+      formula_6 = times_0(get_mol(), powExpression(get_s(), -1));
+      kat = get_formula_6();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -7836,11 +7816,11 @@
       quectokatal = get_qkat();
     }
   }
-  function get_unit_7() {
+  function get_formula_7() {
     init_properties_Lumen_kt_l7zjjb();
-    return unit_7;
+    return formula_7;
   }
-  var unit_7;
+  var formula_7;
   function get_lm() {
     init_properties_Lumen_kt_l7zjjb();
     return lm;
@@ -8087,18 +8067,15 @@
   }
   var quectolumen;
   function Lumen(value) {
-    this.expression = times_1(get_unit_7(), value);
+    DerivedUnit.call(this, value, get_formula_7());
   }
-  Lumen.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Lumen_kt_40v56r;
   function init_properties_Lumen_kt_l7zjjb() {
     if (properties_initialized_Lumen_kt_40v56r) {
     } else {
       properties_initialized_Lumen_kt_40v56r = true;
-      unit_7 = times_0(powExpression(get_cd(), 1), get_sr());
-      lm = get_unit_7();
+      formula_7 = times_0(powExpression(get_cd(), 1), get_sr());
+      lm = get_formula_7();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -8221,11 +8198,11 @@
       quectolumen = get_qlm();
     }
   }
-  function get_unit_8() {
+  function get_formula_8() {
     init_properties_Lux_kt_q9knd1();
-    return unit_8;
+    return formula_8;
   }
-  var unit_8;
+  var formula_8;
   function get_lx() {
     init_properties_Lux_kt_q9knd1();
     return lx;
@@ -8472,18 +8449,15 @@
   }
   var quectolux;
   function Lux(value) {
-    this.expression = times_1(get_unit_8(), value);
+    DerivedUnit.call(this, value, get_formula_8());
   }
-  Lux.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Lux_kt_pkzbtt;
   function init_properties_Lux_kt_q9knd1() {
     if (properties_initialized_Lux_kt_pkzbtt) {
     } else {
       properties_initialized_Lux_kt_pkzbtt = true;
-      unit_8 = times_0(times_0(get_cd(), get_sr()), powExpression(get_m(), -2));
-      lx = get_unit_8();
+      formula_8 = times_0(times_0(get_cd(), get_sr()), powExpression(get_m(), -2));
+      lx = get_formula_8();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -8606,11 +8580,11 @@
       quectolux = get_qlx();
     }
   }
-  function get_unit_9() {
+  function get_formula_9() {
     init_properties_Newton_kt_6q8jpj();
-    return unit_9;
+    return formula_9;
   }
-  var unit_9;
+  var formula_9;
   function get_N() {
     init_properties_Newton_kt_6q8jpj();
     return N;
@@ -8857,18 +8831,15 @@
   }
   var quectonewton;
   function Newton(value) {
-    this.expression = times_1(get_unit_9(), value);
+    DerivedUnit.call(this, value, get_formula_9());
   }
-  Newton.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Newton_kt_t6rf9x;
   function init_properties_Newton_kt_6q8jpj() {
     if (properties_initialized_Newton_kt_t6rf9x) {
     } else {
       properties_initialized_Newton_kt_t6rf9x = true;
-      unit_9 = div(times_0(get_kg(), get_m()), powExpression(get_s(), 2));
-      N = get_unit_9();
+      formula_9 = div(times_0(get_kg(), get_m()), powExpression(get_s(), 2));
+      N = get_formula_9();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -8991,11 +8962,11 @@
       quectonewton = get_qN();
     }
   }
-  function get_unit_10() {
+  function get_formula_10() {
     init_properties_Ohm_kt_rhd5z4();
-    return unit_10;
+    return formula_10;
   }
-  var unit_10;
+  var formula_10;
   function get_Ω() {
     init_properties_Ohm_kt_rhd5z4();
     return Ω;
@@ -9242,18 +9213,15 @@
   }
   var quectoohm;
   function Ohm(value) {
-    this.expression = times_1(get_unit_10(), value);
+    DerivedUnit.call(this, value, get_formula_10());
   }
-  Ohm.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Ohm_kt_qsrufw;
   function init_properties_Ohm_kt_rhd5z4() {
     if (properties_initialized_Ohm_kt_qsrufw) {
     } else {
       properties_initialized_Ohm_kt_qsrufw = true;
-      unit_10 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -3)), powExpression(get_A(), -2));
-      Ω = get_unit_10();
+      formula_10 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -3)), powExpression(get_A(), -2));
+      Ω = get_formula_10();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -9376,11 +9344,11 @@
       quectoohm = get_qΩ();
     }
   }
-  function get_unit_11() {
+  function get_formula_11() {
     init_properties_Pascal_kt_m88c2a();
-    return unit_11;
+    return formula_11;
   }
-  var unit_11;
+  var formula_11;
   function get_Pa() {
     init_properties_Pascal_kt_m88c2a();
     return Pa;
@@ -9627,18 +9595,15 @@
   }
   var quectopascal;
   function Pascal(value) {
-    this.expression = times_1(get_unit_11(), value);
+    DerivedUnit.call(this, value, get_formula_11());
   }
-  Pascal.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Pascal_kt_cvvqxe;
   function init_properties_Pascal_kt_m88c2a() {
     if (properties_initialized_Pascal_kt_cvvqxe) {
     } else {
       properties_initialized_Pascal_kt_cvvqxe = true;
-      unit_11 = div(get_kg(), times_0(get_m(), powExpression(get_s(), 2)));
-      Pa = get_unit_11();
+      formula_11 = div(get_kg(), times_0(get_m(), powExpression(get_s(), 2)));
+      Pa = get_formula_11();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -9761,11 +9726,11 @@
       quectopascal = get_qPa();
     }
   }
-  function get_unit_12() {
+  function get_formula_12() {
     init_properties_Radian_kt_f7neqv();
-    return unit_12;
+    return formula_12;
   }
-  var unit_12;
+  var formula_12;
   function get_rad() {
     init_properties_Radian_kt_f7neqv();
     return rad;
@@ -10012,18 +9977,15 @@
   }
   var quectoradian;
   function Radian(value) {
-    this.expression = times_1(get_unit_12(), value);
+    DerivedUnit.call(this, value, get_formula_12());
   }
-  Radian.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Radian_kt_jwgo8t;
   function init_properties_Radian_kt_f7neqv() {
     if (properties_initialized_Radian_kt_jwgo8t) {
     } else {
       properties_initialized_Radian_kt_jwgo8t = true;
-      unit_12 = div(get_m(), get_m());
-      rad = get_unit_12();
+      formula_12 = div(get_m(), get_m());
+      rad = get_formula_12();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -10146,11 +10108,11 @@
       quectoradian = get_qrad();
     }
   }
-  function get_unit_13() {
+  function get_formula_13() {
     init_properties_Siemens_kt_erjjt4();
-    return unit_13;
+    return formula_13;
   }
-  var unit_13;
+  var formula_13;
   function get_S() {
     init_properties_Siemens_kt_erjjt4();
     return S;
@@ -10397,18 +10359,15 @@
   }
   var quectosiemens;
   function Siemens(value) {
-    this.expression = times_1(get_unit_13(), value);
+    DerivedUnit.call(this, value, get_formula_13());
   }
-  Siemens.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Siemens_kt_x6qr30;
   function init_properties_Siemens_kt_erjjt4() {
     if (properties_initialized_Siemens_kt_x6qr30) {
     } else {
       properties_initialized_Siemens_kt_x6qr30 = true;
-      unit_13 = times_0(times_0(times_0(powExpression(get_kg(), -1), powExpression(get_m(), -2)), powExpression(get_s(), 3)), powExpression(get_A(), 2));
-      S = get_unit_13();
+      formula_13 = times_0(times_0(times_0(powExpression(get_kg(), -1), powExpression(get_m(), -2)), powExpression(get_s(), 3)), powExpression(get_A(), 2));
+      S = get_formula_13();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -10531,11 +10490,11 @@
       quectosiemens = get_qS();
     }
   }
-  function get_unit_14() {
+  function get_formula_14() {
     init_properties_Sievert_kt_4v3t84();
-    return unit_14;
+    return formula_14;
   }
-  var unit_14;
+  var formula_14;
   function get_Sv() {
     init_properties_Sievert_kt_4v3t84();
     return Sv;
@@ -10782,18 +10741,15 @@
   }
   var quectosievert;
   function Sievert(value) {
-    this.expression = times_1(get_unit_14(), value);
+    DerivedUnit.call(this, value, get_formula_14());
   }
-  Sievert.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Sievert_kt_rxxkb4;
   function init_properties_Sievert_kt_4v3t84() {
     if (properties_initialized_Sievert_kt_rxxkb4) {
     } else {
       properties_initialized_Sievert_kt_rxxkb4 = true;
-      unit_14 = times_0(get_m2(), powExpression(get_s(), -2));
-      Sv = get_unit_14();
+      formula_14 = times_0(get_m2(), powExpression(get_s(), -2));
+      Sv = get_formula_14();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -10916,11 +10872,11 @@
       quectosievert = get_qSv();
     }
   }
-  function get_unit_15() {
+  function get_formula_15() {
     init_properties_Steradian_kt_m0qgen();
-    return unit_15;
+    return formula_15;
   }
-  var unit_15;
+  var formula_15;
   function get_sr() {
     init_properties_Steradian_kt_m0qgen();
     return sr;
@@ -11167,18 +11123,15 @@
   }
   var quectosteradian;
   function Steradian(value) {
-    this.expression = times_1(get_unit_15(), value);
+    DerivedUnit.call(this, value, get_formula_15());
   }
-  Steradian.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Steradian_kt_w7aqs5;
   function init_properties_Steradian_kt_m0qgen() {
     if (properties_initialized_Steradian_kt_w7aqs5) {
     } else {
       properties_initialized_Steradian_kt_w7aqs5 = true;
-      unit_15 = div(get_m2(), get_m2());
-      sr = get_unit_15();
+      formula_15 = div(get_m2(), get_m2());
+      sr = get_formula_15();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -11301,11 +11254,11 @@
       quectosteradian = get_qsr();
     }
   }
-  function get_unit_16() {
+  function get_formula_16() {
     init_properties_Tesla_kt_jwis59();
-    return unit_16;
+    return formula_16;
   }
-  var unit_16;
+  var formula_16;
   function get_T() {
     init_properties_Tesla_kt_jwis59();
     return T;
@@ -11552,18 +11505,15 @@
   }
   var quectotesla;
   function Tesla(value) {
-    this.expression = times_1(get_unit_16(), value);
+    DerivedUnit.call(this, value, get_formula_16());
   }
-  Tesla.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Tesla_kt_2pedsp;
   function init_properties_Tesla_kt_jwis59() {
     if (properties_initialized_Tesla_kt_2pedsp) {
     } else {
       properties_initialized_Tesla_kt_2pedsp = true;
-      unit_16 = times_0(times_0(get_kg(), powExpression(get_s(), -2)), powExpression(get_A(), -1));
-      T = get_unit_16();
+      formula_16 = times_0(times_0(get_kg(), powExpression(get_s(), -2)), powExpression(get_A(), -1));
+      T = get_formula_16();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -11686,11 +11636,11 @@
       quectotesla = get_qT();
     }
   }
-  function get_unit_17() {
+  function get_formula_17() {
     init_properties_Volt_kt_ymmf09();
-    return unit_17;
+    return formula_17;
   }
-  var unit_17;
+  var formula_17;
   function get_V() {
     init_properties_Volt_kt_ymmf09();
     return V;
@@ -11937,18 +11887,15 @@
   }
   var quectovolt;
   function Volt(value) {
-    this.expression = times_1(get_unit_17(), value);
+    DerivedUnit.call(this, value, get_formula_17());
   }
-  Volt.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Volt_kt_dg9hgd;
   function init_properties_Volt_kt_ymmf09() {
     if (properties_initialized_Volt_kt_dg9hgd) {
     } else {
       properties_initialized_Volt_kt_dg9hgd = true;
-      unit_17 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -3)), powExpression(get_A(), -1));
-      V = get_unit_17();
+      formula_17 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -3)), powExpression(get_A(), -1));
+      V = get_formula_17();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -12071,11 +12018,11 @@
       quectovolt = get_qV();
     }
   }
-  function get_unit_18() {
+  function get_formula_18() {
     init_properties_Watt_kt_s8bpio();
-    return unit_18;
+    return formula_18;
   }
-  var unit_18;
+  var formula_18;
   function get_W() {
     init_properties_Watt_kt_s8bpio();
     return W;
@@ -12322,18 +12269,15 @@
   }
   var quectowatt;
   function Watt(value) {
-    this.expression = times_1(get_unit_18(), value);
+    DerivedUnit.call(this, value, get_formula_18());
   }
-  Watt.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Watt_kt_lmfewk;
   function init_properties_Watt_kt_s8bpio() {
     if (properties_initialized_Watt_kt_lmfewk) {
     } else {
       properties_initialized_Watt_kt_lmfewk = true;
-      unit_18 = div(times_0(get_kg(), get_m2()), powExpression(get_s(), 3));
-      W = get_unit_18();
+      formula_18 = div(times_0(get_kg(), get_m2()), powExpression(get_s(), 3));
+      W = get_formula_18();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -12456,11 +12400,11 @@
       quectowatt = get_qW();
     }
   }
-  function get_unit_19() {
+  function get_formula_19() {
     init_properties_Weber_kt_r6yv9v();
-    return unit_19;
+    return formula_19;
   }
-  var unit_19;
+  var formula_19;
   function get_Wb() {
     init_properties_Weber_kt_r6yv9v();
     return Wb;
@@ -12707,18 +12651,15 @@
   }
   var quectoweber;
   function Weber(value) {
-    this.expression = times_1(get_unit_19(), value);
+    DerivedUnit.call(this, value, get_formula_19());
   }
-  Weber.prototype.n6 = function () {
-    return this.expression;
-  };
   var properties_initialized_Weber_kt_9zugxb;
   function init_properties_Weber_kt_r6yv9v() {
     if (properties_initialized_Weber_kt_9zugxb) {
     } else {
       properties_initialized_Weber_kt_9zugxb = true;
-      unit_19 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -2)), powExpression(get_A(), -1));
-      Wb = get_unit_19();
+      formula_19 = times_0(times_0(times_0(get_kg(), get_m2()), powExpression(get_s(), -2)), powExpression(get_A(), -1));
+      Wb = get_formula_19();
       var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
       tmp$ret$0 = Math.pow(10.0, 30.0);
@@ -12902,6 +12843,14 @@
     return percentage;
   }
   var percentage;
+  function get_π() {
+    return π;
+  }
+  var π;
+  function get_e() {
+    return e;
+  }
+  var e;
   function get_au_0(_this__u8e3s4) {
     init_properties_NonSiUnits_kt_6cvga6();
     return new Metre(numberToDouble(_this__u8e3s4) * 1.495978707E11);
@@ -13008,6 +12957,8 @@
   //region block: init
   ε = 1.0E-12;
   COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:";
+  π = 3.141592653589793;
+  e = 2.718281828459045;
   //endregion
   //region block: exports
   function $jsExportAll$(_) {
@@ -18346,6 +18297,14 @@
     Object.defineProperty($eu$sirotin$kotunil$specialunits, 'percentage', {
       configurable: true,
       get: get_percentage
+    });
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, '\u03C0', {
+      configurable: true,
+      get: get_π
+    });
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'e', {
+      configurable: true,
+      get: get_e
     });
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});

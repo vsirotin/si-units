@@ -15,7 +15,7 @@ internal class HenryTest {
     
      @Test
     fun testHenryMainTest2() {
-        assertEquals(12.3.H , Henry(12.3).expression)
+        assertEquals(12.3.H , Henry(12.3))
     }
               
     @Test

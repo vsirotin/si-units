@@ -131,7 +131,6 @@ private fun generateDerivedUnitClassHead(
     return """
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -140,22 +139,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  $formula
+private val formula =  $formula
 
 @JsExport
 /**
 * System International Unit for $quantityName.
 */
-class $className(value: Double){
-    val expression: Expression = unit*value
-}
+class $className(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for $quantityName.
 */
 @JsExport
 @JvmField
-val $unitSymbol = unit
+val $unitSymbol = formula
 
 /**
 * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -164,7 +161,7 @@ val Number.$unitSymbol : Expression
    /**
    * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     """
 }
@@ -195,7 +192,7 @@ val Number.${prefix.symbol}$unitSymbol : Expression
     /**
     * Returns ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * formula
 
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
@@ -204,7 +201,7 @@ val Number.${prefix.name}$name : Expression
     /**
     * Returns ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * formula
 
 $mayBeJsExport
 @JvmField

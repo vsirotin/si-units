@@ -15,7 +15,7 @@ internal class HertzTest {
     
      @Test
     fun testHertzMainTest2() {
-        assertEquals(12.3.Hz , Hertz(12.3).expression)
+        assertEquals(12.3.Hz , Hertz(12.3))
     }
               
     @Test

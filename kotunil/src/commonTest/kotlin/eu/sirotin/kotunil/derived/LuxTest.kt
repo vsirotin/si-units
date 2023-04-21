@@ -15,7 +15,7 @@ internal class LuxTest {
     
      @Test
     fun testLuxMainTest2() {
-        assertEquals(12.3.lx , Lux(12.3).expression)
+        assertEquals(12.3.lx , Lux(12.3))
     }
               
     @Test

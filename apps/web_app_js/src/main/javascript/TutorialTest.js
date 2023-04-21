@@ -50,6 +50,6 @@
               var h = v.divExp(s);
       //        val z = h / mm
               var z = h.divExp(mm);
-              checkDouble(1.0, z.value)
+              checkValues(1.0, z.value)
         console.log("- Fin testHappyGettingStarted");
     }

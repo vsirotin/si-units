@@ -15,7 +15,7 @@ internal class WattTest {
     
      @Test
     fun testWattMainTest2() {
-        assertEquals(12.3.W , Watt(12.3).expression)
+        assertEquals(12.3.W , Watt(12.3))
     }
               
     @Test

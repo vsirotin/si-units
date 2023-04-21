@@ -1,7 +1,6 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -10,22 +9,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)
+private val formula =  (kg  `^` -1) * (m  `^` -2) * (s `^` 4) * (A `^` 2)
 
 @JsExport
 /**
 * System International Unit for capacitance.
 */
-class Farad(value: Double){
-    val expression: Expression = unit*value
-}
+class Farad(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for capacitance.
 */
 @JsExport
 @JvmField
-val F = unit
+val F = formula
 
 /**
 * Creates Farad-Object for current number value. Farad is a System International Unit for capacitance.
@@ -34,7 +31,7 @@ val Number.F : Expression
    /**
    * Returns Farad-Object for current number value. Farad is a System International Unit for capacitance.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -45,7 +42,7 @@ val Number.QF : Expression
     /**
     * Returns QF, 10^30 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettafarad, 10^30 of farad, derived SI-Unit for measurement of capacitance
@@ -54,7 +51,7 @@ val Number.quettafarad : Expression
     /**
     * Returns quettafarad, 10^30 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 @JsExport
 @JvmField
@@ -80,7 +77,7 @@ val Number.RF : Expression
     /**
     * Returns RF, 10^27 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnafarad, 10^27 of farad, derived SI-Unit for measurement of capacitance
@@ -89,7 +86,7 @@ val Number.ronnafarad : Expression
     /**
     * Returns ronnafarad, 10^27 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 @JsExport
 @JvmField
@@ -115,7 +112,7 @@ val Number.YF : Expression
     /**
     * Returns YF, 10^24 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottafarad, 10^24 of farad, derived SI-Unit for measurement of capacitance
@@ -124,7 +121,7 @@ val Number.yottafarad : Expression
     /**
     * Returns yottafarad, 10^24 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 @JsExport
 @JvmField
@@ -150,7 +147,7 @@ val Number.ZF : Expression
     /**
     * Returns ZF, 10^21 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettafarad, 10^21 of farad, derived SI-Unit for measurement of capacitance
@@ -159,7 +156,7 @@ val Number.zettafarad : Expression
     /**
     * Returns zettafarad, 10^21 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 @JsExport
 @JvmField
@@ -185,7 +182,7 @@ val Number.EF : Expression
     /**
     * Returns EF, 10^18 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exafarad, 10^18 of farad, derived SI-Unit for measurement of capacitance
@@ -194,7 +191,7 @@ val Number.exafarad : Expression
     /**
     * Returns exafarad, 10^18 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 @JsExport
 @JvmField
@@ -220,7 +217,7 @@ val Number.PF : Expression
     /**
     * Returns PF, 10^15 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petafarad, 10^15 of farad, derived SI-Unit for measurement of capacitance
@@ -229,7 +226,7 @@ val Number.petafarad : Expression
     /**
     * Returns petafarad, 10^15 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 @JsExport
 @JvmField
@@ -255,7 +252,7 @@ val Number.TF : Expression
     /**
     * Returns TF, 10^12 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * terafarad, 10^12 of farad, derived SI-Unit for measurement of capacitance
@@ -264,7 +261,7 @@ val Number.terafarad : Expression
     /**
     * Returns terafarad, 10^12 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 @JsExport
 @JvmField
@@ -290,7 +287,7 @@ val Number.GF : Expression
     /**
     * Returns GF, 10^9 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigafarad, 10^9 of farad, derived SI-Unit for measurement of capacitance
@@ -299,7 +296,7 @@ val Number.gigafarad : Expression
     /**
     * Returns gigafarad, 10^9 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 @JsExport
 @JvmField
@@ -325,7 +322,7 @@ val Number.MF : Expression
     /**
     * Returns MF, 10^6 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megafarad, 10^6 of farad, derived SI-Unit for measurement of capacitance
@@ -334,7 +331,7 @@ val Number.megafarad : Expression
     /**
     * Returns megafarad, 10^6 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 @JsExport
 @JvmField
@@ -360,7 +357,7 @@ val Number.kF : Expression
     /**
     * Returns kF, 10^3 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kilofarad, 10^3 of farad, derived SI-Unit for measurement of capacitance
@@ -369,7 +366,7 @@ val Number.kilofarad : Expression
     /**
     * Returns kilofarad, 10^3 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 @JsExport
 @JvmField
@@ -395,7 +392,7 @@ val Number.hF : Expression
     /**
     * Returns hF, 10^2 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectofarad, 10^2 of farad, derived SI-Unit for measurement of capacitance
@@ -404,7 +401,7 @@ val Number.hectofarad : Expression
     /**
     * Returns hectofarad, 10^2 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 @JsExport
 @JvmField
@@ -430,7 +427,7 @@ val Number.daF : Expression
     /**
     * Returns daF, 10^1 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decafarad, 10^1 of farad, derived SI-Unit for measurement of capacitance
@@ -439,7 +436,7 @@ val Number.decafarad : Expression
     /**
     * Returns decafarad, 10^1 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 @JsExport
 @JvmField
@@ -465,7 +462,7 @@ val Number.dF : Expression
     /**
     * Returns dF, 10^-1 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * decifarad, 10^-1 of farad, derived SI-Unit for measurement of capacitance
@@ -474,7 +471,7 @@ val Number.decifarad : Expression
     /**
     * Returns decifarad, 10^-1 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 @JsExport
 @JvmField
@@ -500,7 +497,7 @@ val Number.cF : Expression
     /**
     * Returns cF, 10^-2 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centifarad, 10^-2 of farad, derived SI-Unit for measurement of capacitance
@@ -509,7 +506,7 @@ val Number.centifarad : Expression
     /**
     * Returns centifarad, 10^-2 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 @JsExport
 @JvmField
@@ -535,7 +532,7 @@ val Number.mF : Expression
     /**
     * Returns mF, 10^-3 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * millifarad, 10^-3 of farad, derived SI-Unit for measurement of capacitance
@@ -544,7 +541,7 @@ val Number.millifarad : Expression
     /**
     * Returns millifarad, 10^-3 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
 @JvmField
@@ -570,7 +567,7 @@ val Number.μF : Expression
     /**
     * Returns μF, 10^-6 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microfarad, 10^-6 of farad, derived SI-Unit for measurement of capacitance
@@ -579,7 +576,7 @@ val Number.microfarad : Expression
     /**
     * Returns microfarad, 10^-6 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 @JsExport
 @JvmField
@@ -605,7 +602,7 @@ val Number.nF : Expression
     /**
     * Returns nF, 10^-9 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanofarad, 10^-9 of farad, derived SI-Unit for measurement of capacitance
@@ -614,7 +611,7 @@ val Number.nanofarad : Expression
     /**
     * Returns nanofarad, 10^-9 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 @JsExport
 @JvmField
@@ -640,7 +637,7 @@ val Number.pF : Expression
     /**
     * Returns pF, 10^-12 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picofarad, 10^-12 of farad, derived SI-Unit for measurement of capacitance
@@ -649,7 +646,7 @@ val Number.picofarad : Expression
     /**
     * Returns picofarad, 10^-12 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
 @JvmField
@@ -675,7 +672,7 @@ val Number.fF : Expression
     /**
     * Returns fF, 10^-15 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtofarad, 10^-15 of farad, derived SI-Unit for measurement of capacitance
@@ -684,7 +681,7 @@ val Number.femtofarad : Expression
     /**
     * Returns femtofarad, 10^-15 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 @JsExport
 @JvmField
@@ -710,7 +707,7 @@ val Number.aF : Expression
     /**
     * Returns aF, 10^-18 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attofarad, 10^-18 of farad, derived SI-Unit for measurement of capacitance
@@ -719,7 +716,7 @@ val Number.attofarad : Expression
     /**
     * Returns attofarad, 10^-18 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 @JsExport
 @JvmField
@@ -745,7 +742,7 @@ val Number.zF : Expression
     /**
     * Returns zF, 10^-21 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptofarad, 10^-21 of farad, derived SI-Unit for measurement of capacitance
@@ -754,7 +751,7 @@ val Number.zeptofarad : Expression
     /**
     * Returns zeptofarad, 10^-21 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
 @JvmField
@@ -780,7 +777,7 @@ val Number.yF : Expression
     /**
     * Returns yF, 10^-24 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctofarad, 10^-24 of farad, derived SI-Unit for measurement of capacitance
@@ -789,7 +786,7 @@ val Number.yoctofarad : Expression
     /**
     * Returns yoctofarad, 10^-24 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
 @JvmField
@@ -815,7 +812,7 @@ val Number.rF : Expression
     /**
     * Returns rF, 10^-27 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontofarad, 10^-27 of farad, derived SI-Unit for measurement of capacitance
@@ -824,7 +821,7 @@ val Number.rontofarad : Expression
     /**
     * Returns rontofarad, 10^-27 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
 @JvmField
@@ -850,7 +847,7 @@ val Number.qF : Expression
     /**
     * Returns qF, 10^-30 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectofarad, 10^-30 of farad, derived SI-Unit for measurement of capacitance
@@ -859,7 +856,7 @@ val Number.quectofarad : Expression
     /**
     * Returns quectofarad, 10^-30 of farad, derived SI-Unit for measurement of capacitance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
 @JvmField

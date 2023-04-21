@@ -15,7 +15,7 @@ internal class NewtonTest {
     
      @Test
     fun testNewtonMainTest2() {
-        assertEquals(12.3.N , Newton(12.3).expression)
+        assertEquals(12.3.N , Newton(12.3))
     }
               
     @Test

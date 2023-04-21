@@ -1,7 +1,6 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -10,22 +9,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  m/m
+private val formula =  m/m
 
 @JsExport
 /**
 * System International Unit for plane angle.
 */
-class Radian(value: Double){
-    val expression: Expression = unit*value
-}
+class Radian(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for plane angle.
 */
 @JsExport
 @JvmField
-val rad = unit
+val rad = formula
 
 /**
 * Creates Radian-Object for current number value. Radian is a System International Unit for plane angle.
@@ -34,7 +31,7 @@ val Number.rad : Expression
    /**
    * Returns Radian-Object for current number value. Radian is a System International Unit for plane angle.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -45,7 +42,7 @@ val Number.Qrad : Expression
     /**
     * Returns Qrad, 10^30 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettaradian, 10^30 of radian, derived SI-Unit for measurement of plane angle
@@ -54,7 +51,7 @@ val Number.quettaradian : Expression
     /**
     * Returns quettaradian, 10^30 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 @JsExport
 @JvmField
@@ -80,7 +77,7 @@ val Number.Rrad : Expression
     /**
     * Returns Rrad, 10^27 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnaradian, 10^27 of radian, derived SI-Unit for measurement of plane angle
@@ -89,7 +86,7 @@ val Number.ronnaradian : Expression
     /**
     * Returns ronnaradian, 10^27 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 @JsExport
 @JvmField
@@ -115,7 +112,7 @@ val Number.Yrad : Expression
     /**
     * Returns Yrad, 10^24 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottaradian, 10^24 of radian, derived SI-Unit for measurement of plane angle
@@ -124,7 +121,7 @@ val Number.yottaradian : Expression
     /**
     * Returns yottaradian, 10^24 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 @JsExport
 @JvmField
@@ -150,7 +147,7 @@ val Number.Zrad : Expression
     /**
     * Returns Zrad, 10^21 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettaradian, 10^21 of radian, derived SI-Unit for measurement of plane angle
@@ -159,7 +156,7 @@ val Number.zettaradian : Expression
     /**
     * Returns zettaradian, 10^21 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 @JsExport
 @JvmField
@@ -185,7 +182,7 @@ val Number.Erad : Expression
     /**
     * Returns Erad, 10^18 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exaradian, 10^18 of radian, derived SI-Unit for measurement of plane angle
@@ -194,7 +191,7 @@ val Number.exaradian : Expression
     /**
     * Returns exaradian, 10^18 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 @JsExport
 @JvmField
@@ -220,7 +217,7 @@ val Number.Prad : Expression
     /**
     * Returns Prad, 10^15 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petaradian, 10^15 of radian, derived SI-Unit for measurement of plane angle
@@ -229,7 +226,7 @@ val Number.petaradian : Expression
     /**
     * Returns petaradian, 10^15 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 @JsExport
 @JvmField
@@ -255,7 +252,7 @@ val Number.Trad : Expression
     /**
     * Returns Trad, 10^12 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * teraradian, 10^12 of radian, derived SI-Unit for measurement of plane angle
@@ -264,7 +261,7 @@ val Number.teraradian : Expression
     /**
     * Returns teraradian, 10^12 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 @JsExport
 @JvmField
@@ -290,7 +287,7 @@ val Number.Grad : Expression
     /**
     * Returns Grad, 10^9 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigaradian, 10^9 of radian, derived SI-Unit for measurement of plane angle
@@ -299,7 +296,7 @@ val Number.gigaradian : Expression
     /**
     * Returns gigaradian, 10^9 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 @JsExport
 @JvmField
@@ -325,7 +322,7 @@ val Number.Mrad : Expression
     /**
     * Returns Mrad, 10^6 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megaradian, 10^6 of radian, derived SI-Unit for measurement of plane angle
@@ -334,7 +331,7 @@ val Number.megaradian : Expression
     /**
     * Returns megaradian, 10^6 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 @JsExport
 @JvmField
@@ -360,7 +357,7 @@ val Number.krad : Expression
     /**
     * Returns krad, 10^3 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kiloradian, 10^3 of radian, derived SI-Unit for measurement of plane angle
@@ -369,7 +366,7 @@ val Number.kiloradian : Expression
     /**
     * Returns kiloradian, 10^3 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 @JsExport
 @JvmField
@@ -395,7 +392,7 @@ val Number.hrad : Expression
     /**
     * Returns hrad, 10^2 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectoradian, 10^2 of radian, derived SI-Unit for measurement of plane angle
@@ -404,7 +401,7 @@ val Number.hectoradian : Expression
     /**
     * Returns hectoradian, 10^2 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 @JsExport
 @JvmField
@@ -430,7 +427,7 @@ val Number.darad : Expression
     /**
     * Returns darad, 10^1 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decaradian, 10^1 of radian, derived SI-Unit for measurement of plane angle
@@ -439,7 +436,7 @@ val Number.decaradian : Expression
     /**
     * Returns decaradian, 10^1 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 @JsExport
 @JvmField
@@ -465,7 +462,7 @@ val Number.drad : Expression
     /**
     * Returns drad, 10^-1 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * deciradian, 10^-1 of radian, derived SI-Unit for measurement of plane angle
@@ -474,7 +471,7 @@ val Number.deciradian : Expression
     /**
     * Returns deciradian, 10^-1 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 @JsExport
 @JvmField
@@ -500,7 +497,7 @@ val Number.crad : Expression
     /**
     * Returns crad, 10^-2 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centiradian, 10^-2 of radian, derived SI-Unit for measurement of plane angle
@@ -509,7 +506,7 @@ val Number.centiradian : Expression
     /**
     * Returns centiradian, 10^-2 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 @JsExport
 @JvmField
@@ -535,7 +532,7 @@ val Number.mrad : Expression
     /**
     * Returns mrad, 10^-3 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * milliradian, 10^-3 of radian, derived SI-Unit for measurement of plane angle
@@ -544,7 +541,7 @@ val Number.milliradian : Expression
     /**
     * Returns milliradian, 10^-3 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
 @JvmField
@@ -570,7 +567,7 @@ val Number.μrad : Expression
     /**
     * Returns μrad, 10^-6 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microradian, 10^-6 of radian, derived SI-Unit for measurement of plane angle
@@ -579,7 +576,7 @@ val Number.microradian : Expression
     /**
     * Returns microradian, 10^-6 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 @JsExport
 @JvmField
@@ -605,7 +602,7 @@ val Number.nrad : Expression
     /**
     * Returns nrad, 10^-9 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanoradian, 10^-9 of radian, derived SI-Unit for measurement of plane angle
@@ -614,7 +611,7 @@ val Number.nanoradian : Expression
     /**
     * Returns nanoradian, 10^-9 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 @JsExport
 @JvmField
@@ -640,7 +637,7 @@ val Number.prad : Expression
     /**
     * Returns prad, 10^-12 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picoradian, 10^-12 of radian, derived SI-Unit for measurement of plane angle
@@ -649,7 +646,7 @@ val Number.picoradian : Expression
     /**
     * Returns picoradian, 10^-12 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
 @JvmField
@@ -675,7 +672,7 @@ val Number.frad : Expression
     /**
     * Returns frad, 10^-15 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtoradian, 10^-15 of radian, derived SI-Unit for measurement of plane angle
@@ -684,7 +681,7 @@ val Number.femtoradian : Expression
     /**
     * Returns femtoradian, 10^-15 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 @JsExport
 @JvmField
@@ -710,7 +707,7 @@ val Number.arad : Expression
     /**
     * Returns arad, 10^-18 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attoradian, 10^-18 of radian, derived SI-Unit for measurement of plane angle
@@ -719,7 +716,7 @@ val Number.attoradian : Expression
     /**
     * Returns attoradian, 10^-18 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 @JsExport
 @JvmField
@@ -745,7 +742,7 @@ val Number.zrad : Expression
     /**
     * Returns zrad, 10^-21 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptoradian, 10^-21 of radian, derived SI-Unit for measurement of plane angle
@@ -754,7 +751,7 @@ val Number.zeptoradian : Expression
     /**
     * Returns zeptoradian, 10^-21 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
 @JvmField
@@ -780,7 +777,7 @@ val Number.yrad : Expression
     /**
     * Returns yrad, 10^-24 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctoradian, 10^-24 of radian, derived SI-Unit for measurement of plane angle
@@ -789,7 +786,7 @@ val Number.yoctoradian : Expression
     /**
     * Returns yoctoradian, 10^-24 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
 @JvmField
@@ -815,7 +812,7 @@ val Number.rrad : Expression
     /**
     * Returns rrad, 10^-27 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontoradian, 10^-27 of radian, derived SI-Unit for measurement of plane angle
@@ -824,7 +821,7 @@ val Number.rontoradian : Expression
     /**
     * Returns rontoradian, 10^-27 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
 @JvmField
@@ -850,7 +847,7 @@ val Number.qrad : Expression
     /**
     * Returns qrad, 10^-30 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectoradian, 10^-30 of radian, derived SI-Unit for measurement of plane angle
@@ -859,7 +856,7 @@ val Number.quectoradian : Expression
     /**
     * Returns quectoradian, 10^-30 of radian, derived SI-Unit for measurement of plane angle
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
 @JvmField

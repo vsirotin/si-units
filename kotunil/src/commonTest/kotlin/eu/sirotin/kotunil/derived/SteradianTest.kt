@@ -15,7 +15,7 @@ internal class SteradianTest {
     
      @Test
     fun testSteradianMainTest2() {
-        assertEquals(12.3.sr , Steradian(12.3).expression)
+        assertEquals(12.3.sr , Steradian(12.3))
     }
               
     @Test

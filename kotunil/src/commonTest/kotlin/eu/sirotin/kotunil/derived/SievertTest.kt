@@ -15,7 +15,7 @@ internal class SievertTest {
     
      @Test
     fun testSievertMainTest2() {
-        assertEquals(12.3.Sv , Sievert(12.3).expression)
+        assertEquals(12.3.Sv , Sievert(12.3))
     }
               
     @Test

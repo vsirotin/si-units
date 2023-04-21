@@ -7,17 +7,50 @@
 <body>
     <h1>Kotunil/JS Test Pager</h1>
 
-    Test Statistics:
-    <p id="result">Def</p>
+    <h2>Test Statistics:</h2>
+    <p>Number KotUniL's tested objects: <nobr id="number-objects">NO SET</nobr> </p>
+    <p>Number tests (checks): <nobr id="number-tests">NO SET</nobr> </p>
 
 
     <script type="text/javascript" src="./libs/kotlin-kotlin-stdlib-js-ir.js"></script>
     <script type="text/javascript" src="./libs/si-units-kotunil.js"></script>
     <script type="text/javascript" src="./libs/Starter.js"></script>
+
+    <script type="text/javascript" src="./libs/base/Ampere.js"></script>
+    <script type="text/javascript" src="./libs/base/Candela.js"></script>
+    <script type="text/javascript" src="./libs/base/Kelvin.js"></script>
+    <script type="text/javascript" src="./libs/base/Kilogram.js"></script>
     <script type="text/javascript" src="./libs/base/Metre.js"></script>
+    <script type="text/javascript" src="./libs/base/Mole.js"></script>
+    <script type="text/javascript" src="./libs/base/Second.js"></script>
+
+    <script type="text/javascript" src="./libs/derived/Radian.js"></script>
+    <script type="text/javascript" src="./libs/derived/Steradian.js"></script>
+    <script type="text/javascript" src="./libs/derived/Hertz.js"></script>
+    <script type="text/javascript" src="./libs/derived/Newton.js"></script>
+    <script type="text/javascript" src="./libs/derived/Pascal.js"></script>
+    <script type="text/javascript" src="./libs/derived/Joule.js"></script>
+    <script type="text/javascript" src="./libs/derived/Watt.js"></script>
+    <script type="text/javascript" src="./libs/derived/Coulomb.js"></script>
     <script type="text/javascript" src="./libs/derived/Volt.js"></script>
+    <script type="text/javascript" src="./libs/derived/Farad.js"></script>
+    <script type="text/javascript" src="./libs/derived/Ohm.js"></script>
+    <script type="text/javascript" src="./libs/derived/Siemens.js"></script>
+    <script type="text/javascript" src="./libs/derived/Weber.js"></script>
+    <script type="text/javascript" src="./libs/derived/Tesla.js"></script>
+    <script type="text/javascript" src="./libs/derived/Henry.js"></script>
+    <script type="text/javascript" src="./libs/derived/Lumen.js"></script>
+    <script type="text/javascript" src="./libs/derived/Lux.js"></script>
+    <script type="text/javascript" src="./libs/derived/Becquerel.js"></script>
+    <script type="text/javascript" src="./libs/derived/Gray.js"></script>
+    <script type="text/javascript" src="./libs/derived/Sievert.js"></script>
+    <script type="text/javascript" src="./libs/derived/Katal.js"></script>
+    
     <script type="text/javascript" src="./libs/currency/Currencies.js"></script>
     <script type="text/javascript" src="./libs/specialunits/NonSiUnits.js"></script>
+    <script type="text/javascript" src="./libs/specialunits/SpecialBaseUnits.js"></script>
+    <script type="text/javascript" src="./libs/specialunits/SpecialDerivedUnits.js"></script>
+    <script type="text/javascript" src="./libs/specialunits/Thing.js"></script>
     <script type="text/javascript" src="./../javascript/checker.js"></script>
     <script type="text/javascript" src="./../javascript/tests/SpecialUnitsTest.js"></script>
     <script type="text/javascript" src="./../javascript/TutorialTest.js"></script>
@@ -25,8 +58,16 @@
 
          <script>
             console.log("Start main script");
+
+            var x = new Metre();
+            var sx = x.unitSymbols();
+
+            var y = new Volt();
+            var sy = y.unitSymbols();
             testTutorial();
 
+            document.getElementById("number-objects").innerHTML = "" + numberObjects;
+            document.getElementById("number-tests").innerHTML = numberChecks;
         </script>
 </body>
 </html>

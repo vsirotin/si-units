@@ -1,7 +1,6 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -10,22 +9,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  m2/m2
+private val formula =  m2/m2
 
 @JsExport
 /**
 * System International Unit for solid angle.
 */
-class Steradian(value: Double){
-    val expression: Expression = unit*value
-}
+class Steradian(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for solid angle.
 */
 @JsExport
 @JvmField
-val sr = unit
+val sr = formula
 
 /**
 * Creates Steradian-Object for current number value. Steradian is a System International Unit for solid angle.
@@ -34,7 +31,7 @@ val Number.sr : Expression
    /**
    * Returns Steradian-Object for current number value. Steradian is a System International Unit for solid angle.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -45,7 +42,7 @@ val Number.Qsr : Expression
     /**
     * Returns Qsr, 10^30 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettasteradian, 10^30 of steradian, derived SI-Unit for measurement of solid angle
@@ -54,7 +51,7 @@ val Number.quettasteradian : Expression
     /**
     * Returns quettasteradian, 10^30 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 @JsExport
 @JvmField
@@ -80,7 +77,7 @@ val Number.Rsr : Expression
     /**
     * Returns Rsr, 10^27 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnasteradian, 10^27 of steradian, derived SI-Unit for measurement of solid angle
@@ -89,7 +86,7 @@ val Number.ronnasteradian : Expression
     /**
     * Returns ronnasteradian, 10^27 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 @JsExport
 @JvmField
@@ -115,7 +112,7 @@ val Number.Ysr : Expression
     /**
     * Returns Ysr, 10^24 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottasteradian, 10^24 of steradian, derived SI-Unit for measurement of solid angle
@@ -124,7 +121,7 @@ val Number.yottasteradian : Expression
     /**
     * Returns yottasteradian, 10^24 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 @JsExport
 @JvmField
@@ -150,7 +147,7 @@ val Number.Zsr : Expression
     /**
     * Returns Zsr, 10^21 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettasteradian, 10^21 of steradian, derived SI-Unit for measurement of solid angle
@@ -159,7 +156,7 @@ val Number.zettasteradian : Expression
     /**
     * Returns zettasteradian, 10^21 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 @JsExport
 @JvmField
@@ -185,7 +182,7 @@ val Number.Esr : Expression
     /**
     * Returns Esr, 10^18 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exasteradian, 10^18 of steradian, derived SI-Unit for measurement of solid angle
@@ -194,7 +191,7 @@ val Number.exasteradian : Expression
     /**
     * Returns exasteradian, 10^18 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 @JsExport
 @JvmField
@@ -220,7 +217,7 @@ val Number.Psr : Expression
     /**
     * Returns Psr, 10^15 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petasteradian, 10^15 of steradian, derived SI-Unit for measurement of solid angle
@@ -229,7 +226,7 @@ val Number.petasteradian : Expression
     /**
     * Returns petasteradian, 10^15 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 @JsExport
 @JvmField
@@ -255,7 +252,7 @@ val Number.Tsr : Expression
     /**
     * Returns Tsr, 10^12 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * terasteradian, 10^12 of steradian, derived SI-Unit for measurement of solid angle
@@ -264,7 +261,7 @@ val Number.terasteradian : Expression
     /**
     * Returns terasteradian, 10^12 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 @JsExport
 @JvmField
@@ -290,7 +287,7 @@ val Number.Gsr : Expression
     /**
     * Returns Gsr, 10^9 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigasteradian, 10^9 of steradian, derived SI-Unit for measurement of solid angle
@@ -299,7 +296,7 @@ val Number.gigasteradian : Expression
     /**
     * Returns gigasteradian, 10^9 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 @JsExport
 @JvmField
@@ -325,7 +322,7 @@ val Number.Msr : Expression
     /**
     * Returns Msr, 10^6 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megasteradian, 10^6 of steradian, derived SI-Unit for measurement of solid angle
@@ -334,7 +331,7 @@ val Number.megasteradian : Expression
     /**
     * Returns megasteradian, 10^6 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 @JsExport
 @JvmField
@@ -360,7 +357,7 @@ val Number.ksr : Expression
     /**
     * Returns ksr, 10^3 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kilosteradian, 10^3 of steradian, derived SI-Unit for measurement of solid angle
@@ -369,7 +366,7 @@ val Number.kilosteradian : Expression
     /**
     * Returns kilosteradian, 10^3 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 @JsExport
 @JvmField
@@ -395,7 +392,7 @@ val Number.hsr : Expression
     /**
     * Returns hsr, 10^2 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectosteradian, 10^2 of steradian, derived SI-Unit for measurement of solid angle
@@ -404,7 +401,7 @@ val Number.hectosteradian : Expression
     /**
     * Returns hectosteradian, 10^2 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 @JsExport
 @JvmField
@@ -430,7 +427,7 @@ val Number.dasr : Expression
     /**
     * Returns dasr, 10^1 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decasteradian, 10^1 of steradian, derived SI-Unit for measurement of solid angle
@@ -439,7 +436,7 @@ val Number.decasteradian : Expression
     /**
     * Returns decasteradian, 10^1 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 @JsExport
 @JvmField
@@ -465,7 +462,7 @@ val Number.dsr : Expression
     /**
     * Returns dsr, 10^-1 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * decisteradian, 10^-1 of steradian, derived SI-Unit for measurement of solid angle
@@ -474,7 +471,7 @@ val Number.decisteradian : Expression
     /**
     * Returns decisteradian, 10^-1 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 @JsExport
 @JvmField
@@ -500,7 +497,7 @@ val Number.csr : Expression
     /**
     * Returns csr, 10^-2 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centisteradian, 10^-2 of steradian, derived SI-Unit for measurement of solid angle
@@ -509,7 +506,7 @@ val Number.centisteradian : Expression
     /**
     * Returns centisteradian, 10^-2 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 @JsExport
 @JvmField
@@ -535,7 +532,7 @@ val Number.msr : Expression
     /**
     * Returns msr, 10^-3 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * millisteradian, 10^-3 of steradian, derived SI-Unit for measurement of solid angle
@@ -544,7 +541,7 @@ val Number.millisteradian : Expression
     /**
     * Returns millisteradian, 10^-3 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
 @JvmField
@@ -570,7 +567,7 @@ val Number.μsr : Expression
     /**
     * Returns μsr, 10^-6 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microsteradian, 10^-6 of steradian, derived SI-Unit for measurement of solid angle
@@ -579,7 +576,7 @@ val Number.microsteradian : Expression
     /**
     * Returns microsteradian, 10^-6 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 @JsExport
 @JvmField
@@ -605,7 +602,7 @@ val Number.nsr : Expression
     /**
     * Returns nsr, 10^-9 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanosteradian, 10^-9 of steradian, derived SI-Unit for measurement of solid angle
@@ -614,7 +611,7 @@ val Number.nanosteradian : Expression
     /**
     * Returns nanosteradian, 10^-9 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 @JsExport
 @JvmField
@@ -640,7 +637,7 @@ val Number.psr : Expression
     /**
     * Returns psr, 10^-12 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picosteradian, 10^-12 of steradian, derived SI-Unit for measurement of solid angle
@@ -649,7 +646,7 @@ val Number.picosteradian : Expression
     /**
     * Returns picosteradian, 10^-12 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
 @JvmField
@@ -675,7 +672,7 @@ val Number.fsr : Expression
     /**
     * Returns fsr, 10^-15 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtosteradian, 10^-15 of steradian, derived SI-Unit for measurement of solid angle
@@ -684,7 +681,7 @@ val Number.femtosteradian : Expression
     /**
     * Returns femtosteradian, 10^-15 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 @JsExport
 @JvmField
@@ -710,7 +707,7 @@ val Number.asr : Expression
     /**
     * Returns asr, 10^-18 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attosteradian, 10^-18 of steradian, derived SI-Unit for measurement of solid angle
@@ -719,7 +716,7 @@ val Number.attosteradian : Expression
     /**
     * Returns attosteradian, 10^-18 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 @JsExport
 @JvmField
@@ -745,7 +742,7 @@ val Number.zsr : Expression
     /**
     * Returns zsr, 10^-21 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptosteradian, 10^-21 of steradian, derived SI-Unit for measurement of solid angle
@@ -754,7 +751,7 @@ val Number.zeptosteradian : Expression
     /**
     * Returns zeptosteradian, 10^-21 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
 @JvmField
@@ -780,7 +777,7 @@ val Number.ysr : Expression
     /**
     * Returns ysr, 10^-24 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctosteradian, 10^-24 of steradian, derived SI-Unit for measurement of solid angle
@@ -789,7 +786,7 @@ val Number.yoctosteradian : Expression
     /**
     * Returns yoctosteradian, 10^-24 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
 @JvmField
@@ -815,7 +812,7 @@ val Number.rsr : Expression
     /**
     * Returns rsr, 10^-27 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontosteradian, 10^-27 of steradian, derived SI-Unit for measurement of solid angle
@@ -824,7 +821,7 @@ val Number.rontosteradian : Expression
     /**
     * Returns rontosteradian, 10^-27 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
 @JvmField
@@ -850,7 +847,7 @@ val Number.qsr : Expression
     /**
     * Returns qsr, 10^-30 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectosteradian, 10^-30 of steradian, derived SI-Unit for measurement of solid angle
@@ -859,7 +856,7 @@ val Number.quectosteradian : Expression
     /**
     * Returns quectosteradian, 10^-30 of steradian, derived SI-Unit for measurement of solid angle
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
 @JvmField

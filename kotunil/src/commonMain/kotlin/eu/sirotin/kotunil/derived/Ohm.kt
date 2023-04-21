@@ -1,7 +1,6 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -10,22 +9,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  kg*m2 * (s `^` -3) * (A `^` -2)
+private val formula =  kg*m2 * (s `^` -3) * (A `^` -2)
 
 @JsExport
 /**
 * System International Unit for resistance, impedance, reactance.
 */
-class Ohm(value: Double){
-    val expression: Expression = unit*value
-}
+class Ohm(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for resistance, impedance, reactance.
 */
 @JsExport
 @JvmField
-val Ω = unit
+val Ω = formula
 
 /**
 * Creates Ohm-Object for current number value. Ohm is a System International Unit for resistance, impedance, reactance.
@@ -34,7 +31,7 @@ val Number.Ω : Expression
    /**
    * Returns Ohm-Object for current number value. Ohm is a System International Unit for resistance, impedance, reactance.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -45,7 +42,7 @@ val Number.QΩ : Expression
     /**
     * Returns QΩ, 10^30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettaohm, 10^30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -54,7 +51,7 @@ val Number.quettaohm : Expression
     /**
     * Returns quettaohm, 10^30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 @JsExport
 @JvmField
@@ -80,7 +77,7 @@ val Number.RΩ : Expression
     /**
     * Returns RΩ, 10^27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnaohm, 10^27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -89,7 +86,7 @@ val Number.ronnaohm : Expression
     /**
     * Returns ronnaohm, 10^27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 @JsExport
 @JvmField
@@ -115,7 +112,7 @@ val Number.YΩ : Expression
     /**
     * Returns YΩ, 10^24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottaohm, 10^24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -124,7 +121,7 @@ val Number.yottaohm : Expression
     /**
     * Returns yottaohm, 10^24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 @JsExport
 @JvmField
@@ -150,7 +147,7 @@ val Number.ZΩ : Expression
     /**
     * Returns ZΩ, 10^21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettaohm, 10^21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -159,7 +156,7 @@ val Number.zettaohm : Expression
     /**
     * Returns zettaohm, 10^21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 @JsExport
 @JvmField
@@ -185,7 +182,7 @@ val Number.EΩ : Expression
     /**
     * Returns EΩ, 10^18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exaohm, 10^18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -194,7 +191,7 @@ val Number.exaohm : Expression
     /**
     * Returns exaohm, 10^18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 @JsExport
 @JvmField
@@ -220,7 +217,7 @@ val Number.PΩ : Expression
     /**
     * Returns PΩ, 10^15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petaohm, 10^15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -229,7 +226,7 @@ val Number.petaohm : Expression
     /**
     * Returns petaohm, 10^15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 @JsExport
 @JvmField
@@ -255,7 +252,7 @@ val Number.TΩ : Expression
     /**
     * Returns TΩ, 10^12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * teraohm, 10^12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -264,7 +261,7 @@ val Number.teraohm : Expression
     /**
     * Returns teraohm, 10^12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 @JsExport
 @JvmField
@@ -290,7 +287,7 @@ val Number.GΩ : Expression
     /**
     * Returns GΩ, 10^9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigaohm, 10^9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -299,7 +296,7 @@ val Number.gigaohm : Expression
     /**
     * Returns gigaohm, 10^9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 @JsExport
 @JvmField
@@ -325,7 +322,7 @@ val Number.MΩ : Expression
     /**
     * Returns MΩ, 10^6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megaohm, 10^6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -334,7 +331,7 @@ val Number.megaohm : Expression
     /**
     * Returns megaohm, 10^6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 @JsExport
 @JvmField
@@ -360,7 +357,7 @@ val Number.kΩ : Expression
     /**
     * Returns kΩ, 10^3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kiloohm, 10^3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -369,7 +366,7 @@ val Number.kiloohm : Expression
     /**
     * Returns kiloohm, 10^3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 @JsExport
 @JvmField
@@ -395,7 +392,7 @@ val Number.hΩ : Expression
     /**
     * Returns hΩ, 10^2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectoohm, 10^2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -404,7 +401,7 @@ val Number.hectoohm : Expression
     /**
     * Returns hectoohm, 10^2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 @JsExport
 @JvmField
@@ -430,7 +427,7 @@ val Number.daΩ : Expression
     /**
     * Returns daΩ, 10^1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decaohm, 10^1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -439,7 +436,7 @@ val Number.decaohm : Expression
     /**
     * Returns decaohm, 10^1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 @JsExport
 @JvmField
@@ -465,7 +462,7 @@ val Number.dΩ : Expression
     /**
     * Returns dΩ, 10^-1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * deciohm, 10^-1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -474,7 +471,7 @@ val Number.deciohm : Expression
     /**
     * Returns deciohm, 10^-1 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 @JsExport
 @JvmField
@@ -500,7 +497,7 @@ val Number.cΩ : Expression
     /**
     * Returns cΩ, 10^-2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centiohm, 10^-2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -509,7 +506,7 @@ val Number.centiohm : Expression
     /**
     * Returns centiohm, 10^-2 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 @JsExport
 @JvmField
@@ -535,7 +532,7 @@ val Number.mΩ : Expression
     /**
     * Returns mΩ, 10^-3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * milliohm, 10^-3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -544,7 +541,7 @@ val Number.milliohm : Expression
     /**
     * Returns milliohm, 10^-3 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
 @JvmField
@@ -570,7 +567,7 @@ val Number.μΩ : Expression
     /**
     * Returns μΩ, 10^-6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microohm, 10^-6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -579,7 +576,7 @@ val Number.microohm : Expression
     /**
     * Returns microohm, 10^-6 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 @JsExport
 @JvmField
@@ -605,7 +602,7 @@ val Number.nΩ : Expression
     /**
     * Returns nΩ, 10^-9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanoohm, 10^-9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -614,7 +611,7 @@ val Number.nanoohm : Expression
     /**
     * Returns nanoohm, 10^-9 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 @JsExport
 @JvmField
@@ -640,7 +637,7 @@ val Number.pΩ : Expression
     /**
     * Returns pΩ, 10^-12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picoohm, 10^-12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -649,7 +646,7 @@ val Number.picoohm : Expression
     /**
     * Returns picoohm, 10^-12 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
 @JvmField
@@ -675,7 +672,7 @@ val Number.fΩ : Expression
     /**
     * Returns fΩ, 10^-15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtoohm, 10^-15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -684,7 +681,7 @@ val Number.femtoohm : Expression
     /**
     * Returns femtoohm, 10^-15 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 @JsExport
 @JvmField
@@ -710,7 +707,7 @@ val Number.aΩ : Expression
     /**
     * Returns aΩ, 10^-18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attoohm, 10^-18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -719,7 +716,7 @@ val Number.attoohm : Expression
     /**
     * Returns attoohm, 10^-18 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 @JsExport
 @JvmField
@@ -745,7 +742,7 @@ val Number.zΩ : Expression
     /**
     * Returns zΩ, 10^-21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptoohm, 10^-21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -754,7 +751,7 @@ val Number.zeptoohm : Expression
     /**
     * Returns zeptoohm, 10^-21 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
 @JvmField
@@ -780,7 +777,7 @@ val Number.yΩ : Expression
     /**
     * Returns yΩ, 10^-24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctoohm, 10^-24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -789,7 +786,7 @@ val Number.yoctoohm : Expression
     /**
     * Returns yoctoohm, 10^-24 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
 @JvmField
@@ -815,7 +812,7 @@ val Number.rΩ : Expression
     /**
     * Returns rΩ, 10^-27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontoohm, 10^-27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -824,7 +821,7 @@ val Number.rontoohm : Expression
     /**
     * Returns rontoohm, 10^-27 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
 @JvmField
@@ -850,7 +847,7 @@ val Number.qΩ : Expression
     /**
     * Returns qΩ, 10^-30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectoohm, 10^-30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
@@ -859,7 +856,7 @@ val Number.quectoohm : Expression
     /**
     * Returns quectoohm, 10^-30 of ohm, derived SI-Unit for measurement of resistance, impedance, reactance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
 @JvmField

@@ -15,7 +15,7 @@ internal class LumenTest {
     
      @Test
     fun testLumenMainTest2() {
-        assertEquals(12.3.lm , Lumen(12.3).expression)
+        assertEquals(12.3.lm , Lumen(12.3))
     }
               
     @Test

@@ -15,7 +15,7 @@ internal class WeberTest {
     
      @Test
     fun testWeberMainTest2() {
-        assertEquals(12.3.Wb , Weber(12.3).expression)
+        assertEquals(12.3.Wb , Weber(12.3))
     }
               
     @Test

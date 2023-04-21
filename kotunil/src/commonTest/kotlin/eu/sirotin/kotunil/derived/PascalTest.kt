@@ -15,7 +15,7 @@ internal class PascalTest {
     
      @Test
     fun testPascalMainTest2() {
-        assertEquals(12.3.Pa , Pascal(12.3).expression)
+        assertEquals(12.3.Pa , Pascal(12.3))
     }
               
     @Test

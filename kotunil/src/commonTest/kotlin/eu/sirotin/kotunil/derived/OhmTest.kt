@@ -15,7 +15,7 @@ internal class OhmTest {
     
      @Test
     fun testOhmMainTest2() {
-        assertEquals(12.3.Ω , Ohm(12.3).expression)
+        assertEquals(12.3.Ω , Ohm(12.3))
     }
               
     @Test

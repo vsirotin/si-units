@@ -1,7 +1,6 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
@@ -10,22 +9,20 @@ import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  s*A
+private val formula =  s*A
 
 @JsExport
 /**
 * System International Unit for electric charge.
 */
-class Coulomb(value: Double){
-    val expression: Expression = unit*value
-}
+class Coulomb(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for electric charge.
 */
 @JsExport
 @JvmField
-val C = unit
+val C = formula
 
 /**
 * Creates Coulomb-Object for current number value. Coulomb is a System International Unit for electric charge.
@@ -34,7 +31,7 @@ val Number.C : Expression
    /**
    * Returns Coulomb-Object for current number value. Coulomb is a System International Unit for electric charge.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -45,7 +42,7 @@ val Number.QC : Expression
     /**
     * Returns QC, 10^30 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettacoulomb, 10^30 of coulomb, derived SI-Unit for measurement of electric charge
@@ -54,7 +51,7 @@ val Number.quettacoulomb : Expression
     /**
     * Returns quettacoulomb, 10^30 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 @JsExport
 @JvmField
@@ -80,7 +77,7 @@ val Number.RC : Expression
     /**
     * Returns RC, 10^27 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnacoulomb, 10^27 of coulomb, derived SI-Unit for measurement of electric charge
@@ -89,7 +86,7 @@ val Number.ronnacoulomb : Expression
     /**
     * Returns ronnacoulomb, 10^27 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 @JsExport
 @JvmField
@@ -115,7 +112,7 @@ val Number.YC : Expression
     /**
     * Returns YC, 10^24 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottacoulomb, 10^24 of coulomb, derived SI-Unit for measurement of electric charge
@@ -124,7 +121,7 @@ val Number.yottacoulomb : Expression
     /**
     * Returns yottacoulomb, 10^24 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 @JsExport
 @JvmField
@@ -150,7 +147,7 @@ val Number.ZC : Expression
     /**
     * Returns ZC, 10^21 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettacoulomb, 10^21 of coulomb, derived SI-Unit for measurement of electric charge
@@ -159,7 +156,7 @@ val Number.zettacoulomb : Expression
     /**
     * Returns zettacoulomb, 10^21 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 @JsExport
 @JvmField
@@ -185,7 +182,7 @@ val Number.EC : Expression
     /**
     * Returns EC, 10^18 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exacoulomb, 10^18 of coulomb, derived SI-Unit for measurement of electric charge
@@ -194,7 +191,7 @@ val Number.exacoulomb : Expression
     /**
     * Returns exacoulomb, 10^18 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 @JsExport
 @JvmField
@@ -220,7 +217,7 @@ val Number.PC : Expression
     /**
     * Returns PC, 10^15 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petacoulomb, 10^15 of coulomb, derived SI-Unit for measurement of electric charge
@@ -229,7 +226,7 @@ val Number.petacoulomb : Expression
     /**
     * Returns petacoulomb, 10^15 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 @JsExport
 @JvmField
@@ -255,7 +252,7 @@ val Number.TC : Expression
     /**
     * Returns TC, 10^12 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * teracoulomb, 10^12 of coulomb, derived SI-Unit for measurement of electric charge
@@ -264,7 +261,7 @@ val Number.teracoulomb : Expression
     /**
     * Returns teracoulomb, 10^12 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 @JsExport
 @JvmField
@@ -290,7 +287,7 @@ val Number.GC : Expression
     /**
     * Returns GC, 10^9 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigacoulomb, 10^9 of coulomb, derived SI-Unit for measurement of electric charge
@@ -299,7 +296,7 @@ val Number.gigacoulomb : Expression
     /**
     * Returns gigacoulomb, 10^9 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 @JsExport
 @JvmField
@@ -325,7 +322,7 @@ val Number.MC : Expression
     /**
     * Returns MC, 10^6 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megacoulomb, 10^6 of coulomb, derived SI-Unit for measurement of electric charge
@@ -334,7 +331,7 @@ val Number.megacoulomb : Expression
     /**
     * Returns megacoulomb, 10^6 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 @JsExport
 @JvmField
@@ -360,7 +357,7 @@ val Number.kC : Expression
     /**
     * Returns kC, 10^3 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kilocoulomb, 10^3 of coulomb, derived SI-Unit for measurement of electric charge
@@ -369,7 +366,7 @@ val Number.kilocoulomb : Expression
     /**
     * Returns kilocoulomb, 10^3 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 @JsExport
 @JvmField
@@ -395,7 +392,7 @@ val Number.hC : Expression
     /**
     * Returns hC, 10^2 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectocoulomb, 10^2 of coulomb, derived SI-Unit for measurement of electric charge
@@ -404,7 +401,7 @@ val Number.hectocoulomb : Expression
     /**
     * Returns hectocoulomb, 10^2 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 @JsExport
 @JvmField
@@ -430,7 +427,7 @@ val Number.daC : Expression
     /**
     * Returns daC, 10^1 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decacoulomb, 10^1 of coulomb, derived SI-Unit for measurement of electric charge
@@ -439,7 +436,7 @@ val Number.decacoulomb : Expression
     /**
     * Returns decacoulomb, 10^1 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 @JsExport
 @JvmField
@@ -465,7 +462,7 @@ val Number.dC : Expression
     /**
     * Returns dC, 10^-1 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * decicoulomb, 10^-1 of coulomb, derived SI-Unit for measurement of electric charge
@@ -474,7 +471,7 @@ val Number.decicoulomb : Expression
     /**
     * Returns decicoulomb, 10^-1 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 @JsExport
 @JvmField
@@ -500,7 +497,7 @@ val Number.cC : Expression
     /**
     * Returns cC, 10^-2 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centicoulomb, 10^-2 of coulomb, derived SI-Unit for measurement of electric charge
@@ -509,7 +506,7 @@ val Number.centicoulomb : Expression
     /**
     * Returns centicoulomb, 10^-2 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 @JsExport
 @JvmField
@@ -535,7 +532,7 @@ val Number.mC : Expression
     /**
     * Returns mC, 10^-3 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * millicoulomb, 10^-3 of coulomb, derived SI-Unit for measurement of electric charge
@@ -544,7 +541,7 @@ val Number.millicoulomb : Expression
     /**
     * Returns millicoulomb, 10^-3 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
 @JvmField
@@ -570,7 +567,7 @@ val Number.μC : Expression
     /**
     * Returns μC, 10^-6 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microcoulomb, 10^-6 of coulomb, derived SI-Unit for measurement of electric charge
@@ -579,7 +576,7 @@ val Number.microcoulomb : Expression
     /**
     * Returns microcoulomb, 10^-6 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 @JsExport
 @JvmField
@@ -605,7 +602,7 @@ val Number.nC : Expression
     /**
     * Returns nC, 10^-9 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanocoulomb, 10^-9 of coulomb, derived SI-Unit for measurement of electric charge
@@ -614,7 +611,7 @@ val Number.nanocoulomb : Expression
     /**
     * Returns nanocoulomb, 10^-9 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 @JsExport
 @JvmField
@@ -640,7 +637,7 @@ val Number.pC : Expression
     /**
     * Returns pC, 10^-12 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picocoulomb, 10^-12 of coulomb, derived SI-Unit for measurement of electric charge
@@ -649,7 +646,7 @@ val Number.picocoulomb : Expression
     /**
     * Returns picocoulomb, 10^-12 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
 @JvmField
@@ -675,7 +672,7 @@ val Number.fC : Expression
     /**
     * Returns fC, 10^-15 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtocoulomb, 10^-15 of coulomb, derived SI-Unit for measurement of electric charge
@@ -684,7 +681,7 @@ val Number.femtocoulomb : Expression
     /**
     * Returns femtocoulomb, 10^-15 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 @JsExport
 @JvmField
@@ -710,7 +707,7 @@ val Number.aC : Expression
     /**
     * Returns aC, 10^-18 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attocoulomb, 10^-18 of coulomb, derived SI-Unit for measurement of electric charge
@@ -719,7 +716,7 @@ val Number.attocoulomb : Expression
     /**
     * Returns attocoulomb, 10^-18 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 @JsExport
 @JvmField
@@ -745,7 +742,7 @@ val Number.zC : Expression
     /**
     * Returns zC, 10^-21 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptocoulomb, 10^-21 of coulomb, derived SI-Unit for measurement of electric charge
@@ -754,7 +751,7 @@ val Number.zeptocoulomb : Expression
     /**
     * Returns zeptocoulomb, 10^-21 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
 @JvmField
@@ -780,7 +777,7 @@ val Number.yC : Expression
     /**
     * Returns yC, 10^-24 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctocoulomb, 10^-24 of coulomb, derived SI-Unit for measurement of electric charge
@@ -789,7 +786,7 @@ val Number.yoctocoulomb : Expression
     /**
     * Returns yoctocoulomb, 10^-24 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
 @JvmField
@@ -815,7 +812,7 @@ val Number.rC : Expression
     /**
     * Returns rC, 10^-27 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontocoulomb, 10^-27 of coulomb, derived SI-Unit for measurement of electric charge
@@ -824,7 +821,7 @@ val Number.rontocoulomb : Expression
     /**
     * Returns rontocoulomb, 10^-27 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
 @JvmField
@@ -850,7 +847,7 @@ val Number.qC : Expression
     /**
     * Returns qC, 10^-30 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectocoulomb, 10^-30 of coulomb, derived SI-Unit for measurement of electric charge
@@ -859,7 +856,7 @@ val Number.quectocoulomb : Expression
     /**
     * Returns quectocoulomb, 10^-30 of coulomb, derived SI-Unit for measurement of electric charge
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
 @JvmField
