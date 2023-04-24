@@ -6,19 +6,29 @@ import eu.sirotin.kotunil.generator.currencyDescriptions
 import java.io.File
 import java.nio.file.Files
 
+private const val HEAD = """
+function testCurrencies() {
+    console.log("Start testCurrencies");    
+"""
 
-fun generateCurrenciesJsFile() {
+private const val TAIL = """
+    console.log("Fin testCurrencies");
+}"""
 
-    val dirPath = "${ROOT_JS_LIB}currency"
+fun generateCurrenciesTestJsFile() {
+
+    val dirPath = "${ROOT_JS_TESTS}currency"
     val dir = File(dirPath)
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
-    val fileName = "Currencies.js"
+    val fileName = "CurrenciesTest.js"
 
     val file = dir.resolve(fileName)
     file.delete()
 
+    file.appendText(HEAD)
     currencyDescriptions.forEach { file.appendText(generateCurrencyDefinition(it))}
+    file.appendText(TAIL)
 }
 
 
@@ -27,8 +37,9 @@ private fun generateCurrencyDefinition(currencyDescription: CurrencyDescription)
     val code = currencyDescription.code
     val desc = currencyDescription.description
     return """
-//Definition of $desc
-const $name =  KotUniL.eu.sirotin.kotunil.currency.$name;
-const $code = new $name(1);
+//Test of $desc
+var c1$code = $code.times(16.1);
+var c2$code = new $name(16.1);
+checkObjects(c1$code, c2$code);
 """
 }

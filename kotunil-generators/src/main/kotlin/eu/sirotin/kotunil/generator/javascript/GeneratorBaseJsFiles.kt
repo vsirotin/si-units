@@ -8,7 +8,7 @@ import java.io.File
 
 fun generateSiUnitsBaseJsFiles() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_JS}base")
+    val dir = File("${ROOT_JS_LIB}base")
     generateClassFiles(dir, ::generateSiUnitBaseJsFiles)
 }
 

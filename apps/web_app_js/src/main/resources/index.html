@@ -52,20 +52,17 @@
     <script type="text/javascript" src="./libs/specialunits/SpecialDerivedUnits.js"></script>
     <script type="text/javascript" src="./libs/specialunits/Thing.js"></script>
     <script type="text/javascript" src="./../javascript/checker.js"></script>
-    <script type="text/javascript" src="./../javascript/tests/SpecialUnitsTest.js"></script>
-    <script type="text/javascript" src="./../javascript/TutorialTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/specialunits/SpecialUnitsTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/currency/CurrenciesTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/TutorialTest.js"></script>
 
 
          <script>
             console.log("Start main script");
 
-            var x = new Metre();
-            var sx = x.unitSymbols();
-
-            var y = new Volt();
-            var sy = y.unitSymbols();
             testTutorial();
             testSpecialUnits();
+            testCurrencies();
 
             document.getElementById("number-objects").innerHTML = "" + objectTypes.size;
             document.getElementById("number-tests").innerHTML = numberChecks;

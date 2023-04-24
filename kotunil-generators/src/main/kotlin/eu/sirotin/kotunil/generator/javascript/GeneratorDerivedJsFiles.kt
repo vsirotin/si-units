@@ -9,7 +9,7 @@ import java.io.File
 
 fun generateSiUnitsDerivedJsFiles() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_JS}derived")
+    val dir = File("${ROOT_JS_LIB}derived")
     generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass)
 }
 

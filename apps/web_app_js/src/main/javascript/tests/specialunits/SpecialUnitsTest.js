@@ -1,5 +1,5 @@
 function testSpecialUnits() {
-    console.log("- Start testSpecialUnits");
+    console.log("Start testSpecialUnits");
 
     checkObjects(g, new Kilogram(0.001));
 
@@ -39,5 +39,5 @@ function testSpecialUnits() {
     //Percentage
     checkValues(percentage, 0.01);
 
-    console.log("- Fin testSpecialUnits");
+    console.log("Fin testSpecialUnits");
 }

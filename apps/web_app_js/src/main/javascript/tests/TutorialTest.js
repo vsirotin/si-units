@@ -27,7 +27,6 @@
 //        testBaseUnits()
 //        testDerivedUnits()
 //        testPrefixes()
-        testSpecialUnits()
           console.log("Fin testTutorial");
     }
 
