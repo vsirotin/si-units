@@ -1,7 +1,6 @@
-
-var numberObjects = 0;
 var numberChecks = 0;
 const EPS = 1e-10;
+const objectTypes = new Set();
 function checkValues(a, b){
     numberChecks++;
     if(Math.abs(a - b) < EPS)return
@@ -12,6 +11,8 @@ function checkObjects(a, b){
     numberChecks++;
     let sa = a.unitSymbols();
     let sb = b.unitSymbols();
+    objectTypes.add(sa);
+    objectTypes.add(sb);
     if(sa != sb){
         throw "Objects have different types: '" + sa + "' vs '" + sb + "'";
     }

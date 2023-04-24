@@ -3,6 +3,8 @@ function testSpecialUnits() {
 
     checkObjects(g, new Kilogram(0.001));
 
+    checkObjects(celsius, new Kelvin(273.15));
+
     checkObjects(m2, m.timesExp(m));
     checkObjects(m3, m2.timesExp(m));
 

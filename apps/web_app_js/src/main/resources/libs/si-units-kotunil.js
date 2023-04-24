@@ -12911,12 +12911,12 @@
       g = get_kg_0(0.001);
     }
   }
-  function get_kelvin() {
+  function get_celsius() {
     init_properties_SpecialDerivedUnits_kt_9dg447();
-    return kelvin;
+    return celsius;
   }
-  var kelvin;
-  function get_kelvin_0(_this__u8e3s4) {
+  var celsius;
+  function get_celsius_0(_this__u8e3s4) {
     init_properties_SpecialDerivedUnits_kt_9dg447();
     return new Kelvin(numberToDouble(_this__u8e3s4) + 273.15);
   }
@@ -12925,7 +12925,7 @@
     if (properties_initialized_SpecialDerivedUnits_kt_50rxxh) {
     } else {
       properties_initialized_SpecialDerivedUnits_kt_50rxxh = true;
-      kelvin = get_kelvin_0(1);
+      celsius = get_celsius_0(0);
     }
   }
   function get_descriptionThing() {
@@ -18318,9 +18318,9 @@
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});
     var $eu$sirotin$kotunil = $eu$sirotin.kotunil || ($eu$sirotin.kotunil = {});
     var $eu$sirotin$kotunil$specialunits = $eu$sirotin$kotunil.specialunits || ($eu$sirotin$kotunil.specialunits = {});
-    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'kelvin', {
+    Object.defineProperty($eu$sirotin$kotunil$specialunits, 'celsius', {
       configurable: true,
-      get: get_kelvin
+      get: get_celsius
     });
     var $eu = _.eu || (_.eu = {});
     var $eu$sirotin = $eu.sirotin || ($eu.sirotin = {});

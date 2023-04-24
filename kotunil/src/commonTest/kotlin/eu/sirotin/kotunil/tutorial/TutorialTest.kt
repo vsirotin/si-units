@@ -49,6 +49,7 @@ import eu.sirotin.kotunil.core.ε
 import eu.sirotin.kotunil.derived.T
 import eu.sirotin.kotunil.derived.Wb
 import eu.sirotin.kotunil.derived.μV
+import eu.sirotin.kotunil.specialunits.celsius
 import eu.sirotin.kotunil.specialunits.ha
 import eu.sirotin.kotunil.specialunits.l
 import eu.sirotin.kotunil.specialunits.m2
@@ -224,6 +225,14 @@ internal class TutorialTest {
 
         assertEquals(Candela(1.0), 1.cd)
         assertEquals(7*cd, 7.cd)
+    }
+
+    @Test
+    fun testCelsius() {
+        assertEquals(12.celsius,	Kelvin(12 + 273.15))
+        assertEquals(283.15, 10.celsius.value)
+        assertEquals("Θ", celsius.categorySymbols())
+        assertEquals("K", celsius.unitSymbols())
     }
 
     @Test

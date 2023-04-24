@@ -20,5 +20,5 @@
  *
  */
 
-//temperature relative to 273.15 K
-const kelvin = KotUniL.eu.sirotin.kotunil.specialunits.kelvin;
+//Celsius: temperature relative to 273.15 K
+const celsius = KotUniL.eu.sirotin.kotunil.specialunits.celsius;
