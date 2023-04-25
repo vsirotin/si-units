@@ -3282,6 +3282,9 @@
   Expression.prototype.v5 = function () {
     return this.dimensions;
   };
+  Expression.prototype.compare = function (other) {
+    return this.w5(other);
+  };
   Expression.prototype.w5 = function (other) {
     checkCompatibility(this, other);
     return compareTo(this.value, other.value);

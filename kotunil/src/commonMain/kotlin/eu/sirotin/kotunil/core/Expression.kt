@@ -51,6 +51,13 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     /**
      * Compares expressions
      */
+    fun compare(other: Expression): Int{ //to make it available in JS.
+        return this.compareTo(other);
+    }
+
+    /**
+     * Compares expressions
+     */
     override fun compareTo(other: Expression): Int {
         checkCompatibility(other)
         return value.compareTo(other.value)
