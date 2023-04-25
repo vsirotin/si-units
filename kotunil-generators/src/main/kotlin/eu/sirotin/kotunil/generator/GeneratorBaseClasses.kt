@@ -81,12 +81,12 @@ fun generateBaseClassFile(
     fileExtension: String,
     dir: File,
     generatorHeadPart: (String, String, String, Int, String) -> String,
-    generatorPrefixesPart: (String, String, String, List<SiPrefix>)-> String
+    generatorPrefixesPart: (String, String, String, List<SiPrefix>)-> String,
+    generatorFileName: (String, String)->String = ::generateFileName
 ) {
     val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+    val fileName = generatorFileName(className, fileExtension)
     val prefixes = if (className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
-
-    val fileName = "$className.$fileExtension"
     val file = dir.resolve(fileName)
     file.delete()
     val classText = generatorHeadPart(
@@ -100,6 +100,8 @@ fun generateBaseClassFile(
 
     file.writeText(classText)
 }
+
+private fun generateFileName(className: String, fileExtension: String): String = "$className.$fileExtension"
 
 fun generatePrefixesForKilogram(): List<SiPrefix> {
     return siPrefixes

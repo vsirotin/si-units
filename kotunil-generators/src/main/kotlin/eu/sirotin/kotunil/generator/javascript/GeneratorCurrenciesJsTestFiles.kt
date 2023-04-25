@@ -37,9 +37,9 @@ private fun generateCurrencyDefinition(currencyDescription: CurrencyDescription)
     val code = currencyDescription.code
     val desc = currencyDescription.description
     return """
-//Test of $desc
-var c1$code = $code.times(16.1);
-var c2$code = new $name(16.1);
-checkObjects(c1$code, c2$code);
+    //Test of $desc
+    var c1$code = $code.times(16.1);
+    var c2$code = new $name(16.1);
+    checkObjects(c1$code, c2$code);
 """
 }

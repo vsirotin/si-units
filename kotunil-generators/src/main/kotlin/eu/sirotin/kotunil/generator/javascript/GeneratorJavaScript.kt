@@ -7,8 +7,11 @@ const val ROOT_JS_TESTS = "${ROOT_JS}main/javascript/tests/"
 fun generateJavaScriptFiles() {
     generateSiUnitsBaseJsFiles()
     generateSiUnitsDerivedJsFiles()
+
+    generateSiUnitsTestBaseJsFiles()
     generateCurrenciesJsFile()
     generateCurrenciesTestJsFile()
+
 }
 
 

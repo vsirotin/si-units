@@ -52,20 +52,30 @@
     <script type="text/javascript" src="./libs/specialunits/SpecialDerivedUnits.js"></script>
     <script type="text/javascript" src="./libs/specialunits/Thing.js"></script>
     <script type="text/javascript" src="./../javascript/checker.js"></script>
+
+    <script type="text/javascript" src="./../javascript/tests/base/SecondTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/MetreTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/KilogramTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/AmpereTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/KelvinTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/MoleTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/CandelaTest.js"></script>
+    <script type="text/javascript" src="./../javascript/tests/base/BaseJSTest.js"></script>
+
     <script type="text/javascript" src="./../javascript/tests/specialunits/SpecialUnitsTest.js"></script>
     <script type="text/javascript" src="./../javascript/tests/currency/CurrenciesTest.js"></script>
     <script type="text/javascript" src="./../javascript/tests/TutorialTest.js"></script>
 
+     <script>
+        console.log("Start main script");
 
-         <script>
-            console.log("Start main script");
+        testTutorial();
+        testBase();
+        testSpecialUnits();
+        testCurrencies();
 
-            testTutorial();
-            testSpecialUnits();
-            testCurrencies();
-
-            document.getElementById("number-objects").innerHTML = "" + objectTypes.size;
-            document.getElementById("number-tests").innerHTML = numberChecks;
-        </script>
+        document.getElementById("number-objects").innerHTML = "" + objectTypes.size;
+        document.getElementById("number-tests").innerHTML = numberChecks;
+    </script>
 </body>
 </html>
