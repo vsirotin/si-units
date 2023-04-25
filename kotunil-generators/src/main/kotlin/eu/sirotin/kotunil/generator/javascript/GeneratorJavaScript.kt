@@ -9,6 +9,7 @@ fun generateJavaScriptFiles() {
     generateSiUnitsDerivedJsFiles()
 
     generateSiUnitsTestBaseJsFiles()
+    generateSiUnitsTestDerivedJsFiles()
     generateCurrenciesJsFile()
     generateCurrenciesTestJsFile()
 

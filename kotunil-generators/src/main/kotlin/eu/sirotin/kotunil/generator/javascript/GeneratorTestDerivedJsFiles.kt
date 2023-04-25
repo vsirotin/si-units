@@ -7,16 +7,16 @@ import eu.sirotin.kotunil.generator.generateDerivedClassFiles
 import eu.sirotin.kotunil.generator.getClassName
 import java.io.File
 
-fun generateSiUnitsDerivedJsFiles() {
+fun generateSiUnitsTestDerivedJsFiles() {
     //Generate package directory if not exists
-    val dir = File("${ROOT_JS_LIB}derived")
+    val dir = File("${ROOT_JS_TESTS}derived")
     generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass)
 }
 
 private var className = ""
 private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
     className = getClassName(siUnitDescription)
-    val fileName = "$className.js"
+    val fileName = "${className}Test.js"
     val generatorHeadPart = ::generateDerivedUnitClassHead
     val generatorPrefixes = ::generateDerivedClassPrefixes
 
@@ -29,9 +29,9 @@ private fun generateDerivedUnitClassHead(
     formula: String,
     quantityName: String
 ): String {
-    return """
-    const $className =  KotUniL.eu.sirotin.kotunil.derived.$className;   
-    const $unitSymbol = new $className(1);
+    return """        
+function test$className() {
+   console.log("-Start test$className");      
     """}
 
 private fun generateDerivedClassPrefixes(name: String,
@@ -39,7 +39,12 @@ private fun generateDerivedClassPrefixes(name: String,
                                          formula: String,
                                          quantity: String,
                                          prefixes: List<SiPrefix>): String {
-    return prefixes.joinToString(System.lineSeparator()) {
+    val postfix = """
+    console.log("-Fin test$className");
+}
+"""
+    return prefixes.joinToString(separator = System.lineSeparator(),
+        postfix = postfix) {
         generateTextOfDerivedUnitClassForPrefix(
             it,
             name,
@@ -59,5 +64,6 @@ private fun generateTextOfDerivedUnitClassForPrefix(
 ): String {
     val symbol = "${prefix.symbol}$unitSymbol"
     return """
-    const $symbol = new $className(10**${prefix.degree});
-    const ${prefix.name}$unitSymbol = $symbol;"""}
+    checkObjects($symbol, new $className(10**${prefix.degree}));
+    checkObjects(${prefix.name}$unitSymbol, $symbol);"""
+}
