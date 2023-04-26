@@ -1,0 +1,24 @@
+{
+  "name": "kotunil-web-app",
+  "version": "0.0.1",
+  "description": "Test web app for kotunil-js-lib. ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/apps/web_app_js"
+  },
+  "keywords": [
+    "si-unit",
+    "kotunil",
+    "web",
+    "javascript"
+  ],
+  "author": "Dr. VIktor Sirotin. www.sirotin.eu",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "kotunil-js-lib": "0.0.2"
+  }
+}
