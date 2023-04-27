@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionTurkishLira = UnitSpecification(
     "TRY",
@@ -14,6 +16,7 @@ private val descriptionTurkishLira = UnitSpecification(
 * Class for hold of Turkish lira
 * @constructor Creates a class for hold of Turkish lira with given [value]
 */
+@JsExport
 class TurkishLira(value : Double = 1.0) : Expression(value, description = descriptionTurkishLira)
     
     /**
@@ -28,6 +31,8 @@ class TurkishLira(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Turkish lira
     */
-    @JvmField()
+    @JsExport
+    @JsName("TRY")
+    @JvmField
     val TRY = TurkishLira()   
     

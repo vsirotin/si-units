@@ -28,7 +28,7 @@ import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.derived.*
-import kotlin.js.JsName
+import kotlin.js.JsExport
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmName
 import kotlin.math.E
@@ -39,13 +39,15 @@ import kotlin.math.pow
 /**
  * Square metre
  */
-@JvmField()
+@JsExport
+@JvmField
 val m2 = m * m
 
 /**
  * Cubic metre (volume)
  */
-@JvmField()
+@JsExport
+@JvmField
 val m3 = m2 * m
 
 /**
@@ -60,7 +62,8 @@ val Number.min: Second
 /**
  * Minute (time)
  */
-@JvmField()
+@JsExport
+@JvmField
 val min = Second(60.0)
 
 /**
@@ -75,7 +78,8 @@ val Number.h: Second
 /**
  * Hour (time)
  */
-@JvmField()
+@JsExport
+@JvmField
 val h = Second(3600.0)
 
 /**
@@ -90,59 +94,47 @@ val Number.d: Second
 /**
  * Day (time)
  */
-@JvmField()
+@JsExport
+@JvmField
 val d = Second(24*3600.0)
 
 /**
  * Astronomical unit 149597870700 metre
  */
 val Number.au: Metre
-    get()  = Metre(this.toDouble()*149597870700)
+    get()  = Metre(this.toDouble()*149597870700.0)
 
 /**
  * Astronomical unit 149597870700 metre
  */
-@JvmField()
+@JsExport
+@JvmField
 val au = 1.0.au
 
+@JsExport
 /**
  * Mathematical constant (Archimedes' constant π). The numeric value of π is approximately 3.1415926536
  */
 const val π = PI
 
+@JsExport
 /**
  * Euler's number e. The numeric value of e is approximately 2.7182818284
  */
 const val e = E
 
-/**
- * degree
- */
-@JsName("degree")
-val `°` = (PI/180)*rad
-
-/**
- * arcminute
- */
-@JsName("arcMinute")
-val `′` = `°` / 60.0
-
-/**
- * arcsecond
- */
-@JsName("arcSecond")
-val `″` = `′` / 60.0
 
 /**
  * hectare
  */
 val Number.ha: Expression
-    get() = this.toDouble() * (10 `^` 4) * m2
+    get() = 10000*this.toDouble()  * m2
 
 /**
  * hectare
  */
-@JvmField()
+@JsExport
+@JvmField
 val ha = 1.0.ha
 
 /**
@@ -152,12 +144,13 @@ val Number.l: Expression
     /**
      * get litre
      */
-    get() = Metre(this.toDouble()/10.0) * (Metre(0.1) * Metre(0.1))
+    get() = Metre(this.toDouble()/10.0) * Metre(0.1) * Metre(0.1)
 
 /**
  * Litre
  */
-@JvmField()
+@JsExport
+@JvmField
 val l = 1.0.l
 
 /**
@@ -170,8 +163,8 @@ val Number.L: Expression
      */
     get() = this.l
 
-@JvmField()
-    val L = l
+@JvmField
+val L = l
 
 /**
  * tonne
@@ -185,7 +178,8 @@ val Number.t: Kilogram
 /**
  * tonne
  */
-@JvmField()
+@JsExport
+@JvmField
 val t = 1000.kg
 
 /**
@@ -200,7 +194,8 @@ val Number.Da: Kilogram
 /**
  * dalton
  */
-@JvmField()
+@JsExport
+@JvmField
 val Da = 1.Da
 
 /**
@@ -215,7 +210,8 @@ val Number.eV: Expression
 /**
  * electronvolt
  */
-@JvmField()
+@JsExport
+@JvmField
 val eV = 1.eV
 
 
@@ -231,7 +227,8 @@ val Number.percentage: Double
 /**
  * Percentage
  */
-@JvmField()
+@JsExport
+@JvmField
 val percentage = 0.01
 
 /**

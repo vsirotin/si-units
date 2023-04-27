@@ -22,7 +22,9 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
     iosX64()
-    js(IR) {
+    js(IR) {//js(IR) {
+        binaries.executable()
+        binaries.library()
         val timeoutMs = "1000000"
         browser {
             testTask {
@@ -47,6 +49,12 @@ kotlin {
     }
 
     sourceSets {
+        all {
+            languageSettings.apply {
+                optIn("kotlin.js.ExperimentalJsExport")
+            }
+        }
+
         val commonMain by getting
 
         val jvmMain by getting

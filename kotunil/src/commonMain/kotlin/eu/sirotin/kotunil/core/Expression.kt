@@ -22,6 +22,7 @@
 
 package eu.sirotin.kotunil.core
 
+import kotlin.js.JsExport
 import kotlin.js.JsName
 import kotlin.math.pow
 
@@ -30,19 +31,29 @@ import kotlin.math.pow
  */
 const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:"
 
+@JsExport
 /**
  * Tolerance by double comparison
  */
 const val ε = 1.0E-12
 
+@JsExport
 /**
  * Implements expression of unit with given [value] and [dimensions]
  * @constructor Creates expression of unit with given [value] and [dimensions]
  */
 open class Expression(var value: Double, val dimensions: Dimensions) : Comparable<Expression>, UnitPresentation {
 
+    @JsName("create")
     constructor(value: Double = 1.0, description: UnitSpecification<*>)
             : this(value, Dimensions(setOf(Factor(description))))
+
+    /**
+     * Compares expressions
+     */
+    fun compare(other: Expression): Int{ //to make it available in JS.
+        return this.compareTo(other);
+    }
 
     /**
      * Compares expressions
@@ -101,6 +112,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     /**
      * Allows to add expressions.
      */
+    @JsName("plus")
     fun plus(other: Expression) = this + other
 
     /**
@@ -108,9 +120,11 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
      */
     fun minus(other: Expression) = this - other
 
+
     /**
      * Allows to multiply expressions.
      */
+    @JsName("timesExp")
     fun times(other: Expression) = this * other
 
     /**
@@ -118,9 +132,11 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
      */
     fun times(other: Number) = this * other
 
+
     /**
      * Allows to divide expressions.
      */
+    @JsName("divExp")
     fun div(other: Expression) = this /other
 
     /**

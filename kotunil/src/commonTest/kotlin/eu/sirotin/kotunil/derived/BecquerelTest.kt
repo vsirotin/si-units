@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class BecquerelTest {
 
     @Test
-    fun testBecquerelMainTest() {
+    fun testBecquerelMainTest1() {
         assertEquals(1.Bq , Bq)
+    }
+    
+     @Test
+    fun testBecquerelMainTest2() {
+        assertEquals(12.3.Bq , Becquerel(12.3))
     }
               
     @Test

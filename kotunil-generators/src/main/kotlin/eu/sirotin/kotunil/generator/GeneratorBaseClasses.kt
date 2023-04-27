@@ -24,6 +24,8 @@ package eu.sirotin.kotunil.generator
 
 import java.io.File
 import java.nio.file.Files
+import kotlin.reflect.KFunction4
+import kotlin.reflect.KFunction5
 
 /**
  * Descriptions of base SI-Units.
@@ -55,28 +57,51 @@ data class SiUnitDescription(val name: String,
 fun generateSiUnitsBaseClasses() {
     //Generate package directory if not exists
     val dir = File("${ROOT_PATH_SOURCE_COMMON}base")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
+    generateClassFiles(dir, ::generateSiUnitBaseClass)
+}
+
+fun generateClassFiles(
+    dir: File,
+    generatorClassFile: (SiUnitDescription, File) -> Unit) {
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes
-    siUnitDescriptions.forEach { generateSiUnitBaseClass(it, dir) }
+    siUnitDescriptions.forEach { generatorClassFile(it, dir) }
 }
 
 private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
-    val prefixes = if(className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+    val fileExtension = "kt"
+    val generatorHeadPart = ::generateHeadPart
+    val generatorPrefixesPart = ::generatePrefixes
+    generateBaseClassFile(siUnitDescription, fileExtension, dir, generatorHeadPart, generatorPrefixesPart)
+}
 
-    val fileName = "$className.kt"
+fun generateBaseClassFile(
+    siUnitDescription: SiUnitDescription,
+    fileExtension: String,
+    dir: File,
+    generatorHeadPart: (String, String, String, Int, String) -> String,
+    generatorPrefixesPart: (String, String, String, List<SiPrefix>)-> String,
+    generatorFileName: (String, String)->String = ::generateFileName
+) {
+    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+    val fileName = generatorFileName(className, fileExtension)
+    val prefixes = if (className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generateHeadPart(className,
+    val classText = generatorHeadPart(
+        className,
         siUnitDescription.unitSymbol,
         siUnitDescription.dimensionSymbol,
         siUnitDescription.presentationPriority,
-        siUnitDescription.quantityName) +
-        generatePrefixes(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
-    
+        siUnitDescription.quantityName
+    ) +
+            generatorPrefixesPart(className, siUnitDescription.name, siUnitDescription.unitSymbol, prefixes)
+
     file.writeText(classText)
 }
+
+private fun generateFileName(className: String, fileExtension: String): String = "$className.$fileExtension"
 
 fun generatePrefixesForKilogram(): List<SiPrefix> {
     return siPrefixes
@@ -96,6 +121,7 @@ package eu.sirotin.kotunil.base
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -110,6 +136,7 @@ private val description$className = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
+@JsExport
 class $className(value: Double) : Expression(value, description = description$className)
     /**
      * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -123,7 +150,8 @@ class $className(value: Double) : Expression(value, description = description$cl
     /**
      * System International Unit for $quantityName.
      */
-    @JvmField()
+    @JsExport
+    @JvmField
     val $unitSymbol = $className(1.0)       
     """
 }
@@ -137,6 +165,7 @@ private fun generatePrefixes(className: String, name: String, unitSymbol: String
 private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: String, unitSymbol: String): String {
 
     val correctedSymbol = correctSpecialCases(siPrefix.symbol, unitSymbol)
+    val mayBeJsExport = conditionalPush(siPrefix.symbol, "@JsExport")
     return """
     /**
      * $correctedSymbol, (10^${siPrefix.degree} of $name)
@@ -174,12 +203,15 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
          */
         get() = this.value / 10.0.pow(${siPrefix.degree})
     
-    @JvmField()
+    $mayBeJsExport
+    @JvmField
     /**
      * $correctedSymbol (10^${siPrefix.degree} of $name)
      */
     val $correctedSymbol = $className(10.0.pow(${siPrefix.degree}))
     
+    @JsExport
+    @JvmField
     /**
      * $correctedSymbol, (10^${siPrefix.degree} of $name)
      */

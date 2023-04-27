@@ -31,6 +31,7 @@ public class Main {
         BaseJavaConsoleTest.javaConsoleTests();
         DerivedJavaConsoleTest.javaConsoleTests();
         CurrencyJavaConsoleTest.javaConsoleTests();
+        new DerivedAbstractTest().testDerivedAbstract();
     }
 
 }

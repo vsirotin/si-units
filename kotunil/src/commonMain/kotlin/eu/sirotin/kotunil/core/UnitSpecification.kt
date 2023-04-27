@@ -22,11 +22,15 @@
 
 package eu.sirotin.kotunil.core
 
+import kotlin.js.JsExport
+import kotlin.js.JsName
+
 /**
  * Specifies unit with properties as [unitSymbol] e.g. 'm', [categorySymbol] as 'L',
  * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' ans not 'sm'.
  * and creation function [creator].
  */
+@JsExport
 data class UnitSpecification<T : Expression>(val unitSymbol: String,
                                            val categorySymbol: String,
                                            val presentationPriority: Int = 0,
@@ -39,10 +43,12 @@ interface UnitPresentation {
     /**
      * Returns unit symbol of measured units, e.g. 'm/s'
      */
+    @JsName("unitSymbols")
     fun unitSymbols() : String
 
     /**
      * Returns category symbol of measured units, e.g. 'L3S-1'
      */
+    @JsName("categorySymbols")
     fun categorySymbols(): String
 }

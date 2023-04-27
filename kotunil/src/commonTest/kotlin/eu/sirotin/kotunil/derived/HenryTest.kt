@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class HenryTest {
 
     @Test
-    fun testHenryMainTest() {
+    fun testHenryMainTest1() {
         assertEquals(1.H , H)
+    }
+    
+     @Test
+    fun testHenryMainTest2() {
+        assertEquals(12.3.H , Henry(12.3))
     }
               
     @Test

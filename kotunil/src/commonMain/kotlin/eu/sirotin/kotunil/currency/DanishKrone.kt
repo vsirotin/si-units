@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionDanishKrone = UnitSpecification(
     "DKK",
@@ -14,6 +16,7 @@ private val descriptionDanishKrone = UnitSpecification(
 * Class for hold of Danish krone
 * @constructor Creates a class for hold of Danish krone with given [value]
 */
+@JsExport
 class DanishKrone(value : Double = 1.0) : Expression(value, description = descriptionDanishKrone)
     
     /**
@@ -28,7 +31,9 @@ class DanishKrone(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Danish krone
     */
-    @JvmField()
+    @JsExport
+    @JsName("DKK")
+    @JvmField
     val DKK = DanishKrone()   
     
 
@@ -44,5 +49,4 @@ val Number.dkr : DanishKrone
 /**
 * One unit of Danish krone
 */
-@JvmField()
 val dkr = DanishKrone()

@@ -13,5 +13,4 @@ val Number.`₩` : SouthKoreanWon
 /**
 * One unit of  South Korean won
 */
-@JvmField()
 val `₩` = SouthKoreanWon()

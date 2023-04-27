@@ -1,21 +1,28 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  kg*(m2) * (s `^` -2) * (A `^` -1)
+private val formula =  kg*(m2) * (s `^` -2) * (A `^` -1)
+
+@JsExport
+/**
+* System International Unit for magnetic flux.
+*/
+class Weber(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for magnetic flux.
 */
-@JvmField()
-val Wb = unit
+@JsExport
+@JvmField
+val Wb = formula
 
 /**
 * Creates Weber-Object for current number value. Weber is a System International Unit for magnetic flux.
@@ -24,7 +31,7 @@ val Number.Wb : Expression
    /**
    * Returns Weber-Object for current number value. Weber is a System International Unit for magnetic flux.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -35,7 +42,7 @@ val Number.QWb : Expression
     /**
     * Returns QWb, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettaweber, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
@@ -44,10 +51,10 @@ val Number.quettaweber : Expression
     /**
     * Returns quettaweber, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * QWb, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -56,7 +63,9 @@ val QWb = 10.0.pow(30) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * quettaweber, 10^30 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val quettaweber = QWb
     
 
@@ -68,7 +77,7 @@ val Number.RWb : Expression
     /**
     * Returns RWb, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnaweber, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
@@ -77,10 +86,10 @@ val Number.ronnaweber : Expression
     /**
     * Returns ronnaweber, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * RWb, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -89,7 +98,9 @@ val RWb = 10.0.pow(27) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * ronnaweber, 10^27 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val ronnaweber = RWb
     
 
@@ -101,7 +112,7 @@ val Number.YWb : Expression
     /**
     * Returns YWb, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottaweber, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
@@ -110,10 +121,10 @@ val Number.yottaweber : Expression
     /**
     * Returns yottaweber, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * YWb, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -122,7 +133,9 @@ val YWb = 10.0.pow(24) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * yottaweber, 10^24 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val yottaweber = YWb
     
 
@@ -134,7 +147,7 @@ val Number.ZWb : Expression
     /**
     * Returns ZWb, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettaweber, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
@@ -143,10 +156,10 @@ val Number.zettaweber : Expression
     /**
     * Returns zettaweber, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * ZWb, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -155,7 +168,9 @@ val ZWb = 10.0.pow(21) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * zettaweber, 10^21 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val zettaweber = ZWb
     
 
@@ -167,7 +182,7 @@ val Number.EWb : Expression
     /**
     * Returns EWb, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exaweber, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
@@ -176,10 +191,10 @@ val Number.exaweber : Expression
     /**
     * Returns exaweber, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * EWb, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -188,7 +203,9 @@ val EWb = 10.0.pow(18) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * exaweber, 10^18 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val exaweber = EWb
     
 
@@ -200,7 +217,7 @@ val Number.PWb : Expression
     /**
     * Returns PWb, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petaweber, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
@@ -209,10 +226,10 @@ val Number.petaweber : Expression
     /**
     * Returns petaweber, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * PWb, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -221,7 +238,9 @@ val PWb = 10.0.pow(15) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * petaweber, 10^15 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val petaweber = PWb
     
 
@@ -233,7 +252,7 @@ val Number.TWb : Expression
     /**
     * Returns TWb, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * teraweber, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
@@ -242,10 +261,10 @@ val Number.teraweber : Expression
     /**
     * Returns teraweber, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * TWb, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -254,7 +273,9 @@ val TWb = 10.0.pow(12) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * teraweber, 10^12 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val teraweber = TWb
     
 
@@ -266,7 +287,7 @@ val Number.GWb : Expression
     /**
     * Returns GWb, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigaweber, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
@@ -275,10 +296,10 @@ val Number.gigaweber : Expression
     /**
     * Returns gigaweber, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * GWb, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -287,7 +308,9 @@ val GWb = 10.0.pow(9) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * gigaweber, 10^9 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val gigaweber = GWb
     
 
@@ -299,7 +322,7 @@ val Number.MWb : Expression
     /**
     * Returns MWb, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megaweber, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
@@ -308,10 +331,10 @@ val Number.megaweber : Expression
     /**
     * Returns megaweber, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * MWb, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -320,7 +343,9 @@ val MWb = 10.0.pow(6) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * megaweber, 10^6 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val megaweber = MWb
     
 
@@ -332,7 +357,7 @@ val Number.kWb : Expression
     /**
     * Returns kWb, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kiloweber, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
@@ -341,10 +366,10 @@ val Number.kiloweber : Expression
     /**
     * Returns kiloweber, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * kWb, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -353,7 +378,9 @@ val kWb = 10.0.pow(3) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * kiloweber, 10^3 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val kiloweber = kWb
     
 
@@ -365,7 +392,7 @@ val Number.hWb : Expression
     /**
     * Returns hWb, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectoweber, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
@@ -374,10 +401,10 @@ val Number.hectoweber : Expression
     /**
     * Returns hectoweber, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * hWb, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -386,7 +413,9 @@ val hWb = 10.0.pow(2) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * hectoweber, 10^2 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val hectoweber = hWb
     
 
@@ -398,7 +427,7 @@ val Number.daWb : Expression
     /**
     * Returns daWb, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decaweber, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
@@ -407,10 +436,10 @@ val Number.decaweber : Expression
     /**
     * Returns decaweber, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * daWb, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -419,7 +448,9 @@ val daWb = 10.0.pow(1) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * decaweber, 10^1 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val decaweber = daWb
     
 
@@ -431,7 +462,7 @@ val Number.dWb : Expression
     /**
     * Returns dWb, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * deciweber, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
@@ -440,10 +471,10 @@ val Number.deciweber : Expression
     /**
     * Returns deciweber, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * dWb, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -452,7 +483,9 @@ val dWb = 10.0.pow(-1) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * deciweber, 10^-1 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val deciweber = dWb
     
 
@@ -464,7 +497,7 @@ val Number.cWb : Expression
     /**
     * Returns cWb, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centiweber, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
@@ -473,10 +506,10 @@ val Number.centiweber : Expression
     /**
     * Returns centiweber, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * cWb, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -485,7 +518,9 @@ val cWb = 10.0.pow(-2) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * centiweber, 10^-2 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val centiweber = cWb
     
 
@@ -497,7 +532,7 @@ val Number.mWb : Expression
     /**
     * Returns mWb, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * milliweber, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
@@ -506,10 +541,10 @@ val Number.milliweber : Expression
     /**
     * Returns milliweber, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * mWb, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -518,7 +553,9 @@ val mWb = 10.0.pow(-3) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * milliweber, 10^-3 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val milliweber = mWb
     
 
@@ -530,7 +567,7 @@ val Number.μWb : Expression
     /**
     * Returns μWb, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microweber, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
@@ -539,10 +576,10 @@ val Number.microweber : Expression
     /**
     * Returns microweber, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * μWb, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -551,7 +588,9 @@ val μWb = 10.0.pow(-6) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * microweber, 10^-6 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val microweber = μWb
     
 
@@ -563,7 +602,7 @@ val Number.nWb : Expression
     /**
     * Returns nWb, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanoweber, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
@@ -572,10 +611,10 @@ val Number.nanoweber : Expression
     /**
     * Returns nanoweber, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * nWb, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -584,7 +623,9 @@ val nWb = 10.0.pow(-9) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * nanoweber, 10^-9 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val nanoweber = nWb
     
 
@@ -596,7 +637,7 @@ val Number.pWb : Expression
     /**
     * Returns pWb, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picoweber, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
@@ -605,10 +646,10 @@ val Number.picoweber : Expression
     /**
     * Returns picoweber, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * pWb, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -617,7 +658,9 @@ val pWb = 10.0.pow(-12) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * picoweber, 10^-12 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val picoweber = pWb
     
 
@@ -629,7 +672,7 @@ val Number.fWb : Expression
     /**
     * Returns fWb, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtoweber, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
@@ -638,10 +681,10 @@ val Number.femtoweber : Expression
     /**
     * Returns femtoweber, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * fWb, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -650,7 +693,9 @@ val fWb = 10.0.pow(-15) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * femtoweber, 10^-15 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val femtoweber = fWb
     
 
@@ -662,7 +707,7 @@ val Number.aWb : Expression
     /**
     * Returns aWb, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attoweber, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
@@ -671,10 +716,10 @@ val Number.attoweber : Expression
     /**
     * Returns attoweber, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * aWb, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -683,7 +728,9 @@ val aWb = 10.0.pow(-18) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * attoweber, 10^-18 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val attoweber = aWb
     
 
@@ -695,7 +742,7 @@ val Number.zWb : Expression
     /**
     * Returns zWb, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptoweber, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
@@ -704,10 +751,10 @@ val Number.zeptoweber : Expression
     /**
     * Returns zeptoweber, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * zWb, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -716,7 +763,9 @@ val zWb = 10.0.pow(-21) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * zeptoweber, 10^-21 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val zeptoweber = zWb
     
 
@@ -728,7 +777,7 @@ val Number.yWb : Expression
     /**
     * Returns yWb, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctoweber, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
@@ -737,10 +786,10 @@ val Number.yoctoweber : Expression
     /**
     * Returns yoctoweber, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * yWb, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -749,7 +798,9 @@ val yWb = 10.0.pow(-24) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * yoctoweber, 10^-24 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val yoctoweber = yWb
     
 
@@ -761,7 +812,7 @@ val Number.rWb : Expression
     /**
     * Returns rWb, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontoweber, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
@@ -770,10 +821,10 @@ val Number.rontoweber : Expression
     /**
     * Returns rontoweber, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * rWb, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -782,7 +833,9 @@ val rWb = 10.0.pow(-27) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * rontoweber, 10^-27 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val rontoweber = rWb
     
 
@@ -794,7 +847,7 @@ val Number.qWb : Expression
     /**
     * Returns qWb, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectoweber, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
@@ -803,10 +856,10 @@ val Number.quectoweber : Expression
     /**
     * Returns quectoweber, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * qWb, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
 */        
@@ -815,6 +868,8 @@ val qWb = 10.0.pow(-30) * (kg*(m2) * (s `^` -2) * (A `^` -1))
 /**
 * quectoweber, 10^-30 of weber, derived SI-Unit for measurement of magnetic flux
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val quectoweber = qWb
     

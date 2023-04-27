@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.base
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -18,6 +19,7 @@ private val descriptionSecond = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
+@JsExport
 class Second(value: Double) : Expression(value, description = descriptionSecond)
     /**
      * Creates Second-Object for current number value. Second is a System International Unit for time.
@@ -31,7 +33,8 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
     /**
      * System International Unit for time.
      */
-    @JvmField()
+    @JsExport
+    @JvmField
     val s = Second(1.0)       
     
     /**
@@ -72,12 +75,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(30)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Qs (10^30 of second)
      */
     val Qs = Second(10.0.pow(30))
     
+    @JsExport
+    @JvmField
     /**
      * Qs, (10^30 of second)
      */
@@ -121,12 +127,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(27)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Rs (10^27 of second)
      */
     val Rs = Second(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * Rs, (10^27 of second)
      */
@@ -170,12 +179,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(24)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Ys (10^24 of second)
      */
     val Ys = Second(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * Ys, (10^24 of second)
      */
@@ -219,12 +231,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(21)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Zs (10^21 of second)
      */
     val Zs = Second(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * Zs, (10^21 of second)
      */
@@ -268,12 +283,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(18)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Es (10^18 of second)
      */
     val Es = Second(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * Es, (10^18 of second)
      */
@@ -317,12 +335,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(15)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Ps (10^15 of second)
      */
     val Ps = Second(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * Ps, (10^15 of second)
      */
@@ -366,12 +387,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(12)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Ts (10^12 of second)
      */
     val Ts = Second(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * Ts, (10^12 of second)
      */
@@ -415,12 +439,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(9)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Gs (10^9 of second)
      */
     val Gs = Second(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * Gs, (10^9 of second)
      */
@@ -464,12 +491,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(6)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * Ms (10^6 of second)
      */
     val Ms = Second(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * Ms, (10^6 of second)
      */
@@ -511,12 +541,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(3)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * ks (10^3 of second)
      */
     val ks = Second(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * ks, (10^3 of second)
      */
@@ -558,12 +591,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(2)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * hs (10^2 of second)
      */
     val hs = Second(10.0.pow(2))
     
+    @JsExport
+    @JvmField
     /**
      * hs, (10^2 of second)
      */
@@ -605,12 +641,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(1)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * das (10^1 of second)
      */
     val das = Second(10.0.pow(1))
     
+    @JsExport
+    @JvmField
     /**
      * das, (10^1 of second)
      */
@@ -652,12 +691,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-1)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * ds (10^-1 of second)
      */
     val ds = Second(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * ds, (10^-1 of second)
      */
@@ -699,12 +741,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-2)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * cs (10^-2 of second)
      */
     val cs = Second(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * cs, (10^-2 of second)
      */
@@ -746,12 +791,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-3)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * ms (10^-3 of second)
      */
     val ms = Second(10.0.pow(-3))
     
+    @JsExport
+    @JvmField
     /**
      * ms, (10^-3 of second)
      */
@@ -793,12 +841,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-6)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * μs (10^-6 of second)
      */
     val μs = Second(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * μs, (10^-6 of second)
      */
@@ -840,12 +891,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-9)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * ns (10^-9 of second)
      */
     val ns = Second(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * ns, (10^-9 of second)
      */
@@ -887,12 +941,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-12)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * ps (10^-12 of second)
      */
     val ps = Second(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * ps, (10^-12 of second)
      */
@@ -934,12 +991,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-15)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * fs (10^-15 of second)
      */
     val fs = Second(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * fs, (10^-15 of second)
      */
@@ -981,12 +1041,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-18)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * `as` (10^-18 of second)
      */
     val `as` = Second(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * `as`, (10^-18 of second)
      */
@@ -1028,12 +1091,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-21)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * zs (10^-21 of second)
      */
     val zs = Second(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * zs, (10^-21 of second)
      */
@@ -1075,12 +1141,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-24)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * ys (10^-24 of second)
      */
     val ys = Second(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * ys, (10^-24 of second)
      */
@@ -1122,12 +1191,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-27)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * rs (10^-27 of second)
      */
     val rs = Second(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * rs, (10^-27 of second)
      */
@@ -1169,12 +1241,15 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
          */
         get() = this.value / 10.0.pow(-30)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * qs (10^-30 of second)
      */
     val qs = Second(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * qs, (10^-30 of second)
      */

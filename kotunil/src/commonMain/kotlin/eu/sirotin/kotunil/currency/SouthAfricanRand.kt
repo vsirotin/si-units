@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionSouthAfricanRand = UnitSpecification(
     "ZAR",
@@ -14,6 +16,7 @@ private val descriptionSouthAfricanRand = UnitSpecification(
 * Class for hold of South African rand
 * @constructor Creates a class for hold of South African rand with given [value]
 */
+@JsExport
 class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = descriptionSouthAfricanRand)
     
     /**
@@ -28,7 +31,9 @@ class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = d
     /**
     * Holder for  of South African rand
     */
-    @JvmField()
+    @JsExport
+    @JsName("ZAR")
+    @JvmField
     val ZAR = SouthAfricanRand()   
     
 
@@ -44,5 +49,4 @@ val Number.R : SouthAfricanRand
 /**
 * One unit of South African rand
 */
-@JvmField()
 val R = SouthAfricanRand()

@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class SiemensTest {
 
     @Test
-    fun testSiemensMainTest() {
+    fun testSiemensMainTest1() {
         assertEquals(1.S , S)
+    }
+    
+     @Test
+    fun testSiemensMainTest2() {
+        assertEquals(12.3.S , Siemens(12.3))
     }
               
     @Test

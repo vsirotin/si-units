@@ -13,5 +13,4 @@ val Number.`人民币` : Renminbi
 /**
 * One unit of Renminbi
 */
-@JvmField()
 val `人民币` = Renminbi()

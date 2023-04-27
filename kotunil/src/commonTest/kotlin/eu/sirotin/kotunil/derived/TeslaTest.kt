@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class TeslaTest {
 
     @Test
-    fun testTeslaMainTest() {
+    fun testTeslaMainTest1() {
         assertEquals(1.T , T)
+    }
+    
+     @Test
+    fun testTeslaMainTest2() {
+        assertEquals(12.3.T , Tesla(12.3))
     }
               
     @Test

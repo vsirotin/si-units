@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class LuxTest {
 
     @Test
-    fun testLuxMainTest() {
+    fun testLuxMainTest1() {
         assertEquals(1.lx , lx)
+    }
+    
+     @Test
+    fun testLuxMainTest2() {
+        assertEquals(12.3.lx , Lux(12.3))
     }
               
     @Test

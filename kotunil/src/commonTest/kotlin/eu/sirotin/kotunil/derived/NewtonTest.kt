@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class NewtonTest {
 
     @Test
-    fun testNewtonMainTest() {
+    fun testNewtonMainTest1() {
         assertEquals(1.N , N)
+    }
+    
+     @Test
+    fun testNewtonMainTest2() {
+        assertEquals(12.3.N , Newton(12.3))
     }
               
     @Test

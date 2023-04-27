@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionRomanianLeu = UnitSpecification(
     "RON",
@@ -14,6 +16,7 @@ private val descriptionRomanianLeu = UnitSpecification(
 * Class for hold of Romanian leu
 * @constructor Creates a class for hold of Romanian leu with given [value]
 */
+@JsExport
 class RomanianLeu(value : Double = 1.0) : Expression(value, description = descriptionRomanianLeu)
     
     /**
@@ -28,7 +31,9 @@ class RomanianLeu(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Romanian leu
     */
-    @JvmField()
+    @JsExport
+    @JsName("RON")
+    @JvmField
     val RON = RomanianLeu()   
     
 
@@ -44,5 +49,4 @@ val Number.RL : RomanianLeu
 /**
 * One unit of Romanian leu
 */
-@JvmField()
 val RL = RomanianLeu()

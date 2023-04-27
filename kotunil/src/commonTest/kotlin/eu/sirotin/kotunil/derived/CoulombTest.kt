@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class CoulombTest {
 
     @Test
-    fun testCoulombMainTest() {
+    fun testCoulombMainTest1() {
         assertEquals(1.C , C)
+    }
+    
+     @Test
+    fun testCoulombMainTest2() {
+        assertEquals(12.3.C , Coulomb(12.3))
     }
               
     @Test

@@ -23,6 +23,7 @@
 package eu.sirotin.kotunil.core
 
 
+import kotlin.js.JsExport
 import kotlin.math.abs
 
 /**
@@ -30,6 +31,7 @@ import kotlin.math.abs
  * A factor describe one separate dimension.
  * @constructor Creates dimensions of an unit with help of [factors].
  */
+@JsExport
 data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     /**
@@ -84,6 +86,7 @@ data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 /**
  * Describes one dimension of unit as logical pair of [specification] and [powerValue].
  */
+@JsExport
 data class Factor(val specification: UnitSpecification<*>, val powerValue: Double = 1.0) : Comparable<Factor> {
 
     /**
@@ -131,8 +134,8 @@ fun Dimensions.pow(degree: Number): Dimensions {
 private fun roundedToInt(v: Double): Boolean = abs(v.toInt() - v) < ε
 
 private fun plusCommonFactors(f: Factor, set1: Set<Factor>, set2: Set<Factor>) : Factor? {
-    val f1 = set1.find { it.specification == f.specification }
-    val f2 = set2.find { it.specification == f.specification }
-    val powerValue = f1!!.powerValue + f2!!.powerValue
+    val f1 = set1.find { it.specification == f.specification } ?: return null
+    val f2 = set2.find { it.specification == f.specification } ?: return null
+    val powerValue = f1.powerValue + f2.powerValue
     return if(abs(powerValue) > ε) Factor(f.specification, powerValue) else null
 }

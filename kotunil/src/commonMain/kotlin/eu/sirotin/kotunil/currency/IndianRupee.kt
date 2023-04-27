@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionIndianRupee = UnitSpecification(
     "INR",
@@ -14,6 +16,7 @@ private val descriptionIndianRupee = UnitSpecification(
 * Class for hold of Indian rupee
 * @constructor Creates a class for hold of Indian rupee with given [value]
 */
+@JsExport
 class IndianRupee(value : Double = 1.0) : Expression(value, description = descriptionIndianRupee)
     
     /**
@@ -28,6 +31,8 @@ class IndianRupee(value : Double = 1.0) : Expression(value, description = descri
     /**
     * Holder for  of Indian rupee
     */
-    @JvmField()
+    @JsExport
+    @JsName("INR")
+    @JvmField
     val INR = IndianRupee()   
     

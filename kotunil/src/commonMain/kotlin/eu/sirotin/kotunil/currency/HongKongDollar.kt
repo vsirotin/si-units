@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionHongKongDollar = UnitSpecification(
     "HKD",
@@ -14,6 +16,7 @@ private val descriptionHongKongDollar = UnitSpecification(
 * Class for hold of Hong Kong dollar
 * @constructor Creates a class for hold of Hong Kong dollar with given [value]
 */
+@JsExport
 class HongKongDollar(value : Double = 1.0) : Expression(value, description = descriptionHongKongDollar)
     
     /**
@@ -28,6 +31,8 @@ class HongKongDollar(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Hong Kong dollar
     */
-    @JvmField()
+    @JsExport
+    @JsName("HKD")
+    @JvmField
     val HKD = HongKongDollar()   
     

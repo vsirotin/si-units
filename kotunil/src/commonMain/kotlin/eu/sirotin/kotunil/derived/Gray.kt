@@ -1,21 +1,28 @@
 
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  (m2)*(s `^` -2)
+private val formula =  (m2)*(s `^` -2)
+
+@JsExport
+/**
+* System International Unit for absorbed dose (of ionising radiation).
+*/
+class Gray(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for absorbed dose (of ionising radiation).
 */
-@JvmField()
-val Gy = unit
+@JsExport
+@JvmField
+val Gy = formula
 
 /**
 * Creates Gray-Object for current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
@@ -24,7 +31,7 @@ val Number.Gy : Expression
    /**
    * Returns Gray-Object for current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     
 /**
@@ -35,7 +42,7 @@ val Number.QGy : Expression
     /**
     * Returns QGy, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
 /**
 * quettagray, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -44,10 +51,10 @@ val Number.quettagray : Expression
     /**
     * Returns quettagray, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(30) * unit
+    get() = this.toDouble() * 10.0.pow(30) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * QGy, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -56,7 +63,9 @@ val QGy = 10.0.pow(30) * ((m2)*(s `^` -2))
 /**
 * quettagray, 10^30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val quettagray = QGy
     
 
@@ -68,7 +77,7 @@ val Number.RGy : Expression
     /**
     * Returns RGy, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
 /**
 * ronnagray, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -77,10 +86,10 @@ val Number.ronnagray : Expression
     /**
     * Returns ronnagray, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(27) * unit
+    get() = this.toDouble() * 10.0.pow(27) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * RGy, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -89,7 +98,9 @@ val RGy = 10.0.pow(27) * ((m2)*(s `^` -2))
 /**
 * ronnagray, 10^27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val ronnagray = RGy
     
 
@@ -101,7 +112,7 @@ val Number.YGy : Expression
     /**
     * Returns YGy, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
 /**
 * yottagray, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -110,10 +121,10 @@ val Number.yottagray : Expression
     /**
     * Returns yottagray, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(24) * unit
+    get() = this.toDouble() * 10.0.pow(24) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * YGy, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -122,7 +133,9 @@ val YGy = 10.0.pow(24) * ((m2)*(s `^` -2))
 /**
 * yottagray, 10^24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val yottagray = YGy
     
 
@@ -134,7 +147,7 @@ val Number.ZGy : Expression
     /**
     * Returns ZGy, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
 /**
 * zettagray, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -143,10 +156,10 @@ val Number.zettagray : Expression
     /**
     * Returns zettagray, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(21) * unit
+    get() = this.toDouble() * 10.0.pow(21) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * ZGy, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -155,7 +168,9 @@ val ZGy = 10.0.pow(21) * ((m2)*(s `^` -2))
 /**
 * zettagray, 10^21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val zettagray = ZGy
     
 
@@ -167,7 +182,7 @@ val Number.EGy : Expression
     /**
     * Returns EGy, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
 /**
 * exagray, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -176,10 +191,10 @@ val Number.exagray : Expression
     /**
     * Returns exagray, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(18) * unit
+    get() = this.toDouble() * 10.0.pow(18) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * EGy, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -188,7 +203,9 @@ val EGy = 10.0.pow(18) * ((m2)*(s `^` -2))
 /**
 * exagray, 10^18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val exagray = EGy
     
 
@@ -200,7 +217,7 @@ val Number.PGy : Expression
     /**
     * Returns PGy, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
 /**
 * petagray, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -209,10 +226,10 @@ val Number.petagray : Expression
     /**
     * Returns petagray, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(15) * unit
+    get() = this.toDouble() * 10.0.pow(15) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * PGy, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -221,7 +238,9 @@ val PGy = 10.0.pow(15) * ((m2)*(s `^` -2))
 /**
 * petagray, 10^15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val petagray = PGy
     
 
@@ -233,7 +252,7 @@ val Number.TGy : Expression
     /**
     * Returns TGy, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
 /**
 * teragray, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -242,10 +261,10 @@ val Number.teragray : Expression
     /**
     * Returns teragray, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(12) * unit
+    get() = this.toDouble() * 10.0.pow(12) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * TGy, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -254,7 +273,9 @@ val TGy = 10.0.pow(12) * ((m2)*(s `^` -2))
 /**
 * teragray, 10^12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val teragray = TGy
     
 
@@ -266,7 +287,7 @@ val Number.GGy : Expression
     /**
     * Returns GGy, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
 /**
 * gigagray, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -275,10 +296,10 @@ val Number.gigagray : Expression
     /**
     * Returns gigagray, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(9) * unit
+    get() = this.toDouble() * 10.0.pow(9) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * GGy, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -287,7 +308,9 @@ val GGy = 10.0.pow(9) * ((m2)*(s `^` -2))
 /**
 * gigagray, 10^9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val gigagray = GGy
     
 
@@ -299,7 +322,7 @@ val Number.MGy : Expression
     /**
     * Returns MGy, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
 /**
 * megagray, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -308,10 +331,10 @@ val Number.megagray : Expression
     /**
     * Returns megagray, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(6) * unit
+    get() = this.toDouble() * 10.0.pow(6) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * MGy, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -320,7 +343,9 @@ val MGy = 10.0.pow(6) * ((m2)*(s `^` -2))
 /**
 * megagray, 10^6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val megagray = MGy
     
 
@@ -332,7 +357,7 @@ val Number.kGy : Expression
     /**
     * Returns kGy, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
 /**
 * kilogray, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -341,10 +366,10 @@ val Number.kilogray : Expression
     /**
     * Returns kilogray, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(3) * unit
+    get() = this.toDouble() * 10.0.pow(3) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * kGy, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -353,7 +378,9 @@ val kGy = 10.0.pow(3) * ((m2)*(s `^` -2))
 /**
 * kilogray, 10^3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val kilogray = kGy
     
 
@@ -365,7 +392,7 @@ val Number.hGy : Expression
     /**
     * Returns hGy, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
 /**
 * hectogray, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -374,10 +401,10 @@ val Number.hectogray : Expression
     /**
     * Returns hectogray, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(2) * unit
+    get() = this.toDouble() * 10.0.pow(2) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * hGy, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -386,7 +413,9 @@ val hGy = 10.0.pow(2) * ((m2)*(s `^` -2))
 /**
 * hectogray, 10^2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val hectogray = hGy
     
 
@@ -398,7 +427,7 @@ val Number.daGy : Expression
     /**
     * Returns daGy, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
 /**
 * decagray, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -407,10 +436,10 @@ val Number.decagray : Expression
     /**
     * Returns decagray, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(1) * unit
+    get() = this.toDouble() * 10.0.pow(1) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * daGy, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -419,7 +448,9 @@ val daGy = 10.0.pow(1) * ((m2)*(s `^` -2))
 /**
 * decagray, 10^1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val decagray = daGy
     
 
@@ -431,7 +462,7 @@ val Number.dGy : Expression
     /**
     * Returns dGy, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
 /**
 * decigray, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -440,10 +471,10 @@ val Number.decigray : Expression
     /**
     * Returns decigray, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * unit
+    get() = this.toDouble() * 10.0.pow(-1) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * dGy, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -452,7 +483,9 @@ val dGy = 10.0.pow(-1) * ((m2)*(s `^` -2))
 /**
 * decigray, 10^-1 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val decigray = dGy
     
 
@@ -464,7 +497,7 @@ val Number.cGy : Expression
     /**
     * Returns cGy, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
 /**
 * centigray, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -473,10 +506,10 @@ val Number.centigray : Expression
     /**
     * Returns centigray, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * unit
+    get() = this.toDouble() * 10.0.pow(-2) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * cGy, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -485,7 +518,9 @@ val cGy = 10.0.pow(-2) * ((m2)*(s `^` -2))
 /**
 * centigray, 10^-2 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val centigray = cGy
     
 
@@ -497,7 +532,7 @@ val Number.mGy : Expression
     /**
     * Returns mGy, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 /**
 * milligray, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -506,10 +541,10 @@ val Number.milligray : Expression
     /**
     * Returns milligray, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * unit
+    get() = this.toDouble() * 10.0.pow(-3) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * mGy, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -518,7 +553,9 @@ val mGy = 10.0.pow(-3) * ((m2)*(s `^` -2))
 /**
 * milligray, 10^-3 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val milligray = mGy
     
 
@@ -530,7 +567,7 @@ val Number.μGy : Expression
     /**
     * Returns μGy, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
 /**
 * microgray, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -539,10 +576,10 @@ val Number.microgray : Expression
     /**
     * Returns microgray, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * unit
+    get() = this.toDouble() * 10.0.pow(-6) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * μGy, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -551,7 +588,9 @@ val μGy = 10.0.pow(-6) * ((m2)*(s `^` -2))
 /**
 * microgray, 10^-6 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val microgray = μGy
     
 
@@ -563,7 +602,7 @@ val Number.nGy : Expression
     /**
     * Returns nGy, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
 /**
 * nanogray, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -572,10 +611,10 @@ val Number.nanogray : Expression
     /**
     * Returns nanogray, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * unit
+    get() = this.toDouble() * 10.0.pow(-9) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * nGy, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -584,7 +623,9 @@ val nGy = 10.0.pow(-9) * ((m2)*(s `^` -2))
 /**
 * nanogray, 10^-9 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val nanogray = nGy
     
 
@@ -596,7 +637,7 @@ val Number.pGy : Expression
     /**
     * Returns pGy, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 /**
 * picogray, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -605,10 +646,10 @@ val Number.picogray : Expression
     /**
     * Returns picogray, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * unit
+    get() = this.toDouble() * 10.0.pow(-12) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * pGy, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -617,7 +658,9 @@ val pGy = 10.0.pow(-12) * ((m2)*(s `^` -2))
 /**
 * picogray, 10^-12 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val picogray = pGy
     
 
@@ -629,7 +672,7 @@ val Number.fGy : Expression
     /**
     * Returns fGy, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
 /**
 * femtogray, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -638,10 +681,10 @@ val Number.femtogray : Expression
     /**
     * Returns femtogray, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * unit
+    get() = this.toDouble() * 10.0.pow(-15) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * fGy, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -650,7 +693,9 @@ val fGy = 10.0.pow(-15) * ((m2)*(s `^` -2))
 /**
 * femtogray, 10^-15 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val femtogray = fGy
     
 
@@ -662,7 +707,7 @@ val Number.aGy : Expression
     /**
     * Returns aGy, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
 /**
 * attogray, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -671,10 +716,10 @@ val Number.attogray : Expression
     /**
     * Returns attogray, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * unit
+    get() = this.toDouble() * 10.0.pow(-18) * formula
 
-
-@JvmField  
+@JsExport
+@JvmField
 /**
 * aGy, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -683,7 +728,9 @@ val aGy = 10.0.pow(-18) * ((m2)*(s `^` -2))
 /**
 * attogray, 10^-18 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val attogray = aGy
     
 
@@ -695,7 +742,7 @@ val Number.zGy : Expression
     /**
     * Returns zGy, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 /**
 * zeptogray, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -704,10 +751,10 @@ val Number.zeptogray : Expression
     /**
     * Returns zeptogray, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * unit
+    get() = this.toDouble() * 10.0.pow(-21) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * zGy, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -716,7 +763,9 @@ val zGy = 10.0.pow(-21) * ((m2)*(s `^` -2))
 /**
 * zeptogray, 10^-21 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val zeptogray = zGy
     
 
@@ -728,7 +777,7 @@ val Number.yGy : Expression
     /**
     * Returns yGy, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 /**
 * yoctogray, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -737,10 +786,10 @@ val Number.yoctogray : Expression
     /**
     * Returns yoctogray, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * unit
+    get() = this.toDouble() * 10.0.pow(-24) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * yGy, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -749,7 +798,9 @@ val yGy = 10.0.pow(-24) * ((m2)*(s `^` -2))
 /**
 * yoctogray, 10^-24 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val yoctogray = yGy
     
 
@@ -761,7 +812,7 @@ val Number.rGy : Expression
     /**
     * Returns rGy, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 /**
 * rontogray, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -770,10 +821,10 @@ val Number.rontogray : Expression
     /**
     * Returns rontogray, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * unit
+    get() = this.toDouble() * 10.0.pow(-27) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * rGy, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -782,7 +833,9 @@ val rGy = 10.0.pow(-27) * ((m2)*(s `^` -2))
 /**
 * rontogray, 10^-27 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val rontogray = rGy
     
 
@@ -794,7 +847,7 @@ val Number.qGy : Expression
     /**
     * Returns qGy, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 /**
 * quectogray, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
@@ -803,10 +856,10 @@ val Number.quectogray : Expression
     /**
     * Returns quectogray, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * unit
+    get() = this.toDouble() * 10.0.pow(-30) * formula
 
 
-@JvmField  
+@JvmField
 /**
 * qGy, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */        
@@ -815,6 +868,8 @@ val qGy = 10.0.pow(-30) * ((m2)*(s `^` -2))
 /**
 * quectogray, 10^-30 of gray, derived SI-Unit for measurement of absorbed dose (of ionising radiation)
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val quectogray = qGy
     

@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class JouleTest {
 
     @Test
-    fun testJouleMainTest() {
+    fun testJouleMainTest1() {
         assertEquals(1.J , J)
+    }
+    
+     @Test
+    fun testJouleMainTest2() {
+        assertEquals(12.3.J , Joule(12.3))
     }
               
     @Test

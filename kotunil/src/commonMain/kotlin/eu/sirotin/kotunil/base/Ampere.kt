@@ -4,6 +4,7 @@ package eu.sirotin.kotunil.base
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
@@ -18,6 +19,7 @@ private val descriptionAmpere = UnitSpecification(
  *
  * @constructor Creates the unit with given [value].
  */
+@JsExport
 class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * Creates Ampere-Object for current number value. Ampere is a System International Unit for electric current.
@@ -31,7 +33,8 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
     /**
      * System International Unit for electric current.
      */
-    @JvmField()
+    @JsExport
+    @JvmField
     val A = Ampere(1.0)       
     
     /**
@@ -72,12 +75,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(30)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * QA (10^30 of ampere)
      */
     val QA = Ampere(10.0.pow(30))
     
+    @JsExport
+    @JvmField
     /**
      * QA, (10^30 of ampere)
      */
@@ -121,12 +127,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(27)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * RA (10^27 of ampere)
      */
     val RA = Ampere(10.0.pow(27))
     
+    @JsExport
+    @JvmField
     /**
      * RA, (10^27 of ampere)
      */
@@ -170,12 +179,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(24)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * YA (10^24 of ampere)
      */
     val YA = Ampere(10.0.pow(24))
     
+    @JsExport
+    @JvmField
     /**
      * YA, (10^24 of ampere)
      */
@@ -219,12 +231,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(21)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * ZA (10^21 of ampere)
      */
     val ZA = Ampere(10.0.pow(21))
     
+    @JsExport
+    @JvmField
     /**
      * ZA, (10^21 of ampere)
      */
@@ -268,12 +283,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(18)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * EA (10^18 of ampere)
      */
     val EA = Ampere(10.0.pow(18))
     
+    @JsExport
+    @JvmField
     /**
      * EA, (10^18 of ampere)
      */
@@ -317,12 +335,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(15)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * PA (10^15 of ampere)
      */
     val PA = Ampere(10.0.pow(15))
     
+    @JsExport
+    @JvmField
     /**
      * PA, (10^15 of ampere)
      */
@@ -366,12 +387,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(12)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * TA (10^12 of ampere)
      */
     val TA = Ampere(10.0.pow(12))
     
+    @JsExport
+    @JvmField
     /**
      * TA, (10^12 of ampere)
      */
@@ -415,12 +439,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(9)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * GA (10^9 of ampere)
      */
     val GA = Ampere(10.0.pow(9))
     
+    @JsExport
+    @JvmField
     /**
      * GA, (10^9 of ampere)
      */
@@ -464,12 +491,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(6)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * MA (10^6 of ampere)
      */
     val MA = Ampere(10.0.pow(6))
     
+    @JsExport
+    @JvmField
     /**
      * MA, (10^6 of ampere)
      */
@@ -511,12 +541,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(3)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * kA (10^3 of ampere)
      */
     val kA = Ampere(10.0.pow(3))
     
+    @JsExport
+    @JvmField
     /**
      * kA, (10^3 of ampere)
      */
@@ -558,12 +591,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(2)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * hA (10^2 of ampere)
      */
     val hA = Ampere(10.0.pow(2))
     
+    @JsExport
+    @JvmField
     /**
      * hA, (10^2 of ampere)
      */
@@ -605,12 +641,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(1)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * daA (10^1 of ampere)
      */
     val daA = Ampere(10.0.pow(1))
     
+    @JsExport
+    @JvmField
     /**
      * daA, (10^1 of ampere)
      */
@@ -652,12 +691,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-1)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * dA (10^-1 of ampere)
      */
     val dA = Ampere(10.0.pow(-1))
     
+    @JsExport
+    @JvmField
     /**
      * dA, (10^-1 of ampere)
      */
@@ -699,12 +741,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-2)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * cA (10^-2 of ampere)
      */
     val cA = Ampere(10.0.pow(-2))
     
+    @JsExport
+    @JvmField
     /**
      * cA, (10^-2 of ampere)
      */
@@ -746,12 +791,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-3)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * mA (10^-3 of ampere)
      */
     val mA = Ampere(10.0.pow(-3))
     
+    @JsExport
+    @JvmField
     /**
      * mA, (10^-3 of ampere)
      */
@@ -793,12 +841,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-6)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * μA (10^-6 of ampere)
      */
     val μA = Ampere(10.0.pow(-6))
     
+    @JsExport
+    @JvmField
     /**
      * μA, (10^-6 of ampere)
      */
@@ -840,12 +891,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-9)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * nA (10^-9 of ampere)
      */
     val nA = Ampere(10.0.pow(-9))
     
+    @JsExport
+    @JvmField
     /**
      * nA, (10^-9 of ampere)
      */
@@ -887,12 +941,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-12)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * pA (10^-12 of ampere)
      */
     val pA = Ampere(10.0.pow(-12))
     
+    @JsExport
+    @JvmField
     /**
      * pA, (10^-12 of ampere)
      */
@@ -934,12 +991,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-15)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * fA (10^-15 of ampere)
      */
     val fA = Ampere(10.0.pow(-15))
     
+    @JsExport
+    @JvmField
     /**
      * fA, (10^-15 of ampere)
      */
@@ -981,12 +1041,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-18)
     
-    @JvmField()
+    @JsExport
+    @JvmField
     /**
      * aA (10^-18 of ampere)
      */
     val aA = Ampere(10.0.pow(-18))
     
+    @JsExport
+    @JvmField
     /**
      * aA, (10^-18 of ampere)
      */
@@ -1028,12 +1091,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-21)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * zA (10^-21 of ampere)
      */
     val zA = Ampere(10.0.pow(-21))
     
+    @JsExport
+    @JvmField
     /**
      * zA, (10^-21 of ampere)
      */
@@ -1075,12 +1141,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-24)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * yA (10^-24 of ampere)
      */
     val yA = Ampere(10.0.pow(-24))
     
+    @JsExport
+    @JvmField
     /**
      * yA, (10^-24 of ampere)
      */
@@ -1122,12 +1191,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-27)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * rA (10^-27 of ampere)
      */
     val rA = Ampere(10.0.pow(-27))
     
+    @JsExport
+    @JvmField
     /**
      * rA, (10^-27 of ampere)
      */
@@ -1169,12 +1241,15 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
          */
         get() = this.value / 10.0.pow(-30)
     
-    @JvmField()
+    
+    @JvmField
     /**
      * qA (10^-30 of ampere)
      */
     val qA = Ampere(10.0.pow(-30))
     
+    @JsExport
+    @JvmField
     /**
      * qA, (10^-30 of ampere)
      */

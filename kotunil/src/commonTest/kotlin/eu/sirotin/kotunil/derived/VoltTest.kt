@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class VoltTest {
 
     @Test
-    fun testVoltMainTest() {
+    fun testVoltMainTest1() {
         assertEquals(1.V , V)
+    }
+    
+     @Test
+    fun testVoltMainTest2() {
+        assertEquals(12.3.V , Volt(12.3))
     }
               
     @Test

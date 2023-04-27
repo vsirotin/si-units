@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class SievertTest {
 
     @Test
-    fun testSievertMainTest() {
+    fun testSievertMainTest1() {
         assertEquals(1.Sv , Sv)
+    }
+    
+     @Test
+    fun testSievertMainTest2() {
+        assertEquals(12.3.Sv , Sievert(12.3))
     }
               
     @Test

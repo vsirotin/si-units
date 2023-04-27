@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class WeberTest {
 
     @Test
-    fun testWeberMainTest() {
+    fun testWeberMainTest1() {
         assertEquals(1.Wb , Wb)
+    }
+    
+     @Test
+    fun testWeberMainTest2() {
+        assertEquals(12.3.Wb , Weber(12.3))
     }
               
     @Test

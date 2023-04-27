@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionUnitedStatesDollar = UnitSpecification(
     "USD",
@@ -14,6 +16,7 @@ private val descriptionUnitedStatesDollar = UnitSpecification(
 * Class for hold of United States dollar
 * @constructor Creates a class for hold of United States dollar with given [value]
 */
+@JsExport
 class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description = descriptionUnitedStatesDollar)
     
     /**
@@ -28,6 +31,8 @@ class UnitedStatesDollar(value : Double = 1.0) : Expression(value, description =
     /**
     * Holder for  of United States dollar
     */
-    @JvmField()
+    @JsExport
+    @JsName("USD")
+    @JvmField
     val USD = UnitedStatesDollar()   
     

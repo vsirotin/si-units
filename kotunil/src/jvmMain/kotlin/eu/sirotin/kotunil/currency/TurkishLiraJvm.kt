@@ -13,5 +13,4 @@ val Number.`₺` : TurkishLira
 /**
 * One unit of Turkish lira
 */
-@JvmField()
 val `₺` = TurkishLira()

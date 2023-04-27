@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionPhilippinePeso = UnitSpecification(
     "PHP",
@@ -14,6 +16,7 @@ private val descriptionPhilippinePeso = UnitSpecification(
 * Class for hold of Philippine peso
 * @constructor Creates a class for hold of Philippine peso with given [value]
 */
+@JsExport
 class PhilippinePeso(value : Double = 1.0) : Expression(value, description = descriptionPhilippinePeso)
     
     /**
@@ -28,6 +31,8 @@ class PhilippinePeso(value : Double = 1.0) : Expression(value, description = des
     /**
     * Holder for  of Philippine peso
     */
-    @JvmField()
+    @JsExport
+    @JsName("PHP")
+    @JvmField
     val PHP = PhilippinePeso()   
     

@@ -13,5 +13,4 @@ val Number.`¥` : JapaneseYen
 /**
 * One unit of Japanese yen
 */
-@JvmField()
 val `¥` = JapaneseYen()

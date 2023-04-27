@@ -24,6 +24,8 @@ package eu.sirotin.kotunil.generator
 
 import java.io.File
 import java.nio.file.Files
+import kotlin.reflect.KFunction4
+import kotlin.reflect.KFunction5
 
 /**
  * Descriptions of derived SI units.
@@ -67,33 +69,58 @@ data class SiDerivedUnitDescription(val name: String,
 fun generateSiUnitsDerivedClasses() {
     //Generate package directory if not exists
     val dir = File("${ROOT_PATH_SOURCE_COMMON}derived")
-    if(!dir.exists()) Files.createDirectories(dir.toPath())
-
-    //Generate classes
-    siDerivedUnitDescriptions.forEach { generateSiUnitDerivedClass(it, dir) }
+    generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass)
 
 }
 
-private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+fun generateDerivedClassFiles(
+    dir: File,
+    generatorDerivedClass: (SiDerivedUnitDescription, File) -> Unit
+) {
+    if (!dir.exists()) Files.createDirectories(dir.toPath())
 
+    //Generate classes
+    siDerivedUnitDescriptions.forEach { generatorDerivedClass(it, dir) }
+}
+
+private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
+    val className = getClassName(siUnitDescription)
     val fileName = "$className.kt"
+    val generatorHeadPart = ::generateDerivedUnitClassHead
+    val generatorPrefixes = ::generateDerivedClassPrefixes
+
+    generateDerivedClassFile(dir, fileName, generatorHeadPart, className, siUnitDescription, generatorPrefixes)
+}
+
+fun generateDerivedClassFile(
+    dir: File,
+    fileName: String,
+    generatorHeadPart: (String, String, String, String) -> String,
+    className: String,
+    siUnitDescription: SiDerivedUnitDescription,
+    generatorPrefixes: (String, String, String, String, List<SiPrefix>)-> String
+) {
     val file = dir.resolve(fileName)
     file.delete()
-    val classText = generateDerivedUnitClassHead(
+    val classText = generatorHeadPart(
         className,
         siUnitDescription.unitSymbol,
         siUnitDescription.formula,
-        siUnitDescription.quantity) +
-            generateDerivedClassPrefixes(siUnitDescription.name,
+        siUnitDescription.quantity
+    ) +
+            generatorPrefixes(
+                siUnitDescription.name,
                 siUnitDescription.unitSymbol,
                 siUnitDescription.formula,
                 siUnitDescription.quantity,
                 siPrefixes
             )
-    
+
     file.writeText(classText)
 }
+
+fun getClassName(siUnitDescription: SiDerivedUnitDescription) =
+    siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
 
 private fun generateDerivedUnitClassHead(
     className: String,
@@ -104,21 +131,28 @@ private fun generateDerivedUnitClassHead(
     return """
 package eu.sirotin.kotunil.derived
 
-import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
 import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val unit =  $formula
+private val formula =  $formula
+
+@JsExport
+/**
+* System International Unit for $quantityName.
+*/
+class $className(value: Number): DerivedUnit(value, formula)
 
 /**
 * System International Unit for $quantityName.
 */
-@JvmField()
-val $unitSymbol = unit
+@JsExport
+@JvmField
+val $unitSymbol = formula
 
 /**
 * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
@@ -127,7 +161,7 @@ val Number.$unitSymbol : Expression
    /**
    * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
    */
-    get() = this.toDouble() * unit
+    get() = this.toDouble() * formula
 
     """
 }
@@ -148,6 +182,7 @@ private fun generateTextOfDerivedUnitClassForPrefix(
     quantityName: String
 ): String {
     val jvmName = "${prefix.symbol}$unitSymbol"
+    val mayBeJsExport = conditionalPush(prefix.symbol, "@JsExport")
     return """
 /**
 * ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
@@ -157,7 +192,7 @@ val Number.${prefix.symbol}$unitSymbol : Expression
     /**
     * Returns ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * formula
 
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
@@ -166,10 +201,10 @@ val Number.${prefix.name}$name : Expression
     /**
     * Returns ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
     */  
-    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * unit
+    get() = this.toDouble() * 10.0.pow(${prefix.degree}) * formula
 
-
-@JvmField  
+$mayBeJsExport
+@JvmField
 /**
 * ${prefix.symbol}$unitSymbol, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */        
@@ -178,7 +213,9 @@ val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 /**
 * ${prefix.name}$name, 10^${prefix.degree} of $name, derived SI-Unit for measurement of $quantityName
 */ 
-@JvmField()
+
+@JsExport
+@JvmField
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
 }

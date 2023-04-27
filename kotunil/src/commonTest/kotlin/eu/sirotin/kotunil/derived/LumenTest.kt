@@ -9,8 +9,13 @@ import kotlin.math.pow
 internal class LumenTest {
 
     @Test
-    fun testLumenMainTest() {
+    fun testLumenMainTest1() {
         assertEquals(1.lm , lm)
+    }
+    
+     @Test
+    fun testLumenMainTest2() {
+        assertEquals(12.3.lm , Lumen(12.3))
     }
               
     @Test

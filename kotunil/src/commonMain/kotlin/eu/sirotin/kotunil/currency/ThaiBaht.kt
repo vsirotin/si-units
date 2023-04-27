@@ -4,6 +4,8 @@ package eu.sirotin.kotunil.currency
 import eu.sirotin.kotunil.core.Expression
 import eu.sirotin.kotunil.core.UnitSpecification
 import kotlin.jvm.JvmField
+import kotlin.js.JsExport
+import kotlin.js.JsName
 
 private val descriptionThaiBaht = UnitSpecification(
     "THB",
@@ -14,6 +16,7 @@ private val descriptionThaiBaht = UnitSpecification(
 * Class for hold of Thai baht
 * @constructor Creates a class for hold of Thai baht with given [value]
 */
+@JsExport
 class ThaiBaht(value : Double = 1.0) : Expression(value, description = descriptionThaiBaht)
     
     /**
@@ -28,6 +31,8 @@ class ThaiBaht(value : Double = 1.0) : Expression(value, description = descripti
     /**
     * Holder for  of Thai baht
     */
-    @JvmField()
+    @JsExport
+    @JsName("THB")
+    @JvmField
     val THB = ThaiBaht()   
     

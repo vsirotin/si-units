@@ -13,5 +13,4 @@ val Number.`C$` : CanadianDollar
 /**
 * One unit of Canadian dollar
 */
-@JvmField()
 val `C$` = CanadianDollar()

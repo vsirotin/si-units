@@ -1,0 +1,19 @@
+{
+  "name": "kotunil-js-lib",
+  "version": "0.0.2",
+  "description": "JavaScript-variant of Kotlin's KotUniL library of objects and functions that covers all units os SI (see https://en.wikipedia.org/wiki/International_System_of_Units) like meter, second etc. as well as some other common units like currencies, percentages etc.",
+  "main": "Starter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/js-lib"
+  },
+  "keywords": [
+    "si-units",
+    "kotunil"
+  ],
+  "author": "Dr. VIktor Sirotin. www.sirotin.eu",
+  "license": "Apache-2.0"
+}

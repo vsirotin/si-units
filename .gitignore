@@ -3,3 +3,4 @@ build
 .gradle
 .idea
 /kotlin-js-store/yarn.lock
+/apps/web_app_js/node_modules/

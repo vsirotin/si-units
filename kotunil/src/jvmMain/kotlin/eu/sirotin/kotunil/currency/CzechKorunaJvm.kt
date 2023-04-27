@@ -13,5 +13,4 @@ val Number.`Kč` : CzechKoruna
 /**
 * One unit of  Czech koruna
 */
-@JvmField()
 val `Kč` = CzechKoruna()

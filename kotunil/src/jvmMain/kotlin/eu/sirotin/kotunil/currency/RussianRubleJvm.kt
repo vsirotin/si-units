@@ -13,5 +13,4 @@ val Number.`₽` : RussianRuble
 /**
 * One unit of Russian ruble
 */
-@JvmField()
 val `₽` = RussianRuble()
