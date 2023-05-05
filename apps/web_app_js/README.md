@@ -24,9 +24,9 @@ Start command: **npm i**
 ## How to start Web application
 You can start the application directly in your IDE (e.g. IntelliJ) by open in editor the file
  [resources/index.html](https://github.com/vsirotin/si-units/blob/cc518e5c45b412aea547adab1ac8f6968af490d0/apps/web_app_js/src/main/resources/index.html)
-or build the application and then start Jar from **build/libs**.
+and by click on icon of your favorite browser please start it.
 
-On success the application will show in the console the text:
+On success the application will show in browser the text:
 
 Kotunil/JS Test Page
 
