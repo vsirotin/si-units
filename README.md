@@ -1,5 +1,13 @@
 [![Maven Central](https://img.shields.io/maven-central/v/eu.sirotin.kotunil/all)](https://mvnrepository.com/artifact/eu.sirotin.kotunil/all)
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+[![GitHub contributors](https://img.shields.io/github/contributors/vsirotin/si-units)](https://github.com/vsirotin/si-units/graphs/contributors)
+
+[![npm](https://img.shields.io/npm/v/kotunil-js-lib?sort=semver&logo=npm)](https://www.npmjs.com/package/kotunil-js-lib)
+[![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json)
+[![npm](https://img.shields.io/npm/dt/kotunil-js-lib?logo=npm)](http://npm-stat.com/charts.html?package=kotunil-js-lib)
+[![npm](https://img.shields.io/npm/dw/kotunil-js-lib?logo=npm)](http://npm-stat.com/charts.html?package=kotunil-js-lib)
+[![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/kotunil-js-lib)](https://bundlephobia.com/package/kotunil-js-lib@latest)
+ 
 # KotUniL
 
 ![alt Genesis rules of International System of Units_(Source: Wikipedia) ](https://github.com/vsirotin/si-units/blob/main/docs/images/si-genesis.png)
