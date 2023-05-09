@@ -12,13 +12,16 @@
 
 ![alt Genesis rules of International System of Units_(Source: Wikipedia) ](https://github.com/vsirotin/si-units/blob/main/docs/images/si-genesis.png)
 
+**KotUniL** library covers all units of SI base, derived, accepted units and SI- Prefixes
+like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
+as well as some other common units like currencies, percentages etc.
 
-**KotUniL (Kotlin Units Library)** a library of functions and objects of Kotlin that meet the following requirements in total:
-1. It covers all units of SI base, derived, accepted units and SI- Prefixes (see https://en.wikipedia.org/wiki/International_System_of_Units) like meter, second etc. as well as some other common units like currencies, percentages etc.
-2. It allows various formulas to be written in Kotlin in a way maximally similar to the way formulas are written in physics and economics.
-3. It allows analyzing dimensions of results of applications of complicated formulas.
-4. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
-5. It is pure library (no plug-in, no parser etc.), it has no dependencies
+**KotUniL (Kotlin Units Library)** a library of functions and objects of Kotlin that meet the following 
+requirements in total:
+1. It allows various formulas to be written in Kotlin in a way maximally similar to the way formulas are written in physics and economics.
+2. It allows analyzing dimensions of results of applications of complicated formulas.
+3. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
+4. It is pure library (no plug-in, no parser etc.), it has no dependencies
 
 
 ### Project structure
@@ -26,12 +29,17 @@
 The goal of the project is not only to provide a unified set of objects and 
 functions that allows to use the SI in programs in different programming languages. 
 The project also contains simple applications in all of the target languages that show how to do this. In addition, these applications test the availability of all necessary functions on that target platform.
+
 (So far, applications for only two target platforms have been implemented.)
 
 Therefore, all subprojects of this project are divided into three groups:
-1. [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil) - implementation of library functionality
-2. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) applications that test the functionality of the library on a specific platform.
-3. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
+1. [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil) - implementation of library functionality in Kotlin.
+2. [js-lib](https://github.com/vsirotin/si-units/blob/27117b3ea841f18366fff69c955d25d2f07525b9/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
+3. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) 
+applications that test the functionality of the library on a specific platform.
+In the moment are test applications as console-application for Kotlin and Java platfform impemented ans web page 
+for JavaScript variant od library. 
+4. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
 
 If you are a developer and you are interested in the source code of the library, 
 you only need part [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil).

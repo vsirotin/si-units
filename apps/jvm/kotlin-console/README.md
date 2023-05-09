@@ -2,6 +2,11 @@
 
 
 This demo demonstrate the use of **KotUniL** library in a console application developed with Kotlin and tests all available in library objects and functions.
+
+**KotUniL** library covers all units of SI base, derived, accepted units and SI- Prefixes
+like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
+as well as some other common units like currencies, percentages etc.
+
 You can learn about functions and objects of **KotUniL** library in central [.../si-units/README.md](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/README.md).
 You can learn examples of using the library in Kotlin-Console in [.../si-units/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt).
 

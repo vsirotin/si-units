@@ -3,6 +3,11 @@
 
 This demo demonstrate the use of **KotUniL** library in a console application developed with Java tests available in library objects and functions.
 You can learn about functions and objects of **KotUniL** library in central [.../si-units/README.md](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/README.md).
+
+**KotUniL** library covers all units of SI base, derived, accepted units and SI- Prefixes
+like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
+as well as some other common units like currencies, percentages etc.
+
 You can learn examples of using the library in Java-Console in [.../si-units/apps/jvm/java-console/src/main/java/eu/sirotin/kotunil/app/java/Main.java](https://github.com/vsirotin/si-units/blob/c3b2e195d7da0be8b2f5ef60b71c2c364b2eb562/apps/jvm/java-console/src/main/java/eu/sirotin/kotunil/app/java/Main.java).
 
 ## How to start console application
