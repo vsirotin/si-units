@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil.app.js"
-version = "1.0-SNAPSHOT"
+version = "4.1.1"
 
 tasks.register("npmInstall") {
     doLast {
