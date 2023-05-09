@@ -12,9 +12,9 @@
 
 ![alt Genesis rules of International System of Units_(Source: Wikipedia) ](https://github.com/vsirotin/si-units/blob/main/docs/images/si-genesis.png)
 
-**KotUniL** library covers all units of SI base, derived, accepted units and SI- Prefixes
+**KotUniL** covers all units of **International System of Units** (SI)  
 like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as some other common units like currencies, percentages etc.
+as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
 
 **KotUniL (Kotlin Units Library)** a library of functions and objects of Kotlin that meet the following 
 requirements in total:
