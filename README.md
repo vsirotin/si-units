@@ -214,46 +214,7 @@ and by Maven:
 <version>LATEST</version>
 ```
 
-### 2.3 Jitpack
-
-Jitpack.io is a service that allows you to use the latest development or released version of the library. 
-
-Just add the following reference on jitpack repository to your build.gradle.kts:
-
-```kotlin
-allprojects {
-    repositories {
-        ...
-        maven("https://www.jitpack.io")
-    }
-}   
-```
-
-This library is build with **Kotlin Multiplatform**, so you can define the dependency as a part of __common code__ a particular target/platform version will be resolved by gradle itself (for exampel JVM version).  
-
-```kotlin:
-
-sourceSets {
-    val commonMain by getting {
-        dependencies {
-            ...
-            implementation("com.github.vsirotin.si-units:kotunil:main-SNAPSHOT")
-            ...
-        }
-    }
-    ...
-}        
-```
-
-Since the library is built with `Kotlin Multiplatform` and contanins `JVM` as regular and a fully supported target, you can include it also as dependency, using the same name as in the common part in your JVm java/Kotlin projects. Gradle resolves target properly a downloads the right JVM artifact even without declare it explicitely.
-
-```kotlin
-dependencies {
-    implementation("com.github.vsirotin.si-units:kotunil:main-SNAPSHOT")
-}
-```
-
-### 2.4 Using only source code
+### 2.3 Using only source code
 If you want to use it as source code, 
 copy into your project all production files from 
 **src/commonMain/kotlin/eu/sirotin/kotunil**.
