@@ -1,6 +1,3 @@
-plugins {
-    kotlin("js")
-}
 
 group = "eu.sirotin.kotunil.app.js"
 version = "4.1.1"
