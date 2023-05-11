@@ -1,4 +1,8 @@
 # KotUniL Release Notes
+## Version 4.0.0
+Method Expression.show() is removed because different behaviour 
+used Kotlin/Java method on different platforms.
+Not relevant for Kotlin behavior, but needed für Java and JavaScript annotations added. 
 
 ## Version 3.0.0
 
