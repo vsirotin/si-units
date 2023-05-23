@@ -1,4 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/eu.sirotin.kotunil/all)](https://mvnrepository.com/artifact/eu.sirotin.kotunil/all)
+[![Maven Central](https://img.shields.io/maven-central/v/eu.sirotin.kotunil/kotunil-jvm)](https://mvnrepository.com/artifact/eu.sirotin.kotunil/kotunil-jvm)
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 [![GitHub contributors](https://img.shields.io/github/contributors/vsirotin/si-units)](https://github.com/vsirotin/si-units/graphs/contributors)
 
@@ -6,7 +6,14 @@
 [![npm type definitions](https://img.shields.io/npm/types/v-github-icon?logo=typescript)](https://github.com/vinayakkulkarni/v-github-icon/blob/main/package.json)
 [![npm](https://img.shields.io/npm/dt/kotunil-js-lib?logo=npm)](http://npm-stat.com/charts.html?package=kotunil-js-lib)
 [![npm](https://img.shields.io/npm/dw/kotunil-js-lib?logo=npm)](http://npm-stat.com/charts.html?package=kotunil-js-lib)
-[![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/kotunil-js-lib)](https://bundlephobia.com/package/kotunil-js-lib@latest)
+
+![badge-jvm](http://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat)
+![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
+![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
+![badge-mac](http://img.shields.io/badge/platform-macos-111111.svg?style=flat)
+![badge-linux](http://img.shields.io/badge/platform-linux-2D3F6C.svg?style=flat)
+![badge-nodejs](https://img.shields.io/badge/platform-jsNode-F8DB5D.svg?style=flat)
+![badge-browser](https://img.shields.io/badge/platform-jsBrowser-F8DB5D.svg?style=flat)
  
 # KotUniL
 
