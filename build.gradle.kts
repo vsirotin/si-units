@@ -7,9 +7,10 @@ plugins {
     id("org.jetbrains.dokka") version "1.8.10"
 }
 
-val gradleLocalProperties = Properties().apply {
-    load(FileInputStream(File(rootProject.rootDir, "local.properties")))
-}
+val propertiesFile = File(rootProject.rootDir, "local.properties")
+val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
+        Properties().apply {load(FileInputStream(propertiesFile)) }
+    }else null //TODO set values for case of GitHub actions
 
 allprojects {
     repositories {
@@ -34,8 +35,8 @@ allprojects {
 
 
                 credentials {
-                    username = gradleLocalProperties.getProperty("sonatypeUsername")
-                    password = gradleLocalProperties.getProperty("sonatypePassword")
+                    username = gradleLocalProperties?.getProperty("sonatypeUsername")
+                    password = gradleLocalProperties?.getProperty("sonatypePassword")
 
 
                 }
