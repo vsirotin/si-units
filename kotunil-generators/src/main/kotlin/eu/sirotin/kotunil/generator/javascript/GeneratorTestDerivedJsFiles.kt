@@ -22,7 +22,7 @@ private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescripti
 
     generateDerivedClassFile(dir, fileName, generatorHeadPart, className, siUnitDescription, generatorPrefixes)
 }
-
+@Suppress("UNUSED_PARAMETER")
 private fun generateDerivedUnitClassHead(
     className: String,
     unitSymbol: String,
@@ -55,6 +55,7 @@ private fun generateDerivedClassPrefixes(name: String,
     }
 }
 
+@Suppress("UNUSED_PARAMETER")
 private fun generateTextOfDerivedUnitClassForPrefix(
     prefix: SiPrefix,
     name: String,

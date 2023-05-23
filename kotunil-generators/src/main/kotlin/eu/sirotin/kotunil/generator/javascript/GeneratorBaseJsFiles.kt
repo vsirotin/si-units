@@ -19,6 +19,7 @@ private fun generateSiUnitBaseJsFiles(siUnitDescription: SiUnitDescription, dir:
     generateBaseClassFile(siUnitDescription, fileExtension, dir, generatorHeadPart, generatorPrefixesPart)
 }
 
+@Suppress("UNUSED_PARAMETER")
 private fun generateHeadPart(
     className: String,
     unitSymbol: String,

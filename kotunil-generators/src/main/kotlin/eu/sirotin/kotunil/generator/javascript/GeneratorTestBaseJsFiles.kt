@@ -27,6 +27,7 @@ private fun generateSiUnitTestBaseJsFiles(siUnitDescription: SiUnitDescription, 
 private fun generateFileName(className: String, fileExtension: String): String =
     "${className}Test.$fileExtension"
 
+@Suppress("UNUSED_PARAMETER")
 private fun generateHeadPart(
     className: String,
     unitSymbol: String,
