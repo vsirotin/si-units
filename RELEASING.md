@@ -1,5 +1,5 @@
 # Releasing
-
+//TODO Update to actual strategy
 1. Update the `VERSION_NAME` in `gradle.properties` to the release version.
 
 2. Update the `ReleaseNotes.md`:
@@ -37,5 +37,3 @@
    release artifacts to Sonatype Nexus.
 
 9. Visit [Sonatype Nexus](https://oss.sonatype.org/) and promote the artifact.
-
-10. Jitpack support github release, so we don't need to do anything and release will be available on jitpack as well.
