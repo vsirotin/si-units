@@ -6,12 +6,12 @@ group = "eu.sirotin.kotunil.app.java"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    maven("https://www.jitpack.io")
+    mavenCentral()
 }
 
 dependencies {
-    implementation("com.github.vsirotin.si-units:kotunil:main-SNAPSHOT")
-    //testImplementation(kotlin("test"))
+//TODO Make it dynamically   implementation(project(":kotunil"))
+    implementation("eu.sirotin.kotunil:kotunil-jvm:4.0.0")
 }
 
 tasks.test {
