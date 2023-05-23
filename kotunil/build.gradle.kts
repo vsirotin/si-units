@@ -1,10 +1,16 @@
+
+group = "eu.sirotin.kotunil"
+version = "4.0.0"
+
+
 plugins {
     kotlin("multiplatform")
+    id("maven-publish")
+    id("signing")
     id("org.jetbrains.dokka")
-    id("com.vanniktech.maven.publish") version "0.25.1"
 }
 
-
+val docsDir = "build/docs"
 
 kotlin {
     jvm {
@@ -22,7 +28,7 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
     iosX64()
-    js(IR) {//js(IR) {
+    js(IR) {
         binaries.executable()
         binaries.library()
         val timeoutMs = "1000000"
@@ -76,3 +82,15 @@ kotlin {
         }
     }
 }
+
+
+//TODO Clear: is it needed?
+//tasks.jar {
+//    manifest {
+//        attributes(mapOf("Implementation-Title" to project.name,
+//            "Implementation-Version" to project.version))
+//    }
+//
+//    from("README.md")
+//}
+//
