@@ -31,9 +31,6 @@ allprojects {
                     else "https://s01.oss.sonatype.org/content/repositories/snapshots"
                 )
 
-                logger.quiet("Configuration of project '${project.name}'")
-
-
                 credentials {
                     username = gradleLocalProperties?.getProperty("sonatypeUsername")
                     password = gradleLocalProperties?.getProperty("sonatypePassword")
