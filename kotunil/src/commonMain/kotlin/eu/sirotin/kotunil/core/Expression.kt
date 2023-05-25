@@ -166,7 +166,7 @@ fun Expression.pow(degree: Number): Expression {
  * Allows to power an number to given [degree]
  */
 @JsName("powNumber")
-infix fun Number.`^`(degree: Number) = this.toDouble().pow(degree.toDouble())
+infix fun Number.`^`(degree: Number): Number = this.toDouble().pow(degree.toDouble())
 
 /**
  * Allows to power an expression to given [degree]

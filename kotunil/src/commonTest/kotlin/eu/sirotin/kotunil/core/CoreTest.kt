@@ -88,6 +88,11 @@ internal class CoreTest {
         val v6 = 2 / x1
         check(v6, 1.0, "1/a")
 
+        val v7 = z1 `^` 2
+        check(v7, 36.0, "a2b2")
+
+        val v8 = 3 `^` 2
+        assertEquals(9.0, v8.toDouble(), EPS)
     }
 
 
