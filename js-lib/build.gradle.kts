@@ -1,12 +1,7 @@
-
-group = "eu.sirotin.kotunil"
-
-plugins {
-    id("java") //To available dependencies
-}
+version = "4.1.2-SNAPSHOT"
 
 dependencies {
-    implementation(project(":kotunil"))
+    project(":kotunil")
 }
 
 //TODO tasks.register("publishJavaScriptLibLocally") {
@@ -19,14 +14,5 @@ dependencies {
 //        println("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
 //    }
 //}
-//
-//tasks.register("publishJavaScriptLibGlobally") {
-//    doLast {
-//        exec {
-//            executable("npm")
-//            args("i")
-//        }
-//        println("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
-//    }
-//}
+
 
