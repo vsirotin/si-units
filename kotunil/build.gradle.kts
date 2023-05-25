@@ -1,5 +1,3 @@
-
-group = "eu.sirotin.kotunil"
 version = "4.0.0"
 
 
@@ -8,6 +6,10 @@ plugins {
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka")
+}
+
+dependencies {
+    project(":kotunil-generators")
 }
 
 val docsDir = "build/docs"
@@ -63,9 +65,15 @@ kotlin {
 
         val commonMain by getting
 
-        val jvmMain by getting
+//        val jvmMain by getting
+//
+//        val commonTest by getting {
+//            dependencies {
+//                implementation(kotlin("test"))
+//            }
+//        }
 
-        val commonTest by getting {
+        commonTest {
             dependencies {
                 implementation(kotlin("test"))
             }
