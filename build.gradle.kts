@@ -13,8 +13,10 @@ val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
     }else null //TODO set values for case of GitHub actions
 
 allprojects {
+    group = "eu.sirotin.kotunil"
+
     repositories {
-        google()
+//        google()
         mavenCentral()
     }
 
