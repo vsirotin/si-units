@@ -73,7 +73,7 @@ Unfortunately, the single-step formula notation in Java looks very unwieldy:
 ```java
 Expression z = l.times(20).div((m.times(4).times(m.times(5)))).div(mm)
 ```
-## Translating physical formulas into expressions in Kotlin and Java
+## "Translation" physical formulas into expressions in Kotlin and Java
 
 Let's formulate the rules of translation of physical formulas using SI units into KotUniL library 
 formulas in Kotlin and Java languages.
