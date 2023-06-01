@@ -147,6 +147,10 @@ class $className(value: Double) : Expression(value, description = description$cl
          */
         get() = $className(this.toDouble())
     
+    /** Cast expression to $className. Checks at runtime. */
+    val Expression.$unitSymbol: $className
+        get() = $className(value).also { dimensions.checkCompatibility(it.dimensions) }
+
     /**
      * System International Unit for $quantityName.
      */

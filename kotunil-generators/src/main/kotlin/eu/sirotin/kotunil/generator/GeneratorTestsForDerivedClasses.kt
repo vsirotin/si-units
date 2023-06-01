@@ -87,7 +87,10 @@ private fun generateTestClassHeadPart(description: SiDerivedUnitDescription): St
 package eu.sirotin.kotunil.derived
 
 import eu.sirotin.kotunil.EPS
+aimport eu.sirotin.kotunil.core.Expression
+import eu.sirotin.kotunil.specialunits.thing
 import kotlin.test.assertEquals
+import kotlin.test.fail
 import kotlin.test.Test
 import kotlin.math.pow
 
@@ -101,6 +104,23 @@ internal class ${className}Test {
      @Test
     fun test${className}MainTest2() {
         assertEquals(12.3.$unitSymbol , $className(12.3))
+    }
+
+    @Test
+    fun test${className}SuccessfullCastTest() {
+        val e = $unitSymbol as Expression
+        val copy: $className = e.$unitSymbol
+    }
+    
+    @Test
+    fun test${className}FailingCastTest() {
+        val e = thing as Expression
+        try {
+            val copy: ${className} = e.$unitSymbol
+            fail("This should not be possible: a thing can not be used as ${className}")
+        } catch (e:IllegalArgumentException) {
+            // ignore
+        }
     }
     """
 }

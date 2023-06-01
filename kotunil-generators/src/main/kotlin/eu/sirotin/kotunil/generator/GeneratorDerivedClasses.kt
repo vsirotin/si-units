@@ -163,6 +163,9 @@ val Number.$unitSymbol : Expression
    */
     get() = this.toDouble() * formula
 
+/** Cast expression to $className. Checks at runtime. */
+    val Expression.$unitSymbol: $className
+        get() = $className(value).also { dimensions.checkCompatibility(it.dimensions) }
     """
 }
 

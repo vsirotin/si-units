@@ -89,7 +89,9 @@ package eu.sirotin.kotunil.base
 
 import eu.sirotin.kotunil.EPS
 import eu.sirotin.kotunil.core.*
+import eu.sirotin.kotunil.specialunits.thing
 import kotlin.test.assertEquals
+import kotlin.test.fail
 import kotlin.test.Test
 import kotlin.math.pow
 
@@ -101,7 +103,24 @@ internal class ${className}Test {
         assertEquals(1.$unitSymbol , $unitSymbol)
     }
     
-       @Test
+    @Test
+    fun test${className}SuccessfullCastTest() {
+        val e = $unitSymbol as Expression
+        val copy: $className = e.$unitSymbol
+    }
+    
+    @Test
+    fun test${className}FailingCastTest() {
+        val e = thing as Expression
+        try {
+            val copy: ${className} = e.$unitSymbol
+            fail("This should not be possible: a thing can not be used as ${className}")
+        } catch (e:IllegalArgumentException) {
+            // ignore
+        }
+    }
+    
+    @Test
     fun test${className}SerializationTest() {
         //Serialization
         val v1 = ${className}(1.12)
