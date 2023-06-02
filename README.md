@@ -180,6 +180,13 @@ val exception = assertFailsWith<IllegalArgumentException>(
 assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 ```
 
+With KotUniL you can also compare, add and divide the objects that are defined differently, but have the same physical dimension.  
+In the example below the objects with the dimension "hertz" (1/second) are used.
+```kotlin
+assertEquals(0.9.Hz, 0.9/s)
+assertEquals(0.9.Hz, 5/s - 4.1.Hz)
+```
+
 ## 2. How to use
 
 ### 2.1 Production mode

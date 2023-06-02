@@ -25,6 +25,7 @@ package eu.sirotin.kotunil.core
 import kotlin.js.JsExport
 import kotlin.js.JsName
 import kotlin.math.pow
+import kotlin.math.abs
 
 /**
  * Prefix for mostly run-time errors.
@@ -60,6 +61,8 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
      */
     override fun compareTo(other: Expression): Int {
         checkCompatibility(other)
+        val d = value - other.value
+        if(abs(d) < ε)return 0
         return value.compareTo(other.value)
     }
 
@@ -97,7 +100,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
             return false
         }
 
-        if (value != other.value) return false
+        if (abs(value - other.value) > ε) return false
         if (dimensions != other.dimensions) return false
 
         return true

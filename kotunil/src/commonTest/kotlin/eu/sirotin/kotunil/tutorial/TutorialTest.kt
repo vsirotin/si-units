@@ -46,6 +46,7 @@ import eu.sirotin.kotunil.core.minus
 import eu.sirotin.kotunil.core.plus
 import eu.sirotin.kotunil.core.times
 import eu.sirotin.kotunil.core.ε
+import eu.sirotin.kotunil.derived.Hz
 import eu.sirotin.kotunil.derived.T
 import eu.sirotin.kotunil.derived.Wb
 import eu.sirotin.kotunil.derived.μV
@@ -132,6 +133,18 @@ internal class TutorialTest {
 //divided and compared.
 //If you try to do this with units of different types,
 //you will get either compilation errors (for simple units) or run-time errors for complicated units.
+
+    @Test
+    fun testOperationTheSameTypesIndirect() {
+        assertEquals(0.9.Hz, 0.9/s)
+
+        assertEquals(0.9.Hz, 5/s - 4.1.Hz)
+
+        assertEquals(16.Hz * m3, 20.2 * m3 / s - 4.2.Hz * m3)
+
+        assertEquals((-2).Hz * kg * m, 2.2 * kg * m / s - 4.2.Hz * kg * m)
+    }
+
     @Test
     fun testErrors1() {
         //Simple errors will be found on compilation phase:
@@ -179,6 +192,15 @@ internal class TutorialTest {
         assertTrue(20.2 * m3 > 4.2 * m3)
 
         assertTrue(2.2 * kg * m / s < 4.2 * kg * m / s)
+    }
+
+    @Test
+    fun testCompareTheSameTypesIndirect() {
+        assertTrue(5/s > 4.1.Hz)
+
+        assertTrue(20.2 * m3 / s > 4.2.Hz * m3)
+
+        assertTrue(2.2 * kg * m / s < 4.2.Hz * kg * m)
     }
 
     @Test
@@ -261,6 +283,15 @@ internal class TutorialTest {
         val τ = ω * ρ //common water weight of rain
         val n = τ/4.t
         assertEquals(5.875, n.value, ε)
+
+    }
+
+    @Test
+    fun testCastingWithAs() {
+        val x = (1 / s)
+        val y = 2.Hz + x
+        assertEquals(3.Hz, y)
+
 
     }
 }
