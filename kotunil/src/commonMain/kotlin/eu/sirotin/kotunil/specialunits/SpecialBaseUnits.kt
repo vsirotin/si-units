@@ -24,6 +24,8 @@ package eu.sirotin.kotunil.specialunits
 
 import eu.sirotin.kotunil.base.Kilogram
 import eu.sirotin.kotunil.base.kg
+import eu.sirotin.kotunil.base.m
+import eu.sirotin.kotunil.core.times
 import kotlin.js.JsExport
 import kotlin.js.JsName
 import kotlin.jvm.JvmField
@@ -44,3 +46,19 @@ val Number.g: Kilogram
 @JsName("g")
 @JvmField()
 val g = 0.001.kg
+
+
+/**
+ * Square metre
+ */
+@JsExport
+@JvmField
+val m2 = m * m
+
+/**
+ * Cubic metre (volume)
+ */
+@JsExport
+@JvmField
+val m3 = m2 * m
+

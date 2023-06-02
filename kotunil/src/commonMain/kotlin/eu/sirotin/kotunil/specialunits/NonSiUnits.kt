@@ -37,20 +37,6 @@ import kotlin.math.PI
 import kotlin.math.pow
 
 /**
- * Square metre
- */
-@JsExport
-@JvmField
-val m2 = m * m
-
-/**
- * Cubic metre (volume)
- */
-@JsExport
-@JvmField
-val m3 = m2 * m
-
-/**
  * Minute (time)
  */
 val Number.min: Second
