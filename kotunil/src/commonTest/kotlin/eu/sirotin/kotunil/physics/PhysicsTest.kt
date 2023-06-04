@@ -176,4 +176,14 @@ internal class PhysicsTest {
         assertEquals(1000.mW.value, 1.W.value, EPS)
     }
 
+    @Test
+    fun testCompare() {
+        val v1 = 1.qm //10^-30 of metre
+        val v2 = 1.0001.qm //10^-30 of metre
+        assertTrue(v2 > v1 ) //because relative difference is large
+
+        val v3 = 1.m + v1
+        assertEquals(v3, 1.m) //because relative difference is small
+    }
+
 }

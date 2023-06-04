@@ -26,6 +26,7 @@ import kotlin.js.JsExport
 import kotlin.js.JsName
 import kotlin.math.pow
 import kotlin.math.abs
+import kotlin.math.max
 
 /**
  * Prefix for mostly run-time errors.
@@ -50,19 +51,23 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
             : this(value, Dimensions(setOf(Factor(description))))
 
     /**
-     * Compares expressions
+     * Compares expressions. Bei small relative difference of values
+     * both objects can be recognised as equal.
      */
     fun compare(other: Expression): Int{ //to make it available in JS.
         return this.compareTo(other)
     }
 
     /**
-     * Compares expressions
+     * Compares expressions.Bei small relative difference of values
+     * both objects can be recognised as equal.
      */
     override fun compareTo(other: Expression): Int {
         checkCompatibility(other)
         val d = value - other.value
-        if(abs(d) < ε)return 0
+        val m = max(abs(value), abs(other.value))
+        if(m == 0.0)return 0
+        if(abs(d)/m < ε)return 0
         return value.compareTo(other.value)
     }
 
@@ -91,19 +96,20 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
         return "$value ${unitSymbols()}"
     }
 
+    /**
+     * Bei small relative difference of values
+     * both objects can be recognised as equal.
+     */
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
 
         try {
             other as Expression
+            if(compareTo(other) == 0)return true
         } catch (e: Throwable) {
             return false
         }
-
-        if (abs(value - other.value) > ε) return false
-        if (dimensions != other.dimensions) return false
-
-        return true
+        return false
     }
 
     override fun hashCode(): Int {
