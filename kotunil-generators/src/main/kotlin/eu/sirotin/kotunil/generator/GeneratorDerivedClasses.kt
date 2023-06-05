@@ -157,11 +157,11 @@ val $unitSymbol = formula
 /**
 * Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
 */
-val Number.$unitSymbol : Expression
+val Number.$unitSymbol : $className
    /**
    * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
    */
-    get() = this.toDouble() * formula
+    get() = $className(this)
 
     """
 }
