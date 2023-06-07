@@ -13,9 +13,21 @@ internal class OhmTest {
         assertEquals(1.Ω , Ω)
     }
     
-     @Test
+    @Test
     fun testOhmMainTest2() {
         assertEquals(12.3.Ω , Ohm(12.3))
+    }
+    
+    @Test
+    fun testOhmMainTest3() {
+        val x: Ohm = 12.3.Ω
+        assertEquals(x , Ohm(12.3))
+    }
+    
+    @Test
+    fun testOhmMainTest4() {
+        val x: Ohm = Ω
+        assertEquals(x , Ohm(1.0))
     }
               
     @Test

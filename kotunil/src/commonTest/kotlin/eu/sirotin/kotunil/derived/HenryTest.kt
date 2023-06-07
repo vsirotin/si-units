@@ -13,9 +13,21 @@ internal class HenryTest {
         assertEquals(1.H , H)
     }
     
-     @Test
+    @Test
     fun testHenryMainTest2() {
         assertEquals(12.3.H , Henry(12.3))
+    }
+    
+    @Test
+    fun testHenryMainTest3() {
+        val x: Henry = 12.3.H
+        assertEquals(x , Henry(12.3))
+    }
+    
+    @Test
+    fun testHenryMainTest4() {
+        val x: Henry = H
+        assertEquals(x , Henry(1.0))
     }
               
     @Test

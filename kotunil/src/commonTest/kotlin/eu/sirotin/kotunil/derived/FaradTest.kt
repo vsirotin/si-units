@@ -13,9 +13,21 @@ internal class FaradTest {
         assertEquals(1.F , F)
     }
     
-     @Test
+    @Test
     fun testFaradMainTest2() {
         assertEquals(12.3.F , Farad(12.3))
+    }
+    
+    @Test
+    fun testFaradMainTest3() {
+        val x: Farad = 12.3.F
+        assertEquals(x , Farad(12.3))
+    }
+    
+    @Test
+    fun testFaradMainTest4() {
+        val x: Farad = F
+        assertEquals(x , Farad(1.0))
     }
               
     @Test

@@ -13,9 +13,21 @@ internal class SievertTest {
         assertEquals(1.Sv , Sv)
     }
     
-     @Test
+    @Test
     fun testSievertMainTest2() {
         assertEquals(12.3.Sv , Sievert(12.3))
+    }
+    
+    @Test
+    fun testSievertMainTest3() {
+        val x: Sievert = 12.3.Sv
+        assertEquals(x , Sievert(12.3))
+    }
+    
+    @Test
+    fun testSievertMainTest4() {
+        val x: Sievert = Sv
+        assertEquals(x , Sievert(1.0))
     }
               
     @Test

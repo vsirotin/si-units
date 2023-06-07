@@ -98,9 +98,21 @@ internal class ${className}Test {
         assertEquals(1.$unitSymbol , $unitSymbol)
     }
     
-     @Test
+    @Test
     fun test${className}MainTest2() {
         assertEquals(12.3.$unitSymbol , $className(12.3))
+    }
+    
+    @Test
+    fun test${className}MainTest3() {
+        val x: $className = 12.3.$unitSymbol
+        assertEquals(x , $className(12.3))
+    }
+    
+    @Test
+    fun test${className}MainTest4() {
+        val x: $className = $unitSymbol
+        assertEquals(x , $className(1.0))
     }
     """
 }

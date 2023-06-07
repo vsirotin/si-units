@@ -3,7 +3,7 @@ package eu.sirotin.kotunil.derived
 
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
-import eu.sirotin.kotunil.specialunits.*
+//import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
 import kotlin.math.pow
@@ -22,36 +22,36 @@ class Lux(value: Number): DerivedUnit(value, formula)
 */
 @JsExport
 @JvmField
-val lx = formula
+val lx = Lux(1.0)
 
 /**
 * Creates Lux-Object for current number value. Lux is a System International Unit for illuminance.
 */
-val Number.lx : Expression
+val Number.lx : Lux
    /**
    * Returns Lux-Object for current number value. Lux is a System International Unit for illuminance.
    */
-    get() = this.toDouble() * formula
+    get() = Lux(this.toDouble())
 
     
 /**
 * Qlx, 10^30 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Qlx : Expression
+val Number.Qlx : Lux
     @JvmName("getQlx_prop")
     /**
     * Returns Qlx, 10^30 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(30))
 
 /**
 * quettalux, 10^30 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.quettalux : Expression
+val Number.quettalux : Lux
     /**
     * Returns quettalux, 10^30 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(30))
 
 @JsExport
 @JvmField
@@ -72,21 +72,21 @@ val quettalux = Qlx
 /**
 * Rlx, 10^27 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Rlx : Expression
+val Number.Rlx : Lux
     @JvmName("getRlx_prop")
     /**
     * Returns Rlx, 10^27 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(27))
 
 /**
 * ronnalux, 10^27 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.ronnalux : Expression
+val Number.ronnalux : Lux
     /**
     * Returns ronnalux, 10^27 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(27))
 
 @JsExport
 @JvmField
@@ -107,21 +107,21 @@ val ronnalux = Rlx
 /**
 * Ylx, 10^24 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Ylx : Expression
+val Number.Ylx : Lux
     @JvmName("getYlx_prop")
     /**
     * Returns Ylx, 10^24 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(24))
 
 /**
 * yottalux, 10^24 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.yottalux : Expression
+val Number.yottalux : Lux
     /**
     * Returns yottalux, 10^24 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(24))
 
 @JsExport
 @JvmField
@@ -142,21 +142,21 @@ val yottalux = Ylx
 /**
 * Zlx, 10^21 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Zlx : Expression
+val Number.Zlx : Lux
     @JvmName("getZlx_prop")
     /**
     * Returns Zlx, 10^21 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(21))
 
 /**
 * zettalux, 10^21 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.zettalux : Expression
+val Number.zettalux : Lux
     /**
     * Returns zettalux, 10^21 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(21))
 
 @JsExport
 @JvmField
@@ -177,21 +177,21 @@ val zettalux = Zlx
 /**
 * Elx, 10^18 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Elx : Expression
+val Number.Elx : Lux
     @JvmName("getElx_prop")
     /**
     * Returns Elx, 10^18 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(18))
 
 /**
 * exalux, 10^18 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.exalux : Expression
+val Number.exalux : Lux
     /**
     * Returns exalux, 10^18 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(18))
 
 @JsExport
 @JvmField
@@ -212,21 +212,21 @@ val exalux = Elx
 /**
 * Plx, 10^15 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Plx : Expression
+val Number.Plx : Lux
     @JvmName("getPlx_prop")
     /**
     * Returns Plx, 10^15 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(15))
 
 /**
 * petalux, 10^15 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.petalux : Expression
+val Number.petalux : Lux
     /**
     * Returns petalux, 10^15 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(15))
 
 @JsExport
 @JvmField
@@ -247,21 +247,21 @@ val petalux = Plx
 /**
 * Tlx, 10^12 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Tlx : Expression
+val Number.Tlx : Lux
     @JvmName("getTlx_prop")
     /**
     * Returns Tlx, 10^12 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(12))
 
 /**
 * teralux, 10^12 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.teralux : Expression
+val Number.teralux : Lux
     /**
     * Returns teralux, 10^12 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(12))
 
 @JsExport
 @JvmField
@@ -282,21 +282,21 @@ val teralux = Tlx
 /**
 * Glx, 10^9 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Glx : Expression
+val Number.Glx : Lux
     @JvmName("getGlx_prop")
     /**
     * Returns Glx, 10^9 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(9))
 
 /**
 * gigalux, 10^9 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.gigalux : Expression
+val Number.gigalux : Lux
     /**
     * Returns gigalux, 10^9 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(9))
 
 @JsExport
 @JvmField
@@ -317,21 +317,21 @@ val gigalux = Glx
 /**
 * Mlx, 10^6 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.Mlx : Expression
+val Number.Mlx : Lux
     @JvmName("getMlx_prop")
     /**
     * Returns Mlx, 10^6 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(6))
 
 /**
 * megalux, 10^6 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.megalux : Expression
+val Number.megalux : Lux
     /**
     * Returns megalux, 10^6 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(6))
 
 @JsExport
 @JvmField
@@ -352,21 +352,21 @@ val megalux = Mlx
 /**
 * klx, 10^3 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.klx : Expression
+val Number.klx : Lux
     @JvmName("getklx_prop")
     /**
     * Returns klx, 10^3 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(3))
 
 /**
 * kilolux, 10^3 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.kilolux : Expression
+val Number.kilolux : Lux
     /**
     * Returns kilolux, 10^3 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(3))
 
 @JsExport
 @JvmField
@@ -387,21 +387,21 @@ val kilolux = klx
 /**
 * hlx, 10^2 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.hlx : Expression
+val Number.hlx : Lux
     @JvmName("gethlx_prop")
     /**
     * Returns hlx, 10^2 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(2))
 
 /**
 * hectolux, 10^2 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.hectolux : Expression
+val Number.hectolux : Lux
     /**
     * Returns hectolux, 10^2 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(2))
 
 @JsExport
 @JvmField
@@ -422,21 +422,21 @@ val hectolux = hlx
 /**
 * dalx, 10^1 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.dalx : Expression
+val Number.dalx : Lux
     @JvmName("getdalx_prop")
     /**
     * Returns dalx, 10^1 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(1))
 
 /**
 * decalux, 10^1 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.decalux : Expression
+val Number.decalux : Lux
     /**
     * Returns decalux, 10^1 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(1))
 
 @JsExport
 @JvmField
@@ -457,21 +457,21 @@ val decalux = dalx
 /**
 * dlx, 10^-1 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.dlx : Expression
+val Number.dlx : Lux
     @JvmName("getdlx_prop")
     /**
     * Returns dlx, 10^-1 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-1))
 
 /**
 * decilux, 10^-1 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.decilux : Expression
+val Number.decilux : Lux
     /**
     * Returns decilux, 10^-1 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-1))
 
 @JsExport
 @JvmField
@@ -492,21 +492,21 @@ val decilux = dlx
 /**
 * clx, 10^-2 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.clx : Expression
+val Number.clx : Lux
     @JvmName("getclx_prop")
     /**
     * Returns clx, 10^-2 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-2))
 
 /**
 * centilux, 10^-2 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.centilux : Expression
+val Number.centilux : Lux
     /**
     * Returns centilux, 10^-2 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-2))
 
 @JsExport
 @JvmField
@@ -527,21 +527,21 @@ val centilux = clx
 /**
 * mlx, 10^-3 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.mlx : Expression
+val Number.mlx : Lux
     @JvmName("getmlx_prop")
     /**
     * Returns mlx, 10^-3 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-3))
 
 /**
 * millilux, 10^-3 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.millilux : Expression
+val Number.millilux : Lux
     /**
     * Returns millilux, 10^-3 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-3))
 
 
 @JvmField
@@ -562,21 +562,21 @@ val millilux = mlx
 /**
 * μlx, 10^-6 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.μlx : Expression
+val Number.μlx : Lux
     @JvmName("getμlx_prop")
     /**
     * Returns μlx, 10^-6 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-6))
 
 /**
 * microlux, 10^-6 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.microlux : Expression
+val Number.microlux : Lux
     /**
     * Returns microlux, 10^-6 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-6))
 
 @JsExport
 @JvmField
@@ -597,21 +597,21 @@ val microlux = μlx
 /**
 * nlx, 10^-9 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.nlx : Expression
+val Number.nlx : Lux
     @JvmName("getnlx_prop")
     /**
     * Returns nlx, 10^-9 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-9))
 
 /**
 * nanolux, 10^-9 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.nanolux : Expression
+val Number.nanolux : Lux
     /**
     * Returns nanolux, 10^-9 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-9))
 
 @JsExport
 @JvmField
@@ -632,21 +632,21 @@ val nanolux = nlx
 /**
 * plx, 10^-12 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.plx : Expression
+val Number.plx : Lux
     @JvmName("getplx_prop")
     /**
     * Returns plx, 10^-12 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-12))
 
 /**
 * picolux, 10^-12 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.picolux : Expression
+val Number.picolux : Lux
     /**
     * Returns picolux, 10^-12 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-12))
 
 
 @JvmField
@@ -667,21 +667,21 @@ val picolux = plx
 /**
 * flx, 10^-15 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.flx : Expression
+val Number.flx : Lux
     @JvmName("getflx_prop")
     /**
     * Returns flx, 10^-15 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-15))
 
 /**
 * femtolux, 10^-15 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.femtolux : Expression
+val Number.femtolux : Lux
     /**
     * Returns femtolux, 10^-15 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-15))
 
 @JsExport
 @JvmField
@@ -702,21 +702,21 @@ val femtolux = flx
 /**
 * alx, 10^-18 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.alx : Expression
+val Number.alx : Lux
     @JvmName("getalx_prop")
     /**
     * Returns alx, 10^-18 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-18))
 
 /**
 * attolux, 10^-18 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.attolux : Expression
+val Number.attolux : Lux
     /**
     * Returns attolux, 10^-18 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-18))
 
 @JsExport
 @JvmField
@@ -737,21 +737,21 @@ val attolux = alx
 /**
 * zlx, 10^-21 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.zlx : Expression
+val Number.zlx : Lux
     @JvmName("getzlx_prop")
     /**
     * Returns zlx, 10^-21 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-21))
 
 /**
 * zeptolux, 10^-21 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.zeptolux : Expression
+val Number.zeptolux : Lux
     /**
     * Returns zeptolux, 10^-21 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-21))
 
 
 @JvmField
@@ -772,21 +772,21 @@ val zeptolux = zlx
 /**
 * ylx, 10^-24 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.ylx : Expression
+val Number.ylx : Lux
     @JvmName("getylx_prop")
     /**
     * Returns ylx, 10^-24 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-24))
 
 /**
 * yoctolux, 10^-24 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.yoctolux : Expression
+val Number.yoctolux : Lux
     /**
     * Returns yoctolux, 10^-24 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-24))
 
 
 @JvmField
@@ -807,21 +807,21 @@ val yoctolux = ylx
 /**
 * rlx, 10^-27 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.rlx : Expression
+val Number.rlx : Lux
     @JvmName("getrlx_prop")
     /**
     * Returns rlx, 10^-27 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-27))
 
 /**
 * rontolux, 10^-27 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.rontolux : Expression
+val Number.rontolux : Lux
     /**
     * Returns rontolux, 10^-27 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-27))
 
 
 @JvmField
@@ -842,21 +842,21 @@ val rontolux = rlx
 /**
 * qlx, 10^-30 of lux, derived SI-Unit for measurement of illuminance
 */    
-val Number.qlx : Expression
+val Number.qlx : Lux
     @JvmName("getqlx_prop")
     /**
     * Returns qlx, 10^-30 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-30))
 
 /**
 * quectolux, 10^-30 of lux, derived SI-Unit for measurement of illuminance
 */ 
-val Number.quectolux : Expression
+val Number.quectolux : Lux
     /**
     * Returns quectolux, 10^-30 of lux, derived SI-Unit for measurement of illuminance
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Lux(this.toDouble() * 10.0.pow(-30))
 
 
 @JvmField

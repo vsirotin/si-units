@@ -13,9 +13,21 @@ internal class SteradianTest {
         assertEquals(1.sr , sr)
     }
     
-     @Test
+    @Test
     fun testSteradianMainTest2() {
         assertEquals(12.3.sr , Steradian(12.3))
+    }
+    
+    @Test
+    fun testSteradianMainTest3() {
+        val x: Steradian = 12.3.sr
+        assertEquals(x , Steradian(12.3))
+    }
+    
+    @Test
+    fun testSteradianMainTest4() {
+        val x: Steradian = sr
+        assertEquals(x , Steradian(1.0))
     }
               
     @Test

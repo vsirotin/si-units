@@ -13,9 +13,21 @@ internal class PascalTest {
         assertEquals(1.Pa , Pa)
     }
     
-     @Test
+    @Test
     fun testPascalMainTest2() {
         assertEquals(12.3.Pa , Pascal(12.3))
+    }
+    
+    @Test
+    fun testPascalMainTest3() {
+        val x: Pascal = 12.3.Pa
+        assertEquals(x , Pascal(12.3))
+    }
+    
+    @Test
+    fun testPascalMainTest4() {
+        val x: Pascal = Pa
+        assertEquals(x , Pascal(1.0))
     }
               
     @Test

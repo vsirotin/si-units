@@ -13,9 +13,21 @@ internal class HertzTest {
         assertEquals(1.Hz , Hz)
     }
     
-     @Test
+    @Test
     fun testHertzMainTest2() {
         assertEquals(12.3.Hz , Hertz(12.3))
+    }
+    
+    @Test
+    fun testHertzMainTest3() {
+        val x: Hertz = 12.3.Hz
+        assertEquals(x , Hertz(12.3))
+    }
+    
+    @Test
+    fun testHertzMainTest4() {
+        val x: Hertz = Hz
+        assertEquals(x , Hertz(1.0))
     }
               
     @Test

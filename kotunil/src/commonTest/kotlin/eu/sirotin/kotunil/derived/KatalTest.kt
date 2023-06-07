@@ -13,9 +13,21 @@ internal class KatalTest {
         assertEquals(1.kat , kat)
     }
     
-     @Test
+    @Test
     fun testKatalMainTest2() {
         assertEquals(12.3.kat , Katal(12.3))
+    }
+    
+    @Test
+    fun testKatalMainTest3() {
+        val x: Katal = 12.3.kat
+        assertEquals(x , Katal(12.3))
+    }
+    
+    @Test
+    fun testKatalMainTest4() {
+        val x: Katal = kat
+        assertEquals(x , Katal(1.0))
     }
               
     @Test

@@ -13,9 +13,21 @@ internal class WattTest {
         assertEquals(1.W , W)
     }
     
-     @Test
+    @Test
     fun testWattMainTest2() {
         assertEquals(12.3.W , Watt(12.3))
+    }
+    
+    @Test
+    fun testWattMainTest3() {
+        val x: Watt = 12.3.W
+        assertEquals(x , Watt(12.3))
+    }
+    
+    @Test
+    fun testWattMainTest4() {
+        val x: Watt = W
+        assertEquals(x , Watt(1.0))
     }
               
     @Test

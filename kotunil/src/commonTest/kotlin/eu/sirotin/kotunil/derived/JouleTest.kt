@@ -13,9 +13,21 @@ internal class JouleTest {
         assertEquals(1.J , J)
     }
     
-     @Test
+    @Test
     fun testJouleMainTest2() {
         assertEquals(12.3.J , Joule(12.3))
+    }
+    
+    @Test
+    fun testJouleMainTest3() {
+        val x: Joule = 12.3.J
+        assertEquals(x , Joule(12.3))
+    }
+    
+    @Test
+    fun testJouleMainTest4() {
+        val x: Joule = J
+        assertEquals(x , Joule(1.0))
     }
               
     @Test

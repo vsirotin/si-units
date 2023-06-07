@@ -13,9 +13,21 @@ internal class NewtonTest {
         assertEquals(1.N , N)
     }
     
-     @Test
+    @Test
     fun testNewtonMainTest2() {
         assertEquals(12.3.N , Newton(12.3))
+    }
+    
+    @Test
+    fun testNewtonMainTest3() {
+        val x: Newton = 12.3.N
+        assertEquals(x , Newton(12.3))
+    }
+    
+    @Test
+    fun testNewtonMainTest4() {
+        val x: Newton = N
+        assertEquals(x , Newton(1.0))
     }
               
     @Test

@@ -13,9 +13,21 @@ internal class LuxTest {
         assertEquals(1.lx , lx)
     }
     
-     @Test
+    @Test
     fun testLuxMainTest2() {
         assertEquals(12.3.lx , Lux(12.3))
+    }
+    
+    @Test
+    fun testLuxMainTest3() {
+        val x: Lux = 12.3.lx
+        assertEquals(x , Lux(12.3))
+    }
+    
+    @Test
+    fun testLuxMainTest4() {
+        val x: Lux = lx
+        assertEquals(x , Lux(1.0))
     }
               
     @Test

@@ -13,9 +13,21 @@ internal class TeslaTest {
         assertEquals(1.T , T)
     }
     
-     @Test
+    @Test
     fun testTeslaMainTest2() {
         assertEquals(12.3.T , Tesla(12.3))
+    }
+    
+    @Test
+    fun testTeslaMainTest3() {
+        val x: Tesla = 12.3.T
+        assertEquals(x , Tesla(12.3))
+    }
+    
+    @Test
+    fun testTeslaMainTest4() {
+        val x: Tesla = T
+        assertEquals(x , Tesla(1.0))
     }
               
     @Test

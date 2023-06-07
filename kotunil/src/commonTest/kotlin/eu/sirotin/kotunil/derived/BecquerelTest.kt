@@ -13,9 +13,21 @@ internal class BecquerelTest {
         assertEquals(1.Bq , Bq)
     }
     
-     @Test
+    @Test
     fun testBecquerelMainTest2() {
         assertEquals(12.3.Bq , Becquerel(12.3))
+    }
+    
+    @Test
+    fun testBecquerelMainTest3() {
+        val x: Becquerel = 12.3.Bq
+        assertEquals(x , Becquerel(12.3))
+    }
+    
+    @Test
+    fun testBecquerelMainTest4() {
+        val x: Becquerel = Bq
+        assertEquals(x , Becquerel(1.0))
     }
               
     @Test

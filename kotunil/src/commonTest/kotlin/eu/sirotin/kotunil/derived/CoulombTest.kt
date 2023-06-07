@@ -13,9 +13,21 @@ internal class CoulombTest {
         assertEquals(1.C , C)
     }
     
-     @Test
+    @Test
     fun testCoulombMainTest2() {
         assertEquals(12.3.C , Coulomb(12.3))
+    }
+    
+    @Test
+    fun testCoulombMainTest3() {
+        val x: Coulomb = 12.3.C
+        assertEquals(x , Coulomb(12.3))
+    }
+    
+    @Test
+    fun testCoulombMainTest4() {
+        val x: Coulomb = C
+        assertEquals(x , Coulomb(1.0))
     }
               
     @Test

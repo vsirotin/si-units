@@ -13,9 +13,21 @@ internal class GrayTest {
         assertEquals(1.Gy , Gy)
     }
     
-     @Test
+    @Test
     fun testGrayMainTest2() {
         assertEquals(12.3.Gy , Gray(12.3))
+    }
+    
+    @Test
+    fun testGrayMainTest3() {
+        val x: Gray = 12.3.Gy
+        assertEquals(x , Gray(12.3))
+    }
+    
+    @Test
+    fun testGrayMainTest4() {
+        val x: Gray = Gy
+        assertEquals(x , Gray(1.0))
     }
               
     @Test

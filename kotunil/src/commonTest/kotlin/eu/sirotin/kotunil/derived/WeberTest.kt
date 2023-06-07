@@ -13,9 +13,21 @@ internal class WeberTest {
         assertEquals(1.Wb , Wb)
     }
     
-     @Test
+    @Test
     fun testWeberMainTest2() {
         assertEquals(12.3.Wb , Weber(12.3))
+    }
+    
+    @Test
+    fun testWeberMainTest3() {
+        val x: Weber = 12.3.Wb
+        assertEquals(x , Weber(12.3))
+    }
+    
+    @Test
+    fun testWeberMainTest4() {
+        val x: Weber = Wb
+        assertEquals(x , Weber(1.0))
     }
               
     @Test

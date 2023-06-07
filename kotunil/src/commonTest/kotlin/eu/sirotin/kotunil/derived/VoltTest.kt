@@ -13,9 +13,21 @@ internal class VoltTest {
         assertEquals(1.V , V)
     }
     
-     @Test
+    @Test
     fun testVoltMainTest2() {
         assertEquals(12.3.V , Volt(12.3))
+    }
+    
+    @Test
+    fun testVoltMainTest3() {
+        val x: Volt = 12.3.V
+        assertEquals(x , Volt(12.3))
+    }
+    
+    @Test
+    fun testVoltMainTest4() {
+        val x: Volt = V
+        assertEquals(x , Volt(1.0))
     }
               
     @Test

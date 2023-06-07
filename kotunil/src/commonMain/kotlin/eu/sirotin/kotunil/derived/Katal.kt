@@ -3,7 +3,7 @@ package eu.sirotin.kotunil.derived
 
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
-import eu.sirotin.kotunil.specialunits.*
+//import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
 import kotlin.math.pow
@@ -22,36 +22,36 @@ class Katal(value: Number): DerivedUnit(value, formula)
 */
 @JsExport
 @JvmField
-val kat = formula
+val kat = Katal(1.0)
 
 /**
 * Creates Katal-Object for current number value. Katal is a System International Unit for catalytic activity.
 */
-val Number.kat : Expression
+val Number.kat : Katal
    /**
    * Returns Katal-Object for current number value. Katal is a System International Unit for catalytic activity.
    */
-    get() = this.toDouble() * formula
+    get() = Katal(this.toDouble())
 
     
 /**
 * Qkat, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Qkat : Expression
+val Number.Qkat : Katal
     @JvmName("getQkat_prop")
     /**
     * Returns Qkat, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(30))
 
 /**
 * quettakatal, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.quettakatal : Expression
+val Number.quettakatal : Katal
     /**
     * Returns quettakatal, 10^30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(30))
 
 @JsExport
 @JvmField
@@ -72,21 +72,21 @@ val quettakatal = Qkat
 /**
 * Rkat, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Rkat : Expression
+val Number.Rkat : Katal
     @JvmName("getRkat_prop")
     /**
     * Returns Rkat, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(27))
 
 /**
 * ronnakatal, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.ronnakatal : Expression
+val Number.ronnakatal : Katal
     /**
     * Returns ronnakatal, 10^27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(27))
 
 @JsExport
 @JvmField
@@ -107,21 +107,21 @@ val ronnakatal = Rkat
 /**
 * Ykat, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Ykat : Expression
+val Number.Ykat : Katal
     @JvmName("getYkat_prop")
     /**
     * Returns Ykat, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(24))
 
 /**
 * yottakatal, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.yottakatal : Expression
+val Number.yottakatal : Katal
     /**
     * Returns yottakatal, 10^24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(24))
 
 @JsExport
 @JvmField
@@ -142,21 +142,21 @@ val yottakatal = Ykat
 /**
 * Zkat, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Zkat : Expression
+val Number.Zkat : Katal
     @JvmName("getZkat_prop")
     /**
     * Returns Zkat, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(21))
 
 /**
 * zettakatal, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.zettakatal : Expression
+val Number.zettakatal : Katal
     /**
     * Returns zettakatal, 10^21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(21))
 
 @JsExport
 @JvmField
@@ -177,21 +177,21 @@ val zettakatal = Zkat
 /**
 * Ekat, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Ekat : Expression
+val Number.Ekat : Katal
     @JvmName("getEkat_prop")
     /**
     * Returns Ekat, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(18))
 
 /**
 * exakatal, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.exakatal : Expression
+val Number.exakatal : Katal
     /**
     * Returns exakatal, 10^18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(18))
 
 @JsExport
 @JvmField
@@ -212,21 +212,21 @@ val exakatal = Ekat
 /**
 * Pkat, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Pkat : Expression
+val Number.Pkat : Katal
     @JvmName("getPkat_prop")
     /**
     * Returns Pkat, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(15))
 
 /**
 * petakatal, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.petakatal : Expression
+val Number.petakatal : Katal
     /**
     * Returns petakatal, 10^15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(15))
 
 @JsExport
 @JvmField
@@ -247,21 +247,21 @@ val petakatal = Pkat
 /**
 * Tkat, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Tkat : Expression
+val Number.Tkat : Katal
     @JvmName("getTkat_prop")
     /**
     * Returns Tkat, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(12))
 
 /**
 * terakatal, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.terakatal : Expression
+val Number.terakatal : Katal
     /**
     * Returns terakatal, 10^12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(12))
 
 @JsExport
 @JvmField
@@ -282,21 +282,21 @@ val terakatal = Tkat
 /**
 * Gkat, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Gkat : Expression
+val Number.Gkat : Katal
     @JvmName("getGkat_prop")
     /**
     * Returns Gkat, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(9))
 
 /**
 * gigakatal, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.gigakatal : Expression
+val Number.gigakatal : Katal
     /**
     * Returns gigakatal, 10^9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(9))
 
 @JsExport
 @JvmField
@@ -317,21 +317,21 @@ val gigakatal = Gkat
 /**
 * Mkat, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.Mkat : Expression
+val Number.Mkat : Katal
     @JvmName("getMkat_prop")
     /**
     * Returns Mkat, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(6))
 
 /**
 * megakatal, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.megakatal : Expression
+val Number.megakatal : Katal
     /**
     * Returns megakatal, 10^6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(6))
 
 @JsExport
 @JvmField
@@ -352,21 +352,21 @@ val megakatal = Mkat
 /**
 * kkat, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.kkat : Expression
+val Number.kkat : Katal
     @JvmName("getkkat_prop")
     /**
     * Returns kkat, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(3))
 
 /**
 * kilokatal, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.kilokatal : Expression
+val Number.kilokatal : Katal
     /**
     * Returns kilokatal, 10^3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(3))
 
 @JsExport
 @JvmField
@@ -387,21 +387,21 @@ val kilokatal = kkat
 /**
 * hkat, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.hkat : Expression
+val Number.hkat : Katal
     @JvmName("gethkat_prop")
     /**
     * Returns hkat, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(2))
 
 /**
 * hectokatal, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.hectokatal : Expression
+val Number.hectokatal : Katal
     /**
     * Returns hectokatal, 10^2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(2))
 
 @JsExport
 @JvmField
@@ -422,21 +422,21 @@ val hectokatal = hkat
 /**
 * dakat, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.dakat : Expression
+val Number.dakat : Katal
     @JvmName("getdakat_prop")
     /**
     * Returns dakat, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(1))
 
 /**
 * decakatal, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.decakatal : Expression
+val Number.decakatal : Katal
     /**
     * Returns decakatal, 10^1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(1))
 
 @JsExport
 @JvmField
@@ -457,21 +457,21 @@ val decakatal = dakat
 /**
 * dkat, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.dkat : Expression
+val Number.dkat : Katal
     @JvmName("getdkat_prop")
     /**
     * Returns dkat, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-1))
 
 /**
 * decikatal, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.decikatal : Expression
+val Number.decikatal : Katal
     /**
     * Returns decikatal, 10^-1 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-1))
 
 @JsExport
 @JvmField
@@ -492,21 +492,21 @@ val decikatal = dkat
 /**
 * ckat, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.ckat : Expression
+val Number.ckat : Katal
     @JvmName("getckat_prop")
     /**
     * Returns ckat, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-2))
 
 /**
 * centikatal, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.centikatal : Expression
+val Number.centikatal : Katal
     /**
     * Returns centikatal, 10^-2 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-2))
 
 @JsExport
 @JvmField
@@ -527,21 +527,21 @@ val centikatal = ckat
 /**
 * mkat, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.mkat : Expression
+val Number.mkat : Katal
     @JvmName("getmkat_prop")
     /**
     * Returns mkat, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-3))
 
 /**
 * millikatal, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.millikatal : Expression
+val Number.millikatal : Katal
     /**
     * Returns millikatal, 10^-3 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-3))
 
 
 @JvmField
@@ -562,21 +562,21 @@ val millikatal = mkat
 /**
 * μkat, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.μkat : Expression
+val Number.μkat : Katal
     @JvmName("getμkat_prop")
     /**
     * Returns μkat, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-6))
 
 /**
 * microkatal, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.microkatal : Expression
+val Number.microkatal : Katal
     /**
     * Returns microkatal, 10^-6 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-6))
 
 @JsExport
 @JvmField
@@ -597,21 +597,21 @@ val microkatal = μkat
 /**
 * nkat, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.nkat : Expression
+val Number.nkat : Katal
     @JvmName("getnkat_prop")
     /**
     * Returns nkat, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-9))
 
 /**
 * nanokatal, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.nanokatal : Expression
+val Number.nanokatal : Katal
     /**
     * Returns nanokatal, 10^-9 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-9))
 
 @JsExport
 @JvmField
@@ -632,21 +632,21 @@ val nanokatal = nkat
 /**
 * pkat, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.pkat : Expression
+val Number.pkat : Katal
     @JvmName("getpkat_prop")
     /**
     * Returns pkat, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-12))
 
 /**
 * picokatal, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.picokatal : Expression
+val Number.picokatal : Katal
     /**
     * Returns picokatal, 10^-12 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-12))
 
 
 @JvmField
@@ -667,21 +667,21 @@ val picokatal = pkat
 /**
 * fkat, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.fkat : Expression
+val Number.fkat : Katal
     @JvmName("getfkat_prop")
     /**
     * Returns fkat, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-15))
 
 /**
 * femtokatal, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.femtokatal : Expression
+val Number.femtokatal : Katal
     /**
     * Returns femtokatal, 10^-15 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-15))
 
 @JsExport
 @JvmField
@@ -702,21 +702,21 @@ val femtokatal = fkat
 /**
 * akat, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.akat : Expression
+val Number.akat : Katal
     @JvmName("getakat_prop")
     /**
     * Returns akat, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-18))
 
 /**
 * attokatal, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.attokatal : Expression
+val Number.attokatal : Katal
     /**
     * Returns attokatal, 10^-18 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-18))
 
 @JsExport
 @JvmField
@@ -737,21 +737,21 @@ val attokatal = akat
 /**
 * zkat, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.zkat : Expression
+val Number.zkat : Katal
     @JvmName("getzkat_prop")
     /**
     * Returns zkat, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-21))
 
 /**
 * zeptokatal, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.zeptokatal : Expression
+val Number.zeptokatal : Katal
     /**
     * Returns zeptokatal, 10^-21 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-21))
 
 
 @JvmField
@@ -772,21 +772,21 @@ val zeptokatal = zkat
 /**
 * ykat, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.ykat : Expression
+val Number.ykat : Katal
     @JvmName("getykat_prop")
     /**
     * Returns ykat, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-24))
 
 /**
 * yoctokatal, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.yoctokatal : Expression
+val Number.yoctokatal : Katal
     /**
     * Returns yoctokatal, 10^-24 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-24))
 
 
 @JvmField
@@ -807,21 +807,21 @@ val yoctokatal = ykat
 /**
 * rkat, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.rkat : Expression
+val Number.rkat : Katal
     @JvmName("getrkat_prop")
     /**
     * Returns rkat, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-27))
 
 /**
 * rontokatal, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.rontokatal : Expression
+val Number.rontokatal : Katal
     /**
     * Returns rontokatal, 10^-27 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-27))
 
 
 @JvmField
@@ -842,21 +842,21 @@ val rontokatal = rkat
 /**
 * qkat, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
 */    
-val Number.qkat : Expression
+val Number.qkat : Katal
     @JvmName("getqkat_prop")
     /**
     * Returns qkat, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-30))
 
 /**
 * quectokatal, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
 */ 
-val Number.quectokatal : Expression
+val Number.quectokatal : Katal
     /**
     * Returns quectokatal, 10^-30 of katal, derived SI-Unit for measurement of catalytic activity
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Katal(this.toDouble() * 10.0.pow(-30))
 
 
 @JvmField

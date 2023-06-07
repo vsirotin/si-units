@@ -13,9 +13,21 @@ internal class RadianTest {
         assertEquals(1.rad , rad)
     }
     
-     @Test
+    @Test
     fun testRadianMainTest2() {
         assertEquals(12.3.rad , Radian(12.3))
+    }
+    
+    @Test
+    fun testRadianMainTest3() {
+        val x: Radian = 12.3.rad
+        assertEquals(x , Radian(12.3))
+    }
+    
+    @Test
+    fun testRadianMainTest4() {
+        val x: Radian = rad
+        assertEquals(x , Radian(1.0))
     }
               
     @Test

@@ -13,9 +13,21 @@ internal class SiemensTest {
         assertEquals(1.S , S)
     }
     
-     @Test
+    @Test
     fun testSiemensMainTest2() {
         assertEquals(12.3.S , Siemens(12.3))
+    }
+    
+    @Test
+    fun testSiemensMainTest3() {
+        val x: Siemens = 12.3.S
+        assertEquals(x , Siemens(12.3))
+    }
+    
+    @Test
+    fun testSiemensMainTest4() {
+        val x: Siemens = S
+        assertEquals(x , Siemens(1.0))
     }
               
     @Test

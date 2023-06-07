@@ -3,13 +3,13 @@ package eu.sirotin.kotunil.derived
 
 import eu.sirotin.kotunil.core.*
 import eu.sirotin.kotunil.base.*
-import eu.sirotin.kotunil.specialunits.*
+//import eu.sirotin.kotunil.specialunits.*
 import kotlin.jvm.JvmField
 import kotlin.js.JsExport
 import kotlin.math.pow
 import kotlin.jvm.JvmName
 
-private val formula =  kg*(m2)/(s `^` 2)
+private val formula =  kg*(m*m)/(s `^` 2)
 
 @JsExport
 /**
@@ -22,43 +22,43 @@ class Joule(value: Number): DerivedUnit(value, formula)
 */
 @JsExport
 @JvmField
-val J = formula
+val J = Joule(1.0)
 
 /**
 * Creates Joule-Object for current number value. Joule is a System International Unit for energy, work, heat.
 */
-val Number.J : Expression
+val Number.J : Joule
    /**
    * Returns Joule-Object for current number value. Joule is a System International Unit for energy, work, heat.
    */
-    get() = this.toDouble() * formula
+    get() = Joule(this.toDouble())
 
     
 /**
 * QJ, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.QJ : Expression
+val Number.QJ : Joule
     @JvmName("getQJ_prop")
     /**
     * Returns QJ, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(30))
 
 /**
 * quettajoule, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.quettajoule : Expression
+val Number.quettajoule : Joule
     /**
     * Returns quettajoule, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(30) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(30))
 
 @JsExport
 @JvmField
 /**
 * QJ, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val QJ = 10.0.pow(30) * (kg*(m2)/(s `^` 2))
+val QJ = 10.0.pow(30) * (kg*(m*m)/(s `^` 2))
 
 /**
 * quettajoule, 10^30 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -72,28 +72,28 @@ val quettajoule = QJ
 /**
 * RJ, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.RJ : Expression
+val Number.RJ : Joule
     @JvmName("getRJ_prop")
     /**
     * Returns RJ, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(27))
 
 /**
 * ronnajoule, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.ronnajoule : Expression
+val Number.ronnajoule : Joule
     /**
     * Returns ronnajoule, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(27) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(27))
 
 @JsExport
 @JvmField
 /**
 * RJ, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val RJ = 10.0.pow(27) * (kg*(m2)/(s `^` 2))
+val RJ = 10.0.pow(27) * (kg*(m*m)/(s `^` 2))
 
 /**
 * ronnajoule, 10^27 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -107,28 +107,28 @@ val ronnajoule = RJ
 /**
 * YJ, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.YJ : Expression
+val Number.YJ : Joule
     @JvmName("getYJ_prop")
     /**
     * Returns YJ, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(24))
 
 /**
 * yottajoule, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.yottajoule : Expression
+val Number.yottajoule : Joule
     /**
     * Returns yottajoule, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(24) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(24))
 
 @JsExport
 @JvmField
 /**
 * YJ, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val YJ = 10.0.pow(24) * (kg*(m2)/(s `^` 2))
+val YJ = 10.0.pow(24) * (kg*(m*m)/(s `^` 2))
 
 /**
 * yottajoule, 10^24 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -142,28 +142,28 @@ val yottajoule = YJ
 /**
 * ZJ, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.ZJ : Expression
+val Number.ZJ : Joule
     @JvmName("getZJ_prop")
     /**
     * Returns ZJ, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(21))
 
 /**
 * zettajoule, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.zettajoule : Expression
+val Number.zettajoule : Joule
     /**
     * Returns zettajoule, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(21) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(21))
 
 @JsExport
 @JvmField
 /**
 * ZJ, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val ZJ = 10.0.pow(21) * (kg*(m2)/(s `^` 2))
+val ZJ = 10.0.pow(21) * (kg*(m*m)/(s `^` 2))
 
 /**
 * zettajoule, 10^21 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -177,28 +177,28 @@ val zettajoule = ZJ
 /**
 * EJ, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.EJ : Expression
+val Number.EJ : Joule
     @JvmName("getEJ_prop")
     /**
     * Returns EJ, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(18))
 
 /**
 * exajoule, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.exajoule : Expression
+val Number.exajoule : Joule
     /**
     * Returns exajoule, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(18) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(18))
 
 @JsExport
 @JvmField
 /**
 * EJ, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val EJ = 10.0.pow(18) * (kg*(m2)/(s `^` 2))
+val EJ = 10.0.pow(18) * (kg*(m*m)/(s `^` 2))
 
 /**
 * exajoule, 10^18 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -212,28 +212,28 @@ val exajoule = EJ
 /**
 * PJ, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.PJ : Expression
+val Number.PJ : Joule
     @JvmName("getPJ_prop")
     /**
     * Returns PJ, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(15))
 
 /**
 * petajoule, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.petajoule : Expression
+val Number.petajoule : Joule
     /**
     * Returns petajoule, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(15) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(15))
 
 @JsExport
 @JvmField
 /**
 * PJ, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val PJ = 10.0.pow(15) * (kg*(m2)/(s `^` 2))
+val PJ = 10.0.pow(15) * (kg*(m*m)/(s `^` 2))
 
 /**
 * petajoule, 10^15 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -247,28 +247,28 @@ val petajoule = PJ
 /**
 * TJ, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.TJ : Expression
+val Number.TJ : Joule
     @JvmName("getTJ_prop")
     /**
     * Returns TJ, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(12))
 
 /**
 * terajoule, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.terajoule : Expression
+val Number.terajoule : Joule
     /**
     * Returns terajoule, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(12) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(12))
 
 @JsExport
 @JvmField
 /**
 * TJ, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val TJ = 10.0.pow(12) * (kg*(m2)/(s `^` 2))
+val TJ = 10.0.pow(12) * (kg*(m*m)/(s `^` 2))
 
 /**
 * terajoule, 10^12 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -282,28 +282,28 @@ val terajoule = TJ
 /**
 * GJ, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.GJ : Expression
+val Number.GJ : Joule
     @JvmName("getGJ_prop")
     /**
     * Returns GJ, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(9))
 
 /**
 * gigajoule, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.gigajoule : Expression
+val Number.gigajoule : Joule
     /**
     * Returns gigajoule, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(9) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(9))
 
 @JsExport
 @JvmField
 /**
 * GJ, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val GJ = 10.0.pow(9) * (kg*(m2)/(s `^` 2))
+val GJ = 10.0.pow(9) * (kg*(m*m)/(s `^` 2))
 
 /**
 * gigajoule, 10^9 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -317,28 +317,28 @@ val gigajoule = GJ
 /**
 * MJ, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.MJ : Expression
+val Number.MJ : Joule
     @JvmName("getMJ_prop")
     /**
     * Returns MJ, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(6))
 
 /**
 * megajoule, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.megajoule : Expression
+val Number.megajoule : Joule
     /**
     * Returns megajoule, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(6) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(6))
 
 @JsExport
 @JvmField
 /**
 * MJ, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val MJ = 10.0.pow(6) * (kg*(m2)/(s `^` 2))
+val MJ = 10.0.pow(6) * (kg*(m*m)/(s `^` 2))
 
 /**
 * megajoule, 10^6 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -352,28 +352,28 @@ val megajoule = MJ
 /**
 * kJ, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.kJ : Expression
+val Number.kJ : Joule
     @JvmName("getkJ_prop")
     /**
     * Returns kJ, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(3))
 
 /**
 * kilojoule, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.kilojoule : Expression
+val Number.kilojoule : Joule
     /**
     * Returns kilojoule, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(3) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(3))
 
 @JsExport
 @JvmField
 /**
 * kJ, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val kJ = 10.0.pow(3) * (kg*(m2)/(s `^` 2))
+val kJ = 10.0.pow(3) * (kg*(m*m)/(s `^` 2))
 
 /**
 * kilojoule, 10^3 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -387,28 +387,28 @@ val kilojoule = kJ
 /**
 * hJ, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.hJ : Expression
+val Number.hJ : Joule
     @JvmName("gethJ_prop")
     /**
     * Returns hJ, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(2))
 
 /**
 * hectojoule, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.hectojoule : Expression
+val Number.hectojoule : Joule
     /**
     * Returns hectojoule, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(2) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(2))
 
 @JsExport
 @JvmField
 /**
 * hJ, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val hJ = 10.0.pow(2) * (kg*(m2)/(s `^` 2))
+val hJ = 10.0.pow(2) * (kg*(m*m)/(s `^` 2))
 
 /**
 * hectojoule, 10^2 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -422,28 +422,28 @@ val hectojoule = hJ
 /**
 * daJ, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.daJ : Expression
+val Number.daJ : Joule
     @JvmName("getdaJ_prop")
     /**
     * Returns daJ, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(1))
 
 /**
 * decajoule, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.decajoule : Expression
+val Number.decajoule : Joule
     /**
     * Returns decajoule, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(1) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(1))
 
 @JsExport
 @JvmField
 /**
 * daJ, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val daJ = 10.0.pow(1) * (kg*(m2)/(s `^` 2))
+val daJ = 10.0.pow(1) * (kg*(m*m)/(s `^` 2))
 
 /**
 * decajoule, 10^1 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -457,28 +457,28 @@ val decajoule = daJ
 /**
 * dJ, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.dJ : Expression
+val Number.dJ : Joule
     @JvmName("getdJ_prop")
     /**
     * Returns dJ, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-1))
 
 /**
 * decijoule, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.decijoule : Expression
+val Number.decijoule : Joule
     /**
     * Returns decijoule, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-1) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-1))
 
 @JsExport
 @JvmField
 /**
 * dJ, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val dJ = 10.0.pow(-1) * (kg*(m2)/(s `^` 2))
+val dJ = 10.0.pow(-1) * (kg*(m*m)/(s `^` 2))
 
 /**
 * decijoule, 10^-1 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -492,28 +492,28 @@ val decijoule = dJ
 /**
 * cJ, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.cJ : Expression
+val Number.cJ : Joule
     @JvmName("getcJ_prop")
     /**
     * Returns cJ, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-2))
 
 /**
 * centijoule, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.centijoule : Expression
+val Number.centijoule : Joule
     /**
     * Returns centijoule, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-2) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-2))
 
 @JsExport
 @JvmField
 /**
 * cJ, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val cJ = 10.0.pow(-2) * (kg*(m2)/(s `^` 2))
+val cJ = 10.0.pow(-2) * (kg*(m*m)/(s `^` 2))
 
 /**
 * centijoule, 10^-2 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -527,28 +527,28 @@ val centijoule = cJ
 /**
 * mJ, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.mJ : Expression
+val Number.mJ : Joule
     @JvmName("getmJ_prop")
     /**
     * Returns mJ, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-3))
 
 /**
 * millijoule, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.millijoule : Expression
+val Number.millijoule : Joule
     /**
     * Returns millijoule, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-3) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-3))
 
 
 @JvmField
 /**
 * mJ, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val mJ = 10.0.pow(-3) * (kg*(m2)/(s `^` 2))
+val mJ = 10.0.pow(-3) * (kg*(m*m)/(s `^` 2))
 
 /**
 * millijoule, 10^-3 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -562,28 +562,28 @@ val millijoule = mJ
 /**
 * μJ, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.μJ : Expression
+val Number.μJ : Joule
     @JvmName("getμJ_prop")
     /**
     * Returns μJ, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-6))
 
 /**
 * microjoule, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.microjoule : Expression
+val Number.microjoule : Joule
     /**
     * Returns microjoule, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-6) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-6))
 
 @JsExport
 @JvmField
 /**
 * μJ, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val μJ = 10.0.pow(-6) * (kg*(m2)/(s `^` 2))
+val μJ = 10.0.pow(-6) * (kg*(m*m)/(s `^` 2))
 
 /**
 * microjoule, 10^-6 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -597,28 +597,28 @@ val microjoule = μJ
 /**
 * nJ, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.nJ : Expression
+val Number.nJ : Joule
     @JvmName("getnJ_prop")
     /**
     * Returns nJ, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-9))
 
 /**
 * nanojoule, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.nanojoule : Expression
+val Number.nanojoule : Joule
     /**
     * Returns nanojoule, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-9) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-9))
 
 @JsExport
 @JvmField
 /**
 * nJ, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val nJ = 10.0.pow(-9) * (kg*(m2)/(s `^` 2))
+val nJ = 10.0.pow(-9) * (kg*(m*m)/(s `^` 2))
 
 /**
 * nanojoule, 10^-9 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -632,28 +632,28 @@ val nanojoule = nJ
 /**
 * pJ, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.pJ : Expression
+val Number.pJ : Joule
     @JvmName("getpJ_prop")
     /**
     * Returns pJ, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-12))
 
 /**
 * picojoule, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.picojoule : Expression
+val Number.picojoule : Joule
     /**
     * Returns picojoule, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-12) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-12))
 
 
 @JvmField
 /**
 * pJ, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val pJ = 10.0.pow(-12) * (kg*(m2)/(s `^` 2))
+val pJ = 10.0.pow(-12) * (kg*(m*m)/(s `^` 2))
 
 /**
 * picojoule, 10^-12 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -667,28 +667,28 @@ val picojoule = pJ
 /**
 * fJ, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.fJ : Expression
+val Number.fJ : Joule
     @JvmName("getfJ_prop")
     /**
     * Returns fJ, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-15))
 
 /**
 * femtojoule, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.femtojoule : Expression
+val Number.femtojoule : Joule
     /**
     * Returns femtojoule, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-15) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-15))
 
 @JsExport
 @JvmField
 /**
 * fJ, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val fJ = 10.0.pow(-15) * (kg*(m2)/(s `^` 2))
+val fJ = 10.0.pow(-15) * (kg*(m*m)/(s `^` 2))
 
 /**
 * femtojoule, 10^-15 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -702,28 +702,28 @@ val femtojoule = fJ
 /**
 * aJ, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.aJ : Expression
+val Number.aJ : Joule
     @JvmName("getaJ_prop")
     /**
     * Returns aJ, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-18))
 
 /**
 * attojoule, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.attojoule : Expression
+val Number.attojoule : Joule
     /**
     * Returns attojoule, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-18) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-18))
 
 @JsExport
 @JvmField
 /**
 * aJ, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val aJ = 10.0.pow(-18) * (kg*(m2)/(s `^` 2))
+val aJ = 10.0.pow(-18) * (kg*(m*m)/(s `^` 2))
 
 /**
 * attojoule, 10^-18 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -737,28 +737,28 @@ val attojoule = aJ
 /**
 * zJ, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.zJ : Expression
+val Number.zJ : Joule
     @JvmName("getzJ_prop")
     /**
     * Returns zJ, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-21))
 
 /**
 * zeptojoule, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.zeptojoule : Expression
+val Number.zeptojoule : Joule
     /**
     * Returns zeptojoule, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-21) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-21))
 
 
 @JvmField
 /**
 * zJ, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val zJ = 10.0.pow(-21) * (kg*(m2)/(s `^` 2))
+val zJ = 10.0.pow(-21) * (kg*(m*m)/(s `^` 2))
 
 /**
 * zeptojoule, 10^-21 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -772,28 +772,28 @@ val zeptojoule = zJ
 /**
 * yJ, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.yJ : Expression
+val Number.yJ : Joule
     @JvmName("getyJ_prop")
     /**
     * Returns yJ, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-24))
 
 /**
 * yoctojoule, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.yoctojoule : Expression
+val Number.yoctojoule : Joule
     /**
     * Returns yoctojoule, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-24) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-24))
 
 
 @JvmField
 /**
 * yJ, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val yJ = 10.0.pow(-24) * (kg*(m2)/(s `^` 2))
+val yJ = 10.0.pow(-24) * (kg*(m*m)/(s `^` 2))
 
 /**
 * yoctojoule, 10^-24 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -807,28 +807,28 @@ val yoctojoule = yJ
 /**
 * rJ, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.rJ : Expression
+val Number.rJ : Joule
     @JvmName("getrJ_prop")
     /**
     * Returns rJ, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-27))
 
 /**
 * rontojoule, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.rontojoule : Expression
+val Number.rontojoule : Joule
     /**
     * Returns rontojoule, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-27) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-27))
 
 
 @JvmField
 /**
 * rJ, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val rJ = 10.0.pow(-27) * (kg*(m2)/(s `^` 2))
+val rJ = 10.0.pow(-27) * (kg*(m*m)/(s `^` 2))
 
 /**
 * rontojoule, 10^-27 of joule, derived SI-Unit for measurement of energy, work, heat
@@ -842,28 +842,28 @@ val rontojoule = rJ
 /**
 * qJ, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
 */    
-val Number.qJ : Expression
+val Number.qJ : Joule
     @JvmName("getqJ_prop")
     /**
     * Returns qJ, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-30))
 
 /**
 * quectojoule, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
 */ 
-val Number.quectojoule : Expression
+val Number.quectojoule : Joule
     /**
     * Returns quectojoule, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
     */  
-    get() = this.toDouble() * 10.0.pow(-30) * formula
+    get() = Joule(this.toDouble() * 10.0.pow(-30))
 
 
 @JvmField
 /**
 * qJ, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
 */        
-val qJ = 10.0.pow(-30) * (kg*(m2)/(s `^` 2))
+val qJ = 10.0.pow(-30) * (kg*(m*m)/(s `^` 2))
 
 /**
 * quectojoule, 10^-30 of joule, derived SI-Unit for measurement of energy, work, heat
