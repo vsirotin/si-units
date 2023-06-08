@@ -7,4 +7,14 @@ eu.sirotin.kotunil.core
 eu.sirotin.kotunil.currency
 eu.sirotin.kotunil.derived
 eu.sirotin.kotunil.specialunits
-eu.sirotin.kotunil.utils
+module:kotunil-generators
+eu.sirotin.kotunil.generator
+eu.sirotin.kotunil.generator.apps
+eu.sirotin.kotunil.generator.apps.jvm.java
+eu.sirotin.kotunil.generator.apps.jvm.kotlin
+eu.sirotin.kotunil.generator.javascript
+module:kotlin-console
+eu.sirotin.kotunil.app.kotlin
+eu.sirotin.kotunil.base
+eu.sirotin.kotunil.currency
+eu.sirotin.kotunil.derived
