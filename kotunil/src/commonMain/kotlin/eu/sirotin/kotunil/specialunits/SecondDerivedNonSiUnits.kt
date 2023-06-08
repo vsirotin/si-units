@@ -22,43 +22,68 @@
 
 package eu.sirotin.kotunil.specialunits
 
-import eu.sirotin.kotunil.base.Kilogram
-import eu.sirotin.kotunil.base.kg
-import eu.sirotin.kotunil.base.m
-import eu.sirotin.kotunil.core.times
+import eu.sirotin.kotunil.base.Second
 import kotlin.js.JsExport
-import kotlin.js.JsName
 import kotlin.jvm.JvmField
 
 /**
- * Creates a gram object
+ * Minute (time)
  */
-val Number.g: Kilogram
+val Number.min: Second
     /**
-     * Returns a gram object
+     * Get time in minutes for this value
      */
-    get()  = Kilogram(this.toDouble()*0.001)
+    get()  = Second(this.toDouble()*60)
 
 /**
- * A gram object
- */
-@JsExport
-@JsName("g")
-@JvmField()
-val g = 0.001.kg
-
-
-/**
- * Square metre
+ * Minute (time)
  */
 @JsExport
 @JvmField
-val m2 = m * m
+val min = Second(60.0)
 
 /**
- * Cubic metre (volume)
+ * Hour (time)
+ */
+val Number.h: Second
+    /**
+     * Get time in hours for this value
+     */
+    get()  = Second(this.toDouble()*3600)
+
+/**
+ * Hour (time)
  */
 @JsExport
 @JvmField
-val m3 = m2 * m
+val h = Second(3600.0)
+
+/**
+ * Day (time)
+ */
+val Number.d: Second
+    /**
+     * Get time in days for this value
+     */
+    get()  = Second(this.toDouble()*24*3600)
+
+/**
+ * Day (time)
+ */
+@JsExport
+@JvmField
+val d = Second(24*3600.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
 

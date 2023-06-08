@@ -2,6 +2,7 @@ package eu.sirotin.kotunil.specialunits
 
 
 import kotlin.test.Test
+import eu.sirotin.kotunil.core.times
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
@@ -27,5 +28,13 @@ internal class ThingTest {
     @Test
     fun testEquals() {
         assertEquals(2.3.thing, Thing(2.3))
+    }
+
+    @Test
+    fun testThongsWithPercentage() {
+        val x = 200.thing
+        val y = x * 10.percentage
+        assertEquals(20.thing, y)
+        assertEquals(2000.0, y.asPercentage)
     }
 }

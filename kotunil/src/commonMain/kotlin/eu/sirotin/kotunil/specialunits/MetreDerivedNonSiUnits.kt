@@ -20,28 +20,82 @@
  *
  */
 
-@file:Suppress("NonAsciiCharacters")
-
 package eu.sirotin.kotunil.specialunits
-
-import eu.sirotin.kotunil.base.Kelvin
+import eu.sirotin.kotunil.base.Metre
+import eu.sirotin.kotunil.base.m
+import eu.sirotin.kotunil.core.Expression
+import eu.sirotin.kotunil.core.times
 import kotlin.js.JsExport
-import kotlin.js.JsName
 import kotlin.jvm.JvmField
+import kotlin.jvm.JvmName
 
 /**
- * Celsius. temperature relative to 273.15 K
- */
-val Number.celsius: Kelvin
-    /**
-     * Returns temperature relative to 273.15 K
-     */
-    get() = Kelvin(this.toDouble() + 273.15)
-
-/**
- * temperature relative to 273.15 K
+ * Square metre
  */
 @JsExport
-//@JsName("celsius")
-@JvmField()
-val celsius = 0.celsius
+@JvmField
+val m2 = m * m
+
+/**
+ * Cubic metre (volume)
+ */
+@JsExport
+@JvmField
+val m3 = m2 * m
+
+/**
+ * hectare
+ */
+val Number.ha: Expression
+    get() = 10000*this.toDouble()  * m2
+
+/**
+ * hectare
+ */
+@JsExport
+@JvmField
+val ha = 1.0.ha
+
+/**
+ * Litre
+ */
+val Number.l: Expression
+    /**
+     * get litre
+     */
+    get() = Metre(this.toDouble()/10.0) * Metre(0.1) * Metre(0.1)
+
+/**
+ * Litre
+ */
+@JsExport
+@JvmField
+val l = 1.0.l
+
+/**
+ * Litre
+ */
+val Number.L: Expression
+    @JvmName("getL_prop")
+    /**
+     * get litre
+     */
+    get() = this.l
+
+@JvmField
+val L = l
+
+
+/**
+ * Astronomical unit 149597870700 metre
+ */
+val Number.au: Metre
+    get()  = Metre(this.toDouble()*149597870700.0)
+
+/**
+ * Astronomical unit 149597870700 metre
+ */
+@JsExport
+@JvmField
+val au = 1.0.au
+

@@ -1,5 +1,12 @@
 # KotUniL Release Notes
 
+# Version 4.1.1
+1. Derived units created with point operator from Numbers have as result its class,
+not Expression as in previous versions. 
+2. Non-SI Units declared in many separated files to avoid compiler error described 
+in issue #50.
+3. New unit tests. 
+
 # Version 4.0.1
 
 1. Demonstration of operations and comparison of objects with different definition but the same physical dimension.
