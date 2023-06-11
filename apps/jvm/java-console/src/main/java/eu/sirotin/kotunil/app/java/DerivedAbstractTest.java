@@ -21,23 +21,12 @@
  */
 
 package eu.sirotin.kotunil.app.java;
-
-import eu.sirotin.kotunil.base.Kilogram;
-import eu.sirotin.kotunil.base.Second;
 import eu.sirotin.kotunil.core.DerivedUnit;
 import eu.sirotin.kotunil.core.Expression;
-import eu.sirotin.kotunil.core.ExpressionKt;
 import eu.sirotin.kotunil.derived.Volt;
 import org.jetbrains.annotations.NotNull;
 
-import static eu.sirotin.kotunil.base.AmpereKt.A;
-import static eu.sirotin.kotunil.base.KilogramKt.kg;
-import static eu.sirotin.kotunil.base.MetreKt.*;
-import static eu.sirotin.kotunil.base.SecondKt.s;
-import static eu.sirotin.kotunil.core.ExpressionKt.ε;
-import static eu.sirotin.kotunil.derived.TeslaKt.T;
-import static eu.sirotin.kotunil.derived.WeberKt.Wb;
-import static eu.sirotin.kotunil.specialunits.NonSiUnitsKt.*;
+
 
 class Volt1 extends DerivedUnit {
 

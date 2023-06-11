@@ -4,7 +4,7 @@ package eu.sirotin.kotunil.currency;
 import eu.sirotin.kotunil.app.java.Checker;
 import eu.sirotin.kotunil.core.Expression;
 import static eu.sirotin.kotunil.currency.SwissFrancKt.*;
-import static eu.sirotin.kotunil.specialunits.NonSiUnitsKt.*;
+import static eu.sirotin.kotunil.specialunits.MetreDerivedNonSiUnitsKt.*;
 
 public class  SwissFrancJavaConsoleTest {
 

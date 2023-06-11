@@ -23,7 +23,6 @@
 package eu.sirotin.kotunil.generator.apps.jvm.java
 
 import eu.sirotin.kotunil.generator.CurrencyDescription
-import eu.sirotin.kotunil.generator.SiDerivedUnitDescription
 import eu.sirotin.kotunil.generator.currencyDescriptions
 import eu.sirotin.kotunil.generator.generateFiles
 
@@ -68,7 +67,7 @@ private fun generateCurrencyTestClassBody(currencyDescription: CurrencyDescripti
 import eu.sirotin.kotunil.app.java.Checker;
 import eu.sirotin.kotunil.core.Expression;
 import static eu.sirotin.kotunil.currency.${className}Kt.*;
-import static eu.sirotin.kotunil.specialunits.NonSiUnitsKt.*;
+import static eu.sirotin.kotunil.specialunits.MetreDerivedNonSiUnitsKt.*;
 
 public class  ${className}JavaConsoleTest {
 

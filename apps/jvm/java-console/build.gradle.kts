@@ -3,15 +3,14 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil.app.java"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-//TODO Make it dynamically   implementation(project(":kotunil"))
-    implementation("eu.sirotin.kotunil:kotunil-jvm:4.0.0")
+    implementation("eu.sirotin.kotunil:kotunil-jvm:4.1.1")
 }
 
 tasks.test {

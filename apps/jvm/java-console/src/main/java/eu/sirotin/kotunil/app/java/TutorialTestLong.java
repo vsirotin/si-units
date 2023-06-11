@@ -27,7 +27,9 @@ import eu.sirotin.kotunil.core.Expression;
 import eu.sirotin.kotunil.core.ExpressionKt;
 import eu.sirotin.kotunil.derived.TeslaKt;
 import eu.sirotin.kotunil.derived.WeberKt;
-import eu.sirotin.kotunil.specialunits.NonSiUnitsKt;
+import static eu.sirotin.kotunil.specialunits.MetreDerivedNonSiUnitsKt.*;
+import static eu.sirotin.kotunil.specialunits.KilogramDerivedNonSiUnitsKt.*;
+
 
 
 public class TutorialTestLong {
@@ -59,7 +61,7 @@ public class TutorialTestLong {
 //        val s = 4.m * 5.m
         Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
 //        val x = 20.l
-        Expression x = NonSiUnitsKt.getL(20);
+        Expression x = getL(20);
 //        val h = x / s
         Expression h = ExpressionKt.div(x,s);
 //        val z = h / mm
@@ -72,7 +74,7 @@ public class TutorialTestLong {
         Checker.check(1.0,
                 ExpressionKt.div(
                         ExpressionKt.div(
-                                NonSiUnitsKt.getL(20),
+                                getL(20),
                                 ExpressionKt.times(new Metre(4), new Metre(5))),
                         MetreKt.mm)
                               .getValue());
@@ -84,7 +86,7 @@ public class TutorialTestLong {
 
         Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
         Checker.check("m2", s.unitSymbols());
-        Expression x = NonSiUnitsKt.getL(20);
+        Expression x = getL(20);
         Checker.check("m3", x.unitSymbols());
         Expression h = ExpressionKt.div(x, s);
         Checker.check("m", h.unitSymbols());
@@ -103,7 +105,7 @@ public class TutorialTestLong {
         Expression s = ExpressionKt.times(new Metre(4), new Metre(5));
         Checker.check("L2", s.categorySymbols());
 
-        Expression x = NonSiUnitsKt.getL(20);
+        Expression x = getL(20);
         Checker.check("L3", x.categorySymbols());
 
         Expression h = ExpressionKt.div(x, s);
@@ -144,8 +146,8 @@ public class TutorialTestLong {
     private void testCompareTheSameTypes() {
         Checker.check(new Metre(5).compareTo(new Metre(4.1)) > 0);
 
-        Checker.check(ExpressionKt.times(NonSiUnitsKt.m3,20.2).compareTo(
-                ExpressionKt.times(NonSiUnitsKt.m3, 4.2)) > 0);
+        Checker.check(ExpressionKt.times(m3,20.2).compareTo(
+                ExpressionKt.times(m3, 4.2)) > 0);
 
     }
 
@@ -177,7 +179,7 @@ public class TutorialTestLong {
                                     )
                     );
 
-        Checker.check(TeslaKt.T,	ExpressionKt.div(WeberKt.Wb, NonSiUnitsKt.m2));
+        Checker.check(TeslaKt.T,	ExpressionKt.div(WeberKt.Wb, m2));
     }
 
     private void testPrefixes() {
@@ -192,11 +194,11 @@ public class TutorialTestLong {
         //How many cisterns are needed to achieve the same effect as in case of rain?
         //Reminder: density of watter is 1 kg/l
 
-        Expression s = NonSiUnitsKt.getHa(2.35);
+        Expression s = getHa(2.35);
         Expression ω = ExpressionKt.times(s, MetreKt.getMm(1.0)); //water volume
-        Expression ρ = ExpressionKt.div(new Kilogram(1.0), NonSiUnitsKt.l); //density of watter is 1 kg/l
+        Expression ρ = ExpressionKt.div(new Kilogram(1.0), l); //density of watter is 1 kg/l
         Expression τ = ExpressionKt.times(ω , ρ); //common water weight of rain
-        Expression n = ExpressionKt.div(τ, ExpressionKt.times(NonSiUnitsKt.t, 4));
+        Expression n = ExpressionKt.div(τ, ExpressionKt.times(t, 4));
         Checker.check(5.875, n.getValue());
 
     }
