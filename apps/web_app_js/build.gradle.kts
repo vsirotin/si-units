@@ -7,8 +7,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":kotunil"))
-    implementation(project(":js-lib"))
+    project(":kotunil")
+    project(":js-lib")
 }
 
 tasks.register("npmInstall") {
