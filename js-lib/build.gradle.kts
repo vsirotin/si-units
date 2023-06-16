@@ -1,18 +1,20 @@
-version = "4.1.2-SNAPSHOT"
+version = "4.1.1"
 
 dependencies {
     project(":kotunil")
+    project(":kotunil-generators")
 }
 
-//TODO tasks.register("publishJavaScriptLibLocally") {
-//
-//    doLast {
-//        exec {
-//            executable("npm")
-//            args("version 4.1.1")
-//        }
-//        println("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
-//    }
-//}
+val fromDir = "../build/js/packages/si-units-kotunil/kotlin"
+tasks.register<Copy>("copyOwnJsLib") {
+    from(layout.projectDirectory.file("${fromDir}/si-units-kotunil.js"),
+        layout.projectDirectory.file("${fromDir}/si-units-kotunil.js.map"))
+    into(layout.projectDirectory)
+}
 
+tasks.register<Copy>("copyStdJsLib") {
+    from(layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js"),
+        layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js.map"))
+    into(layout.projectDirectory)
+}
 
