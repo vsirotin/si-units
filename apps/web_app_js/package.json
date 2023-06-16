@@ -19,6 +19,6 @@
   "author": "Dr. Viktor Sirotin. www.sirotin.eu",
   "license": "Apache-2.0",
   "dependencies": {
-    "kotunil-js-lib": "file:../../js-lib"
+    "kotunil-js-lib": "4.0.1"
   }
 }
