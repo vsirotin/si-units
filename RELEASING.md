@@ -1,39 +1,14 @@
 # Releasing
-//TODO Update to actual strategy
-1. Update the `VERSION_NAME` in `gradle.properties` to the release version.
+From the experience of the first months of the project a modified 
+version numbering strategy instead of pure semantic versioning is selected. 
+Namely, the third component of the version number (so called path) 
+is incremented at each build. When increasing major number or minor number 
+the path number is manually set to 0.
 
-2. Update the `ReleaseNotes.md`:
+Entries in the ReleaseNotes are entered accordingly.
 
-3. Update the `README.md` so the "Usage" section reflects the new release version and the
-   snapshot section reflects the next "SNAPSHOT" version.
+A fully tested version is published once.
 
-4. Commit
+The libraries (JVM and JS) and individual apps are numbered separately.
 
-   ```
-   $ git commit -am "Prepare version X.Y.Z"
-   ```
-
-5. Tag
-
-   ```
-   $ git tag -am "Version X.Y.Z" X.Y.Z
-   ```
-
-6. Update the `VERSION_NAME` in `gradle.properties` to the next "SNAPSHOT" version.
-
-7. Commit
-
-   ```
-   $ git commit -am "Prepare next development version"
-   ```
-
-8. Push!
-
-   ```
-   $ git push && git push --tags
-   ```
-
-   This will trigger a GitHub Action workflow which will create a GitHub release and upload the
-   release artifacts to Sonatype Nexus.
-
-9. Visit [Sonatype Nexus](https://oss.sonatype.org/) and promote the artifact.
+The libraries (JVM and JS) are published separately.
