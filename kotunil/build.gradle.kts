@@ -161,6 +161,24 @@ extensions.configure<PublishingExtension> {
     }
 }
 
+val fromDir = "../build/js/packages/si-units-kotunil/kotlin"
+tasks.register<Copy>("copyOwnJsLib") {
+    from(layout.projectDirectory.file("${fromDir}/si-units-kotunil.js"),
+        layout.projectDirectory.file("${fromDir}/si-units-kotunil.js.map"))
+    into(layout.projectDirectory.file("js_dist"))
+}
+
+tasks.register<Copy>("copyStdJsLib") {
+    from(layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js"),
+        layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js.map"))
+    into(layout.projectDirectory.file("js_dist"))
+}
+
+tasks.build {
+    finalizedBy("copyOwnJsLib", "copyStdJsLib")
+}
+
+
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
 //        useInMemoryPgpKeys(
