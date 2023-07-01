@@ -199,17 +199,20 @@ repositories {
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:all:3.0.0")
+    implementation("eu.sirotin.kotunil:kotunil-jvm:X.Y.Z")
 }
 ```
+where X.Y.Z ist last published version of KotUniL in MavenCentral.
+You can see the number of this version at the head of this file after icon with 
+the text "maven-central". 
 
 Dependency for Maven/pom:
 
 ```xml
 <dependency>
     <groupId>eu.sirotin.kotunil</groupId>
-    <artifactId>all</artifactId>
-    <version>3.0.0</version>
+    <artifactId>kotunil-jvm</artifactId>
+    <version>X.Y.Z</version>
 </dependency>
 ```
 
@@ -219,7 +222,7 @@ At the moment KotUniL is developing rapidly.
 To enable you to try the latest features of KotUniL use the following configuration at KTS:
 
 ```kotlin
-implementation("eu.sirotin.kotunil:all:+")
+implementation("eu.sirotin.kotunil:kotunil-jvm:+")
 ```
 
 and by Maven:
