@@ -28,8 +28,6 @@ function testHappyGettingStarted1() {
     // For didactic reasons as introduce two auxiliary variables s and h.
     console.log("- Start testHappyGettingStarted1");
   //        val s = 4.m * 5.m
-          var s0 = m.times(5);
-          var s1 = m.times(s0);
           var s = m.times(4).timesExp(m.times(5));
   //        val v = 20.l
           var v = l.times(20);
@@ -45,8 +43,6 @@ function testHappyGettingStarted2() {
     //The same task as by testHappyGettingStarted1, but other solution.
     console.log("- Start testHappyGettingStarted2");
   //        val s = 4.m * 5.m
-          var s0 = new Metre(5);
-          var s1 = m.times(s0);
           var s = new Metre(4).timesExp(new Metre(5));
   //        val v = 20.l
           var v = l.times(20);
