@@ -1,6 +1,6 @@
-# KotUniL JavaScript Library 
+# KotUniL JavaScript/TypeScript Library 
 
-JavaScript-variant of Kotlin's KotUniL library. 
+JavaScript/TypeScript-variant of Kotlin's KotUniL library. 
 
 **KotUniL** covers all units of **International System of Units** (SI)  
 like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units) 
