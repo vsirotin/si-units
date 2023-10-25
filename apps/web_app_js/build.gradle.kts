@@ -23,7 +23,7 @@ tasks.register("installFromLocalDirectory") {
     doLast {
         exec {
             executable("npm")
-            args("install", "../../js-lib")
+            args("install", "../../js-lib/dist")
         }
         logger.quiet("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
     }
