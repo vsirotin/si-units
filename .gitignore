@@ -1,7 +1,6 @@
 build
 .gradle
 .idea
-/kotlin-js-store/yarn.lock
 /apps/web_app_js/node_modules/
 /TODO.txt
 /local.properties
@@ -10,3 +9,5 @@ build
 /js-lib/si-units-kotunil.js
 /js-lib/si-units-kotunil.js.map
 /kotunil/js_dist/
+/apps/node_ts_app/node_modules/
+/kotlin-js-store/yarn.lock

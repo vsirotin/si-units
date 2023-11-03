@@ -5,7 +5,7 @@ import java.util.*
 version = "4.1.1"
 
 plugins {
-    kotlin("multiplatform") version "1.8.10"
+    kotlin("multiplatform") version "1.9.10"
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.8.10"
