@@ -5,15 +5,16 @@ dependencies {
     project(":kotunil-generators")
 }
 
-val fromDir = "../kotunil/js-dist"
+val fromDir = "../kotunil/build/dist/js/productionLibrary"
+val distDir = "${layout.projectDirectory}/dist"
 tasks.register<Copy>("copyLibs") {
-    from(file("${fromDir}/si-units-kotunil.js"),
-        file("${fromDir}/si-units-kotunil.d.ts"),
-        file("${fromDir}/si-units-kotunil.js.map"),
-        file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js"),
-        file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js.map")
+    from(file("fromDir")
     )
-    into("${layout.projectDirectory}/dist1")
+    into(distDir)
+    finalizedBy("jsonUpdate")
+
+    dependsOn(":kotunil:jsTest")
+    logger.quiet("Copying completed")
 }
 
 tasks.register("installToGlobalMPM") {
@@ -21,12 +22,44 @@ tasks.register("installToGlobalMPM") {
         exec {
             executable("npm")
             args("publish")
-            workingDir("./dist")
+            workingDir(distDir)
         }
 
-        logger.quiet("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
+        logger.quiet("Installation completed")
     }
 }
 
+//For implementation details see:
+// https://stackoverflow.com/questions/65360274/custom-gradle-task-that-accesses-top-level-fails-with-the-constructor-shoul
+open class PackageJsonModifierTask : DefaultTask() {
+    @Input
+    var packageJsonPath : String = ""
 
+    @Input
+    var addFilePath : String = ""
 
+    @TaskAction
+    fun updatePackageJson() {
+
+        val packageJsonFile = File(packageJsonPath)
+        val linesOriginal = packageJsonFile.readLines()
+        if (linesOriginal.isEmpty()) throw java.lang.IllegalArgumentException("File $packageJsonPath is empty")
+        val linesBeforeLast = linesOriginal.subList(0, linesOriginal.size - 2).toMutableList()
+        val lineBeforeLast = linesOriginal[linesOriginal.size - 2] + ","
+        linesBeforeLast.add(lineBeforeLast)
+
+        val linesAdd = File(addFilePath).readLines()
+        if (linesAdd.isEmpty())throw java.lang.IllegalArgumentException("File $addFilePath is empty")
+
+        linesBeforeLast.addAll(linesAdd)
+        linesBeforeLast.add(linesOriginal.last())
+        packageJsonFile.writeText(linesBeforeLast.joinToString("\n"))
+        logger.quiet("File $packageJsonPath updated.")
+    }
+}
+
+tasks.register<PackageJsonModifierTask>("jsonUpdate"){
+
+    packageJsonPath = "${distDir}/package.json"
+    addFilePath = "${layout.projectDirectory}/resources/package.json.add.txt"
+}

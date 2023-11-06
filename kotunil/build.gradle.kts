@@ -2,6 +2,7 @@
 import java.io.FileInputStream
 import java.util.*
 
+
 version = "4.1.1"
 
 plugins {
@@ -10,6 +11,8 @@ plugins {
     id("signing")
     id("org.jetbrains.dokka") version "1.8.10"
 }
+
+//kotlin.mpp.applyDefaultHierarchyTemplate=false
 
 dependencies {
     project(":kotunil-generators")
@@ -43,6 +46,7 @@ kotlin {
                     timeout = timeoutMs
                 }
             }
+            generateTypeScriptDefinitions()
         }
         nodejs {
             testTask {
@@ -94,9 +98,7 @@ kotlin {
     }
 }
 
-apply(plugin = "org.jetbrains.dokka")
-apply(plugin = "maven-publish")
-apply(plugin = "signing")
+
 
 val propertiesFile = File(rootProject.rootDir, "local.properties")
 val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
