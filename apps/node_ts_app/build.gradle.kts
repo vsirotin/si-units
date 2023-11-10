@@ -7,22 +7,44 @@ plugins {
     id("com.github.node-gradle.node") version "7.0.1"
 }
 
-tasks.register<com.github.gradle.node.task.NodeTask>("statJS"){
-    script.set(file("src/scripts/my.js"))
+tasks.register<com.github.gradle.node.task.NodeTask>("startConsole"){
+    script.set(file("dist/startConsole.js"))
+}
 
-    dependsOn("installKotUniL")
+tasks.register<com.github.gradle.node.task.NodeTask>("startWeb"){
+    script.set(file("dist/index.js"))
+    args.addAll("run", "dev")
+    dependsOn("build")
+    logger.quiet("to complete watching enter Ctrl + C")
 }
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("installAllProduction"){
-    args.addAll("install", "--omit=dev")
+    args.addAll("install", "express", "mongoose", "cors", "mongodb", "dotenv", "nodemon")
 }
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("installAllDevelopment"){
-    args.addAll("install", "-D",)
+    args.addAll("install", "-D", "typescript", "ts-node-dev", "@types/express", "@types/cors")
+    dependsOn("installAllProduction")
 }
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("installTypeScript"){
     args.addAll("install", "typescript", "--save-dev")
 }
+
+tasks.register("compileTypeScript") {
+    doLast {
+        exec {
+            executable("tsc")
+        }
+        logger.quiet("Please see result of compilation in 'dist' directory")
+    }
+}
+
+tasks.register<com.github.gradle.node.npm.task.NpmTask>("build"){
+    args.addAll("run", "build")
+}
+
+
+
 
 

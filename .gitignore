@@ -12,3 +12,4 @@ build
 /apps/node_ts_app/node_modules/
 /kotlin-js-store/yarn.lock
 /js-lib/dist/
+/apps/node_ts_app/dist/
