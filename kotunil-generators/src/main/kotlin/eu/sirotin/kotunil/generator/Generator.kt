@@ -37,10 +37,12 @@ const val ROOT_PATH_TEST_JVM = "${ROOT_SRC}jvmTest$PREFIX"
  * Generates production and test unit classes. Not relevant for library users.
  */
 fun main() {
+    println("Generation starts....")
     generateKotlinLibraryFiles()
     generateKotlinTestFiles()
     generateJavaScriptFiles()
     GeneratorApps.generateApplications()
+    println("Generation completed")
 }
 
 private fun generateKotlinLibraryFiles() {
