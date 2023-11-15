@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  (mol * (s `^` -1))
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for catalytic activity.
 */

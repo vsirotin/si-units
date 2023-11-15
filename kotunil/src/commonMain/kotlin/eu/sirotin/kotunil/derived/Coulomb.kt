@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  s*A
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for electric charge.
 */

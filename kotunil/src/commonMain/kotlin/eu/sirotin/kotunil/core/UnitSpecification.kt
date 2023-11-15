@@ -39,6 +39,7 @@ data class UnitSpecification<T : Expression>(val unitSymbol: String,
 /**
  * Defines functions for pretty printing and dimensional analysis of measured units.
  */
+@JsExport
 interface UnitPresentation {
     /**
      * Returns unit symbol of measured units, e.g. 'm/s'

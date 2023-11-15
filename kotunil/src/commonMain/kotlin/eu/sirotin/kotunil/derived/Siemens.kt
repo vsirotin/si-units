@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  (kg `^` -1) * (m `^` -2) *(s `^` 3)* (A `^` 2)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for electrical conductance.
 */

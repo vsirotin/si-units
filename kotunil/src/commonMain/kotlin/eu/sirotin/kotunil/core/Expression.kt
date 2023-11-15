@@ -24,9 +24,9 @@ package eu.sirotin.kotunil.core
 
 import kotlin.js.JsExport
 import kotlin.js.JsName
-import kotlin.math.pow
 import kotlin.math.abs
 import kotlin.math.max
+import kotlin.math.pow
 
 /**
  * Prefix for mostly run-time errors.
@@ -40,6 +40,7 @@ const val COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimen
 const val ε = 1.0E-12
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
  * Implements expression of unit with given [value] and [dimensions]
  * @constructor Creates expression of unit with given [value] and [dimensions]

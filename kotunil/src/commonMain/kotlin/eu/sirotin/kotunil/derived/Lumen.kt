@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  ((cd `^` 1)*sr)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for luminous flux.
 */
