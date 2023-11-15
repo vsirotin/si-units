@@ -1,22 +1,28 @@
 //import * as eu1 from 'kotunil-js-lib/si-units-kotunil.js'
 import {eu} from 'kotunil-js-lib'
-import * as s1  from 'kotunil-js-lib'
+//import * as s1  from 'kotunil-js-lib'
+import {checkObjects, numberChecks, numberErrors, getNumberCheckedObjects} from './checker'
+
 console.log("eu=" + eu.sirotin.kotunil.base)
 const Base = eu.sirotin.kotunil.base
 const a = Base.A
+const b = Base.Tcd
 
- console.log("a1=" + a)
+console.log("In TS  a=" + JSON.stringify(a));
+console.log("In TS  a.constructor.name =" +  a.constructor.name);
+console.log("In TS  b=" + JSON.stringify(b));
+console.log("In TS  b.constructor.name =" +  b.constructor.name);
 
- console.log("eu=" + JSON.stringify(eu) )
- console.log("s1=" + JSON.stringify(s1) )
+const c = a.timesExp(b);
+console.log("In TS  c.constructor.name =" +  c.constructor.name);
+console.log("In TS c=" + JSON.stringify(c));
+console.log("In TS c.unitSymbols=" + JSON.stringify(c.unitSymbols()));
 
-// console.log(eu1)
-//
-// const message: string = 'm=' + eu1.eu.sirotin.kotunil.base.A.dimensions.factors
-// console.log(message)
-//
-// const a1 = new eu1.eu.sirotin.kotunil.base.Ampere(12)
-// console.log("a1=" + a1)
-//
-// const A = eu1.eu.sirotin.kotunil.base.A
-// console.log("A=" + A)
+
+
+checkObjects(a, b);
+
+ console.log("Number tested objects=" + getNumberCheckedObjects() )
+ console.log("Number errors=" +  numberErrors )
+// console.log("s1=" + JSON.stringify(s1) )
+

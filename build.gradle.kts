@@ -10,11 +10,28 @@ allprojects {
 }
 
 
-val v: String = ""
 plugins {
     kotlin("multiplatform") version "1.9.10" apply false
 //    id("org.jetbrains.dokka") version "1.8.10"
 }
+
+tasks.register("cleanAll"){
+    dependsOn(":kotunil-generators:clean")
+    dependsOn(":kotunil:clean")
+    dependsOn(":js-lib:clean")
+    dependsOn(":apps:node_ts_app:clean")
+    dependsOn(":apps:web_app_js:clean")
+}
+
+tasks.register("buildAll"){
+    dependsOn(":kotunil-generators:build")
+    dependsOn(":kotunil:build")
+    dependsOn(":js-lib:build")
+    dependsOn(":apps:node_ts_app:build")
+    dependsOn(":apps:web_app_js:build")
+}
+
+
 
 
 

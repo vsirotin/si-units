@@ -9,6 +9,7 @@ plugins {
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startConsole"){
     script.set(file("dist/startConsole.js"))
+    dependsOn("build")
 }
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startWeb"){
@@ -42,6 +43,14 @@ tasks.register("compileTypeScript") {
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("build"){
     args.addAll("run", "build")
+    dependsOn("installAllDevelopment")
+}
+
+val distDir = "${layout.projectDirectory}/dist"
+val nodeDir = "${layout.projectDirectory}/node_modules"
+tasks.register<Delete>("clean") {
+    delete(file(distDir))
+    delete(file(nodeDir))
 }
 
 

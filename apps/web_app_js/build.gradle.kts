@@ -29,5 +29,15 @@ tasks.register("installFromLocalDirectory") {
     }
 }
 
+val nodeDir = "${layout.projectDirectory}/node_modules"
+tasks.register<Delete>("clean") {
+    delete(file(nodeDir))
+}
+
+tasks.register<DefaultTask>("build") {
+    dependsOn(":js-lib:build")
+    dependsOn("installFromLocalDirectory")
+}
+
 
 
