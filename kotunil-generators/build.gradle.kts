@@ -34,7 +34,8 @@ tasks.register("generateAll") {
     doLast {
         exec {
             executable("java")
-            args("-jar", "build/libs/kotunil-generators.jar")
+            args("-jar", "kotunil-generators/build/libs/kotunil-generators.jar")
+            workingDir = rootDir
         }
     }
 
