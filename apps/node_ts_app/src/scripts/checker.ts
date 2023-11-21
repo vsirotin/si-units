@@ -9,6 +9,7 @@ export function getNumberCheckedObjects(){
 
 export function checkValues(a : number|string, b : number|string){
     numberChecks++;
+
     if (typeof a === 'string'){
         if(a == b)return;
     }else{

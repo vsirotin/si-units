@@ -5,12 +5,12 @@ const val ROOT_JS_LIB = "${ROOT_JS}main/resources/libs/"
 const val ROOT_JS_TESTS = "${ROOT_JS}main/javascript/tests/"
 
 fun generateJavaScriptFiles() {
-    generateSiUnitsBaseJsFiles()
-    generateSiUnitsDerivedJsFiles()
+//    generateSiUnitsBaseJsFiles()
+//    generateSiUnitsDerivedJsFiles()
+//    generateCurrenciesJsFile()
 
     generateSiUnitsTestBaseJsFiles()
     generateSiUnitsTestDerivedJsFiles()
-    generateCurrenciesJsFile()
     generateCurrenciesTestJsFile()
 
 }

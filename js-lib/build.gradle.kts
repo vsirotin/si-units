@@ -11,7 +11,6 @@ tasks.register<Copy>("copyLibs") {
     from(file(fromDir))
     into(distDir)
 
-    dependsOn(":kotunil:build")
     inputs.file("${fromDir}/package.json") //To make this task depend on this file
     logger.quiet("Copying completed")
 }
@@ -33,6 +32,7 @@ tasks.register<Delete>("clean") {
 }
 
 tasks.register<DefaultTask>("build") {
+    dependsOn(":kotunil:build")
     dependsOn("copyLibs")
 }
 

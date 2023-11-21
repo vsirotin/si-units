@@ -24,8 +24,6 @@ package eu.sirotin.kotunil.generator
 
 import java.io.File
 import java.nio.file.Files
-import kotlin.reflect.KFunction4
-import kotlin.reflect.KFunction5
 
 /**
  * Descriptions of base SI-Units.
@@ -84,9 +82,9 @@ fun generateBaseClassFile(
     generatorPrefixesPart: (String, String, String, List<SiPrefix>)-> String,
     generatorFileName: (String, String)->String = ::generateFileName
 ) {
-    val className = siUnitDescription.name.first().uppercaseChar() + siUnitDescription.name.drop(1)
+    val className = generateClassName(siUnitDescription.name)
     val fileName = generatorFileName(className, fileExtension)
-    val prefixes = if (className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+    val prefixes = transformPrefixes(className)
     val file = dir.resolve(fileName)
     file.delete()
     val classText = generatorHeadPart(
@@ -100,6 +98,12 @@ fun generateBaseClassFile(
 
     file.writeText(classText)
 }
+
+fun transformPrefixes(className: String) =
+    if (className != "Kilogram") siPrefixes else generatePrefixesForKilogram()
+
+fun generateClassName(name: String) =
+    name.first().uppercaseChar() + name.drop(1)
 
 private fun generateFileName(className: String, fileExtension: String): String = "$className.$fileExtension"
 

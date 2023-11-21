@@ -9,7 +9,7 @@ plugins {
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startConsole"){
     script.set(file("dist/startConsole.js"))
-    dependsOn("build")
+//    dependsOn("build")
 }
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startWeb"){

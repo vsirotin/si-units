@@ -24,6 +24,7 @@ package eu.sirotin.kotunil.generator
 
 import eu.sirotin.kotunil.generator.apps.GeneratorApps
 import eu.sirotin.kotunil.generator.javascript.generateJavaScriptFiles
+import eu.sirotin.kotunil.generator.typescript.generateTypeScriptFiles
 
 const val ROOT_SRC = "kotunil/src/"
 const val PREFIX = "/kotlin/eu/sirotin/kotunil/"
@@ -41,6 +42,7 @@ fun main() {
     generateKotlinLibraryFiles()
     generateKotlinTestFiles()
     generateJavaScriptFiles()
+    generateTypeScriptFiles()
     GeneratorApps.generateApplications()
     println("Generation completed")
 }

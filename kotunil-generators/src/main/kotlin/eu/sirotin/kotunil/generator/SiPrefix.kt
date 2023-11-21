@@ -52,8 +52,11 @@ val siPrefixes: List<SiPrefix> = listOf(
 
 data class SiPrefix(val name: String, val symbol: String, val degree: Int)
 
-val specialSymbols = listOf("z", "y", "r", "q", "p", "m")
+//These symbols cases problems by generation of JS code because they have their uppercase counterparts, e.g. z vs Z
+//We wait up to this problem will be solved. At the moment they will be by JS ignored.
+//Workaround: to use "full name", e.g. millimetre instead mm.
+val problematicSymbols = listOf("z", "y", "r", "q", "p", "m")
 fun conditionalPush(prefix: String, s: String): String {
-    if(specialSymbols.contains(prefix))return ""
+    if(problematicSymbols.contains(prefix))return ""
     return s
 }
