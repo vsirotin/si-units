@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Second, s, quettasecond, Qs, ronnasecond, Rs, yottasecond, Ys, zettasecond, Zs, exasecond, Es, petasecond, Ps, terasecond, Ts, gigasecond, Gs, megasecond, Ms, kilosecond, ks, hectosecond, hs, decasecond, das, decisecond, ds, centisecond, cs, microsecond, μs, nanosecond, ns, femtosecond, fs, attosecond, as }}}} = eu;            
+const {sirotin: {kotunil: {base: {Second, quettasecond, Qs, ronnasecond, Rs, yottasecond, Ys, zettasecond, Zs, exasecond, Es, petasecond, Ps, terasecond, Ts, gigasecond, Gs, megasecond, Ms, kilosecond, ks, hectosecond, hs, decasecond, das, decisecond, ds, centisecond, cs, microsecond, μs, nanosecond, ns, femtosecond, fs, attosecond, as }}}} = eu;            
 export function testSecond() {
    console.log("-Start testSecond");      
     

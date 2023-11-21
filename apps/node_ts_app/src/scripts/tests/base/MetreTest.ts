@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Metre, m, quettametre, Qm, ronnametre, Rm, yottametre, Ym, zettametre, Zm, exametre, Em, petametre, Pm, terametre, Tm, gigametre, Gm, megametre, Mm, kilometre, km, hectometre, hm, decametre, dam, decimetre, dm, centimetre, cm, micrometre, μm, nanometre, nm, femtometre, fm, attometre, am }}}} = eu;            
+const {sirotin: {kotunil: {base: {Metre, quettametre, Qm, ronnametre, Rm, yottametre, Ym, zettametre, Zm, exametre, Em, petametre, Pm, terametre, Tm, gigametre, Gm, megametre, Mm, kilometre, km, hectometre, hm, decametre, dam, decimetre, dm, centimetre, cm, micrometre, μm, nanometre, nm, femtometre, fm, attometre, am }}}} = eu;            
 export function testMetre() {
    console.log("-Start testMetre");      
     

@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Candela, cd, quettacandela, Qcd, ronnacandela, Rcd, yottacandela, Ycd, zettacandela, Zcd, exacandela, Ecd, petacandela, Pcd, teracandela, Tcd, gigacandela, Gcd, megacandela, Mcd, kilocandela, kcd, hectocandela, hcd, decacandela, dacd, decicandela, dcd, centicandela, ccd, microcandela, μcd, nanocandela, ncd, femtocandela, fcd, attocandela, acd }}}} = eu;            
+const {sirotin: {kotunil: {base: {Candela, quettacandela, Qcd, ronnacandela, Rcd, yottacandela, Ycd, zettacandela, Zcd, exacandela, Ecd, petacandela, Pcd, teracandela, Tcd, gigacandela, Gcd, megacandela, Mcd, kilocandela, kcd, hectocandela, hcd, decacandela, dacd, decicandela, dcd, centicandela, ccd, microcandela, μcd, nanocandela, ncd, femtocandela, fcd, attocandela, acd }}}} = eu;            
 export function testCandela() {
    console.log("-Start testCandela");      
     

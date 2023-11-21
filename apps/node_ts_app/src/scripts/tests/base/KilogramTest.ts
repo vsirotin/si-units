@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Kilogram, kg, quettakilogram, Qkg, ronnakilogram, Rkg, yottakilogram, Ykg, zettakilogram, Zkg, exakilogram, Ekg, petakilogram, Pkg, terakilogram, Tkg, gigakilogram, Gkg, megakilogram, Mkg, hectokilogram, hkg, decakilogram, dakg, decikilogram, dkg, centikilogram, ckg, microkilogram, μkg, nanokilogram, nkg, femtokilogram, fkg, attokilogram, akg }}}} = eu;            
+const {sirotin: {kotunil: {base: {Kilogram, quettakilogram, Qkg, ronnakilogram, Rkg, yottakilogram, Ykg, zettakilogram, Zkg, exakilogram, Ekg, petakilogram, Pkg, terakilogram, Tkg, gigakilogram, Gkg, megakilogram, Mkg, hectokilogram, hkg, decakilogram, dakg, decikilogram, dkg, centikilogram, ckg, microkilogram, μkg, nanokilogram, nkg, femtokilogram, fkg, attokilogram, akg }}}} = eu;            
 export function testKilogram() {
    console.log("-Start testKilogram");      
     

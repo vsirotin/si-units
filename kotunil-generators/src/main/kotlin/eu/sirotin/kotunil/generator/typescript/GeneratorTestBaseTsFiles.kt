@@ -38,16 +38,16 @@ export function testBase() {
 
 }
 
-fun generateImports(siUnitDescription: List<SiUnitDescription>): String {
+private fun generateImports(siUnitDescription: List<SiUnitDescription>): String {
     return siUnitDescription.joinToString(System.lineSeparator()) { generateImportLine(it.name) }
 }
 
-fun generateImportLine(name: String): String {
+private fun generateImportLine(name: String): String {
     val className = generateClassName(name)
-    return "import {test$className} from './${className}Test';"
+    return "import {test$className} from './${className}Test'"
 }
 
-fun generateMainFileLine(name: String): String {
+private fun generateMainFileLine(name: String): String {
     return "   test${generateClassName(name)}()"
 }
 
@@ -83,7 +83,7 @@ export function test$className() {
 
 
 private fun generateObjectNames(className: String, unitSymbol: String): String {
-    val objectNamesPrefix = "const {sirotin: {kotunil: {base: {$className, $unitSymbol, "
+    val objectNamesPrefix = "const {sirotin: {kotunil: {base: {$className, "
     val unitName = className.lowercase()
     val prefixes = transformPrefixes(className)
     val midPart = prefixes
@@ -93,7 +93,7 @@ private fun generateObjectNames(className: String, unitSymbol: String): String {
     return objectNamesPrefix + midPart + tail
 }
 
-fun generateObjectNamesPair(siPrefix: SiPrefix, unitName: String, unitSymbol: String): String {
+private fun generateObjectNamesPair(siPrefix: SiPrefix, unitName: String, unitSymbol: String): String {
     return "${siPrefix.name}${unitName}, ${siPrefix.symbol}$unitSymbol"
 }
 

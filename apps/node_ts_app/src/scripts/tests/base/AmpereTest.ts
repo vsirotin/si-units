@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Ampere, A, quettaampere, QA, ronnaampere, RA, yottaampere, YA, zettaampere, ZA, exaampere, EA, petaampere, PA, teraampere, TA, gigaampere, GA, megaampere, MA, kiloampere, kA, hectoampere, hA, decaampere, daA, deciampere, dA, centiampere, cA, microampere, μA, nanoampere, nA, femtoampere, fA, attoampere, aA }}}} = eu;            
+const {sirotin: {kotunil: {base: {Ampere, quettaampere, QA, ronnaampere, RA, yottaampere, YA, zettaampere, ZA, exaampere, EA, petaampere, PA, teraampere, TA, gigaampere, GA, megaampere, MA, kiloampere, kA, hectoampere, hA, decaampere, daA, deciampere, dA, centiampere, cA, microampere, μA, nanoampere, nA, femtoampere, fA, attoampere, aA }}}} = eu;            
 export function testAmpere() {
    console.log("-Start testAmpere");      
     

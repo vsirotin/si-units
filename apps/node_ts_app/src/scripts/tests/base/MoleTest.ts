@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Mole, mol, quettamole, Qmol, ronnamole, Rmol, yottamole, Ymol, zettamole, Zmol, examole, Emol, petamole, Pmol, teramole, Tmol, gigamole, Gmol, megamole, Mmol, kilomole, kmol, hectomole, hmol, decamole, damol, decimole, dmol, centimole, cmol, micromole, μmol, nanomole, nmol, femtomole, fmol, attomole, amol }}}} = eu;            
+const {sirotin: {kotunil: {base: {Mole, quettamole, Qmol, ronnamole, Rmol, yottamole, Ymol, zettamole, Zmol, examole, Emol, petamole, Pmol, teramole, Tmol, gigamole, Gmol, megamole, Mmol, kilomole, kmol, hectomole, hmol, decamole, damol, decimole, dmol, centimole, cmol, micromole, μmol, nanomole, nmol, femtomole, fmol, attomole, amol }}}} = eu;            
 export function testMole() {
    console.log("-Start testMole");      
     

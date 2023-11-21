@@ -5,7 +5,7 @@ const val ROOT_TS_TESTS = "${ROOT_TS}scripts/tests/"
 
 fun generateTypeScriptFiles() {
     generateSiUnitsTestBaseTsFiles()
-//    generateSiUnitsTestDerivedJsFiles()
+    generateSiUnitsTestDerivedTsFiles()
 //    generateCurrenciesTestJsFile()
 
 }

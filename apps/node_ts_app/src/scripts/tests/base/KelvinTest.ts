@@ -1,7 +1,7 @@
   
 import {checkObjects, checkValues, checkBoolean} from '../../checker';
 import {eu} from 'kotunil-js-lib';  
-const {sirotin: {kotunil: {base: {Kelvin, K, quettakelvin, QK, ronnakelvin, RK, yottakelvin, YK, zettakelvin, ZK, exakelvin, EK, petakelvin, PK, terakelvin, TK, gigakelvin, GK, megakelvin, MK, kilokelvin, kK, hectokelvin, hK, decakelvin, daK, decikelvin, dK, centikelvin, cK, microkelvin, μK, nanokelvin, nK, femtokelvin, fK, attokelvin, aK }}}} = eu;            
+const {sirotin: {kotunil: {base: {Kelvin, quettakelvin, QK, ronnakelvin, RK, yottakelvin, YK, zettakelvin, ZK, exakelvin, EK, petakelvin, PK, terakelvin, TK, gigakelvin, GK, megakelvin, MK, kilokelvin, kK, hectokelvin, hK, decakelvin, daK, decikelvin, dK, centikelvin, cK, microkelvin, μK, nanokelvin, nK, femtokelvin, fK, attokelvin, aK }}}} = eu;            
 export function testKelvin() {
    console.log("-Start testKelvin");      
     
