@@ -1,4 +1,4 @@
-package eu.sirotin.kotunil.generator.javascript
+package eu.sirotin.kotunil.generator.typescript
 
 
 import eu.sirotin.kotunil.generator.currency.CurrencyDescription
@@ -6,29 +6,38 @@ import eu.sirotin.kotunil.generator.currency.currencyDescriptions
 import java.io.File
 import java.nio.file.Files
 
-private const val HEAD = """
-function testCurrencies() {
-    console.log("Start testCurrencies");    
-"""
 
 private const val TAIL = """
     console.log("Fin testCurrencies");
 }"""
 
-fun generateCurrenciesTestJsFile() {
+fun generateCurrenciesTestTsFile() {
 
-    val dirPath = "${ROOT_JS_TESTS}currency"
+    val head = """
+import {checkObjects} from '../../checker'
+import {eu} from 'kotunil-js-lib'
+const {sirotin: {kotunil: {currency: {${generateCurrencyPairs(currencyDescriptions)}}}}} = eu
+    
+export function testCurrencies() {
+    console.log("Start testCurrencies");    
+"""
+
+    val dirPath = "${ROOT_TS_TESTS}currency"
     val dir = File(dirPath)
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
-    val fileName = "CurrenciesTest.js"
+    val fileName = "CurrenciesTest.ts"
 
     val file = dir.resolve(fileName)
     file.delete()
 
-    file.appendText(HEAD)
+    file.appendText(head)
     currencyDescriptions.forEach { file.appendText(generateCurrencyDefinition(it))}
     file.appendText(TAIL)
+}
+
+private fun generateCurrencyPairs(currencyDescriptions: List<CurrencyDescription>): String {
+    return currencyDescriptions.joinToString(", ") { "${it.name}, ${it.code}" }
 }
 
 

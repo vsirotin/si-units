@@ -1,8 +1,8 @@
 package eu.sirotin.kotunil.generator.javascript
 
 
-import eu.sirotin.kotunil.generator.CurrencyDescription
-import eu.sirotin.kotunil.generator.currencyDescriptions
+import eu.sirotin.kotunil.generator.currency.CurrencyDescription
+import eu.sirotin.kotunil.generator.currency.currencyDescriptions
 import java.io.File
 import java.nio.file.Files
 

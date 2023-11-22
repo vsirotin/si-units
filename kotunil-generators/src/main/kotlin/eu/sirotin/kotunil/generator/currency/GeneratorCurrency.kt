@@ -20,7 +20,13 @@
  *
  */
 
-package eu.sirotin.kotunil.generator
+package eu.sirotin.kotunil.generator.currency
+
+import eu.sirotin.kotunil.generator.ROOT_PATH_SOURCE_COMMON
+import eu.sirotin.kotunil.generator.ROOT_PATH_SOURCE_JVM
+import eu.sirotin.kotunil.generator.ROOT_PATH_TEST_COMMON
+import eu.sirotin.kotunil.generator.ROOT_PATH_TEST_JVM
+import eu.sirotin.kotunil.generator.generateFiles
 
 const val TEST_SYMBOL_IMPORTS = """
 import eu.sirotin.kotunil.core.div
@@ -85,7 +91,7 @@ fun generateCurrencies() {
     generateCurrenciesFiles(fileExtension, targetDirPath, generatorCurrencyFileContent)
 
     //Generate JVM part
-    val generatorJvmName = fun(cd:CurrencyDescription): String = "${cd.name}Jvm.kt"
+    val generatorJvmName = fun(cd: CurrencyDescription): String = "${cd.name}Jvm.kt"
     generateFiles("${ROOT_PATH_SOURCE_JVM}currency",
         currencyDescriptions,
         ::generateCurrencyJvmPart,
@@ -112,7 +118,7 @@ fun generateCurrenciesFiles(
  */
 fun generateTestsCurrencies() {
     //Generate common part
-    val generatorCommonName = fun(cd:CurrencyDescription): String = "${cd.name}Test.kt"
+    val generatorCommonName = fun(cd: CurrencyDescription): String = "${cd.name}Test.kt"
     generateFiles("${ROOT_PATH_TEST_COMMON}currency",
         currencyDescriptions,
         ::generateCurrencyTestClass,
@@ -120,7 +126,7 @@ fun generateTestsCurrencies() {
     )
 
     //Generate JVM part
-    val generatorJvmName = fun(cd:CurrencyDescription): String = "${cd.name}JvmTest.kt"
+    val generatorJvmName = fun(cd: CurrencyDescription): String = "${cd.name}JvmTest.kt"
     generateFiles("${ROOT_PATH_TEST_JVM}currency",
         currencyDescriptions,
         ::generateCurrencyTestJvmPart,

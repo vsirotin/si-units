@@ -22,8 +22,8 @@
 
 package eu.sirotin.kotunil.generator.apps.jvm.kotlin
 
-import eu.sirotin.kotunil.generator.CurrencyDescription
-import eu.sirotin.kotunil.generator.currencyDescriptions
+import eu.sirotin.kotunil.generator.currency.CurrencyDescription
+import eu.sirotin.kotunil.generator.currency.currencyDescriptions
 import eu.sirotin.kotunil.generator.generateFiles
 
 private val testClasses = mutableListOf<String>()

@@ -23,6 +23,8 @@
 package eu.sirotin.kotunil.generator
 
 import eu.sirotin.kotunil.generator.apps.GeneratorApps
+import eu.sirotin.kotunil.generator.currency.generateCurrencies
+import eu.sirotin.kotunil.generator.currency.generateTestsCurrencies
 import eu.sirotin.kotunil.generator.javascript.generateJavaScriptFiles
 import eu.sirotin.kotunil.generator.typescript.generateTypeScriptFiles
 
