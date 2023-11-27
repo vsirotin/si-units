@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotunil/JS Test Page</title>
+</head>
+<body>
+    <h1>Kotunil/JS Test Page</h1>
+
+    <h2>Test Statistics:</h2>
+    <p>Number tests (checks): <nobr id="number-checks">NO SET</nobr> </p>
+    <p>Number KotUniL's tested objects: <nobr id="number-objects">NO SET</nobr> </p>
+    <p>Number errors: <nobr id="number-errors">NO SET</nobr> </p>
+
+    <script type="text/javascript" src="lib/kotlin-kotlin-stdlib-js-ir.js"></script>
+    <script type="text/javascript" src="lib/kotunil-js-lib.js"></script>
+
+    <script type="text/javascript" src="/src/scripts/tests/Starter.js"></script>
+
+    <script type="module" src="/src/scripts/tests/checker.js"></script>
+
+    <script type="module" src="/src/scripts/tests/base/SecondTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/MetreTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/KilogramTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/AmpereTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/KelvinTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/MoleTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/CandelaTest.js"></script>
+    <script type="module" src="/src/scripts/tests/base/BaseTest.js"></script>
+
+    <script type="module" src="/src/scripts/tests/derived/RadianTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/SteradianTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/HertzTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/NewtonTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/PascalTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/JouleTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/WattTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/CoulombTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/VoltTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/FaradTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/OhmTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/SiemensTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/WeberTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/TeslaTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/HenryTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/LumenTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/LuxTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/BecquerelTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/GrayTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/SievertTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/KatalTest.js"></script>
+    <script type="module" src="/src/scripts/tests/derived/DerivedTest.js"></script>
+
+    <script type="module" src="/src/scripts/tests/specialunits/SpecialUnitsTest.js"></script>
+    <script type="module" src="/src/scripts/tests/currency/CurrenciesTest.js"></script>
+    <script type="module" src="/src/scripts/tests/TutorialTest.js"></script>
+
+    <script type="module">
+    
+        import {testTutorial} from '/src/scripts/tests/TutorialTest.js'
+        testTutorial()
+
+        import {testBase} from '/src/scripts/tests/base/BaseTest.js'
+        testBase()
+
+        import {testDerived} from '/src/scripts/tests/derived/DerivedTest.js'
+        testDerived()
+
+        import {testSpecialUnits} from '/src/scripts/tests/specialunits/SpecialUnitsTest.js'
+        testSpecialUnits()
+
+        import {testCurrencies} from '/src/scripts/tests/currency/CurrenciesTest.js'
+        testCurrencies()
+
+        import {numberChecks, numberErrors, getNumberCheckedObjects} from '/src/scripts/tests/checker.js'
+        console.log("Number checks=" + numberChecks )
+        console.log("Number tested objects=" + getNumberCheckedObjects() )
+        console.log("Number errors=" +  numberErrors )
+
+        document.getElementById("number-checks").innerHTML = "" + numberChecks;
+        document.getElementById("number-objects").innerHTML = getNumberCheckedObjects();
+        document.getElementById("number-errors").innerHTML = numberErrors;
+    </script>
+</body>
+</html>

@@ -60,15 +60,15 @@ fun generateSiUnitsBaseClasses() {
 
 fun generateClassFiles(
     dir: File,
-    generatorClassFile: (SiUnitDescription, File) -> Unit) {
+    generatorClassFile: (SiUnitDescription, File, String) -> Unit,
+    fileExtension: String = "kt") {
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes
-    siUnitDescriptions.forEach { generatorClassFile(it, dir) }
+    siUnitDescriptions.forEach { generatorClassFile(it, dir, fileExtension) }
 }
 
-private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File) {
-    val fileExtension = "kt"
+private fun generateSiUnitBaseClass(siUnitDescription: SiUnitDescription, dir: File, fileExtension: String) {
     val generatorHeadPart = ::generateHeadPart
     val generatorPrefixesPart = ::generatePrefixes
     generateBaseClassFile(siUnitDescription, fileExtension, dir, generatorHeadPart, generatorPrefixesPart)

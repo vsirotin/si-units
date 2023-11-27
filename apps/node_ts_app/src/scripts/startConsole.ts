@@ -1,7 +1,7 @@
 import {numberChecks, numberErrors, getNumberCheckedObjects} from './checker'
 import {testTutorial} from './tests/TutorialTest'
-import {testBase} from './tests/base/BaseTSTest'
-import {testDerived} from './tests/derived/DerivedTSTest'
+import {testBase} from './tests/base/BaseTest'
+import {testDerived} from './tests/derived/DerivedTest'
 import {testSpecialUnits} from './tests/specialunits/SpecialUnitsTest'
 import {testCurrencies} from './tests/currency/CurrenciesTest'
 

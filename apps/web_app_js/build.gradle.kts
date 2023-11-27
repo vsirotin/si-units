@@ -9,34 +9,24 @@ dependencies {
     project(":js-lib")
 }
 
-tasks.register("installFromNpmGlobal") {
-    doLast {
-        exec {
-            executable("npm")
-            args("i")
-        }
-        logger.quiet("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
-    }
+//val fromDir = "${project.parent?.parent?.projectDir}/kotunil/build/dist/js/productionLibrary"
+val fromDir = "${project.parent?.parent?.projectDir}/js-lib/dist"
+val libDir = "${layout.projectDirectory}/lib"
+tasks.register<Copy>("copyLibs") {
+    from(file(fromDir))
+    into(file(libDir))
+
+    inputs.file("${fromDir}/package.json") //To make this task depend on this file
+    logger.quiet("Copying completed from $fromDir into $libDir")
 }
 
-tasks.register("installFromLocalDirectory") {
-    doLast {
-        exec {
-            executable("npm")
-            args("install", "../../js-lib/dist")
-        }
-        logger.quiet("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
-    }
-}
-
-val nodeDir = "${layout.projectDirectory}/node_modules"
 tasks.register<Delete>("clean") {
-    delete(file(nodeDir))
+    delete(file(libDir))
 }
 
 tasks.register<DefaultTask>("build") {
     dependsOn(":js-lib:build")
-    dependsOn("installFromLocalDirectory")
+    dependsOn("copyLibs")
 }
 
 

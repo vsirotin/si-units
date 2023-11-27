@@ -1,13 +1,11 @@
-import {checkObjects, checkValues, checkBoolean} from '../checker';
-import {eu} from 'kotunil-js-lib';
+import {checkObjects, checkValues, checkBoolean} from '/src/scripts/tests/checker.js';
+////import {eu} from 'kotunil-js-lib';
 const {sirotin: {kotunil: {base: {Metre, m, millimetre, km, μm, Second, s, Kilogram, kg, A} }}} = eu;
 const {sirotin: {kotunil: {core: {ε} }}} = eu;
 const {sirotin: {kotunil: {specialunits: {l, m2, m3, ha, t} }}} = eu;
 const {sirotin: {kotunil: {derived: {T, Wb} }}} = eu;
 
 const COMPATIBILITY_ERR_PREFIX = "Can't process objects with different dimensions:";
-
-
 export function testTutorial() {
 
     testHappyGettingStarted1();
@@ -112,8 +110,7 @@ function testErrors() {
     //Complex errors will be found in runtime:
     try {
         m.times(4).plus(s.times(2));
-    }catch (e: any) {
-        let err: Error = e
+    }catch (e) {
         if (e.message.startsWith(COMPATIBILITY_ERR_PREFIX)){
             console.log("- Fin testErrors");
             return;
@@ -145,9 +142,8 @@ function testCompareDifferentType() {
 
     try {
         v1.compare(v2);
-    }catch (e: any) {
-        let err: Error = e
-        if (err.message.startsWith(COMPATIBILITY_ERR_PREFIX)){
+    }catch (e) {
+        if (e.message.startsWith(COMPATIBILITY_ERR_PREFIX)){
            console.log("- Fin testCompareDifferentType");
            return;
         }

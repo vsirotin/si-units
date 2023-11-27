@@ -1,4 +1,3 @@
-
 group = "eu.sirotin.kotunil.app.ts-node"
 version = "0.0.1"
 
@@ -46,12 +45,25 @@ tasks.register<com.github.gradle.node.npm.task.NpmTask>("build"){
     dependsOn("installAllDevelopment")
 }
 
+fun File.deleteDirContent(){
+   this.walkBottomUp()
+       .filter { it != this }
+       .forEach { it.deleteRecursively() }
+}
+
 val distDir = "${layout.projectDirectory}/dist"
 val nodeDir = "${layout.projectDirectory}/node_modules"
+val testsDir = "${layout.projectDirectory}/src/scripts/tests/"
 tasks.register<Delete>("clean") {
     delete(file(distDir))
     delete(file(nodeDir))
+
+    file("${testsDir}/base").deleteDirContent()
+    file("${testsDir}/currency").deleteDirContent()
+    file("${testsDir}/derived").deleteDirContent()
 }
+
+
 
 
 
