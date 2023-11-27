@@ -32,6 +32,7 @@ import kotlin.math.abs
  * @constructor Creates dimensions of an unit with help of [factors].
  */
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     /**

@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  (s `^` -1)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for activity referred to a radionuclide (decays per unit time).
 */

@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  kg*m*m*(s `^` -3) * (A `^` -1)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for electric potential, voltage, emf.
 */

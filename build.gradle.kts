@@ -1,19 +1,41 @@
-
-
-plugins {
-    kotlin("multiplatform") version "1.8.10" apply false
-//    id("org.jetbrains.dokka") version "1.8.10"
-}
-
-
-
 allprojects {
     group = "eu.sirotin.kotunil"
 
     repositories {
         mavenCentral()
     }
+    extra.apply {
+        set("kotunil-js-dev-version", "4.1.2")
+    }
 }
+
+
+plugins {
+    kotlin("multiplatform") version "1.9.10" apply false
+//    id("org.jetbrains.dokka") version "1.8.10"
+}
+
+tasks.register("cleanAll"){
+    dependsOn(":kotunil-generators:clean")
+    dependsOn(":kotunil:clean")
+    dependsOn(":js-lib:clean")
+    dependsOn(":apps:node_ts_app:clean")
+    dependsOn(":apps:web_app_js:clean")
+}
+
+tasks.register("buildAll"){
+    dependsOn(":kotunil-generators:build")
+    dependsOn(":kotunil:build")
+    dependsOn(":js-lib:build")
+    dependsOn(":apps:node_ts_app:build")
+    dependsOn(":apps:web_app_js:build")
+}
+
+
+
+
+
+
 //
 ////TODO make compatible with other Dokka's configurations
 //// Configure all single-project Dokka tasks at the same time,

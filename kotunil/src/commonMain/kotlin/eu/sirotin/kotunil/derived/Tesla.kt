@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  kg* (s `^` -2) * (A `^` -1)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for magnetic flux density.
 */

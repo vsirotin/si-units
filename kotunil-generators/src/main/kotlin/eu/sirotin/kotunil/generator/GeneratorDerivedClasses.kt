@@ -64,26 +64,27 @@ data class SiDerivedUnitDescription(val name: String,
 /**
  * Generates classes for derived SI-units.
  */
-fun generateSiUnitsDerivedClasses() {
+fun generateSiUnitsDerivedClasses(fileExtension: String = "kt") {
     //Generate package directory if not exists
     val dir = File("${ROOT_PATH_SOURCE_COMMON}derived")
-    generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass)
+    generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass, fileExtension)
 
 }
 
 fun generateDerivedClassFiles(
     dir: File,
-    generatorDerivedClass: (SiDerivedUnitDescription, File) -> Unit
+    generatorDerivedClass: (SiDerivedUnitDescription, File, String) -> Unit,
+    fileExtension: String
 ) {
     if (!dir.exists()) Files.createDirectories(dir.toPath())
 
     //Generate classes
-    siDerivedUnitDescriptions.forEach { generatorDerivedClass(it, dir) }
+    siDerivedUnitDescriptions.forEach { generatorDerivedClass(it, dir, fileExtension) }
 }
 
-private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File) {
+private fun generateSiUnitDerivedClass(siUnitDescription: SiDerivedUnitDescription, dir: File, fileExtension: String) {
     val className = getClassName(siUnitDescription)
-    val fileName = "$className.kt"
+    val fileName = "$className.$fileExtension"
     val generatorHeadPart = ::generateDerivedUnitClassHead
     val generatorPrefixes = ::generateDerivedClassPrefixes
 
@@ -145,6 +146,7 @@ import kotlin.jvm.JvmName
 private val formula =  $formula
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for $quantityName.
 */

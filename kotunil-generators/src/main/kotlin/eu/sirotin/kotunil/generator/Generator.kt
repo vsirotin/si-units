@@ -23,7 +23,10 @@
 package eu.sirotin.kotunil.generator
 
 import eu.sirotin.kotunil.generator.apps.GeneratorApps
+import eu.sirotin.kotunil.generator.currency.generateCurrencies
+import eu.sirotin.kotunil.generator.currency.generateTestsCurrencies
 import eu.sirotin.kotunil.generator.javascript.generateJavaScriptFiles
+import eu.sirotin.kotunil.generator.typescript.generateTypeScriptFiles
 
 const val ROOT_SRC = "kotunil/src/"
 const val PREFIX = "/kotlin/eu/sirotin/kotunil/"
@@ -37,10 +40,13 @@ const val ROOT_PATH_TEST_JVM = "${ROOT_SRC}jvmTest$PREFIX"
  * Generates production and test unit classes. Not relevant for library users.
  */
 fun main() {
+    println("Generation starts....")
     generateKotlinLibraryFiles()
     generateKotlinTestFiles()
     generateJavaScriptFiles()
+    generateTypeScriptFiles()
     GeneratorApps.generateApplications()
+    println("Generation completed")
 }
 
 private fun generateKotlinLibraryFiles() {

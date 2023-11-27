@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  kg*m/(s `^` 2)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for force, weight.
 */

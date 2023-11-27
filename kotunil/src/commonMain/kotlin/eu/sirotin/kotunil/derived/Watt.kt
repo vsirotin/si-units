@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  kg*(m*m)/(s `^` 3)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for power, radiant flux.
 */

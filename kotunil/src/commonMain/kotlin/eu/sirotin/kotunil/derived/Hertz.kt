@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  1/s
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for frequency.
 */

@@ -2,10 +2,11 @@
 import java.io.FileInputStream
 import java.util.*
 
+
 version = "4.1.1"
 
 plugins {
-    kotlin("multiplatform") version "1.8.10"
+    kotlin("multiplatform") version "1.9.10"
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.8.10"
@@ -34,22 +35,27 @@ kotlin {
     iosSimulatorArm64()
     iosX64()
     js(IR) {
+        moduleName = "kotunil-js-lib"
+        version = project.extra["kotunil-js-dev-version"]!!
         binaries.executable()
         binaries.library()
-        val timeoutMs = "1000000"
+
+        compilations["main"].packageJson {
+            customField("description", "KotUniL JavaScript/TypeScript library covers all units of International System of Units (SI)  like meter, second etc. (see Wikipedia: https://en.wikipedia.org/wiki/International_System_of_Units) as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.")
+            customField("repository", mapOf("type" to "git",
+                "url" to "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/js-lib"))
+            customField("keywords", arrayOf("si-units",
+                "kotunil"))
+            customField("author", "Dr. Viktor Sirotin. www.sirotin.eu")
+            customField("license", "Apache-2.0")
+
+        }
+
         browser {
-            testTask {
-                useMocha {
-                    timeout = timeoutMs
-                }
-            }
+            generateTypeScriptDefinitions()
+
         }
         nodejs {
-            testTask {
-                useMocha {
-                    timeout = timeoutMs
-                }
-            }
         }
     }
 
@@ -67,14 +73,6 @@ kotlin {
         }
 
         val commonMain by getting
-
-//        val jvmMain by getting
-//
-//        val commonTest by getting {
-//            dependencies {
-//                implementation(kotlin("test"))
-//            }
-//        }
 
         commonTest {
             dependencies {
@@ -94,9 +92,7 @@ kotlin {
     }
 }
 
-apply(plugin = "org.jetbrains.dokka")
-apply(plugin = "maven-publish")
-apply(plugin = "signing")
+
 
 val propertiesFile = File(rootProject.rootDir, "local.properties")
 val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
@@ -159,23 +155,6 @@ extensions.configure<PublishingExtension> {
             }
         }
     }
-}
-
-val fromDir = "../build/js/packages/si-units-kotunil/kotlin"
-tasks.register<Copy>("copyOwnJsLib") {
-    from(layout.projectDirectory.file("${fromDir}/si-units-kotunil.js"),
-        layout.projectDirectory.file("${fromDir}/si-units-kotunil.js.map"))
-    into(layout.projectDirectory.file("js_dist"))
-}
-
-tasks.register<Copy>("copyStdJsLib") {
-    from(layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js"),
-        layout.projectDirectory.file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js.map"))
-    into(layout.projectDirectory.file("js_dist"))
-}
-
-tasks.build {
-    finalizedBy("copyOwnJsLib", "copyStdJsLib")
 }
 
 

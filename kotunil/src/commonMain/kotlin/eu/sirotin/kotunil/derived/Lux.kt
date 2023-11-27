@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  cd*sr*(m `^` -2)
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for illuminance.
 */

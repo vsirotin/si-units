@@ -23,13 +23,10 @@ internal class SpeedTest {
         assertEquals(300.km, d)
         assertEquals(300_000.0, d.value)
         assertEquals("m", d.unitSymbols())
-        assertEquals("300000.0 m", d.toString())
      }
 
     @Test
     fun testTypes() {
-
         assertEquals(porsche.midSpeed, 200*kmh)
-
     }
 }

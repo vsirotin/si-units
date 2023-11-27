@@ -5,15 +5,14 @@ dependencies {
     project(":kotunil-generators")
 }
 
-val fromDir = "../kotunil/js-dist"
+val fromDir = "../kotunil/build/dist/js/productionLibrary"
+val distDir = "${layout.projectDirectory}/dist"
 tasks.register<Copy>("copyLibs") {
-    from(file("${fromDir}/si-units-kotunil.js"),
-        file("${fromDir}/si-units-kotunil.d.ts"),
-        file("${fromDir}/si-units-kotunil.js.map"),
-        file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js"),
-        file("${fromDir}/kotlin-kotlin-stdlib-js-ir.js.map")
-    )
-    into("${layout.projectDirectory}/dist1")
+    from(file(fromDir))
+    into(distDir)
+
+    inputs.file("${fromDir}/package.json") //To make this task depend on this file
+    logger.quiet("Copying completed")
 }
 
 tasks.register("installToGlobalMPM") {
@@ -21,12 +20,19 @@ tasks.register("installToGlobalMPM") {
         exec {
             executable("npm")
             args("publish")
-            workingDir("./dist")
+            workingDir(distDir)
         }
 
-        logger.quiet("Please see installed KotUniL lib in directory 'apps/web_app_js/node_modules/kotunil-js-lib'")
+        logger.quiet("Installation completed")
     }
 }
 
+tasks.register<Delete>("clean") {
+    delete(file(distDir))
+}
 
+tasks.register<DefaultTask>("build") {
+    dependsOn(":kotunil:build")
+    dependsOn("copyLibs")
+}
 

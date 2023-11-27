@@ -11,6 +11,7 @@ import kotlin.jvm.JvmName
 private val formula =  m/m
 
 @JsExport
+@Suppress("NON_EXPORTABLE_TYPE")
 /**
 * System International Unit for plane angle.
 */
