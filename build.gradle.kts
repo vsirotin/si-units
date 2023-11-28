@@ -5,7 +5,8 @@ allprojects {
         mavenCentral()
     }
     extra.apply {
-        set("kotunil-js-dev-version", "4.1.2")
+        set("kotunil-version", "4.2.1")
+        set("kotunil-js-lib-version", "4.2.1")
     }
 }
 
@@ -30,11 +31,6 @@ tasks.register("buildAll"){
     dependsOn(":apps:node_ts_app:build")
     dependsOn(":apps:web_app_js:build")
 }
-
-
-
-
-
 
 //
 ////TODO make compatible with other Dokka's configurations

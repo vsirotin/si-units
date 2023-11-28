@@ -3,7 +3,7 @@ import java.io.FileInputStream
 import java.util.*
 
 
-version = "4.1.1"
+version = project.extra["kotunil-version"]!!
 
 plugins {
     kotlin("multiplatform") version "1.9.10"
@@ -36,7 +36,7 @@ kotlin {
     iosX64()
     js(IR) {
         moduleName = "kotunil-js-lib"
-        version = project.extra["kotunil-js-dev-version"]!!
+        version = project.extra["kotunil-js-lib-version"]!!
         binaries.executable()
         binaries.library()
 

@@ -1,6 +1,6 @@
 
 group = "eu.sirotin.kotunil.app.js"
-version = "4.1.1"
+version = project.extra["kotunil-version"]!!
 
 
 dependencies {

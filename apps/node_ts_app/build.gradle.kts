@@ -1,5 +1,5 @@
 group = "eu.sirotin.kotunil.app.ts-node"
-version = "0.0.1"
+version = project.extra["kotunil-version"]!!
 
 
 plugins {

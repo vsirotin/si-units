@@ -44,8 +44,11 @@ Therefore, all subprojects of this project are divided into three groups:
 2. [js-lib](https://github.com/vsirotin/si-units/blob/27117b3ea841f18366fff69c955d25d2f07525b9/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
 3. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) 
 applications that test the functionality of the library on a specific platform.
-In the moment are test applications as console-application for Kotlin and Java platfform impemented ans web page 
-for JavaScript variant od library. 
+In the moment are test applications as console-application for [Kotlin](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console)
+and [Java](
+   https://github.com/vsirotin/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console) platfforms impemented ans web page 
+for [Browser/JavaScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/web_app_js) and [Node/TypeScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/node_ts_app)
+    variants of library. 
 4. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
 
 If you are a developer and you are interested in the source code of the library, 

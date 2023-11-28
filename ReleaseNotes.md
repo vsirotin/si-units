@@ -1,4 +1,12 @@
-# KotUniL Release Notes
+# KotUniL Release Notes 
+
+# Version 4.2.1
+1. Update of main library to enable using of it functions from TypeScript.
+2. Creation of sample sub-project for TypeScript.
+3. Update of sample project for JavaScript. 
+
+# Version 4.1.2
+1. Small extension of tests (see issue #56) 
 
 # Version 4.1.1
 1. Derived units created with point operator from Numbers have as result its class,

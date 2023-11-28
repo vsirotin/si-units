@@ -4,14 +4,15 @@ plugins {
 }
 
 group = "eu.sirotin.kotunil.app.kotlin"
-version = "1.0.0"
+version = project.extra["kotunil-version"]!!
 
 repositories {
     mavenCentral()
+//    mavenLocal()
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:kotunil-jvm:4.1.1")
+    implementation("eu.sirotin.kotunil:kotunil-jvm:$version")
 }
 
 tasks.test {

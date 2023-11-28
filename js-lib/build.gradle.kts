@@ -1,4 +1,4 @@
-version = "4.1.1"
+version = project.extra["kotunil-version"]!!
 
 dependencies {
     project(":kotunil")
@@ -8,7 +8,7 @@ dependencies {
 val fromDir = "../kotunil/build/dist/js/productionLibrary"
 val distDir = "${layout.projectDirectory}/dist"
 tasks.register<Copy>("copyLibs") {
-    from(file(fromDir))
+    from(file(fromDir), file("${layout.projectDirectory}/README.MD"))
     into(distDir)
 
     inputs.file("${fromDir}/package.json") //To make this task depend on this file
