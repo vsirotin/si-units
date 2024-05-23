@@ -32,6 +32,7 @@ import eu.sirotin.kotunil.base.Metre
 import eu.sirotin.kotunil.base.Mole
 import eu.sirotin.kotunil.base.Second
 import eu.sirotin.kotunil.base.cd
+import eu.sirotin.kotunil.base.cm
 import eu.sirotin.kotunil.base.kg
 import eu.sirotin.kotunil.base.km
 import eu.sirotin.kotunil.base.m
@@ -287,11 +288,13 @@ internal class TutorialTest {
     }
 
     @Test
-    fun testCastingWithAs() {
-        val x = (1 / s)
-        val y = 2.Hz + x
-        assertEquals(3.Hz, y)
+    fun testConversion() {
+        val x = 2.0.m/cm
 
+        //How many centimeters contains 2 metres?
+        assertEquals(200.0, x.value)
 
+        //Which dimension has a metre divided in centimeter? (value is dimensionless)
+        assertEquals("", x.unitSymbols())
     }
 }
