@@ -5,8 +5,8 @@ allprojects {
         mavenCentral()
     }
     extra.apply {
-        set("kotunil-version", "4.2.1")
-        set("kotunil-js-lib-version", "4.2.1")
+        set("kotunil-version", "4.2.2-SNAPSHOT")
+        set("kotunil-js-lib-version", "4.2.2-SNAPSHOT")
     }
 }
 

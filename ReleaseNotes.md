@@ -1,4 +1,9 @@
-# KotUniL Release Notes 
+# KotUniL Release Notes
+
+# Version 4.2.2
+1. Update to Kotlin 2.0.
+2. Release mutliplatform artifacts. 
+
 
 # Version 4.2.1
 1. Update of main library to enable using of it functions from TypeScript.

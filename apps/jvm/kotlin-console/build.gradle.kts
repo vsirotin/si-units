@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:kotunil-jvm:$version")
+    implementation("eu.sirotin.kotunil:kotunil:$version")
 }
 
 tasks.test {
