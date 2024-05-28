@@ -1,5 +1,6 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import java.io.FileInputStream
 import java.util.*
@@ -17,7 +18,15 @@ plugins {
 kotlin {
     applyDefaultHierarchyTemplate()
 
-    jvm()
+    jvm {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_1_8)
+        }
+        testRuns["test"].executionTask.configure {
+            useJUnit()
+        }
+    }
     iosX64()
     iosArm64()
     iosSimulatorArm64()
