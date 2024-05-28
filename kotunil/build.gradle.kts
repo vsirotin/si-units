@@ -6,93 +6,35 @@ import java.util.*
 version = project.extra["kotunil-version"]!!
 
 plugins {
-    kotlin("multiplatform") version "1.9.10"
+    alias(libs.plugins.kotlinMultiplatform)
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.dokka") version "1.8.10"
+    id("org.jetbrains.dokka")
 }
 
-dependencies {
-    project(":kotunil-generators")
+kotlin {
+    targetHierarchy.default()
+    jvm()
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+    linuxX64()
+
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                project(":kotunil-generators")
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                implementation(libs.kotlin.test)
+            }
+        }
+    }
 }
 
 val docsDir = "build/docs"
-
-kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = "1.8"
-        }
-        testRuns["test"].executionTask.configure {
-            useJUnit()
-        }
-    }
-    mingwX64()
-    linuxX64()
-    macosX64()
-    macosArm64()
-    iosArm64()
-    iosSimulatorArm64()
-    iosX64()
-    js(IR) {
-        moduleName = "kotunil-js-lib"
-        version = project.extra["kotunil-js-lib-version"]!!
-        binaries.executable()
-        binaries.library()
-
-        compilations["main"].packageJson {
-            customField("description", "KotUniL JavaScript/TypeScript library covers all units of International System of Units (SI)  like meter, second etc. (see Wikipedia: https://en.wikipedia.org/wiki/International_System_of_Units) as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.")
-            customField("repository", mapOf("type" to "git",
-                "url" to "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/js-lib"))
-            customField("keywords", arrayOf("si-units",
-                "kotunil"))
-            customField("author", "Dr. Viktor Sirotin. www.sirotin.eu")
-            customField("license", "Apache-2.0")
-
-        }
-
-        browser {
-            generateTypeScriptDefinitions()
-
-        }
-        nodejs {
-        }
-    }
-
-    targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-        binaries.all {
-            freeCompilerArgs = freeCompilerArgs + "-Xallocator=std"
-        }
-    }
-
-    sourceSets {
-        all {
-            languageSettings.apply {
-                optIn("kotlin.js.ExperimentalJsExport")
-            }
-        }
-
-        val commonMain by getting
-
-        commonTest {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
-        val nativeMain by creating {
-            dependsOn(commonMain)
-        }
-        names.forEach { n ->
-            if (n.contains("X64Main") || n.contains("Arm64Main")) {
-                this@sourceSets.getByName(n).apply {
-                    dependsOn(nativeMain)
-                }
-            }
-        }
-    }
-}
-
-
 
 val propertiesFile = File(rootProject.rootDir, "local.properties")
 val gradleLocalProperties: Properties? = if(propertiesFile.exists()){

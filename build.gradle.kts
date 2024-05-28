@@ -12,8 +12,8 @@ allprojects {
 
 
 plugins {
-    kotlin("multiplatform") version "1.9.10" apply false
-//    id("org.jetbrains.dokka") version "1.8.10"
+    alias(libs.plugins.kotlinMultiplatform) apply false
+    alias(libs.plugins.dokka) apply false
 }
 
 tasks.register("cleanAll"){
