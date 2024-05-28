@@ -30,11 +30,22 @@ kotlin {
         binaries.library()
 
         compilations["main"].packageJson {
-            customField("description", "KotUniL JavaScript/TypeScript library covers all units of International System of Units (SI)  like meter, second etc. (see Wikipedia: https://en.wikipedia.org/wiki/International_System_of_Units) as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.")
-            customField("repository", mapOf("type" to "git",
-                "url" to "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/js-lib"))
-            customField("keywords", arrayOf("si-units",
-                "kotunil"))
+            customField(
+                "description",
+                "KotUniL JavaScript/TypeScript library covers all units of International System of Units (SI)  like meter, second etc. (see Wikipedia: https://en.wikipedia.org/wiki/International_System_of_Units) as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc."
+            )
+            customField(
+                "repository", mapOf(
+                    "type" to "git",
+                    "url" to "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/js-lib"
+                )
+            )
+            customField(
+                "keywords", arrayOf(
+                    "si-units",
+                    "kotunil"
+                )
+            )
             customField("author", "Dr. Viktor Sirotin. www.sirotin.eu")
             customField("license", "Apache-2.0")
 
@@ -65,9 +76,9 @@ kotlin {
 val docsDir = "build/docs"
 
 val propertiesFile = File(rootProject.rootDir, "local.properties")
-val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
-        Properties().apply {load(FileInputStream(propertiesFile)) }
-    }else null //TODO set values for case of GitHub actions
+val gradleLocalProperties: Properties? = if (propertiesFile.exists()) {
+    Properties().apply { load(FileInputStream(propertiesFile)) }
+} else null //TODO set values for case of GitHub actions
 
 extensions.configure<PublishingExtension> {
     repositories {
@@ -128,7 +139,6 @@ extensions.configure<PublishingExtension> {
 }
 
 
-/*
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
 //        useInMemoryPgpKeys(
@@ -138,7 +148,5 @@ extensions.configure<SigningExtension> {
 //
 //        )
 
-    //sign(publishing.publications)
+    sign(publishing.publications)
 }
-
- */
