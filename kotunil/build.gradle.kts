@@ -18,6 +18,7 @@ plugins {
 kotlin {
     applyDefaultHierarchyTemplate()
 
+
     jvm {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
@@ -69,6 +70,13 @@ kotlin {
     }
 
     sourceSets {
+
+        all {
+            languageSettings.apply {
+                optIn("kotlin.js.ExperimentalJsExport")
+            }
+        }
+
         val commonMain by getting {
             dependencies {
                 project(":kotunil-generators")
