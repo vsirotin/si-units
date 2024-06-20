@@ -30,18 +30,7 @@ tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
-tasks.register("generateAll") {
-    doLast {
-        exec {
-            executable("java")
-            args("-jar", "kotunil-generators/build/libs/kotunil-generators.jar")
-            workingDir = rootDir
-        }
-    }
-
-    dependsOn("jar")
+tasks.run.configure{
+    workingDir = rootDir
 }
 
-tasks.build{
-    dependsOn("generateAll")
-}

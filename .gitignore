@@ -19,3 +19,4 @@ build
 
 /apps/web_app_js/node_modules/
 /apps/web_app_js/lib/
+/.kotlin/
