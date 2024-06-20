@@ -3,7 +3,7 @@ build
 .idea
 
 /TODO.txt
-/local.properties
+/secrets.properties
 /kotlin-js-store/yarn.lock
 
 /js-lib/kotlin-kotlin-stdlib-js-ir.js

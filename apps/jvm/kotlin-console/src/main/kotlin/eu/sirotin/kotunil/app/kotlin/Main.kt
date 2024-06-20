@@ -38,7 +38,15 @@ fun main() {
     }
     println("")
     println("Test successfully completed!")
-    println("A total of ${objects.size} KotUniL's objects of ${objectTypes.size} KotUniL's objects types tested with $numberTests tests. ")
+
+    println("-------------------------------------------------------------------------------------------------")
+    println("|             |Test number|Number tested KotUniL's objects|Number tested KotUniL's objects types|")
+    println("-------------------------------------------------------------------------------------------------")
+    println("|Expectation: |     3367  |          741                  |          60                         |")
+    println("-------------------------------------------------------------------------------------------------")
+    println("|Test results:|     $numberTests  |          ${objects.size}                  |          ${objectTypes.size}                         |")
+    println("-------------------------------------------------------------------------------------------------")
+
 }
 
 fun testAll() {

@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") //version "2.0.0" //Not clear, how replace version with variable
     application
 }
 

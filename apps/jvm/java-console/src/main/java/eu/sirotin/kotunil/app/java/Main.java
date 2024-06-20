@@ -19,10 +19,14 @@ public class Main {
             exit(1);
         }
         System.out.println("Test successfully completed!");
-        System.out.println("A total of "
-                + Checker.getNumberTestedObjects() + " KotUniL's objects  of "
-                + Checker.getNumberTestedObjectTypes() + " KotUniL's types "
-                + "were tested with " + Checker.numberTests + " tests. ");
+
+        System.out.println("-------------------------------------------------------------------------------------------------");
+        System.out.println("|             |Test number|Number tested KotUniL's objects|Number tested KotUniL's objects types|");
+        System.out.println("-------------------------------------------------------------------------------------------------");
+        System.out.println("|Expectation: |     1593  |          705                  |          60                         |");
+        System.out.println("-------------------------------------------------------------------------------------------------");
+        System.out.println("|Test results:|     " + Checker.numberTests + "  |          " + Checker.getNumberTestedObjects() + "                  |          " + Checker.getNumberTestedObjectTypes() +"                         |");
+        System.out.println("-------------------------------------------------------------------------------------------------");
     }
 
     private static void testAll() {
