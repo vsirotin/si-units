@@ -1,1 +1,3 @@
-const {eu} = this['kotunil-js-lib']
+const {eu} = this['eu.sirotin.kotunil:kotunil']
+
+

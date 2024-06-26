@@ -13,6 +13,9 @@ import java.io.File
 
 
 fun generateBaseTestScriptFiles(dir: File, fileExtension: String) {
+    if (!dir.exists()) {
+        dir.mkdirs()
+    }
     generatePackageMainFile(siUnitDescriptions, dir, fileExtension)
     generateClassFiles(dir, ::generateSiUnitTestBaseTsFiles, fileExtension)
 }

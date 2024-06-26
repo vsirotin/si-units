@@ -1,17 +1,26 @@
 plugins {
-    id("java")
+   id("java")
 }
 
 group = "eu.sirotin.kotunil.app.java"
-version = project.extra["kotunil-version"]!!
+version = project.extra["kotunil-jvm-stable-version"]!!
 
 repositories {
-    mavenCentral()
-//    mavenLocal()
+    //mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     implementation("eu.sirotin.kotunil:kotunil-jvm:$version")
+}
+
+tasks.register<JavaExec>("run") {
+    group = "application"
+    description = "Runs the jar file"
+
+    classpath = files("build/libs/java-console-${project.extra["kotunil-jvm-stable-version"]}.jar")
+
+    dependsOn("build")
 }
 
 tasks.test {

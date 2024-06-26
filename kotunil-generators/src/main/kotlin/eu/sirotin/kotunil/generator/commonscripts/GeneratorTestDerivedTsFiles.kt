@@ -12,6 +12,9 @@ import java.io.File
 
 
 fun generateDerivedTestScriptFiles(dir: File, fileExtension: String) {
+    if (!dir.exists()) {
+        dir.mkdirs()
+    }
     generatePackageMainFile(siDerivedUnitDescriptions, dir)
     generateDerivedClassFiles(dir, ::generateSiUnitDerivedClass, fileExtension)
 }

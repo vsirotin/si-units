@@ -1,15 +1,13 @@
-
 import java.io.FileInputStream
 import java.util.*
-
 
 version = project.extra["kotunil-version"]!!
 
 plugins {
-    kotlin("multiplatform") version "1.9.10"
+    kotlin("multiplatform") version "2.0.0"
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.dokka") version "1.8.10"
+    id("org.jetbrains.dokka") version "1.9.10"
 }
 
 dependencies {
@@ -20,23 +18,13 @@ val docsDir = "build/docs"
 
 kotlin {
     jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = "1.8"
-        }
         testRuns["test"].executionTask.configure {
             useJUnit()
         }
     }
-    mingwX64()
-    linuxX64()
-    macosX64()
-    macosArm64()
-    iosArm64()
-    iosSimulatorArm64()
-    iosX64()
     js(IR) {
         moduleName = "kotunil-js-lib"
-        version = project.extra["kotunil-js-lib-version"]!!
+        version = project.extra["kotunil-js-version"]!!
         binaries.executable()
         binaries.library()
 
@@ -59,42 +47,33 @@ kotlin {
         }
     }
 
-    targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-        binaries.all {
-            freeCompilerArgs = freeCompilerArgs + "-Xallocator=std"
-        }
-    }
-
     sourceSets {
         all {
             languageSettings.apply {
                 optIn("kotlin.js.ExperimentalJsExport")
             }
         }
-
-        val commonMain by getting
-
         commonTest {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val nativeMain by creating {
-            dependsOn(commonMain)
-        }
-        names.forEach { n ->
-            if (n.contains("X64Main") || n.contains("Arm64Main")) {
-                this@sourceSets.getByName(n).apply {
-                    dependsOn(nativeMain)
-                }
-            }
+    }
+
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            isStatic = true
         }
     }
 }
 
 
 
-val propertiesFile = File(rootProject.rootDir, "local.properties")
+val propertiesFile = File(rootProject.rootDir, "secrets.properties")
 val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
         Properties().apply {load(FileInputStream(propertiesFile)) }
     }else null //TODO set values for case of GitHub actions
@@ -160,12 +139,6 @@ extensions.configure<PublishingExtension> {
 
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
-//        useInMemoryPgpKeys(
-//            //TODO
-//            //gradleLocalProperties.getProperty("gpgKeySecret"),
-//            //gradleLocalProperties.getProperty("gpgKeyPassword"),
-//
-//        )
-
+    //Signing secret parameters will be set in .gradle\gradle.properties file
     sign(publishing.publications)
 }

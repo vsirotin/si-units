@@ -8,7 +8,7 @@ plugins {
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startConsole"){
     script.set(file("dist/startConsole.js"))
-//    dependsOn("build")
+    dependsOn("build")
 }
 
 tasks.register<com.github.gradle.node.task.NodeTask>("startWeb"){
@@ -53,14 +53,9 @@ fun File.deleteDirContent(){
 
 val distDir = "${layout.projectDirectory}/dist"
 val nodeDir = "${layout.projectDirectory}/node_modules"
-val testsDir = "${layout.projectDirectory}/src/scripts/tests/"
 tasks.register<Delete>("clean") {
     delete(file(distDir))
     delete(file(nodeDir))
-
-    file("${testsDir}/base").deleteDirContent()
-    file("${testsDir}/currency").deleteDirContent()
-    file("${testsDir}/derived").deleteDirContent()
 }
 
 
