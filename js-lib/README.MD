@@ -23,7 +23,7 @@ Since version 4.2.2 of main (multiplatform) KotUniL library has JS part of proje
 {eu} = this['eu.sirotin.kotunil:kotunil']
 ```
 
-instead of {eu} = this['kotunil-js-lib']
+instead of {eu} = this['kotunil-js-lib'] (see  apps/web_app_js/src/scripts/tests/Starter.js)
 
 Call format by Node.JS does not change.
 
