@@ -1,7 +1,8 @@
 val kotunilVersion = "4.2.2"
-
 val kotunilJvmStableVersion = kotunilVersion
-val kotunilJsStableVersion = "4.2.1"
+
+val kotunilJsVersion = "5.0.1"
+
 allprojects {
     group = "eu.sirotin.kotunil"
 
@@ -11,7 +12,7 @@ allprojects {
     extra.apply {
         set("kotunil-version", kotunilVersion)
         set("kotunil-jvm-stable-version", kotunilJvmStableVersion)
-        set("kotunil-js-stable-version", kotunilJsStableVersion)
+        set("kotunil-js-version", kotunilJsVersion)
     }
 
 }

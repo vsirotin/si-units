@@ -24,7 +24,7 @@ kotlin {
     }
     js(IR) {
         moduleName = "kotunil-js-lib"
-        version = project.extra["kotunil-version"]!!
+        version = project.extra["kotunil-js-version"]!!
         binaries.executable()
         binaries.library()
 
