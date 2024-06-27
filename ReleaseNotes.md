@@ -1,5 +1,9 @@
 # KotUniL Release Notes 
 
+# Version 4.2.2
+1. Migration to Kotlin 2.0.0 platform.
+2. Since this version JS part have separate versioning.
+
 # Version 4.2.1
 1. Update of main library to enable using of it functions from TypeScript.
 2. Creation of sample sub-project for TypeScript.

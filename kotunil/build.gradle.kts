@@ -1,6 +1,3 @@
-import java.io.FileInputStream
-import java.util.*
-
 version = project.extra["kotunil-version"]!!
 
 plugins {
@@ -71,26 +68,15 @@ kotlin {
     }
 }
 
-
-
-val propertiesFile = File(rootProject.rootDir, "secrets.properties")
-val gradleLocalProperties: Properties? = if(propertiesFile.exists()){
-        Properties().apply {load(FileInputStream(propertiesFile)) }
-    }else null //TODO set values for case of GitHub actions
-
 extensions.configure<PublishingExtension> {
-    repositories {
+
+ repositories {
         maven {
-            val isSnapshot = version.toString().endsWith("SNAPSHOT")
-            url = uri(
-                if (!isSnapshot) "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
-                else "https://s01.oss.sonatype.org/content/repositories/snapshots"
-            )
 
             credentials {
-                username = gradleLocalProperties?.getProperty("sonatypeUsername")
-                password = gradleLocalProperties?.getProperty("sonatypePassword")
-                println("Sonatype username: $username password: $password")
+                //Reading secret parameters from .gradle\gradle.properties file
+                username = findProperty("ossrhToken") as String
+                password = findProperty("ossrhTokenPassword") as String
             }
         }
     }
@@ -134,7 +120,6 @@ extensions.configure<PublishingExtension> {
         }
     }
 }
-
 
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
