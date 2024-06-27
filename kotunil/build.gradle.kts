@@ -23,8 +23,8 @@ kotlin {
         }
     }
     js(IR) {
-        moduleName = "kotunil-js-lib"
-        version = project.extra["kotunil-js-version"]!!
+        this.moduleName = "kotunil-js-lib"
+        this.mavenPublication { version = project.extra["kotunil-js-version"]!! as String }
         binaries.executable()
         binaries.library()
 
@@ -90,8 +90,7 @@ extensions.configure<PublishingExtension> {
             credentials {
                 username = gradleLocalProperties?.getProperty("sonatypeUsername")
                 password = gradleLocalProperties?.getProperty("sonatypePassword")
-
-
+                println("Sonatype username: $username password: $password")
             }
         }
     }
