@@ -1,7 +1,8 @@
 # KotUniL - Kotlin Console Demo Application
 
 
-This demo demonstrate the use of **KotUniL** library in a console application developed with Kotlin and tests all available in library objects and functions.
+This demo demonstrate the use of **KotUniL** library in a Node.JS console application developed with TypeScript
+and tests all available in library objects and functions.
 
 **KotUniL** covers all units of **International System of Units** (SI)  
 like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
@@ -11,14 +12,12 @@ You can learn about functions and objects of **KotUniL** library in central [...
 You can learn examples of using the library in Kotlin-Console in [.../si-units/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt).
 
 ## How to start console application
-You can start the application directly in your IDE (e.g. IntelliJ) 
-using the function main() in the file [Main.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/Main.kt) 
-or build the application and then start Jar from **build/libs**.
+You can start the test with a commnad:
+```bash
+./gradlew :apps:node_ts_app:startConsole
+```
 
-On success the application will show in the console the text:
-
-**Test successfully completed!**
-
+On success the application will show a list of test and table with expected and real data.
 Compare number in lines of printed table.
 
 ## How to properly write KotUniL's formulas

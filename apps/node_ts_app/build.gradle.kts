@@ -11,12 +11,6 @@ tasks.register<com.github.gradle.node.task.NodeTask>("startConsole"){
     dependsOn("build")
 }
 
-tasks.register<com.github.gradle.node.task.NodeTask>("startWeb"){
-    script.set(file("dist/index.js"))
-    args.addAll("run", "dev")
-    dependsOn("build")
-    logger.quiet("to complete watching enter Ctrl + C")
-}
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("installAllProduction"){
     args.addAll("install", "express", "mongoose", "cors", "mongodb", "dotenv", "nodemon")
@@ -27,22 +21,14 @@ tasks.register<com.github.gradle.node.npm.task.NpmTask>("installAllDevelopment")
     dependsOn("installAllProduction")
 }
 
-tasks.register<com.github.gradle.node.npm.task.NpmTask>("installTypeScript"){
-    args.addAll("install", "typescript", "--save-dev")
-}
-
-tasks.register("compileTypeScript") {
-    doLast {
-        exec {
-            executable("tsc")
-        }
-        logger.quiet("Please see result of compilation in 'dist' directory")
-    }
+tasks.register<com.github.gradle.node.npm.task.NpmTask>("install"){
+    args.addAll("install")
+    dependsOn("installAllDevelopment")
 }
 
 tasks.register<com.github.gradle.node.npm.task.NpmTask>("build"){
     args.addAll("run", "build")
-    dependsOn("installAllDevelopment")
+    dependsOn("install")
 }
 
 fun File.deleteDirContent(){
@@ -59,6 +45,39 @@ tasks.register<Delete>("clean") {
 }
 
 
+// Replace a value for key in configuration file
+fun replaceValueForKey(filePath: String, key: String, newValue: String) {
+    val file = File(filePath)
+    if (!file.exists()) {
+        println("File $filePath does not exist")
+        return
+    }
+    val lines = file.readLines()
+
+    val updatedLines = lines.map { line ->
+        if (line.contains(key)) {
+            val posDP = line.indexOf(":")
+            val prefix = line.substring(0, posDP + 1)
+            "$prefix ${newValue},"
+        } else {
+            line
+        }
+    }
+    file.writeText(updatedLines.joinToString(System.lineSeparator()))
+}
+
+tasks.register("switchToMPNCentral") {
+    doLast {
+        val kotunilJvmStableVersion = project.rootProject.extra["kotunil-js-version"] as String
+        replaceValueForKey("apps/node_ts_app/package.json", "kotunil-js-lib", "\"${kotunilJvmStableVersion}\"")
+    }
+}
+
+tasks.register("switchNodeTestToLocalJsLibrary") {
+    doLast {
+        replaceValueForKey("apps/node_ts_app/package.json", "kotunil-js-lib", "\"file:../../js-lib/dist\"")
+    }
+}
 
 
 

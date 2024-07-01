@@ -15,7 +15,7 @@ tasks.register<Copy>("copyLibs") {
     logger.quiet("Copying completed")
 }
 
-tasks.register("installToGlobalMPM") {
+tasks.register("publishToGlobalMPM") {
     doLast {
         exec {
             executable("npm")

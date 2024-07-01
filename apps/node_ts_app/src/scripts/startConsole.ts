@@ -11,8 +11,12 @@ testDerived()
 testSpecialUnits()
 testCurrencies()
 
-console.log("Number checks=" + numberChecks )
-console.log("Number tested objects=" + getNumberCheckedObjects() )
-console.log("Number errors=" +  numberErrors )
+console.log("-------------------------------------------------------------------------------------------------")
+console.log("|             |Test number|Number tested KotUniL's objects|Number errors|")
+console.log("-------------------------------------------------------------------------------------------------")
+console.log("|Expectation: |     1078  |          61                  |          0                           |")
+console.log("-------------------------------------------------------------------------------------------------")
+console.log("|Test results:|    ", numberChecks, " |           ", getNumberCheckedObjects(), "               |          ", numberErrors, "                         |")
+console.log("-------------------------------------------------------------------------------------------------")
 
 
