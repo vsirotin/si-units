@@ -75,8 +75,9 @@ extensions.configure<PublishingExtension> {
 
             credentials {
                 //Reading secret parameters from .gradle\gradle.properties file
-                username = findProperty("ossrhToken") as String
-                password = findProperty("ossrhTokenPassword") as String
+                //Can be used only locally
+                username = (findProperty("ossrhToken") ?: "" ) as String
+                password = (findProperty("ossrhTokenPassword") ?: "") as String
             }
         }
     }
