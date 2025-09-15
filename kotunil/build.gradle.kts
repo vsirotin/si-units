@@ -14,6 +14,8 @@ dependencies {
 val docsDir = "build/docs"
 
 kotlin {
+    jvmToolchain(22)
+
     jvm {
         testRuns["test"].executionTask.configure {
             useJUnit()
@@ -83,7 +85,7 @@ extensions.configure<PublishingExtension> {
     }
 
     val javadocJar = tasks.register<Jar>("javadocJar") {
-        dependsOn(tasks.dokkaHtml)
+        dependsOn(tasks.dokkaGeneratePublicationHtml)
         archiveClassifier.set("javadoc")
         from(layout.buildDirectory.dir("dokka"))
     }
@@ -120,6 +122,19 @@ extensions.configure<PublishingExtension> {
             }
         }
     }
+}
+
+// Fix task dependency for JS compilation
+tasks.named("jsBrowserProductionWebpack") {
+    dependsOn("jsProductionLibraryCompileSync")
+}
+
+tasks.named("jsBrowserProductionLibraryDistribution") {
+    dependsOn("jsProductionExecutableCompileSync")
+}
+
+tasks.named("jsNodeProductionLibraryDistribution") {
+    dependsOn("jsProductionExecutableCompileSync")
 }
 
 val publishing = extensions.getByType<PublishingExtension>()

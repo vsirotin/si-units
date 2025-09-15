@@ -5,7 +5,7 @@ dependencies {
     project(":kotunil-generators")
 }
 
-val fromDir = "../kotunil/build/dist/js/productionLibrary"
+val fromDir = "../build/js/packages/kotunil-js-lib"
 val distDir = "${layout.projectDirectory}/dist"
 tasks.register<Copy>("copyLibs") {
     from(file(fromDir), file("${layout.projectDirectory}/README.md"))

@@ -1,4 +1,3 @@
-
 group = "eu.sirotin.kotunil.app.js"
 version = project.extra["kotunil-version"]!!
 
@@ -29,5 +28,6 @@ tasks.register<DefaultTask>("build") {
     dependsOn("copyLibs")
 }
 
-
-
+tasks.named("copyLibs") {
+    dependsOn(":js-lib:copyLibs")
+}

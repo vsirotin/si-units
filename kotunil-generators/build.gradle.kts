@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") //version "2.0.0" //Not clear, how replace version with variable
+    kotlin("jvm")
     application
 }
 
@@ -12,7 +12,7 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(22)
 }
 
 application {
@@ -33,4 +33,3 @@ tasks.jar {
 tasks.run.configure{
     workingDir = rootDir
 }
-

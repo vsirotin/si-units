@@ -10,7 +10,13 @@ repositories {
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:kotunil-jvm:$version")
+    implementation(project(":kotunil"))
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(22))
+    }
 }
 
 tasks.register<JavaExec>("run") {
