@@ -1,22 +1,31 @@
 {
   "name": "kotunil-web-app",
-  "version": "0.0.1",
-  "description": "Test web app for kotunil-js-lib. ",
+  "version": "1.0.0",
+  "description": "Web browser JavaScript sample application demonstrating KotUniL library usage",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "python3 -m http.server 8000"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/apps/web_app_js"
+    "url": "https://github.com/vsirotin/si-units.git",
+    "directory": "apps/web_app_js"
+  },
+  "homepage": "https://github.com/vsirotin/si-units",
+  "bugs": {
+    "url": "https://github.com/vsirotin/si-units/issues"
   },
   "keywords": [
-    "si-unit",
+    "si-units",
     "kotunil",
     "web",
-    "javascript"
+    "javascript",
+    "browser",
+    "physics",
+    "units"
   ],
-  "author": "Dr. Viktor Sirotin. www.sirotin.eu",
+  "author": "Dr. Viktor Sirotin  (https://www.sirotin.eu)",
   "license": "Apache-2.0",
   "dependencies": {
     "kotunil-js-lib": "file:../../js-lib/dist"
