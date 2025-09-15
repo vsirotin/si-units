@@ -37,22 +37,19 @@ The goal of the project is not only to provide a unified set of objects and
 functions that allows to use the SI in programs in different programming languages. 
 The project also contains simple applications in all of the target languages that show how to do this. In addition, these applications test the availability of all necessary functions on that target platform.
 
-(So far, applications for only two target platforms have been implemented.)
-
-Therefore, all subprojects of this project are divided into three groups:
-1. [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil) - implementation of library functionality in Kotlin.
-2. [js-lib](https://github.com/vsirotin/si-units/blob/27117b3ea841f18366fff69c955d25d2f07525b9/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
-3. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) 
+Therefore, all subprojects of this project are divided into four groups:
+1. [kotunil](https://github.com/vsirotin/si-units/tree/main/kotunil) - implementation of library functionality in Kotlin.
+2. [js-lib](https://github.com/vsirotin/si-units/tree/main/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
+3. [apps](https://github.com/vsirotin/si-units/tree/main/apps) - 
 applications that test the functionality of the library on a specific platform.
-In the moment are test applications as console-application for [Kotlin](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console)
-and [Java](
-   https://github.com/vsirotin/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console) platfforms impemented ans web page 
-for [Browser/JavaScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/web_app_js) and [Node/TypeScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/node_ts_app)
-    variants of library. 
-4. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
+Currently there are test applications as console applications for [Kotlin](https://github.com/vsirotin/si-units/tree/main/apps/jvm/kotlin-console)
+and [Java](https://github.com/vsirotin/si-units/tree/main/apps/jvm/java-console) platforms implemented as well as web applications 
+for [Browser/JavaScript](https://github.com/vsirotin/si-units/tree/main/apps/web_app_js) and [Node/TypeScript](https://github.com/vsirotin/si-units/tree/main/apps/node_ts_app)
+variants of library. 
+4. [kotunil-generators](https://github.com/vsirotin/si-units/tree/main/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
 
 If you are a developer and you are interested in the source code of the library, 
-you only need part [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil).
+you only need part [kotunil](https://github.com/vsirotin/si-units/tree/main/kotunil).
 
 ## 1. Getting started
 

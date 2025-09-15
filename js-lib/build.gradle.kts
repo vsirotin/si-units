@@ -8,21 +8,19 @@ dependencies {
 val fromDir = "../kotunil/build/dist/js/productionLibrary"
 val distDir = "${layout.projectDirectory}/dist"
 tasks.register<Copy>("copyLibs") {
-    from(file(fromDir), file("${layout.projectDirectory}/README.MD"))
+    from(file(fromDir), file("${layout.projectDirectory}/README.md"))
     into(distDir)
 
     inputs.file("${fromDir}/package.json") //To make this task depend on this file
     logger.quiet("Copying completed")
 }
 
-tasks.register("publishToGlobalMPM") {
-    doLast {
-        exec {
-            executable("npm")
-            args("publish")
-            workingDir(distDir)
-        }
+tasks.register<Exec>("publishToGlobalMPM") {
+    executable("npm")
+    args("publish")
+    workingDir(distDir)
 
+    doLast {
         logger.quiet("Installation completed")
     }
 }
@@ -35,4 +33,3 @@ tasks.register<DefaultTask>("build") {
     dependsOn(":kotunil:build")
     dependsOn("copyLibs")
 }
-

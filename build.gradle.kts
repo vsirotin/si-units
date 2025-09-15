@@ -22,7 +22,7 @@ allprojects {
 plugins {
     //Below: 1) Not clear, how replace version with variable
     //2) This is needed to configure subprojects
-    kotlin("multiplatform") version "2.0.0" apply false
+    kotlin("multiplatform") version "2.0.21" apply false
 }
 
 fun replaceSubstringInFile(filePath: String, oldSubstring: String, newSubstring: String) {
@@ -55,8 +55,3 @@ tasks.register("switchJvmTestAppsToMavenLocal") {
             "mavenLocal()")
     }
 }
-
-
-
-
-
