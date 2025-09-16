@@ -19,6 +19,7 @@ tasks.test {
 }
 
 kotlin {
+    // Testing phase: Use latest Java version (22) for testing compatibility
     jvmToolchain(22)
 }
 

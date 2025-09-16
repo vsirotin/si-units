@@ -1,69 +1,78 @@
-# KotUniL - Node.js TypeScript Demo Application
+# Node.js TypeScript Application
 
-This demo demonstrates the use of **KotUniL** library in a Node.js console application developed with TypeScript
-and tests all available library objects and functions.
+This is a test application demonstrating the usage of KotUniL JavaScript library in Node.js environment with TypeScript.
 
-**KotUniL** covers all units of **International System of Units** (SI)  
-like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI-Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+## Purpose
 
-You can learn about functions and objects of **KotUniL** library in the main [README.md](https://github.com/vsirotin/si-units/blob/main/README.md).
-You can learn examples of using the library in Kotlin Console in [TutorialTest.kt](https://github.com/vsirotin/si-units/tree/main/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt).
+This application serves as:
+- **Compatibility test** for KotUniL JavaScript library with Node.js platforms
+- **Example implementation** showing how to use KotUniL in TypeScript/Node.js projects
+- **Testing platform** for the latest Node.js and TypeScript versions as part of our three-phase version strategy
 
-## Prerequisites
+## Testing Strategy
 
-- Node.js 14.0.0 or higher
-- npm or yarn package manager
+**Important**: This application is designed to be tested with the **newest available Node.js and TypeScript versions** to ensure forward compatibility and early detection of potential issues. Currently tested with:
+- Node.js 20+ LTS (latest)
+- Node.js 18+ LTS
+- Node.js 16+ LTS
+- Node.js 14+ (minimum supported)
+- TypeScript 5.9.2 (latest stable)
 
-## Installation
+## Requirements
 
-1. Install dependencies:
-    ```bash
-    npm install
-    ```
+- **Minimum**: Node.js 14.0.0 or higher
+- **Recommended**: Node.js 18+ LTS for optimal performance
+- **Testing**: Latest available Node.js LTS version
+- **TypeScript**: Latest stable version
+- **ECMAScript**: ES2016 (ES7) support
 
-2. Build the TypeScript project:
-    ```bash
-    npm run build
-    ```
+## Running the Application
 
-## How to start console application
-
-You can start the test with a command:
-```bash
-./gradlew :apps:node_ts_app:startConsole
-```
-
-Or directly with npm:
-```bash
-npm run startConsole
-```
-
-## How to start web application
-
-You can start the web server with:
-```bash
-./gradlew :apps:node_ts_app:startWeb
-```
-
-Or directly with npm:
-```bash
-npm run startWeb
-```
-
-## Development
-
-For development with auto-reload:
+### Development Mode
 ```bash
 npm run dev
 ```
 
-On success the application will show a list of tests and table with expected and real data.
-Compare numbers in lines of printed table.
+### Console Application
+```bash
+./gradlew :apps:node_ts_app:startConsole
+```
 
-## How to properly write KotUniL's formulas
+### Web Server
+```bash
+./gradlew :apps:node_ts_app:build
+npm run startWeb
+```
 
-KotUniL is a multiplatform library.
-You can read about how to properly write physics and other formulas
-using the objects and functions of the KotUniL library in document
-["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/main/RulesWritingFormulas.md).
+### Using Gradle Build System
+```bash
+./gradlew :apps:node_ts_app:clean
+./gradlew :apps:node_ts_app:build
+./gradlew :apps:node_ts_app:startConsole
+```
+
+## What it demonstrates
+
+The application runs comprehensive tests covering:
+- Basic SI units with JavaScript/TypeScript syntax
+- Derived units and complex calculations
+- Unit conversions in JavaScript environment
+- Dimensional analysis with runtime type checking
+- Error handling for incompatible units
+- Currency and percentage calculations
+- TypeScript type definitions for units
+- Integration with Node.js ecosystem
+
+## Expected Output
+
+The console application should display a table showing test results with:
+- Number of tests (checks): 1078
+- Number of KotUniL's tested objects: 61
+- Number of errors: 0
+- Detailed test results for each unit category
+
+The web server provides REST API endpoints for unit calculations and conversions.
+
+## Compatibility Notes
+
+This application validates that the KotUniL JavaScript library compiled for ES2016 works correctly with modern Node.js versions and TypeScript, ensuring our compatibility strategy for JavaScript environments.

@@ -14,6 +14,7 @@ dependencies {
 }
 
 java {
+    // Testing phase: Use latest Java version (22) for testing compatibility
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(22))
     }

@@ -14,9 +14,15 @@ dependencies {
 val docsDir = "build/docs"
 
 kotlin {
-    jvmToolchain(22)
+    // Library build phase: Use Java 11 toolchain for broader compatibility
+    // while maintaining reasonable modern features
+    jvmToolchain(11)
 
     jvm {
+        // Explicitly target Java 8 bytecode for maximum runtime compatibility
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+        }
         testRuns["test"].executionTask.configure {
             useJUnit()
         }

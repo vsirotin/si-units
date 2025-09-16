@@ -1,28 +1,62 @@
-# KotUniL - Kotlin Console Demo Application
+# Kotlin Console Application
 
+This is a test application demonstrating the usage of KotUniL library in Kotlin environment.
 
-This demo demonstrate the use of **KotUniL** library in a console application developed with Kotlin and tests all available in library objects and functions.
+## Purpose
 
-**KotUniL** covers all units of **International System of Units** (SI)  
-like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+This application serves as:
+- **Compatibility test** for KotUniL library with Kotlin/JVM platforms
+- **Example implementation** showing how to use KotUniL in Kotlin projects
+- **Testing platform** for the latest Java/Kotlin versions as part of our three-phase version strategy
 
-You can learn about functions and objects of **KotUniL** library in central [.../si-units/README.md](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/README.md).
-You can learn examples of using the library in Kotlin-Console in [.../si-units/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt).
+## Testing Strategy
 
-## How to start console application
-You can start the application directly in your IDE (e.g. IntelliJ) 
-using the function main() in the file [Main.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/Main.kt) 
-or build the application and then start Jar from **build/libs**.
+**Important**: This application is designed to be tested with the **newest available Java and Kotlin versions** to ensure forward compatibility and early detection of potential issues. Currently tested with:
+- Java 22 (latest stable) + Kotlin 2.0.21
+- Java 21 LTS + Kotlin 2.0.21
+- Java 17 LTS + Kotlin 2.0.21
+- Java 11 LTS + Kotlin 2.0.21
+- Java 8 + Kotlin 2.0.21 (minimum supported)
 
-On success the application will show in the console the text:
+## Requirements
 
-**Test successfully completed!**
+- **Minimum**: Java 8+ (JRE 1.8 or higher)
+- **Recommended**: Java 11+ for optimal performance
+- **Testing**: Latest available Java version
+- **Kotlin**: Latest stable version (currently 2.0.21)
 
-Compare number in lines of printed table.
+## Running the Application
 
-## How to properly write KotUniL's formulas
-KotUniL is a multiplatform library.
-You can read about how to properly write physics and other formulas
-using the objects and functions of the KotUniL library in document
-["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/RulesWritingFormulas.md).
+### Using Gradle
+```bash
+./gradlew :apps:jvm:kotlin-console:run
+```
+
+### Using JAR file
+```bash
+./gradlew :apps:jvm:kotlin-console:build
+java -jar apps/jvm/kotlin-console/build/libs/kotlin-console-*.jar
+```
+
+## What it demonstrates
+
+The application runs comprehensive tests covering:
+- Basic SI units with Kotlin's expressive syntax
+- Derived units and complex calculations
+- Unit conversions using Kotlin extension functions
+- Dimensional analysis with type safety
+- Error handling for incompatible units
+- Currency and percentage calculations
+- Kotlin-specific features like operator overloading
+
+## Expected Output
+
+The application should display a table showing test results with:
+- Number of tests performed
+- Number of KotUniL objects tested
+- Number of errors (should be 0)
+- Detailed test results for each unit category
+
+## Compatibility Notes
+
+This application validates that the KotUniL library works seamlessly with the latest Kotlin features while maintaining compatibility with older Java runtimes, demonstrating our hybrid compatibility strategy.

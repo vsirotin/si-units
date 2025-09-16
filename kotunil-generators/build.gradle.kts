@@ -12,6 +12,7 @@ tasks.test {
 }
 
 kotlin {
+    // Generation phase: Use latest Java version (22) for code generation tools
     jvmToolchain(22)
 }
 
