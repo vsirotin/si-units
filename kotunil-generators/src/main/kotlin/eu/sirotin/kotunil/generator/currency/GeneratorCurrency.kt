@@ -198,11 +198,11 @@ private fun generateSymbolPart(currencyDescription: CurrencyDescription): String
     return """
 
 /**
-* Creates object for hold of $desc
+* Creates an object to hold $desc
 */
 val Number.$symbol : $name
     /**
-    * Returns value of object for hold of $desc
+    * Returns the value of the object holding $desc
     */
     get() = $name(this.toDouble())
 

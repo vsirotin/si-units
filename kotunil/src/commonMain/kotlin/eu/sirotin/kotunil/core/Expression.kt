@@ -52,7 +52,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
             : this(value, Dimensions(setOf(Factor(description))))
 
     /**
-     * Compares expressions. Bei small relative difference of values
+     * Compares expressions. With small relative difference of values
      * both objects can be recognised as equal.
      */
     fun compare(other: Expression): Int{ //to make it available in JS.
@@ -60,7 +60,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     }
 
     /**
-     * Compares expressions.Bei small relative difference of values
+     * Compares expressions. With small relative difference of values
      * both objects can be recognised as equal.
      */
     override fun compareTo(other: Expression): Int {
@@ -79,18 +79,18 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
 
     /**
      * Returns representation of unit as sequence of separate union symbols
-     * and their powers according SI-Standard recommendations.
+     * and their powers according to SI-Standard recommendations.
      */
     override fun unitSymbols(): String = dimensions.unitSymbols()
 
     /**
      * Returns representation of unit as sequence of separate category symbols
-     * and their powers according SI-Standard recommendations.
+     * and their powers according to SI-Standard recommendations.
      */
     override fun categorySymbols(): String = dimensions.categorySymbols()
 
     /**
-     * Represent value as string with two digit after point as decimal separator.
+     * Represents value as string with two digits after point as decimal separator.
      * Please pay attention: representation of value depends on platform local settings on used computer!
      */
     override fun toString(): String {
@@ -98,7 +98,7 @@ open class Expression(var value: Double, val dimensions: Dimensions) : Comparabl
     }
 
     /**
-     * Bei small relative difference of values
+     * With small relative difference of values
      * both objects can be recognised as equal.
      */
     override fun equals(other: Any?): Boolean {
@@ -247,8 +247,3 @@ operator fun Expression.unaryPlus() = Expression(this.value.unaryPlus(), this.di
  * Implementation of `-=`
  */
 operator fun Expression.unaryMinus() = Expression(this.value.unaryMinus(), this.dimensions)
-
-
-
-
-

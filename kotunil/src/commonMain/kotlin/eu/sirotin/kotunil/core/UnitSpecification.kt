@@ -27,7 +27,7 @@ import kotlin.js.JsName
 
 /**
  * Specifies unit with properties as [unitSymbol] e.g. 'm', [categorySymbol] as 'L',
- * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' ans not 'sm'.
+ * [presentationPriority] for pretty printing e.g. by metre and second should be 'ms' and not 'sm'.
  * and creation function [creator].
  */
 @JsExport

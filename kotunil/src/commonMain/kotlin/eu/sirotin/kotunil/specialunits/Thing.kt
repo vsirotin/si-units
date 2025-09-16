@@ -43,21 +43,20 @@ private val descriptionThing = UnitSpecification(
  */
 class Thing(value: Double) : Expression(value, description = descriptionThing)
 /**
- * Creates Thing-Object for current number value. Thing represent some object.
+ * Creates a Thing object for the current number value. Thing represents some object.
  */
 
 val Number.thing : Thing
     /**
-     * Returns Thing-Object for current number value.
+     * Returns a Thing object for the current number value.
      */
     get() = Thing(this.toDouble())
 
 
 /**
- * Thing-unit for representation of some object.
+ * Thing unit for representation of some object.
  */
 @JsExport
 @JsName("thing")
 @JvmField()
 val thing = Thing(1.0)
-

@@ -190,20 +190,20 @@ private fun generateTextForPrefix(siPrefix: SiPrefix, className: String, name: S
         get() = $className(this.toDouble()*10.0.pow(${siPrefix.degree}))
     
     /**
-     * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+     * Returns the numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
      */
     val $className.${correctedSymbol}  : Double
         /**
-         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+         * Returns the numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
          */
         ${generateJVMName(siPrefix.symbol, unitSymbol)}get() = this.value / 10.0.pow(${siPrefix.degree})
     
     /**
-     * Returns numerical value of $correctedSymbol (10^${siPrefix.degree} of $name)
+     * Returns the numerical value of $correctedSymbol (10^${siPrefix.degree} of $name)
      */
     val $className.${siPrefix.name}$name  : Double
         /**
-         * Returns numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
+         * Returns the numerical value of $correctedSymbol, (10^${siPrefix.degree} of $name)
          */
         get() = this.value / 10.0.pow(${siPrefix.degree})
     
