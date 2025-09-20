@@ -25,11 +25,11 @@ class Sievert(value: Number): DerivedUnit(value, formula)
 val Sv = Sievert(1.0)
 
 /**
-* Creates Sievert-Object for current number value. Sievert is a System International Unit for equivalent dose (of ionising radiation).
+* Creates a Sievert object for the current number value. Sievert is a System International Unit for equivalent dose (of ionising radiation).
 */
 val Number.Sv : Sievert
    /**
-   * Returns Sievert-Object for current number value. Sievert is a System International Unit for equivalent dose (of ionising radiation).
+   * Returns a Sievert object for the current number value. Sievert is a System International Unit for equivalent dose (of ionising radiation).
    */
     get() = Sievert(this.toDouble())
 

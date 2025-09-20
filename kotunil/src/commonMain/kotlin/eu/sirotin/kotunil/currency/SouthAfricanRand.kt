@@ -38,11 +38,11 @@ class SouthAfricanRand(value : Double = 1.0) : Expression(value, description = d
     
 
 /**
-* Creates object for hold of South African rand
+* Creates an object to hold South African rand
 */
 val Number.R : SouthAfricanRand
     /**
-    * Returns value of object for hold of South African rand
+    * Returns the value of the object holding South African rand
     */
     get() = SouthAfricanRand(this.toDouble())
 

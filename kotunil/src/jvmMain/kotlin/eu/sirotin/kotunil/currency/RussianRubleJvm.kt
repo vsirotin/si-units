@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Russian ruble
+* Creates an object to hold Russian ruble
 */
 val Number.`₽` : RussianRuble
     /**
-    * Returns value of object for hold of Russian ruble
+    * Returns the value of the object holding Russian ruble
     */
     get() = RussianRuble(this.toDouble())
 

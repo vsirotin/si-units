@@ -25,11 +25,11 @@ class Volt(value: Number): DerivedUnit(value, formula)
 val V = Volt(1.0)
 
 /**
-* Creates Volt-Object for current number value. Volt is a System International Unit for electric potential, voltage, emf.
+* Creates a Volt object for the current number value. Volt is a System International Unit for electric potential, voltage, emf.
 */
 val Number.V : Volt
    /**
-   * Returns Volt-Object for current number value. Volt is a System International Unit for electric potential, voltage, emf.
+   * Returns a Volt object for the current number value. Volt is a System International Unit for electric potential, voltage, emf.
    */
     get() = Volt(this.toDouble())
 

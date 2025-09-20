@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of New Zealand dollar
+* Creates an object to hold New Zealand dollar
 */
 val Number.`NZ$` : NewZealandDollar
     /**
-    * Returns value of object for hold of New Zealand dollar
+    * Returns the value of the object holding New Zealand dollar
     */
     get() = NewZealandDollar(this.toDouble())
 

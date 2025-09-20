@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of  South Korean won
+* Creates an object to hold  South Korean won
 */
 val Number.`₩` : SouthKoreanWon
     /**
-    * Returns value of object for hold of  South Korean won
+    * Returns the value of the object holding  South Korean won
     */
     get() = SouthKoreanWon(this.toDouble())
 

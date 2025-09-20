@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Philippine peso
+* Creates an object to hold Philippine peso
 */
 val Number.`₱` : PhilippinePeso
     /**
-    * Returns value of object for hold of Philippine peso
+    * Returns the value of the object holding Philippine peso
     */
     get() = PhilippinePeso(this.toDouble())
 

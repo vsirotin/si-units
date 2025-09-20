@@ -25,11 +25,11 @@ class Lux(value: Number): DerivedUnit(value, formula)
 val lx = Lux(1.0)
 
 /**
-* Creates Lux-Object for current number value. Lux is a System International Unit for illuminance.
+* Creates a Lux object for the current number value. Lux is a System International Unit for illuminance.
 */
 val Number.lx : Lux
    /**
-   * Returns Lux-Object for current number value. Lux is a System International Unit for illuminance.
+   * Returns a Lux object for the current number value. Lux is a System International Unit for illuminance.
    */
     get() = Lux(this.toDouble())
 

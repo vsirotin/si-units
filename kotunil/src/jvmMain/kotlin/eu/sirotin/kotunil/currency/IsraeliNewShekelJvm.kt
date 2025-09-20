@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Israeli new shekel
+* Creates an object to hold Israeli new shekel
 */
 val Number.`₪` : IsraeliNewShekel
     /**
-    * Returns value of object for hold of Israeli new shekel
+    * Returns the value of the object holding Israeli new shekel
     */
     get() = IsraeliNewShekel(this.toDouble())
 

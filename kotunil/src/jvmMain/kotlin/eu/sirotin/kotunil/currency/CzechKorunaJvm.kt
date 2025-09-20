@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of  Czech koruna
+* Creates an object to hold  Czech koruna
 */
 val Number.`Kč` : CzechKoruna
     /**
-    * Returns value of object for hold of  Czech koruna
+    * Returns the value of the object holding  Czech koruna
     */
     get() = CzechKoruna(this.toDouble())
 

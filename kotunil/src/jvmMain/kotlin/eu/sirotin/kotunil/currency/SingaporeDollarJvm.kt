@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Singapore dollar
+* Creates an object to hold Singapore dollar
 */
 val Number.`S$` : SingaporeDollar
     /**
-    * Returns value of object for hold of Singapore dollar
+    * Returns the value of the object holding Singapore dollar
     */
     get() = SingaporeDollar(this.toDouble())
 

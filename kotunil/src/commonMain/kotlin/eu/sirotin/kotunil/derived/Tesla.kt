@@ -25,11 +25,11 @@ class Tesla(value: Number): DerivedUnit(value, formula)
 val T = Tesla(1.0)
 
 /**
-* Creates Tesla-Object for current number value. Tesla is a System International Unit for magnetic flux density.
+* Creates a Tesla object for the current number value. Tesla is a System International Unit for magnetic flux density.
 */
 val Number.T : Tesla
    /**
-   * Returns Tesla-Object for current number value. Tesla is a System International Unit for magnetic flux density.
+   * Returns a Tesla object for the current number value. Tesla is a System International Unit for magnetic flux density.
    */
     get() = Tesla(this.toDouble())
 

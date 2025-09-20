@@ -57,21 +57,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of Qmol, (10^30 of mole)
+     * Returns the numerical value of Qmol, (10^30 of mole)
      */
     val Mole.Qmol  : Double
         /**
-         * Returns numerical value of Qmol, (10^30 of mole)
+         * Returns the numerical value of Qmol, (10^30 of mole)
          */
         @JvmName("getQmol_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of Qmol (10^30 of mole)
+     * Returns the numerical value of Qmol (10^30 of mole)
      */
     val Mole.quettamole  : Double
         /**
-         * Returns numerical value of Qmol, (10^30 of mole)
+         * Returns the numerical value of Qmol, (10^30 of mole)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of Rmol, (10^27 of mole)
+     * Returns the numerical value of Rmol, (10^27 of mole)
      */
     val Mole.Rmol  : Double
         /**
-         * Returns numerical value of Rmol, (10^27 of mole)
+         * Returns the numerical value of Rmol, (10^27 of mole)
          */
         @JvmName("getRmol_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of Rmol (10^27 of mole)
+     * Returns the numerical value of Rmol (10^27 of mole)
      */
     val Mole.ronnamole  : Double
         /**
-         * Returns numerical value of Rmol, (10^27 of mole)
+         * Returns the numerical value of Rmol, (10^27 of mole)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of Ymol, (10^24 of mole)
+     * Returns the numerical value of Ymol, (10^24 of mole)
      */
     val Mole.Ymol  : Double
         /**
-         * Returns numerical value of Ymol, (10^24 of mole)
+         * Returns the numerical value of Ymol, (10^24 of mole)
          */
         @JvmName("getYmol_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of Ymol (10^24 of mole)
+     * Returns the numerical value of Ymol (10^24 of mole)
      */
     val Mole.yottamole  : Double
         /**
-         * Returns numerical value of Ymol, (10^24 of mole)
+         * Returns the numerical value of Ymol, (10^24 of mole)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of Zmol, (10^21 of mole)
+     * Returns the numerical value of Zmol, (10^21 of mole)
      */
     val Mole.Zmol  : Double
         /**
-         * Returns numerical value of Zmol, (10^21 of mole)
+         * Returns the numerical value of Zmol, (10^21 of mole)
          */
         @JvmName("getZmol_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of Zmol (10^21 of mole)
+     * Returns the numerical value of Zmol (10^21 of mole)
      */
     val Mole.zettamole  : Double
         /**
-         * Returns numerical value of Zmol, (10^21 of mole)
+         * Returns the numerical value of Zmol, (10^21 of mole)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of Emol, (10^18 of mole)
+     * Returns the numerical value of Emol, (10^18 of mole)
      */
     val Mole.Emol  : Double
         /**
-         * Returns numerical value of Emol, (10^18 of mole)
+         * Returns the numerical value of Emol, (10^18 of mole)
          */
         @JvmName("getEmol_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of Emol (10^18 of mole)
+     * Returns the numerical value of Emol (10^18 of mole)
      */
     val Mole.examole  : Double
         /**
-         * Returns numerical value of Emol, (10^18 of mole)
+         * Returns the numerical value of Emol, (10^18 of mole)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of Pmol, (10^15 of mole)
+     * Returns the numerical value of Pmol, (10^15 of mole)
      */
     val Mole.Pmol  : Double
         /**
-         * Returns numerical value of Pmol, (10^15 of mole)
+         * Returns the numerical value of Pmol, (10^15 of mole)
          */
         @JvmName("getPmol_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of Pmol (10^15 of mole)
+     * Returns the numerical value of Pmol (10^15 of mole)
      */
     val Mole.petamole  : Double
         /**
-         * Returns numerical value of Pmol, (10^15 of mole)
+         * Returns the numerical value of Pmol, (10^15 of mole)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of Tmol, (10^12 of mole)
+     * Returns the numerical value of Tmol, (10^12 of mole)
      */
     val Mole.Tmol  : Double
         /**
-         * Returns numerical value of Tmol, (10^12 of mole)
+         * Returns the numerical value of Tmol, (10^12 of mole)
          */
         @JvmName("getTmol_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of Tmol (10^12 of mole)
+     * Returns the numerical value of Tmol (10^12 of mole)
      */
     val Mole.teramole  : Double
         /**
-         * Returns numerical value of Tmol, (10^12 of mole)
+         * Returns the numerical value of Tmol, (10^12 of mole)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of Gmol, (10^9 of mole)
+     * Returns the numerical value of Gmol, (10^9 of mole)
      */
     val Mole.Gmol  : Double
         /**
-         * Returns numerical value of Gmol, (10^9 of mole)
+         * Returns the numerical value of Gmol, (10^9 of mole)
          */
         @JvmName("getGmol_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of Gmol (10^9 of mole)
+     * Returns the numerical value of Gmol (10^9 of mole)
      */
     val Mole.gigamole  : Double
         /**
-         * Returns numerical value of Gmol, (10^9 of mole)
+         * Returns the numerical value of Gmol, (10^9 of mole)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of Mmol, (10^6 of mole)
+     * Returns the numerical value of Mmol, (10^6 of mole)
      */
     val Mole.Mmol  : Double
         /**
-         * Returns numerical value of Mmol, (10^6 of mole)
+         * Returns the numerical value of Mmol, (10^6 of mole)
          */
         @JvmName("getMmol_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of Mmol (10^6 of mole)
+     * Returns the numerical value of Mmol (10^6 of mole)
      */
     val Mole.megamole  : Double
         /**
-         * Returns numerical value of Mmol, (10^6 of mole)
+         * Returns the numerical value of Mmol, (10^6 of mole)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of kmol, (10^3 of mole)
+     * Returns the numerical value of kmol, (10^3 of mole)
      */
     val Mole.kmol  : Double
         /**
-         * Returns numerical value of kmol, (10^3 of mole)
+         * Returns the numerical value of kmol, (10^3 of mole)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of kmol (10^3 of mole)
+     * Returns the numerical value of kmol (10^3 of mole)
      */
     val Mole.kilomole  : Double
         /**
-         * Returns numerical value of kmol, (10^3 of mole)
+         * Returns the numerical value of kmol, (10^3 of mole)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hmol, (10^2 of mole)
+     * Returns the numerical value of hmol, (10^2 of mole)
      */
     val Mole.hmol  : Double
         /**
-         * Returns numerical value of hmol, (10^2 of mole)
+         * Returns the numerical value of hmol, (10^2 of mole)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hmol (10^2 of mole)
+     * Returns the numerical value of hmol (10^2 of mole)
      */
     val Mole.hectomole  : Double
         /**
-         * Returns numerical value of hmol, (10^2 of mole)
+         * Returns the numerical value of hmol, (10^2 of mole)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of damol, (10^1 of mole)
+     * Returns the numerical value of damol, (10^1 of mole)
      */
     val Mole.damol  : Double
         /**
-         * Returns numerical value of damol, (10^1 of mole)
+         * Returns the numerical value of damol, (10^1 of mole)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of damol (10^1 of mole)
+     * Returns the numerical value of damol (10^1 of mole)
      */
     val Mole.decamole  : Double
         /**
-         * Returns numerical value of damol, (10^1 of mole)
+         * Returns the numerical value of damol, (10^1 of mole)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of dmol, (10^-1 of mole)
+     * Returns the numerical value of dmol, (10^-1 of mole)
      */
     val Mole.dmol  : Double
         /**
-         * Returns numerical value of dmol, (10^-1 of mole)
+         * Returns the numerical value of dmol, (10^-1 of mole)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of dmol (10^-1 of mole)
+     * Returns the numerical value of dmol (10^-1 of mole)
      */
     val Mole.decimole  : Double
         /**
-         * Returns numerical value of dmol, (10^-1 of mole)
+         * Returns the numerical value of dmol, (10^-1 of mole)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of cmol, (10^-2 of mole)
+     * Returns the numerical value of cmol, (10^-2 of mole)
      */
     val Mole.cmol  : Double
         /**
-         * Returns numerical value of cmol, (10^-2 of mole)
+         * Returns the numerical value of cmol, (10^-2 of mole)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of cmol (10^-2 of mole)
+     * Returns the numerical value of cmol (10^-2 of mole)
      */
     val Mole.centimole  : Double
         /**
-         * Returns numerical value of cmol, (10^-2 of mole)
+         * Returns the numerical value of cmol, (10^-2 of mole)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of mmol, (10^-3 of mole)
+     * Returns the numerical value of mmol, (10^-3 of mole)
      */
     val Mole.mmol  : Double
         /**
-         * Returns numerical value of mmol, (10^-3 of mole)
+         * Returns the numerical value of mmol, (10^-3 of mole)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of mmol (10^-3 of mole)
+     * Returns the numerical value of mmol (10^-3 of mole)
      */
     val Mole.millimole  : Double
         /**
-         * Returns numerical value of mmol, (10^-3 of mole)
+         * Returns the numerical value of mmol, (10^-3 of mole)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μmol, (10^-6 of mole)
+     * Returns the numerical value of μmol, (10^-6 of mole)
      */
     val Mole.μmol  : Double
         /**
-         * Returns numerical value of μmol, (10^-6 of mole)
+         * Returns the numerical value of μmol, (10^-6 of mole)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μmol (10^-6 of mole)
+     * Returns the numerical value of μmol (10^-6 of mole)
      */
     val Mole.micromole  : Double
         /**
-         * Returns numerical value of μmol, (10^-6 of mole)
+         * Returns the numerical value of μmol, (10^-6 of mole)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of nmol, (10^-9 of mole)
+     * Returns the numerical value of nmol, (10^-9 of mole)
      */
     val Mole.nmol  : Double
         /**
-         * Returns numerical value of nmol, (10^-9 of mole)
+         * Returns the numerical value of nmol, (10^-9 of mole)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of nmol (10^-9 of mole)
+     * Returns the numerical value of nmol (10^-9 of mole)
      */
     val Mole.nanomole  : Double
         /**
-         * Returns numerical value of nmol, (10^-9 of mole)
+         * Returns the numerical value of nmol, (10^-9 of mole)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of pmol, (10^-12 of mole)
+     * Returns the numerical value of pmol, (10^-12 of mole)
      */
     val Mole.pmol  : Double
         /**
-         * Returns numerical value of pmol, (10^-12 of mole)
+         * Returns the numerical value of pmol, (10^-12 of mole)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of pmol (10^-12 of mole)
+     * Returns the numerical value of pmol (10^-12 of mole)
      */
     val Mole.picomole  : Double
         /**
-         * Returns numerical value of pmol, (10^-12 of mole)
+         * Returns the numerical value of pmol, (10^-12 of mole)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fmol, (10^-15 of mole)
+     * Returns the numerical value of fmol, (10^-15 of mole)
      */
     val Mole.fmol  : Double
         /**
-         * Returns numerical value of fmol, (10^-15 of mole)
+         * Returns the numerical value of fmol, (10^-15 of mole)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fmol (10^-15 of mole)
+     * Returns the numerical value of fmol (10^-15 of mole)
      */
     val Mole.femtomole  : Double
         /**
-         * Returns numerical value of fmol, (10^-15 of mole)
+         * Returns the numerical value of fmol, (10^-15 of mole)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of amol, (10^-18 of mole)
+     * Returns the numerical value of amol, (10^-18 of mole)
      */
     val Mole.amol  : Double
         /**
-         * Returns numerical value of amol, (10^-18 of mole)
+         * Returns the numerical value of amol, (10^-18 of mole)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of amol (10^-18 of mole)
+     * Returns the numerical value of amol (10^-18 of mole)
      */
     val Mole.attomole  : Double
         /**
-         * Returns numerical value of amol, (10^-18 of mole)
+         * Returns the numerical value of amol, (10^-18 of mole)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zmol, (10^-21 of mole)
+     * Returns the numerical value of zmol, (10^-21 of mole)
      */
     val Mole.zmol  : Double
         /**
-         * Returns numerical value of zmol, (10^-21 of mole)
+         * Returns the numerical value of zmol, (10^-21 of mole)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zmol (10^-21 of mole)
+     * Returns the numerical value of zmol (10^-21 of mole)
      */
     val Mole.zeptomole  : Double
         /**
-         * Returns numerical value of zmol, (10^-21 of mole)
+         * Returns the numerical value of zmol, (10^-21 of mole)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of ymol, (10^-24 of mole)
+     * Returns the numerical value of ymol, (10^-24 of mole)
      */
     val Mole.ymol  : Double
         /**
-         * Returns numerical value of ymol, (10^-24 of mole)
+         * Returns the numerical value of ymol, (10^-24 of mole)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of ymol (10^-24 of mole)
+     * Returns the numerical value of ymol (10^-24 of mole)
      */
     val Mole.yoctomole  : Double
         /**
-         * Returns numerical value of ymol, (10^-24 of mole)
+         * Returns the numerical value of ymol, (10^-24 of mole)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rmol, (10^-27 of mole)
+     * Returns the numerical value of rmol, (10^-27 of mole)
      */
     val Mole.rmol  : Double
         /**
-         * Returns numerical value of rmol, (10^-27 of mole)
+         * Returns the numerical value of rmol, (10^-27 of mole)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rmol (10^-27 of mole)
+     * Returns the numerical value of rmol (10^-27 of mole)
      */
     val Mole.rontomole  : Double
         /**
-         * Returns numerical value of rmol, (10^-27 of mole)
+         * Returns the numerical value of rmol, (10^-27 of mole)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Mole(value: Double) : Expression(value, description = descriptionMole)
         get() = Mole(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qmol, (10^-30 of mole)
+     * Returns the numerical value of qmol, (10^-30 of mole)
      */
     val Mole.qmol  : Double
         /**
-         * Returns numerical value of qmol, (10^-30 of mole)
+         * Returns the numerical value of qmol, (10^-30 of mole)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qmol (10^-30 of mole)
+     * Returns the numerical value of qmol (10^-30 of mole)
      */
     val Mole.quectomole  : Double
         /**
-         * Returns numerical value of qmol, (10^-30 of mole)
+         * Returns the numerical value of qmol, (10^-30 of mole)
          */
         get() = this.value / 10.0.pow(-30)
     

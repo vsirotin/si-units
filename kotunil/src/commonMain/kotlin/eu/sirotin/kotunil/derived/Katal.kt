@@ -25,11 +25,11 @@ class Katal(value: Number): DerivedUnit(value, formula)
 val kat = Katal(1.0)
 
 /**
-* Creates Katal-Object for current number value. Katal is a System International Unit for catalytic activity.
+* Creates a Katal object for the current number value. Katal is a System International Unit for catalytic activity.
 */
 val Number.kat : Katal
    /**
-   * Returns Katal-Object for current number value. Katal is a System International Unit for catalytic activity.
+   * Returns a Katal object for the current number value. Katal is a System International Unit for catalytic activity.
    */
     get() = Katal(this.toDouble())
 

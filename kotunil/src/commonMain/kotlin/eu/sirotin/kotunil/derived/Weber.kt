@@ -25,11 +25,11 @@ class Weber(value: Number): DerivedUnit(value, formula)
 val Wb = Weber(1.0)
 
 /**
-* Creates Weber-Object for current number value. Weber is a System International Unit for magnetic flux.
+* Creates a Weber object for the current number value. Weber is a System International Unit for magnetic flux.
 */
 val Number.Wb : Weber
    /**
-   * Returns Weber-Object for current number value. Weber is a System International Unit for magnetic flux.
+   * Returns a Weber object for the current number value. Weber is a System International Unit for magnetic flux.
    */
     get() = Weber(this.toDouble())
 

@@ -57,21 +57,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of QA, (10^30 of ampere)
+     * Returns the numerical value of QA, (10^30 of ampere)
      */
     val Ampere.QA  : Double
         /**
-         * Returns numerical value of QA, (10^30 of ampere)
+         * Returns the numerical value of QA, (10^30 of ampere)
          */
         @JvmName("getQA_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of QA (10^30 of ampere)
+     * Returns the numerical value of QA (10^30 of ampere)
      */
     val Ampere.quettaampere  : Double
         /**
-         * Returns numerical value of QA, (10^30 of ampere)
+         * Returns the numerical value of QA, (10^30 of ampere)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of RA, (10^27 of ampere)
+     * Returns the numerical value of RA, (10^27 of ampere)
      */
     val Ampere.RA  : Double
         /**
-         * Returns numerical value of RA, (10^27 of ampere)
+         * Returns the numerical value of RA, (10^27 of ampere)
          */
         @JvmName("getRA_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of RA (10^27 of ampere)
+     * Returns the numerical value of RA (10^27 of ampere)
      */
     val Ampere.ronnaampere  : Double
         /**
-         * Returns numerical value of RA, (10^27 of ampere)
+         * Returns the numerical value of RA, (10^27 of ampere)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of YA, (10^24 of ampere)
+     * Returns the numerical value of YA, (10^24 of ampere)
      */
     val Ampere.YA  : Double
         /**
-         * Returns numerical value of YA, (10^24 of ampere)
+         * Returns the numerical value of YA, (10^24 of ampere)
          */
         @JvmName("getYA_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of YA (10^24 of ampere)
+     * Returns the numerical value of YA (10^24 of ampere)
      */
     val Ampere.yottaampere  : Double
         /**
-         * Returns numerical value of YA, (10^24 of ampere)
+         * Returns the numerical value of YA, (10^24 of ampere)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of ZA, (10^21 of ampere)
+     * Returns the numerical value of ZA, (10^21 of ampere)
      */
     val Ampere.ZA  : Double
         /**
-         * Returns numerical value of ZA, (10^21 of ampere)
+         * Returns the numerical value of ZA, (10^21 of ampere)
          */
         @JvmName("getZA_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of ZA (10^21 of ampere)
+     * Returns the numerical value of ZA (10^21 of ampere)
      */
     val Ampere.zettaampere  : Double
         /**
-         * Returns numerical value of ZA, (10^21 of ampere)
+         * Returns the numerical value of ZA, (10^21 of ampere)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of EA, (10^18 of ampere)
+     * Returns the numerical value of EA, (10^18 of ampere)
      */
     val Ampere.EA  : Double
         /**
-         * Returns numerical value of EA, (10^18 of ampere)
+         * Returns the numerical value of EA, (10^18 of ampere)
          */
         @JvmName("getEA_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of EA (10^18 of ampere)
+     * Returns the numerical value of EA (10^18 of ampere)
      */
     val Ampere.exaampere  : Double
         /**
-         * Returns numerical value of EA, (10^18 of ampere)
+         * Returns the numerical value of EA, (10^18 of ampere)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of PA, (10^15 of ampere)
+     * Returns the numerical value of PA, (10^15 of ampere)
      */
     val Ampere.PA  : Double
         /**
-         * Returns numerical value of PA, (10^15 of ampere)
+         * Returns the numerical value of PA, (10^15 of ampere)
          */
         @JvmName("getPA_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of PA (10^15 of ampere)
+     * Returns the numerical value of PA (10^15 of ampere)
      */
     val Ampere.petaampere  : Double
         /**
-         * Returns numerical value of PA, (10^15 of ampere)
+         * Returns the numerical value of PA, (10^15 of ampere)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of TA, (10^12 of ampere)
+     * Returns the numerical value of TA, (10^12 of ampere)
      */
     val Ampere.TA  : Double
         /**
-         * Returns numerical value of TA, (10^12 of ampere)
+         * Returns the numerical value of TA, (10^12 of ampere)
          */
         @JvmName("getTA_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of TA (10^12 of ampere)
+     * Returns the numerical value of TA (10^12 of ampere)
      */
     val Ampere.teraampere  : Double
         /**
-         * Returns numerical value of TA, (10^12 of ampere)
+         * Returns the numerical value of TA, (10^12 of ampere)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of GA, (10^9 of ampere)
+     * Returns the numerical value of GA, (10^9 of ampere)
      */
     val Ampere.GA  : Double
         /**
-         * Returns numerical value of GA, (10^9 of ampere)
+         * Returns the numerical value of GA, (10^9 of ampere)
          */
         @JvmName("getGA_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of GA (10^9 of ampere)
+     * Returns the numerical value of GA (10^9 of ampere)
      */
     val Ampere.gigaampere  : Double
         /**
-         * Returns numerical value of GA, (10^9 of ampere)
+         * Returns the numerical value of GA, (10^9 of ampere)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of MA, (10^6 of ampere)
+     * Returns the numerical value of MA, (10^6 of ampere)
      */
     val Ampere.MA  : Double
         /**
-         * Returns numerical value of MA, (10^6 of ampere)
+         * Returns the numerical value of MA, (10^6 of ampere)
          */
         @JvmName("getMA_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of MA (10^6 of ampere)
+     * Returns the numerical value of MA (10^6 of ampere)
      */
     val Ampere.megaampere  : Double
         /**
-         * Returns numerical value of MA, (10^6 of ampere)
+         * Returns the numerical value of MA, (10^6 of ampere)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of kA, (10^3 of ampere)
+     * Returns the numerical value of kA, (10^3 of ampere)
      */
     val Ampere.kA  : Double
         /**
-         * Returns numerical value of kA, (10^3 of ampere)
+         * Returns the numerical value of kA, (10^3 of ampere)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of kA (10^3 of ampere)
+     * Returns the numerical value of kA (10^3 of ampere)
      */
     val Ampere.kiloampere  : Double
         /**
-         * Returns numerical value of kA, (10^3 of ampere)
+         * Returns the numerical value of kA, (10^3 of ampere)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hA, (10^2 of ampere)
+     * Returns the numerical value of hA, (10^2 of ampere)
      */
     val Ampere.hA  : Double
         /**
-         * Returns numerical value of hA, (10^2 of ampere)
+         * Returns the numerical value of hA, (10^2 of ampere)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hA (10^2 of ampere)
+     * Returns the numerical value of hA (10^2 of ampere)
      */
     val Ampere.hectoampere  : Double
         /**
-         * Returns numerical value of hA, (10^2 of ampere)
+         * Returns the numerical value of hA, (10^2 of ampere)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of daA, (10^1 of ampere)
+     * Returns the numerical value of daA, (10^1 of ampere)
      */
     val Ampere.daA  : Double
         /**
-         * Returns numerical value of daA, (10^1 of ampere)
+         * Returns the numerical value of daA, (10^1 of ampere)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of daA (10^1 of ampere)
+     * Returns the numerical value of daA (10^1 of ampere)
      */
     val Ampere.decaampere  : Double
         /**
-         * Returns numerical value of daA, (10^1 of ampere)
+         * Returns the numerical value of daA, (10^1 of ampere)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of dA, (10^-1 of ampere)
+     * Returns the numerical value of dA, (10^-1 of ampere)
      */
     val Ampere.dA  : Double
         /**
-         * Returns numerical value of dA, (10^-1 of ampere)
+         * Returns the numerical value of dA, (10^-1 of ampere)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of dA (10^-1 of ampere)
+     * Returns the numerical value of dA (10^-1 of ampere)
      */
     val Ampere.deciampere  : Double
         /**
-         * Returns numerical value of dA, (10^-1 of ampere)
+         * Returns the numerical value of dA, (10^-1 of ampere)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of cA, (10^-2 of ampere)
+     * Returns the numerical value of cA, (10^-2 of ampere)
      */
     val Ampere.cA  : Double
         /**
-         * Returns numerical value of cA, (10^-2 of ampere)
+         * Returns the numerical value of cA, (10^-2 of ampere)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of cA (10^-2 of ampere)
+     * Returns the numerical value of cA (10^-2 of ampere)
      */
     val Ampere.centiampere  : Double
         /**
-         * Returns numerical value of cA, (10^-2 of ampere)
+         * Returns the numerical value of cA, (10^-2 of ampere)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of mA, (10^-3 of ampere)
+     * Returns the numerical value of mA, (10^-3 of ampere)
      */
     val Ampere.mA  : Double
         /**
-         * Returns numerical value of mA, (10^-3 of ampere)
+         * Returns the numerical value of mA, (10^-3 of ampere)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of mA (10^-3 of ampere)
+     * Returns the numerical value of mA (10^-3 of ampere)
      */
     val Ampere.milliampere  : Double
         /**
-         * Returns numerical value of mA, (10^-3 of ampere)
+         * Returns the numerical value of mA, (10^-3 of ampere)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μA, (10^-6 of ampere)
+     * Returns the numerical value of μA, (10^-6 of ampere)
      */
     val Ampere.μA  : Double
         /**
-         * Returns numerical value of μA, (10^-6 of ampere)
+         * Returns the numerical value of μA, (10^-6 of ampere)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μA (10^-6 of ampere)
+     * Returns the numerical value of μA (10^-6 of ampere)
      */
     val Ampere.microampere  : Double
         /**
-         * Returns numerical value of μA, (10^-6 of ampere)
+         * Returns the numerical value of μA, (10^-6 of ampere)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of nA, (10^-9 of ampere)
+     * Returns the numerical value of nA, (10^-9 of ampere)
      */
     val Ampere.nA  : Double
         /**
-         * Returns numerical value of nA, (10^-9 of ampere)
+         * Returns the numerical value of nA, (10^-9 of ampere)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of nA (10^-9 of ampere)
+     * Returns the numerical value of nA (10^-9 of ampere)
      */
     val Ampere.nanoampere  : Double
         /**
-         * Returns numerical value of nA, (10^-9 of ampere)
+         * Returns the numerical value of nA, (10^-9 of ampere)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of pA, (10^-12 of ampere)
+     * Returns the numerical value of pA, (10^-12 of ampere)
      */
     val Ampere.pA  : Double
         /**
-         * Returns numerical value of pA, (10^-12 of ampere)
+         * Returns the numerical value of pA, (10^-12 of ampere)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of pA (10^-12 of ampere)
+     * Returns the numerical value of pA (10^-12 of ampere)
      */
     val Ampere.picoampere  : Double
         /**
-         * Returns numerical value of pA, (10^-12 of ampere)
+         * Returns the numerical value of pA, (10^-12 of ampere)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fA, (10^-15 of ampere)
+     * Returns the numerical value of fA, (10^-15 of ampere)
      */
     val Ampere.fA  : Double
         /**
-         * Returns numerical value of fA, (10^-15 of ampere)
+         * Returns the numerical value of fA, (10^-15 of ampere)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fA (10^-15 of ampere)
+     * Returns the numerical value of fA (10^-15 of ampere)
      */
     val Ampere.femtoampere  : Double
         /**
-         * Returns numerical value of fA, (10^-15 of ampere)
+         * Returns the numerical value of fA, (10^-15 of ampere)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of aA, (10^-18 of ampere)
+     * Returns the numerical value of aA, (10^-18 of ampere)
      */
     val Ampere.aA  : Double
         /**
-         * Returns numerical value of aA, (10^-18 of ampere)
+         * Returns the numerical value of aA, (10^-18 of ampere)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of aA (10^-18 of ampere)
+     * Returns the numerical value of aA (10^-18 of ampere)
      */
     val Ampere.attoampere  : Double
         /**
-         * Returns numerical value of aA, (10^-18 of ampere)
+         * Returns the numerical value of aA, (10^-18 of ampere)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zA, (10^-21 of ampere)
+     * Returns the numerical value of zA, (10^-21 of ampere)
      */
     val Ampere.zA  : Double
         /**
-         * Returns numerical value of zA, (10^-21 of ampere)
+         * Returns the numerical value of zA, (10^-21 of ampere)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zA (10^-21 of ampere)
+     * Returns the numerical value of zA (10^-21 of ampere)
      */
     val Ampere.zeptoampere  : Double
         /**
-         * Returns numerical value of zA, (10^-21 of ampere)
+         * Returns the numerical value of zA, (10^-21 of ampere)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of yA, (10^-24 of ampere)
+     * Returns the numerical value of yA, (10^-24 of ampere)
      */
     val Ampere.yA  : Double
         /**
-         * Returns numerical value of yA, (10^-24 of ampere)
+         * Returns the numerical value of yA, (10^-24 of ampere)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of yA (10^-24 of ampere)
+     * Returns the numerical value of yA (10^-24 of ampere)
      */
     val Ampere.yoctoampere  : Double
         /**
-         * Returns numerical value of yA, (10^-24 of ampere)
+         * Returns the numerical value of yA, (10^-24 of ampere)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rA, (10^-27 of ampere)
+     * Returns the numerical value of rA, (10^-27 of ampere)
      */
     val Ampere.rA  : Double
         /**
-         * Returns numerical value of rA, (10^-27 of ampere)
+         * Returns the numerical value of rA, (10^-27 of ampere)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rA (10^-27 of ampere)
+     * Returns the numerical value of rA (10^-27 of ampere)
      */
     val Ampere.rontoampere  : Double
         /**
-         * Returns numerical value of rA, (10^-27 of ampere)
+         * Returns the numerical value of rA, (10^-27 of ampere)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Ampere(value: Double) : Expression(value, description = descriptionAmpere)
         get() = Ampere(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qA, (10^-30 of ampere)
+     * Returns the numerical value of qA, (10^-30 of ampere)
      */
     val Ampere.qA  : Double
         /**
-         * Returns numerical value of qA, (10^-30 of ampere)
+         * Returns the numerical value of qA, (10^-30 of ampere)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qA (10^-30 of ampere)
+     * Returns the numerical value of qA (10^-30 of ampere)
      */
     val Ampere.quectoampere  : Double
         /**
-         * Returns numerical value of qA, (10^-30 of ampere)
+         * Returns the numerical value of qA, (10^-30 of ampere)
          */
         get() = this.value / 10.0.pow(-30)
     

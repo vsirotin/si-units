@@ -38,11 +38,11 @@ class SwissFranc(value : Double = 1.0) : Expression(value, description = descrip
     
 
 /**
-* Creates object for hold of Swiss franc
+* Creates an object to hold Swiss franc
 */
 val Number.SCHF : SwissFranc
     /**
-    * Returns value of object for hold of Swiss franc
+    * Returns the value of the object holding Swiss franc
     */
     get() = SwissFranc(this.toDouble())
 

@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Turkish lira
+* Creates an object to hold Turkish lira
 */
 val Number.`₺` : TurkishLira
     /**
-    * Returns value of object for hold of Turkish lira
+    * Returns the value of the object holding Turkish lira
     */
     get() = TurkishLira(this.toDouble())
 

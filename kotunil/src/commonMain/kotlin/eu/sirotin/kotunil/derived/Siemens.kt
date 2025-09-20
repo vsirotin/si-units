@@ -25,11 +25,11 @@ class Siemens(value: Number): DerivedUnit(value, formula)
 val S = Siemens(1.0)
 
 /**
-* Creates Siemens-Object for current number value. Siemens is a System International Unit for electrical conductance.
+* Creates a Siemens object for the current number value. Siemens is a System International Unit for electrical conductance.
 */
 val Number.S : Siemens
    /**
-   * Returns Siemens-Object for current number value. Siemens is a System International Unit for electrical conductance.
+   * Returns a Siemens object for the current number value. Siemens is a System International Unit for electrical conductance.
    */
     get() = Siemens(this.toDouble())
 

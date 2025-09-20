@@ -25,11 +25,11 @@ class Pascal(value: Number): DerivedUnit(value, formula)
 val Pa = Pascal(1.0)
 
 /**
-* Creates Pascal-Object for current number value. Pascal is a System International Unit for pressure, stress.
+* Creates a Pascal object for the current number value. Pascal is a System International Unit for pressure, stress.
 */
 val Number.Pa : Pascal
    /**
-   * Returns Pascal-Object for current number value. Pascal is a System International Unit for pressure, stress.
+   * Returns a Pascal object for the current number value. Pascal is a System International Unit for pressure, stress.
    */
     get() = Pascal(this.toDouble())
 

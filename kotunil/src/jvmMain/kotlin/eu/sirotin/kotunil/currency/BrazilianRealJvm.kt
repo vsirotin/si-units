@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Brazilian real
+* Creates an object to hold Brazilian real
 */
 val Number.`R$` : BrazilianReal
     /**
-    * Returns value of object for hold of Brazilian real
+    * Returns the value of the object holding Brazilian real
     */
     get() = BrazilianReal(this.toDouble())
 
