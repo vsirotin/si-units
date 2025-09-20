@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform") version "2.0.21"
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.dokka") version "2.0.0"
+    id("org.jetbrains.dokka") version "1.9.20"
 }
 
 dependencies {
@@ -91,9 +91,9 @@ extensions.configure<PublishingExtension> {
     }
 
     val javadocJar = tasks.register<Jar>("javadocJar") {
-        dependsOn(tasks.dokkaGeneratePublicationHtml)
+        dependsOn(tasks.dokkaHtml)
         archiveClassifier.set("javadoc")
-        from(layout.buildDirectory.dir("dokka"))
+        from("$buildDir/dokka/html")
     }
 
     publications {
