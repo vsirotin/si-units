@@ -1,4 +1,4 @@
-val kotunilVersion = "4.2.2"
+val kotunilVersion = "4.2.3"
 val kotunilJvmStableVersion = kotunilVersion
 
 val kotunilJsVersion = "5.0.1"
