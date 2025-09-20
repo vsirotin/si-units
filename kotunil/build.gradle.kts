@@ -1,10 +1,10 @@
 version = project.extra["kotunil-version"]!!
 
 plugins {
-    kotlin("multiplatform") version "2.0.0"
+    kotlin("multiplatform") version "2.0.21"
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.dokka") version "1.9.10"
+    id("org.jetbrains.dokka") version "2.0.0"
 }
 
 dependencies {
