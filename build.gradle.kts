@@ -1,5 +1,5 @@
 val kotunilVersion = "4.2.3"
-val kotunilJvmStableVersion = kotunilVersion
+val kotunilJvmStableVersion = "4.2.2"
 
 val kotunilJsVersion = "5.0.1"
 
@@ -38,7 +38,7 @@ tasks.dokkaHtmlMultiModule.configure {
                     "homepageLink": "https://github.com/vsirotin/si-units",
                     "customStyleSheets": [],
                     "customAssets": [],
-                    "footerMessage": "© 2024 Dr. Viktor Sirotin"
+                    "footerMessage": "© 2025 Dr. Viktor Sirotin"
                 }
             """.trimIndent()
         )
