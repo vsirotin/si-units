@@ -15,7 +15,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^4.17.23",
-    "kotunil-js-lib": "5.0.1",
+    "kotunil-js-lib": "file:../../js-lib/dist",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   },
@@ -23,8 +23,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
-    "mongodb": "^6.19.0",
-    "mongoose": "^8.18.1",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.2",
     "nodemon": "^3.1.10"
   },
   "engines": {

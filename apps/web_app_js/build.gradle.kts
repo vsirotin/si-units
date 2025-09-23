@@ -8,11 +8,11 @@ dependencies {
     project(":js-lib")
 }
 
-//val fromDir = "${project.parent?.parent?.projectDir}/kotunil/build/dist/js/productionLibrary"
 val fromDir = "${project.parent?.parent?.projectDir}/js-lib/dist"
+val fromLibDir = "${project.parent?.parent?.projectDir}/js-lib/dist/kotlin"
 val libDir = "${layout.projectDirectory}/lib"
-tasks.register<Copy>("copyLibs") {
-    from(file(fromDir))
+tasks.register<Copy>("copyLib") {
+    from(file(fromLibDir))
     into(file(libDir))
 
     inputs.file("${fromDir}/package.json") //To make this task depend on this file
@@ -25,9 +25,9 @@ tasks.register<Delete>("clean") {
 
 tasks.register<DefaultTask>("build") {
     dependsOn(":js-lib:build")
-    dependsOn("copyLibs")
+    dependsOn("copyLib")
 }
 
-tasks.named("copyLibs") {
+tasks.named("copyLib") {
     dependsOn(":js-lib:copyLibs")
 }

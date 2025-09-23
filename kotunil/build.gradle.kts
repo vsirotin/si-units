@@ -93,12 +93,15 @@ extensions.configure<PublishingExtension> {
     val javadocJar = tasks.register<Jar>("javadocJar") {
         dependsOn(tasks.dokkaHtml)
         archiveClassifier.set("javadoc")
-        from("$buildDir/dokka/html")
+        from(layout.buildDirectory.dir("dokka/html"))
     }
 
     publications {
         withType<MavenPublication> {
-            artifact(javadocJar)
+            // Only attach javadoc jar to JVM publication to avoid conflicts
+            if (name == "jvm") {
+                artifact(javadocJar)
+            }
 
             pom {
                 name.set("KotUniL")
@@ -146,5 +149,12 @@ tasks.named("jsNodeProductionLibraryDistribution") {
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
     //Signing secret parameters will be set in .gradle\gradle.properties file
+    // This will automatically create sign tasks and set up dependencies.
     sign(publishing.publications)
+}
+
+tasks.register("testAllArtifacts") {
+    group = "verification"
+    description = "Runs all tests for all targets."
+    dependsOn(tasks.named("check"))
 }

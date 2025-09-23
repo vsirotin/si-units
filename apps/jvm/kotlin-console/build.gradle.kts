@@ -7,7 +7,7 @@ group = "eu.sirotin.kotunil.app.kotlin"
 version = project.extra["kotunil-jvm-stable-version"]!!
 
 repositories {
-    mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
