@@ -1,7 +1,19 @@
+import org.gradle.api.publish.PublishingExtension
+import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.api.tasks.bundling.Jar
+import org.gradle.kotlin.dsl.extra
+import org.gradle.kotlin.dsl.get
+import org.gradle.kotlin.dsl.invoke
+import org.gradle.kotlin.dsl.named
+import org.gradle.kotlin.dsl.register
+import org.gradle.kotlin.dsl.withType
+import org.gradle.plugins.signing.SigningExtension
+
 version = project.extra["kotunil-version"]!!
 
 plugins {
     kotlin("multiplatform") version "2.0.21"
+    id("org.jreleaser") version "1.12.0"
     id("maven-publish")
     id("signing")
     id("org.jetbrains.dokka") version "1.9.20"
@@ -80,10 +92,13 @@ extensions.configure<PublishingExtension> {
 
  repositories {
         maven {
+            name = "ossrh-staging-api"
+            // Using the OSSRH Staging API URL for the new Central Portal
+            url = uri("https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/")
 
             credentials {
                 //Reading secret parameters from .gradle\gradle.properties file
-                //Can be used only locally
+                //Can be used only locally, not from GitHub
                 username = (findProperty("ossrhToken") ?: "" ) as String
                 password = (findProperty("ossrhTokenPassword") ?: "") as String
             }
