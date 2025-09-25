@@ -1,22 +1,9 @@
-import org.gradle.api.publish.PublishingExtension
-import org.gradle.api.publish.maven.MavenPublication
-import org.gradle.api.tasks.bundling.Jar
-import org.gradle.kotlin.dsl.extra
-import org.gradle.kotlin.dsl.get
-import org.gradle.kotlin.dsl.invoke
-import org.gradle.kotlin.dsl.named
-import org.gradle.kotlin.dsl.register
-import org.gradle.kotlin.dsl.withType
-import org.gradle.plugins.signing.SigningExtension
-
 version = project.extra["kotunil-version"]!!
 
 plugins {
     kotlin("multiplatform") version "2.0.21"
-    id("org.jreleaser") version "1.12.0"
-    id("maven-publish")
-    id("signing")
     id("org.jetbrains.dokka") version "1.9.20"
+    id("com.vanniktech.maven.publish") version "0.34.0"
 }
 
 dependencies {
@@ -88,61 +75,36 @@ kotlin {
     }
 }
 
-extensions.configure<PublishingExtension> {
+mavenPublishing {
+    publishToMavenCentral()
 
- repositories {
-        maven {
-            name = "ossrh-staging-api"
-            // Using the OSSRH Staging API URL for the new Central Portal
-            url = uri("https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/")
+    signAllPublications()
 
-            credentials {
-                //Reading secret parameters from .gradle\gradle.properties file
-                //Can be used only locally, not from GitHub
-                username = (findProperty("ossrhToken") ?: "" ) as String
-                password = (findProperty("ossrhTokenPassword") ?: "") as String
+    coordinates(group.toString(), "kotunil", version.toString())
+
+    pom {
+        name.set("KotUniL")
+        description.set("\"KotUniL (Kotlin Units Library) is a library for processing all units of SI base and derived units (see https://en.wikipedia.org/wiki/International_System_of_Units), currencies, etc.")
+        licenses {
+            license {
+                name.set("Apache-2.0")
+                url.set("https://opensource.org/licenses/Apache-2.0")
             }
         }
-    }
-
-    val javadocJar = tasks.register<Jar>("javadocJar") {
-        dependsOn(tasks.dokkaHtml)
-        archiveClassifier.set("javadoc")
-        from(layout.buildDirectory.dir("dokka/html"))
-    }
-
-    publications {
-        withType<MavenPublication> {
-            // Only attach javadoc jar to JVM publication to avoid conflicts
-            if (name == "jvm") {
-                artifact(javadocJar)
-            }
-
-            pom {
-                name.set("KotUniL")
-                description.set("\"KotUniL (Kotlin Units Library) is a library for processing all units of SI base and derived units (see https://en.wikipedia.org/wiki/International_System_of_Units), currencies, etc.")
-                licenses {
-                    license {
-                        name.set("Apache-2.0")
-                        url.set("https://opensource.org/licenses/Apache-2.0")
-                    }
-                }
-                url.set("https://github.com/vsirotin/")
-                issueManagement {
-                    system.set("Github")
-                    url.set("https://github.com/vsirotin/si-units/issues")
-                }
-                scm {
-                    connection.set("scm:https://github.com/vsirotin/si-units.git")
-                    developerConnection.set("scm:git@github.com:vsirotin/si-units.git")
-                    url.set("https://github.com/vsirotin/si-units")
-                }
-                developers {
-                    developer {
-                        id.set("vsirotin")
-                        name.set("Dr. Viktor Sirotin")
-                    }
-                }
+        url.set("https://github.com/vsirotin/")
+        issueManagement {
+            system.set("Github")
+            url.set("https://github.com/vsirotin/si-units/issues")
+        }
+        scm {
+            connection.set("scm:https://github.com/vsirotin/si-units.git")
+            developerConnection.set("scm:git@github.com:vsirotin/si-units.git")
+            url.set("https://github.com/vsirotin/si-units")
+        }
+        developers {
+            developer {
+                id.set("vsirotin")
+                name.set("Dr. Viktor Sirotin")
             }
         }
     }
@@ -160,14 +122,14 @@ tasks.named("jsBrowserProductionLibraryDistribution") {
 tasks.named("jsNodeProductionLibraryDistribution") {
     dependsOn("jsProductionExecutableCompileSync")
 }
-
+/**
 val publishing = extensions.getByType<PublishingExtension>()
 extensions.configure<SigningExtension> {
     //Signing secret parameters will be set in .gradle\gradle.properties file
     // This will automatically create sign tasks and set up dependencies.
     sign(publishing.publications)
 }
-
+*/
 tasks.register("testAllArtifacts") {
     group = "verification"
     description = "Runs all tests for all targets."
