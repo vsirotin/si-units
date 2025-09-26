@@ -1,9 +1,10 @@
 # KotUniL Release Notes 
 
-# Version 4.2.3
+# Version 4.2.3 (JVM) 
 1. Documentation update.
 2. Migration to Kotlin 2.0.21
 3. Update some build scripts.
+4. Update JS version to 5.0.3
 
 # Version 4.2.2
 1. Migration to Kotlin 2.0.0 platform.
