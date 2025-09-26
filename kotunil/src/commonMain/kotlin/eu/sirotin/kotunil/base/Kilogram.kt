@@ -57,21 +57,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of Qkg, (10^27 of kilogram)
+     * Returns the numerical value of Qkg, (10^27 of kilogram)
      */
     val Kilogram.Qkg  : Double
         /**
-         * Returns numerical value of Qkg, (10^27 of kilogram)
+         * Returns the numerical value of Qkg, (10^27 of kilogram)
          */
         @JvmName("getQkg_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of Qkg (10^27 of kilogram)
+     * Returns the numerical value of Qkg (10^27 of kilogram)
      */
     val Kilogram.quettakilogram  : Double
         /**
-         * Returns numerical value of Qkg, (10^27 of kilogram)
+         * Returns the numerical value of Qkg, (10^27 of kilogram)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -109,21 +109,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of Rkg, (10^24 of kilogram)
+     * Returns the numerical value of Rkg, (10^24 of kilogram)
      */
     val Kilogram.Rkg  : Double
         /**
-         * Returns numerical value of Rkg, (10^24 of kilogram)
+         * Returns the numerical value of Rkg, (10^24 of kilogram)
          */
         @JvmName("getRkg_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of Rkg (10^24 of kilogram)
+     * Returns the numerical value of Rkg (10^24 of kilogram)
      */
     val Kilogram.ronnakilogram  : Double
         /**
-         * Returns numerical value of Rkg, (10^24 of kilogram)
+         * Returns the numerical value of Rkg, (10^24 of kilogram)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -161,21 +161,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of Ykg, (10^21 of kilogram)
+     * Returns the numerical value of Ykg, (10^21 of kilogram)
      */
     val Kilogram.Ykg  : Double
         /**
-         * Returns numerical value of Ykg, (10^21 of kilogram)
+         * Returns the numerical value of Ykg, (10^21 of kilogram)
          */
         @JvmName("getYkg_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of Ykg (10^21 of kilogram)
+     * Returns the numerical value of Ykg (10^21 of kilogram)
      */
     val Kilogram.yottakilogram  : Double
         /**
-         * Returns numerical value of Ykg, (10^21 of kilogram)
+         * Returns the numerical value of Ykg, (10^21 of kilogram)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -213,21 +213,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of Zkg, (10^18 of kilogram)
+     * Returns the numerical value of Zkg, (10^18 of kilogram)
      */
     val Kilogram.Zkg  : Double
         /**
-         * Returns numerical value of Zkg, (10^18 of kilogram)
+         * Returns the numerical value of Zkg, (10^18 of kilogram)
          */
         @JvmName("getZkg_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of Zkg (10^18 of kilogram)
+     * Returns the numerical value of Zkg (10^18 of kilogram)
      */
     val Kilogram.zettakilogram  : Double
         /**
-         * Returns numerical value of Zkg, (10^18 of kilogram)
+         * Returns the numerical value of Zkg, (10^18 of kilogram)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -265,21 +265,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of Ekg, (10^15 of kilogram)
+     * Returns the numerical value of Ekg, (10^15 of kilogram)
      */
     val Kilogram.Ekg  : Double
         /**
-         * Returns numerical value of Ekg, (10^15 of kilogram)
+         * Returns the numerical value of Ekg, (10^15 of kilogram)
          */
         @JvmName("getEkg_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of Ekg (10^15 of kilogram)
+     * Returns the numerical value of Ekg (10^15 of kilogram)
      */
     val Kilogram.exakilogram  : Double
         /**
-         * Returns numerical value of Ekg, (10^15 of kilogram)
+         * Returns the numerical value of Ekg, (10^15 of kilogram)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -317,21 +317,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of Pkg, (10^12 of kilogram)
+     * Returns the numerical value of Pkg, (10^12 of kilogram)
      */
     val Kilogram.Pkg  : Double
         /**
-         * Returns numerical value of Pkg, (10^12 of kilogram)
+         * Returns the numerical value of Pkg, (10^12 of kilogram)
          */
         @JvmName("getPkg_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of Pkg (10^12 of kilogram)
+     * Returns the numerical value of Pkg (10^12 of kilogram)
      */
     val Kilogram.petakilogram  : Double
         /**
-         * Returns numerical value of Pkg, (10^12 of kilogram)
+         * Returns the numerical value of Pkg, (10^12 of kilogram)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -369,21 +369,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of Tkg, (10^9 of kilogram)
+     * Returns the numerical value of Tkg, (10^9 of kilogram)
      */
     val Kilogram.Tkg  : Double
         /**
-         * Returns numerical value of Tkg, (10^9 of kilogram)
+         * Returns the numerical value of Tkg, (10^9 of kilogram)
          */
         @JvmName("getTkg_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of Tkg (10^9 of kilogram)
+     * Returns the numerical value of Tkg (10^9 of kilogram)
      */
     val Kilogram.terakilogram  : Double
         /**
-         * Returns numerical value of Tkg, (10^9 of kilogram)
+         * Returns the numerical value of Tkg, (10^9 of kilogram)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -421,21 +421,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of Gkg, (10^6 of kilogram)
+     * Returns the numerical value of Gkg, (10^6 of kilogram)
      */
     val Kilogram.Gkg  : Double
         /**
-         * Returns numerical value of Gkg, (10^6 of kilogram)
+         * Returns the numerical value of Gkg, (10^6 of kilogram)
          */
         @JvmName("getGkg_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of Gkg (10^6 of kilogram)
+     * Returns the numerical value of Gkg (10^6 of kilogram)
      */
     val Kilogram.gigakilogram  : Double
         /**
-         * Returns numerical value of Gkg, (10^6 of kilogram)
+         * Returns the numerical value of Gkg, (10^6 of kilogram)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -473,21 +473,21 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of Mkg, (10^3 of kilogram)
+     * Returns the numerical value of Mkg, (10^3 of kilogram)
      */
     val Kilogram.Mkg  : Double
         /**
-         * Returns numerical value of Mkg, (10^3 of kilogram)
+         * Returns the numerical value of Mkg, (10^3 of kilogram)
          */
         @JvmName("getMkg_prop")
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of Mkg (10^3 of kilogram)
+     * Returns the numerical value of Mkg (10^3 of kilogram)
      */
     val Kilogram.megakilogram  : Double
         /**
-         * Returns numerical value of Mkg, (10^3 of kilogram)
+         * Returns the numerical value of Mkg, (10^3 of kilogram)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -524,20 +524,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of hkg, (10^-1 of kilogram)
+     * Returns the numerical value of hkg, (10^-1 of kilogram)
      */
     val Kilogram.hkg  : Double
         /**
-         * Returns numerical value of hkg, (10^-1 of kilogram)
+         * Returns the numerical value of hkg, (10^-1 of kilogram)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of hkg (10^-1 of kilogram)
+     * Returns the numerical value of hkg (10^-1 of kilogram)
      */
     val Kilogram.hectokilogram  : Double
         /**
-         * Returns numerical value of hkg, (10^-1 of kilogram)
+         * Returns the numerical value of hkg, (10^-1 of kilogram)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -574,20 +574,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of dakg, (10^-2 of kilogram)
+     * Returns the numerical value of dakg, (10^-2 of kilogram)
      */
     val Kilogram.dakg  : Double
         /**
-         * Returns numerical value of dakg, (10^-2 of kilogram)
+         * Returns the numerical value of dakg, (10^-2 of kilogram)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of dakg (10^-2 of kilogram)
+     * Returns the numerical value of dakg (10^-2 of kilogram)
      */
     val Kilogram.decakilogram  : Double
         /**
-         * Returns numerical value of dakg, (10^-2 of kilogram)
+         * Returns the numerical value of dakg, (10^-2 of kilogram)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -624,20 +624,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-4))
     
     /**
-     * Returns numerical value of dkg, (10^-4 of kilogram)
+     * Returns the numerical value of dkg, (10^-4 of kilogram)
      */
     val Kilogram.dkg  : Double
         /**
-         * Returns numerical value of dkg, (10^-4 of kilogram)
+         * Returns the numerical value of dkg, (10^-4 of kilogram)
          */
         get() = this.value / 10.0.pow(-4)
     
     /**
-     * Returns numerical value of dkg (10^-4 of kilogram)
+     * Returns the numerical value of dkg (10^-4 of kilogram)
      */
     val Kilogram.decikilogram  : Double
         /**
-         * Returns numerical value of dkg, (10^-4 of kilogram)
+         * Returns the numerical value of dkg, (10^-4 of kilogram)
          */
         get() = this.value / 10.0.pow(-4)
     
@@ -674,20 +674,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-5))
     
     /**
-     * Returns numerical value of ckg, (10^-5 of kilogram)
+     * Returns the numerical value of ckg, (10^-5 of kilogram)
      */
     val Kilogram.ckg  : Double
         /**
-         * Returns numerical value of ckg, (10^-5 of kilogram)
+         * Returns the numerical value of ckg, (10^-5 of kilogram)
          */
         get() = this.value / 10.0.pow(-5)
     
     /**
-     * Returns numerical value of ckg (10^-5 of kilogram)
+     * Returns the numerical value of ckg (10^-5 of kilogram)
      */
     val Kilogram.centikilogram  : Double
         /**
-         * Returns numerical value of ckg, (10^-5 of kilogram)
+         * Returns the numerical value of ckg, (10^-5 of kilogram)
          */
         get() = this.value / 10.0.pow(-5)
     
@@ -724,20 +724,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of mkg, (10^-6 of kilogram)
+     * Returns the numerical value of mkg, (10^-6 of kilogram)
      */
     val Kilogram.mkg  : Double
         /**
-         * Returns numerical value of mkg, (10^-6 of kilogram)
+         * Returns the numerical value of mkg, (10^-6 of kilogram)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of mkg (10^-6 of kilogram)
+     * Returns the numerical value of mkg (10^-6 of kilogram)
      */
     val Kilogram.millikilogram  : Double
         /**
-         * Returns numerical value of mkg, (10^-6 of kilogram)
+         * Returns the numerical value of mkg, (10^-6 of kilogram)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -774,20 +774,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of μkg, (10^-9 of kilogram)
+     * Returns the numerical value of μkg, (10^-9 of kilogram)
      */
     val Kilogram.μkg  : Double
         /**
-         * Returns numerical value of μkg, (10^-9 of kilogram)
+         * Returns the numerical value of μkg, (10^-9 of kilogram)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of μkg (10^-9 of kilogram)
+     * Returns the numerical value of μkg (10^-9 of kilogram)
      */
     val Kilogram.microkilogram  : Double
         /**
-         * Returns numerical value of μkg, (10^-9 of kilogram)
+         * Returns the numerical value of μkg, (10^-9 of kilogram)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -824,20 +824,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of nkg, (10^-12 of kilogram)
+     * Returns the numerical value of nkg, (10^-12 of kilogram)
      */
     val Kilogram.nkg  : Double
         /**
-         * Returns numerical value of nkg, (10^-12 of kilogram)
+         * Returns the numerical value of nkg, (10^-12 of kilogram)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of nkg (10^-12 of kilogram)
+     * Returns the numerical value of nkg (10^-12 of kilogram)
      */
     val Kilogram.nanokilogram  : Double
         /**
-         * Returns numerical value of nkg, (10^-12 of kilogram)
+         * Returns the numerical value of nkg, (10^-12 of kilogram)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -874,20 +874,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of pkg, (10^-15 of kilogram)
+     * Returns the numerical value of pkg, (10^-15 of kilogram)
      */
     val Kilogram.pkg  : Double
         /**
-         * Returns numerical value of pkg, (10^-15 of kilogram)
+         * Returns the numerical value of pkg, (10^-15 of kilogram)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of pkg (10^-15 of kilogram)
+     * Returns the numerical value of pkg (10^-15 of kilogram)
      */
     val Kilogram.picokilogram  : Double
         /**
-         * Returns numerical value of pkg, (10^-15 of kilogram)
+         * Returns the numerical value of pkg, (10^-15 of kilogram)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -924,20 +924,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of fkg, (10^-18 of kilogram)
+     * Returns the numerical value of fkg, (10^-18 of kilogram)
      */
     val Kilogram.fkg  : Double
         /**
-         * Returns numerical value of fkg, (10^-18 of kilogram)
+         * Returns the numerical value of fkg, (10^-18 of kilogram)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of fkg (10^-18 of kilogram)
+     * Returns the numerical value of fkg (10^-18 of kilogram)
      */
     val Kilogram.femtokilogram  : Double
         /**
-         * Returns numerical value of fkg, (10^-18 of kilogram)
+         * Returns the numerical value of fkg, (10^-18 of kilogram)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -974,20 +974,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of akg, (10^-21 of kilogram)
+     * Returns the numerical value of akg, (10^-21 of kilogram)
      */
     val Kilogram.akg  : Double
         /**
-         * Returns numerical value of akg, (10^-21 of kilogram)
+         * Returns the numerical value of akg, (10^-21 of kilogram)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of akg (10^-21 of kilogram)
+     * Returns the numerical value of akg (10^-21 of kilogram)
      */
     val Kilogram.attokilogram  : Double
         /**
-         * Returns numerical value of akg, (10^-21 of kilogram)
+         * Returns the numerical value of akg, (10^-21 of kilogram)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1024,20 +1024,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of zkg, (10^-24 of kilogram)
+     * Returns the numerical value of zkg, (10^-24 of kilogram)
      */
     val Kilogram.zkg  : Double
         /**
-         * Returns numerical value of zkg, (10^-24 of kilogram)
+         * Returns the numerical value of zkg, (10^-24 of kilogram)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of zkg (10^-24 of kilogram)
+     * Returns the numerical value of zkg (10^-24 of kilogram)
      */
     val Kilogram.zeptokilogram  : Double
         /**
-         * Returns numerical value of zkg, (10^-24 of kilogram)
+         * Returns the numerical value of zkg, (10^-24 of kilogram)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1074,20 +1074,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of ykg, (10^-27 of kilogram)
+     * Returns the numerical value of ykg, (10^-27 of kilogram)
      */
     val Kilogram.ykg  : Double
         /**
-         * Returns numerical value of ykg, (10^-27 of kilogram)
+         * Returns the numerical value of ykg, (10^-27 of kilogram)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of ykg (10^-27 of kilogram)
+     * Returns the numerical value of ykg (10^-27 of kilogram)
      */
     val Kilogram.yoctokilogram  : Double
         /**
-         * Returns numerical value of ykg, (10^-27 of kilogram)
+         * Returns the numerical value of ykg, (10^-27 of kilogram)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1124,20 +1124,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of rkg, (10^-30 of kilogram)
+     * Returns the numerical value of rkg, (10^-30 of kilogram)
      */
     val Kilogram.rkg  : Double
         /**
-         * Returns numerical value of rkg, (10^-30 of kilogram)
+         * Returns the numerical value of rkg, (10^-30 of kilogram)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of rkg (10^-30 of kilogram)
+     * Returns the numerical value of rkg (10^-30 of kilogram)
      */
     val Kilogram.rontokilogram  : Double
         /**
-         * Returns numerical value of rkg, (10^-30 of kilogram)
+         * Returns the numerical value of rkg, (10^-30 of kilogram)
          */
         get() = this.value / 10.0.pow(-30)
     
@@ -1174,20 +1174,20 @@ class Kilogram(value: Double) : Expression(value, description = descriptionKilog
         get() = Kilogram(this.toDouble()*10.0.pow(-33))
     
     /**
-     * Returns numerical value of qkg, (10^-33 of kilogram)
+     * Returns the numerical value of qkg, (10^-33 of kilogram)
      */
     val Kilogram.qkg  : Double
         /**
-         * Returns numerical value of qkg, (10^-33 of kilogram)
+         * Returns the numerical value of qkg, (10^-33 of kilogram)
          */
         get() = this.value / 10.0.pow(-33)
     
     /**
-     * Returns numerical value of qkg (10^-33 of kilogram)
+     * Returns the numerical value of qkg (10^-33 of kilogram)
      */
     val Kilogram.quectokilogram  : Double
         /**
-         * Returns numerical value of qkg, (10^-33 of kilogram)
+         * Returns the numerical value of qkg, (10^-33 of kilogram)
          */
         get() = this.value / 10.0.pow(-33)
     

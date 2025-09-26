@@ -57,21 +57,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of QK, (10^30 of kelvin)
+     * Returns the numerical value of QK, (10^30 of kelvin)
      */
     val Kelvin.QK  : Double
         /**
-         * Returns numerical value of QK, (10^30 of kelvin)
+         * Returns the numerical value of QK, (10^30 of kelvin)
          */
         @JvmName("getQK_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of QK (10^30 of kelvin)
+     * Returns the numerical value of QK (10^30 of kelvin)
      */
     val Kelvin.quettakelvin  : Double
         /**
-         * Returns numerical value of QK, (10^30 of kelvin)
+         * Returns the numerical value of QK, (10^30 of kelvin)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of RK, (10^27 of kelvin)
+     * Returns the numerical value of RK, (10^27 of kelvin)
      */
     val Kelvin.RK  : Double
         /**
-         * Returns numerical value of RK, (10^27 of kelvin)
+         * Returns the numerical value of RK, (10^27 of kelvin)
          */
         @JvmName("getRK_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of RK (10^27 of kelvin)
+     * Returns the numerical value of RK (10^27 of kelvin)
      */
     val Kelvin.ronnakelvin  : Double
         /**
-         * Returns numerical value of RK, (10^27 of kelvin)
+         * Returns the numerical value of RK, (10^27 of kelvin)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of YK, (10^24 of kelvin)
+     * Returns the numerical value of YK, (10^24 of kelvin)
      */
     val Kelvin.YK  : Double
         /**
-         * Returns numerical value of YK, (10^24 of kelvin)
+         * Returns the numerical value of YK, (10^24 of kelvin)
          */
         @JvmName("getYK_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of YK (10^24 of kelvin)
+     * Returns the numerical value of YK (10^24 of kelvin)
      */
     val Kelvin.yottakelvin  : Double
         /**
-         * Returns numerical value of YK, (10^24 of kelvin)
+         * Returns the numerical value of YK, (10^24 of kelvin)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of ZK, (10^21 of kelvin)
+     * Returns the numerical value of ZK, (10^21 of kelvin)
      */
     val Kelvin.ZK  : Double
         /**
-         * Returns numerical value of ZK, (10^21 of kelvin)
+         * Returns the numerical value of ZK, (10^21 of kelvin)
          */
         @JvmName("getZK_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of ZK (10^21 of kelvin)
+     * Returns the numerical value of ZK (10^21 of kelvin)
      */
     val Kelvin.zettakelvin  : Double
         /**
-         * Returns numerical value of ZK, (10^21 of kelvin)
+         * Returns the numerical value of ZK, (10^21 of kelvin)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of EK, (10^18 of kelvin)
+     * Returns the numerical value of EK, (10^18 of kelvin)
      */
     val Kelvin.EK  : Double
         /**
-         * Returns numerical value of EK, (10^18 of kelvin)
+         * Returns the numerical value of EK, (10^18 of kelvin)
          */
         @JvmName("getEK_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of EK (10^18 of kelvin)
+     * Returns the numerical value of EK (10^18 of kelvin)
      */
     val Kelvin.exakelvin  : Double
         /**
-         * Returns numerical value of EK, (10^18 of kelvin)
+         * Returns the numerical value of EK, (10^18 of kelvin)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of PK, (10^15 of kelvin)
+     * Returns the numerical value of PK, (10^15 of kelvin)
      */
     val Kelvin.PK  : Double
         /**
-         * Returns numerical value of PK, (10^15 of kelvin)
+         * Returns the numerical value of PK, (10^15 of kelvin)
          */
         @JvmName("getPK_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of PK (10^15 of kelvin)
+     * Returns the numerical value of PK (10^15 of kelvin)
      */
     val Kelvin.petakelvin  : Double
         /**
-         * Returns numerical value of PK, (10^15 of kelvin)
+         * Returns the numerical value of PK, (10^15 of kelvin)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of TK, (10^12 of kelvin)
+     * Returns the numerical value of TK, (10^12 of kelvin)
      */
     val Kelvin.TK  : Double
         /**
-         * Returns numerical value of TK, (10^12 of kelvin)
+         * Returns the numerical value of TK, (10^12 of kelvin)
          */
         @JvmName("getTK_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of TK (10^12 of kelvin)
+     * Returns the numerical value of TK (10^12 of kelvin)
      */
     val Kelvin.terakelvin  : Double
         /**
-         * Returns numerical value of TK, (10^12 of kelvin)
+         * Returns the numerical value of TK, (10^12 of kelvin)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of GK, (10^9 of kelvin)
+     * Returns the numerical value of GK, (10^9 of kelvin)
      */
     val Kelvin.GK  : Double
         /**
-         * Returns numerical value of GK, (10^9 of kelvin)
+         * Returns the numerical value of GK, (10^9 of kelvin)
          */
         @JvmName("getGK_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of GK (10^9 of kelvin)
+     * Returns the numerical value of GK (10^9 of kelvin)
      */
     val Kelvin.gigakelvin  : Double
         /**
-         * Returns numerical value of GK, (10^9 of kelvin)
+         * Returns the numerical value of GK, (10^9 of kelvin)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of MK, (10^6 of kelvin)
+     * Returns the numerical value of MK, (10^6 of kelvin)
      */
     val Kelvin.MK  : Double
         /**
-         * Returns numerical value of MK, (10^6 of kelvin)
+         * Returns the numerical value of MK, (10^6 of kelvin)
          */
         @JvmName("getMK_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of MK (10^6 of kelvin)
+     * Returns the numerical value of MK (10^6 of kelvin)
      */
     val Kelvin.megakelvin  : Double
         /**
-         * Returns numerical value of MK, (10^6 of kelvin)
+         * Returns the numerical value of MK, (10^6 of kelvin)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of kK, (10^3 of kelvin)
+     * Returns the numerical value of kK, (10^3 of kelvin)
      */
     val Kelvin.kK  : Double
         /**
-         * Returns numerical value of kK, (10^3 of kelvin)
+         * Returns the numerical value of kK, (10^3 of kelvin)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of kK (10^3 of kelvin)
+     * Returns the numerical value of kK (10^3 of kelvin)
      */
     val Kelvin.kilokelvin  : Double
         /**
-         * Returns numerical value of kK, (10^3 of kelvin)
+         * Returns the numerical value of kK, (10^3 of kelvin)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hK, (10^2 of kelvin)
+     * Returns the numerical value of hK, (10^2 of kelvin)
      */
     val Kelvin.hK  : Double
         /**
-         * Returns numerical value of hK, (10^2 of kelvin)
+         * Returns the numerical value of hK, (10^2 of kelvin)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hK (10^2 of kelvin)
+     * Returns the numerical value of hK (10^2 of kelvin)
      */
     val Kelvin.hectokelvin  : Double
         /**
-         * Returns numerical value of hK, (10^2 of kelvin)
+         * Returns the numerical value of hK, (10^2 of kelvin)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of daK, (10^1 of kelvin)
+     * Returns the numerical value of daK, (10^1 of kelvin)
      */
     val Kelvin.daK  : Double
         /**
-         * Returns numerical value of daK, (10^1 of kelvin)
+         * Returns the numerical value of daK, (10^1 of kelvin)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of daK (10^1 of kelvin)
+     * Returns the numerical value of daK (10^1 of kelvin)
      */
     val Kelvin.decakelvin  : Double
         /**
-         * Returns numerical value of daK, (10^1 of kelvin)
+         * Returns the numerical value of daK, (10^1 of kelvin)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of dK, (10^-1 of kelvin)
+     * Returns the numerical value of dK, (10^-1 of kelvin)
      */
     val Kelvin.dK  : Double
         /**
-         * Returns numerical value of dK, (10^-1 of kelvin)
+         * Returns the numerical value of dK, (10^-1 of kelvin)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of dK (10^-1 of kelvin)
+     * Returns the numerical value of dK (10^-1 of kelvin)
      */
     val Kelvin.decikelvin  : Double
         /**
-         * Returns numerical value of dK, (10^-1 of kelvin)
+         * Returns the numerical value of dK, (10^-1 of kelvin)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of cK, (10^-2 of kelvin)
+     * Returns the numerical value of cK, (10^-2 of kelvin)
      */
     val Kelvin.cK  : Double
         /**
-         * Returns numerical value of cK, (10^-2 of kelvin)
+         * Returns the numerical value of cK, (10^-2 of kelvin)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of cK (10^-2 of kelvin)
+     * Returns the numerical value of cK (10^-2 of kelvin)
      */
     val Kelvin.centikelvin  : Double
         /**
-         * Returns numerical value of cK, (10^-2 of kelvin)
+         * Returns the numerical value of cK, (10^-2 of kelvin)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of mK, (10^-3 of kelvin)
+     * Returns the numerical value of mK, (10^-3 of kelvin)
      */
     val Kelvin.mK  : Double
         /**
-         * Returns numerical value of mK, (10^-3 of kelvin)
+         * Returns the numerical value of mK, (10^-3 of kelvin)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of mK (10^-3 of kelvin)
+     * Returns the numerical value of mK (10^-3 of kelvin)
      */
     val Kelvin.millikelvin  : Double
         /**
-         * Returns numerical value of mK, (10^-3 of kelvin)
+         * Returns the numerical value of mK, (10^-3 of kelvin)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μK, (10^-6 of kelvin)
+     * Returns the numerical value of μK, (10^-6 of kelvin)
      */
     val Kelvin.μK  : Double
         /**
-         * Returns numerical value of μK, (10^-6 of kelvin)
+         * Returns the numerical value of μK, (10^-6 of kelvin)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μK (10^-6 of kelvin)
+     * Returns the numerical value of μK (10^-6 of kelvin)
      */
     val Kelvin.microkelvin  : Double
         /**
-         * Returns numerical value of μK, (10^-6 of kelvin)
+         * Returns the numerical value of μK, (10^-6 of kelvin)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of nK, (10^-9 of kelvin)
+     * Returns the numerical value of nK, (10^-9 of kelvin)
      */
     val Kelvin.nK  : Double
         /**
-         * Returns numerical value of nK, (10^-9 of kelvin)
+         * Returns the numerical value of nK, (10^-9 of kelvin)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of nK (10^-9 of kelvin)
+     * Returns the numerical value of nK (10^-9 of kelvin)
      */
     val Kelvin.nanokelvin  : Double
         /**
-         * Returns numerical value of nK, (10^-9 of kelvin)
+         * Returns the numerical value of nK, (10^-9 of kelvin)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of pK, (10^-12 of kelvin)
+     * Returns the numerical value of pK, (10^-12 of kelvin)
      */
     val Kelvin.pK  : Double
         /**
-         * Returns numerical value of pK, (10^-12 of kelvin)
+         * Returns the numerical value of pK, (10^-12 of kelvin)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of pK (10^-12 of kelvin)
+     * Returns the numerical value of pK (10^-12 of kelvin)
      */
     val Kelvin.picokelvin  : Double
         /**
-         * Returns numerical value of pK, (10^-12 of kelvin)
+         * Returns the numerical value of pK, (10^-12 of kelvin)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fK, (10^-15 of kelvin)
+     * Returns the numerical value of fK, (10^-15 of kelvin)
      */
     val Kelvin.fK  : Double
         /**
-         * Returns numerical value of fK, (10^-15 of kelvin)
+         * Returns the numerical value of fK, (10^-15 of kelvin)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fK (10^-15 of kelvin)
+     * Returns the numerical value of fK (10^-15 of kelvin)
      */
     val Kelvin.femtokelvin  : Double
         /**
-         * Returns numerical value of fK, (10^-15 of kelvin)
+         * Returns the numerical value of fK, (10^-15 of kelvin)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of aK, (10^-18 of kelvin)
+     * Returns the numerical value of aK, (10^-18 of kelvin)
      */
     val Kelvin.aK  : Double
         /**
-         * Returns numerical value of aK, (10^-18 of kelvin)
+         * Returns the numerical value of aK, (10^-18 of kelvin)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of aK (10^-18 of kelvin)
+     * Returns the numerical value of aK (10^-18 of kelvin)
      */
     val Kelvin.attokelvin  : Double
         /**
-         * Returns numerical value of aK, (10^-18 of kelvin)
+         * Returns the numerical value of aK, (10^-18 of kelvin)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zK, (10^-21 of kelvin)
+     * Returns the numerical value of zK, (10^-21 of kelvin)
      */
     val Kelvin.zK  : Double
         /**
-         * Returns numerical value of zK, (10^-21 of kelvin)
+         * Returns the numerical value of zK, (10^-21 of kelvin)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zK (10^-21 of kelvin)
+     * Returns the numerical value of zK (10^-21 of kelvin)
      */
     val Kelvin.zeptokelvin  : Double
         /**
-         * Returns numerical value of zK, (10^-21 of kelvin)
+         * Returns the numerical value of zK, (10^-21 of kelvin)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of yK, (10^-24 of kelvin)
+     * Returns the numerical value of yK, (10^-24 of kelvin)
      */
     val Kelvin.yK  : Double
         /**
-         * Returns numerical value of yK, (10^-24 of kelvin)
+         * Returns the numerical value of yK, (10^-24 of kelvin)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of yK (10^-24 of kelvin)
+     * Returns the numerical value of yK (10^-24 of kelvin)
      */
     val Kelvin.yoctokelvin  : Double
         /**
-         * Returns numerical value of yK, (10^-24 of kelvin)
+         * Returns the numerical value of yK, (10^-24 of kelvin)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rK, (10^-27 of kelvin)
+     * Returns the numerical value of rK, (10^-27 of kelvin)
      */
     val Kelvin.rK  : Double
         /**
-         * Returns numerical value of rK, (10^-27 of kelvin)
+         * Returns the numerical value of rK, (10^-27 of kelvin)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rK (10^-27 of kelvin)
+     * Returns the numerical value of rK (10^-27 of kelvin)
      */
     val Kelvin.rontokelvin  : Double
         /**
-         * Returns numerical value of rK, (10^-27 of kelvin)
+         * Returns the numerical value of rK, (10^-27 of kelvin)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Kelvin(value: Double) : Expression(value, description = descriptionKelvin)
         get() = Kelvin(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qK, (10^-30 of kelvin)
+     * Returns the numerical value of qK, (10^-30 of kelvin)
      */
     val Kelvin.qK  : Double
         /**
-         * Returns numerical value of qK, (10^-30 of kelvin)
+         * Returns the numerical value of qK, (10^-30 of kelvin)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qK (10^-30 of kelvin)
+     * Returns the numerical value of qK (10^-30 of kelvin)
      */
     val Kelvin.quectokelvin  : Double
         /**
-         * Returns numerical value of qK, (10^-30 of kelvin)
+         * Returns the numerical value of qK, (10^-30 of kelvin)
          */
         get() = this.value / 10.0.pow(-30)
     

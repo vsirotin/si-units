@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Renminbi
+* Creates an object to hold Renminbi
 */
 val Number.`人民币` : Renminbi
     /**
-    * Returns value of object for hold of Renminbi
+    * Returns the value of the object holding Renminbi
     */
     get() = Renminbi(this.toDouble())
 

@@ -57,21 +57,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of Qcd, (10^30 of candela)
+     * Returns the numerical value of Qcd, (10^30 of candela)
      */
     val Candela.Qcd  : Double
         /**
-         * Returns numerical value of Qcd, (10^30 of candela)
+         * Returns the numerical value of Qcd, (10^30 of candela)
          */
         @JvmName("getQcd_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of Qcd (10^30 of candela)
+     * Returns the numerical value of Qcd (10^30 of candela)
      */
     val Candela.quettacandela  : Double
         /**
-         * Returns numerical value of Qcd, (10^30 of candela)
+         * Returns the numerical value of Qcd, (10^30 of candela)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of Rcd, (10^27 of candela)
+     * Returns the numerical value of Rcd, (10^27 of candela)
      */
     val Candela.Rcd  : Double
         /**
-         * Returns numerical value of Rcd, (10^27 of candela)
+         * Returns the numerical value of Rcd, (10^27 of candela)
          */
         @JvmName("getRcd_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of Rcd (10^27 of candela)
+     * Returns the numerical value of Rcd (10^27 of candela)
      */
     val Candela.ronnacandela  : Double
         /**
-         * Returns numerical value of Rcd, (10^27 of candela)
+         * Returns the numerical value of Rcd, (10^27 of candela)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of Ycd, (10^24 of candela)
+     * Returns the numerical value of Ycd, (10^24 of candela)
      */
     val Candela.Ycd  : Double
         /**
-         * Returns numerical value of Ycd, (10^24 of candela)
+         * Returns the numerical value of Ycd, (10^24 of candela)
          */
         @JvmName("getYcd_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of Ycd (10^24 of candela)
+     * Returns the numerical value of Ycd (10^24 of candela)
      */
     val Candela.yottacandela  : Double
         /**
-         * Returns numerical value of Ycd, (10^24 of candela)
+         * Returns the numerical value of Ycd, (10^24 of candela)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of Zcd, (10^21 of candela)
+     * Returns the numerical value of Zcd, (10^21 of candela)
      */
     val Candela.Zcd  : Double
         /**
-         * Returns numerical value of Zcd, (10^21 of candela)
+         * Returns the numerical value of Zcd, (10^21 of candela)
          */
         @JvmName("getZcd_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of Zcd (10^21 of candela)
+     * Returns the numerical value of Zcd (10^21 of candela)
      */
     val Candela.zettacandela  : Double
         /**
-         * Returns numerical value of Zcd, (10^21 of candela)
+         * Returns the numerical value of Zcd, (10^21 of candela)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of Ecd, (10^18 of candela)
+     * Returns the numerical value of Ecd, (10^18 of candela)
      */
     val Candela.Ecd  : Double
         /**
-         * Returns numerical value of Ecd, (10^18 of candela)
+         * Returns the numerical value of Ecd, (10^18 of candela)
          */
         @JvmName("getEcd_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of Ecd (10^18 of candela)
+     * Returns the numerical value of Ecd (10^18 of candela)
      */
     val Candela.exacandela  : Double
         /**
-         * Returns numerical value of Ecd, (10^18 of candela)
+         * Returns the numerical value of Ecd, (10^18 of candela)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of Pcd, (10^15 of candela)
+     * Returns the numerical value of Pcd, (10^15 of candela)
      */
     val Candela.Pcd  : Double
         /**
-         * Returns numerical value of Pcd, (10^15 of candela)
+         * Returns the numerical value of Pcd, (10^15 of candela)
          */
         @JvmName("getPcd_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of Pcd (10^15 of candela)
+     * Returns the numerical value of Pcd (10^15 of candela)
      */
     val Candela.petacandela  : Double
         /**
-         * Returns numerical value of Pcd, (10^15 of candela)
+         * Returns the numerical value of Pcd, (10^15 of candela)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of Tcd, (10^12 of candela)
+     * Returns the numerical value of Tcd, (10^12 of candela)
      */
     val Candela.Tcd  : Double
         /**
-         * Returns numerical value of Tcd, (10^12 of candela)
+         * Returns the numerical value of Tcd, (10^12 of candela)
          */
         @JvmName("getTcd_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of Tcd (10^12 of candela)
+     * Returns the numerical value of Tcd (10^12 of candela)
      */
     val Candela.teracandela  : Double
         /**
-         * Returns numerical value of Tcd, (10^12 of candela)
+         * Returns the numerical value of Tcd, (10^12 of candela)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of Gcd, (10^9 of candela)
+     * Returns the numerical value of Gcd, (10^9 of candela)
      */
     val Candela.Gcd  : Double
         /**
-         * Returns numerical value of Gcd, (10^9 of candela)
+         * Returns the numerical value of Gcd, (10^9 of candela)
          */
         @JvmName("getGcd_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of Gcd (10^9 of candela)
+     * Returns the numerical value of Gcd (10^9 of candela)
      */
     val Candela.gigacandela  : Double
         /**
-         * Returns numerical value of Gcd, (10^9 of candela)
+         * Returns the numerical value of Gcd, (10^9 of candela)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of Mcd, (10^6 of candela)
+     * Returns the numerical value of Mcd, (10^6 of candela)
      */
     val Candela.Mcd  : Double
         /**
-         * Returns numerical value of Mcd, (10^6 of candela)
+         * Returns the numerical value of Mcd, (10^6 of candela)
          */
         @JvmName("getMcd_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of Mcd (10^6 of candela)
+     * Returns the numerical value of Mcd (10^6 of candela)
      */
     val Candela.megacandela  : Double
         /**
-         * Returns numerical value of Mcd, (10^6 of candela)
+         * Returns the numerical value of Mcd, (10^6 of candela)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of kcd, (10^3 of candela)
+     * Returns the numerical value of kcd, (10^3 of candela)
      */
     val Candela.kcd  : Double
         /**
-         * Returns numerical value of kcd, (10^3 of candela)
+         * Returns the numerical value of kcd, (10^3 of candela)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of kcd (10^3 of candela)
+     * Returns the numerical value of kcd (10^3 of candela)
      */
     val Candela.kilocandela  : Double
         /**
-         * Returns numerical value of kcd, (10^3 of candela)
+         * Returns the numerical value of kcd, (10^3 of candela)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hcd, (10^2 of candela)
+     * Returns the numerical value of hcd, (10^2 of candela)
      */
     val Candela.hcd  : Double
         /**
-         * Returns numerical value of hcd, (10^2 of candela)
+         * Returns the numerical value of hcd, (10^2 of candela)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hcd (10^2 of candela)
+     * Returns the numerical value of hcd (10^2 of candela)
      */
     val Candela.hectocandela  : Double
         /**
-         * Returns numerical value of hcd, (10^2 of candela)
+         * Returns the numerical value of hcd, (10^2 of candela)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of dacd, (10^1 of candela)
+     * Returns the numerical value of dacd, (10^1 of candela)
      */
     val Candela.dacd  : Double
         /**
-         * Returns numerical value of dacd, (10^1 of candela)
+         * Returns the numerical value of dacd, (10^1 of candela)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of dacd (10^1 of candela)
+     * Returns the numerical value of dacd (10^1 of candela)
      */
     val Candela.decacandela  : Double
         /**
-         * Returns numerical value of dacd, (10^1 of candela)
+         * Returns the numerical value of dacd, (10^1 of candela)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of dcd, (10^-1 of candela)
+     * Returns the numerical value of dcd, (10^-1 of candela)
      */
     val Candela.dcd  : Double
         /**
-         * Returns numerical value of dcd, (10^-1 of candela)
+         * Returns the numerical value of dcd, (10^-1 of candela)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of dcd (10^-1 of candela)
+     * Returns the numerical value of dcd (10^-1 of candela)
      */
     val Candela.decicandela  : Double
         /**
-         * Returns numerical value of dcd, (10^-1 of candela)
+         * Returns the numerical value of dcd, (10^-1 of candela)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of ccd, (10^-2 of candela)
+     * Returns the numerical value of ccd, (10^-2 of candela)
      */
     val Candela.ccd  : Double
         /**
-         * Returns numerical value of ccd, (10^-2 of candela)
+         * Returns the numerical value of ccd, (10^-2 of candela)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of ccd (10^-2 of candela)
+     * Returns the numerical value of ccd (10^-2 of candela)
      */
     val Candela.centicandela  : Double
         /**
-         * Returns numerical value of ccd, (10^-2 of candela)
+         * Returns the numerical value of ccd, (10^-2 of candela)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of mcd, (10^-3 of candela)
+     * Returns the numerical value of mcd, (10^-3 of candela)
      */
     val Candela.mcd  : Double
         /**
-         * Returns numerical value of mcd, (10^-3 of candela)
+         * Returns the numerical value of mcd, (10^-3 of candela)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of mcd (10^-3 of candela)
+     * Returns the numerical value of mcd (10^-3 of candela)
      */
     val Candela.millicandela  : Double
         /**
-         * Returns numerical value of mcd, (10^-3 of candela)
+         * Returns the numerical value of mcd, (10^-3 of candela)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μcd, (10^-6 of candela)
+     * Returns the numerical value of μcd, (10^-6 of candela)
      */
     val Candela.μcd  : Double
         /**
-         * Returns numerical value of μcd, (10^-6 of candela)
+         * Returns the numerical value of μcd, (10^-6 of candela)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μcd (10^-6 of candela)
+     * Returns the numerical value of μcd (10^-6 of candela)
      */
     val Candela.microcandela  : Double
         /**
-         * Returns numerical value of μcd, (10^-6 of candela)
+         * Returns the numerical value of μcd, (10^-6 of candela)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of ncd, (10^-9 of candela)
+     * Returns the numerical value of ncd, (10^-9 of candela)
      */
     val Candela.ncd  : Double
         /**
-         * Returns numerical value of ncd, (10^-9 of candela)
+         * Returns the numerical value of ncd, (10^-9 of candela)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of ncd (10^-9 of candela)
+     * Returns the numerical value of ncd (10^-9 of candela)
      */
     val Candela.nanocandela  : Double
         /**
-         * Returns numerical value of ncd, (10^-9 of candela)
+         * Returns the numerical value of ncd, (10^-9 of candela)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of pcd, (10^-12 of candela)
+     * Returns the numerical value of pcd, (10^-12 of candela)
      */
     val Candela.pcd  : Double
         /**
-         * Returns numerical value of pcd, (10^-12 of candela)
+         * Returns the numerical value of pcd, (10^-12 of candela)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of pcd (10^-12 of candela)
+     * Returns the numerical value of pcd (10^-12 of candela)
      */
     val Candela.picocandela  : Double
         /**
-         * Returns numerical value of pcd, (10^-12 of candela)
+         * Returns the numerical value of pcd, (10^-12 of candela)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fcd, (10^-15 of candela)
+     * Returns the numerical value of fcd, (10^-15 of candela)
      */
     val Candela.fcd  : Double
         /**
-         * Returns numerical value of fcd, (10^-15 of candela)
+         * Returns the numerical value of fcd, (10^-15 of candela)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fcd (10^-15 of candela)
+     * Returns the numerical value of fcd (10^-15 of candela)
      */
     val Candela.femtocandela  : Double
         /**
-         * Returns numerical value of fcd, (10^-15 of candela)
+         * Returns the numerical value of fcd, (10^-15 of candela)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of acd, (10^-18 of candela)
+     * Returns the numerical value of acd, (10^-18 of candela)
      */
     val Candela.acd  : Double
         /**
-         * Returns numerical value of acd, (10^-18 of candela)
+         * Returns the numerical value of acd, (10^-18 of candela)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of acd (10^-18 of candela)
+     * Returns the numerical value of acd (10^-18 of candela)
      */
     val Candela.attocandela  : Double
         /**
-         * Returns numerical value of acd, (10^-18 of candela)
+         * Returns the numerical value of acd, (10^-18 of candela)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zcd, (10^-21 of candela)
+     * Returns the numerical value of zcd, (10^-21 of candela)
      */
     val Candela.zcd  : Double
         /**
-         * Returns numerical value of zcd, (10^-21 of candela)
+         * Returns the numerical value of zcd, (10^-21 of candela)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zcd (10^-21 of candela)
+     * Returns the numerical value of zcd (10^-21 of candela)
      */
     val Candela.zeptocandela  : Double
         /**
-         * Returns numerical value of zcd, (10^-21 of candela)
+         * Returns the numerical value of zcd, (10^-21 of candela)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of ycd, (10^-24 of candela)
+     * Returns the numerical value of ycd, (10^-24 of candela)
      */
     val Candela.ycd  : Double
         /**
-         * Returns numerical value of ycd, (10^-24 of candela)
+         * Returns the numerical value of ycd, (10^-24 of candela)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of ycd (10^-24 of candela)
+     * Returns the numerical value of ycd (10^-24 of candela)
      */
     val Candela.yoctocandela  : Double
         /**
-         * Returns numerical value of ycd, (10^-24 of candela)
+         * Returns the numerical value of ycd, (10^-24 of candela)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rcd, (10^-27 of candela)
+     * Returns the numerical value of rcd, (10^-27 of candela)
      */
     val Candela.rcd  : Double
         /**
-         * Returns numerical value of rcd, (10^-27 of candela)
+         * Returns the numerical value of rcd, (10^-27 of candela)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rcd (10^-27 of candela)
+     * Returns the numerical value of rcd (10^-27 of candela)
      */
     val Candela.rontocandela  : Double
         /**
-         * Returns numerical value of rcd, (10^-27 of candela)
+         * Returns the numerical value of rcd, (10^-27 of candela)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Candela(value: Double) : Expression(value, description = descriptionCandel
         get() = Candela(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qcd, (10^-30 of candela)
+     * Returns the numerical value of qcd, (10^-30 of candela)
      */
     val Candela.qcd  : Double
         /**
-         * Returns numerical value of qcd, (10^-30 of candela)
+         * Returns the numerical value of qcd, (10^-30 of candela)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qcd (10^-30 of candela)
+     * Returns the numerical value of qcd (10^-30 of candela)
      */
     val Candela.quectocandela  : Double
         /**
-         * Returns numerical value of qcd, (10^-30 of candela)
+         * Returns the numerical value of qcd, (10^-30 of candela)
          */
         get() = this.value / 10.0.pow(-30)
     

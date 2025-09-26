@@ -25,11 +25,11 @@ class Coulomb(value: Number): DerivedUnit(value, formula)
 val C = Coulomb(1.0)
 
 /**
-* Creates Coulomb-Object for current number value. Coulomb is a System International Unit for electric charge.
+* Creates a Coulomb object for the current number value. Coulomb is a System International Unit for electric charge.
 */
 val Number.C : Coulomb
    /**
-   * Returns Coulomb-Object for current number value. Coulomb is a System International Unit for electric charge.
+   * Returns a Coulomb object for the current number value. Coulomb is a System International Unit for electric charge.
    */
     get() = Coulomb(this.toDouble())
 

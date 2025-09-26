@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of New Taiwan dollar
+* Creates an object to hold New Taiwan dollar
 */
 val Number.`NT$` : NewTaiwanDollar
     /**
-    * Returns value of object for hold of New Taiwan dollar
+    * Returns the value of the object holding New Taiwan dollar
     */
     get() = NewTaiwanDollar(this.toDouble())
 

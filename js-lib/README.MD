@@ -1,30 +1,118 @@
-# KotUniL JavaScript/TypeScript Library
+# KotUniL JavaScript Library
 
-JavaScript/TypeScript-variant of Kotlin's KotUniL library.
+This is the JavaScript/TypeScript distribution of the KotUniL library, available as NPM package `kotunil-js-lib`.
 
-**KotUniL** covers all units of **International System of Units** (SI)  
-like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+## Purpose
 
-For more information about KotUniL please see origin documentation
-in [GitHub si-units project](https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/README.md)
-How to use this library please see the samples
-in [GitHub si-units project](https://github.com/vsirotin/si-units/blob/26e2e890fa01cebdca93f48332bab0a0fa6c6255/README.md):
-apps/node_ts_app and web_app_js).
+This library provides:
+- **JavaScript/TypeScript implementation** of KotUniL units library
+- **Cross-platform compatibility** for web browsers and Node.js
+- **TypeScript definitions** for type-safe development
+- **ES2016 target** for broad browser compatibility
 
-## JS Release Notes
+## Installation
 
-Since version 4.2.2 of main (multiplatform) KotUniL library has JS part of project its own versioning.
-
-### Version 5.0.1
-
-1. Changed call format by "direct-call" to const
-```javascript
-{eu} = this['eu.sirotin.kotunil:kotunil']
+### NPM
+```bash
+npm install kotunil-js-lib
 ```
 
-instead of {eu} = this['kotunil-js-lib'] (see  apps/web_app_js/src/scripts/tests/Starter.js)
+### Yarn
+```bash
+yarn add kotunil-js-lib
+```
 
-Call format by Node.JS does not change.
+## Usage
 
-2. Small update of documentation.
+### TypeScript
+```typescript
+import { m, s, kg, N } from 'kotunil-js-lib';
+
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+console.log(`Velocity: ${velocity.value} ${velocity.unitSymbols()}`);
+```
+
+### JavaScript (ES6+)
+```javascript
+import { m, s, kg, N } from 'kotunil-js-lib';
+
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+console.log(`Velocity: ${velocity.value} ${velocity.unitSymbols()}`);
+```
+
+### JavaScript (CommonJS)
+```javascript
+const { m, s, kg, N } = require('kotunil-js-lib');
+
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+console.log(`Velocity: ${velocity.value} ${velocity.unitSymbols()}`);
+```
+
+## Compatibility
+
+### JavaScript Engine Support
+- **Node.js**: 14.0.0+ (LTS versions recommended)
+- **Browsers**: All supporting ES2016
+  - Chrome 52+
+  - Firefox 50+
+  - Safari 10+
+  - Edge 14+
+- **TypeScript**: Full type definitions included
+
+### Testing Strategy
+This library is tested with the **newest available JavaScript engines** to ensure forward compatibility as part of our three-phase version strategy.
+
+## Features
+
+- Complete SI unit system implementation
+- Type-safe operations with TypeScript
+- Runtime dimensional analysis
+- Currency and percentage support
+- Minimal bundle size with tree-shaking support
+- Zero dependencies
+
+## API Reference
+
+The JavaScript API mirrors the Kotlin API with some platform-specific adaptations:
+
+### Basic Usage
+```javascript
+// Creating units
+const length = 5 * m;
+const time = 2 * s;
+
+// Calculations
+const velocity = length / time;
+const acceleration = velocity / time;
+
+// Accessing values
+console.log(velocity.value);           // Numeric value
+console.log(velocity.unitSymbols());   // "m/s"
+console.log(velocity.categorySymbols()); // "LT-1"
+```
+
+### Error Handling
+```javascript
+try {
+    const invalid = 1 * m + 1 * s;  // Will throw
+} catch (error) {
+    console.log("Dimensional error:", error.message);
+}
+```
+
+## Building from Source
+
+This library is automatically generated from the Kotlin multiplatform project:
+
+```bash
+./gradlew :js-lib:clean
+./gradlew :js-lib:build
+```
+
+The generated package can be found in `js-lib/dist/`.

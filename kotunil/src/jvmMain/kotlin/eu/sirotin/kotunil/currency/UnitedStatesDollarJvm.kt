@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of United States dollar
+* Creates an object to hold United States dollar
 */
 val Number.`US$` : UnitedStatesDollar
     /**
-    * Returns value of object for hold of United States dollar
+    * Returns the value of the object holding United States dollar
     */
     get() = UnitedStatesDollar(this.toDouble())
 

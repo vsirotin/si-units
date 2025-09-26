@@ -25,11 +25,11 @@ class Gray(value: Number): DerivedUnit(value, formula)
 val Gy = Gray(1.0)
 
 /**
-* Creates Gray-Object for current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
+* Creates a Gray object for the current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
 */
 val Number.Gy : Gray
    /**
-   * Returns Gray-Object for current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
+   * Returns a Gray object for the current number value. Gray is a System International Unit for absorbed dose (of ionising radiation).
    */
     get() = Gray(this.toDouble())
 

@@ -25,11 +25,11 @@ class Ohm(value: Number): DerivedUnit(value, formula)
 val Ω = Ohm(1.0)
 
 /**
-* Creates Ohm-Object for current number value. Ohm is a System International Unit for resistance, impedance, reactance.
+* Creates a Ohm object for the current number value. Ohm is a System International Unit for resistance, impedance, reactance.
 */
 val Number.Ω : Ohm
    /**
-   * Returns Ohm-Object for current number value. Ohm is a System International Unit for resistance, impedance, reactance.
+   * Returns a Ohm object for the current number value. Ohm is a System International Unit for resistance, impedance, reactance.
    */
     get() = Ohm(this.toDouble())
 

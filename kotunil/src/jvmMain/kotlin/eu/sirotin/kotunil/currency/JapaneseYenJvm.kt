@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Japanese yen
+* Creates an object to hold Japanese yen
 */
 val Number.`¥` : JapaneseYen
     /**
-    * Returns value of object for hold of Japanese yen
+    * Returns the value of the object holding Japanese yen
     */
     get() = JapaneseYen(this.toDouble())
 

@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:kotunil
+eu.sirotin.kotunil.base
+eu.sirotin.kotunil.core
+eu.sirotin.kotunil.currency
+eu.sirotin.kotunil.derived
+eu.sirotin.kotunil.specialunits

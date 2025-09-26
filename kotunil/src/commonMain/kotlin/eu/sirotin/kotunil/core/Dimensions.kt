@@ -27,9 +27,9 @@ import kotlin.js.JsExport
 import kotlin.math.abs
 
 /**
- * Describes dimensions of an unit with help of [factors].
- * A factor describe one separate dimension.
- * @constructor Creates dimensions of an unit with help of [factors].
+ * Describes dimensions of a unit with help of [factors].
+ * A factor describes one separate dimension.
+ * @constructor Creates dimensions of a unit with help of [factors].
  */
 @JsExport
 @Suppress("NON_EXPORTABLE_TYPE")
@@ -45,7 +45,7 @@ data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     /**
      * Returns representation of unit as sequence of separate union symbols
-     * and their powers according SI-Standard recommendations.
+     * and their powers according to SI-Standard recommendations.
      */
     override fun unitSymbols() : String {
         var top = ""
@@ -62,7 +62,7 @@ data class Dimensions(val factors: Set<Factor>) : UnitPresentation {
 
     /**
      * Returns representation of unit as sequence of separate category symbols
-     * and their powers according SI-Standard recommendations.
+     * and their powers according to SI-Standard recommendations.
      */
     override fun categorySymbols(): String = factors
         .sorted()

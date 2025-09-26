@@ -25,11 +25,11 @@ class Joule(value: Number): DerivedUnit(value, formula)
 val J = Joule(1.0)
 
 /**
-* Creates Joule-Object for current number value. Joule is a System International Unit for energy, work, heat.
+* Creates a Joule object for the current number value. Joule is a System International Unit for energy, work, heat.
 */
 val Number.J : Joule
    /**
-   * Returns Joule-Object for current number value. Joule is a System International Unit for energy, work, heat.
+   * Returns a Joule object for the current number value. Joule is a System International Unit for energy, work, heat.
    */
     get() = Joule(this.toDouble())
 

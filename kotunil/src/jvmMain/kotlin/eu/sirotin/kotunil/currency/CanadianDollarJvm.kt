@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Canadian dollar
+* Creates an object to hold Canadian dollar
 */
 val Number.`C$` : CanadianDollar
     /**
-    * Returns value of object for hold of Canadian dollar
+    * Returns the value of the object holding Canadian dollar
     */
     get() = CanadianDollar(this.toDouble())
 

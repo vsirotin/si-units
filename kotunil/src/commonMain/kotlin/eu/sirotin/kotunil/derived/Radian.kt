@@ -25,11 +25,11 @@ class Radian(value: Number): DerivedUnit(value, formula)
 val rad = Radian(1.0)
 
 /**
-* Creates Radian-Object for current number value. Radian is a System International Unit for plane angle.
+* Creates a Radian object for the current number value. Radian is a System International Unit for plane angle.
 */
 val Number.rad : Radian
    /**
-   * Returns Radian-Object for current number value. Radian is a System International Unit for plane angle.
+   * Returns a Radian object for the current number value. Radian is a System International Unit for plane angle.
    */
     get() = Radian(this.toDouble())
 

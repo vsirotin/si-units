@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Thai baht
+* Creates an object to hold Thai baht
 */
 val Number.`฿` : ThaiBaht
     /**
-    * Returns value of object for hold of Thai baht
+    * Returns the value of the object holding Thai baht
     */
     get() = ThaiBaht(this.toDouble())
 

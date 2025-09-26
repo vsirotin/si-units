@@ -38,11 +38,11 @@ class UAEDirham(value : Double = 1.0) : Expression(value, description = descript
     
 
 /**
-* Creates object for hold of UAE dirham
+* Creates an object to hold UAE dirham
 */
 val Number.Dh : UAEDirham
     /**
-    * Returns value of object for hold of UAE dirham
+    * Returns the value of the object holding UAE dirham
     */
     get() = UAEDirham(this.toDouble())
 

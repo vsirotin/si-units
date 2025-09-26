@@ -57,21 +57,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of Qm, (10^30 of metre)
+     * Returns the numerical value of Qm, (10^30 of metre)
      */
     val Metre.Qm  : Double
         /**
-         * Returns numerical value of Qm, (10^30 of metre)
+         * Returns the numerical value of Qm, (10^30 of metre)
          */
         @JvmName("getQm_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of Qm (10^30 of metre)
+     * Returns the numerical value of Qm (10^30 of metre)
      */
     val Metre.quettametre  : Double
         /**
-         * Returns numerical value of Qm, (10^30 of metre)
+         * Returns the numerical value of Qm, (10^30 of metre)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of Rm, (10^27 of metre)
+     * Returns the numerical value of Rm, (10^27 of metre)
      */
     val Metre.Rm  : Double
         /**
-         * Returns numerical value of Rm, (10^27 of metre)
+         * Returns the numerical value of Rm, (10^27 of metre)
          */
         @JvmName("getRm_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of Rm (10^27 of metre)
+     * Returns the numerical value of Rm (10^27 of metre)
      */
     val Metre.ronnametre  : Double
         /**
-         * Returns numerical value of Rm, (10^27 of metre)
+         * Returns the numerical value of Rm, (10^27 of metre)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of Ym, (10^24 of metre)
+     * Returns the numerical value of Ym, (10^24 of metre)
      */
     val Metre.Ym  : Double
         /**
-         * Returns numerical value of Ym, (10^24 of metre)
+         * Returns the numerical value of Ym, (10^24 of metre)
          */
         @JvmName("getYm_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of Ym (10^24 of metre)
+     * Returns the numerical value of Ym (10^24 of metre)
      */
     val Metre.yottametre  : Double
         /**
-         * Returns numerical value of Ym, (10^24 of metre)
+         * Returns the numerical value of Ym, (10^24 of metre)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of Zm, (10^21 of metre)
+     * Returns the numerical value of Zm, (10^21 of metre)
      */
     val Metre.Zm  : Double
         /**
-         * Returns numerical value of Zm, (10^21 of metre)
+         * Returns the numerical value of Zm, (10^21 of metre)
          */
         @JvmName("getZm_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of Zm (10^21 of metre)
+     * Returns the numerical value of Zm (10^21 of metre)
      */
     val Metre.zettametre  : Double
         /**
-         * Returns numerical value of Zm, (10^21 of metre)
+         * Returns the numerical value of Zm, (10^21 of metre)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of Em, (10^18 of metre)
+     * Returns the numerical value of Em, (10^18 of metre)
      */
     val Metre.Em  : Double
         /**
-         * Returns numerical value of Em, (10^18 of metre)
+         * Returns the numerical value of Em, (10^18 of metre)
          */
         @JvmName("getEm_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of Em (10^18 of metre)
+     * Returns the numerical value of Em (10^18 of metre)
      */
     val Metre.exametre  : Double
         /**
-         * Returns numerical value of Em, (10^18 of metre)
+         * Returns the numerical value of Em, (10^18 of metre)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of Pm, (10^15 of metre)
+     * Returns the numerical value of Pm, (10^15 of metre)
      */
     val Metre.Pm  : Double
         /**
-         * Returns numerical value of Pm, (10^15 of metre)
+         * Returns the numerical value of Pm, (10^15 of metre)
          */
         @JvmName("getPm_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of Pm (10^15 of metre)
+     * Returns the numerical value of Pm (10^15 of metre)
      */
     val Metre.petametre  : Double
         /**
-         * Returns numerical value of Pm, (10^15 of metre)
+         * Returns the numerical value of Pm, (10^15 of metre)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of Tm, (10^12 of metre)
+     * Returns the numerical value of Tm, (10^12 of metre)
      */
     val Metre.Tm  : Double
         /**
-         * Returns numerical value of Tm, (10^12 of metre)
+         * Returns the numerical value of Tm, (10^12 of metre)
          */
         @JvmName("getTm_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of Tm (10^12 of metre)
+     * Returns the numerical value of Tm (10^12 of metre)
      */
     val Metre.terametre  : Double
         /**
-         * Returns numerical value of Tm, (10^12 of metre)
+         * Returns the numerical value of Tm, (10^12 of metre)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of Gm, (10^9 of metre)
+     * Returns the numerical value of Gm, (10^9 of metre)
      */
     val Metre.Gm  : Double
         /**
-         * Returns numerical value of Gm, (10^9 of metre)
+         * Returns the numerical value of Gm, (10^9 of metre)
          */
         @JvmName("getGm_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of Gm (10^9 of metre)
+     * Returns the numerical value of Gm (10^9 of metre)
      */
     val Metre.gigametre  : Double
         /**
-         * Returns numerical value of Gm, (10^9 of metre)
+         * Returns the numerical value of Gm, (10^9 of metre)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of Mm, (10^6 of metre)
+     * Returns the numerical value of Mm, (10^6 of metre)
      */
     val Metre.Mm  : Double
         /**
-         * Returns numerical value of Mm, (10^6 of metre)
+         * Returns the numerical value of Mm, (10^6 of metre)
          */
         @JvmName("getMm_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of Mm (10^6 of metre)
+     * Returns the numerical value of Mm (10^6 of metre)
      */
     val Metre.megametre  : Double
         /**
-         * Returns numerical value of Mm, (10^6 of metre)
+         * Returns the numerical value of Mm, (10^6 of metre)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of km, (10^3 of metre)
+     * Returns the numerical value of km, (10^3 of metre)
      */
     val Metre.km  : Double
         /**
-         * Returns numerical value of km, (10^3 of metre)
+         * Returns the numerical value of km, (10^3 of metre)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of km (10^3 of metre)
+     * Returns the numerical value of km (10^3 of metre)
      */
     val Metre.kilometre  : Double
         /**
-         * Returns numerical value of km, (10^3 of metre)
+         * Returns the numerical value of km, (10^3 of metre)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hm, (10^2 of metre)
+     * Returns the numerical value of hm, (10^2 of metre)
      */
     val Metre.hm  : Double
         /**
-         * Returns numerical value of hm, (10^2 of metre)
+         * Returns the numerical value of hm, (10^2 of metre)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hm (10^2 of metre)
+     * Returns the numerical value of hm (10^2 of metre)
      */
     val Metre.hectometre  : Double
         /**
-         * Returns numerical value of hm, (10^2 of metre)
+         * Returns the numerical value of hm, (10^2 of metre)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of dam, (10^1 of metre)
+     * Returns the numerical value of dam, (10^1 of metre)
      */
     val Metre.dam  : Double
         /**
-         * Returns numerical value of dam, (10^1 of metre)
+         * Returns the numerical value of dam, (10^1 of metre)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of dam (10^1 of metre)
+     * Returns the numerical value of dam (10^1 of metre)
      */
     val Metre.decametre  : Double
         /**
-         * Returns numerical value of dam, (10^1 of metre)
+         * Returns the numerical value of dam, (10^1 of metre)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of dm, (10^-1 of metre)
+     * Returns the numerical value of dm, (10^-1 of metre)
      */
     val Metre.dm  : Double
         /**
-         * Returns numerical value of dm, (10^-1 of metre)
+         * Returns the numerical value of dm, (10^-1 of metre)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of dm (10^-1 of metre)
+     * Returns the numerical value of dm (10^-1 of metre)
      */
     val Metre.decimetre  : Double
         /**
-         * Returns numerical value of dm, (10^-1 of metre)
+         * Returns the numerical value of dm, (10^-1 of metre)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of cm, (10^-2 of metre)
+     * Returns the numerical value of cm, (10^-2 of metre)
      */
     val Metre.cm  : Double
         /**
-         * Returns numerical value of cm, (10^-2 of metre)
+         * Returns the numerical value of cm, (10^-2 of metre)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of cm (10^-2 of metre)
+     * Returns the numerical value of cm (10^-2 of metre)
      */
     val Metre.centimetre  : Double
         /**
-         * Returns numerical value of cm, (10^-2 of metre)
+         * Returns the numerical value of cm, (10^-2 of metre)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of mm, (10^-3 of metre)
+     * Returns the numerical value of mm, (10^-3 of metre)
      */
     val Metre.mm  : Double
         /**
-         * Returns numerical value of mm, (10^-3 of metre)
+         * Returns the numerical value of mm, (10^-3 of metre)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of mm (10^-3 of metre)
+     * Returns the numerical value of mm (10^-3 of metre)
      */
     val Metre.millimetre  : Double
         /**
-         * Returns numerical value of mm, (10^-3 of metre)
+         * Returns the numerical value of mm, (10^-3 of metre)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μm, (10^-6 of metre)
+     * Returns the numerical value of μm, (10^-6 of metre)
      */
     val Metre.μm  : Double
         /**
-         * Returns numerical value of μm, (10^-6 of metre)
+         * Returns the numerical value of μm, (10^-6 of metre)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μm (10^-6 of metre)
+     * Returns the numerical value of μm (10^-6 of metre)
      */
     val Metre.micrometre  : Double
         /**
-         * Returns numerical value of μm, (10^-6 of metre)
+         * Returns the numerical value of μm, (10^-6 of metre)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of nm, (10^-9 of metre)
+     * Returns the numerical value of nm, (10^-9 of metre)
      */
     val Metre.nm  : Double
         /**
-         * Returns numerical value of nm, (10^-9 of metre)
+         * Returns the numerical value of nm, (10^-9 of metre)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of nm (10^-9 of metre)
+     * Returns the numerical value of nm (10^-9 of metre)
      */
     val Metre.nanometre  : Double
         /**
-         * Returns numerical value of nm, (10^-9 of metre)
+         * Returns the numerical value of nm, (10^-9 of metre)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of pm, (10^-12 of metre)
+     * Returns the numerical value of pm, (10^-12 of metre)
      */
     val Metre.pm  : Double
         /**
-         * Returns numerical value of pm, (10^-12 of metre)
+         * Returns the numerical value of pm, (10^-12 of metre)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of pm (10^-12 of metre)
+     * Returns the numerical value of pm (10^-12 of metre)
      */
     val Metre.picometre  : Double
         /**
-         * Returns numerical value of pm, (10^-12 of metre)
+         * Returns the numerical value of pm, (10^-12 of metre)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fm, (10^-15 of metre)
+     * Returns the numerical value of fm, (10^-15 of metre)
      */
     val Metre.fm  : Double
         /**
-         * Returns numerical value of fm, (10^-15 of metre)
+         * Returns the numerical value of fm, (10^-15 of metre)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fm (10^-15 of metre)
+     * Returns the numerical value of fm (10^-15 of metre)
      */
     val Metre.femtometre  : Double
         /**
-         * Returns numerical value of fm, (10^-15 of metre)
+         * Returns the numerical value of fm, (10^-15 of metre)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of am, (10^-18 of metre)
+     * Returns the numerical value of am, (10^-18 of metre)
      */
     val Metre.am  : Double
         /**
-         * Returns numerical value of am, (10^-18 of metre)
+         * Returns the numerical value of am, (10^-18 of metre)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of am (10^-18 of metre)
+     * Returns the numerical value of am (10^-18 of metre)
      */
     val Metre.attometre  : Double
         /**
-         * Returns numerical value of am, (10^-18 of metre)
+         * Returns the numerical value of am, (10^-18 of metre)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zm, (10^-21 of metre)
+     * Returns the numerical value of zm, (10^-21 of metre)
      */
     val Metre.zm  : Double
         /**
-         * Returns numerical value of zm, (10^-21 of metre)
+         * Returns the numerical value of zm, (10^-21 of metre)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zm (10^-21 of metre)
+     * Returns the numerical value of zm (10^-21 of metre)
      */
     val Metre.zeptometre  : Double
         /**
-         * Returns numerical value of zm, (10^-21 of metre)
+         * Returns the numerical value of zm, (10^-21 of metre)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of ym, (10^-24 of metre)
+     * Returns the numerical value of ym, (10^-24 of metre)
      */
     val Metre.ym  : Double
         /**
-         * Returns numerical value of ym, (10^-24 of metre)
+         * Returns the numerical value of ym, (10^-24 of metre)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of ym (10^-24 of metre)
+     * Returns the numerical value of ym (10^-24 of metre)
      */
     val Metre.yoctometre  : Double
         /**
-         * Returns numerical value of ym, (10^-24 of metre)
+         * Returns the numerical value of ym, (10^-24 of metre)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rm, (10^-27 of metre)
+     * Returns the numerical value of rm, (10^-27 of metre)
      */
     val Metre.rm  : Double
         /**
-         * Returns numerical value of rm, (10^-27 of metre)
+         * Returns the numerical value of rm, (10^-27 of metre)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rm (10^-27 of metre)
+     * Returns the numerical value of rm (10^-27 of metre)
      */
     val Metre.rontometre  : Double
         /**
-         * Returns numerical value of rm, (10^-27 of metre)
+         * Returns the numerical value of rm, (10^-27 of metre)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Metre(value: Double) : Expression(value, description = descriptionMetre)
         get() = Metre(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qm, (10^-30 of metre)
+     * Returns the numerical value of qm, (10^-30 of metre)
      */
     val Metre.qm  : Double
         /**
-         * Returns numerical value of qm, (10^-30 of metre)
+         * Returns the numerical value of qm, (10^-30 of metre)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qm (10^-30 of metre)
+     * Returns the numerical value of qm (10^-30 of metre)
      */
     val Metre.quectometre  : Double
         /**
-         * Returns numerical value of qm, (10^-30 of metre)
+         * Returns the numerical value of qm, (10^-30 of metre)
          */
         get() = this.value / 10.0.pow(-30)
     

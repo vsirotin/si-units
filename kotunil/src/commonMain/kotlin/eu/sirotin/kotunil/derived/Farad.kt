@@ -25,11 +25,11 @@ class Farad(value: Number): DerivedUnit(value, formula)
 val F = Farad(1.0)
 
 /**
-* Creates Farad-Object for current number value. Farad is a System International Unit for capacitance.
+* Creates a Farad object for the current number value. Farad is a System International Unit for capacitance.
 */
 val Number.F : Farad
    /**
-   * Returns Farad-Object for current number value. Farad is a System International Unit for capacitance.
+   * Returns a Farad object for the current number value. Farad is a System International Unit for capacitance.
    */
     get() = Farad(this.toDouble())
 

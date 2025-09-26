@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Mexican peso
+* Creates an object to hold Mexican peso
 */
 val Number.`$` : MexicanPeso
     /**
-    * Returns value of object for hold of Mexican peso
+    * Returns the value of the object holding Mexican peso
     */
     get() = MexicanPeso(this.toDouble())
 

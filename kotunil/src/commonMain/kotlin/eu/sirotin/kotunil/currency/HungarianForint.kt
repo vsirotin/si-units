@@ -38,11 +38,11 @@ class HungarianForint(value : Double = 1.0) : Expression(value, description = de
     
 
 /**
-* Creates object for hold of Hungarian forint
+* Creates an object to hold Hungarian forint
 */
 val Number.Ft : HungarianForint
     /**
-    * Returns value of object for hold of Hungarian forint
+    * Returns the value of the object holding Hungarian forint
     */
     get() = HungarianForint(this.toDouble())
 

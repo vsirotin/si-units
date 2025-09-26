@@ -25,11 +25,11 @@ class Lumen(value: Number): DerivedUnit(value, formula)
 val lm = Lumen(1.0)
 
 /**
-* Creates Lumen-Object for current number value. Lumen is a System International Unit for luminous flux.
+* Creates a Lumen object for the current number value. Lumen is a System International Unit for luminous flux.
 */
 val Number.lm : Lumen
    /**
-   * Returns Lumen-Object for current number value. Lumen is a System International Unit for luminous flux.
+   * Returns a Lumen object for the current number value. Lumen is a System International Unit for luminous flux.
    */
     get() = Lumen(this.toDouble())
 

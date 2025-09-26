@@ -57,21 +57,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(30))
     
     /**
-     * Returns numerical value of Qs, (10^30 of second)
+     * Returns the numerical value of Qs, (10^30 of second)
      */
     val Second.Qs  : Double
         /**
-         * Returns numerical value of Qs, (10^30 of second)
+         * Returns the numerical value of Qs, (10^30 of second)
          */
         @JvmName("getQs_prop")
         get() = this.value / 10.0.pow(30)
     
     /**
-     * Returns numerical value of Qs (10^30 of second)
+     * Returns the numerical value of Qs (10^30 of second)
      */
     val Second.quettasecond  : Double
         /**
-         * Returns numerical value of Qs, (10^30 of second)
+         * Returns the numerical value of Qs, (10^30 of second)
          */
         get() = this.value / 10.0.pow(30)
     
@@ -109,21 +109,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(27))
     
     /**
-     * Returns numerical value of Rs, (10^27 of second)
+     * Returns the numerical value of Rs, (10^27 of second)
      */
     val Second.Rs  : Double
         /**
-         * Returns numerical value of Rs, (10^27 of second)
+         * Returns the numerical value of Rs, (10^27 of second)
          */
         @JvmName("getRs_prop")
         get() = this.value / 10.0.pow(27)
     
     /**
-     * Returns numerical value of Rs (10^27 of second)
+     * Returns the numerical value of Rs (10^27 of second)
      */
     val Second.ronnasecond  : Double
         /**
-         * Returns numerical value of Rs, (10^27 of second)
+         * Returns the numerical value of Rs, (10^27 of second)
          */
         get() = this.value / 10.0.pow(27)
     
@@ -161,21 +161,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(24))
     
     /**
-     * Returns numerical value of Ys, (10^24 of second)
+     * Returns the numerical value of Ys, (10^24 of second)
      */
     val Second.Ys  : Double
         /**
-         * Returns numerical value of Ys, (10^24 of second)
+         * Returns the numerical value of Ys, (10^24 of second)
          */
         @JvmName("getYs_prop")
         get() = this.value / 10.0.pow(24)
     
     /**
-     * Returns numerical value of Ys (10^24 of second)
+     * Returns the numerical value of Ys (10^24 of second)
      */
     val Second.yottasecond  : Double
         /**
-         * Returns numerical value of Ys, (10^24 of second)
+         * Returns the numerical value of Ys, (10^24 of second)
          */
         get() = this.value / 10.0.pow(24)
     
@@ -213,21 +213,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(21))
     
     /**
-     * Returns numerical value of Zs, (10^21 of second)
+     * Returns the numerical value of Zs, (10^21 of second)
      */
     val Second.Zs  : Double
         /**
-         * Returns numerical value of Zs, (10^21 of second)
+         * Returns the numerical value of Zs, (10^21 of second)
          */
         @JvmName("getZs_prop")
         get() = this.value / 10.0.pow(21)
     
     /**
-     * Returns numerical value of Zs (10^21 of second)
+     * Returns the numerical value of Zs (10^21 of second)
      */
     val Second.zettasecond  : Double
         /**
-         * Returns numerical value of Zs, (10^21 of second)
+         * Returns the numerical value of Zs, (10^21 of second)
          */
         get() = this.value / 10.0.pow(21)
     
@@ -265,21 +265,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(18))
     
     /**
-     * Returns numerical value of Es, (10^18 of second)
+     * Returns the numerical value of Es, (10^18 of second)
      */
     val Second.Es  : Double
         /**
-         * Returns numerical value of Es, (10^18 of second)
+         * Returns the numerical value of Es, (10^18 of second)
          */
         @JvmName("getEs_prop")
         get() = this.value / 10.0.pow(18)
     
     /**
-     * Returns numerical value of Es (10^18 of second)
+     * Returns the numerical value of Es (10^18 of second)
      */
     val Second.exasecond  : Double
         /**
-         * Returns numerical value of Es, (10^18 of second)
+         * Returns the numerical value of Es, (10^18 of second)
          */
         get() = this.value / 10.0.pow(18)
     
@@ -317,21 +317,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(15))
     
     /**
-     * Returns numerical value of Ps, (10^15 of second)
+     * Returns the numerical value of Ps, (10^15 of second)
      */
     val Second.Ps  : Double
         /**
-         * Returns numerical value of Ps, (10^15 of second)
+         * Returns the numerical value of Ps, (10^15 of second)
          */
         @JvmName("getPs_prop")
         get() = this.value / 10.0.pow(15)
     
     /**
-     * Returns numerical value of Ps (10^15 of second)
+     * Returns the numerical value of Ps (10^15 of second)
      */
     val Second.petasecond  : Double
         /**
-         * Returns numerical value of Ps, (10^15 of second)
+         * Returns the numerical value of Ps, (10^15 of second)
          */
         get() = this.value / 10.0.pow(15)
     
@@ -369,21 +369,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(12))
     
     /**
-     * Returns numerical value of Ts, (10^12 of second)
+     * Returns the numerical value of Ts, (10^12 of second)
      */
     val Second.Ts  : Double
         /**
-         * Returns numerical value of Ts, (10^12 of second)
+         * Returns the numerical value of Ts, (10^12 of second)
          */
         @JvmName("getTs_prop")
         get() = this.value / 10.0.pow(12)
     
     /**
-     * Returns numerical value of Ts (10^12 of second)
+     * Returns the numerical value of Ts (10^12 of second)
      */
     val Second.terasecond  : Double
         /**
-         * Returns numerical value of Ts, (10^12 of second)
+         * Returns the numerical value of Ts, (10^12 of second)
          */
         get() = this.value / 10.0.pow(12)
     
@@ -421,21 +421,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(9))
     
     /**
-     * Returns numerical value of Gs, (10^9 of second)
+     * Returns the numerical value of Gs, (10^9 of second)
      */
     val Second.Gs  : Double
         /**
-         * Returns numerical value of Gs, (10^9 of second)
+         * Returns the numerical value of Gs, (10^9 of second)
          */
         @JvmName("getGs_prop")
         get() = this.value / 10.0.pow(9)
     
     /**
-     * Returns numerical value of Gs (10^9 of second)
+     * Returns the numerical value of Gs (10^9 of second)
      */
     val Second.gigasecond  : Double
         /**
-         * Returns numerical value of Gs, (10^9 of second)
+         * Returns the numerical value of Gs, (10^9 of second)
          */
         get() = this.value / 10.0.pow(9)
     
@@ -473,21 +473,21 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(6))
     
     /**
-     * Returns numerical value of Ms, (10^6 of second)
+     * Returns the numerical value of Ms, (10^6 of second)
      */
     val Second.Ms  : Double
         /**
-         * Returns numerical value of Ms, (10^6 of second)
+         * Returns the numerical value of Ms, (10^6 of second)
          */
         @JvmName("getMs_prop")
         get() = this.value / 10.0.pow(6)
     
     /**
-     * Returns numerical value of Ms (10^6 of second)
+     * Returns the numerical value of Ms (10^6 of second)
      */
     val Second.megasecond  : Double
         /**
-         * Returns numerical value of Ms, (10^6 of second)
+         * Returns the numerical value of Ms, (10^6 of second)
          */
         get() = this.value / 10.0.pow(6)
     
@@ -524,20 +524,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(3))
     
     /**
-     * Returns numerical value of ks, (10^3 of second)
+     * Returns the numerical value of ks, (10^3 of second)
      */
     val Second.ks  : Double
         /**
-         * Returns numerical value of ks, (10^3 of second)
+         * Returns the numerical value of ks, (10^3 of second)
          */
         get() = this.value / 10.0.pow(3)
     
     /**
-     * Returns numerical value of ks (10^3 of second)
+     * Returns the numerical value of ks (10^3 of second)
      */
     val Second.kilosecond  : Double
         /**
-         * Returns numerical value of ks, (10^3 of second)
+         * Returns the numerical value of ks, (10^3 of second)
          */
         get() = this.value / 10.0.pow(3)
     
@@ -574,20 +574,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(2))
     
     /**
-     * Returns numerical value of hs, (10^2 of second)
+     * Returns the numerical value of hs, (10^2 of second)
      */
     val Second.hs  : Double
         /**
-         * Returns numerical value of hs, (10^2 of second)
+         * Returns the numerical value of hs, (10^2 of second)
          */
         get() = this.value / 10.0.pow(2)
     
     /**
-     * Returns numerical value of hs (10^2 of second)
+     * Returns the numerical value of hs (10^2 of second)
      */
     val Second.hectosecond  : Double
         /**
-         * Returns numerical value of hs, (10^2 of second)
+         * Returns the numerical value of hs, (10^2 of second)
          */
         get() = this.value / 10.0.pow(2)
     
@@ -624,20 +624,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(1))
     
     /**
-     * Returns numerical value of das, (10^1 of second)
+     * Returns the numerical value of das, (10^1 of second)
      */
     val Second.das  : Double
         /**
-         * Returns numerical value of das, (10^1 of second)
+         * Returns the numerical value of das, (10^1 of second)
          */
         get() = this.value / 10.0.pow(1)
     
     /**
-     * Returns numerical value of das (10^1 of second)
+     * Returns the numerical value of das (10^1 of second)
      */
     val Second.decasecond  : Double
         /**
-         * Returns numerical value of das, (10^1 of second)
+         * Returns the numerical value of das, (10^1 of second)
          */
         get() = this.value / 10.0.pow(1)
     
@@ -674,20 +674,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-1))
     
     /**
-     * Returns numerical value of ds, (10^-1 of second)
+     * Returns the numerical value of ds, (10^-1 of second)
      */
     val Second.ds  : Double
         /**
-         * Returns numerical value of ds, (10^-1 of second)
+         * Returns the numerical value of ds, (10^-1 of second)
          */
         get() = this.value / 10.0.pow(-1)
     
     /**
-     * Returns numerical value of ds (10^-1 of second)
+     * Returns the numerical value of ds (10^-1 of second)
      */
     val Second.decisecond  : Double
         /**
-         * Returns numerical value of ds, (10^-1 of second)
+         * Returns the numerical value of ds, (10^-1 of second)
          */
         get() = this.value / 10.0.pow(-1)
     
@@ -724,20 +724,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-2))
     
     /**
-     * Returns numerical value of cs, (10^-2 of second)
+     * Returns the numerical value of cs, (10^-2 of second)
      */
     val Second.cs  : Double
         /**
-         * Returns numerical value of cs, (10^-2 of second)
+         * Returns the numerical value of cs, (10^-2 of second)
          */
         get() = this.value / 10.0.pow(-2)
     
     /**
-     * Returns numerical value of cs (10^-2 of second)
+     * Returns the numerical value of cs (10^-2 of second)
      */
     val Second.centisecond  : Double
         /**
-         * Returns numerical value of cs, (10^-2 of second)
+         * Returns the numerical value of cs, (10^-2 of second)
          */
         get() = this.value / 10.0.pow(-2)
     
@@ -774,20 +774,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-3))
     
     /**
-     * Returns numerical value of ms, (10^-3 of second)
+     * Returns the numerical value of ms, (10^-3 of second)
      */
     val Second.ms  : Double
         /**
-         * Returns numerical value of ms, (10^-3 of second)
+         * Returns the numerical value of ms, (10^-3 of second)
          */
         get() = this.value / 10.0.pow(-3)
     
     /**
-     * Returns numerical value of ms (10^-3 of second)
+     * Returns the numerical value of ms (10^-3 of second)
      */
     val Second.millisecond  : Double
         /**
-         * Returns numerical value of ms, (10^-3 of second)
+         * Returns the numerical value of ms, (10^-3 of second)
          */
         get() = this.value / 10.0.pow(-3)
     
@@ -824,20 +824,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-6))
     
     /**
-     * Returns numerical value of μs, (10^-6 of second)
+     * Returns the numerical value of μs, (10^-6 of second)
      */
     val Second.μs  : Double
         /**
-         * Returns numerical value of μs, (10^-6 of second)
+         * Returns the numerical value of μs, (10^-6 of second)
          */
         get() = this.value / 10.0.pow(-6)
     
     /**
-     * Returns numerical value of μs (10^-6 of second)
+     * Returns the numerical value of μs (10^-6 of second)
      */
     val Second.microsecond  : Double
         /**
-         * Returns numerical value of μs, (10^-6 of second)
+         * Returns the numerical value of μs, (10^-6 of second)
          */
         get() = this.value / 10.0.pow(-6)
     
@@ -874,20 +874,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-9))
     
     /**
-     * Returns numerical value of ns, (10^-9 of second)
+     * Returns the numerical value of ns, (10^-9 of second)
      */
     val Second.ns  : Double
         /**
-         * Returns numerical value of ns, (10^-9 of second)
+         * Returns the numerical value of ns, (10^-9 of second)
          */
         get() = this.value / 10.0.pow(-9)
     
     /**
-     * Returns numerical value of ns (10^-9 of second)
+     * Returns the numerical value of ns (10^-9 of second)
      */
     val Second.nanosecond  : Double
         /**
-         * Returns numerical value of ns, (10^-9 of second)
+         * Returns the numerical value of ns, (10^-9 of second)
          */
         get() = this.value / 10.0.pow(-9)
     
@@ -924,20 +924,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-12))
     
     /**
-     * Returns numerical value of ps, (10^-12 of second)
+     * Returns the numerical value of ps, (10^-12 of second)
      */
     val Second.ps  : Double
         /**
-         * Returns numerical value of ps, (10^-12 of second)
+         * Returns the numerical value of ps, (10^-12 of second)
          */
         get() = this.value / 10.0.pow(-12)
     
     /**
-     * Returns numerical value of ps (10^-12 of second)
+     * Returns the numerical value of ps (10^-12 of second)
      */
     val Second.picosecond  : Double
         /**
-         * Returns numerical value of ps, (10^-12 of second)
+         * Returns the numerical value of ps, (10^-12 of second)
          */
         get() = this.value / 10.0.pow(-12)
     
@@ -974,20 +974,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-15))
     
     /**
-     * Returns numerical value of fs, (10^-15 of second)
+     * Returns the numerical value of fs, (10^-15 of second)
      */
     val Second.fs  : Double
         /**
-         * Returns numerical value of fs, (10^-15 of second)
+         * Returns the numerical value of fs, (10^-15 of second)
          */
         get() = this.value / 10.0.pow(-15)
     
     /**
-     * Returns numerical value of fs (10^-15 of second)
+     * Returns the numerical value of fs (10^-15 of second)
      */
     val Second.femtosecond  : Double
         /**
-         * Returns numerical value of fs, (10^-15 of second)
+         * Returns the numerical value of fs, (10^-15 of second)
          */
         get() = this.value / 10.0.pow(-15)
     
@@ -1024,20 +1024,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-18))
     
     /**
-     * Returns numerical value of `as`, (10^-18 of second)
+     * Returns the numerical value of `as`, (10^-18 of second)
      */
     val Second.`as`  : Double
         /**
-         * Returns numerical value of `as`, (10^-18 of second)
+         * Returns the numerical value of `as`, (10^-18 of second)
          */
         get() = this.value / 10.0.pow(-18)
     
     /**
-     * Returns numerical value of `as` (10^-18 of second)
+     * Returns the numerical value of `as` (10^-18 of second)
      */
     val Second.attosecond  : Double
         /**
-         * Returns numerical value of `as`, (10^-18 of second)
+         * Returns the numerical value of `as`, (10^-18 of second)
          */
         get() = this.value / 10.0.pow(-18)
     
@@ -1074,20 +1074,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-21))
     
     /**
-     * Returns numerical value of zs, (10^-21 of second)
+     * Returns the numerical value of zs, (10^-21 of second)
      */
     val Second.zs  : Double
         /**
-         * Returns numerical value of zs, (10^-21 of second)
+         * Returns the numerical value of zs, (10^-21 of second)
          */
         get() = this.value / 10.0.pow(-21)
     
     /**
-     * Returns numerical value of zs (10^-21 of second)
+     * Returns the numerical value of zs (10^-21 of second)
      */
     val Second.zeptosecond  : Double
         /**
-         * Returns numerical value of zs, (10^-21 of second)
+         * Returns the numerical value of zs, (10^-21 of second)
          */
         get() = this.value / 10.0.pow(-21)
     
@@ -1124,20 +1124,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-24))
     
     /**
-     * Returns numerical value of ys, (10^-24 of second)
+     * Returns the numerical value of ys, (10^-24 of second)
      */
     val Second.ys  : Double
         /**
-         * Returns numerical value of ys, (10^-24 of second)
+         * Returns the numerical value of ys, (10^-24 of second)
          */
         get() = this.value / 10.0.pow(-24)
     
     /**
-     * Returns numerical value of ys (10^-24 of second)
+     * Returns the numerical value of ys (10^-24 of second)
      */
     val Second.yoctosecond  : Double
         /**
-         * Returns numerical value of ys, (10^-24 of second)
+         * Returns the numerical value of ys, (10^-24 of second)
          */
         get() = this.value / 10.0.pow(-24)
     
@@ -1174,20 +1174,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-27))
     
     /**
-     * Returns numerical value of rs, (10^-27 of second)
+     * Returns the numerical value of rs, (10^-27 of second)
      */
     val Second.rs  : Double
         /**
-         * Returns numerical value of rs, (10^-27 of second)
+         * Returns the numerical value of rs, (10^-27 of second)
          */
         get() = this.value / 10.0.pow(-27)
     
     /**
-     * Returns numerical value of rs (10^-27 of second)
+     * Returns the numerical value of rs (10^-27 of second)
      */
     val Second.rontosecond  : Double
         /**
-         * Returns numerical value of rs, (10^-27 of second)
+         * Returns the numerical value of rs, (10^-27 of second)
          */
         get() = this.value / 10.0.pow(-27)
     
@@ -1224,20 +1224,20 @@ class Second(value: Double) : Expression(value, description = descriptionSecond)
         get() = Second(this.toDouble()*10.0.pow(-30))
     
     /**
-     * Returns numerical value of qs, (10^-30 of second)
+     * Returns the numerical value of qs, (10^-30 of second)
      */
     val Second.qs  : Double
         /**
-         * Returns numerical value of qs, (10^-30 of second)
+         * Returns the numerical value of qs, (10^-30 of second)
          */
         get() = this.value / 10.0.pow(-30)
     
     /**
-     * Returns numerical value of qs (10^-30 of second)
+     * Returns the numerical value of qs (10^-30 of second)
      */
     val Second.quectosecond  : Double
         /**
-         * Returns numerical value of qs, (10^-30 of second)
+         * Returns the numerical value of qs, (10^-30 of second)
          */
         get() = this.value / 10.0.pow(-30)
     

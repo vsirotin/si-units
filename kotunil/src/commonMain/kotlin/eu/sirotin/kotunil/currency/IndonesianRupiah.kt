@@ -38,11 +38,11 @@ class IndonesianRupiah(value : Double = 1.0) : Expression(value, description = d
     
 
 /**
-* Creates object for hold of Indonesian rupiah
+* Creates an object to hold Indonesian rupiah
 */
 val Number.Rp : IndonesianRupiah
     /**
-    * Returns value of object for hold of Indonesian rupiah
+    * Returns the value of the object holding Indonesian rupiah
     */
     get() = IndonesianRupiah(this.toDouble())
 

@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Hong Kong dollar
+* Creates an object to hold Hong Kong dollar
 */
 val Number.`HK$` : HongKongDollar
     /**
-    * Returns value of object for hold of Hong Kong dollar
+    * Returns the value of the object holding Hong Kong dollar
     */
     get() = HongKongDollar(this.toDouble())
 

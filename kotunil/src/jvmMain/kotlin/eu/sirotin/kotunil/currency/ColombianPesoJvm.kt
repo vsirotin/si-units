@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Colombian peso
+* Creates an object to hold Colombian peso
 */
 val Number.`COL$` : ColombianPeso
     /**
-    * Returns value of object for hold of Colombian peso
+    * Returns the value of the object holding Colombian peso
     */
     get() = ColombianPeso(this.toDouble())
 

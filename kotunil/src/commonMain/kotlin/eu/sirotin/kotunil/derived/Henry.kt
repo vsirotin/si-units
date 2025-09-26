@@ -25,11 +25,11 @@ class Henry(value: Number): DerivedUnit(value, formula)
 val H = Henry(1.0)
 
 /**
-* Creates Henry-Object for current number value. Henry is a System International Unit for inductance.
+* Creates a Henry object for the current number value. Henry is a System International Unit for inductance.
 */
 val Number.H : Henry
    /**
-   * Returns Henry-Object for current number value. Henry is a System International Unit for inductance.
+   * Returns a Henry object for the current number value. Henry is a System International Unit for inductance.
    */
     get() = Henry(this.toDouble())
 

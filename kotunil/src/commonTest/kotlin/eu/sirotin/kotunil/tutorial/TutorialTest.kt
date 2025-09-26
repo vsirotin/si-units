@@ -68,13 +68,13 @@ internal class TutorialTest {
 
     @Test
     fun testHappyGettingStarted() {
-        //Eva broke a glass in her aquarium and water flowed to the bottom.
-        // In aquarium before the break was 20 liters of water.
-        // Eva's room is 4 m. long and 5 tall.
-        // How high in mm. is water now in Eva's room with assumption that it stayed there and did not flow away?
+        //Eva broke a glass in her aquarium and water flowed onto the floor.
+        // In the aquarium before the break was 20 liters of water.
+        // Eva's room is 4 m long and 5 m tall.
+        // How high in mm is water now in Eva's room with assumption that it stayed there and did not flow away?
 
         //The solution in Kotlin can be written in one line.
-        // For didactic reasons as introduce two auxiliary variables s and h.
+        // For didactic reasons let's introduce two auxiliary variables s and h.
 
         val s = 4.m * 5.m
         val x = 20.l
@@ -130,7 +130,7 @@ internal class TutorialTest {
     }
 
     //---------------Type safety
-//Physical units of the same dimension can be added, added,
+//Physical units of the same dimension can be added, subtracted,
 //divided and compared.
 //If you try to do this with units of different types,
 //you will get either compilation errors (for simple units) or run-time errors for complicated units.
@@ -148,7 +148,7 @@ internal class TutorialTest {
 
     @Test
     fun testErrors1() {
-        //Simple errors will be found on compilation phase:
+        //Simple errors will be found at the compilation phase:
         //val x = 1.m + 2 compiler error
         //val y = 20.l/(4.m * 5.m) + 14 compiler error
 

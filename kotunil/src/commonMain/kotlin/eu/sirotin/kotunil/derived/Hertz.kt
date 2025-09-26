@@ -25,11 +25,11 @@ class Hertz(value: Number): DerivedUnit(value, formula)
 val Hz = Hertz(1.0)
 
 /**
-* Creates Hertz-Object for current number value. Hertz is a System International Unit for frequency.
+* Creates a Hertz object for the current number value. Hertz is a System International Unit for frequency.
 */
 val Number.Hz : Hertz
    /**
-   * Returns Hertz-Object for current number value. Hertz is a System International Unit for frequency.
+   * Returns a Hertz object for the current number value. Hertz is a System International Unit for frequency.
    */
     get() = Hertz(this.toDouble())
 

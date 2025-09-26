@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Saudi riyal
+* Creates an object to hold Saudi riyal
 */
 val Number.`﷼ ` : SaudiRiyal
     /**
-    * Returns value of object for hold of Saudi riyal
+    * Returns the value of the object holding Saudi riyal
     */
     get() = SaudiRiyal(this.toDouble())
 

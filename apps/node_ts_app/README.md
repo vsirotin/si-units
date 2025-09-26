@@ -1,27 +1,78 @@
-# KotUniL - Kotlin Console Demo Application
+# Node.js TypeScript Application
 
+This is a test application demonstrating the usage of KotUniL JavaScript library in Node.js environment with TypeScript.
 
-This demo demonstrate the use of **KotUniL** library in a Node.JS console application developed with TypeScript
-and tests all available in library objects and functions.
+## Purpose
 
-**KotUniL** covers all units of **International System of Units** (SI)  
-like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+This application serves as:
+- **Compatibility test** for KotUniL JavaScript library with Node.js platforms
+- **Example implementation** showing how to use KotUniL in TypeScript/Node.js projects
+- **Testing platform** for the latest Node.js and TypeScript versions as part of our three-phase version strategy
 
-You can learn about functions and objects of **KotUniL** library in central [.../si-units/README.md](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/README.md).
-You can learn examples of using the library in Kotlin-Console in [.../si-units/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/apps/jvm/kotlin-console/src/main/kotlin/eu/sirotin/kotunil/app/kotlin/TutorialTest.kt).
+## Testing Strategy
 
-## How to start console application
-You can start the test with a commnad:
+**Important**: This application is designed to be tested with the **newest available Node.js and TypeScript versions** to ensure forward compatibility and early detection of potential issues. Currently tested with:
+- Node.js 20+ LTS (latest)
+- Node.js 18+ LTS
+- Node.js 16+ LTS
+- Node.js 14+ (minimum supported)
+- TypeScript 5.9.2 (latest stable)
+
+## Requirements
+
+- **Minimum**: Node.js 14.0.0 or higher
+- **Recommended**: Node.js 18+ LTS for optimal performance
+- **Testing**: Latest available Node.js LTS version
+- **TypeScript**: Latest stable version
+- **ECMAScript**: ES2016 (ES7) support
+
+## Running the Application
+
+### Development Mode
+```bash
+npm run dev
+```
+
+### Console Application
 ```bash
 ./gradlew :apps:node_ts_app:startConsole
 ```
 
-On success the application will show a list of test and table with expected and real data.
-Compare number in lines of printed table.
+### Web Server
+```bash
+./gradlew :apps:node_ts_app:build
+npm run startWeb
+```
 
-## How to properly write KotUniL's formulas
-KotUniL is a multiplatform library.
-You can read about how to properly write physics and other formulas
-using the objects and functions of the KotUniL library in document
-["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/RulesWritingFormulas.md).
+### Using Gradle Build System
+```bash
+./gradlew :apps:node_ts_app:clean
+./gradlew :apps:node_ts_app:build
+./gradlew :apps:node_ts_app:startConsole
+```
+
+## What it demonstrates
+
+The application runs comprehensive tests covering:
+- Basic SI units with JavaScript/TypeScript syntax
+- Derived units and complex calculations
+- Unit conversions in JavaScript environment
+- Dimensional analysis with runtime type checking
+- Error handling for incompatible units
+- Currency and percentage calculations
+- TypeScript type definitions for units
+- Integration with Node.js ecosystem
+
+## Expected Output
+
+The console application should display a table showing test results with:
+- Number of tests (checks): 1078
+- Number of KotUniL's tested objects: 61
+- Number of errors: 0
+- Detailed test results for each unit category
+
+The web server provides REST API endpoints for unit calculations and conversions.
+
+## Compatibility Notes
+
+This application validates that the KotUniL JavaScript library compiled for ES2016 works correctly with modern Node.js versions and TypeScript, ensuring our compatibility strategy for JavaScript environments.

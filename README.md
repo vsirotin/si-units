@@ -21,52 +21,70 @@
 
 **KotUniL** covers all units of **International System of Units** (SI)  
 like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+as well as SI-Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
 
-**KotUniL (Kotlin Units Library)** a library of functions and objects of Kotlin that meet the following 
+**KotUniL (Kotlin Units Library)** is a library of functions and objects of Kotlin that meets the following 
 requirements in total:
 1. It allows various formulas to be written in Kotlin in a way maximally similar to the way formulas are written in physics and economics.
 2. It allows analyzing dimensions of results of applications of complicated formulas.
-3. It allows to detect most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected in runtime.
-4. It is pure library (no plug-in, no parser etc.), it has no dependencies
+3. It allows detecting most of the typical errors when working with SI units already at the compilation stage. Errors in incorrect use of physical units in complex formulas are detected at runtime.
+4. It is a pure library (no plug-in, no parser etc.), it has no dependencies.
 
+## Compatibility Requirements
 
-### Project structure
+### Java/JVM Compatibility
+**KotUniL JVM library supports:**
+- **Minimum Runtime**: Java 8+ (JRE 1.8 or higher)
+- **Recommended**: Java 11+ for optimal performance
+- **Tested with**: Java 8, 11, 17, 21, and 22
+- **Android**: Compatible with Android API level 26+ (Android 8.0)
+
+The library is compiled with a hybrid approach: built using modern toolchains but targeting Java 8 bytecode for maximum compatibility with legacy enterprise systems.
+
+### JavaScript/Node.js Compatibility
+**KotUniL JavaScript library supports:**
+- **Node.js**: Version 14.0.0 or higher
+- **ECMAScript**: ES2016 (ES7) and later
+- **TypeScript**: Full TypeScript definitions included
+- **Browsers**: All modern browsers supporting ES2016
+  - Chrome 52+
+  - Firefox 50+
+  - Safari 10+
+  - Edge 14+
+
+## Project Structure
 
 The goal of the project is not only to provide a unified set of objects and 
-functions that allows to use the SI in programs in different programming languages. 
+functions that allows using SI in programs in different programming languages. 
 The project also contains simple applications in all of the target languages that show how to do this. In addition, these applications test the availability of all necessary functions on that target platform.
 
-(So far, applications for only two target platforms have been implemented.)
-
-Therefore, all subprojects of this project are divided into three groups:
-1. [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil) - implementation of library functionality in Kotlin.
-2. [js-lib](https://github.com/vsirotin/si-units/blob/27117b3ea841f18366fff69c955d25d2f07525b9/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
-3. [apps](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/apps) 
+Therefore, all subprojects of this project are divided into four groups:
+1. [kotunil](https://github.com/vsirotin/si-units/tree/main/kotunil) - implementation of library functionality in Kotlin.
+2. [js-lib](https://github.com/vsirotin/si-units/tree/main/js-lib) - JavaScript variant of KotUniL, available as NPM package [kotunil-js-lib](https://www.npmjs.com/package/kotunil-js-lib). 
+3. [apps](https://github.com/vsirotin/si-units/tree/main/apps) - 
 applications that test the functionality of the library on a specific platform.
-In the moment are test applications as console-application for [Kotlin](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console)
-and [Java](
-   https://github.com/vsirotin/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/jvm/java-console) platfforms impemented ans web page 
-for [Browser/JavaScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/web_app_js) and [Node/TypeScript](https://github.com/sheepdreamofandroids/si-units/blob/39a0afe4d47f78a1a79f6696c242055d0484fcef/apps/node_ts_app)
-    variants of library. 
-4. [kotunil-generators](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
+Currently there are test applications as console applications for [Kotlin](https://github.com/vsirotin/si-units/tree/main/apps/jvm/kotlin-console)
+and [Java](https://github.com/vsirotin/si-units/tree/main/apps/jvm/java-console) platforms implemented as well as web applications 
+for [Browser/JavaScript](https://github.com/vsirotin/si-units/tree/main/apps/web_app_js) and [Node/TypeScript](https://github.com/vsirotin/si-units/tree/main/apps/node_ts_app)
+variants of the library. 
+4. [kotunil-generators](https://github.com/vsirotin/si-units/tree/main/kotunil-generators) - generators used to accelerate the implementation and testing of the library.
 
 If you are a developer and you are interested in the source code of the library, 
-you only need part [kotunil](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/kotunil).
+you only need the [kotunil](https://github.com/vsirotin/si-units/tree/main/kotunil) part.
 
-## 1. Getting started
+## 1. Getting Started
 
-### 1.1 Simple physical formulas
+### 1.1 Simple Physical Formulas
 
 Let's consider some simple examples.
 
-*In Eva's case, a glass broke in her aquarium and water flowed on floor. 
-In aquarium before breakage was 32 liters of water.
-Eva's room is 4 m. wide and 4.3 long. 
-How high in mm. is water now in Eva's room with assumption that it stayed there 
+*In Eva's case, a glass broke in her aquarium and water flowed onto the floor. 
+The aquarium contained 32 liters of water before the breakage.
+Eva's room is 4 m wide and 4.3 m long. 
+How high in mm is the water now in Eva's room, assuming that it stayed there 
 and did not flow away?*
 
-The solution in Kotlin can be written in one line. For didactic reasons like introduce two auxiliary variables s and h.
+The solution in Kotlin can be written in one line. For didactic reasons, let's introduce two auxiliary variables s and h.
 
 ```kotlin
 val s = 4.m * 4.3.m
@@ -74,15 +92,14 @@ val h = 32.l/s
 print("Water height is ${h.mm} mm.")
 ```
 
-### 1.2 How to properly write KotUniL's formulas
+### 1.2 How to Properly Write KotUniL Formulas
 KotUniL is a multiplatform library.
 You can read about how to properly write physics and other formulas
-using the objects and functions of the KotUniL library in document
-["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/RulesWritingFormulas.md).
+using the objects and functions of the KotUniL library in the "Rules for Writing KotUniL Formulas" section at the end of this document.
 
-### 1.3 Dimension analysis
-Please note that the variable **s** is physical dimension **m2** (square meter) and **h** - **m** (simple meter).
-Furthermore, in this example we also used liters (**l**), which have dimension **m3** (cubic meters). 
+### 1.3 Dimension Analysis
+Please note that the variable **s** has physical dimension **m²** (square meter) and **h** has dimension **m** (simple meter).
+Furthermore, in this example we also used liters (**l**), which have dimension **m³** (cubic meters). 
 
 Using the built-in function **unitSymbols()** you can determine the dimension of any object in terms of SI standard.
 
@@ -104,7 +121,7 @@ assertEquals("m3/s", z.unitSymbols())
 ```
 
 Using the built-in function **categorySymbols()** 
-you can analyze dimensions of physical units in "academic" manner.
+you can analyze dimensions of physical units in an "academic" manner.
 
 ```kotlin
 val s = 4.m * 5.m
@@ -123,7 +140,7 @@ val z = x/y
 assertEquals("L3T-1", z.categorySymbols())
 ```
 
-### 1.4 Type safety
+### 1.4 Type Safety
 
 Physical units of the same dimension can be added, subtracted and compared.
 If you try to do this with units of different types, 
@@ -131,23 +148,24 @@ you will get either compilation errors (for simple units)
 or run-time errors for complicated units. 
 
 ```kotlin
-//val x = 1.m + 2 compilation error
-//val y = 20.l/(4.m * 5.m) + 14 compilation error
+//val x = 1.m + 2 // compilation error
+//val y = 20.l/(4.m * 5.m) + 14 // compilation error
 
-//Complex errors will be found in runtime:
+//Complex errors will be found at runtime:
 val exception = assertFailsWith<IllegalArgumentException>(
     block = { 1.m + 2.s }
 )
 assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 ```
 
-Of course, a safety with an exception is not a classic type safety, that shows up during compilation time. 
-However, it is better than letting the metre and the second add up. 
+Of course, safety with an exception is not classic type safety that shows up during compilation time. 
+However, it is better than letting the meter and the second add up. 
 
-When using SI such error is found during the first unit test.  
+When using SI, such errors are found during the first unit test.  
 (Reminder: just such errors led in the past to terrible technical catastrophes, 
 see e.g. https://en.wikipedia.org/wiki/Mars_Climate_Orbiter).
-### 1.4 Comparison of objects
+
+### 1.5 Comparison of Objects
 
 Physical objects can be compared only if they have the same dimensions. 
 
@@ -183,17 +201,17 @@ val exception = assertFailsWith<IllegalArgumentException>(
 assertTrue(exception.message!!.startsWith(COMPATIBILITY_ERR_PREFIX))
 ```
 
-With KotUniL you can also compare, add and divide the objects that are defined differently, but have the same physical dimension.  
-In the example below the objects with the dimension "hertz" (1/second) are used.
+With KotUniL you can also compare, add and divide objects that are defined differently but have the same physical dimension.  
+In the example below, objects with the dimension "hertz" (1/second) are used.
 ```kotlin
 assertEquals(0.9.Hz, 0.9/s)
 assertEquals(0.9.Hz, 5/s - 4.1.Hz)
 ```
 
-## 2. How to use
+## 2. How to Use
 
-### 2.1 Production mode
-KotUniL distributed as Kotlin-library via MavenCentral.
+### 2.1 Production Mode
+KotUniL is distributed as a Kotlin library via MavenCentral.
 Dependency for **build.gradle.kts**:
 
 ```kotlin
@@ -205,8 +223,8 @@ dependencies {
     implementation("eu.sirotin.kotunil:kotunil-jvm:X.Y.Z")
 }
 ```
-where X.Y.Z ist last published version of KotUniL in MavenCentral.
-You can see the number of this version at the head of this file after icon with 
+where X.Y.Z is the last published version of KotUniL in MavenCentral.
+You can see the number of this version at the head of this file after the icon with 
 the text "maven-central". 
 
 Dependency for Maven/pom:
@@ -219,39 +237,66 @@ Dependency for Maven/pom:
 </dependency>
 ```
 
-### 2.2 Development mode
+### 2.2 JavaScript/TypeScript Usage
 
-At the moment KotUniL is developing rapidly. 
-To enable you to try the latest features of KotUniL use the following configuration at KTS:
+For JavaScript and TypeScript projects, install via npm:
+
+```bash
+npm install kotunil-js-lib
+```
+
+Usage in TypeScript:
+```typescript
+import { m, s, kg } from 'kotunil-js-lib';
+
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+console.log(`Velocity: ${velocity.value} m/s`);
+```
+
+Usage in JavaScript:
+```javascript
+const { m, s, kg } = require('kotunil-js-lib');
+
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+console.log(`Velocity: ${velocity.value} m/s`);
+```
+
+### 2.3 Development Mode
+
+At the moment, KotUniL is developing rapidly. 
+To enable you to try the latest features of KotUniL, use the following configuration in KTS:
 
 ```kotlin
 implementation("eu.sirotin.kotunil:kotunil-jvm:+")
 ```
 
-and by Maven:
+and with Maven:
 
 ```xml
 <version>LATEST</version>
 ```
 
-### 2.3 Using only source code
+### 2.4 Using Only Source Code
 If you want to use it as source code, 
 copy into your project all production files from 
 **src/commonMain/kotlin/eu/sirotin/kotunil**.
 
-
-## 3. Deeper into details
+## 3. Deeper Into Details
 
 ### 3.1 Base Units
 
-SI standard defines 7 base units, as well as some derived units 
+The SI standard defines 7 base units, as well as some derived units 
 and accepts historically established non-SI units.
 
-The table below listed Base SI units.
+The table below lists Base SI units.
 
 You can define a physical unit by multiplying 
-a value at unit variable or from a number (Double, Int etc.) 
-if you write SI symbol after a dot after a number.
+a value with a unit variable or from a number (Double, Int etc.) 
+if you write the SI symbol after a dot after a number.
 
 ```kotlin
 1*s == 1.0.s
@@ -259,24 +304,21 @@ s == 1.s
 s = 1.0.s
 ```
 
-In special cases you can also create unit using a class constructor.
+In special cases you can also create a unit using a class constructor.
 
 ```kotlin
 Second(1.0) == 1.s
 ```
 
-| SI Base Unit | Unit symbol |
-|--------------|-------------|
-| second       | s           |
-| metre        | m           | 
-| kilogram     | kg          |
-| ampere       | A           | 
-| kelvin       | K           | 
-| mole         | mol         | 
-| candela      | cd          | 
-
-The name of the class differs from the name 
-of the unit by first capital letter. 
+| SI Base Unit | Unit symbol | Description |
+|--------------|-------------|-------------|
+| second       | s           | Time        |
+| metre        | m           | Length      | 
+| kilogram     | kg          | Mass        |
+| ampere       | A           | Electric current |
+| kelvin       | K           | Thermodynamic temperature |
+| mole         | mol         | Amount of substance |
+| candela      | cd          | Luminous intensity |
 
 ### 3.2 Derived Units
 
@@ -392,8 +434,7 @@ a possibility to use Unicode symbols, e.g. Greek letters.
 Please note, how you can present calculation result in percents: 
 **α.`as %`** - ratio presented in percents.
 
-ε is some small value for tolerance by comparison of double numbers. 
-This is also one of the variables defined in KotUniL
+ε is some small value for tolerance by comparison of double numbers. This is also one of the variables defined in KotUniL
 
 ### 3.4 SI-Prefixes 
 
@@ -548,3 +589,93 @@ a--
 (See https://youtrack.jetbrains.com/issue/KT-24800)
 
 Head image: Genesis rules of International System of Units (Source: [Wikipedia](https://en.wikipedia.org/wiki/International_System_of_Units))
+
+## Rules for Writing KotUniL Formulas
+
+### General Principles
+
+1. **Natural Syntax**: Write formulas as close as possible to their mathematical representation
+2. **Type Safety**: Let the compiler and runtime catch dimensional errors
+3. **Readability**: Use meaningful variable names and clear expressions
+
+### Best Practices
+
+#### For JVM (Kotlin/Java)
+```kotlin
+// Prefer extension properties over multiplication
+val distance = 100.m        // Good
+val distance = 100 * m      // Also acceptable
+
+// Chain operations naturally
+val acceleration = 9.81.m / (1.s * 1.s)  // or
+val acceleration = 9.81.m / s.pow(2)
+
+// Use descriptive variable names
+val earthGravity = 9.81.m/s2
+val carMass = 1500.kg
+val force = carMass * earthGravity
+```
+
+#### For JavaScript/TypeScript
+```typescript
+// Import what you need
+import { m, s, kg, N } from 'kotunil-js-lib';
+
+// Use multiplication syntax
+const distance = 100 * m;
+const time = 10 * s;
+const velocity = distance / time;
+
+// Access values for display
+console.log(`Distance: ${distance.value} ${distance.unitSymbols()}`);
+```
+
+### Platform-Specific Considerations
+
+#### JVM Platform
+- Full operator overloading support
+- Compile-time type checking for simple units
+- Runtime checking for complex derived units
+- Extension functions available
+
+#### JavaScript Platform
+- Limited operator overloading (multiplication and division only)
+- Runtime type checking
+- Value property for numeric access
+- Full unit conversion support
+
+### Error Handling
+
+#### Dimensional Errors
+```kotlin
+try {
+    val invalid = 1.m + 1.s  // Will throw at runtime
+} catch (e: IllegalArgumentException) {
+    println("Cannot add meters and seconds: ${e.message}")
+}
+```
+
+#### Best Practices for Error Prevention
+1. Use unit tests extensively
+2. Validate formulas with known values
+3. Check dimensional consistency regularly
+4. Use meaningful variable names that include units when possible
+
+### Performance Considerations
+
+#### For High-Performance Applications
+```kotlin
+// Cache frequently used units
+val gravity = 9.81.m/s2
+
+// Minimize object creation in loops
+for (i in 0..1000) {
+    val force = mass * gravity  // Reuse gravity object
+}
+```
+
+#### Memory Management
+- Units are lightweight objects
+- Immutable by design
+- Safe for concurrent use
+- Minimal memory overhead

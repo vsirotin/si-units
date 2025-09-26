@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Australian dollar
+* Creates an object to hold Australian dollar
 */
 val Number.`A$` : AustralianDollar
     /**
-    * Returns value of object for hold of Australian dollar
+    * Returns the value of the object holding Australian dollar
     */
     get() = AustralianDollar(this.toDouble())
 

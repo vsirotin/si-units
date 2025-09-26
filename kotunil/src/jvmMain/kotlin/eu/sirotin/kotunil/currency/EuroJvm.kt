@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Euro
+* Creates an object to hold Euro
 */
 val Number.`€` : Euro
     /**
-    * Returns value of object for hold of Euro
+    * Returns the value of the object holding Euro
     */
     get() = Euro(this.toDouble())
 

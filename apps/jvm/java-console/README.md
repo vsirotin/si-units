@@ -1,28 +1,60 @@
-# KotUniL - Java Console Demo Application
+# Java Console Application
 
+This is a test application demonstrating the usage of KotUniL library in Java environment.
 
-This demo demonstrate the use of **KotUniL** library in a console application developed with Java tests available in library objects and functions.
-You can learn about functions and objects of **KotUniL** library in central [.../si-units/README.md](https://github.com/vsirotin/si-units/blob/8a4c1406be962031dd32724470fd15367c230e5d/README.md).
+## Purpose
 
-**KotUniL** covers all units of **International System of Units** (SI)  
-like meter, second etc. [(see Wikipedia)](https://en.wikipedia.org/wiki/International_System_of_Units)
-as well as SI- Prefixes (micro, nano etc.) and some other common units like currencies, percentages etc.
+This application serves as:
+- **Compatibility test** for KotUniL library with Java platforms
+- **Example implementation** showing how to use KotUniL in Java projects
+- **Testing platform** for the latest Java versions as part of our three-phase version strategy
 
-You can learn examples of using the library in Java-Console in [.../si-units/apps/jvm/java-console/src/main/java/eu/sirotin/kotunil/app/java/Main.java](https://github.com/vsirotin/si-units/blob/c3b2e195d7da0be8b2f5ef60b71c2c364b2eb562/apps/jvm/java-console/src/main/java/eu/sirotin/kotunil/app/java/Main.java).
+## Testing Strategy
 
-## How to start console application
-You can start the application directly in your IDE (e.g. IntelliJ) 
-using the function main() in the file [Main.java](https://github.com/vsirotin/si-units/blob/c3b2e195d7da0be8b2f5ef60b71c2c364b2eb562/apps/jvm/java-console/src/main/java/eu/sirotin/kotunil/app/java/Main.java) 
-or build the application and then start Jar from **build/libs**.
+**Important**: This application is designed to be tested with the **newest available Java version** to ensure forward compatibility and early detection of potential issues. Currently tested with:
+- Java 22 (latest stable)
+- Java 21 LTS
+- Java 17 LTS
+- Java 11 LTS
+- Java 8 (minimum supported)
 
-On success the application will show in the console the text:
+## Requirements
 
-**Test successfully completed!**
+- **Minimum**: Java 8+ (JRE 1.8 or higher)
+- **Recommended**: Java 11+ for optimal performance
+- **Testing**: Latest available Java version
 
-and number of tested objects and executed tests. 
+## Running the Application
 
-## How to properly write KotUniL's formulas
-KotUniL is a multiplatform library.
-You can read about how to properly write physics and other formulas 
-using the objects and functions of the KotUniL library in document
-["Rules for writing KotUniL formulas in different programming languages"](https://github.com/vsirotin/si-units/blob/c3f1b87c2fa4b35adc64b676318e27eae3e246e5/RulesWritingFormulas.md).
+### Using Gradle
+```bash
+./gradlew :apps:jvm:java-console:run
+```
+
+### Using JAR file
+```bash
+./gradlew :apps:jvm:java-console:build
+java -jar apps/jvm/java-console/build/libs/java-console-*.jar
+```
+
+## What it demonstrates
+
+The application runs comprehensive tests covering:
+- Basic SI units (meter, second, kilogram, etc.)
+- Derived units (newton, joule, watt, etc.)
+- Unit conversions and calculations
+- Dimensional analysis
+- Error handling for incompatible units
+- Currency and percentage calculations
+
+## Expected Output
+
+The application should display a table showing test results with:
+- Number of tests performed
+- Number of KotUniL objects tested
+- Number of errors (should be 0)
+- Detailed test results for each unit category
+
+## Compatibility Notes
+
+This application validates that the KotUniL library compiled with Java 8 bytecode runs correctly on newer Java versions, ensuring our hybrid compatibility strategy works as intended.

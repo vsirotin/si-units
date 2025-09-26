@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Indian rupee
+* Creates an object to hold Indian rupee
 */
 val Number.`₹` : IndianRupee
     /**
-    * Returns value of object for hold of Indian rupee
+    * Returns the value of the object holding Indian rupee
     */
     get() = IndianRupee(this.toDouble())
 

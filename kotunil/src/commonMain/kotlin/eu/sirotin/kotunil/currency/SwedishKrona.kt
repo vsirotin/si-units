@@ -38,11 +38,11 @@ class SwedishKrona(value : Double = 1.0) : Expression(value, description = descr
     
 
 /**
-* Creates object for hold of Swedish krona
+* Creates an object to hold Swedish krona
 */
 val Number.skr : SwedishKrona
     /**
-    * Returns value of object for hold of Swedish krona
+    * Returns the value of the object holding Swedish krona
     */
     get() = SwedishKrona(this.toDouble())
 

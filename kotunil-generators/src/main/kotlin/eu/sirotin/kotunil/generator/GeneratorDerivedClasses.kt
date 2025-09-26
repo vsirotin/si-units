@@ -160,11 +160,11 @@ class $className(value: Number): DerivedUnit(value, formula)
 val $unitSymbol = $className(1.0)
 
 /**
-* Creates $className-Object for current number value. $className is a System International Unit for $quantityName.
+* Creates a $className object for the current number value. $className is a System International Unit for $quantityName.
 */
 val Number.$unitSymbol : $className
    /**
-   * Returns $className-Object for current number value. $className is a System International Unit for $quantityName.
+   * Returns a $className object for the current number value. $className is a System International Unit for $quantityName.
    */
     get() = $className(this.toDouble())
 
@@ -225,4 +225,3 @@ val ${prefix.symbol}$unitSymbol = 10.0.pow(${prefix.degree}) * ($formula)
 val ${prefix.name}$name = ${prefix.symbol}$unitSymbol
     """
 }
-

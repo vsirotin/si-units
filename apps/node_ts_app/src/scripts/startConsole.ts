@@ -12,11 +12,11 @@ testSpecialUnits()
 testCurrencies()
 
 console.log("-------------------------------------------------------------------------------------------------")
-console.log("|             |Test number|Number tested KotUniL's objects|Number errors|")
+console.log("|             |Test number|Number tested KotUniL's objects|Number errors                        |")
 console.log("-------------------------------------------------------------------------------------------------")
-console.log("|Expectation: |     1078  |          61                  |          0                           |")
+console.log("|Expectation: |     1078  |          61                   |          0                          |")
 console.log("-------------------------------------------------------------------------------------------------")
-console.log("|Test results:|    ", numberChecks, " |           ", getNumberCheckedObjects(), "               |          ", numberErrors, "                         |")
+console.log("|Test results:|    ", numberChecks, " |         ", getNumberCheckedObjects(), "                  |         ", numberErrors, "                         |")
 console.log("-------------------------------------------------------------------------------------------------")
 
 

@@ -25,11 +25,11 @@ class Watt(value: Number): DerivedUnit(value, formula)
 val W = Watt(1.0)
 
 /**
-* Creates Watt-Object for current number value. Watt is a System International Unit for power, radiant flux.
+* Creates a Watt object for the current number value. Watt is a System International Unit for power, radiant flux.
 */
 val Number.W : Watt
    /**
-   * Returns Watt-Object for current number value. Watt is a System International Unit for power, radiant flux.
+   * Returns a Watt object for the current number value. Watt is a System International Unit for power, radiant flux.
    */
     get() = Watt(this.toDouble())
 

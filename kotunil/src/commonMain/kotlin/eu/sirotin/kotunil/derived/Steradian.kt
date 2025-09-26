@@ -25,11 +25,11 @@ class Steradian(value: Number): DerivedUnit(value, formula)
 val sr = Steradian(1.0)
 
 /**
-* Creates Steradian-Object for current number value. Steradian is a System International Unit for solid angle.
+* Creates a Steradian object for the current number value. Steradian is a System International Unit for solid angle.
 */
 val Number.sr : Steradian
    /**
-   * Returns Steradian-Object for current number value. Steradian is a System International Unit for solid angle.
+   * Returns a Steradian object for the current number value. Steradian is a System International Unit for solid angle.
    */
     get() = Steradian(this.toDouble())
 

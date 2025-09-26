@@ -10,7 +10,14 @@ repositories {
 }
 
 dependencies {
-    implementation("eu.sirotin.kotunil:kotunil-jvm:$version")
+    implementation(project(":kotunil"))
+}
+
+java {
+    // Testing phase: Use latest Java version (22) for testing compatibility
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(22))
+    }
 }
 
 tasks.register<JavaExec>("run") {

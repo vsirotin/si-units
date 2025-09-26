@@ -2,11 +2,11 @@ package eu.sirotin.kotunil.currency
 
 
 /**
-* Creates object for hold of Polish złoty
+* Creates an object to hold Polish złoty
 */
 val Number.`zł` : PolishZłoty
     /**
-    * Returns value of object for hold of Polish złoty
+    * Returns the value of the object holding Polish złoty
     */
     get() = PolishZłoty(this.toDouble())
 

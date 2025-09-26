@@ -25,11 +25,11 @@ class Becquerel(value: Number): DerivedUnit(value, formula)
 val Bq = Becquerel(1.0)
 
 /**
-* Creates Becquerel-Object for current number value. Becquerel is a System International Unit for activity referred to a radionuclide (decays per unit time).
+* Creates a Becquerel object for the current number value. Becquerel is a System International Unit for activity referred to a radionuclide (decays per unit time).
 */
 val Number.Bq : Becquerel
    /**
-   * Returns Becquerel-Object for current number value. Becquerel is a System International Unit for activity referred to a radionuclide (decays per unit time).
+   * Returns a Becquerel object for the current number value. Becquerel is a System International Unit for activity referred to a radionuclide (decays per unit time).
    */
     get() = Becquerel(this.toDouble())
 

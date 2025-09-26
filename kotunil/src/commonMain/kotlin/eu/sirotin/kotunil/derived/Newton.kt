@@ -25,11 +25,11 @@ class Newton(value: Number): DerivedUnit(value, formula)
 val N = Newton(1.0)
 
 /**
-* Creates Newton-Object for current number value. Newton is a System International Unit for force, weight.
+* Creates a Newton object for the current number value. Newton is a System International Unit for force, weight.
 */
 val Number.N : Newton
    /**
-   * Returns Newton-Object for current number value. Newton is a System International Unit for force, weight.
+   * Returns a Newton object for the current number value. Newton is a System International Unit for force, weight.
    */
     get() = Newton(this.toDouble())
 
