@@ -66,7 +66,7 @@ fun replaceValueForKey(filePath: String, key: String, newValue: String) {
     file.writeText(updatedLines.joinToString(System.lineSeparator()))
 }
 
-tasks.register("switchToMPNCentral") {
+tasks.register("switchToNPMCentral") {
     doLast {
         val kotunilJvmStableVersion = project.rootProject.extra["kotunil-js-version"] as String
         replaceValueForKey("apps/node_ts_app/package.json", "kotunil-js-lib", "\"${kotunilJvmStableVersion}\"")

@@ -28,6 +28,6 @@
   "author": "Dr. Viktor Sirotin  (https://www.sirotin.eu)",
   "license": "Apache-2.0",
   "dependencies": {
-    "kotunil-js-lib": "file:../../js-lib/dist"
+    "kotunil-js-lib": "5.0.3"
   }
 }

@@ -15,7 +15,7 @@ tasks.register<Copy>("copyLibs") {
     logger.quiet("Copying completed")
 }
 
-tasks.register<Exec>("publishToGlobalMPM") {
+tasks.register<Exec>("publishToGlobalNPM") {
     executable("npm")
     args("publish")
     workingDir(distDir)
