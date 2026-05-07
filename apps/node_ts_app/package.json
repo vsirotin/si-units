@@ -24,7 +24,7 @@
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
     "mongodb": "^6.20.0",
-    "mongoose": "^8.18.2",
+    "mongoose": "^8.22.1",
     "nodemon": "^3.1.10"
   },
   "engines": {
